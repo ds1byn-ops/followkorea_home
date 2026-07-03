@@ -1,0 +1,15 @@
+# Netlify deployment configuration for Follow Korea
+# https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Single-page app: serve index.html for any unmatched path
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
