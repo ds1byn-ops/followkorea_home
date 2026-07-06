@@ -11,7 +11,13 @@ const PrivacyOverlay: React.FC<PrivacyOverlayProps> = ({ onClose, lang }) => {
   const t = {
     KR: { title: '개인정보처리방침', back: '메인으로 돌아가기' },
     EN: { title: 'Privacy Policy', back: 'Back to Main' },
-    CN: { title: '隐私政策', back: '返回首页' }
+    CN: { title: '隐私政策', back: '返回首页' },
+    JP: { title: 'プライバシーポリシー', back: 'メインに戻る' },
+    ID: { title: 'Kebijakan Privasi', back: 'Kembali ke Utama' },
+    AR: { title: 'سياسة الخصوصية', back: 'العودة إلى الرئيسية' },
+    KH: { title: 'គោលការណ៍ភាពឯកជន', back: 'ត្រឡប់ទៅទំព័រដើម' },
+    VI: { title: 'Chính sách bảo mật', back: 'Về trang chính' },
+    RU: { title: 'Политика конфиденциальности', back: 'На главную' }
   }[lang];
 
   return (

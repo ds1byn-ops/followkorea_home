@@ -9,7 +9,7 @@ import ReviewList from './components/ReviewList';
 import TermsOverlay from './components/TermsOverlay';
 import PrivacyOverlay from './components/PrivacyOverlay';
 
-export type LanguageCode = 'KR' | 'EN' | 'CN';
+export type LanguageCode = 'KR' | 'EN' | 'CN' | 'JP' | 'ID' | 'AR' | 'KH' | 'VI' | 'RU';
 
 const App: React.FC = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -21,6 +21,10 @@ const App: React.FC = () => {
   const [isTermsOpen, setIsTermsOpen] = useState(false);
   const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
   const [currentLang, setCurrentLang] = useState<LanguageCode>('EN');
+
+  useEffect(() => {
+    document.documentElement.dir = currentLang === 'AR' ? 'rtl' : 'ltr';
+  }, [currentLang]);
 
   useEffect(() => {
     const handleScroll = () => {

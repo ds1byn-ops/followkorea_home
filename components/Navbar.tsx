@@ -36,12 +36,24 @@ const Navbar: React.FC<NavbarProps> = ({
     { code: 'KR', label: '한국어' },
     { code: 'EN', label: 'English' },
     { code: 'CN', label: '中文(简体)' },
+    { code: 'JP', label: '日本語' },
+    { code: 'ID', label: 'Indonesia' },
+    { code: 'AR', label: 'العربية' },
+    { code: 'KH', label: 'ភាសាខ្មែរ' },
+    { code: 'VI', label: 'Tiếng Việt' },
+    { code: 'RU', label: 'Русский' },
   ];
 
   const labels = {
     KR: { about: 'ABOUT US', business: 'BUSINESS', news: 'NEWS', contact: 'CONTACT US', consult: '상담 신청' },
     EN: { about: 'ABOUT US', business: 'BUSINESS', news: 'NEWS', contact: 'CONTACT US', consult: 'Consultation' },
-    CN: { about: '关于我们', business: '业务领域', news: '新闻动态', contact: '联系我们', consult: '申请咨询' }
+    CN: { about: '关于我们', business: '业务领域', news: '新闻动态', contact: '联系我们', consult: '申请咨询' },
+    JP: { about: '会社紹介', business: '事業内容', news: 'ニュース', contact: 'お問い合わせ', consult: '相談申込' },
+    ID: { about: 'TENTANG KAMI', business: 'BISNIS', news: 'BERITA', contact: 'KONTAK', consult: 'Konsultasi' },
+    AR: { about: 'من نحن', business: 'أعمالنا', news: 'الأخبار', contact: 'اتصل بنا', consult: 'طلب استشارة' },
+    KH: { about: 'អំពីយើង', business: 'អាជីវកម្ម', news: 'ព័ត៌មាន', contact: 'ទំនាក់ទំនង', consult: 'ស្នើសុំពិគ្រោះ' },
+    VI: { about: 'GIỚI THIỆU', business: 'DỊCH VỤ', news: 'TIN TỨC', contact: 'LIÊN HỆ', consult: 'Tư vấn' },
+    RU: { about: 'О НАС', business: 'УСЛУГИ', news: 'НОВОСТИ', contact: 'КОНТАКТЫ', consult: 'Консультация' }
   }[currentLang];
 
   useEffect(() => {

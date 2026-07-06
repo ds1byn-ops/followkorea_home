@@ -27,6 +27,42 @@ const ReviewList: React.FC<ReviewListProps> = ({ onClose, lang }) => {
       title: '全球网红评论', 
       sub: '发现全球网红与 Follow Korea 一同开启的 \n 真诚医疗旅游体验。', 
       back: '返回首页' 
+    },
+    JP: {
+      badge: 'Social Presence',
+      title: 'グローバルインフルエンサーレビュー',
+      sub: 'Follow Koreaと共にした世界のインフルエンサーたちの \n 率直な医療ツアー体験をご覧ください。',
+      back: 'メインページに戻る'
+    },
+    ID: {
+      badge: 'Social Presence',
+      title: 'Ulasan Influencer Global',
+      sub: 'Temukan pengalaman wisata medis yang tulus \n dari para influencer global bersama Follow Korea.',
+      back: 'Kembali ke Halaman Utama'
+    },
+    AR: {
+      badge: 'Social Presence',
+      title: 'تقييمات المؤثرين العالميين',
+      sub: 'اكتشف تجارب السياحة العلاجية الصادقة \n للمؤثرين العالميين مع Follow Korea.',
+      back: 'العودة إلى الصفحة الرئيسية'
+    },
+    KH: {
+      badge: 'Social Presence',
+      title: 'ការវាយតម្លៃពីអ្នកមានឥទ្ធិពលសកល',
+      sub: 'ស្វែងយល់ពីបទពិសោធន៍ទេសចរណ៍វេជ្ជសាស្ត្រដ៏ស្មោះត្រង់ \n របស់អ្នកមានឥទ្ធិពលសកលជាមួយ Follow Korea។',
+      back: 'ត្រឡប់ទៅទំព័រដើម'
+    },
+    VI: {
+      badge: 'Social Presence',
+      title: 'Đánh giá từ Influencer toàn cầu',
+      sub: 'Khám phá trải nghiệm du lịch y tế chân thực \n của các influencer toàn cầu cùng Follow Korea.',
+      back: 'Về trang chính'
+    },
+    RU: {
+      badge: 'Social Presence',
+      title: 'Отзывы мировых блогеров',
+      sub: 'Откройте искренние впечатления о медицинском туризме \n от блогеров со всего мира вместе с Follow Korea.',
+      back: 'Вернуться на главную'
     }
   }[lang];
 

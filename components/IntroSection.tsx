@@ -34,6 +34,36 @@ const IntroSection: React.FC<IntroSectionProps> = ({ onAnimationComplete, lang }
       line1: '连接全球患者',
       line2: '与韩国顶尖医疗',
       scroll: '向下滑动'
+    },
+    JP: {
+      line1: '世界中の患者を',
+      line2: '韓国医療へつなぐ',
+      scroll: 'スクロール'
+    },
+    ID: {
+      line1: 'Menghubungkan Pasien Global',
+      line2: 'dengan Layanan Medis Korea',
+      scroll: 'Gulir ke Bawah'
+    },
+    AR: {
+      line1: 'نربط المرضى من حول العالم',
+      line2: 'بالرعاية الطبية الكورية',
+      scroll: 'مرّر للأسفل'
+    },
+    KH: {
+      line1: 'ភ្ជាប់អ្នកជំងឺទូទាំងពិភពលោក',
+      line2: 'ជាមួយសេវាវេជ្ជសាស្ត្រកូរ៉េ',
+      scroll: 'រំកិលចុះក្រោម'
+    },
+    VI: {
+      line1: 'Kết nối bệnh nhân toàn cầu',
+      line2: 'với Y tế Hàn Quốc',
+      scroll: 'Cuộn xuống'
+    },
+    RU: {
+      line1: 'Соединяем пациентов со всего мира',
+      line2: 'с медициной Кореи',
+      scroll: 'Прокрутите вниз'
     }
   }[lang];
 

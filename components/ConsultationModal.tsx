@@ -58,6 +58,48 @@ const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, onClose, 
       namePlaceholder: '请输入姓名', telPlaceholder: '请输入联系方式', emailPlaceholder: 'example@email.com', contentPlaceholder: '请输入详细咨询内容',
       agree: '我同意收集和使用个人信息。', detail: '查看详情', submit: '提交申请', submitting: '正在发送...',
       success: '咨询申请已成功受理。\n负责人将尽快与您联系。', error: '发送时出错，请稍后再试。', alertAgree: '请同意个人信息收集及利用协议。'
+    },
+    JP: {
+      badge: 'Get in Touch', title: '相談申込', sub: 'Follow Koreaの専門コンサルタントが最適なソリューションをご提案します。',
+      name: 'お名前', tel: '連絡先', email: 'メール', content: 'お問い合わせ内容',
+      namePlaceholder: 'お名前をご入力ください', telPlaceholder: '国番号を含めてご入力ください', emailPlaceholder: 'example@email.com', contentPlaceholder: 'ご相談内容をご入力ください',
+      agree: '個人情報の収集および利用に同意します。', detail: '詳細を見る', submit: '相談を申し込む', submitting: '送信中...',
+      success: '相談のお申し込みを正常に受け付けました。\n担当者が確認後、速やかにご連絡いたします。', error: '送信中にエラーが発生しました。しばらくしてから再度お試しください。', alertAgree: '個人情報の収集および利用にご同意ください。'
+    },
+    ID: {
+      badge: 'Get in Touch', title: 'Permintaan Konsultasi', sub: 'Konsultan ahli Follow Korea akan memberikan solusi terbaik untuk Anda.',
+      name: 'Nama', tel: 'Telepon', email: 'Email', content: 'Pesan',
+      namePlaceholder: 'Nama lengkap Anda', telPlaceholder: 'Sertakan kode negara', emailPlaceholder: 'example@email.com', contentPlaceholder: 'Jelaskan kebutuhan Anda',
+      agree: 'Saya menyetujui pengumpulan dan penggunaan informasi pribadi.', detail: 'Lihat Detail', submit: 'Kirim Permintaan', submitting: 'Mengirim...',
+      success: 'Permintaan konsultasi Anda telah berhasil diterima.\nPerwakilan kami akan segera menghubungi Anda.', error: 'Terjadi kesalahan. Silakan coba lagi nanti.', alertAgree: 'Harap setujui kebijakan privasi.'
+    },
+    AR: {
+      badge: 'Get in Touch', title: 'طلب استشارة', sub: 'سيقدم لك مستشارو Follow Korea الخبراء أفضل الحلول.',
+      name: 'الاسم', tel: 'الهاتف', email: 'البريد الإلكتروني', content: 'الرسالة',
+      namePlaceholder: 'اسمك الكامل', telPlaceholder: 'مع رمز الدولة', emailPlaceholder: 'example@email.com', contentPlaceholder: 'اشرح متطلباتك',
+      agree: 'أوافق على جمع واستخدام المعلومات الشخصية.', detail: 'عرض التفاصيل', submit: 'إرسال الطلب', submitting: 'جارٍ الإرسال...',
+      success: 'تم استلام طلب الاستشارة الخاص بك بنجاح.\nسيتواصل معك ممثلنا قريباً.', error: 'حدث خطأ. يرجى المحاولة لاحقاً.', alertAgree: 'يرجى الموافقة على سياسة الخصوصية.'
+    },
+    KH: {
+      badge: 'Get in Touch', title: 'ស្នើសុំពិគ្រោះ', sub: 'ទីប្រឹក្សាជំនាញរបស់ Follow Korea នឹងផ្តល់ដំណោះស្រាយល្អបំផុតសម្រាប់អ្នក។',
+      name: 'ឈ្មោះ', tel: 'ទូរស័ព្ទ', email: 'អ៊ីមែល', content: 'សារ',
+      namePlaceholder: 'ឈ្មោះពេញរបស់អ្នក', telPlaceholder: 'រួមបញ្ចូលកូដប្រទេស', emailPlaceholder: 'example@email.com', contentPlaceholder: 'ពិពណ៌នាតម្រូវការរបស់អ្នក',
+      agree: 'ខ្ញុំយល់ព្រមឱ្យប្រមូល និងប្រើប្រាស់ព័ត៌មានផ្ទាល់ខ្លួន។', detail: 'មើលព័ត៌មានលម្អិត', submit: 'ដាក់ស្នើ', submitting: 'កំពុងផ្ញើ...',
+      success: 'សំណើពិគ្រោះរបស់អ្នកត្រូវបានទទួលដោយជោគជ័យ។\nតំណាងរបស់យើងនឹងទាក់ទងអ្នកឆាប់ៗនេះ។', error: 'មានបញ្ហាកើតឡើង។ សូមព្យាយាមម្តងទៀតនៅពេលក្រោយ។', alertAgree: 'សូមយល់ព្រមនឹងគោលការណ៍ភាពឯកជន។'
+    },
+    VI: {
+      badge: 'Get in Touch', title: 'Yêu cầu tư vấn', sub: 'Chuyên gia tư vấn của Follow Korea sẽ mang đến giải pháp tốt nhất cho bạn.',
+      name: 'Họ tên', tel: 'Điện thoại', email: 'Email', content: 'Nội dung',
+      namePlaceholder: 'Họ tên đầy đủ của bạn', telPlaceholder: 'Kèm mã quốc gia', emailPlaceholder: 'example@email.com', contentPlaceholder: 'Mô tả nhu cầu của bạn',
+      agree: 'Tôi đồng ý việc thu thập và sử dụng thông tin cá nhân.', detail: 'Xem chi tiết', submit: 'Gửi yêu cầu', submitting: 'Đang gửi...',
+      success: 'Yêu cầu tư vấn của bạn đã được tiếp nhận thành công.\nNhân viên của chúng tôi sẽ liên hệ với bạn sớm.', error: 'Đã xảy ra lỗi. Vui lòng thử lại sau.', alertAgree: 'Vui lòng đồng ý với chính sách bảo mật.'
+    },
+    RU: {
+      badge: 'Get in Touch', title: 'Запрос консультации', sub: 'Эксперты Follow Korea предложат вам оптимальное решение.',
+      name: 'Имя', tel: 'Телефон', email: 'Эл. почта', content: 'Сообщение',
+      namePlaceholder: 'Ваше полное имя', telPlaceholder: 'С кодом страны', emailPlaceholder: 'example@email.com', contentPlaceholder: 'Опишите ваш запрос',
+      agree: 'Я согласен на сбор и использование персональных данных.', detail: 'Подробнее', submit: 'Отправить запрос', submitting: 'Отправка...',
+      success: 'Ваш запрос на консультацию успешно принят.\nНаш представитель свяжется с вами в ближайшее время.', error: 'Произошла ошибка. Пожалуйста, попробуйте позже.', alertAgree: 'Пожалуйста, согласитесь с политикой конфиденциальности.'
     }
   }[lang];
 

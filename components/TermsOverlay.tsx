@@ -11,7 +11,13 @@ const TermsOverlay: React.FC<TermsOverlayProps> = ({ onClose, lang }) => {
   const t = {
     KR: { title: '이용약관', back: '메인으로 돌아가기' },
     EN: { title: 'Terms of Use', back: 'Back to Main' },
-    CN: { title: '使用条款', back: '返回首页' }
+    CN: { title: '使用条款', back: '返回首页' },
+    JP: { title: '利用規約', back: 'メインに戻る' },
+    ID: { title: 'Ketentuan Penggunaan', back: 'Kembali ke Utama' },
+    AR: { title: 'شروط الاستخدام', back: 'العودة إلى الرئيسية' },
+    KH: { title: 'លក្ខខណ្ឌប្រើប្រាស់', back: 'ត្រឡប់ទៅទំព័រដើម' },
+    VI: { title: 'Điều khoản sử dụng', back: 'Về trang chính' },
+    RU: { title: 'Условия использования', back: 'На главную' }
   }[lang];
 
   return (
