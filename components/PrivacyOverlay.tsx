@@ -96,8 +96,19 @@ const PrivacyOverlay: React.FC<PrivacyOverlayProps> = ({ onClose, lang }) => {
             <p>회사는 이용자에게 맞춤 서비스를 제공하기 위해 ‘쿠키(cookie)’를 사용합니다. 이용자는 웹 브라우저 옵션 설정을 통해 쿠키 허용 또는 차단을 선택할 수 있습니다.</p>
           </section>
 
+          <section>
+            <h3 className="text-gray-900 font-bold text-lg mb-4">제13조 (개인정보 보호책임자 및 회사 정보)</h3>
+            <p className="mb-2">회사는 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 정보 주체의 문의·불만처리·피해구제 등을 위하여 아래와 같이 개인정보 보호책임자 및 회사 정보를 지정·공개합니다.</p>
+            <div className="ml-2 space-y-1">
+              <p>상호: 팔로우코리아 · 대표: 하장환</p>
+              <p>주소: 서울특별시 서초구 강남대로 373, 13층 116호</p>
+              <p>사업자등록번호: 696-86-03627</p>
+              <p>개인정보 보호책임자 / 문의 이메일: contact@followkorea.co.kr</p>
+            </div>
+          </section>
+
           <div className="pt-8 border-t border-gray-200 text-xs text-gray-400">
-            <p className="font-bold text-gray-500 mb-1">제13조 (개인정보 처리방침 시행 및 변경)</p>
+            <p className="font-bold text-gray-500 mb-1">제14조 (개인정보 처리방침 시행 및 변경)</p>
             <p>이 개인정보 처리방침은 2026.01.29. 부터 적용됩니다.</p>
           </div>
         </div>

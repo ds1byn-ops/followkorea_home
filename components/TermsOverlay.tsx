@@ -128,6 +128,14 @@ const TermsOverlay: React.FC<TermsOverlayProps> = ({ onClose, lang }) => {
             <p>부칙</p>
             <p>이 약관은 &lt;2025.01.29&gt;부터 시행합니다.</p>
           </div>
+
+          <div className="pt-8 border-t border-gray-200 text-xs text-gray-500">
+            <p className="font-bold text-gray-700 mb-2">회사 정보</p>
+            <p>상호: 팔로우코리아 · 대표: 하장환</p>
+            <p>주소: 서울특별시 서초구 강남대로 373, 13층 116호</p>
+            <p>사업자등록번호: 696-86-03627</p>
+            <p>이메일: contact@followkorea.co.kr</p>
+          </div>
         </div>
 
         <div className="mt-20 text-center">
