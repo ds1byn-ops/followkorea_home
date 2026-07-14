@@ -140,8 +140,10 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
         { category: '보도자료', title: '에스에이컴퍼니-GCNC, 국내기업 해외진출 지원 강화 위한 전략적 업무협약 체결', date: '2025.11.19', img: 'https://cdn.imweb.me/upload/S20260120a0cc4980014ac/ff65c4d98d8d0.png', url: 'https://www.enetnews.co.kr/news/articleView.html?idxno=44232' }
       ],
       ctaTitle: '지금, 글로벌 환자 유치를\n시작해보세요.', ctaBtn: '지금 바로 문의하기',
-      footerAddr: '주소: 서울특별시 강남구 테헤란로 441, 5층 S13호 / 13층(삼성동, 송암빌딩 III)',
+      footerAddr: '주소: 서울특별시 서초구 강남대로 373, 13층 116호',
       footerBiz: '사업자등록번호: 696-86-03627',
+      footerCeo: '대표: 하장환',
+      footerContact: '문의: contact@followkorea.co.kr',
       footerCopy: 'Copyright ⓒ 2026 팔로우코리아 All rights reserved.',
       privacy: '개인정보처리방침', terms: '이용약관'
     },
@@ -171,8 +173,10 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
         { category: 'Press', title: 'Follow Korea Opens New Markets for K-Beauty Meditours with 1M-Follower Influencers', date: '2025.12.05', img: 'https://cdn.imweb.me/upload/S20260120a0cc4980014ac/ca2bb530535cb.png', url: 'https://mbn.co.kr/news/entertainment/5159843' }
       ],
       ctaTitle: 'Start Attracting\nGlobal Patients Now.', ctaBtn: 'Inquire Now',
-      footerAddr: 'Address: 5F S13 / 13F Songam Bldg III, 441 Teheran-ro, Gangnam-gu, Seoul, Korea',
+      footerAddr: 'Address: 13F #116, 373 Gangnam-daero, Seocho-gu, Seoul, Korea',
       footerBiz: 'Business Registration Number: 696-86-03627',
+      footerCeo: 'CEO: Ha Jang-hwan',
+      footerContact: 'Contact: contact@followkorea.co.kr',
       footerCopy: 'Copyright ⓒ 2026 Follow Korea All rights reserved.',
       privacy: 'Privacy Policy', terms: 'Terms of Use'
     },
@@ -202,8 +206,10 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
         { category: '新闻', title: '百万粉丝网红加盟... Follow Korea 开启 K-Beauty 医疗旅游新市场', date: '2025.12.05', img: 'https://cdn.imweb.me/upload/S20260120a0cc4980014ac/ca2bb530535cb.png', url: 'https://mbn.co.kr/news/entertainment/5159843' }
       ],
       ctaTitle: '现在就开启\n全球患者引流之旅。', ctaBtn: '立即咨询',
-      footerAddr: '地址：首尔特别市江南区德黑兰路441号，5层 S13室 / 13层（三成洞，松岩大厦 III）',
+      footerAddr: '地址：首尔特别市瑞草区江南大路373号，13层116号',
       footerBiz: '工商注册号: 696-86-03627',
+      footerCeo: '代表: Ha Jang-hwan',
+      footerContact: '联系邮箱: contact@followkorea.co.kr',
       footerCopy: 'Copyright ⓒ 2026 Follow Korea 版权所有。',
       privacy: '隐私政策', terms: '使用条款'
     },
@@ -233,8 +239,10 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
         { category: 'プレスリリース', title: 'Follow Korea、100万フォロワーのインフルエンサーとK-ビューティー医療ツアーの新市場を開拓', date: '2025.12.05', img: 'https://cdn.imweb.me/upload/S20260120a0cc4980014ac/ca2bb530535cb.png', url: 'https://mbn.co.kr/news/entertainment/5159843' }
       ],
       ctaTitle: '今、グローバル患者の誘致を\n始めましょう。', ctaBtn: '今すぐお問い合わせ',
-      footerAddr: '住所: 5F S13 / 13F Songam Bldg III, 441 Teheran-ro, Gangnam-gu, Seoul, Korea',
+      footerAddr: '住所: ソウル特別市瑞草区江南大路373、13階116号',
       footerBiz: '事業者登録番号: 696-86-03627',
+      footerCeo: '代表者: Ha Jang-hwan',
+      footerContact: 'お問い合わせ: contact@followkorea.co.kr',
       footerCopy: 'Copyright ⓒ 2026 Follow Korea All rights reserved.',
       privacy: 'プライバシーポリシー', terms: '利用規約'
     },
@@ -264,8 +272,10 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
         { category: 'Siaran Pers', title: 'Follow Korea Membuka Pasar Baru Wisata Medis K-Beauty dengan Influencer 1 Juta Pengikut', date: '2025.12.05', img: 'https://cdn.imweb.me/upload/S20260120a0cc4980014ac/ca2bb530535cb.png', url: 'https://mbn.co.kr/news/entertainment/5159843' }
       ],
       ctaTitle: 'Mulai Menarik\nPasien Global Sekarang.', ctaBtn: 'Hubungi Sekarang',
-      footerAddr: 'Alamat: 5F S13 / 13F Songam Bldg III, 441 Teheran-ro, Gangnam-gu, Seoul, Korea',
+      footerAddr: 'Alamat: Lantai 13 #116, 373 Gangnam-daero, Seocho-gu, Seoul, Korea',
       footerBiz: 'Nomor Registrasi Bisnis: 696-86-03627',
+      footerCeo: 'CEO: Ha Jang-hwan',
+      footerContact: 'Kontak: contact@followkorea.co.kr',
       footerCopy: 'Copyright ⓒ 2026 Follow Korea All rights reserved.',
       privacy: 'Kebijakan Privasi', terms: 'Ketentuan Penggunaan'
     },
@@ -295,8 +305,10 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
         { category: 'بيان صحفي', title: 'Follow Korea تفتح أسواقاً جديدة للسياحة العلاجية مع مؤثرين لديهم مليون متابع', date: '2025.12.05', img: 'https://cdn.imweb.me/upload/S20260120a0cc4980014ac/ca2bb530535cb.png', url: 'https://mbn.co.kr/news/entertainment/5159843' }
       ],
       ctaTitle: 'ابدأ الآن\nبجذب المرضى من حول العالم.', ctaBtn: 'استفسر الآن',
-      footerAddr: 'العنوان: 5F S13 / 13F Songam Bldg III, 441 Teheran-ro, Gangnam-gu, Seoul, Korea',
+      footerAddr: 'العنوان: الطابق 13، مكتب 116، 373 Gangnam-daero، Seocho-gu، سيول، كوريا',
       footerBiz: 'رقم تسجيل الأعمال: 696-86-03627',
+      footerCeo: 'الرئيس التنفيذي: Ha Jang-hwan',
+      footerContact: 'للتواصل: contact@followkorea.co.kr',
       footerCopy: 'Copyright ⓒ 2026 Follow Korea All rights reserved.',
       privacy: 'سياسة الخصوصية', terms: 'شروط الاستخدام'
     },
@@ -326,8 +338,10 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
         { category: 'សេចក្តីប្រកាសព័ត៌មាន', title: 'Follow Korea បើកទីផ្សារថ្មីសម្រាប់ K-Beauty ជាមួយអ្នកមានឥទ្ធិពល 1 លាននាក់', date: '2025.12.05', img: 'https://cdn.imweb.me/upload/S20260120a0cc4980014ac/ca2bb530535cb.png', url: 'https://mbn.co.kr/news/entertainment/5159843' }
       ],
       ctaTitle: 'ចាប់ផ្តើមទាក់ទាញ\nអ្នកជំងឺសកលឥឡូវនេះ។', ctaBtn: 'សាកសួរឥឡូវនេះ',
-      footerAddr: 'អាសយដ្ឋាន: 5F S13 / 13F Songam Bldg III, 441 Teheran-ro, Gangnam-gu, Seoul, Korea',
+      footerAddr: 'អាសយដ្ឋាន: ជាន់ទី 13 #116, 373 Gangnam-daero, Seocho-gu, សេអ៊ូល, កូរ៉េ',
       footerBiz: 'លេខចុះបញ្ជីអាជីវកម្ម: 696-86-03627',
+      footerCeo: 'នាយកប្រតិបត្តិ: Ha Jang-hwan',
+      footerContact: 'ទំនាក់ទំនង: contact@followkorea.co.kr',
       footerCopy: 'Copyright ⓒ 2026 Follow Korea All rights reserved.',
       privacy: 'គោលការណ៍ភាពឯកជន', terms: 'លក្ខខណ្ឌប្រើប្រាស់'
     },
@@ -357,8 +371,10 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
         { category: 'Thông cáo báo chí', title: 'Follow Korea mở thị trường mới cho Du lịch Y tế K-Beauty với Influencer 1 triệu follower', date: '2025.12.05', img: 'https://cdn.imweb.me/upload/S20260120a0cc4980014ac/ca2bb530535cb.png', url: 'https://mbn.co.kr/news/entertainment/5159843' }
       ],
       ctaTitle: 'Bắt đầu thu hút\nbệnh nhân toàn cầu ngay.', ctaBtn: 'Liên hệ ngay',
-      footerAddr: 'Địa chỉ: 5F S13 / 13F Songam Bldg III, 441 Teheran-ro, Gangnam-gu, Seoul, Korea',
+      footerAddr: 'Địa chỉ: Tầng 13 #116, 373 Gangnam-daero, Seocho-gu, Seoul, Hàn Quốc',
       footerBiz: 'Số đăng ký kinh doanh: 696-86-03627',
+      footerCeo: 'Giám đốc: Ha Jang-hwan',
+      footerContact: 'Liên hệ: contact@followkorea.co.kr',
       footerCopy: 'Copyright ⓒ 2026 Follow Korea All rights reserved.',
       privacy: 'Chính sách bảo mật', terms: 'Điều khoản sử dụng'
     },
@@ -388,8 +404,10 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
         { category: 'Пресс-релиз', title: 'Follow Korea открывает новые рынки медтуризма K-Beauty с блогерами-миллионниками', date: '2025.12.05', img: 'https://cdn.imweb.me/upload/S20260120a0cc4980014ac/ca2bb530535cb.png', url: 'https://mbn.co.kr/news/entertainment/5159843' }
       ],
       ctaTitle: 'Начните привлекать\nпациентов со всего мира.', ctaBtn: 'Оставить заявку',
-      footerAddr: 'Адрес: 5F S13 / 13F Songam Bldg III, 441 Teheran-ro, Gangnam-gu, Seoul, Korea',
+      footerAddr: 'Адрес: 13 этаж, офис 116, 373 Gangnam-daero, Seocho-gu, Сеул, Корея',
       footerBiz: 'Регистрационный номер: 696-86-03627',
+      footerCeo: 'Генеральный директор: Ha Jang-hwan',
+      footerContact: 'Контакты: contact@followkorea.co.kr',
       footerCopy: 'Copyright ⓒ 2026 Follow Korea All rights reserved.',
       privacy: 'Политика конфиденциальности', terms: 'Условия использования'
     }
@@ -682,6 +700,14 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
                   <p className="flex items-start gap-2">
                     <span className="iconify text-gray-300 mt-1" data-icon="solar:bill-list-linear"></span>
                     <span>{t.footerBiz}</span>
+                  </p>
+                  <p className="flex items-start gap-2">
+                    <span className="iconify text-gray-300 mt-1" data-icon="solar:user-linear"></span>
+                    <span>{t.footerCeo}</span>
+                  </p>
+                  <p className="flex items-start gap-2">
+                    <span className="iconify text-gray-300 mt-1" data-icon="solar:letter-linear"></span>
+                    <span>{t.footerContact}</span>
                   </p>
                 </div>
               </div>
