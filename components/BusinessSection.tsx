@@ -101,6 +101,14 @@ const BusinessSection: React.FC<BusinessSectionProps> = ({ lang }) => {
   // KR/EN/CN 외 언어는 영어로 폴백 (기존 사이트 9개국어 중 우선 3개 지원)
   const t = (T as any)[lang] ?? T.EN;
 
+  // 프로젝트별 외부 링크 (언어 공통). 03 중국법인 홈페이지는 개설 후 URL 입력.
+  const LINKS: Record<string, string> = {
+    '02': 'https://followkorea.kr',
+    '03': '', // 중국법인 홈페이지 (추후 URL 입력)
+    '04': 'https://gnpulse.kr/demo',
+    '05': 'https://gnpulse.kr',
+  };
+
   return (
     <section id="business" className="py-20 md:py-32 px-6 md:px-12 lg:px-24 bg-white overflow-hidden">
       <div className="max-w-[1440px] mx-auto">
@@ -156,23 +164,32 @@ const BusinessSection: React.FC<BusinessSectionProps> = ({ lang }) => {
 
         {/* Project 02 – 05 grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {t.items.map((item: any, idx: number) => (
-            <Reveal key={item.no} delay={idx * 0.1}>
+          {t.items.map((item: any, idx: number) => {
+            const href = LINKS[item.no];
+            const card = (
               <div className="relative h-full p-8 md:p-10 rounded-[2rem] bg-[#F4F7FA] border border-transparent hover:border-[#5a82c2]/20 hover:bg-white hover:shadow-xl transition-all duration-500 group overflow-hidden flex flex-col">
                 <div className="flex items-start justify-between mb-5">
                   <span className="text-4xl md:text-5xl font-black text-[#5a82c2]/10 group-hover:text-[#5a82c2]/20 transition-colors leading-none">{item.no}</span>
                   <span className="iconify text-3xl md:text-4xl text-[#5a82c2]" data-icon={item.icon}></span>
                 </div>
                 <span className="inline-block self-start text-[11px] font-black text-[#5a82c2] bg-[#5a82c2]/10 px-3 py-1 rounded-full uppercase tracking-wider mb-3">{item.tag}</span>
-                <h4 className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight mb-3">{item.name}</h4>
+                <h4 className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight mb-3 break-keep">{item.name}</h4>
                 <p className="text-[14px] md:text-[15px] leading-relaxed text-gray-500 font-medium flex-1">{item.desc}</p>
                 <div className="mt-6 pt-5 border-t border-gray-200/70 flex items-center gap-2">
                   <span className="iconify text-[#5a82c2]" data-icon="solar:check-circle-bold"></span>
                   <span className="text-[13px] md:text-sm font-bold text-[#5a82c2]">{item.metric}</span>
+                  {href && <span className="iconify text-[#5a82c2] ml-auto text-lg group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" data-icon="solar:arrow-right-up-linear"></span>}
                 </div>
               </div>
-            </Reveal>
-          ))}
+            );
+            return (
+              <Reveal key={item.no} delay={idx * 0.1}>
+                {href ? (
+                  <a href={href} target="_blank" rel="noopener noreferrer" className="block h-full cursor-pointer">{card}</a>
+                ) : card}
+              </Reveal>
+            );
+          })}
         </div>
       </div>
     </section>
