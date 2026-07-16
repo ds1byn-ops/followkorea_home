@@ -1,7 +1,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { LanguageCode } from '../App';
-
 import BusinessSection from './BusinessSection';
 import { RoadmapSection, PnlSection } from './BusinessPlanSections';
 
@@ -550,13 +549,15 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
         </div>
       </section>
 
+      {/* 04-1. Business Portfolio — 5대 프로젝트 (2026 하반기 사업계획) */}
+      <BusinessSection lang={lang} />
 
-
-            <BusinessSection lang={lang} />
+      {/* 04-2. Execution Roadmap — 7~12월 타임라인 */}
       <RoadmapSection lang={lang} />
+
+      {/* 04-3. Performance — 통합 매출·수익 요약 */}
       <PnlSection lang={lang} />
 
-     
       {/* 05. Why Follow Korea */}
       <section className="py-20 md:py-40 px-6 md:px-12 lg:px-24 max-w-[1440px] mx-auto overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-32 items-center">

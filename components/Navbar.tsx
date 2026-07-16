@@ -8,6 +8,7 @@ interface NavbarProps {
   onOpenNews: () => void;
   onOpenReviews: () => void;
   onScrollToAbout: () => void;
+  onScrollToBusiness: () => void;
   isNewsActive?: boolean;
   isReviewsActive?: boolean;
   isSubPage?: boolean;
@@ -20,8 +21,9 @@ const Navbar: React.FC<NavbarProps> = ({
   opacity, 
   onOpenConsult, 
   onOpenNews, 
-  onOpenReviews, 
+  onOpenReviews,
   onScrollToAbout,
+  onScrollToBusiness,
   isNewsActive,
   isReviewsActive,
   isSubPage, 
@@ -93,9 +95,9 @@ const Navbar: React.FC<NavbarProps> = ({
           {labels.about}
           <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#5a82c2] transition-all group-hover:w-full"></span>
         </button>
-        <button onClick={onOpenReviews} className={`hover:text-[#5a82c2] transition-colors relative group uppercase ${isReviewsActive ? 'text-[#5a82c2]' : ''}`}>
+        <button onClick={onScrollToBusiness} className="hover:text-[#5a82c2] transition-colors relative group uppercase">
           {labels.business}
-          <span className={`absolute -bottom-1 left-0 h-0.5 bg-[#5a82c2] transition-all ${isReviewsActive ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
+          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#5a82c2] transition-all group-hover:w-full"></span>
         </button>
         <button onClick={onOpenNews} className={`hover:text-[#5a82c2] transition-colors relative group uppercase ${isNewsActive ? 'text-[#5a82c2]' : ''}`}>
           {labels.news}

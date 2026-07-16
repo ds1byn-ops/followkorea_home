@@ -116,6 +116,17 @@ const App: React.FC = () => {
     }, 100);
   };
 
+  const scrollToBusiness = () => {
+    handleCloseAllOverlays();
+    setTimeout(() => {
+      const element = document.getElementById('business');
+      if (element) {
+        const top = element.getBoundingClientRect().top + window.pageYOffset - 100;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    }, 100);
+  };
+
   return (
     <div className={`relative bg-[#000] ${(isNewsOpen || isReviewsOpen || isTermsOpen || isPrivacyOpen) ? 'h-screen overflow-hidden' : 'min-h-[200vh]'}`}>
       <Navbar 
@@ -124,6 +135,7 @@ const App: React.FC = () => {
         onOpenNews={handleOpenNews}
         onOpenReviews={handleOpenReviews}
         onScrollToAbout={scrollToAbout}
+        onScrollToBusiness={scrollToBusiness}
         isNewsActive={isNewsOpen}
         isReviewsActive={isReviewsOpen}
         isSubPage={isNewsOpen || isReviewsOpen || isTermsOpen || isPrivacyOpen}
