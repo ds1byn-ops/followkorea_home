@@ -2,6 +2,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { LanguageCode } from '../App';
 
+import BusinessSection from './BusinessSection';
+import { RoadmapSection, PnlSection } from './BusinessPlanSections';
+
 interface MainContentProps {
   onOpenConsult: () => void;
   onOpenNews?: () => void;
@@ -547,6 +550,13 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
         </div>
       </section>
 
+
+
+            <BusinessSection lang={lang} />
+      <RoadmapSection lang={lang} />
+      <PnlSection lang={lang} />
+
+     
       {/* 05. Why Follow Korea */}
       <section className="py-20 md:py-40 px-6 md:px-12 lg:px-24 max-w-[1440px] mx-auto overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-32 items-center">
