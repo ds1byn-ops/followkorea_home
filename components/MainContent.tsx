@@ -440,11 +440,16 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
               </div>
             </Reveal>
             <Reveal delay={0.2}>
-              <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold leading-[1.3] tracking-tight mb-12 drop-shadow-2xl whitespace-pre-line" style={{ color: '#F5F5F5' }}>
+              <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold leading-[1.3] tracking-tight mb-6 drop-shadow-2xl whitespace-pre-line" style={{ color: '#F5F5F5' }}>
                 {t.heroTitle}
               </h1>
             </Reveal>
-            <Reveal delay={0.4}>
+            <Reveal delay={0.35}>
+              <p className="text-base md:text-xl lg:text-2xl font-medium text-white/85 mb-10 md:mb-12 max-w-2xl drop-shadow-lg">
+                {({ KR: 'Connecting Global Patients to Korean Medical Care', EN: 'Connecting Global Patients to Korean Medical Care', CN: '连接全球患者与韩国顶尖医疗', JP: '世界中の患者を韓国医療へつなぐ', ID: 'Menghubungkan Pasien Global dengan Layanan Medis Korea', AR: 'نربط المرضى من حول العالم بالرعاية الطبية الكورية', KH: 'ភ្ជាប់អ្នកជំងឺទូទាំងពិភពលោក ជាមួយសេវាវេជ្ជសាស្ត្រកូរ៉េ', VI: 'Kết nối bệnh nhân toàn cầu với Y tế Hàn Quốc', RU: 'Соединяем пациентов со всего мира с медициной Кореи' } as Record<string, string>)[lang]}
+              </p>
+            </Reveal>
+            <Reveal delay={0.5}>
               <div className="flex flex-wrap gap-5">
                 <button 
                   onClick={onOpenConsult}
