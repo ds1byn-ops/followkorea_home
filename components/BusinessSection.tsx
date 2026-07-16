@@ -104,7 +104,7 @@ const BusinessSection: React.FC<BusinessSectionProps> = ({ lang }) => {
   // 프로젝트별 외부 링크 (언어 공통). 03 중국법인 홈페이지는 개설 후 URL 입력.
   const LINKS: Record<string, string> = {
     '02': 'https://followkorea.kr',
-    '03': '', // 중국법인 홈페이지 (추후 URL 입력)
+    '03': 'https://gnfollow.com',
     '04': 'https://gnpulse.kr/demo',
     '05': 'https://gnpulse.kr',
   };
