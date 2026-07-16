@@ -488,6 +488,12 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
         </div>
       </section>
 
+      {/* 02-1. Business Portfolio — 5대 프로젝트 (최상단 배치) */}
+      <BusinessSection lang={lang} />
+
+      {/* 02-2. Execution Roadmap — 7~12월 타임라인 */}
+      <RoadmapSection lang={lang} />
+
       {/* 03. Medical Program Section */}
       <section id="about-us" className="py-20 md:py-32 px-6 md:px-12 lg:px-24 max-w-[1440px] mx-auto">
         <Reveal>
@@ -554,13 +560,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
         </div>
       </section>
 
-      {/* 04-1. Business Portfolio — 5대 프로젝트 (2026 하반기 사업계획) */}
-      <BusinessSection lang={lang} />
-
-      {/* 04-2. Execution Roadmap — 7~12월 타임라인 */}
-      <RoadmapSection lang={lang} />
-
-      {/* 04-3. Performance — 통합 매출·수익 요약 */}
+      {/* 04-1. Performance — 통합 매출·수익 요약 (실적은 하단 유지) */}
       <PnlSection lang={lang} />
 
       {/* 05. Why Follow Korea */}
