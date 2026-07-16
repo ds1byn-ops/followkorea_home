@@ -507,9 +507,9 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
               <div className="relative h-[280px] md:h-[320px] p-8 md:p-10 rounded-[2rem] md:rounded-[2.5rem] bg-[#F4F7FA] border border-transparent hover:border-[#5a82c2]/20 hover:bg-white transition-all duration-500 group overflow-hidden flex flex-col justify-start">
                 <div className="text-[#5a82c2]">{item.pattern}</div>
                 <div className="relative z-10">
-                  <div className="flex items-center gap-2 mb-4 md:mb-6">
-                    <span className="iconify text-lg md:text-xl text-[#5a82c2]" data-icon="solar:alt-arrow-right-linear"></span>
-                    <h4 className="text-lg md:text-xl font-bold tracking-tight text-gray-900">{item.title}</h4>
+                  <div className="flex items-start gap-2 mb-4 md:mb-6">
+                    <span className="iconify text-lg md:text-xl text-[#5a82c2] mt-0.5 shrink-0" data-icon="solar:alt-arrow-right-linear"></span>
+                    <h4 className="text-lg md:text-xl font-bold tracking-tight text-gray-900 break-keep">{item.title}</h4>
                   </div>
                   <p className="text-[13px] md:text-[14px] leading-relaxed text-gray-500 max-w-[220px] font-medium">
                     {item.desc}
