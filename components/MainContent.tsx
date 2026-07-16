@@ -139,7 +139,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
       newsItems: [
         { category: '보도자료',  title: '팔로우코리아, 글로벌 의료관광과 K-콘텐츠 융합의 신세계로', date: '2026.01.30', img: 'https://cdn.newsroad.co.kr/news/photo/202601/53565_72372_531.jpg' , url: 'https://www.newsroad.co.kr/news/articleView.html?idxno=53565'},
         { category: '보도자료', title: '100만 팔로우 왕홍이 영업사원이 되는 순간…팔로우코리아, K-뷰티 메디투어의 新시장 열린다', date: '2025.12.05', img: 'https://cdn.imweb.me/upload/S20260120a0cc4980014ac/ca2bb530535cb.png', url: 'https://mbn.co.kr/news/entertainment/5159843' },
-        { category: '보도자료', title: '에스에이컴퍼니-GCNC, 국내기업 해외진출 지원 강화 위한 전략적 업무협약 체결', date: '2025.11.19', img: 'https://cdn.imweb.me/upload/S20260120a0cc4980014ac/ff65c4d98d8d0.png', url: 'https://www.enetnews.co.kr/news/articleView.html?idxno=44232' }
+        { category: '보도자료', title: '팔로우코리아-GCNC, 국내기업 해외진출 지원 강화 위한 전략적 업무협약 체결', date: '2025.11.19', img: 'https://cdn.imweb.me/upload/S20260120a0cc4980014ac/ff65c4d98d8d0.png', url: 'https://www.enetnews.co.kr/news/articleView.html?idxno=44232' }
       ],
       ctaTitle: '지금, 글로벌 환자 유치를\n시작해보세요.', ctaBtn: '지금 바로 문의하기',
       footerAddr: '주소: 서울특별시 서초구 강남대로 373, 13층 116호',
@@ -171,7 +171,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
       newsTitle: 'News & Announcements', newsMore: 'View All News',
       newsItems: [
         { category: 'Press', title: 'Follow Korea Leads a New Frontier in Global Medical Tourism–K-Content Convergence', date: '2026.01.30', img: 'https://cdn.newsroad.co.kr/news/photo/202601/53565_72372_531.jpg', url: 'https://www.newsroad.co.kr/news/articleView.html?idxno=53565' },
-        { category: 'Press', title: "SA Company Hosts 'Follow Korea' Season 2 K-Beauty Medical Tourism Global Project", date: '2025.11.13', img: 'https://cdn.imweb.me/upload/S20260120a0cc4980014ac/6bfafba46f880.jpg', url: 'https://star.mbn.co.kr/entertain/11467451?refer=portal' },
+        { category: 'Press', title: "Follow Korea Hosts Season 2 K-Beauty Medical Tourism Global Project", date: '2025.11.13', img: 'https://cdn.imweb.me/upload/S20260120a0cc4980014ac/6bfafba46f880.jpg', url: 'https://star.mbn.co.kr/entertain/11467451?refer=portal' },
         { category: 'Press', title: 'Follow Korea Opens New Markets for K-Beauty Meditours with 1M-Follower Influencers', date: '2025.12.05', img: 'https://cdn.imweb.me/upload/S20260120a0cc4980014ac/ca2bb530535cb.png', url: 'https://mbn.co.kr/news/entertainment/5159843' }
       ],
       ctaTitle: 'Start Attracting\nGlobal Patients Now.', ctaBtn: 'Inquire Now',
@@ -204,7 +204,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
       newsTitle: '新闻动态', newsMore: '查看全部',
       newsItems: [
          { category: '新闻', title: '‘Follow Korea’开启全球医疗旅游与K-内容融合的新篇章', date: '2026.01.30', img: 'https://cdn.newsroad.co.kr/news/photo/202601/53565_72372_531.jpg', url: 'https://www.newsroad.co.kr/news/articleView.html?idxno=53565' },
-        { category: '新闻', title: "SA Company 举办 'Follow Korea' 第二季 K-Beauty 医疗旅游全球项目", date: '2025.11.13', img: 'https://cdn.imweb.me/upload/S20260120a0cc4980014ac/6bfafba46f880.jpg', url: 'https://star.mbn.co.kr/entertain/11467451?refer=portal' },
+        { category: '新闻', title: "Follow Korea 举办第二季 K-Beauty 医疗旅游全球项目", date: '2025.11.13', img: 'https://cdn.imweb.me/upload/S20260120a0cc4980014ac/6bfafba46f880.jpg', url: 'https://star.mbn.co.kr/entertain/11467451?refer=portal' },
         { category: '新闻', title: '百万粉丝网红加盟... Follow Korea 开启 K-Beauty 医疗旅游新市场', date: '2025.12.05', img: 'https://cdn.imweb.me/upload/S20260120a0cc4980014ac/ca2bb530535cb.png', url: 'https://mbn.co.kr/news/entertainment/5159843' }
       ],
       ctaTitle: '现在就开启\n全球患者引流之旅。', ctaBtn: '立即咨询',
@@ -237,7 +237,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
       newsTitle: 'ニュース＆お知らせ', newsMore: 'すべてのニュースを見る',
       newsItems: [
         { category: 'プレスリリース', title: 'Follow Korea、グローバル医療ツーリズムとK-コンテンツ融合の新境地へ', date: '2026.01.30', img: 'https://cdn.newsroad.co.kr/news/photo/202601/53565_72372_531.jpg', url: 'https://www.newsroad.co.kr/news/articleView.html?idxno=53565' },
-        { category: 'プレスリリース', title: "SAカンパニー、『Follow Korea』シーズン2 K-ビューティー医療ツーリズムグローバルプロジェクト開催", date: '2025.11.13', img: 'https://cdn.imweb.me/upload/S20260120a0cc4980014ac/6bfafba46f880.jpg', url: 'https://star.mbn.co.kr/entertain/11467451?refer=portal' },
+        { category: 'プレスリリース', title: "Follow Korea、シーズン2 K-ビューティー医療ツーリズムグローバルプロジェクト開催", date: '2025.11.13', img: 'https://cdn.imweb.me/upload/S20260120a0cc4980014ac/6bfafba46f880.jpg', url: 'https://star.mbn.co.kr/entertain/11467451?refer=portal' },
         { category: 'プレスリリース', title: 'Follow Korea、100万フォロワーのインフルエンサーとK-ビューティー医療ツアーの新市場を開拓', date: '2025.12.05', img: 'https://cdn.imweb.me/upload/S20260120a0cc4980014ac/ca2bb530535cb.png', url: 'https://mbn.co.kr/news/entertainment/5159843' }
       ],
       ctaTitle: '今、グローバル患者の誘致を\n始めましょう。', ctaBtn: '今すぐお問い合わせ',
@@ -270,7 +270,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
       newsTitle: 'Berita & Pengumuman', newsMore: 'Lihat Semua Berita',
       newsItems: [
         { category: 'Siaran Pers', title: 'Follow Korea Memimpin Era Baru Konvergensi Wisata Medis Global dan Konten-K', date: '2026.01.30', img: 'https://cdn.newsroad.co.kr/news/photo/202601/53565_72372_531.jpg', url: 'https://www.newsroad.co.kr/news/articleView.html?idxno=53565' },
-        { category: 'Siaran Pers', title: "SA Company Gelar Proyek Global Wisata Medis K-Beauty 'Follow Korea' Musim 2", date: '2025.11.13', img: 'https://cdn.imweb.me/upload/S20260120a0cc4980014ac/6bfafba46f880.jpg', url: 'https://star.mbn.co.kr/entertain/11467451?refer=portal' },
+        { category: 'Siaran Pers', title: "Follow Korea Gelar Proyek Global Wisata Medis K-Beauty Musim 2", date: '2025.11.13', img: 'https://cdn.imweb.me/upload/S20260120a0cc4980014ac/6bfafba46f880.jpg', url: 'https://star.mbn.co.kr/entertain/11467451?refer=portal' },
         { category: 'Siaran Pers', title: 'Follow Korea Membuka Pasar Baru Wisata Medis K-Beauty dengan Influencer 1 Juta Pengikut', date: '2025.12.05', img: 'https://cdn.imweb.me/upload/S20260120a0cc4980014ac/ca2bb530535cb.png', url: 'https://mbn.co.kr/news/entertainment/5159843' }
       ],
       ctaTitle: 'Mulai Menarik\nPasien Global Sekarang.', ctaBtn: 'Hubungi Sekarang',
@@ -303,7 +303,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
       newsTitle: 'الأخبار والإعلانات', newsMore: 'عرض كل الأخبار',
       newsItems: [
         { category: 'بيان صحفي', title: 'Follow Korea تقود آفاقاً جديدة في دمج السياحة العلاجية العالمية والمحتوى الكوري', date: '2026.01.30', img: 'https://cdn.newsroad.co.kr/news/photo/202601/53565_72372_531.jpg', url: 'https://www.newsroad.co.kr/news/articleView.html?idxno=53565' },
-        { category: 'بيان صحفي', title: "شركة SA تطلق المشروع العالمي للسياحة العلاجية للجمال الكوري 'Follow Korea' الموسم الثاني", date: '2025.11.13', img: 'https://cdn.imweb.me/upload/S20260120a0cc4980014ac/6bfafba46f880.jpg', url: 'https://star.mbn.co.kr/entertain/11467451?refer=portal' },
+        { category: 'بيان صحفي', title: "Follow Korea تطلق المشروع العالمي للسياحة العلاجية للجمال الكوري الموسم الثاني", date: '2025.11.13', img: 'https://cdn.imweb.me/upload/S20260120a0cc4980014ac/6bfafba46f880.jpg', url: 'https://star.mbn.co.kr/entertain/11467451?refer=portal' },
         { category: 'بيان صحفي', title: 'Follow Korea تفتح أسواقاً جديدة للسياحة العلاجية مع مؤثرين لديهم مليون متابع', date: '2025.12.05', img: 'https://cdn.imweb.me/upload/S20260120a0cc4980014ac/ca2bb530535cb.png', url: 'https://mbn.co.kr/news/entertainment/5159843' }
       ],
       ctaTitle: 'ابدأ الآن\nبجذب المرضى من حول العالم.', ctaBtn: 'استفسر الآن',
@@ -336,7 +336,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
       newsTitle: 'ព័ត៌មាន និងសេចក្តីជូនដំណឹង', newsMore: 'មើលព័ត៌មានទាំងអស់',
       newsItems: [
         { category: 'សេចក្តីប្រកាសព័ត៌មាន', title: 'Follow Korea នាំមុខសម័យកាលថ្មីនៃការរួមបញ្ចូលទេសចរណ៍វេជ្ជសាស្ត្រសកល និងមាតិកា K', date: '2026.01.30', img: 'https://cdn.newsroad.co.kr/news/photo/202601/53565_72372_531.jpg', url: 'https://www.newsroad.co.kr/news/articleView.html?idxno=53565' },
-        { category: 'សេចក្តីប្រកាសព័ត៌មាន', title: "ក្រុមហ៊ុន SA រៀបចំគម្រោងសកល 'Follow Korea' រដូវកាលទី2 ទេសចរណ៍វេជ្ជសាស្ត្រ K-Beauty", date: '2025.11.13', img: 'https://cdn.imweb.me/upload/S20260120a0cc4980014ac/6bfafba46f880.jpg', url: 'https://star.mbn.co.kr/entertain/11467451?refer=portal' },
+        { category: 'សេចក្តីប្រកាសព័ត៌មាន', title: "Follow Korea រៀបចំគម្រោងសកល រដូវកាលទី2 ទេសចរណ៍វេជ្ជសាស្ត្រ K-Beauty", date: '2025.11.13', img: 'https://cdn.imweb.me/upload/S20260120a0cc4980014ac/6bfafba46f880.jpg', url: 'https://star.mbn.co.kr/entertain/11467451?refer=portal' },
         { category: 'សេចក្តីប្រកាសព័ត៌មាន', title: 'Follow Korea បើកទីផ្សារថ្មីសម្រាប់ K-Beauty ជាមួយអ្នកមានឥទ្ធិពល 1 លាននាក់', date: '2025.12.05', img: 'https://cdn.imweb.me/upload/S20260120a0cc4980014ac/ca2bb530535cb.png', url: 'https://mbn.co.kr/news/entertainment/5159843' }
       ],
       ctaTitle: 'ចាប់ផ្តើមទាក់ទាញ\nអ្នកជំងឺសកលឥឡូវនេះ។', ctaBtn: 'សាកសួរឥឡូវនេះ',
@@ -369,7 +369,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
       newsTitle: 'Tin tức & Thông báo', newsMore: 'Xem tất cả tin tức',
       newsItems: [
         { category: 'Thông cáo báo chí', title: 'Follow Korea dẫn đầu kỷ nguyên mới hội tụ Du lịch Y tế toàn cầu và Nội dung K', date: '2026.01.30', img: 'https://cdn.newsroad.co.kr/news/photo/202601/53565_72372_531.jpg', url: 'https://www.newsroad.co.kr/news/articleView.html?idxno=53565' },
-        { category: 'Thông cáo báo chí', title: "SA Company tổ chức dự án toàn cầu Du lịch Y tế K-Beauty 'Follow Korea' mùa 2", date: '2025.11.13', img: 'https://cdn.imweb.me/upload/S20260120a0cc4980014ac/6bfafba46f880.jpg', url: 'https://star.mbn.co.kr/entertain/11467451?refer=portal' },
+        { category: 'Thông cáo báo chí', title: "Follow Korea tổ chức dự án toàn cầu Du lịch Y tế K-Beauty mùa 2", date: '2025.11.13', img: 'https://cdn.imweb.me/upload/S20260120a0cc4980014ac/6bfafba46f880.jpg', url: 'https://star.mbn.co.kr/entertain/11467451?refer=portal' },
         { category: 'Thông cáo báo chí', title: 'Follow Korea mở thị trường mới cho Du lịch Y tế K-Beauty với Influencer 1 triệu follower', date: '2025.12.05', img: 'https://cdn.imweb.me/upload/S20260120a0cc4980014ac/ca2bb530535cb.png', url: 'https://mbn.co.kr/news/entertainment/5159843' }
       ],
       ctaTitle: 'Bắt đầu thu hút\nbệnh nhân toàn cầu ngay.', ctaBtn: 'Liên hệ ngay',
@@ -402,7 +402,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
       newsTitle: 'Новости и объявления', newsMore: 'Все новости',
       newsItems: [
         { category: 'Пресс-релиз', title: 'Follow Korea открывает новую эру слияния мирового медтуризма и K-контента', date: '2026.01.30', img: 'https://cdn.newsroad.co.kr/news/photo/202601/53565_72372_531.jpg', url: 'https://www.newsroad.co.kr/news/articleView.html?idxno=53565' },
-        { category: 'Пресс-релиз', title: "Компания SA проводит глобальный проект медтуризма K-Beauty 'Follow Korea' Сезон 2", date: '2025.11.13', img: 'https://cdn.imweb.me/upload/S20260120a0cc4980014ac/6bfafba46f880.jpg', url: 'https://star.mbn.co.kr/entertain/11467451?refer=portal' },
+        { category: 'Пресс-релиз', title: "Follow Korea проводит глобальный проект медтуризма K-Beauty Сезон 2", date: '2025.11.13', img: 'https://cdn.imweb.me/upload/S20260120a0cc4980014ac/6bfafba46f880.jpg', url: 'https://star.mbn.co.kr/entertain/11467451?refer=portal' },
         { category: 'Пресс-релиз', title: 'Follow Korea открывает новые рынки медтуризма K-Beauty с блогерами-миллионниками', date: '2025.12.05', img: 'https://cdn.imweb.me/upload/S20260120a0cc4980014ac/ca2bb530535cb.png', url: 'https://mbn.co.kr/news/entertainment/5159843' }
       ],
       ctaTitle: 'Начните привлекать\nпациентов со всего мира.', ctaBtn: 'Оставить заявку',
