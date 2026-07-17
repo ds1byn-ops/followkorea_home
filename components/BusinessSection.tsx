@@ -43,7 +43,7 @@ interface BusinessSectionProps {
 const BusinessSection: React.FC<BusinessSectionProps> = ({ lang }) => {
   const T: Record<'KR' | 'EN' | 'CN', any> = {
     KR: {
-      title: '5대 프로젝트',
+      title: '6대 프로젝트',
       sub: '현행 왕홍 매출을 축으로, 유입·반복·고수익 사업으로 단계적으로 확장합니다.',
       featured: {
         tag: '현행 주력',
@@ -55,10 +55,11 @@ const BusinessSection: React.FC<BusinessSectionProps> = ({ lang }) => {
         { no: '03', tag: '시장 진입', name: '중국전용 · 중국법인', desc: 'gnfollow.com/.cn 중국 플랫폼과 WFOE 법인·바이두·위챗 미니프로그램 인프라를 순차 구축합니다.', metric: '8월 법인 설립 · 본격 매출 2027', icon: 'solar:buildings-3-bold-duotone' },
         { no: '04', tag: '신규 반복매출', name: '강남펄스 SaaS', desc: '병원용 차트·예약·CRM SaaS를 자체 개발. 입점비 무료 + 기능·단계별 월 구독으로 과금합니다.', metric: '12월 50개 병원 · MRR 1,000만', icon: 'solar:chart-square-bold-duotone' },
         { no: '05', tag: '신규 고수익', name: '중국 SNS 홍보대행', desc: '샤오홍슈·도우인·틱톡·웨이보를 운영해 국내 병원 홍보 프로그램을 건당 500~1,000만원 규모로 수주합니다.', metric: '11월~ 월 5,000만 목표', icon: 'solar:smartphone-2-bold-duotone' },
+        { no: '06', tag: '신규 체험마케팅', name: '왕홍333 체험 프로그램', desc: '왕홍과 연계한 체험형 프로모션으로 신규 고객의 첫 방문을 유도하는 체험 마케팅 프로그램입니다.', metric: '체험→시술 신규 유입 채널', icon: 'solar:star-bold-duotone' },
       ],
     },
     EN: {
-      title: 'Five Businesses',
+      title: 'Six Businesses',
       sub: 'Anchored by current wanghong revenue, we expand into traffic, recurring and high-margin businesses in stages.',
       featured: {
         tag: 'Core Revenue',
@@ -70,10 +71,11 @@ const BusinessSection: React.FC<BusinessSectionProps> = ({ lang }) => {
         { no: '03', tag: 'Market Entry', name: 'China Edition & Entity', desc: 'Building the gnfollow.com/.cn platform plus a WFOE entity, Baidu and WeChat Mini Program infrastructure in sequence.', metric: 'Entity in Aug · full revenue 2027', icon: 'solar:buildings-3-bold-duotone' },
         { no: '04', tag: 'Recurring Revenue', name: 'Gangnam Pulse SaaS', desc: 'A self-built clinic SaaS for charts, booking and CRM. Free onboarding plus tiered monthly subscription by feature.', metric: '50 clinics by Dec · ₩10M MRR', icon: 'solar:chart-square-bold-duotone' },
         { no: '05', tag: 'High-margin', name: 'China SNS Marketing', desc: 'Operating Xiaohongshu, Douyin, TikTok and Weibo to win clinic promotion programs at ₩5–10M each.', metric: '₩50M/mo target from Nov', icon: 'solar:smartphone-2-bold-duotone' },
+        { no: '06', tag: 'Experience Marketing', name: 'Wanghong 333 Experience', desc: 'A wanghong-linked trial promotion that drives first visits from new clients — a hands-on experience marketing program.', metric: 'New-client acquisition channel', icon: 'solar:star-bold-duotone' },
       ],
     },
     CN: {
-      title: '五大业务',
+      title: '六大业务',
       sub: '以现有网红营收为核心，分阶段拓展至流量、复购与高收益业务。',
       featured: {
         tag: '现有主力',
@@ -85,6 +87,7 @@ const BusinessSection: React.FC<BusinessSectionProps> = ({ lang }) => {
         { no: '03', tag: '市场进入', name: '中国专用版 · 中国法人', desc: '依次建设 gnfollow.com/.cn 中国平台及WFOE法人、百度、微信小程序基础设施。', metric: '8月设立法人 · 营收2027', icon: 'solar:buildings-3-bold-duotone' },
         { no: '04', tag: '新增复购营收', name: '江南Pulse SaaS', desc: '自主开发面向医院的病历·预约·CRM SaaS。入驻免费，按功能与阶段收取月订阅费。', metric: '12月50家医院 · MRR 1,000万', icon: 'solar:chart-square-bold-duotone' },
         { no: '05', tag: '新增高收益', name: '中国社媒营销代理', desc: '运营小红书、抖音、TikTok、微博，为国内医院承接每单500~1,000万韩元的推广项目。', metric: '11月起月5,000万目标', icon: 'solar:smartphone-2-bold-duotone' },
+        { no: '06', tag: '体验营销', name: '网红333体验计划', desc: '与网红联动的体验型促销，吸引新客户首次到访的体验营销项目。', metric: '新客获取渠道', icon: 'solar:star-bold-duotone' },
       ],
     },
   };
