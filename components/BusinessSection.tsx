@@ -175,11 +175,11 @@ const BusinessSection: React.FC<BusinessSectionProps> = ({ lang }) => {
                 <span className="inline-block self-start text-[11px] font-black text-[#5a82c2] bg-[#5a82c2]/10 px-3 py-1 rounded-full uppercase tracking-wider mb-3">{item.tag}</span>
                 <h4 className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight mb-3 break-keep">{item.name}</h4>
                 <p className="text-[14px] md:text-[15px] leading-relaxed text-gray-500 font-medium flex-1">{item.desc}</p>
-                <div className="mt-6 pt-5 border-t border-gray-200/70 flex items-center gap-2">
-                  <span className="iconify text-[#5a82c2]" data-icon="solar:check-circle-bold"></span>
-                  <span className="text-[13px] md:text-sm font-bold text-[#5a82c2]">{item.metric}</span>
-                  {href && <span className="iconify text-[#5a82c2] ml-auto text-lg group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" data-icon="solar:arrow-right-up-linear"></span>}
-                </div>
+                {href && (
+                  <div className="mt-6 pt-5 border-t border-gray-200/70 flex items-center justify-end">
+                    <span className="iconify text-[#5a82c2] text-lg group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" data-icon="solar:arrow-right-up-linear"></span>
+                  </div>
+                )}
               </div>
             );
             return (
