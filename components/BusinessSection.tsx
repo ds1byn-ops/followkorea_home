@@ -48,7 +48,7 @@ const BusinessSection: React.FC<BusinessSectionProps> = ({ lang }) => {
       featured: {
         tag: '현행 주력',
         name: '왕홍(가이드) 병원 수수료',
-        desc: '왕홍·가이드가 소개한 중국 환자가 제휴 병원에서 시술하면 수수료를 정산받는, 현재 매출의 핵심 축입니다.',
+        desc: '왕홍과 현지 가이드가 쌓아온 신뢰를 통해 중국 고객을 검증된 제휴 병원으로 연결합니다. 시술이 성사될 때마다 수수료로 정산되는, 팔로우코리아 매출의 핵심 엔진입니다.',
       },
       items: [
         { no: '02', tag: '유입 인프라', name: '강남팔로우 글로벌', desc: '10개 언어 해외환자 플랫폼(followkorea.kr)으로 해외환자를 직접 유치하고 국내 병원 입점을 홍보합니다.', metric: '7월 오픈 · 저비용 상시 운영', icon: 'solar:global-bold-duotone' },
@@ -63,7 +63,7 @@ const BusinessSection: React.FC<BusinessSectionProps> = ({ lang }) => {
       featured: {
         tag: 'Core Revenue',
         name: 'Wanghong (Guide) Clinic Fees',
-        desc: 'When Chinese patients referred by wanghong and guides receive procedures at partner clinics, we settle a referral fee — our core revenue today.',
+        desc: 'Chinese clients arrive through the trust wanghong and local guides have built, and we match them with vetted partner clinics. Every completed procedure settles as a fee — the core engine of Follow Korea’s revenue today.',
       },
       items: [
         { no: '02', tag: 'Infrastructure', name: 'Gangnam Follow Global', desc: 'A 10-language overseas-patient platform (followkorea.kr) that acquires patients directly and promotes clinic onboarding.', metric: 'Launched Jul · low-cost, always-on', icon: 'solar:global-bold-duotone' },
@@ -78,7 +78,7 @@ const BusinessSection: React.FC<BusinessSectionProps> = ({ lang }) => {
       featured: {
         tag: '现有主力',
         name: '网红（导游）医院佣金',
-        desc: '由网红及导游介绍的中国患者在合作医院就诊时，按约定结算佣金，是目前营收的核心。',
+        desc: '依托网红与当地导游积累的信任，我们将中国客户对接至严选合作医院。每一次成功诊疗都以佣金结算，是Follow Korea当前营收的核心引擎。',
       },
       items: [
         { no: '02', tag: '流量基础', name: '江南Follow全球版', desc: '以10种语言的海外患者平台（followkorea.kr）直接获客，并向国内医院推广入驻。', metric: '7月上线 · 低成本常态运营', icon: 'solar:global-bold-duotone' },
