@@ -48,10 +48,7 @@ const BusinessSection: React.FC<BusinessSectionProps> = ({ lang }) => {
       featured: {
         tag: '현행 주력',
         name: '왕홍(가이드) 병원 수수료',
-        desc: '왕홍·가이드가 소개한 중국 환자가 제휴 병원에서 시술하면 시술액의 15~30%를 수수료로 정산하는, 현재 매출의 핵심 축입니다.',
-        m1v: '8,500만', m1l: '12월 월 수수료 목표',
-        m2v: '40%', m2l: '영업이익률',
-        m3v: '4.0억', m3l: '하반기 수수료 합계',
+        desc: '왕홍·가이드가 소개한 중국 환자가 제휴 병원에서 시술하면 수수료를 정산받는, 현재 매출의 핵심 축입니다.',
       },
       items: [
         { no: '02', tag: '유입 인프라', name: '강남팔로우 글로벌', desc: '10개 언어 해외환자 플랫폼(followkorea.kr)으로 해외환자를 직접 유치하고 국내 병원 입점을 홍보합니다.', metric: '7월 오픈 · 저비용 상시 운영', icon: 'solar:global-bold-duotone' },
@@ -66,10 +63,7 @@ const BusinessSection: React.FC<BusinessSectionProps> = ({ lang }) => {
       featured: {
         tag: 'Core Revenue',
         name: 'Wanghong (Guide) Clinic Fees',
-        desc: 'When Chinese patients referred by wanghong and guides receive procedures at partner clinics, we settle 15–30% of the value as a fee — our core revenue today.',
-        m1v: '₩85M', m1l: 'Dec monthly fee target',
-        m2v: '40%', m2l: 'Operating margin',
-        m3v: '₩402M', m3l: 'H2 total fees',
+        desc: 'When Chinese patients referred by wanghong and guides receive procedures at partner clinics, we settle a referral fee — our core revenue today.',
       },
       items: [
         { no: '02', tag: 'Infrastructure', name: 'Gangnam Follow Global', desc: 'A 10-language overseas-patient platform (followkorea.kr) that acquires patients directly and promotes clinic onboarding.', metric: 'Launched Jul · low-cost, always-on', icon: 'solar:global-bold-duotone' },
@@ -84,10 +78,7 @@ const BusinessSection: React.FC<BusinessSectionProps> = ({ lang }) => {
       featured: {
         tag: '现有主力',
         name: '网红（导游）医院佣金',
-        desc: '由网红及导游介绍的中国患者在合作医院就诊时，按诊疗额的15~30%结算佣金，是目前营收的核心。',
-        m1v: '8,500万', m1l: '12月月佣金目标',
-        m2v: '40%', m2l: '营业利润率',
-        m3v: '4.0亿', m3l: '下半年佣金合计',
+        desc: '由网红及导游介绍的中国患者在合作医院就诊时，按约定结算佣金，是目前营收的核心。',
       },
       items: [
         { no: '02', tag: '流量基础', name: '江南Follow全球版', desc: '以10种语言的海外患者平台（followkorea.kr）直接获客，并向国内医院推广入驻。', metric: '7月上线 · 低成本常态运营', icon: 'solar:global-bold-duotone' },
@@ -145,19 +136,7 @@ const BusinessSection: React.FC<BusinessSectionProps> = ({ lang }) => {
             </div>
 
             <div className="flex flex-col justify-center py-2">
-              <p className="text-gray-500 text-[15px] md:text-lg leading-relaxed font-medium mb-8 md:mb-10">{t.featured.desc}</p>
-              <div className="grid grid-cols-3 gap-4 md:gap-6">
-                {[
-                  { v: t.featured.m1v, l: t.featured.m1l },
-                  { v: t.featured.m2v, l: t.featured.m2l },
-                  { v: t.featured.m3v, l: t.featured.m3l },
-                ].map((m, i) => (
-                  <div key={i} className="border-l-2 border-[#5a82c2]/20 pl-3 md:pl-4">
-                    <div className="text-2xl md:text-4xl font-black text-gray-900 tracking-tight">{m.v}</div>
-                    <div className="text-[11px] md:text-[13px] text-gray-400 font-bold mt-1.5 leading-tight">{m.l}</div>
-                  </div>
-                ))}
-              </div>
+              <p className="text-gray-500 text-[15px] md:text-lg leading-relaxed font-medium">{t.featured.desc}</p>
             </div>
           </div>
         </Reveal>
