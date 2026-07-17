@@ -101,6 +101,7 @@ const BusinessSection: React.FC<BusinessSectionProps> = ({ lang }) => {
     '03': 'https://gnfollow.com',
     '04': 'https://gnpulse.kr/demo',
     '05': 'https://gnpulse.kr',
+    '06': 'https://gnpulse.kr',
   };
 
   return (
