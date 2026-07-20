@@ -96,6 +96,7 @@ const CountUp: React.FC<{ end: number; duration?: number; decimals?: number }> =
 
 // 우리 서비스 — 3개 제품 허브 (강남펄스 ERP / 글로벌 플랫폼 / 왕홍 마케팅)
 const SVC_LINKS = ['https://gnpulse.kr/demo', 'https://followkorea.kr', 'https://gnpulse.kr'];
+const AGENCY_ERP: Record<string, string> = { KR: '에이전시 관리 ERP', EN: 'Agency Management ERP', CN: '代理商管理 ERP', JP: 'エージェンシー管理 ERP', ID: 'ERP Manajemen Agensi', AR: 'نظام إدارة الوكالات', KH: 'ERP គ្រប់គ្រងភ្នាក់ងារ', VI: 'ERP Quản lý Đại lý', RU: 'ERP управления агентствами' };
 const SVC_I18N: Record<string, { title: string; sub: string; items: { t: string; d: string; c: string; tag?: string }[] }> = {
   KR: { title: '병원 성장을 위한\n세 가지 솔루션', sub: '메디컬 마케팅부터 병원 운영, 글로벌 환자 유치까지 — 필요한 서비스를 바로 선택하세요.', items: [
     { t: '강남펄스 ERP', d: '예약·접수·정산·환자 CRM을 하나로. 병원 운영 올인원 시스템을 무료로 체험해 보세요.', c: '무료 데모 신청', tag: '무료 체험' },
@@ -521,29 +522,38 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
         <Reveal>
           <div className="text-center mb-12 md:mb-16">
             <span className="text-[#5a82c2] font-black text-sm tracking-[0.3em] uppercase mb-4 block">Our Services</span>
-            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 tracking-tight whitespace-pre-line leading-[1.35]">{svc.title}</h2>
+            <h2 className="text-3xl md:text-5xl font-black text-gray-900 tracking-tight whitespace-pre-line leading-[1.2]">{svc.title}</h2>
             <p className="text-gray-400 mt-5 text-base md:text-lg font-medium max-w-2xl mx-auto">{svc.sub}</p>
           </div>
         </Reveal>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-          {svc.items.map((it, i) => (
+          {svc.items.map((it, i) => {
+            const featured = i === 0;
+            return (
             <Reveal key={i} delay={i * 0.1}>
               <a
                 href={SVC_LINKS[i]}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex flex-col h-full relative bg-[#F4F7FA] hover:bg-white border border-transparent hover:border-[#5a82c2]/20 rounded-[2rem] md:rounded-[2.5rem] p-8 md:p-10 transition-all duration-500 hover:shadow-2xl hover:shadow-[#5a82c2]/10 hover:-translate-y-2"
+                className={`group flex flex-col h-full relative rounded-[2rem] md:rounded-[2.5rem] p-8 md:p-10 transition-all duration-500 hover:-translate-y-2 ${featured ? 'bg-gradient-to-br from-[#5a82c2] to-[#41608f] text-white shadow-2xl shadow-[#5a82c2]/30' : 'bg-[#F4F7FA] hover:bg-white border border-transparent hover:border-[#5a82c2]/20 hover:shadow-2xl hover:shadow-[#5a82c2]/10'}`}
               >
-                {it.tag && <span className="self-start text-[11px] font-black text-[#5a82c2] bg-[#5a82c2]/10 px-3 py-1.5 rounded-full mb-5 uppercase tracking-wider">{it.tag}</span>}
-                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 tracking-tight">{it.t}</h3>
-                <p className="text-gray-500 text-sm md:text-[15px] leading-relaxed font-medium flex-1">{it.d}</p>
-                <span className="mt-6 inline-flex items-center gap-2 text-[#5a82c2] font-bold text-sm md:text-base">
+                {it.tag && <span className={`self-start text-[11px] font-black px-3 py-1.5 rounded-full mb-5 uppercase tracking-wider ${featured ? 'bg-white/20 text-white' : 'text-[#5a82c2] bg-[#5a82c2]/10'}`}>{it.tag}</span>}
+                {featured ? (
+                  <div className="mb-4">
+                    <h3 className="text-2xl md:text-[30px] font-black tracking-tight leading-[1.15]">{AGENCY_ERP[lang] || AGENCY_ERP.EN}</h3>
+                    <span className="block text-sm font-bold text-white/70 mt-1.5">{it.t}</span>
+                  </div>
+                ) : (
+                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 tracking-tight">{it.t}</h3>
+                )}
+                <p className={`text-sm md:text-[15px] leading-relaxed font-medium flex-1 ${featured ? 'text-white/85' : 'text-gray-500'}`}>{it.d}</p>
+                <span className={`mt-7 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full font-bold text-sm md:text-base transition-all group-hover:gap-3 ${featured ? 'bg-white text-[#5a82c2] group-hover:bg-blue-50' : 'bg-[#5a82c2] text-white group-hover:bg-[#4a6da3]'}`}>
                   {it.c}
-                  <span className="iconify group-hover:translate-x-1 transition-transform" data-icon="solar:arrow-right-linear"></span>
+                  <span className="iconify transition-transform" data-icon="solar:arrow-right-linear"></span>
                 </span>
               </a>
             </Reveal>
-          ))}
+          );})}
         </div>
       </section>
 
