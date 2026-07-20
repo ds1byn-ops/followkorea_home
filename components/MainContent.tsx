@@ -472,7 +472,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
     <main className="bg-white">
       {/* 01. Video Hero Section */}
       <section className="bg-white px-4 md:px-8 pt-4 md:pt-8 pb-4">
-        <div className="relative h-[85vh] md:h-[90vh] w-full rounded-[2.5rem] md:rounded-[4rem] overflow-hidden shadow-2xl">
+        <div className="relative h-[64vh] md:h-[72vh] w-full rounded-[2.5rem] md:rounded-[4rem] overflow-hidden shadow-2xl">
           <div className="absolute inset-0 w-full h-full pointer-events-none">
             <iframe
               className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 scale-125"
@@ -493,7 +493,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
               </div>
             </Reveal>
             <Reveal delay={0.2}>
-              <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold leading-[1.3] tracking-tight mb-6 drop-shadow-2xl whitespace-pre-line" style={{ color: '#F5F5F5' }}>
+              <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold leading-[1.2] tracking-tight mb-6 drop-shadow-2xl whitespace-pre-line" style={{ color: '#F5F5F5' }}>
                 {t.heroTitle}
               </h1>
             </Reveal>
