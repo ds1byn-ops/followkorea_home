@@ -472,7 +472,10 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
     <main className="bg-white">
       {/* 01. Video Hero Section */}
       <section className="bg-white px-4 md:px-8 pt-4 md:pt-8 pb-4">
-        <div className="relative h-[64vh] md:h-[72vh] w-full rounded-[2.5rem] md:rounded-[4rem] overflow-hidden shadow-2xl">
+        <div
+          onClick={() => { const el = document.getElementById('about-us'); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.pageYOffset - 90, behavior: 'smooth' }); }}
+          className="relative h-[64vh] md:h-[72vh] w-full rounded-[2.5rem] md:rounded-[4rem] overflow-hidden shadow-2xl cursor-pointer"
+        >
           <div className="absolute inset-0 w-full h-full pointer-events-none">
             <iframe
               className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 scale-125"
@@ -504,8 +507,8 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
             </Reveal>
             <Reveal delay={0.5}>
               <div className="flex flex-wrap gap-5">
-                <button 
-                  onClick={onOpenConsult}
+                <button
+                  onClick={(e) => { e.stopPropagation(); onOpenConsult(); }}
                   className="bg-[#5a82c2] text-white px-8 md:px-10 py-4 md:py-5 rounded-full font-bold hover:bg-[#4a6da3] transition-all flex items-center gap-3 group shadow-2xl shadow-[#5a82c2]/20 active:scale-95 text-sm md:text-base"
                 >
                   <span>{t.consultBtn}</span>
@@ -513,6 +516,10 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
                 </button>
               </div>
             </Reveal>
+          </div>
+          {/* 클릭/스크롤 유도 힌트 */}
+          <div className="absolute bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 z-10 pointer-events-none">
+            <span className="iconify text-white/60 text-2xl md:text-3xl animate-bounce" data-icon="solar:alt-arrow-down-linear"></span>
           </div>
         </div>
       </section>
