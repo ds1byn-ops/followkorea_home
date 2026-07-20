@@ -117,11 +117,11 @@ const Navbar: React.FC<NavbarProps> = ({
           >
             <span className="iconify text-lg text-[#5a82c2]" data-icon="solar:global-linear"></span>
             <span>{currentLang}</span>
-            <span className={`iconify transition-transform duration-300 ${isLangOpen ? 'rotate-180' : '0'}`} data-icon="solar:alt-arrow-down-linear"></span>
+            <span className={`iconify transition-transform duration-300 ${isLangOpen ? 'rotate-180' : ''}`} data-icon="solar:alt-arrow-down-linear"></span>
           </button>
 
           {isLangOpen && (
-            <div className="absolute top-full right-0 mt-2 w-32 md:w-36 bg-white rounded-xl shadow-2xl border border-[#5a82c2]/10 py-2 overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200">
+            <div className="absolute top-full end-0 mt-2 w-32 md:w-36 bg-white rounded-xl shadow-2xl border border-[#5a82c2]/10 py-2 overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200">
               {languages.map((lang) => (
                 <button
                   key={lang.code}
@@ -129,7 +129,7 @@ const Navbar: React.FC<NavbarProps> = ({
                     onLangChange(lang.code);
                     setIsLangOpen(false);
                   }}
-                  className={`w-full px-4 py-2.5 text-left text-[14px] font-bold transition-colors flex items-center justify-between ${
+                  className={`w-full px-4 py-2.5 text-start text-[14px] font-bold transition-colors flex items-center justify-between ${
                     currentLang === lang.code ? 'text-[#5a82c2] bg-[#5a82c2]/10' : 'text-gray-500 hover:bg-gray-50 hover:text-gray-900'
                   }`}
                 >

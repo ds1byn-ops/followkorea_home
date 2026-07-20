@@ -19,6 +19,10 @@ const App: React.FC = () => {
   const [currentLang, setCurrentLang] = useState<LanguageCode>('EN');
 
   useEffect(() => {
+    const htmlLangMap: Record<LanguageCode, string> = {
+      KR: 'ko', EN: 'en', CN: 'zh', JP: 'ja', ID: 'id', AR: 'ar', KH: 'km', VI: 'vi', RU: 'ru'
+    };
+    document.documentElement.lang = htmlLangMap[currentLang];
     document.documentElement.dir = currentLang === 'AR' ? 'rtl' : 'ltr';
   }, [currentLang]);
 
