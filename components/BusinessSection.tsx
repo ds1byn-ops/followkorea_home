@@ -53,8 +53,8 @@ const BusinessSection: React.FC<BusinessSectionProps> = ({ lang }) => {
       items: [
         { no: '02', tag: '유입 인프라', name: '강남팔로우 글로벌', desc: '10개 언어 해외환자 플랫폼(followkorea.kr)으로 해외환자를 직접 유치하고 국내 병원 입점을 홍보합니다.', metric: '7월 오픈 · 저비용 상시 운영', icon: 'solar:global-bold-duotone' },
         { no: '03', tag: '시장 진입', name: '중국전용 · 중국법인', desc: 'gnfollow.com/.cn 중국 플랫폼과 WFOE 법인·바이두·위챗 미니프로그램 인프라를 순차 구축합니다.', metric: '8월 법인 설립 · 본격 매출 2027', icon: 'solar:buildings-3-bold-duotone' },
-        { no: '04', tag: '신규 반복매출', name: '강남펄스 SaaS', desc: '병원용 차트·예약·CRM SaaS를 자체 개발. 입점비 무료 + 기능·단계별 월 구독으로 과금합니다.', metric: '12월 50개 병원 · MRR 1,000만', icon: 'solar:chart-square-bold-duotone' },
-        { no: '05', tag: '신규 고수익', name: '중국 SNS 홍보대행', desc: '샤오홍슈·도우인·틱톡·웨이보를 운영해 국내 병원 홍보 프로그램을 건당 500~1,000만원 규모로 수주합니다.', metric: '11월~ 월 5,000만 목표', icon: 'solar:smartphone-2-bold-duotone' },
+        { no: '04', tag: '신규 반복매출', name: '강남펄스 SaaS', desc: '병원용 차트·예약·CRM SaaS. 입점비 무료 + 월 구독 과금.', metric: '12월 50개 병원 · MRR 1,000만', icon: 'solar:chart-square-bold-duotone' },
+        { no: '05', tag: '신규 고수익', name: '중국 SNS 홍보대행', desc: '샤오홍슈·도우인 운영으로 병원 홍보를 건당 500~1,000만원 수주.', metric: '11월~ 월 5,000만 목표', icon: 'solar:smartphone-2-bold-duotone' },
         { no: '06', tag: '신규 체험마케팅', name: '왕홍333 체험 프로그램', desc: '왕홍과 연계한 체험형 프로모션으로 신규 고객의 첫 방문을 유도하는 체험 마케팅 프로그램입니다.', metric: '체험→시술 신규 유입 채널', icon: 'solar:star-bold-duotone' },
       ],
     },
