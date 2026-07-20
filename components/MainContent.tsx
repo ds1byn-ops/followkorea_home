@@ -95,8 +95,19 @@ const CountUp: React.FC<{ end: number; duration?: number; decimals?: number }> =
 };
 
 // 우리 서비스 — 3개 제품 허브 (강남펄스 ERP / 글로벌 플랫폼 / 왕홍 마케팅)
-const SVC_LINKS = ['https://gnpulse.kr/demo', 'https://followkorea.kr', 'https://gnpulse.kr'];
+const SVC_LINKS = ['https://gnpulse.kr/demo', 'https://followkorea.kr', 'https://gnpulse.kr', 'https://gnpulse.kr/guide'];
 const AGENCY_ERP: Record<string, string> = { KR: '에이전시 관리 ERP', EN: 'Agency Management ERP', CN: '代理商管理 ERP', JP: 'エージェンシー管理 ERP', ID: 'ERP Manajemen Agensi', AR: 'نظام إدارة الوكالات', KH: 'ERP គ្រប់គ្រងភ្នាក់ងារ', VI: 'ERP Quản lý Đại lý', RU: 'ERP управления агентствами' };
+const GUIDE_I18N: Record<string, { t: string; d: string; c: string; tag?: string }> = {
+  KR: { t: '통역 가이드 모집', d: '한국 거주 중화권 분들을 협력 가이드로 모십니다. 중국 고객 소개 시 수수료를 드립니다.', c: '가이드 지원하기', tag: '인재 모집' },
+  EN: { t: 'Interpreter Guide Recruiting', d: 'Recruiting Chinese-speaking residents in Korea as partner guides. Earn commission for referring Chinese clients.', c: 'Apply as Guide', tag: 'Recruiting' },
+  CN: { t: '翻译向导招募', d: '招募在韩华语人才成为合作向导。介绍中国客户即可获得佣金。', c: '申请成为向导', tag: '招募' },
+  JP: { t: '通訳ガイド募集', d: '韓国在住の中華圏の方をパートナーガイドとして募集。中国人客の紹介で報酬を差し上げます。', c: 'ガイドに応募', tag: '募集' },
+  ID: { t: 'Rekrutmen Pemandu', d: 'Merekrut penutur Mandarin di Korea sebagai pemandu mitra. Dapatkan komisi dengan mereferensikan klien Tiongkok.', c: 'Daftar Jadi Pemandu', tag: 'Rekrutmen' },
+  AR: { t: 'توظيف مرشدين مترجمين', d: 'نوظّف الناطقين بالصينية المقيمين في كوريا كمرشدين شركاء. اكسب عمولة عند إحالة العملاء الصينيين.', c: 'تقدّم كمرشد', tag: 'توظيف' },
+  KH: { t: 'ជ្រើសរើសអ្នកណែនាំ', d: 'ជ្រើសរើសអ្នកនិយាយភាសាចិននៅកូរ៉េជាអ្នកណែនាំដៃគូ។ ទទួលកម្រៃពីការណែនាំអតិថិជនចិន។', c: 'ដាក់ពាក្យ', tag: 'ជ្រើសរើស' },
+  VI: { t: 'Tuyển hướng dẫn viên', d: 'Tuyển người nói tiếng Trung tại Hàn Quốc làm hướng dẫn viên đối tác. Nhận hoa hồng khi giới thiệu khách Trung Quốc.', c: 'Ứng tuyển', tag: 'Tuyển dụng' },
+  RU: { t: 'Набор гидов-переводчиков', d: 'Набираем говорящих по-китайски в Корее как гидов-партнёров. Комиссия за привлечение китайских клиентов.', c: 'Стать гидом', tag: 'Набор' },
+};
 const SVC_I18N: Record<string, { title: string; sub: string; items: { t: string; d: string; c: string; tag?: string }[] }> = {
   KR: { title: '병원 성장을 위한\n세 가지 솔루션', sub: '메디컬 마케팅부터 병원 운영, 글로벌 환자 유치까지 — 필요한 서비스를 바로 선택하세요.', items: [
     { t: '강남펄스 ERP', d: '예약·접수·정산·환자 CRM을 하나로. 병원 운영 올인원 시스템을 무료로 체험해 보세요.', c: '무료 데모 신청', tag: '무료 체험' },
@@ -533,8 +544,8 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
             <p className="text-gray-400 mt-5 text-base md:text-lg font-medium max-w-2xl mx-auto">{svc.sub}</p>
           </div>
         </Reveal>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-          {svc.items.map((it, i) => {
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
+          {svc.items.concat([GUIDE_I18N[lang] || GUIDE_I18N.EN]).map((it, i) => {
             const featured = i === 0;        // ERP: 블루 + 2단 타이틀
             const red = i === 2;             // 왕홍 마케팅: 레드
             const colored = featured || red; // 컬러 배경 + 흰 텍스트
