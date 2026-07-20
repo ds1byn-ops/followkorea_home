@@ -546,27 +546,19 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
         </Reveal>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
           {svc.items.concat([GUIDE_I18N[lang] || GUIDE_I18N.EN]).map((it, i) => {
-            const featured = i === 0;        // ERP: 블루 솔리드 + 2단 타이틀
-            const red = i === 2;             // 왕홍 마케팅: 레드 솔리드
-            const colored = featured || red; // 컬러 배경 + 흰 텍스트
-            const rose = i === 3;            // 가이드 모집: 레드 카드의 라이트 틴트 짝
+            const featured = i === 0;        // ERP: 2단 타이틀
             // 단어 단위 줄바꿈은 한국어만 — 일본어·중국어는 keep-all이 오히려 줄바꿈을 막아 글자가 넘침
             const krBreak = lang === 'KR' ? 'break-keep' : '';
-            // 배색: 블루 솔리드 → 블루 틴트 → 레드 솔리드 → 로즈 틴트 (솔리드+틴트 2쌍)
-            const cardBg = featured
-              ? 'bg-gradient-to-br from-[#5a82c2] to-[#41608f] shadow-2xl shadow-[#5a82c2]/30 hover:from-[#6b93d4] hover:to-[#466a9e] hover:shadow-[#5a82c2]/50'
-              : red
-              ? 'bg-gradient-to-br from-[#e5384f] to-[#b02a3f] shadow-2xl shadow-[#e5384f]/30 hover:from-[#f04d63] hover:to-[#c23148] hover:shadow-[#e5384f]/50'
-              : rose
-              ? 'bg-gradient-to-br from-[#fdf1f3] to-[#f7dde2] border border-[#e5384f]/20 shadow-xl shadow-[#e5384f]/[0.07] hover:border-[#e5384f]/45 hover:shadow-2xl hover:shadow-[#e5384f]/15'
-              : 'bg-gradient-to-br from-[#f1f5fc] to-[#dfe9f7] border border-[#5a82c2]/25 shadow-xl shadow-[#5a82c2]/[0.08] hover:border-[#5a82c2]/50 hover:shadow-2xl hover:shadow-[#5a82c2]/20';
-            const ctaColor = featured
-              ? 'bg-white text-[#5a82c2] group-hover:bg-blue-50'
-              : red
-              ? 'bg-white text-[#e5384f] group-hover:bg-red-50'
-              : rose
-              ? 'bg-[#e5384f] text-white group-hover:bg-[#c93248]'
-              : 'bg-[#5a82c2] text-white group-hover:bg-[#4a6da3]';
+            // 배색: 4장 모두 솔리드 그라디언트 — 블루/딥네이비(블루 쌍) + 레드/버건디(레드 쌍)
+            const CARD_STYLES = [
+              { bg: 'bg-gradient-to-br from-[#5a82c2] to-[#41608f] shadow-2xl shadow-[#5a82c2]/30 hover:from-[#6b93d4] hover:to-[#466a9e] hover:shadow-[#5a82c2]/50', cta: 'bg-white text-[#5a82c2] group-hover:bg-blue-50' },
+              { bg: 'bg-gradient-to-br from-[#3d5a8a] to-[#273c61] shadow-2xl shadow-[#3d5a8a]/30 hover:from-[#48699e] hover:to-[#2e4671] hover:shadow-[#3d5a8a]/50', cta: 'bg-white text-[#3d5a8a] group-hover:bg-blue-50' },
+              { bg: 'bg-gradient-to-br from-[#e5384f] to-[#b02a3f] shadow-2xl shadow-[#e5384f]/30 hover:from-[#f04d63] hover:to-[#c23148] hover:shadow-[#e5384f]/50', cta: 'bg-white text-[#e5384f] group-hover:bg-red-50' },
+              { bg: 'bg-gradient-to-br from-[#a63252] to-[#7a2340] shadow-2xl shadow-[#a63252]/30 hover:from-[#b83d5f] hover:to-[#8a2a49] hover:shadow-[#a63252]/50', cta: 'bg-white text-[#a63252] group-hover:bg-rose-50' },
+            ];
+            const colored = true;            // 4장 전부 컬러 배경 + 흰 텍스트
+            const cardBg = CARD_STYLES[i].bg;
+            const ctaColor = CARD_STYLES[i].cta;
             return (
             <Reveal key={i} delay={i * 0.1}>
               <a
@@ -575,14 +567,14 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
                 rel="noopener noreferrer"
                 className={`group flex flex-col h-full relative rounded-[2rem] md:rounded-[2.5rem] p-8 md:p-10 transition-all duration-500 hover:-translate-y-2 ${colored ? 'text-white' : ''} ${cardBg}`}
               >
-                {it.tag && <span className={`self-start text-[11px] font-black px-3 py-1.5 rounded-full mb-5 uppercase tracking-wider ${colored ? 'bg-white/20 text-white' : rose ? 'text-[#e5384f] bg-[#e5384f]/10' : 'text-[#5a82c2] bg-[#5a82c2]/10'}`}>{it.tag}</span>}
+                {it.tag && <span className={`self-start text-[11px] font-black px-3 py-1.5 rounded-full mb-5 uppercase tracking-wider ${colored ? 'bg-white/20 text-white' : 'text-[#5a82c2] bg-[#5a82c2]/10'}`}>{it.tag}</span>}
                 {featured ? (
                   <div className="mb-4">
                     <h3 className={`text-[22px] md:text-[26px] font-black tracking-tight leading-[1.2] ${krBreak}`}>{AGENCY_ERP[lang] || AGENCY_ERP.EN}</h3>
                     <span className="block text-sm font-bold text-white/70 mt-1.5">{it.t}</span>
                   </div>
                 ) : (
-                  <h3 className={`text-[19px] md:text-[21px] font-bold mb-3 tracking-tight leading-[1.3] ${krBreak} ${colored ? 'text-white' : rose ? 'text-gray-900 transition-colors group-hover:text-[#e5384f]' : 'text-gray-900 transition-colors group-hover:text-[#5a82c2]'}`}>{it.t}</h3>
+                  <h3 className={`text-[19px] md:text-[21px] font-bold mb-3 tracking-tight leading-[1.3] ${krBreak} ${colored ? 'text-white' : 'text-gray-900 transition-colors group-hover:text-[#5a82c2]'}`}>{it.t}</h3>
                 )}
                 <p className={`text-sm md:text-[14.5px] leading-[1.75] font-medium flex-1 ${krBreak} ${colored ? 'text-white/85' : 'text-gray-600'}`}>{it.d}</p>
                 <span className={`mt-7 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full font-bold text-sm md:text-base transition-all group-hover:gap-3 ${ctaColor}`}>
