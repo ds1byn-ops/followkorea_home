@@ -95,7 +95,7 @@ const CountUp: React.FC<{ end: number; duration?: number; decimals?: number }> =
 };
 
 // 우리 서비스 — 3개 제품 허브 (강남펄스 ERP / 글로벌 플랫폼 / 왕홍 마케팅)
-const SVC_LINKS = ['https://gnpulse.kr/demo', 'https://followkorea.kr', 'https://gnpulse.kr/cn'];
+const SVC_LINKS = ['https://gnpulse.kr/demo', 'https://followkorea.kr', 'https://gnpulse.kr'];
 const SVC_I18N: Record<string, { title: string; sub: string; items: { t: string; d: string; c: string; tag?: string }[] }> = {
   KR: { title: '병원 성장을 위한\n세 가지 솔루션', sub: '메디컬 마케팅부터 병원 운영, 글로벌 환자 유치까지 — 필요한 서비스를 바로 선택하세요.', items: [
     { t: '강남펄스 ERP', d: '예약·접수·정산·환자 CRM을 하나로. 병원 운영 올인원 시스템을 무료로 체험해 보세요.', c: '무료 데모 신청', tag: '무료 체험' },

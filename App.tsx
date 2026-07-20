@@ -16,7 +16,7 @@ const App: React.FC = () => {
   const [isReviewsOpen, setIsReviewsOpen] = useState(false);
   const [isTermsOpen, setIsTermsOpen] = useState(false);
   const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
-  const [currentLang, setCurrentLang] = useState<LanguageCode>('EN');
+  const [currentLang, setCurrentLang] = useState<LanguageCode>('KR');
 
   useEffect(() => {
     const htmlLangMap: Record<LanguageCode, string> = {
