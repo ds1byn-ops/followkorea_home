@@ -145,7 +145,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
       footerAddr: '주소: 서울특별시 서초구 강남대로 373, 13층 116호',
       footerBiz: '사업자등록번호: 696-86-03627',
       footerCeo: '대표: 하장환',
-      footerContact: '문의: contact@followkorea.co.kr',
+      footerContact: '문의: 010-8037-2535',
       footerCopy: 'Copyright ⓒ 2026 팔로우코리아 All rights reserved.',
       privacy: '개인정보처리방침', terms: '이용약관'
     },
@@ -178,7 +178,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
       footerAddr: 'Address: 13F #116, 373 Gangnam-daero, Seocho-gu, Seoul, Korea',
       footerBiz: 'Business Registration Number: 696-86-03627',
       footerCeo: 'CEO: Ha Jang-hwan',
-      footerContact: 'Contact: contact@followkorea.co.kr',
+      footerContact: 'Contact: 010-8037-2535',
       footerCopy: 'Copyright ⓒ 2026 Follow Korea All rights reserved.',
       privacy: 'Privacy Policy', terms: 'Terms of Use'
     },
@@ -211,7 +211,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
       footerAddr: '地址：首尔特别市瑞草区江南大路373号，13层116号',
       footerBiz: '工商注册号: 696-86-03627',
       footerCeo: '代表: Ha Jang-hwan',
-      footerContact: '联系邮箱: contact@followkorea.co.kr',
+      footerContact: '联系电话: 010-8037-2535',
       footerCopy: 'Copyright ⓒ 2026 Follow Korea 版权所有。',
       privacy: '隐私政策', terms: '使用条款'
     },
@@ -244,7 +244,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
       footerAddr: '住所: ソウル特別市瑞草区江南大路373、13階116号',
       footerBiz: '事業者登録番号: 696-86-03627',
       footerCeo: '代表者: Ha Jang-hwan',
-      footerContact: 'お問い合わせ: contact@followkorea.co.kr',
+      footerContact: 'お問い合わせ: 010-8037-2535',
       footerCopy: 'Copyright ⓒ 2026 Follow Korea All rights reserved.',
       privacy: 'プライバシーポリシー', terms: '利用規約'
     },
@@ -277,7 +277,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
       footerAddr: 'Alamat: Lantai 13 #116, 373 Gangnam-daero, Seocho-gu, Seoul, Korea',
       footerBiz: 'Nomor Registrasi Bisnis: 696-86-03627',
       footerCeo: 'CEO: Ha Jang-hwan',
-      footerContact: 'Kontak: contact@followkorea.co.kr',
+      footerContact: 'Kontak: 010-8037-2535',
       footerCopy: 'Copyright ⓒ 2026 Follow Korea All rights reserved.',
       privacy: 'Kebijakan Privasi', terms: 'Ketentuan Penggunaan'
     },
@@ -310,7 +310,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
       footerAddr: 'العنوان: الطابق 13، مكتب 116، 373 Gangnam-daero، Seocho-gu، سيول، كوريا',
       footerBiz: 'رقم تسجيل الأعمال: 696-86-03627',
       footerCeo: 'الرئيس التنفيذي: Ha Jang-hwan',
-      footerContact: 'للتواصل: contact@followkorea.co.kr',
+      footerContact: 'للتواصل: 010-8037-2535',
       footerCopy: 'Copyright ⓒ 2026 Follow Korea All rights reserved.',
       privacy: 'سياسة الخصوصية', terms: 'شروط الاستخدام'
     },
@@ -343,7 +343,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
       footerAddr: 'អាសយដ្ឋាន: ជាន់ទី 13 #116, 373 Gangnam-daero, Seocho-gu, សេអ៊ូល, កូរ៉េ',
       footerBiz: 'លេខចុះបញ្ជីអាជីវកម្ម: 696-86-03627',
       footerCeo: 'នាយកប្រតិបត្តិ: Ha Jang-hwan',
-      footerContact: 'ទំនាក់ទំនង: contact@followkorea.co.kr',
+      footerContact: 'ទំនាក់ទំនង: 010-8037-2535',
       footerCopy: 'Copyright ⓒ 2026 Follow Korea All rights reserved.',
       privacy: 'គោលការណ៍ភាពឯកជន', terms: 'លក្ខខណ្ឌប្រើប្រាស់'
     },
@@ -376,7 +376,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
       footerAddr: 'Địa chỉ: Tầng 13 #116, 373 Gangnam-daero, Seocho-gu, Seoul, Hàn Quốc',
       footerBiz: 'Số đăng ký kinh doanh: 696-86-03627',
       footerCeo: 'Giám đốc: Ha Jang-hwan',
-      footerContact: 'Liên hệ: contact@followkorea.co.kr',
+      footerContact: 'Liên hệ: 010-8037-2535',
       footerCopy: 'Copyright ⓒ 2026 Follow Korea All rights reserved.',
       privacy: 'Chính sách bảo mật', terms: 'Điều khoản sử dụng'
     },
@@ -409,7 +409,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
       footerAddr: 'Адрес: 13 этаж, офис 116, 373 Gangnam-daero, Seocho-gu, Сеул, Корея',
       footerBiz: 'Регистрационный номер: 696-86-03627',
       footerCeo: 'Генеральный директор: Ha Jang-hwan',
-      footerContact: 'Контакты: contact@followkorea.co.kr',
+      footerContact: 'Контакты: 010-8037-2535',
       footerCopy: 'Copyright ⓒ 2026 Follow Korea All rights reserved.',
       privacy: 'Политика конфиденциальности', terms: 'Условия использования'
     }
@@ -718,11 +718,19 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
                     <span>{t.footerBiz}</span>
                   </p>
                   <p className="flex items-start gap-2">
-                    <span className="iconify text-gray-300 mt-1" data-icon="solar:user-linear"></span>
-                    <span>{t.footerCeo}</span>
+                    <span className="iconify text-gray-300 mt-1" data-icon="solar:medal-ribbon-star-linear"></span>
+                    <span>{({KR:'외국인환자 유치업 등록',EN:'Foreign Patient Attraction License',CN:'外国患者招引业登记',JP:'外国人患者誘致業登録',ID:'Izin Penarik Pasien Asing',AR:'ترخيص استقطاب المرضى الأجانب',KH:'អាជ្ញាបណ្ណទាក់ទាញអ្នកជំងឺបរទេស',VI:'Giấy phép thu hút bệnh nhân nước ngoài',RU:'Лицензия на привлечение иностранных пациентов'} as Record<string,string>)[lang]}: 제 A-2026-01-01-06622 호 (2026.01.21~2029.01.20)</span>
                   </p>
                   <p className="flex items-start gap-2">
-                    <span className="iconify text-gray-300 mt-1" data-icon="solar:letter-linear"></span>
+                    <span className="iconify text-gray-300 mt-1" data-icon="solar:suitcase-tag-linear"></span>
+                    <span>{({KR:'관광사업 등록',EN:'Tourism Business Reg.',CN:'旅游业登记',JP:'観光事業登録',ID:'Reg. Bisnis Pariwisata',AR:'تسجيل أعمال السياحة',KH:'ការចុះបញ្ជីអាជីវកម្មទេសចរណ៍',VI:'ĐK kinh doanh du lịch',RU:'Рег. турбизнеса'} as Record<string,string>)[lang]}: 종합여행업 제 2026-000022 호</span>
+                  </p>
+                  <p className="flex items-start gap-2">
+                    <span className="iconify text-gray-300 mt-1" data-icon="solar:global-linear"></span>
+                    <span>{({KR:'중국 현지법인',EN:'China Subsidiary',CN:'中国当地法人',JP:'中国現地法人',ID:'Anak Perusahaan Tiongkok',AR:'الشركة الفرعية في الصين',KH:'ក្រុមហ៊ុនបុត្រសម្ព័ន្ធនៅចិន',VI:'Công ty con tại Trung Quốc',RU:'Дочерняя компания в Китае'} as Record<string,string>)[lang]}: 悦集江南（上海）商务咨询有限公司</span>
+                  </p>
+                  <p className="flex items-start gap-2">
+                    <span className="iconify text-gray-300 mt-1" data-icon="solar:phone-linear"></span>
                     <span>{t.footerContact}</span>
                   </p>
                 </div>
