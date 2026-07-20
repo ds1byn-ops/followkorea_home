@@ -94,6 +94,56 @@ const CountUp: React.FC<{ end: number; duration?: number; decimals?: number }> =
   return <span ref={countRef}>{count.toFixed(decimals)}</span>;
 };
 
+// 우리 서비스 — 3개 제품 허브 (강남펄스 ERP / 글로벌 플랫폼 / 왕홍 마케팅)
+const SVC_LINKS = ['https://gnpulse.kr/demo', 'https://followkorea.kr', 'https://gnpulse.kr/cn'];
+const SVC_I18N: Record<string, { title: string; sub: string; items: { t: string; d: string; c: string; tag?: string }[] }> = {
+  KR: { title: '병원 성장을 위한\n세 가지 솔루션', sub: '메디컬 마케팅부터 병원 운영, 글로벌 환자 유치까지 — 필요한 서비스를 바로 선택하세요.', items: [
+    { t: '강남펄스 ERP', d: '예약·접수·정산·환자 CRM을 하나로. 병원 운영 올인원 시스템을 무료로 체험해 보세요.', c: '무료 데모 신청', tag: '무료 체험' },
+    { t: '글로벌 환자 유치 플랫폼', d: '협력 병원과 다국어 의료관광 플랫폼. 해외 환자와 병원을 연결합니다.', c: '플랫폼 둘러보기' },
+    { t: '중국 왕홍 마케팅', d: '광고는 조회수를, 왕홍은 환자를 남깁니다. 왕홍 기반 중국 환자 유치 프로그램.', c: '프로그램 보기', tag: '중국 특화' },
+  ] },
+  EN: { title: 'Three Solutions for\nYour Hospital’s Growth', sub: 'From medical marketing to hospital operations and global patient attraction — choose the service you need.', items: [
+    { t: 'Gangnam Pulse ERP', d: 'Appointments, reception, settlement, and patient CRM in one. Try the all-in-one hospital system for free.', c: 'Free Demo', tag: 'Free Trial' },
+    { t: 'Global Patient Platform', d: 'A multilingual medical tourism platform with partner hospitals, connecting global patients and clinics.', c: 'Explore Platform' },
+    { t: 'China Wanghong Marketing', d: 'Ads leave views; wanghong leave patients. A wanghong-based China patient attraction program.', c: 'View Program', tag: 'China' },
+  ] },
+  CN: { title: '助力医院成长的\n三大解决方案', sub: '从医疗营销到医院运营，再到全球患者引进——选择您需要的服务。', items: [
+    { t: '江南Pulse ERP', d: '预约·接待·结算·患者CRM一体化。免费体验医院运营一站式系统。', c: '免费演示申请', tag: '免费体验' },
+    { t: '全球患者引进平台', d: '与合作医院的多语言医疗旅游平台，连接海外患者与医院。', c: '浏览平台' },
+    { t: '中国网红营销', d: '广告留下浏览量，网红留下患者。基于网红的中国患者引进项目。', c: '查看项目', tag: '中国专属' },
+  ] },
+  JP: { title: '病院の成長のための\n3つのソリューション', sub: 'メディカルマーケティングから病院運営、グローバル患者誘致まで — 必要なサービスをお選びください。', items: [
+    { t: '江南パルス ERP', d: '予約・受付・精算・患者CRMを一つに。病院運営オールインワンを無料で体験。', c: '無料デモ申込', tag: '無料体験' },
+    { t: 'グローバル患者誘致プラットフォーム', d: '提携病院との多言語医療ツーリズムプラットフォーム。海外患者と病院をつなぎます。', c: 'プラットフォームを見る' },
+    { t: '中国ワンホンマーケティング', d: '広告は再生数を、ワンホンは患者を残します。ワンホンによる中国患者誘致プログラム。', c: 'プログラムを見る', tag: '中国特化' },
+  ] },
+  ID: { title: 'Tiga Solusi untuk\nPertumbuhan Rumah Sakit Anda', sub: 'Dari pemasaran medis hingga operasional rumah sakit dan penarikan pasien global — pilih layanan yang Anda butuhkan.', items: [
+    { t: 'Gangnam Pulse ERP', d: 'Janji temu, resepsi, penyelesaian, dan CRM pasien dalam satu. Coba sistem rumah sakit all-in-one gratis.', c: 'Demo Gratis', tag: 'Uji Coba Gratis' },
+    { t: 'Platform Pasien Global', d: 'Platform wisata medis multibahasa dengan rumah sakit mitra, menghubungkan pasien global dan klinik.', c: 'Jelajahi Platform' },
+    { t: 'Pemasaran Wanghong Tiongkok', d: 'Iklan meninggalkan tayangan; wanghong meninggalkan pasien. Program penarikan pasien Tiongkok berbasis wanghong.', c: 'Lihat Program', tag: 'Tiongkok' },
+  ] },
+  AR: { title: 'ثلاثة حلول\nلنمو مستشفاك', sub: 'من التسويق الطبي إلى تشغيل المستشفى واستقطاب المرضى عالمياً — اختر الخدمة التي تحتاجها.', items: [
+    { t: 'Gangnam Pulse ERP', d: 'المواعيد والاستقبال والتسوية وإدارة المرضى في نظام واحد. جرّب نظام المستشفى الشامل مجاناً.', c: 'عرض تجريبي مجاني', tag: 'تجربة مجانية' },
+    { t: 'منصة المرضى العالمية', d: 'منصة سياحة علاجية متعددة اللغات مع مستشفيات شريكة، تربط المرضى العالميين بالعيادات.', c: 'استكشف المنصة' },
+    { t: 'تسويق وانغهونغ الصيني', d: 'الإعلانات تترك مشاهدات، ووانغهونغ يتركون مرضى. برنامج استقطاب المرضى الصينيين.', c: 'عرض البرنامج', tag: 'الصين' },
+  ] },
+  KH: { title: 'ដំណោះស្រាយបីយ៉ាង​សម្រាប់កំណើនមន្ទីរពេទ្យរបស់អ្នក', sub: 'ពីទីផ្សារវេជ្ជសាស្ត្រ ដល់ប្រតិបត្តិការ និងការទាក់ទងអ្នកជំងឺសកល — ជ្រើសរើសសេវាកម្មដេលអ្នកត្រូវការ។', items: [
+    { t: 'Gangnam Pulse ERP', d: 'ការណាត់ជួប ការទទួល ការទូទាត់ និង CRM អ្នកជំងឺក្នុងមួយ។ សាកល្បងប្រព័ន្ធមន្ទីរពេទ្យដោយមិនគិតថ្លៃ។', c: 'សាកល្បងឥតគិតថ្លៃ', tag: 'ឥតគិតថ្លៃ' },
+    { t: 'វេទិកាអ្នកជំងឺសកល', d: 'វេទិកាទេសចរណ៍វេជ្ជសាស្ត្រពហុភាសាជាមួយមន្ទីរពេទ្យដៃគូ។', c: 'រុករកវេទិកា' },
+    { t: 'ទីផ្សារ Wanghong ចិន', d: 'ការផ្សាយពាណិជ្ជកម្មទុកចំនួនមើល ឯ Wanghong ទុកអ្នកជំងឺ។', c: 'មើលកម្មវិធី', tag: 'ចិន' },
+  ] },
+  VI: { title: 'Ba giải pháp cho\nsự phát triển của bệnh viện', sub: 'Từ marketing y tế đến vận hành bệnh viện và thu hút bệnh nhân toàn cầu — chọn dịch vụ bạn cần.', items: [
+    { t: 'Gangnam Pulse ERP', d: 'Đặt lịch, tiếp nhận, thanh toán và CRM bệnh nhân trong một. Trải nghiệm hệ thống bệnh viện all-in-one miễn phí.', c: 'Dùng thử miễn phí', tag: 'Miễn phí' },
+    { t: 'Nền tảng bệnh nhân toàn cầu', d: 'Nền tảng du lịch y tế đa ngôn ngữ với các bệnh viện đối tác, kết nối bệnh nhân toàn cầu và phòng khám.', c: 'Khám phá nền tảng' },
+    { t: 'Marketing Wanghong Trung Quốc', d: 'Quảng cáo để lại lượt xem, wanghong để lại bệnh nhân. Chương trình thu hút bệnh nhân Trung Quốc dựa trên wanghong.', c: 'Xem chương trình', tag: 'Trung Quốc' },
+  ] },
+  RU: { title: 'Три решения для\nроста вашей клиники', sub: 'От медицинского маркетинга до управления клиникой и привлечения пациентов — выберите нужную услугу.', items: [
+    { t: 'Gangnam Pulse ERP', d: 'Запись, приём, расчёты и CRM пациентов в одном. Попробуйте систему для клиник бесплатно.', c: 'Бесплатное демо', tag: 'Бесплатно' },
+    { t: 'Глобальная платформа пациентов', d: 'Многоязычная платформа медтуризма с партнёрскими клиниками, соединяющая пациентов и клиники.', c: 'Открыть платформу' },
+    { t: 'Китайский маркетинг ванхун', d: 'Реклама оставляет просмотры, ванхун — пациентов. Программа привлечения китайских пациентов через ванхун.', c: 'Смотреть программу', tag: 'Китай' },
+  ] },
+};
+
 const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, onOpenReviews, onOpenTerms, onOpenPrivacy, lang }) => {
   const partnerLogos = [
     "https://cdn.imweb.me/upload/S20260120a0cc4980014ac/4d2307186cc14.png",
@@ -415,6 +465,8 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
     }
   }[lang];
 
+  const svc = SVC_I18N[lang] || SVC_I18N.EN;
+
   return (
     <main className="bg-white">
       {/* 01. Video Hero Section */}
@@ -461,6 +513,37 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
               </div>
             </Reveal>
           </div>
+        </div>
+      </section>
+
+      {/* 01-B. Our Services — 3개 제품 허브 */}
+      <section id="services" className="py-16 md:py-28 px-6 md:px-12 lg:px-24 max-w-[1440px] mx-auto scroll-mt-24">
+        <Reveal>
+          <div className="text-center mb-12 md:mb-16">
+            <span className="text-[#5a82c2] font-black text-sm tracking-[0.3em] uppercase mb-4 block">Our Services</span>
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 tracking-tight whitespace-pre-line leading-[1.35]">{svc.title}</h2>
+            <p className="text-gray-400 mt-5 text-base md:text-lg font-medium max-w-2xl mx-auto">{svc.sub}</p>
+          </div>
+        </Reveal>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          {svc.items.map((it, i) => (
+            <Reveal key={i} delay={i * 0.1}>
+              <a
+                href={SVC_LINKS[i]}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col h-full relative bg-[#F4F7FA] hover:bg-white border border-transparent hover:border-[#5a82c2]/20 rounded-[2rem] md:rounded-[2.5rem] p-8 md:p-10 transition-all duration-500 hover:shadow-2xl hover:shadow-[#5a82c2]/10 hover:-translate-y-2"
+              >
+                {it.tag && <span className="self-start text-[11px] font-black text-[#5a82c2] bg-[#5a82c2]/10 px-3 py-1.5 rounded-full mb-5 uppercase tracking-wider">{it.tag}</span>}
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 tracking-tight">{it.t}</h3>
+                <p className="text-gray-500 text-sm md:text-[15px] leading-relaxed font-medium flex-1">{it.d}</p>
+                <span className="mt-6 inline-flex items-center gap-2 text-[#5a82c2] font-bold text-sm md:text-base">
+                  {it.c}
+                  <span className="iconify group-hover:translate-x-1 transition-transform" data-icon="solar:arrow-right-linear"></span>
+                </span>
+              </a>
+            </Reveal>
+          ))}
         </div>
       </section>
 
