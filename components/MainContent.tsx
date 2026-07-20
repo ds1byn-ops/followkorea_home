@@ -549,7 +549,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
                 <div>
                   <div className="text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter flex items-end">
                     {stat.value}
-                    {stat.unit && <span className={`text-xl md:text-3xl ml-1.5 font-black whitespace-pre ${stat.color === 'blue' ? 'text-white/60' : 'text-[#5a82c2]'}`}>{stat.unit}</span>}
+                    {stat.unit && <span className={`text-xl md:text-3xl ms-1.5 font-black whitespace-pre ${stat.color === 'blue' ? 'text-white/60' : 'text-[#5a82c2]'}`}>{stat.unit}</span>}
                   </div>
                   {stat.subLabel && <p className={`text-base md:text-lg font-bold mt-2 ${stat.color === 'blue' ? 'text-white/50' : 'text-gray-400'}`}>{stat.subLabel}</p>}
                   <p className={`mt-4 md:mt-6 font-medium leading-relaxed ${stat.color === 'blue' ? 'text-[#5a82c2]/10 uppercase tracking-[0.2em] text-xs md:text-sm' : 'text-gray-500 text-base md:text-lg'}`}>{stat.desc}</p>

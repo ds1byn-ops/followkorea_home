@@ -170,7 +170,7 @@ const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, onClose, 
           <form onSubmit={handleSubmit} className="space-y-7">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
               <div className="space-y-2">
-                <label className="text-[11px] font-black text-gray-400 uppercase tracking-widest ml-1">{t.name}</label>
+                <label className="text-[11px] font-black text-gray-400 uppercase tracking-widest ms-1">{t.name}</label>
                 <input 
                   required 
                   type="text" 
@@ -183,7 +183,7 @@ const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, onClose, 
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-[11px] font-black text-gray-400 uppercase tracking-widest ml-1">{t.tel}</label>
+                <label className="text-[11px] font-black text-gray-400 uppercase tracking-widest ms-1">{t.tel}</label>
                 <input 
                   required 
                   type="tel" 
@@ -197,7 +197,7 @@ const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, onClose, 
               </div>
             </div>
             <div className="space-y-2">
-              <label className="text-[11px] font-black text-gray-400 uppercase tracking-widest ml-1">{t.email}</label>
+              <label className="text-[11px] font-black text-gray-400 uppercase tracking-widest ms-1">{t.email}</label>
               <input 
                 required 
                 type="email" 
@@ -210,7 +210,7 @@ const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, onClose, 
               />
             </div>
             <div className="space-y-2">
-              <label className="text-[11px] font-black text-gray-400 uppercase tracking-widest ml-1">{t.content}</label>
+              <label className="text-[11px] font-black text-gray-400 uppercase tracking-widest ms-1">{t.content}</label>
               <textarea 
                 required 
                 rows={4} 
@@ -237,7 +237,7 @@ const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, onClose, 
                 <label className="font-semibold text-gray-500 cursor-pointer select-none" onClick={() => !isSubmitting && setIsAgreed(!isAgreed)}>
                   {t.agree}
                 </label>
-                <button type="button" onClick={() => setShowPrivacyDetail(true)} className="ml-3 text-gray-300 underline hover:text-[#5a82c2] transition-colors font-medium disabled:opacity-50" disabled={isSubmitting}>{t.detail}</button>
+                <button type="button" onClick={() => setShowPrivacyDetail(true)} className="ms-3 text-gray-300 underline hover:text-[#5a82c2] transition-colors font-medium disabled:opacity-50" disabled={isSubmitting}>{t.detail}</button>
               </div>
             </div>
 

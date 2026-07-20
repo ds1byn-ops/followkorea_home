@@ -37,7 +37,7 @@ const TermsOverlay: React.FC<TermsOverlayProps> = ({ onClose, lang }) => {
           <section>
             <h3 className="text-gray-900 font-bold text-lg mb-4">제2조 용어의 정의</h3>
             <p>본 약관에서 사용되는 주요한 용어의 정의는 다음과 같습니다.</p>
-            <ul className="list-none space-y-2 mt-2 ml-2">
+            <ul className="list-none space-y-2 mt-2 ms-2">
               <li>① 회원 : 사이트의 약관에 동의하고 개인정보를 제공하여 회원등록을 한 자로서, 사이트와의 이용계약을 체결하고 사이트를 이용하는 이용자를 말합니다.</li>
               <li>② 이용계약 : 사이트 이용과 관련하여 사이트와 회원간에 체결 하는 계약을 말합니다.</li>
               <li>③ 회원 아이디(이하 "ID") : 회원의 식별과 회원의 서비스 이용을 위하여 회원별로 부여하는 고유한 문자와 숫자의 조합을 말합니다.</li>
@@ -89,7 +89,7 @@ const TermsOverlay: React.FC<TermsOverlayProps> = ({ onClose, lang }) => {
             <h3 className="text-gray-900 font-bold text-lg mb-4">제9조 서비스 이용 시간</h3>
             <p>① 서비스 이용 시간은 업무상 또는 기술상 특별한 지장이 없는 한 연중무휴 1일 24시간을 원칙으로 합니다. 단, 사이트는 시스템 정기점검, 증설 및 교체를 위해 사이트가 정한 날이나 시간에 서비스를 일시중단 할 수 있으며 예정된 작업으로 인한 서비스 일시 중단은 사이트의 홈페이지에 사전에 공지하오니 수시로 참고하시길 바랍니다.</p>
             <p>② 단, 사이트는 다음 경우에 대하여 사전 공지나 예고 없이 서비스를 일시적 혹은 영구적으로 중단할 수 있습니다.</p>
-            <ul className="list-disc ml-5 mt-2 space-y-1">
+            <ul className="list-disc ms-5 mt-2 space-y-1">
               <li>긴급한 시스템 점검, 증설, 교체, 고장 혹은 오동작을 일으키는 경우</li>
               <li>국가비상사태, 정전, 천재지변 등의 불가항력적인 사유가 있는 경우</li>
               <li>전기통신사업법에 규정된 기간통신사업자가 전기통신 서비스를 중지한 경우</li>

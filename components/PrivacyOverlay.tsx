@@ -29,14 +29,14 @@ const PrivacyOverlay: React.FC<PrivacyOverlayProps> = ({ onClose, lang }) => {
         </div>
 
         <div className="bg-gray-50 rounded-[2.5rem] p-8 md:p-12 text-gray-600 text-sm md:text-base leading-relaxed space-y-10 font-medium border border-gray-100 shadow-sm">
-          <p className="text-gray-900 font-bold border-l-4 border-[#5a82c2] pl-4">
+          <p className="text-gray-900 font-bold border-l-4 border-[#5a82c2] ps-4">
             팔로우코리아(이하 ‘회사’라 한다)는 개인정보 보호법 제30조에 따라 정보 주체의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보 처리지침을 수립, 공개합니다.
           </p>
 
           <section>
             <h3 className="text-gray-900 font-bold text-lg mb-4">제1조 (개인정보의 처리목적)</h3>
             <p className="mb-4">회사는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 이용 목적이 변경되는 경우에는 개인정보보호법 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.</p>
-            <div className="space-y-4 ml-2">
+            <div className="space-y-4 ms-2">
               <div>
                 <h4 className="font-bold text-gray-800">1. 홈페이지 회원 가입 및 관리</h4>
                 <p className="text-gray-500 text-sm">회원 가입 의사 확인, 회원제 서비스 제공에 따른 본인 식별․인증, 회원자격 유지․관리, 제한적 본인확인제 시행에 따른 본인확인, 서비스 부정 이용 방지, 만 14세 미만 아동의 개인정보처리 시 법정대리인의 동의 여부 확인, 각종 고지․통지, 고충 처리 등을 목적으로 개인정보를 처리합니다.</p>
@@ -56,7 +56,7 @@ const PrivacyOverlay: React.FC<PrivacyOverlayProps> = ({ onClose, lang }) => {
             <h3 className="text-gray-900 font-bold text-lg mb-4">제2조 (개인정보의 처리 및 보유기간)</h3>
             <p>① 회사는 법령에 따른 개인정보 보유, 이용 기간 또는 정보주체로부터 개인정보를 수집 시에 동의 받은 개인정보 보유, 이용 기간 내에서 개인정보를 처리, 보유합니다.</p>
             <p>② 각각의 개인정보 처리 및 보유 기간은 다음과 같습니다.</p>
-            <div className="mt-4 space-y-4 ml-2">
+            <div className="mt-4 space-y-4 ms-2">
               <div>
                 <p className="font-bold text-gray-800">1. 홈페이지 회원 가입 및 관리 : 사업자/단체 홈페이지 탈퇴 시까지</p>
                 <p className="text-gray-500 text-xs mt-1">다만, 수사 진행 중인 경우 수사 종료 시까지, 채권/채무 관계 잔존 시 정산 완료 시까지 보관합니다.</p>
@@ -77,7 +77,7 @@ const PrivacyOverlay: React.FC<PrivacyOverlayProps> = ({ onClose, lang }) => {
           <section>
             <h3 className="text-gray-900 font-bold text-lg mb-4">제6조 (처리하는 개인정보 항목)</h3>
             <p>회사는 다음의 개인정보 항목을 처리하고 있습니다.</p>
-            <p className="mt-2 ml-2 font-bold text-[#5a82c2]">1. 홈페이지 회원 가입 및 관리 (필수항목 : 성명, 전화번호, 이메일주소 등)</p>
+            <p className="mt-2 ms-2 font-bold text-[#5a82c2]">1. 홈페이지 회원 가입 및 관리 (필수항목 : 성명, 전화번호, 이메일주소 등)</p>
           </section>
 
           <section>
@@ -99,7 +99,7 @@ const PrivacyOverlay: React.FC<PrivacyOverlayProps> = ({ onClose, lang }) => {
           <section>
             <h3 className="text-gray-900 font-bold text-lg mb-4">제13조 (개인정보 보호책임자 및 회사 정보)</h3>
             <p className="mb-2">회사는 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 정보 주체의 문의·불만처리·피해구제 등을 위하여 아래와 같이 개인정보 보호책임자 및 회사 정보를 지정·공개합니다.</p>
-            <div className="ml-2 space-y-1">
+            <div className="ms-2 space-y-1">
               <p>상호: 팔로우코리아 · 대표: 하장환</p>
               <p>주소: 서울특별시 서초구 강남대로 373, 13층 116호</p>
               <p>사업자등록번호: 696-86-03627</p>

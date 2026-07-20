@@ -84,7 +84,7 @@ export const RoadmapSection: React.FC<{ lang: LanguageCode }> = ({ lang }) => {
           <div className="hidden md:block absolute top-[7px] left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-[#5a82c2] to-[#5a82c2]/20"></div>
           {t.items.map((it: any, idx: number) => (
             <Reveal key={idx} delay={idx * 0.1}>
-              <div className="relative md:pr-4">
+              <div className="relative md:pe-4">
                 <div className="w-4 h-4 rounded-full bg-[#5a82c2] ring-4 ring-[#5a82c2]/20 mb-5 md:mb-6"></div>
                 <div className="text-xl md:text-2xl font-black text-white tracking-tight mb-2">{it.m}</div>
                 <p className="text-[13px] md:text-sm text-gray-400 leading-relaxed font-medium">{it.t}</p>
@@ -178,7 +178,7 @@ export const PnlSection: React.FC<{ lang: LanguageCode }> = ({ lang }) => {
               <thead>
                 <tr className="bg-[#5a82c2] text-white">
                   {t.head.map((h: string, i: number) => (
-                    <th key={i} className={`px-5 md:px-6 py-4 text-[12px] md:text-[13px] font-bold tracking-wide ${i > 1 ? 'text-right' : 'text-left'}`}>{h}</th>
+                    <th key={i} className={`px-5 md:px-6 py-4 text-[12px] md:text-[13px] font-bold tracking-wide ${i > 1 ? 'text-end' : 'text-start'}`}>{h}</th>
                   ))}
                 </tr>
               </thead>
@@ -186,13 +186,13 @@ export const PnlSection: React.FC<{ lang: LanguageCode }> = ({ lang }) => {
                 {t.rows.map((r: string[], ri: number) => (
                   <tr key={ri} className="border-t border-gray-100">
                     {r.map((cell, ci) => (
-                      <td key={ci} className={`px-5 md:px-6 py-4 text-[13px] md:text-sm ${ci === 0 ? 'font-bold text-gray-900' : ci > 1 ? 'text-right tabular-nums font-semibold text-gray-700' : 'text-gray-500'}`}>{cell}</td>
+                      <td key={ci} className={`px-5 md:px-6 py-4 text-[13px] md:text-sm ${ci === 0 ? 'font-bold text-gray-900' : ci > 1 ? 'text-end tabular-nums font-semibold text-gray-700' : 'text-gray-500'}`}>{cell}</td>
                     ))}
                   </tr>
                 ))}
                 <tr className="border-t-2 border-[#5a82c2]/20 bg-[#5a82c2]/5">
                   {t.total.map((cell: string, ci: number) => (
-                    <td key={ci} className={`px-5 md:px-6 py-4 text-[13px] md:text-sm font-black text-gray-900 ${ci > 1 ? 'text-right tabular-nums' : ''}`}>{cell}</td>
+                    <td key={ci} className={`px-5 md:px-6 py-4 text-[13px] md:text-sm font-black text-gray-900 ${ci > 1 ? 'text-end tabular-nums' : ''}`}>{cell}</td>
                   ))}
                 </tr>
               </tbody>
