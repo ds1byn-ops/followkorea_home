@@ -535,7 +535,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
                 href={SVC_LINKS[i]}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`group flex flex-col h-full relative rounded-[2rem] md:rounded-[2.5rem] p-8 md:p-10 transition-all duration-500 hover:-translate-y-2 ${featured ? 'bg-gradient-to-br from-[#5a82c2] to-[#41608f] text-white shadow-2xl shadow-[#5a82c2]/30' : 'bg-[#F4F7FA] hover:bg-white border border-transparent hover:border-[#5a82c2]/20 hover:shadow-2xl hover:shadow-[#5a82c2]/10'}`}
+                className={`group flex flex-col h-full relative rounded-[2rem] md:rounded-[2.5rem] p-8 md:p-10 transition-all duration-500 hover:-translate-y-2 ${featured ? 'bg-gradient-to-br from-[#5a82c2] to-[#41608f] text-white shadow-2xl shadow-[#5a82c2]/30 hover:from-[#6b93d4] hover:to-[#466a9e] hover:shadow-[#5a82c2]/50' : 'bg-white border border-[#5a82c2]/15 shadow-xl shadow-[#5a82c2]/[0.06] hover:bg-[#eef3fb] hover:border-[#5a82c2]/45 hover:shadow-2xl hover:shadow-[#5a82c2]/20'}`}
               >
                 {it.tag && <span className={`self-start text-[11px] font-black px-3 py-1.5 rounded-full mb-5 uppercase tracking-wider ${featured ? 'bg-white/20 text-white' : 'text-[#5a82c2] bg-[#5a82c2]/10'}`}>{it.tag}</span>}
                 {featured ? (
@@ -544,7 +544,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
                     <span className="block text-sm font-bold text-white/70 mt-1.5">{it.t}</span>
                   </div>
                 ) : (
-                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 tracking-tight">{it.t}</h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 tracking-tight transition-colors group-hover:text-[#5a82c2]">{it.t}</h3>
                 )}
                 <p className={`text-sm md:text-[15px] leading-relaxed font-medium flex-1 ${featured ? 'text-white/85' : 'text-gray-500'}`}>{it.d}</p>
                 <span className={`mt-7 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full font-bold text-sm md:text-base transition-all group-hover:gap-3 ${featured ? 'bg-white text-[#5a82c2] group-hover:bg-blue-50' : 'bg-[#5a82c2] text-white group-hover:bg-[#4a6da3]'}`}>
