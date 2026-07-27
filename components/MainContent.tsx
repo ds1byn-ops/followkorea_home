@@ -875,6 +875,14 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
                     <span>{t.footerContact}</span>
                   </p>
                 </div>
+                <a
+                  href={({KR:'/brochure/followkorea-company-profile-ko.pdf',EN:'/brochure/followkorea-company-profile-en.pdf',CN:'/brochure/followkorea-company-profile-cn.pdf',KH:'/brochure/followkorea-company-profile-km.pdf',VI:'/brochure/followkorea-company-profile-vi.pdf'} as Record<string,string>)[lang] ?? '/brochure/followkorea-company-profile-en.pdf'}
+                  download
+                  className="inline-flex items-center gap-2.5 mt-8 md:mt-10 bg-[#5a82c2] text-white px-6 md:px-7 py-3.5 md:py-4 rounded-full text-[13px] md:text-sm font-bold hover:bg-[#4a6da3] transition-all shadow-xl shadow-[#5a82c2]/20 active:scale-95"
+                >
+                  <span className="iconify text-lg md:text-xl" data-icon="solar:download-minimalistic-bold"></span>
+                  <span>{({KR:'회사 소개서 다운로드',EN:'Download Company Profile',CN:'下载公司介绍',JP:'会社案内をダウンロード',ID:'Unduh Profil Perusahaan',AR:'تحميل ملف الشركة',KH:'ទាញយកប្រវត្តិក្រុមហ៊ុន',VI:'Tải hồ sơ công ty',RU:'Скачать профиль компании'} as Record<string,string>)[lang] ?? 'Download Company Profile'}</span>
+                </a>
               </div>
             </div>
           </Reveal>
