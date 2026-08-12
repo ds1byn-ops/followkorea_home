@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { LanguageCode } from '../App';
 import BusinessSection from './BusinessSection';
 import { RoadmapSection, PnlSection } from './BusinessPlanSections';
+import PartnerHospitals from './PartnerHospitals';
 
 interface MainContentProps {
   onOpenConsult: () => void;
@@ -604,6 +605,9 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
           );})}
         </div>
       </section>
+
+      {/* 01-C. 제휴 병원 네트워크 — 글로벌 플랫폼(followkorea.kr) 병원 큐레이션 */}
+      <PartnerHospitals lang={lang} />
 
       {/* 02. Partner Logo Slide */}
       <section className="py-20 bg-white border-b border-gray-50 overflow-hidden">
