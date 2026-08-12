@@ -158,26 +158,6 @@ const SVC_I18N: Record<string, { title: string; sub: string; items: { t: string;
 };
 
 const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, onOpenReviews, onOpenTerms, onOpenPrivacy, lang }) => {
-  const partnerLogos = [
-    "https://cdn.imweb.me/upload/S20260120a0cc4980014ac/4d2307186cc14.png",
-    "https://cdn.imweb.me/upload/S20260120a0cc4980014ac/80f9a0d4bdcf6.png",
-    "https://cdn.imweb.me/upload/S20260120a0cc4980014ac/b16993e4344b3.png",
-    "https://cdn.imweb.me/upload/S20260120a0cc4980014ac/11c1d8a45e55b.png",
-    "https://cdn.imweb.me/upload/S20260120a0cc4980014ac/3ee2201e9eacf.png",
-    "https://cdn.imweb.me/upload/S20260120a0cc4980014ac/5cfd8a00a0194.png",
-    "https://cdn.imweb.me/upload/S20260120a0cc4980014ac/d25d08ce0239f.png",
-    "https://cdn.imweb.me/upload/S20260120a0cc4980014ac/0445550657f9d.png",
-    "https://cdn.imweb.me/upload/S20260120a0cc4980014ac/377ec83cf600a.png",
-    "https://cdn.imweb.me/upload/S20260120a0cc4980014ac/7542baab73553.png",
-    "https://cdn.imweb.me/upload/S20260120a0cc4980014ac/6c7d5a7e1e2f5.png",
-    "https://cdn.imweb.me/upload/S20260120a0cc4980014ac/4f9f49855b2da.png",
-    "https://cdn.imweb.me/upload/S20260120a0cc4980014ac/a00c120b8650b.png",
-    "https://cdn.imweb.me/upload/S20260120a0cc4980014ac/b717106fec9d5.png",
-    "https://cdn.imweb.me/upload/S20260120a0cc4980014ac/b1694d49f34c6.png",
-
-
-  ];
-
   const t = {
     KR: {
       heroBadge: 'With Follow Korea',
@@ -608,30 +588,6 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
 
       {/* 01-C. 제휴 병원 네트워크 — 글로벌 플랫폼(followkorea.kr) 병원 큐레이션 */}
       <PartnerHospitals lang={lang} />
-
-      {/* 02. Partner Logo Slide */}
-      <section className="py-20 bg-white border-b border-gray-50 overflow-hidden">
-        <Reveal>
-          <div className="mb-10 text-center">
-            <p className="text-gray-400 text-xs font-bold tracking-[0.3em] uppercase mb-2">Our Partner Network</p>
-            <h3 className="text-2xl md:text-4xl font-bold text-gray-900 tracking-tight">{t.partnerTitle}</h3>
-          </div>
-        </Reveal>
-        <div className="relative flex overflow-hidden group">
-          <div className="flex space-x-20 animate-infinite-scroll group-hover:pause-animation py-4">
-            {partnerLogos.map((url, i) => (
-              <div key={`partner-${i}`} className="flex items-center grayscale opacity-30 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer min-w-[180px] md:min-w-[220px] justify-center px-4">
-                <img src={url} alt={`Partner ${i + 1}`} className="h-10 md:h-14 w-auto object-contain" />
-              </div>
-            ))}
-            {partnerLogos.map((url, i) => (
-              <div key={`partner-dup-${i}`} className="flex items-center grayscale opacity-30 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer min-w-[180px] md:min-w-[220px] justify-center px-4">
-                <img src={url} alt={`Partner ${i + 1}`} className="h-10 md:h-14 w-auto object-contain" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* 02-1. Business Portfolio — 5대 프로젝트 (최상단 배치) */}
       <BusinessSection lang={lang} />
