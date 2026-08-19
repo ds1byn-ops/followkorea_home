@@ -2871,7 +2871,8 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "en": "NANA Plastic Surgery, in Cheongdam-dong near Apgujeong Rodeo Station, offers eye, nose and breast surgery as well as facial contouring and lifting.",
       "zh": "NANA整形外科位于清潭洞狎鸥亭罗德奥站前，提供眼部、鼻部、胸部整形及轮廓·提升项目。"
     },
-    "doctors": []
+    "doctors": [],
+    "thumb": "hthumb/nana.jpg"
   },
   {
     "name": { "kr": "디에이성형외과의원", "en": "DA Plastic Surgery", "zh": "DA整形外科" },
@@ -2891,7 +2892,8 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "en": "DA Plastic Surgery, in its own building on Teheran-ro, provides eye, nose, facial contouring and breast surgery along with lifting and skin treatments.",
       "zh": "DA整形外科位于德黑兰路独栋大楼，提供眼部、鼻部、轮廓、胸部整形以及提升与皮肤诊疗服务。"
     },
-    "doctors": []
+    "doctors": [],
+    "thumb": "hthumb/daprs.jpg"
   },
   {
     "name": { "kr": "VC성형외과의원", "en": "VC Plastic Surgery", "zh": "VC整形外科" },
@@ -2913,7 +2915,8 @@ export const HOSPITAL_DATA: HospDetail[] = [
     },
     "doctors": [
       { "name": "최민석", "title": "대표원장", "spec": ["성형외과 전문의"] }
-    ]
+    ],
+    "thumb": "hthumb/vcps.jpg"
   },
   {
     "name": { "kr": "블랑쉬치과의원", "en": "Blanche Dental Clinic", "zh": "布朗雪牙科" },
@@ -2940,7 +2943,8 @@ export const HOSPITAL_DATA: HospDetail[] = [
       { "name": "백주희", "title": "원장", "spec": ["치과"] },
       { "name": "김하영", "title": "원장", "spec": ["치과"] },
       { "name": "김민주", "title": "원장", "spec": ["치과"] }
-    ]
+    ],
+    "thumb": "hthumb/blanche.jpg"
   },
   {
     "name": { "kr": "세라치과의원", "en": "CERA Dental Clinic", "zh": "CERA牙科" },
@@ -2962,7 +2966,8 @@ export const HOSPITAL_DATA: HospDetail[] = [
     },
     "doctors": [
       { "name": "우상엽", "title": "대표원장", "spec": ["치과"] }
-    ]
+    ],
+    "thumb": "hthumb/cera.jpg"
   },
   {
     "name": { "kr": "KMI한국의학연구소 강남센터", "en": "KMI Korea Medical Institute (Gangnam)", "zh": "KMI韩国医学研究所 江南中心" },
@@ -2982,7 +2987,8 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "en": "KMI Korea Medical Institute Gangnam Center, near Seolleung Station, runs dedicated health checkup programs for international visitors with English, Chinese, Japanese and Mongolian support.",
       "zh": "KMI韩国医学研究所江南中心位于宣陵站附近，设有面向外籍人士的体检项目，可提供中文、英文、日文、蒙古语接待。"
     },
-    "doctors": []
+    "doctors": [],
+    "thumb": "hthumb/kmi.jpg"
   },
   {
     "name": { "kr": "하나로의료재단 강남센터", "en": "Hanaro Medical Foundation (Gangnam)", "zh": "哈娜路医疗财团 江南中心" },
@@ -3002,7 +3008,8 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "en": "Hanaro Medical Foundation Gangnam Center (Hanaro Leaders Clinic), in Yeoksam I-Tower, provides comprehensive health checkups including immigration, study-abroad and overseas employment screenings.",
       "zh": "哈娜路医疗财团江南中心（Hanaro Leaders Clinic）位于驿三I-Tower，提供综合健康体检及移民·留学·海外就业体检服务。"
     },
-    "doctors": []
+    "doctors": [],
+    "thumb": "hthumb/hanaro.jpg"
   },
   {
     "name": { "kr": "강남스마트신경과의원", "en": "Gangnam Smart Neurology", "zh": "江南SMART神经内科" },
@@ -3026,6 +3033,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
       { "name": "권하님", "title": "대표원장", "spec": ["신경과 전문의"] },
       { "name": "손형곤", "title": "대표원장", "spec": ["내과 전문의"] },
       { "name": "서진영", "title": "대표원장", "spec": ["신경과 전문의"] }
-    ]
+    ],
+    "thumb": "hthumb/gnsmart.jpg"
   }
 ];
