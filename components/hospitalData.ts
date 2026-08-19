@@ -2852,5 +2852,180 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "JD皮肤整形（张德）提供干细胞疗法、Shrink及Juvelook等皮肤再生项目，同时设有韩医（韩方）诊疗科室。"
     },
     "doctors": []
+  },
+  {
+    "name": { "kr": "나나성형외과", "en": "NANA Plastic Surgery", "zh": "NANA整形外科" },
+    "dept": { "kr": "성형외과/피부", "en": "Plastic Surgery / Skin", "zh": "整形外科/皮肤" },
+    "cat": "성형외과",
+    "icon": "🌸",
+    "badge": "성형전문",
+    "treats": {
+      "kr": ["눈성형", "코성형", "가슴성형", "안면윤곽·리프팅"],
+      "en": ["Eye Surgery", "Nose Surgery", "Breast Surgery", "Contouring & Lifting"],
+      "zh": ["眼部整形", "鼻部整形", "胸部整形", "轮廓·提升"]
+    },
+    "hours": "Mon-Sat 09:30-19:00 / Sun Closed",
+    "loc": { "ko": "서울 압구정", "zh": "首尔狎鸥亭", "en": "Apgujeong, Seoul" },
+    "overview": {
+      "kr": "나나성형외과는 압구정로데오역 앞 청담동에 위치한 성형외과로 눈·코·가슴 성형과 안면윤곽·리프팅을 진료합니다.",
+      "en": "NANA Plastic Surgery, in Cheongdam-dong near Apgujeong Rodeo Station, offers eye, nose and breast surgery as well as facial contouring and lifting.",
+      "zh": "NANA整形外科位于清潭洞狎鸥亭罗德奥站前，提供眼部、鼻部、胸部整形及轮廓·提升项目。"
+    },
+    "doctors": []
+  },
+  {
+    "name": { "kr": "디에이성형외과의원", "en": "DA Plastic Surgery", "zh": "DA整形外科" },
+    "dept": { "kr": "성형외과/피부", "en": "Plastic Surgery / Skin", "zh": "整形外科/皮肤" },
+    "cat": "성형외과/피부",
+    "icon": "💠",
+    "badge": "성형전문",
+    "treats": {
+      "kr": ["눈성형", "코성형", "안면윤곽", "가슴성형", "리프팅"],
+      "en": ["Eye Surgery", "Nose Surgery", "Facial Contouring", "Breast Surgery", "Lifting"],
+      "zh": ["眼部整形", "鼻部整形", "轮廓整形", "胸部整形", "提升"]
+    },
+    "hours": "Mon-Thu 10:00-19:00 / Fri 10:00-20:00 / Sat 10:00-18:00",
+    "loc": { "ko": "서울 강남", "zh": "首尔江南", "en": "Gangnam, Seoul" },
+    "overview": {
+      "kr": "디에이성형외과의원은 테헤란로 단독 건물에 위치한 성형외과로 눈·코·안면윤곽·가슴 성형과 리프팅, 피부 진료를 함께 제공합니다.",
+      "en": "DA Plastic Surgery, in its own building on Teheran-ro, provides eye, nose, facial contouring and breast surgery along with lifting and skin treatments.",
+      "zh": "DA整形外科位于德黑兰路独栋大楼，提供眼部、鼻部、轮廓、胸部整形以及提升与皮肤诊疗服务。"
+    },
+    "doctors": []
+  },
+  {
+    "name": { "kr": "VC성형외과의원", "en": "VC Plastic Surgery", "zh": "VC整形外科" },
+    "dept": { "kr": "성형외과/피부/줄기세포", "en": "Plastic Surgery / Skin / Stem Cell", "zh": "整形外科/皮肤/干细胞" },
+    "cat": "성형외과/줄기세포",
+    "icon": "💎",
+    "badge": "프리미엄",
+    "treats": {
+      "kr": ["이중턱 재배치", "눈밑 재배치", "하안검·중안면거상", "지방흡입", "줄기세포"],
+      "en": ["Double Chin Contouring", "Under-eye Repositioning", "Lower Blepharoplasty & Midface Lift", "Liposuction", "Stem Cell"],
+      "zh": ["双下巴重塑", "眼下重塑", "下眼睑·中面部提升", "吸脂", "干细胞"]
+    },
+    "hours": "Mon/Thu 10:00-19:00 / Tue/Fri 10:00-20:00 / Sat 10:00-16:30 / Wed Closed",
+    "loc": { "ko": "서울 압구정", "zh": "首尔狎鸥亭", "en": "Apgujeong, Seoul" },
+    "overview": {
+      "kr": "VC성형외과의원은 압구정에 위치한 프라이빗 성형외과로, 성형외과 전문의가 상담부터 수술까지 직접 담당하며 피부·에스테틱 관리를 한 공간에서 함께 제공합니다.",
+      "en": "VC Plastic Surgery in Apgujeong is a private clinic where a board-certified plastic surgeon handles consultation through surgery, with skin and esthetic care available in the same space.",
+      "zh": "VC整形外科位于狎鸥亭，是一对一私密诊疗的整形外科，由整形外科专科医生亲自负责咨询与手术，并在同一空间内提供皮肤及美容管理服务。"
+    },
+    "doctors": [
+      { "name": "최민석", "title": "대표원장", "spec": ["성형외과 전문의"] }
+    ]
+  },
+  {
+    "name": { "kr": "블랑쉬치과의원", "en": "Blanche Dental Clinic", "zh": "布朗雪牙科" },
+    "dept": { "kr": "치과", "en": "Dental", "zh": "牙科" },
+    "cat": "치과",
+    "icon": "🦷",
+    "badge": "치과전문",
+    "treats": {
+      "kr": ["임플란트", "치아교정", "라미네이트"],
+      "en": ["Implant", "Orthodontics", "Laminate"],
+      "zh": ["种植牙", "牙齿矫正", "贴面"]
+    },
+    "hours": "Mon/Thu/Fri 10:30-19:00 / Tue/Wed 10:30-21:00 / Sat 10:00-14:00 / Sun 10:00-16:00",
+    "loc": { "ko": "서울 강남", "zh": "首尔江南", "en": "Gangnam, Seoul" },
+    "overview": {
+      "kr": "블랑쉬치과의원은 강남대로에 위치한 치과로 임플란트·치아교정·라미네이트를 진료합니다. 화·수 야간진료(~21시)와 주말 진료를 운영합니다.",
+      "en": "Blanche Dental Clinic on Gangnam-daero provides implant, orthodontic and laminate treatments, with evening hours on Tue/Wed and weekend opening.",
+      "zh": "布朗雪牙科位于江南大路，提供种植牙、牙齿矫正及贴面等诊疗项目。周二·周三设有夜间门诊，周末亦可就诊。"
+    },
+    "doctors": [
+      { "name": "김태형", "title": "대표원장", "spec": ["치과"] },
+      { "name": "박경리", "title": "원장", "spec": ["치과"] },
+      { "name": "한건희", "title": "원장", "spec": ["치과"] },
+      { "name": "백주희", "title": "원장", "spec": ["치과"] },
+      { "name": "김하영", "title": "원장", "spec": ["치과"] },
+      { "name": "김민주", "title": "원장", "spec": ["치과"] }
+    ]
+  },
+  {
+    "name": { "kr": "세라치과의원", "en": "CERA Dental Clinic", "zh": "CERA牙科" },
+    "dept": { "kr": "치과", "en": "Dental", "zh": "牙科" },
+    "cat": "치과",
+    "icon": "🦷",
+    "badge": "치과전문",
+    "treats": {
+      "kr": ["임플란트", "치아교정", "라미네이트", "세라멜"],
+      "en": ["Implant", "Orthodontics", "Laminate"],
+      "zh": ["种植牙", "牙齿矫正", "贴面"]
+    },
+    "hours": "Mon-Fri 10:00-19:00 / Sat·Sun Closed",
+    "loc": { "ko": "서울 강남", "zh": "首尔江南", "en": "Gangnam, Seoul" },
+    "overview": {
+      "kr": "세라치과의원은 봉은사로에 위치한 치과로 임플란트·치아교정·라미네이트를 진료합니다.",
+      "en": "CERA Dental Clinic on Bongeunsa-ro provides implant, orthodontic and laminate treatments.",
+      "zh": "CERA牙科位于奉恩寺路，提供种植牙、牙齿矫正及贴面等诊疗项目。"
+    },
+    "doctors": [
+      { "name": "우상엽", "title": "대표원장", "spec": ["치과"] }
+    ]
+  },
+  {
+    "name": { "kr": "KMI한국의학연구소 강남센터", "en": "KMI Korea Medical Institute (Gangnam)", "zh": "KMI韩国医学研究所 江南中心" },
+    "dept": { "kr": "건강검진", "en": "Health Checkup", "zh": "健康体检" },
+    "cat": "검진",
+    "icon": "🩺",
+    "badge": "검진전문",
+    "treats": {
+      "kr": ["종합검진", "외국인 검진", "정밀검진"],
+      "en": ["Comprehensive Checkup", "Checkup for Foreigners", "Advanced Screening"],
+      "zh": ["综合体检", "外籍人士体检", "精密体检"]
+    },
+    "hours": "Mon/Tue/Thu/Fri 07:00-16:00 / Wed/Sat 07:00-12:30",
+    "loc": { "ko": "서울 강남", "zh": "首尔江南", "en": "Gangnam, Seoul" },
+    "overview": {
+      "kr": "KMI한국의학연구소 강남센터는 선릉역 인근 건강검진 전문기관으로, 외국인 전용 검진 프로그램을 운영하며 영어·중국어·일본어·몽골어 응대가 가능합니다.",
+      "en": "KMI Korea Medical Institute Gangnam Center, near Seolleung Station, runs dedicated health checkup programs for international visitors with English, Chinese, Japanese and Mongolian support.",
+      "zh": "KMI韩国医学研究所江南中心位于宣陵站附近，设有面向外籍人士的体检项目，可提供中文、英文、日文、蒙古语接待。"
+    },
+    "doctors": []
+  },
+  {
+    "name": { "kr": "하나로의료재단 강남센터", "en": "Hanaro Medical Foundation (Gangnam)", "zh": "哈娜路医疗财团 江南中心" },
+    "dept": { "kr": "건강검진", "en": "Health Checkup", "zh": "健康体检" },
+    "cat": "검진",
+    "icon": "🏥",
+    "badge": "검진전문",
+    "treats": {
+      "kr": ["종합건강검진", "정밀검진", "해외검진(이민·유학·취업)"],
+      "en": ["Comprehensive Checkup", "Advanced Screening", "Overseas (Immigration/Study/Work) Checkup"],
+      "zh": ["综合健康体检", "精密体检", "海外体检（移民·留学·就业）"]
+    },
+    "hours": "By appointment / 예약제 (Tel 02-590-1111)",
+    "loc": { "ko": "서울 강남", "zh": "首尔江南", "en": "Gangnam, Seoul" },
+    "overview": {
+      "kr": "하나로의료재단 강남센터(하나로리더스의원)는 역삼아이타워에 위치한 건강검진 전문기관으로 종합건강검진과 이민·유학·해외취업 검진을 제공합니다.",
+      "en": "Hanaro Medical Foundation Gangnam Center (Hanaro Leaders Clinic), in Yeoksam I-Tower, provides comprehensive health checkups including immigration, study-abroad and overseas employment screenings.",
+      "zh": "哈娜路医疗财团江南中心（Hanaro Leaders Clinic）位于驿三I-Tower，提供综合健康体检及移民·留学·海外就业体检服务。"
+    },
+    "doctors": []
+  },
+  {
+    "name": { "kr": "강남스마트신경과의원", "en": "Gangnam Smart Neurology", "zh": "江南SMART神经内科" },
+    "dept": { "kr": "신경과", "en": "Neurology", "zh": "神经内科" },
+    "cat": "신경과",
+    "icon": "🧠",
+    "badge": "신경과전문",
+    "treats": {
+      "kr": ["어지럼증", "저림·떨림", "자율신경", "수면"],
+      "en": ["Dizziness", "Numbness & Tremor", "Autonomic Nerve", "Sleep"],
+      "zh": ["神经内科", "内科", "自主神经门诊", "睡眠门诊"]
+    },
+    "hours": "Mon-Fri 10:00-20:00 / Sat 10:00-15:00 / Sun Closed",
+    "loc": { "ko": "서울 강남", "zh": "首尔江南", "en": "Gangnam, Seoul" },
+    "overview": {
+      "kr": "강남스마트신경과의원은 강남대로에 위치한 신경과로 어지럼증·저림·떨림·자율신경·수면 클리닉을 운영합니다.",
+      "en": "Gangnam Smart Neurology on Gangnam-daero runs clinics for dizziness, numbness and tremor, autonomic nerve conditions and sleep.",
+      "zh": "江南SMART神经内科位于江南大路，设有神经内科及内科专科医生门诊。"
+    },
+    "doctors": [
+      { "name": "권하님", "title": "대표원장", "spec": ["신경과 전문의"] },
+      { "name": "손형곤", "title": "대표원장", "spec": ["내과 전문의"] },
+      { "name": "서진영", "title": "대표원장", "spec": ["신경과 전문의"] }
+    ]
   }
 ];
