@@ -1929,66 +1929,59 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "THE BEAUTY整形外科"
     },
     "dept": {
-      "kr": "성형외과/줄기세포",
-      "en": "Plastic Surgery / Stem Cell",
-      "zh": "整形外科/干细胞"
+      "kr": "성형외과/피부/줄기세포",
+      "en": "Plastic Surgery / Skin / Stem Cell",
+      "zh": "整形外科/皮肤/干细胞"
     },
-    "cat": "성형외과",
+    "cat": "성형외과/줄기세포",
     "icon": "💎",
-    "badge": "줄기세포",
+    "badge": "리프팅전문",
     "treats": {
       "kr": [
-        "실리프팅",
-        "눈",
-        "코",
-        "가슴",
-        "줄기세포"
+        "롱브이리프팅",
+        "안면거상",
+        "눈성형(상·하안검)",
+        "코성형",
+        "가슴성형",
+        "줄기세포테라피",
+        "모발이식"
       ],
       "en": [
-        "Thread Lifting",
-        "Eye",
-        "Nose",
-        "Breast",
-        "Stem Cell"
+        "Long-V Thread Lifting",
+        "Face Lift",
+        "Eye Surgery (Upper/Lower)",
+        "Nose Surgery",
+        "Breast Surgery",
+        "Stem Cell Therapy",
+        "Hair Transplant"
       ],
       "zh": [
-        "线雕提升",
-        "眼部",
-        "鼻部",
-        "胸部",
-        "干细胞"
+        "Long-V线雕提升",
+        "面部提升",
+        "眼部整形(上·下眼睑)",
+        "鼻部整形",
+        "胸部整形",
+        "干细胞疗法",
+        "植发"
       ]
     },
-    "hours": "Mon-Fri 10:00-19:00 / Sat 10:00-16:00",
+    "hours": "Mon-Fri 10:00-19:00 / Sat 10:00-16:00 / Sun Closed",
     "loc": {
-      "ko": "서울 강남",
-      "zh": "首尔江南",
-      "en": "Gangnam, Seoul"
+      "ko": "서울 강남 (논현역)",
+      "zh": "首尔江南 (论岘站)",
+      "en": "Gangnam, Seoul (Nonhyeon Stn.)"
     },
     "overview": {
-      "kr": "더뷰티성형외과는 실리프팅, 눈·코 수술, 줄기세포 치료를 제공합니다.",
-      "en": "The Beauty Plastic Surgery offers thread lifting, eye/nose surgery, and stem cell treatments.",
-      "zh": "THE BEAUTY整形外科提供线雕提升、眼鼻手术及干细胞综合治疗。"
+      "kr": "더뷰티성형외과는 논현역 인근에 위치한 성형외과로, 원장 5인이 분야별 협진하며 롱브이리프팅·안면거상·눈/코 성형·가슴성형·줄기세포테라피·모발이식을 진료합니다.",
+      "en": "The Beauty Plastic Surgery, near Nonhyeon Station, operates with five directors collaborating by specialty, offering thread and face lifting, eye and nose surgery, breast surgery, stem cell therapy and hair transplant.",
+      "zh": "THE BEAUTY整形外科位于论岘站附近，由整形外科专科医生等5位院长按领域协诊，提供线雕提升、面部提升、眼部及鼻部整形、胸部整形、干细胞疗法与植发。"
     },
     "doctors": [
-      {
-        "name": "정성훈",
-        "title": "대표원장",
-        "spec": [
-          "성형외과 (가슴성형",
-          "눈성형)"
-        ]
-      },
-      {
-        "name": "이영근",
-        "title": "대표원장",
-        "spec": [
-          "필러",
-          "리프팅",
-          "지방·다이어트",
-          "보톡스"
-        ]
-      }
+      { "name": "이영근", "title": "대표원장", "spec": ["의학박사", "리프팅·안티에이징", "쁘띠성형"] },
+      { "name": "정성훈", "title": "원장", "spec": ["성형외과 전문의", "안면거상", "가슴성형", "중년 눈수술"] },
+      { "name": "신국현", "title": "원장", "spec": ["성형외과 전문의", "안면거상·이마거상", "눈성형·코성형"] },
+      { "name": "정진수", "title": "원장", "spec": ["울쎄라·써마지", "실리프팅", "쁘띠성형"] },
+      { "name": "문보민", "title": "원장", "spec": ["성형외과 전문의", "눈성형", "코성형"] }
     ],
     "thumb": "hthumb/thebeauty.jpg"
   },
