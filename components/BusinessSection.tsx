@@ -1,9 +1,9 @@
-
+﻿
 import React, { useEffect, useRef, useState } from 'react';
 import { LanguageCode } from '../App';
 
 // 기존 MainContent의 Reveal과 동일한 스크롤 등장 애니메이션 (자체 포함)
-const Reveal: React.FC<{ children: React.ReactNode; delay?: number; width?: '100%' | 'fit-content' }> = ({ children, delay = 0, width = '100%' }) => {
+const Reveal: React.FC<{ children: React.ReactNode; delay?: number; width?: '100%' | 'fit-content'; fill?: boolean }> = ({ children, delay = 0, width = '100%', fill = false }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -24,6 +24,7 @@ const Reveal: React.FC<{ children: React.ReactNode; delay?: number; width?: '100
   return (
     <div
       ref={ref}
+      className={fill ? 'h-full' : undefined}
       style={{
         width,
         opacity: isVisible ? 1 : 0,
@@ -172,8 +173,8 @@ const BusinessSection: React.FC<BusinessSectionProps> = ({ lang }) => {
             // 항목이 홀수 개면 마지막 카드를 2열 전체 폭으로 — 그리드에 빈칸이 남지 않게
             const fullRow = t.items.length % 2 === 1 && idx === t.items.length - 1;
             return (
-              <div key={item.no} className={fullRow ? 'md:col-span-2' : ''}>
-                <Reveal delay={idx * 0.1}>
+              <div key={item.no} className={fullRow ? 'md:col-span-2 h-full' : 'h-full'}>
+                <Reveal delay={idx * 0.1} fill>
                   {href ? (
                     <a href={href} target="_blank" rel="noopener noreferrer" className="block h-full cursor-pointer">{card}</a>
                   ) : card}
