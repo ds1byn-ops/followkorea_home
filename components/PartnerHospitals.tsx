@@ -7,6 +7,22 @@ import { HOSPITAL_DATA, HospDetail } from './hospitalData';
 
 const THUMB_BASE = 'https://followkorea.kr/';
 
+// 병원 카드 배지 색상 — 마케팅 배지(BEST·추천·인기·NEW·VIP·프리미엄)는 색으로 구분하고,
+// 진료 분야 배지(줄기세포·검진전문 등)는 한 가지 차분한 톤으로 통일해 화면이 산만해지지 않게 한다.
+// ⚠ Tailwind JIT는 소스에 적힌 문자열 그대로만 클래스를 생성한다.
+//    조합(`bg-amber-500` + `/90`)으로 만들면 클래스가 누락되므로 완성형으로 적어둘 것.
+const BADGE_COLOR: Record<string, string> = {
+  'BEST': 'bg-amber-500/90',
+  '추천': 'bg-[#5a82c2]/90',
+  '인기': 'bg-rose-500/90',
+  'NEW': 'bg-emerald-600/90',
+  'VIP': 'bg-violet-600/90',
+  '프리미엄': 'bg-neutral-900/90',
+};
+const BADGE_DEFAULT = 'bg-slate-700/90';
+const badgeCls = (badge?: string) =>
+  `${BADGE_COLOR[badge || ''] || BADGE_DEFAULT} backdrop-blur text-white text-[10px] font-black tracking-wider px-2.5 py-1 rounded-md uppercase shadow-sm`;
+
 // 초기 노출 8곳 — 2026-08-20 사용자 지시로 주력 병원을 앞으로 배치
 const FEATURED: string[] = [
   '신상성형외과', 'VC성형외과의원', '드림성형외과', '글로비성형외과', 'KMI한국의학연구소 강남센터',
@@ -102,7 +118,7 @@ const HospCard: React.FC<{ h: HospDetail; dl: 'kr' | 'en' | 'zh'; krBreak: strin
         <div className="w-full h-full flex items-center justify-center text-4xl bg-gray-50">{h.icon || '🏥'}</div>
       )}
       {h.badge && (
-        <span className="absolute top-2.5 left-2.5 bg-gray-900/85 backdrop-blur text-white text-[10px] font-black tracking-wider px-2.5 py-1 rounded-md uppercase">{h.badge}</span>
+        <span className={`absolute top-2.5 left-2.5 ${badgeCls(h.badge)}`}>{h.badge}</span>
       )}
     </div>
     <div className="p-4 md:p-5">
@@ -211,7 +227,7 @@ const PartnerHospitals: React.FC<{ lang: LanguageCode }> = ({ lang }) => {
                 <span className="iconify text-lg" data-icon="solar:close-circle-linear"></span>
               </button>
               {selected.badge && (
-                <span className="absolute top-3 left-3 bg-gray-900/85 backdrop-blur text-white text-[10px] font-black tracking-wider px-2.5 py-1 rounded-md uppercase">{selected.badge}</span>
+                <span className={`absolute top-3 left-3 ${badgeCls(selected.badge)}`}>{selected.badge}</span>
               )}
             </div>
             <div className="overflow-y-auto p-6 md:p-8">
