@@ -2996,6 +2996,26 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "thumb": "hthumb/kmi.jpg"
   },
   {
+    "name": { "kr": "분당차병원", "en": "CHA Bundang Medical Center", "zh": "盆唐CHA医院" },
+    "dept": { "kr": "종합검진/국제진료", "en": "Health Checkup / International Clinic", "zh": "综合体检/国际诊疗" },
+    "cat": "검진",
+    "icon": "🏥",
+    "badge": "검진전문",
+    "treats": {
+      "kr": ["STANDARD 기본검진", "EXECUTIVE 검진", "PREMIUM 심장·뇌", "VIP 숙박형 검진", "INTENSIVE 특화검진"],
+      "en": ["Standard Checkup", "Executive Checkup", "Premium Heart/Brain", "VIP Overnight Checkup", "Intensive Screening"],
+      "zh": ["基础体检", "行政人员体检", "心脏·脑部精密体检", "VIP住宿型体检", "特化精密体检"]
+    },
+    "hours": "Mon-Fri 08:00-17:00 / Sat 08:00-12:00",
+    "loc": { "ko": "경기 성남 분당", "zh": "京畿道城南市盆唐", "en": "Bundang, Seongnam" },
+    "overview": {
+      "kr": "분당차병원 건강증진센터는 국제진료 전담팀을 두고 성별·연령·병력에 맞춘 1:1 맞춤 검진을 제공합니다. PET-CT·MRI 등 최신 장비와 VIP존·레이디존을 갖췄고, 당일 검진부터 1박 2일 숙박형까지 선택할 수 있습니다.",
+      "en": "The Health Promotion Center of CHA Bundang Medical Center runs a dedicated international clinic offering 1:1 customized checkups by sex, age and history, with PET-CT and MRI, VIP and Lady zones, and options from same-day to overnight programs.",
+      "zh": "盆唐CHA医院健康增进中心设有国际诊疗部，按性别·年龄提供1:1定制体检，配备PET-CT、MRI等尖端设备，并设VIP专区与女性专区，可选当日或住宿型（1晚2日）体检。"
+    },
+    "doctors": []
+  },
+  {
     "name": { "kr": "하나로의료재단 강남센터", "en": "Hanaro Medical Foundation (Gangnam)", "zh": "哈娜路医疗财团 江南中心" },
     "dept": { "kr": "건강검진", "en": "Health Checkup", "zh": "健康体检" },
     "cat": "검진",
