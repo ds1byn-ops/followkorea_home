@@ -921,29 +921,41 @@ export const HOSPITAL_DATA: HospDetail[] = [
   {
     "name": {
       "kr": "차움",
-      "en": "Chaum Anti-aging Center",
-      "zh": "차움抗衰老中心"
+      "en": "CHAUM Anti-aging Center",
+      "zh": "CHAUM抗衰老中心"
     },
     "dept": {
-      "kr": "종합검진/항노화",
-      "en": "Health Check / Anti-aging",
-      "zh": "综合检诊/抗衰老"
+      "kr": "종합검진/항노화/줄기세포/피부",
+      "en": "Health Checkup / Anti-aging / Stem Cell / Skin",
+      "zh": "综合体检/抗衰老/干细胞/皮肤"
     },
-    "cat": "항노화",
+    "cat": "검진/항노화/줄기세포",
     "icon": "🏯",
     "badge": "프리미엄",
     "treats": {
       "kr": [
-        "건강검진",
-        "파워에이징"
+        "VIP 종합검진",
+        "정밀 암검진",
+        "전신 MRI 검진",
+        "항노화·면역 검사",
+        "줄기세포 재생",
+        "리프팅·스킨부스터"
       ],
       "en": [
-        "Health Check",
-        "Anti-aging"
+        "VIP Comprehensive Checkup",
+        "Advanced Cancer Screening",
+        "Whole-body MRI",
+        "Anti-aging & Immunity Test",
+        "Stem Cell Regeneration",
+        "Lifting & Skin Booster"
       ],
       "zh": [
-        "健康检查",
-        "抗衰老"
+        "VIP综合体检",
+        "精密癌症筛查",
+        "全身MRI体检",
+        "抗衰老·免疫检查",
+        "干细胞再生",
+        "提升·水光针"
       ]
     },
     "hours": "Mon-Fri 08:30-17:30",
@@ -953,9 +965,9 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "en": "Gangnam, Seoul"
     },
     "overview": {
-      "kr": "차움은 최고급 항노화 종합센터로 건강검진과 맞춤형 항노화 프로그램을 제공합니다.",
-      "en": "Chaum is Korea's premier anti-aging center offering comprehensive health checks and personalized anti-aging programs.",
-      "zh": "차움是韩国顶级抗衰老综合中心，提供全方位健康检查和个性化抗衰老疗程。"
+      "kr": "차움은 개인 HIVE룸에서 진행하는 VIP 종합검진 센터입니다. 검진 전 담당의 1:1 상담으로 프로그램을 맞추고, 전담 간호사와 중국어·영어 통역이 전 과정을 동행하며 당일 결과 상담까지 제공합니다. 기본검진·정밀암검진·전신검진(MRI)·Noble VIP 4종에 소화기·심장·뇌·면역·항노화 추가검진을 선택할 수 있고, 줄기세포 재생과 리프팅·스킨부스터 등 피부 프로그램도 함께 운영합니다.",
+      "en": "CHAUM offers VIP checkups in private HIVE rooms with a 1:1 pre-consultation, a dedicated nurse and English/Chinese interpreter throughout, and same-day result consultation. Four main programs (Basic, Intensive Cancer, Whole Body, Noble) can be combined with digestive, heart, brain, immunity and anti-aging add-ons, alongside stem cell regeneration and skin programs.",
+      "zh": "CHAUM抗衰老中心提供VIP专属体检（个人HIVE诊室、专属护士与中文翻译全程陪同、当日结果面诊），设有综合体检、精密癌症筛查、全身MRI、抗衰老与免疫检查，并提供干细胞再生、提升及皮肤管理项目。"
     },
     "doctors": [
       {
