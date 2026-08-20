@@ -114,18 +114,18 @@ const BusinessSection: React.FC<BusinessSectionProps> = ({ lang }) => {
       <div className="max-w-[1440px] mx-auto">
         {/* Header */}
         <Reveal>
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16 gap-6">
-            <div className="max-w-2xl">
-              <span className="text-[#5a82c2] font-black text-sm tracking-[0.3em] uppercase mb-4 block">Business Portfolio</span>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-[1.4] tracking-tight">{t.title}</h2>
-            </div>
-            <p className="text-gray-400 font-medium text-base md:text-lg max-w-md leading-relaxed">{t.sub}</p>
+          {/* 소제목을 제목 오른쪽이 아니라 바로 아래에 두어 읽는 순서를 맞춤 (2026-08-20) */}
+          <div className="max-w-2xl mb-12 md:mb-16">
+            <span className="text-[#5a82c2] font-black text-sm tracking-[0.3em] uppercase mb-4 block">Business Portfolio</span>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-[1.4] tracking-tight">{t.title}</h2>
+            <p className="text-gray-400 font-medium text-base md:text-lg leading-relaxed mt-4">{t.sub}</p>
           </div>
         </Reveal>
 
         {/* Featured — Project 01 */}
         <Reveal delay={0.1}>
-          <div className="grid lg:grid-cols-2 gap-6 md:gap-8 mb-6 md:mb-8">
+          {/* 설명을 영상 오른쪽이 아니라 제목(영상 위 오버레이) 아래로 내려 세로로 읽히게 함 (2026-08-20) */}
+          <div className="flex flex-col gap-5 md:gap-6 mb-6 md:mb-8">
             <div className="relative rounded-[2rem] md:rounded-[3rem] overflow-hidden min-h-[300px] md:min-h-[420px] shadow-2xl group">
               <div className="absolute inset-0 w-full h-full pointer-events-none">
                 <iframe
@@ -144,7 +144,7 @@ const BusinessSection: React.FC<BusinessSectionProps> = ({ lang }) => {
               </div>
             </div>
 
-            <div className="flex flex-col justify-center py-2">
+            <div className="max-w-3xl">
               <p className="text-gray-500 text-[15px] md:text-lg leading-relaxed font-medium">{t.featured.desc}</p>
             </div>
           </div>
