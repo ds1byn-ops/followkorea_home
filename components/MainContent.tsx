@@ -615,6 +615,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
 
   const svc = SVC_I18N[lang] || SVC_I18N.EN;
   const wh = WH_I18N[lang] || WH_I18N.EN;
+  const krBreak = lang === 'KR' ? 'break-keep' : '';
 
   return (
     <main className="bg-white">
