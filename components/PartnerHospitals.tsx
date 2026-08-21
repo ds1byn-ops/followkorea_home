@@ -9,7 +9,7 @@ const THUMB_BASE = 'https://followkorea.kr/';
 
 // 병원 카드 배지 색상 — 마케팅 배지(BEST·추천·인기·NEW·VIP·프리미엄)는 색으로 구분하고,
 // 진료 분야 배지(줄기세포·검진전문 등)는 한 가지 차분한 톤으로 통일해 화면이 산만해지지 않게 한다.
-// ⚠ Tailwind JIT는 소스에 적힌 문자열 그대로만 클래스를 생성한다.
+// Tailwind JIT는 소스에 적힌 문자열 그대로만 클래스를 생성한다.
 //    조합(`bg-amber-500` + `/90`)으로 만들면 클래스가 누락되므로 완성형으로 적어둘 것.
 const BADGE_COLOR: Record<string, string> = {
   'BEST': 'bg-amber-500/90',
@@ -115,7 +115,7 @@ const HospCard: React.FC<{ h: HospDetail; dl: 'kr' | 'en' | 'zh'; krBreak: strin
         <img src={THUMB_BASE + h.thumb} alt={h.name[dl]} loading="lazy"
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
       ) : (
-        <div className="w-full h-full flex items-center justify-center text-4xl bg-gray-50">{h.icon || '🏥'}</div>
+        <div className="w-full h-full flex items-center justify-center bg-gray-50"><span className="text-4xl font-black tracking-tight text-[#5a82c2]/35">{(h.name[dl] || '').trim().charAt(0)}</span></div>
       )}
       {h.badge && (
         <span className={`absolute top-2.5 left-2.5 ${badgeCls(h.badge)}`}>{h.badge}</span>
@@ -219,7 +219,7 @@ const PartnerHospitals: React.FC<{ lang: LanguageCode }> = ({ lang }) => {
                 {selected.thumb ? (
                   <img src={THUMB_BASE + selected.thumb} alt={selected.name[dl]} className="w-full h-full object-cover" />
                 ) : (
-                  <div className="w-full h-full flex items-center justify-center text-6xl bg-gray-50">{selected.icon || '🏥'}</div>
+                  <div className="w-full h-full flex items-center justify-center bg-gray-50"><span className="text-6xl font-black tracking-tight text-[#5a82c2]/35">{(selected.name[dl] || '').trim().charAt(0)}</span></div>
                 )}
               </div>
               <button type="button" onClick={() => setSelected(null)} aria-label={t.mClose}

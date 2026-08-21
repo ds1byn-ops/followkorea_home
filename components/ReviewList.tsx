@@ -71,7 +71,7 @@ const ReviewList: React.FC<ReviewListProps> = ({ onClose, lang }) => {
       user: "@FollowKorea", 
       followers: "1.2M", 
       vimeoId: "1160923982",
-      caption: "The Best K-Medical Tour with Follow Korea! ❤️",
+      caption: "The Best K-Medical Tour with Follow Korea!",
       likes: "124K"
     },
     { 
@@ -92,7 +92,7 @@ const ReviewList: React.FC<ReviewListProps> = ({ onClose, lang }) => {
       user: "@FollowKorea", 
       followers: "420K", 
       vimeoId: "1160924028",
-      caption: "Feeling refreshed and healthy after my visit. ✨",
+      caption: "Feeling refreshed and healthy after my visit.",
       likes: "45K"
     }
   ];

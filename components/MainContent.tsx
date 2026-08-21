@@ -158,7 +158,7 @@ const SVC_I18N: Record<string, { title: string; sub: string; items: { t: string;
 };
 
 // 왕홍 리뷰 체험단 — 병원 대상 B2B 소개 섹션
-// ⚠ 의료법 제56조(치료경험담 광고 금지)를 피하기 위해 시술 전후 사진·후기 영상·효과 표현은 쓰지 않는다.
+// 의료법 제56조(치료경험담 광고 금지)를 피하기 위해 시술 전후 사진·후기 영상·효과 표현은 쓰지 않는다.
 //    "프로그램이 어떻게 굴러가는가"만 설명한다.
 const WH_I18N: Record<string, {
   tag: string; title: string; sub: string;

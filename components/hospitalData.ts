@@ -27,7 +27,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "皮肤/医美 (眼·鼻·耳·肩·臀)"
     },
     "cat": "성형외과/피부",
-    "icon": "🌿",
     "badge": "NEW",
     "treats": {
       "kr": [
@@ -95,7 +94,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "整形外科/皮肤科/干细胞"
     },
     "cat": "성형외과",
-    "icon": "🏆",
     "badge": "BEST",
     "treats": {
       "kr": [
@@ -321,7 +319,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "提升/填充/干细胞"
     },
     "cat": "줄기세포",
-    "icon": "💐",
     "badge": "줄기세포",
     "treats": {
       "kr": [
@@ -608,7 +605,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "整形外科/皮肤"
     },
     "cat": "성형외과",
-    "icon": "🏥",
     "badge": "BEST",
     "treats": {
       "kr": [
@@ -757,7 +753,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "整形外科"
     },
     "cat": "성형외과",
-    "icon": "⭐",
     "badge": "추천",
     "treats": {
       "kr": [
@@ -875,7 +870,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "干细胞/提升"
     },
     "cat": "줄기세포",
-    "icon": "🧪",
     "badge": "줄기세포",
     "treats": {
       "kr": [
@@ -930,7 +924,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "综合体检/抗衰老/干细胞/皮肤"
     },
     "cat": "검진/항노화/줄기세포",
-    "icon": "🏯",
     "badge": "프리미엄",
     "treats": {
       "kr": [
@@ -1216,7 +1209,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "干细胞/皮肤/整形"
     },
     "cat": "줄기세포",
-    "icon": "🧬",
     "badge": "줄기세포",
     "treats": {
       "kr": [
@@ -1335,7 +1327,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "整形外科/干细胞"
     },
     "cat": "성형외과",
-    "icon": "🌟",
     "badge": "추천",
     "treats": {
       "kr": [
@@ -1433,7 +1424,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "减肥/提升/皮肤"
     },
     "cat": "체형",
-    "icon": "💪",
     "badge": "인기",
     "treats": {
       "kr": [
@@ -1582,7 +1572,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "整形外科"
     },
     "cat": "성형외과",
-    "icon": "💫",
     "badge": "VIP",
     "treats": {
       "kr": [
@@ -1820,7 +1809,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "女性医学"
     },
     "cat": "여성의학",
-    "icon": "🌸",
     "badge": "여성의학",
     "treats": {
       "kr": [
@@ -1876,7 +1864,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "提升/减肥"
     },
     "cat": "피부",
-    "icon": "✨",
     "badge": "추천",
     "treats": {
       "kr": [
@@ -1946,7 +1933,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "整形外科/皮肤/干细胞"
     },
     "cat": "성형외과/줄기세포",
-    "icon": "💎",
     "badge": "리프팅전문",
     "treats": {
       "kr": [
@@ -2009,7 +1995,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "女性医学"
     },
     "cat": "여성의학",
-    "icon": "🌷",
     "badge": "여성의학",
     "treats": {
       "kr": [
@@ -2091,7 +2076,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "皮肤/提升"
     },
     "cat": "피부",
-    "icon": "🌺",
     "badge": "피부전문",
     "treats": {
       "kr": [
@@ -2148,7 +2132,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "女性医学"
     },
     "cat": "여성의학",
-    "icon": "🌷",
     "badge": "여성의학",
     "treats": {
       "kr": [
@@ -2198,7 +2181,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "干细胞"
     },
     "cat": "줄기세포",
-    "icon": "🧬",
     "badge": "줄기세포",
     "treats": {
       "kr": [
@@ -2255,7 +2237,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "提升/填充"
     },
     "cat": "피부",
-    "icon": "✨",
     "badge": "리프팅전문",
     "treats": {
       "kr": [
@@ -2297,7 +2278,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "提升/面部矫正"
     },
     "cat": "피부",
-    "icon": "⭕",
     "badge": "NEW",
     "treats": {
       "kr": [
@@ -2368,7 +2348,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "整形外科"
     },
     "cat": "성형외과",
-    "icon": "💍",
     "badge": "VIP",
     "treats": {
       "kr": [
@@ -2447,7 +2426,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "提升/疤痕"
     },
     "cat": "피부",
-    "icon": "🔬",
     "badge": "전문",
     "treats": {
       "kr": [
@@ -2511,7 +2489,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "身体填充"
     },
     "cat": "체형",
-    "icon": "💁",
     "badge": "바디전문",
     "treats": {
       "kr": [
@@ -2566,7 +2543,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "抗衰老/干细胞"
     },
     "cat": "항노화",
-    "icon": "🏅",
     "badge": "항노화",
     "treats": {
       "kr": [
@@ -2640,7 +2616,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "干细胞/身体提升"
     },
     "cat": "줄기세포",
-    "icon": "🌿",
     "badge": "줄기세포",
     "treats": {
       "kr": [
@@ -2699,7 +2674,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "整形外科"
     },
     "cat": "성형외과",
-    "icon": "💆",
     "badge": "윤곽전문",
     "treats": {
       "kr": [
@@ -2769,7 +2743,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "眼科"
     },
     "cat": "안과",
-    "icon": "👁",
     "badge": "안과전문",
     "treats": {
       "kr": [
@@ -2823,7 +2796,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "皮肤/干细胞/韩医"
     },
     "cat": "줄기세포/한방",
-    "icon": "🌿",
     "badge": "줄기세포",
     "treats": {
       "kr": [
@@ -2862,7 +2834,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "name": { "kr": "나나성형외과", "en": "NANA Plastic Surgery", "zh": "NANA整形外科" },
     "dept": { "kr": "성형외과/피부", "en": "Plastic Surgery / Skin", "zh": "整形外科/皮肤" },
     "cat": "성형외과",
-    "icon": "🌸",
     "badge": "성형전문",
     "treats": {
       "kr": ["눈성형", "코성형", "가슴성형", "안면윤곽·리프팅"],
@@ -2883,7 +2854,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "name": { "kr": "디에이성형외과의원", "en": "DA Plastic Surgery", "zh": "DA整形外科" },
     "dept": { "kr": "성형외과/피부", "en": "Plastic Surgery / Skin", "zh": "整形外科/皮肤" },
     "cat": "성형외과/피부",
-    "icon": "💠",
     "badge": "성형전문",
     "treats": {
       "kr": ["눈성형", "코성형", "안면윤곽", "가슴성형", "리프팅"],
@@ -2904,7 +2874,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "name": { "kr": "VC성형외과의원", "en": "VC Plastic Surgery", "zh": "VC整形外科" },
     "dept": { "kr": "성형외과/피부/줄기세포", "en": "Plastic Surgery / Skin / Stem Cell", "zh": "整形外科/皮肤/干细胞" },
     "cat": "성형외과/줄기세포",
-    "icon": "💎",
     "badge": "프리미엄",
     "treats": {
       "kr": ["이중턱 재배치", "눈밑 재배치", "하안검·중안면거상", "지방흡입", "줄기세포"],
@@ -2927,7 +2896,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "name": { "kr": "블랑쉬치과의원", "en": "Blanche Dental Clinic", "zh": "布朗雪牙科" },
     "dept": { "kr": "치과", "en": "Dental", "zh": "牙科" },
     "cat": "치과",
-    "icon": "🦷",
     "badge": "치과전문",
     "treats": {
       "kr": ["임플란트", "치아교정", "라미네이트"],
@@ -2955,7 +2923,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "name": { "kr": "세라치과의원", "en": "CERA Dental Clinic", "zh": "CERA牙科" },
     "dept": { "kr": "치과", "en": "Dental", "zh": "牙科" },
     "cat": "치과",
-    "icon": "🦷",
     "badge": "치과전문",
     "treats": {
       "kr": ["임플란트", "치아교정", "라미네이트", "세라멜"],
@@ -2978,7 +2945,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "name": { "kr": "KMI한국의학연구소 강남센터", "en": "KMI Korea Medical Institute (Gangnam)", "zh": "KMI韩国医学研究所 江南中心" },
     "dept": { "kr": "건강검진", "en": "Health Checkup", "zh": "健康体检" },
     "cat": "검진",
-    "icon": "🩺",
     "badge": "검진전문",
     "treats": {
       "kr": ["종합검진", "외국인 검진", "정밀검진"],
@@ -2999,7 +2965,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "name": { "kr": "분당차병원", "en": "CHA Bundang Medical Center", "zh": "盆唐CHA医院" },
     "dept": { "kr": "종합검진/국제진료", "en": "Health Checkup / International Clinic", "zh": "综合体检/国际诊疗" },
     "cat": "검진",
-    "icon": "🏥",
     "badge": "검진전문",
     "treats": {
       "kr": ["STANDARD 기본검진", "EXECUTIVE 검진", "PREMIUM 심장·뇌", "VIP 숙박형 검진", "INTENSIVE 특화검진"],
@@ -3019,7 +2984,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "name": { "kr": "하나로의료재단 강남센터", "en": "Hanaro Medical Foundation (Gangnam)", "zh": "哈娜路医疗财团 江南中心" },
     "dept": { "kr": "건강검진", "en": "Health Checkup", "zh": "健康体检" },
     "cat": "검진",
-    "icon": "🏥",
     "badge": "검진전문",
     "treats": {
       "kr": ["종합건강검진", "정밀검진", "해외검진(이민·유학·취업)"],
@@ -3040,7 +3004,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "name": { "kr": "강남스마트신경과의원", "en": "Gangnam Smart Neurology", "zh": "江南SMART神经内科" },
     "dept": { "kr": "신경과", "en": "Neurology", "zh": "神经内科" },
     "cat": "신경과",
-    "icon": "🧠",
     "badge": "신경과전문",
     "treats": {
       "kr": ["어지럼증", "저림·떨림", "자율신경", "수면"],
