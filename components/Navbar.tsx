@@ -115,7 +115,6 @@ const Navbar: React.FC<NavbarProps> = ({
             onClick={() => setIsLangOpen(!isLangOpen)}
             className="flex items-center gap-1.5 md:gap-2 text-gray-500 font-bold text-[14px] hover:text-[#5a82c2] transition-all bg-gray-50 px-3 md:px-4 py-2.5 rounded-lg border border-gray-100 active:scale-95"
           >
-            <span className="iconify text-lg text-[#5a82c2]" data-icon="solar:global-linear"></span>
             <span>{currentLang}</span>
             <span className={`iconify transition-transform duration-300 ${isLangOpen ? 'rotate-180' : ''}`} data-icon="solar:alt-arrow-down-linear"></span>
           </button>

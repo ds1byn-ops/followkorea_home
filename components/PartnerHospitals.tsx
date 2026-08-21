@@ -234,7 +234,6 @@ const PartnerHospitals: React.FC<{ lang: LanguageCode }> = ({ lang }) => {
               <h3 className={`text-xl md:text-2xl font-black text-gray-900 ${krBreak}`}>{selected.name[dl]}</h3>
               <p className="text-sm text-gray-400 font-medium mt-1">{selected.dept[dl]}</p>
               <div className="flex items-center gap-2 mt-3 text-xs text-gray-500 font-medium">
-                <span className="iconify text-[#5a82c2]" data-icon="solar:map-point-linear"></span>
                 <span>{selected.loc[ll]}</span>
               </div>
 

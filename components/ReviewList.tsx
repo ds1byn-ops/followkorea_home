@@ -152,7 +152,6 @@ const ReviewList: React.FC<ReviewListProps> = ({ onClose, lang }) => {
                     </p>
                     <div className="flex justify-between items-center">
                       <div className="flex items-center gap-1.5">
-                        <span className="iconify text-pink-500 text-sm" data-icon="solar:heart-bold"></span>
                         <span className="text-white text-[10px] font-bold">{story.likes}</span>
                       </div>
                       <span className="iconify text-white/50 text-xl" data-icon="solar:play-circle-linear"></span>

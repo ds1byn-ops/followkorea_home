@@ -784,7 +784,6 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
               <div className={`${stat.color === 'blue' ? 'bg-[#5a82c2] text-white shadow-[#5a82c2]/20' : 'bg-white text-gray-900 border-white'} p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] shadow-sm flex flex-col justify-between group hover:shadow-2xl transition-all h-[300px] md:h-[360px] border`}>
                 <div className="flex justify-between items-start">
                   <span className={`text-[10px] md:text-xs font-bold tracking-[0.3em] ${stat.color === 'blue' ? 'opacity-60' : 'text-[#5a82c2]'} uppercase`}>{stat.label}</span>
-                  <span className="iconify text-3xl md:text-4xl transition-colors" data-icon={stat.icon} style={{ color: stat.color === 'blue' ? 'rgba(255,255,255,0.4)' : '#5a82c2' }}></span>
                 </div>
                 <div>
                   <div className="text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter flex items-end">
@@ -821,7 +820,6 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
                 <div className="h-full bg-gray-50 border border-gray-100 rounded-[2rem] p-7 md:p-8 hover:border-[#5a82c2]/30 hover:shadow-xl hover:shadow-gray-200/60 transition-all duration-300 group">
                   <div className="flex items-center justify-between">
                     <span className="text-[11px] font-black tracking-[0.2em] text-[#5a82c2]">{String(i + 1).padStart(2, '0')}</span>
-                    <span className="iconify text-3xl md:text-4xl text-[#5a82c2]/70 group-hover:text-[#5a82c2] transition-colors" data-icon={s.icon}></span>
                   </div>
                   <h3 className={`mt-6 text-lg md:text-xl font-black tracking-tight text-gray-900 ${krBreak}`}>{s.t}</h3>
                   <p className={`mt-3 text-[13.5px] md:text-sm text-gray-500 font-medium leading-relaxed ${krBreak}`}>{s.d}</p>
@@ -880,7 +878,6 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
                     <div className="text-3xl md:text-4xl font-black text-[#5a82c2]/10 group-hover:text-[#5a82c2] transition-colors">{item.step}</div>
                     <div>
                       <div className="flex items-center gap-2 md:gap-3 mb-2 md:mb-4">
-                        <span className="iconify text-xl md:text-2xl text-[#5a82c2]" data-icon={item.icon}></span>
                         <h5 className="text-xl md:text-2xl font-bold text-gray-900">{item.title}</h5>
                       </div>
                       <p className="text-gray-400 leading-relaxed max-w-md text-base md:text-lg">{item.desc}</p>
@@ -1006,27 +1003,21 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
                 <img src="/fk-news-logo.png" alt="Footer Logo" className="h-12 md:h-16 w-auto object-contain mb-8" />
                 <div className="space-y-3 md:space-y-4 text-gray-400 text-[13px] md:text-sm font-medium">
                   <p className="flex items-start gap-2">
-                    <span className="iconify text-gray-300 mt-1" data-icon="solar:map-point-linear"></span>
                     <span>{t.footerAddr}</span>
                   </p>
                   <p className="flex items-start gap-2">
-                    <span className="iconify text-gray-300 mt-1" data-icon="solar:bill-list-linear"></span>
                     <span>{t.footerBiz}</span>
                   </p>
                   <p className="flex items-start gap-2">
-                    <span className="iconify text-gray-300 mt-1" data-icon="solar:medal-ribbon-star-linear"></span>
                     <span>{({KR:'외국인환자 유치업 등록',EN:'Foreign Patient Attraction License',CN:'外国患者招引业登记',JP:'外国人患者誘致業登録',ID:'Izin Penarik Pasien Asing',AR:'ترخيص استقطاب المرضى الأجانب',KH:'អាជ្ញាបណ្ណទាក់ទាញអ្នកជំងឺបរទេស',VI:'Giấy phép thu hút bệnh nhân nước ngoài',RU:'Лицензия на привлечение иностранных пациентов'} as Record<string,string>)[lang]}: 제 A-2026-01-01-06622 호 (2026.01.21~2029.01.20)</span>
                   </p>
                   <p className="flex items-start gap-2">
-                    <span className="iconify text-gray-300 mt-1" data-icon="solar:suitcase-tag-linear"></span>
                     <span>{({KR:'관광사업 등록',EN:'Tourism Business Reg.',CN:'旅游业登记',JP:'観光事業登録',ID:'Reg. Bisnis Pariwisata',AR:'تسجيل أعمال السياحة',KH:'ការចុះបញ្ជីអាជីវកម្មទេសចរណ៍',VI:'ĐK kinh doanh du lịch',RU:'Рег. турбизнеса'} as Record<string,string>)[lang]}: 종합여행업 제 2026-000022 호</span>
                   </p>
                   <p className="flex items-start gap-2">
-                    <span className="iconify text-gray-300 mt-1" data-icon="solar:global-linear"></span>
                     <span>{({KR:'중국 현지법인',EN:'China Subsidiary',CN:'中国当地法人',JP:'中国現地法人',ID:'Anak Perusahaan Tiongkok',AR:'الشركة الفرعية في الصين',KH:'ក្រុមហ៊ុនបុត្រសម្ព័ន្ធនៅចិន',VI:'Công ty con tại Trung Quốc',RU:'Дочерняя компания в Китае'} as Record<string,string>)[lang]}: 悦集江南（上海）商务咨询有限公司</span>
                   </p>
                   <p className="flex items-start gap-2">
-                    <span className="iconify text-gray-300 mt-1" data-icon="solar:letter-linear"></span>
                     <span>{t.footerContact}</span>
                   </p>
                 </div>

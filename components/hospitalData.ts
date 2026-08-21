@@ -2964,6 +2964,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
   {
     "name": { "kr": "분당차병원", "en": "CHA Bundang Medical Center", "zh": "盆唐CHA医院" },
     "dept": { "kr": "종합검진/국제진료", "en": "Health Checkup / International Clinic", "zh": "综合体检/国际诊疗" },
+    "thumb": "hthumb/chabundang.jpg",
     "cat": "검진",
     "badge": "검진전문",
     "treats": {
