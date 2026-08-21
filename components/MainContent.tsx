@@ -759,7 +759,6 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
                 <div className="text-[#5a82c2]">{item.pattern}</div>
                 <div className="relative z-10">
                   <div className="flex items-start gap-2 mb-4 md:mb-6 min-h-[3.5rem] md:min-h-[4rem]">
-                    <span className="iconify text-lg md:text-xl text-[#5a82c2] mt-0.5 shrink-0" data-icon="solar:alt-arrow-right-linear"></span>
                     <h4 className="text-lg md:text-xl font-bold tracking-tight text-gray-900 break-keep">{item.title}</h4>
                   </div>
                   <p x>

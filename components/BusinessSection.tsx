@@ -158,7 +158,6 @@ const BusinessSection: React.FC<BusinessSectionProps> = ({ lang }) => {
               <div className="relative h-full p-8 md:p-10 rounded-[2rem] bg-[#F4F7FA] border border-transparent hover:border-[#5a82c2]/20 hover:bg-white hover:shadow-xl transition-all duration-500 group overflow-hidden flex flex-col">
                 <div className="flex items-start justify-between mb-5">
                   <span className="text-4xl md:text-5xl font-black text-[#5a82c2]/10 group-hover:text-[#5a82c2]/20 transition-colors leading-none">{item.no}</span>
-                  <span className="iconify text-3xl md:text-4xl text-[#5a82c2]" data-icon={item.icon}></span>
                 </div>
                 <span className="inline-block self-start text-[11px] font-black text-[#5a82c2] bg-[#5a82c2]/10 px-3 py-1 rounded-full uppercase tracking-wider mb-3">{item.tag}</span>
                 <h4 className="text-xl md:text-2xl font-bold text-gray-900 tracking-tight mb-3 break-keep">{item.name}</h4>
