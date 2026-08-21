@@ -157,6 +157,143 @@ const SVC_I18N: Record<string, { title: string; sub: string; items: { t: string;
   ] },
 };
 
+// 왕홍 리뷰 체험단 — 병원 대상 B2B 소개 섹션
+// ⚠ 의료법 제56조(치료경험담 광고 금지)를 피하기 위해 시술 전후 사진·후기 영상·효과 표현은 쓰지 않는다.
+//    "프로그램이 어떻게 굴러가는가"만 설명한다.
+const WH_I18N: Record<string, {
+  tag: string; title: string; sub: string;
+  steps: { t: string; d: string; icon: string }[];
+  points: { t: string; d: string }[];
+  cta: string; note: string;
+}> = {
+  KR: {
+    tag: 'Wanghong Review Program',
+    title: '왕홍이 직접 방문하고,\n콘텐츠가 남습니다',
+    sub: '중국 인플루언서를 병원에 초청해 방문 경험을 콘텐츠로 만듭니다. 광고는 조회수를 남기지만, 왕홍은 다음 환자를 데려옵니다.',
+    steps: [
+      { t: '왕홍 매칭', d: '분야·팔로워·지역을 병원 타깃에 맞춰 선별합니다.', icon: 'solar:users-group-rounded-bold-duotone' },
+      { t: '방문 · 촬영', d: '방한 일정, 통역 동행, 촬영까지 저희가 진행합니다.', icon: 'solar:videocamera-record-bold-duotone' },
+      { t: '중국 채널 발행', d: '샤오홍슈 · 도우인 등 실제 유입이 일어나는 채널에 게시합니다.', icon: 'solar:planet-bold-duotone' },
+      { t: '유입 추적', d: '콘텐츠별 문의·예약 전환을 자체 시스템으로 집계합니다.', icon: 'solar:chart-square-bold-duotone' },
+    ],
+    points: [
+      { t: '검증된 왕홍 풀', d: '실제 유치 실적으로 관리되는 파트너 네트워크에서 매칭합니다.' },
+      { t: '한 번 찍고 계속 씁니다', d: '제작한 콘텐츠는 병원 채널에서도 활용할 수 있도록 정리해 드립니다.' },
+      { t: '규정을 지킨 콘텐츠', d: '중국 광고 규정에 맞춰 가격·효과 표현 없이 제작합니다.' },
+    ],
+    cta: '체험단 상담 신청',
+    note: '진료는 각 협력 의료기관이 수행하며, 당사는 섭외·일정·콘텐츠 제작을 지원합니다.',
+  },
+  EN: {
+    tag: 'Wanghong Review Program',
+    title: 'Influencers visit in person,\nand the content stays',
+    sub: 'We invite Chinese influencers to your clinic and turn their visit into content. Ads leave impressions — wanghong bring the next patient.',
+    steps: [
+      { t: 'Influencer Matching', d: 'Selected by specialty, follower base and region to fit your target.', icon: 'solar:users-group-rounded-bold-duotone' },
+      { t: 'Visit & Filming', d: 'We handle the trip, interpreting and the shoot.', icon: 'solar:videocamera-record-bold-duotone' },
+      { t: 'Publishing in China', d: 'Posted on Xiaohongshu, Douyin and channels that actually convert.', icon: 'solar:planet-bold-duotone' },
+      { t: 'Traffic Tracking', d: 'Inquiries and bookings per piece of content, measured in our own system.', icon: 'solar:chart-square-bold-duotone' },
+    ],
+    points: [
+      { t: 'A vetted network', d: 'Matched from partners managed on real referral performance.' },
+      { t: 'Shoot once, use it long', d: 'Content is packaged so your own channels can reuse it.' },
+      { t: 'Compliant by design', d: 'Produced without pricing or efficacy claims, per Chinese ad rules.' },
+    ],
+    cta: 'Request a consultation',
+    note: 'Medical treatment is provided by each partner institution; we support casting, scheduling and content production.',
+  },
+  CN: {
+    tag: 'Wanghong Review Program',
+    title: '网红亲自到院，\n内容留下来',
+    sub: '邀请中国网红到访医院，把体验做成内容。广告留下曝光，网红带来下一位客户。',
+    steps: [
+      { t: '网红匹配', d: '按科室 · 粉丝量 · 地区筛选，贴合医院目标客群。', icon: 'solar:users-group-rounded-bold-duotone' },
+      { t: '到访与拍摄', d: '赴韩行程 · 翻译陪同 · 拍摄，全部由我方安排。', icon: 'solar:videocamera-record-bold-duotone' },
+      { t: '中国渠道发布', d: '发布于小红书 · 抖音等真正带来咨询的渠道。', icon: 'solar:planet-bold-duotone' },
+      { t: '效果追踪', d: '按内容统计咨询与预约转化，数据可查。', icon: 'solar:chart-square-bold-duotone' },
+    ],
+    points: [
+      { t: '经过验证的网红资源', d: '从以实际业绩管理的合作伙伴网络中匹配。' },
+      { t: '拍一次，长期使用', d: '所制作内容整理后可用于医院自有渠道。' },
+      { t: '合规制作', d: '依据中国广告规定制作，不含价格与效果表述。' },
+    ],
+    cta: '咨询体验团方案',
+    note: '诊疗由各合作医疗机构实施，我方提供邀约 · 行程 · 内容制作支持。',
+  },
+  JP: {
+    tag: 'Wanghong Review Program',
+    title: 'インフルエンサーが訪れ、\nコンテンツが残ります',
+    sub: '中国のインフルエンサーを病院に招き、来院体験をコンテンツにします。広告は表示を残し、ワンホンは次の患者を連れてきます。',
+    steps: [
+      { t: 'インフルエンサー選定', d: '診療科・フォロワー・地域を病院のターゲットに合わせます。', icon: 'solar:users-group-rounded-bold-duotone' },
+      { t: '来院・撮影', d: '訪韓日程、通訳同行、撮影まで当社が手配します。', icon: 'solar:videocamera-record-bold-duotone' },
+      { t: '中国での配信', d: '小紅書・抖音など実際に流入が起きるチャネルに掲載します。', icon: 'solar:planet-bold-duotone' },
+      { t: '流入の追跡', d: 'コンテンツ別の問い合わせ・予約転換を自社システムで集計します。', icon: 'solar:chart-square-bold-duotone' },
+    ],
+    points: [
+      { t: '実績で管理された人材', d: '実際の送客実績で管理するパートナー網からマッチングします。' },
+      { t: '一度の撮影を長く活用', d: '制作したコンテンツは病院チャネルでも使えるよう整理します。' },
+      { t: '規定に沿った制作', d: '中国の広告規定に合わせ、価格・効果表現を用いません。' },
+    ],
+    cta: '体験プログラムを相談',
+    note: '診療は各提携医療機関が行い、当社は手配・日程・コンテンツ制作を支援します。',
+  },
+  VI: {
+    tag: 'Wanghong Review Program',
+    title: 'Người ảnh hưởng đến tận nơi,\nnội dung ở lại',
+    sub: 'Chúng tôi mời KOL Trung Quốc đến bệnh viện và biến trải nghiệm thành nội dung. Quảng cáo để lại lượt xem, KOL mang đến bệnh nhân tiếp theo.',
+    steps: [
+      { t: 'Kết nối KOL', d: 'Chọn theo chuyên khoa, lượng theo dõi và khu vực phù hợp.', icon: 'solar:users-group-rounded-bold-duotone' },
+      { t: 'Thăm khám & quay phim', d: 'Chúng tôi lo lịch trình, phiên dịch và ghi hình.', icon: 'solar:videocamera-record-bold-duotone' },
+      { t: 'Đăng tại Trung Quốc', d: 'Đăng trên Xiaohongshu, Douyin — nơi thực sự tạo chuyển đổi.', icon: 'solar:planet-bold-duotone' },
+      { t: 'Theo dõi hiệu quả', d: 'Thống kê tư vấn và đặt lịch theo từng nội dung.', icon: 'solar:chart-square-bold-duotone' },
+    ],
+    points: [
+      { t: 'Mạng lưới đã kiểm chứng', d: 'Kết nối từ các đối tác được quản lý theo hiệu quả thực tế.' },
+      { t: 'Quay một lần, dùng lâu dài', d: 'Nội dung được đóng gói để kênh của bệnh viện tái sử dụng.' },
+      { t: 'Tuân thủ quy định', d: 'Sản xuất không nêu giá hay cam kết hiệu quả.' },
+    ],
+    cta: 'Đăng ký tư vấn',
+    note: 'Việc điều trị do từng cơ sở y tế đối tác thực hiện; chúng tôi hỗ trợ mời, lên lịch và sản xuất nội dung.',
+  },
+  ID: {
+    tag: 'Wanghong Review Program',
+    title: 'Influencer datang langsung,\nkontennya tetap ada',
+    sub: 'Kami mengundang influencer Tiongkok ke klinik Anda dan mengubah kunjungan itu menjadi konten. Iklan meninggalkan tayangan — wanghong membawa pasien berikutnya.',
+    steps: [
+      { t: 'Pencocokan Influencer', d: 'Dipilih berdasarkan bidang, jumlah pengikut dan wilayah.', icon: 'solar:users-group-rounded-bold-duotone' },
+      { t: 'Kunjungan & Syuting', d: 'Perjalanan, penerjemah dan pengambilan gambar kami urus.', icon: 'solar:videocamera-record-bold-duotone' },
+      { t: 'Publikasi di Tiongkok', d: 'Diunggah ke Xiaohongshu, Douyin — kanal yang benar-benar mengonversi.', icon: 'solar:planet-bold-duotone' },
+      { t: 'Pelacakan Trafik', d: 'Pertanyaan dan reservasi per konten, terukur di sistem kami.', icon: 'solar:chart-square-bold-duotone' },
+    ],
+    points: [
+      { t: 'Jaringan terverifikasi', d: 'Dicocokkan dari mitra yang dikelola berdasarkan kinerja nyata.' },
+      { t: 'Sekali syuting, pakai lama', d: 'Konten dikemas agar kanal klinik Anda dapat memakainya kembali.' },
+      { t: 'Patuh sejak awal', d: 'Diproduksi tanpa klaim harga maupun hasil.' },
+    ],
+    cta: 'Ajukan konsultasi',
+    note: 'Perawatan medis dilakukan oleh masing-masing institusi mitra; kami mendukung pemilihan, penjadwalan dan produksi konten.',
+  },
+  RU: {
+    tag: 'Wanghong Review Program',
+    title: 'Инфлюенсеры приезжают лично,\nа контент остаётся',
+    sub: 'Мы приглашаем китайских инфлюенсеров в клинику и превращаем визит в контент. Реклама оставляет показы — ванхун приводят следующего пациента.',
+    steps: [
+      { t: 'Подбор инфлюенсера', d: 'По направлению, аудитории и региону под вашу цель.', icon: 'solar:users-group-rounded-bold-duotone' },
+      { t: 'Визит и съёмка', d: 'Поездка, перевод и съёмка — на нашей стороне.', icon: 'solar:videocamera-record-bold-duotone' },
+      { t: 'Публикация в Китае', d: 'Xiaohongshu, Douyin и каналы, которые реально конвертируют.', icon: 'solar:planet-bold-duotone' },
+      { t: 'Отслеживание', d: 'Обращения и записи по каждому материалу в нашей системе.', icon: 'solar:chart-square-bold-duotone' },
+    ],
+    points: [
+      { t: 'Проверенная сеть', d: 'Подбор из партнёров, управляемых по реальным результатам.' },
+      { t: 'Снять раз — использовать долго', d: 'Контент оформляется для повторного использования клиникой.' },
+      { t: 'Соответствие правилам', d: 'Без указания цен и обещаний результата.' },
+    ],
+    cta: 'Запросить консультацию',
+    note: 'Лечение проводят партнёрские медучреждения; мы обеспечиваем подбор, график и производство контента.',
+  },
+};
+
 const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, onOpenReviews, onOpenTerms, onOpenPrivacy, lang }) => {
   const t = {
     KR: {
@@ -477,6 +614,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
   }[lang];
 
   const svc = SVC_I18N[lang] || SVC_I18N.EN;
+  const wh = WH_I18N[lang] || WH_I18N.EN;
 
   return (
     <main className="bg-white">
@@ -663,6 +801,62 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
 
       {/* 04-1. Performance — 통합 매출·수익 요약 (실적은 하단 유지) */}
       {/* <PnlSection lang={lang} /> */}
+
+            {/* 04-2. 왕홍 리뷰 체험단 — 병원 대상 B2B 소개 */}
+      <section id="wanghong" className="py-20 md:py-32 px-6 md:px-12 lg:px-24 bg-white scroll-mt-24 overflow-hidden">
+        <div className="max-w-[1440px] mx-auto">
+          <Reveal>
+            <div className="max-w-3xl">
+              <span className="text-[10px] md:text-xs font-bold tracking-[0.3em] text-[#5a82c2] uppercase">{wh.tag}</span>
+              <h2 className={`mt-4 text-[30px] md:text-[46px] font-black tracking-tighter leading-[1.15] text-gray-900 whitespace-pre-line ${krBreak}`}>{wh.title}</h2>
+              <p className={`mt-6 text-base md:text-lg text-gray-500 font-medium leading-relaxed ${krBreak}`}>{wh.sub}</p>
+            </div>
+          </Reveal>
+
+          {/* 진행 4단계 */}
+          <div className="mt-14 md:mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
+            {wh.steps.map((s, i) => (
+              <Reveal key={i} delay={i * 0.1}>
+                <div className="h-full bg-gray-50 border border-gray-100 rounded-[2rem] p-7 md:p-8 hover:border-[#5a82c2]/30 hover:shadow-xl hover:shadow-gray-200/60 transition-all duration-300 group">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[11px] font-black tracking-[0.2em] text-[#5a82c2]">{String(i + 1).padStart(2, '0')}</span>
+                    <span className="iconify text-3xl md:text-4xl text-[#5a82c2]/70 group-hover:text-[#5a82c2] transition-colors" data-icon={s.icon}></span>
+                  </div>
+                  <h3 className={`mt-6 text-lg md:text-xl font-black tracking-tight text-gray-900 ${krBreak}`}>{s.t}</h3>
+                  <p className={`mt-3 text-[13.5px] md:text-sm text-gray-500 font-medium leading-relaxed ${krBreak}`}>{s.d}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          {/* 강조 3가지 */}
+          <div className="mt-6 md:mt-8 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
+            {wh.points.map((p, i) => (
+              <Reveal key={i} delay={i * 0.1}>
+                <div className="h-full bg-[#5a82c2] text-white rounded-[2rem] p-7 md:p-8">
+                  <div className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-white/70"></span>
+                    <h3 className={`text-lg md:text-xl font-black tracking-tight ${krBreak}`}>{p.t}</h3>
+                  </div>
+                  <p className={`mt-3 text-[13.5px] md:text-sm text-white/75 font-medium leading-relaxed ${krBreak}`}>{p.d}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal delay={0.15}>
+            <div className="mt-12 md:mt-16 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+              <p className={`text-xs md:text-[13px] text-gray-400 font-medium leading-relaxed max-w-2xl ${krBreak}`}>{wh.note}</p>
+              <button
+                onClick={onOpenConsult}
+                className="shrink-0 inline-flex items-center gap-2 bg-gray-900 hover:bg-[#5a82c2] text-white font-bold text-sm md:text-base px-8 py-4 rounded-full transition-colors">
+                {wh.cta}
+                <span className="iconify text-lg" data-icon="solar:arrow-right-linear"></span>
+              </button>
+            </div>
+          </Reveal>
+        </div>
+      </section>
 
       {/* 05. Why Follow Korea */}
       <section className="py-20 md:py-40 px-6 md:px-12 lg:px-24 max-w-[1440px] mx-auto overflow-hidden">
