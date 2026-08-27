@@ -3024,5 +3024,68 @@ export const HOSPITAL_DATA: HospDetail[] = [
       { "name": "서진영", "title": "대표원장", "spec": ["신경과 전문의"] }
     ],
     "thumb": "hthumb/gnsmart.jpg"
+  },
+  {
+    "name": { "kr": "지우의원", "en": "JIWOO Clinic", "zh": "挚友医院" },
+    "dept": { "kr": "피부과", "en": "Dermatology", "zh": "皮肤科" },
+    "cat": "피부",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["리쥬란", "울쎄라 PRIME", "써마지 FLX", "포텐자", "피코레이저"],
+      "en": ["Rejuran", "Ultherapy PRIME", "Thermage FLX", "Potenza", "Pico Laser"],
+      "zh": ["Rejuran", "Ultherapy PRIME", "热玛吉FLX", "Potenza", "皮秒激光"]
+    },
+    "hours": "Mon-Thu 10:00-19:00 / Fri 10:00-20:00 / Sat 09:30-16:30 (Lunch 13:30-14:30)",
+    "loc": { "ko": "서울 강남", "zh": "首尔江南", "en": "Gangnam, Seoul" },
+    "overview": {
+      "kr": "지우의원(JIWOO Clinic)은 강남역 인근에 위치한 피부과로 리쥬란, 울쎄라 PRIME, 써마지 FLX, 포텐자, 피코레이저 등 피부 시술을 전문으로 합니다.",
+      "en": "JIWOO Clinic, near Gangnam Station, specializes in dermatology treatments including Rejuran, Ultherapy PRIME, Thermage FLX, Potenza, and pico laser.",
+      "zh": "挚友医院（JIWOO Clinic）位于江南站附近，专注于Rejuran、Ultherapy、热玛吉FLX、Potenza及皮秒激光等皮肤管理项目。"
+    },
+    "doctors": [
+      { "name": "김회원", "title": "대표원장", "spec": ["피부과"] },
+      { "name": "김우형", "title": "원장", "spec": ["피부과"] },
+      { "name": "조임철", "title": "원장", "spec": ["피부과"] }
+    ]
+  },
+  {
+    "name": { "kr": "온오프피부과의원", "en": "ONOFF Dermatology Clinic", "zh": "ONOFF皮肤科" },
+    "dept": { "kr": "피부과", "en": "Dermatology", "zh": "皮肤科" },
+    "cat": "피부",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["보톡스", "필러", "스킨부스터", "리프팅", "색소치료"],
+      "en": ["Botox", "Filler", "Skin Booster", "Lifting", "Pigmentation Treatment"],
+      "zh": ["肉毒素", "填充", "水光针", "提升", "色素治疗"]
+    },
+    "hours": "예약제 (진료시간 문의)",
+    "loc": { "ko": "서울 강남", "zh": "首尔江南", "en": "Gangnam, Seoul" },
+    "overview": {
+      "kr": "온오프피부과의원은 보톡스, 필러, 스킨부스터, 리프팅, 색소치료 등 종합 피부 시술을 제공합니다.",
+      "en": "ONOFF Dermatology Clinic offers comprehensive skin treatments including Botox, filler, skin booster, lifting, and pigmentation treatment.",
+      "zh": "ONOFF皮肤科提供肉毒素、填充、水光针、提升及色素治疗等综合皮肤管理项目。"
+    },
+    "doctors": []
+  },
+  {
+    "name": { "kr": "셀온피부과의원", "en": "Cellon Clinic", "zh": "CELLON皮肤科" },
+    "dept": { "kr": "피부과", "en": "Dermatology", "zh": "皮肤科" },
+    "cat": "피부",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["색소치료", "리프팅", "보톡스", "필러"],
+      "en": ["Pigmentation Treatment", "Lifting", "Botox", "Filler"],
+      "zh": ["色素治疗", "提升", "肉毒素", "填充"]
+    },
+    "hours": "Mon-Fri 10:00-19:00 / Sat 10:00-16:00 / Sun·Holiday Closed",
+    "loc": { "ko": "서울 강남", "zh": "首尔江南", "en": "Gangnam, Seoul" },
+    "overview": {
+      "kr": "셀온피부과의원(청담)은 피부과 전문의 원장이 직접 진료하며 색소치료, 리프팅, 보톡스, 필러를 전문으로 합니다.",
+      "en": "Cellon Clinic in Cheongdam is led by a board-certified dermatologist, specializing in pigmentation treatment, lifting, Botox, and filler.",
+      "zh": "CELLON皮肤科（清潭）由皮肤科专科院长亲自诊疗，专注于色素治疗、提升、肉毒素及填充项目。"
+    },
+    "doctors": [
+      { "name": "강승훈", "title": "대표원장", "spec": ["피부과 전문의"] }
+    ]
   }
 ];
