@@ -1021,7 +1021,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
                   </p>
                 </div>
                 <a
-                  href={({KR:'/brochure/followkorea-company-profile-ko.pdf',EN:'/brochure/followkorea-company-profile-en.pdf',CN:'/brochure/followkorea-company-profile-cn.pdf',KH:'/brochure/followkorea-company-profile-km.pdf',VI:'/brochure/followkorea-company-profile-vi.pdf'} as Record<string,string>)[lang] ?? '/brochure/followkorea-company-profile-en.pdf'}
+                  href={({KR:'/brochure/followkorea-company-profile-ko.pdf',CN:'/brochure/followkorea-company-profile-cn.pdf',EN:'/brochure/followkorea-company-profile-en.pdf'} as Record<string,string>)[lang] ?? '/brochure/followkorea-company-profile-en.pdf'}
                   download
                   className="inline-flex items-center gap-2.5 mt-8 md:mt-10 bg-[#5a82c2] text-white px-6 md:px-7 py-3.5 md:py-4 rounded-full text-[13px] md:text-sm font-bold hover:bg-[#4a6da3] transition-all shadow-xl shadow-[#5a82c2]/20 active:scale-95"
                 >
