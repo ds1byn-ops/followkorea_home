@@ -326,7 +326,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
       ctaTitle: '지금, 글로벌 환자 유치를\n시작해보세요.', ctaBtn: '지금 바로 문의하기',
       footerAddr: '주소: 서울특별시 서초구 강남대로 373, 13층 116호',
       footerBiz: '사업자등록번호: 696-86-03627',
-      footerCeo: '대표: 하장환',
+      footerCeo: '대표자: 하장환 외 1인',
       footerContact: '문의: contact@followkorea.co.kr',
       footerCopy: 'Copyright ⓒ 2026 팔로우코리아 All rights reserved.',
       privacy: '개인정보처리방침', terms: '이용약관'
@@ -361,7 +361,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
       ctaTitle: 'Start Attracting\nGlobal Patients Now.', ctaBtn: 'Inquire Now',
       footerAddr: 'Address: 13F #116, 373 Gangnam-daero, Seocho-gu, Seoul, Korea',
       footerBiz: 'Business Registration Number: 696-86-03627',
-      footerCeo: 'CEO: Ha Jang-hwan',
+      footerCeo: 'CEO: Ha Jang-hwan & 1 other',
       footerContact: 'Contact: contact@followkorea.co.kr',
       footerCopy: 'Copyright ⓒ 2026 Follow Korea All rights reserved.',
       privacy: 'Privacy Policy', terms: 'Terms of Use'
@@ -396,7 +396,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
       ctaTitle: '现在就开启\n全球患者引流之旅。', ctaBtn: '立即咨询',
       footerAddr: '地址：首尔特别市瑞草区江南大路373号，13层116号',
       footerBiz: '工商注册号: 696-86-03627',
-      footerCeo: '代表: Ha Jang-hwan',
+      footerCeo: '代表: Ha Jang-hwan 及另1人',
       footerContact: '联系邮箱: contact@followkorea.co.kr',
       footerCopy: 'Copyright ⓒ 2026 Follow Korea 版权所有。',
       privacy: '隐私政策', terms: '使用条款'
@@ -431,7 +431,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
       ctaTitle: '今、グローバル患者の誘致を\n始めましょう。', ctaBtn: '今すぐお問い合わせ',
       footerAddr: '住所: ソウル特別市瑞草区江南大路373、13階116号',
       footerBiz: '事業者登録番号: 696-86-03627',
-      footerCeo: '代表者: Ha Jang-hwan',
+      footerCeo: '代表者: Ha Jang-hwan 外1名',
       footerContact: 'お問い合わせ: contact@followkorea.co.kr',
       footerCopy: 'Copyright ⓒ 2026 Follow Korea All rights reserved.',
       privacy: 'プライバシーポリシー', terms: '利用規約'
@@ -466,7 +466,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
       ctaTitle: 'Mulai Menarik\nPasien Global Sekarang.', ctaBtn: 'Hubungi Sekarang',
       footerAddr: 'Alamat: Lantai 13 #116, 373 Gangnam-daero, Seocho-gu, Seoul, Korea',
       footerBiz: 'Nomor Registrasi Bisnis: 696-86-03627',
-      footerCeo: 'CEO: Ha Jang-hwan',
+      footerCeo: 'CEO: Ha Jang-hwan & 1 other',
       footerContact: 'Kontak: contact@followkorea.co.kr',
       footerCopy: 'Copyright ⓒ 2026 Follow Korea All rights reserved.',
       privacy: 'Kebijakan Privasi', terms: 'Ketentuan Penggunaan'
@@ -501,7 +501,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
       ctaTitle: 'ابدأ الآن\nبجذب المرضى من حول العالم.', ctaBtn: 'استفسر الآن',
       footerAddr: 'العنوان: الطابق 13، مكتب 116، 373 Gangnam-daero، Seocho-gu، سيول، كوريا',
       footerBiz: 'رقم تسجيل الأعمال: 696-86-03627',
-      footerCeo: 'الرئيس التنفيذي: Ha Jang-hwan',
+      footerCeo: 'الرئيس التنفيذي: Ha Jang-hwan وشخص آخر',
       footerContact: 'للتواصل: contact@followkorea.co.kr',
       footerCopy: 'Copyright ⓒ 2026 Follow Korea All rights reserved.',
       privacy: 'سياسة الخصوصية', terms: 'شروط الاستخدام'
@@ -536,7 +536,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
       ctaTitle: 'ចាប់ផ្តើមទាក់ទាញ\nអ្នកជំងឺសកលឥឡូវនេះ។', ctaBtn: 'សាកសួរឥឡូវនេះ',
       footerAddr: 'អាសយដ្ឋាន: ជាន់ទី 13 #116, 373 Gangnam-daero, Seocho-gu, សេអ៊ូល, កូរ៉េ',
       footerBiz: 'លេខចុះបញ្ជីអាជីវកម្ម: 696-86-03627',
-      footerCeo: 'នាយកប្រតិបត្តិ: Ha Jang-hwan',
+      footerCeo: 'នាយកប្រតិបត្តិ: Ha Jang-hwan និងម្នាក់ទៀត',
       footerContact: 'ទំនាក់ទំនង: contact@followkorea.co.kr',
       footerCopy: 'Copyright ⓒ 2026 Follow Korea All rights reserved.',
       privacy: 'គោលការណ៍ភាពឯកជន', terms: 'លក្ខខណ្ឌប្រើប្រាស់'
@@ -571,7 +571,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
       ctaTitle: 'Bắt đầu thu hút\nbệnh nhân toàn cầu ngay.', ctaBtn: 'Liên hệ ngay',
       footerAddr: 'Địa chỉ: Tầng 13 #116, 373 Gangnam-daero, Seocho-gu, Seoul, Hàn Quốc',
       footerBiz: 'Số đăng ký kinh doanh: 696-86-03627',
-      footerCeo: 'Giám đốc: Ha Jang-hwan',
+      footerCeo: 'Giám đốc: Ha Jang-hwan và 1 người khác',
       footerContact: 'Liên hệ: contact@followkorea.co.kr',
       footerCopy: 'Copyright ⓒ 2026 Follow Korea All rights reserved.',
       privacy: 'Chính sách bảo mật', terms: 'Điều khoản sử dụng'
@@ -606,7 +606,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
       ctaTitle: 'Начните привлекать\nпациентов со всего мира.', ctaBtn: 'Оставить заявку',
       footerAddr: 'Адрес: 13 этаж, офис 116, 373 Gangnam-daero, Seocho-gu, Сеул, Корея',
       footerBiz: 'Регистрационный номер: 696-86-03627',
-      footerCeo: 'Генеральный директор: Ha Jang-hwan',
+      footerCeo: 'Генеральный директор: Ha Jang-hwan и ещё 1',
       footerContact: 'Контакты: contact@followkorea.co.kr',
       footerCopy: 'Copyright ⓒ 2026 Follow Korea All rights reserved.',
       privacy: 'Политика конфиденциальности', terms: 'Условия использования'
@@ -1003,6 +1003,9 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
                 <div className="space-y-3 md:space-y-4 text-gray-400 text-[13px] md:text-sm font-medium">
                   <p className="flex items-start gap-2">
                     <span>{t.footerAddr}</span>
+                  </p>
+                  <p className="flex items-start gap-2">
+                    <span>{t.footerCeo}</span>
                   </p>
                   <p className="flex items-start gap-2">
                     <span>{t.footerBiz}</span>
