@@ -3087,5 +3087,26 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "doctors": [
       { "name": "강승훈", "title": "대표원장", "spec": ["피부과 전문의"] }
     ]
+  },
+  {
+    "name": { "kr": "아우레아의원", "en": "Aurea Clinic", "zh": "AUREA皮肤科" },
+    "dept": { "kr": "피부과", "en": "Dermatology", "zh": "皮肤科" },
+    "cat": "피부",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["리프팅", "스킨부스터", "보톡스", "필러"],
+      "en": ["Lifting", "Skin Booster", "Botox", "Filler"],
+      "zh": ["提升", "皮肤焕活针", "肉毒素", "填充"]
+    },
+    "hours": "Mon-Fri 10:30-19:30 / Sat·Sun·Holiday 11:00-18:00 (Open all year)",
+    "loc": { "ko": "서울 명동", "zh": "首尔明洞", "en": "Myeongdong, Seoul" },
+    "overview": {
+      "kr": "아우레아의원(명동)은 명동 중심가에 위치해 연중무휴로 운영되며 리프팅(울쎄라·써마지·온다), 스킨부스터, 보톡스, 필러를 전문으로 합니다.",
+      "en": "Aurea Clinic in Myeongdong is open year-round, specializing in lifting (Ultherapy, Thermage, ONDA), skin boosters, Botox, and fillers.",
+      "zh": "AUREA皮肤科（明洞）位于首尔明洞中心，全年无休，专注于提升（超声刀·热玛吉·ONDA）、皮肤焕活、肉毒素与填充项目。"
+    },
+    "doctors": [
+      { "name": "강대영", "title": "대표원장", "spec": ["피부클리닉"] }
+    ]
   }
 ];
