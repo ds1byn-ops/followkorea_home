@@ -256,6 +256,7 @@ h2{font-size:clamp(20px,3.6vw,27px);font-weight:900;letter-spacing:-.5px;}
           <h3>고객님 조건에 맞는 병원을 찾았습니다</h3>
           <div class="hn" id="r-hosp">-</div>
           <p id="r-sub">접수 안내를 문자로 보내드렸습니다.<br>상담원이 곧 연락드려 확정 견적과 예약을 안내해 드립니다.<br>견적 금액은 개인별 상태에 따라 달라질 수 있어 상담 시 정확히 안내됩니다.</p>
+          <button class="wbtn pri" style="margin-top:18px;" onclick="resetWizard()">처음으로</button>
         </div>
       </div>
     </div>
@@ -400,6 +401,15 @@ function togT(el){
   var i=SEL_TRAITS.indexOf(t);
   if(i>=0){SEL_TRAITS.splice(i,1);el.classList.remove('on');}
   else{SEL_TRAITS.push(t);el.classList.add('on');}
+}
+function resetWizard(){
+  KWS=[]; SEL_TRAITS=[]; PREFER='';
+  renderKws();
+  document.querySelectorAll('.topt').forEach(function(e){e.classList.remove('on');});
+  document.getElementById('qcards').innerHTML='';
+  ['f-name','f-phone','f-memo','kwq'].forEach(function(id){var e=document.getElementById(id);if(e)e.value='';});
+  document.getElementById('werr').textContent='';
+  goStep(1);
 }
 function submitMatch(){
   var name=document.getElementById('f-name').value.trim();
