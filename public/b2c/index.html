@@ -186,7 +186,8 @@ h2{font-size:clamp(20px,3.6vw,27px);font-weight:900;letter-spacing:-.5px;}
         <div class="wbtns"><span class="spacer"></span><button class="wbtn pri" id="toStep2" disabled onclick="goStep2()"></button></div>
       </div>
       <div class="panel" id="p2">
-        <div class="hint" style="margin:0 0 12px;" id="t-hint2"></div>
+        <div class="hint" style="margin:0 0 10px;" id="t-hint2"></div>
+        <div class="wbtns" style="margin:0 0 12px;"><button class="wbtn" onclick="goStep(1)" id="t-back2b"></button><span class="spacer"></span><button class="wbtn pri" onclick="goStep(3)" id="t-next2b"></button></div>
         <div id="qcards"></div>
         <div class="wbtns"><button class="wbtn" onclick="goStep(1)" id="t-back2"></button><span class="spacer"></span><button class="wbtn pri" onclick="goStep(3)" id="t-next2"></button></div>
       </div>
@@ -466,6 +467,8 @@ function applyLang(l){
   document.getElementById('toStep2').textContent=t.toStep2;
   document.getElementById('t-hint2').textContent=t.hint2;
   document.getElementById('t-back2').textContent=t.back;
+  document.getElementById('t-back2b').textContent=t.back;
+  document.getElementById('t-next2b').textContent=t.next2;
   document.getElementById('t-next2').textContent=t.next2;
   document.getElementById('t-hint3').textContent=t.hint3;
   document.getElementById('t-back3').textContent=t.back;
