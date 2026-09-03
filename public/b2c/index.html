@@ -1,65 +1,68 @@
 <!doctype html>
-<html lang="ko">
+<html lang="zh">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>팔로우코리아 — 병원 마케팅 · 협력 병원 안내</title>
-<meta name="description" content="외국인 환자 유치와 왕홍 체험 리뷰 마케팅 전문, 팔로우코리아. 협력 의료기관 소개와 맞춤 견적 서비스.">
+<title>FOLLOW KOREA — 医院营销 · 合作医院指南</title>
+<meta name="description" content="外国人患者招揽·网红体验测评营销专业公司 FollowKorea。介绍合作医疗机构并提供定制报价。">
 <meta name="robots" content="index,follow">
-<meta property="og:title" content="팔로우코리아 — 병원 마케팅 · 협력 병원 안내">
-<meta property="og:description" content="보건복지부 등록 외국인환자 유치업체. 협력 병원 소개·왕홍 리뷰 마케팅·맞춤 견적.">
+<meta property="og:title" content="FOLLOW KOREA — 医院营销 · 合作医院指南">
+<meta property="og:description" content="韩国保健福祉部注册外国人患者招揽机构。合作医院介绍·网红测评营销·定制报价。">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <style>
 :root{--brand:#5a82c2;--brand-d:#3f639e;--ink:#1c2436;--mute:#6b7890;--line:#e5e9f2;--bg:#f6f8fc;--gold:#B8960C;}
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;}
+body{font-family:'Pretendard','Apple SD Gothic Neo','PingFang SC','Microsoft YaHei','Hiragino Sans','Malgun Gothic',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;word-break:keep-all;overflow-wrap:break-word;}
 .wrap{max-width:1080px;margin:0 auto;padding:0 18px;}
 h2{font-size:clamp(20px,3.6vw,27px);font-weight:900;letter-spacing:-.5px;}
 .sub{color:var(--mute);font-size:13.5px;margin-top:6px;}
 .sec{padding:56px 0;}
-/* nav */
 .top{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:40;}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:12px;}
-.logo img{height:34px;display:block;}
-.nav{display:flex;gap:4px;flex-wrap:wrap;}
-.nav a{padding:7px 12px;border-radius:8px;font-size:13px;font-weight:700;color:#3d4a63;text-decoration:none;}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:10px;}
+.logo img{height:32px;display:block;}
+.nav{display:flex;gap:2px;flex-wrap:wrap;}
+.nav a{padding:7px 10px;border-radius:8px;font-size:13px;font-weight:700;color:#3d4a63;text-decoration:none;white-space:nowrap;}
 .nav a:hover{background:var(--bg);color:var(--brand-d);}
-.navcta{background:var(--brand);color:#fff;font-weight:800;font-size:13px;padding:9px 16px;border-radius:10px;text-decoration:none;white-space:nowrap;}
+.navcta{background:var(--brand);color:#fff;font-weight:800;font-size:13px;padding:9px 15px;border-radius:10px;text-decoration:none;white-space:nowrap;}
+.langs{display:flex;gap:4px;align-items:center;}
+.langs button{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--line);background:#fff;border-radius:8px;padding:5px 8px;font-size:11.5px;font-weight:700;color:#3d4a63;cursor:pointer;}
+.langs button.on{border-color:var(--brand);background:#f0f5fd;color:var(--brand-d);}
+.langs img{width:16px;height:12px;border-radius:2px;display:block;}
+.adnote{font-size:10px;color:var(--mute);text-align:right;line-height:1.5;}
+.hero{background:linear-gradient(180deg,#fff, #f0f4fb);padding:48px 0 40px;border-bottom:1px solid var(--line);}
 .hero2{display:grid;grid-template-columns:1.15fr .85fr;gap:38px;align-items:center;}
 .collage{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
 .collage img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px;box-shadow:0 10px 26px rgba(20,30,60,.13);background:#e8edf6;}
 .collage img:nth-child(2),.collage img:nth-child(5){transform:translateY(14px);}
 .hright{position:relative;padding-bottom:14px;}
 .chipfloat{position:absolute;left:-8px;bottom:-6px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:9px 15px;font-weight:800;font-size:12.5px;color:var(--brand-d);box-shadow:0 10px 24px rgba(20,30,60,.13);}
+.badge{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:700;color:var(--brand-d);border:1px solid #c9d7ee;background:#fff;border-radius:99px;padding:6px 13px;margin-bottom:16px;}
+.badge .dot{width:7px;height:7px;border-radius:50%;background:var(--brand);flex:none;}
+.hero h1{font-size:clamp(24px,4.6vw,36px);font-weight:900;letter-spacing:-1px;line-height:1.38;}
+.hero h1 b{color:var(--brand-d);}
+.hero p.lead{margin-top:14px;font-size:clamp(13.5px,2.4vw,15.5px);color:var(--mute);max-width:640px;}
+.cta{display:inline-block;margin-top:26px;background:var(--brand);color:#fff;font-weight:800;font-size:15px;padding:14px 30px;border-radius:12px;text-decoration:none;box-shadow:0 8px 24px rgba(63,99,158,.25);}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+.st{background:#fff;border:1px solid var(--line);border-radius:13px;padding:16px;display:block;text-decoration:none;transition:.15s;}
+.st:hover{border-color:var(--brand);transform:translateY(-2px);box-shadow:0 8px 22px rgba(63,99,158,.12);}
+.st .n{font-size:clamp(17px,2.6vw,22px);font-weight:900;color:var(--brand-d);}
+.st .l{font-size:11.5px;color:var(--mute);margin-top:3px;line-height:1.5;}
 .mq{overflow:hidden;background:#fff;border-bottom:1px solid var(--line);padding:14px 0;}
 .mqtrack{display:flex;gap:12px;width:max-content;animation:mqroll 50s linear infinite;}
 .mqtrack img{height:92px;border-radius:12px;display:block;}
 @keyframes mqroll{to{transform:translateX(-50%);}}
-@media(max-width:820px){.hero2{grid-template-columns:1fr;}.hright{display:none;}}
-/* hero */
-.hero{background:linear-gradient(180deg,#fff, #f0f4fb);padding:52px 0 44px;border-bottom:1px solid var(--line);}
-.badge{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:700;color:var(--brand-d);border:1px solid #c9d7ee;background:#fff;border-radius:99px;padding:6px 13px;margin-bottom:16px;}
-.badge .dot{width:7px;height:7px;border-radius:50%;background:var(--brand);}
-.hero h1{font-size:clamp(25px,4.8vw,38px);font-weight:900;letter-spacing:-1px;line-height:1.35;}
-.hero h1 b{color:var(--brand-d);}
-.hero p.lead{margin-top:14px;font-size:clamp(13.5px,2.4vw,15.5px);color:var(--mute);max-width:640px;}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:30px;}
-.st{background:#fff;border:1px solid var(--line);border-radius:13px;padding:16px 16px;}
-.st .n{font-size:clamp(17px,2.6vw,22px);font-weight:900;color:var(--brand-d);}
-.st .l{font-size:11.5px;color:var(--mute);margin-top:3px;line-height:1.5;}
-.cta{display:inline-block;margin-top:26px;background:var(--brand);color:#fff;font-weight:800;font-size:15px;padding:14px 30px;border-radius:12px;text-decoration:none;box-shadow:0 8px 24px rgba(63,99,158,.25);}
-/* services */
 .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px;}
 .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 20px;}
 .card .num{font-size:11px;font-weight:800;color:var(--brand);letter-spacing:2px;}
 .card h3{font-size:15px;font-weight:800;margin:8px 0 6px;}
 .card p{font-size:12.5px;color:var(--mute);}
-/* hospitals */
 .hsec{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
 .chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:16px;}
 .chip{padding:6px 12px;border:1px solid var(--line);border-radius:99px;background:#fff;font-size:12px;color:#3d4a63;cursor:pointer;user-select:none;}
 .chip.on{background:var(--brand);border-color:var(--brand);color:#fff;font-weight:700;}
+.gtab{padding:8px 15px;border:1px solid var(--line);border-radius:10px;background:#fff;font-size:12.5px;font-weight:700;color:#3d4a63;cursor:pointer;user-select:none;}
+.gtab.on{background:#1c2436;border-color:#1c2436;color:#fff;}
 .hgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px;}
 .hosp{background:var(--bg);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;}
 .hosp .thumb{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:#e8edf6;}
@@ -73,7 +76,6 @@ h2{font-size:clamp(20px,3.6vw,27px);font-weight:900;letter-spacing:-.5px;}
 .hosp .docs{font-size:11px;color:var(--mute);margin-top:8px;}
 .badge-ad{display:inline-block;font-size:10px;font-weight:700;color:#8a6d2b;background:#fdf6e3;border:1px solid #ecdcae;border-radius:5px;padding:1px 6px;vertical-align:2px;}
 .hmore{display:block;margin:16px auto 0;padding:10px 26px;border:1px solid var(--line);border-radius:10px;background:#fff;font-size:13px;cursor:pointer;color:#3d4a63;}
-/* wizard */
 .wiz{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px 24px;margin-top:22px;box-shadow:0 10px 34px rgba(20,30,60,.05);}
 .steps{display:flex;gap:6px;margin-bottom:20px;flex-wrap:wrap;}
 .stp{font-size:11.5px;font-weight:700;color:var(--mute);border:1px solid var(--line);border-radius:99px;padding:5px 12px;}
@@ -113,11 +115,11 @@ h2{font-size:clamp(20px,3.6vw,27px);font-weight:900;letter-spacing:-.5px;}
 .result .hn{font-size:24px;font-weight:900;color:var(--brand-d);margin:8px 0;}
 .result p{font-size:13.5px;color:var(--mute);}
 .errmsg{color:#c0392b;font-size:12.5px;margin-top:10px;min-height:16px;text-align:center;}
-/* legal */
 .legal{background:#fff;border-top:1px solid var(--line);padding:26px 0 40px;font-size:11.5px;color:var(--mute);line-height:2;}
 @media(max-width:900px){.hgrid{grid-template-columns:repeat(2,1fr);}}
-@media(max-width:820px){.stats{grid-template-columns:1fr 1fr;}.cards{grid-template-columns:1fr 1fr;}.tsel{grid-template-columns:1fr 1fr;}}
-@media(max-width:560px){.nav{display:none;}.cards{grid-template-columns:1fr;}.hgrid{grid-template-columns:1fr;}.tsel{grid-template-columns:1fr;}}
+@media(max-width:820px){.stats{grid-template-columns:1fr 1fr;}.cards{grid-template-columns:1fr 1fr;}.tsel{grid-template-columns:1fr 1fr;}.hero2{grid-template-columns:1fr;}.hright{display:none;}}
+@media(max-width:640px){.nav{display:none;}.adnote{display:none;}}
+@media(max-width:560px){.cards{grid-template-columns:1fr;}.hgrid{grid-template-columns:1fr;}.tsel{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -125,230 +127,429 @@ h2{font-size:clamp(20px,3.6vw,27px);font-weight:900;letter-spacing:-.5px;}
 <div class="top">
   <div class="wrap">
     <a class="logo" href="https://www.followkorea.co.kr"><img src="/fk-news-logo.png" alt="FOLLOW KOREA"></a>
-    <nav class="nav">
-      <a href="#about">회사 소개</a>
-      <a href="#services">서비스</a>
-      <a href="#hospitals">협력 병원</a>
-      <a href="#quote">맞춤 견적</a>
-    </nav>
-    <div style="display:flex;align-items:center;gap:12px;"><a href="#quote" class="navcta">맞춤 견적 받기</a><span style="font-size:10px;color:var(--mute);text-align:right;line-height:1.5;">본 페이지는 의료광고를 포함합니다<br>(주)팔로우코리아는 광고 매체입니다</span></div>
+    <nav class="nav" id="nav"></nav>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div class="langs" id="langs"></div>
+      <a href="#quote" class="navcta" id="navcta"></a>
+      <span class="adnote" id="adnote"></span>
+    </div>
   </div>
 </div>
 
-<!-- 회사 소개 -->
 <section class="hero" id="about">
   <div class="wrap">
    <div class="hero2">
    <div class="hleft">
-    <span class="badge"><span class="dot"></span> 보건복지부 외국인환자 유치업 등록 · 제 A-2026-01-01-06622 호</span>
-    <h1>병원을 가장 잘 아는 마케팅 회사가<br><b>믿을 수 있는 병원 정보</b>를 전합니다</h1>
-    <p class="lead">팔로우코리아는 <b>외국인 환자 유치</b>와 <b>왕홍(중국 인플루언서) 체험 리뷰 마케팅</b>을 전문으로 하는 병원 마케팅 회사입니다. 저희가 직접 협력하는 의료기관의 정보를 소개하고, 조건에 맞는 병원을 찾아드립니다.</p>
-    
-    <a class="cta" href="#quote">내게 맞는 병원 견적 받기 →</a>
+    <span class="badge"><span class="dot"></span> <span id="t-badge"></span></span>
+    <h1 id="t-h1"></h1>
+    <p class="lead" id="t-lead"></p>
+    <a class="cta" href="#quote" id="t-cta"></a>
    </div>
    <div class="hright">
      <div class="collage">
-       <img src="https://gnfollow.com/hthumb/shinsang.jpg" alt="협력 병원" loading="lazy">
-       <img src="https://gnfollow.com/hthumb/wonjin.jpg" alt="협력 병원" loading="lazy">
-       <img src="https://gnfollow.com/hthumb/faceline.jpg" alt="협력 병원" loading="lazy">
-       <img src="https://gnfollow.com/hthumb/chaum.jpg" alt="협력 병원" loading="lazy">
-       <img src="https://gnfollow.com/hthumb/view.jpg" alt="협력 병원" loading="lazy">
-       <img src="https://gnfollow.com/hthumb/cheongdamcircle.jpg" alt="협력 병원" loading="lazy">
+       <img src="https://gnfollow.com/hthumb/shinsang.jpg" alt="" loading="lazy">
+       <img src="https://gnfollow.com/hthumb/wonjin.jpg" alt="" loading="lazy">
+       <img src="https://gnfollow.com/hthumb/faceline.jpg" alt="" loading="lazy">
+       <img src="https://gnfollow.com/hthumb/chaum.jpg" alt="" loading="lazy">
+       <img src="https://gnfollow.com/hthumb/view.jpg" alt="" loading="lazy">
+       <img src="https://gnfollow.com/hthumb/cheongdamcircle.jpg" alt="" loading="lazy">
      </div>
-     <div class="chipfloat">협력 의료기관 41곳과 함께합니다</div>
+     <div class="chipfloat" id="t-chipfloat"></div>
    </div>
    </div>
   </div>
 </section>
+<div class="wrap" style="padding-top:26px;padding-bottom:44px;">
+  <div class="stats" id="stats"></div>
+</div>
 
-<div class="wrap" style="padding-bottom:44px;"><div class="stats">
-      <div class="st"><div class="n" id="stat-hosp">40+</div><div class="l">협력 의료기관 — 성형·피부·검진·치과 등</div></div>
-      <div class="st"><div class="n">유치업 등록</div><div class="l">보건복지부 등록 외국인환자 유치업체 · 종합여행업 등록</div></div>
-      <div class="st"><div class="n">왕홍 네트워크</div><div class="l">샤오홍슈·도우인 체험 리뷰 콘텐츠 제작·확산</div></div>
-      <div class="st"><div class="n">중국 현지법인</div><div class="l">悦集江南(上海) — 중국 내 합법 마케팅 운영</div></div>
-    </div></div>
-<!-- 협력 병원 사진 스트립 -->
 <div class="mq"><div class="mqtrack" id="mqtrack"></div></div>
 
-<!-- 서비스 -->
 <section class="sec" id="services">
   <div class="wrap">
-    <h2>팔로우코리아가 하는 일</h2>
-    <p class="sub">병원과 환자 사이에서, 광고·마케팅 매체로서 정확한 정보를 연결합니다.</p>
-    <div class="cards">
-      <div class="card"><div class="num">01</div><h3>외국인 환자 유치</h3><p>등록 유치업체로서 중국·글로벌 환자의 병원 방문을 지원합니다. 상담 통역, 방문 일정, 사후 관리까지.</p></div>
-      <div class="card"><div class="num">02</div><h3>왕홍 체험 리뷰 마케팅</h3><p>팔로워 100만 전후 왕홍이 병원을 직접 방문하고, 샤오홍슈·도우인에 체험 콘텐츠를 게재합니다.</p></div>
-      <div class="card"><div class="num">03</div><h3>병원 광고·소개</h3><p>광고 매체로서 협력 의료기관의 진료 분야·의료진 정보를 소비자에게 소개합니다.</p></div>
-      <div class="card"><div class="num">04</div><h3>맞춤 견적 서비스</h3><p>원하는 시술과 조건을 고르면 협력 병원 견적을 비교하고 맞는 병원을 찾아드립니다. <a href="#quote" style="color:var(--brand-d);font-weight:700;">견적 받기 →</a></p></div>
-    </div>
+    <h2 id="t-svc-title"></h2>
+    <p class="sub" id="t-svc-sub"></p>
+    <div class="cards" id="svc-cards"></div>
   </div>
 </section>
 
-<!-- 협력 병원 -->
 <section class="sec hsec" id="hospitals">
   <div class="wrap">
-    <h2>협력 의료기관</h2>
-    <p class="sub">팔로우코리아와 함께하는 의료기관입니다. 가나다순으로 표시되며 순위·추천·평가를 의미하지 않습니다.</p>
+    <h2 id="t-h-title"></h2>
+    <p class="sub" id="t-h-sub"></p>
     <div class="chips" id="hchips"></div>
     <div class="hgrid" id="hgrid"></div>
-    <button class="hmore" id="hmoreBtn" style="display:none;" onclick="HPAGE++;renderHosps(true)">협력 병원 더 보기</button>
+    <button class="hmore" id="hmoreBtn" style="display:none;" onclick="HPAGE++;renderHosps(true)"></button>
   </div>
 </section>
 
-<!-- 맞춤 견적 마법사 -->
 <section class="sec" id="quote">
   <div class="wrap">
-    <h2>맞춤 견적 <span class="badge-ad">광고</span></h2>
-    <p class="sub">원하는 시술을 고르면 협력 병원별 예상 견적을 비교하고, 조건에 맞는 병원을 찾아드립니다. 병원명은 상담 확정 전까지 공개되지 않습니다.</p>
+    <h2><span id="t-q-title"></span> <span class="badge-ad" id="t-ad"></span></h2>
+    <p class="sub" id="t-q-sub"></p>
     <div class="wiz">
-      <div class="steps">
-        <span class="stp on" id="stp1">1. 시술 선택</span>
-        <span class="stp" id="stp2">2. 견적 비교</span>
-        <span class="stp" id="stp3">3. 원하는 병원 조건</span>
-        <span class="stp" id="stp4">4. 상담 신청</span>
-      </div>
-
-      <!-- STEP 1 -->
+      <div class="steps" id="wsteps"></div>
       <div class="panel on" id="p1">
         <div class="searchbar">
-          <input id="kwq" placeholder="시술명 입력 — 예: 울쎄라, 리쥬란, 보톡스" onkeydown="if(event.key==='Enter')addKw()">
-          <button onclick="addKw()">추가</button>
+          <input id="kwq" onkeydown="if(event.key==='Enter')addKw()">
+          <button onclick="addKw()" id="t-addbtn"></button>
         </div>
-        <div class="chips" id="quick" style="margin-top:12px;"></div>
+        <div class="chips" id="qgtabs" style="margin-top:14px;"></div>
+        <div class="chips" id="qgchips" style="margin-top:10px;"></div>
         <div class="kws" id="kws"></div>
-        <div class="hint">· 시술을 여러 개 담을 수 있습니다. 견적은 각 병원 수가표에서 해당 시술의 최저 정가를 합산해 계산합니다.</div>
-        <div class="wbtns"><span class="spacer"></span><button class="wbtn pri" id="toStep2" disabled onclick="goStep2()">견적 비교하기 →</button></div>
+        <div class="hint" id="t-hint1"></div>
+        <div class="wbtns"><span class="spacer"></span><button class="wbtn pri" id="toStep2" disabled onclick="goStep2()"></button></div>
       </div>
-
-      <!-- STEP 2 -->
       <div class="panel" id="p2">
-        <div class="hint" style="margin:0 0 12px;">선택 시술 기준 병원별 예상 견적입니다 (병원명 비공개 · 저렴한 순). 카드를 누르면 항목별 금액이 열립니다. 마음에 드는 견적을 선택하거나, 그대로 다음 단계에서 조건으로 찾아드립니다.</div>
+        <div class="hint" style="margin:0 0 12px;" id="t-hint2"></div>
         <div id="qcards"></div>
-        <div class="wbtns"><button class="wbtn" onclick="goStep(1)">← 이전</button><span class="spacer"></span><button class="wbtn pri" onclick="goStep(3)">다음: 병원 조건 선택 →</button></div>
+        <div class="wbtns"><button class="wbtn" onclick="goStep(1)" id="t-back2"></button><span class="spacer"></span><button class="wbtn pri" onclick="goStep(3)" id="t-next2"></button></div>
       </div>
-
-      <!-- STEP 3 -->
       <div class="panel" id="p3">
-        <div class="hint" style="margin:0;">원하시는 병원의 특징을 선택하세요 (복수 선택 가능). 조건에 가장 맞는 협력 병원을 찾아드립니다.</div>
+        <div class="hint" style="margin:0;" id="t-hint3"></div>
         <div class="tsel" id="tsel"></div>
-        <div class="wbtns"><button class="wbtn" onclick="goStep(2)">← 이전</button><span class="spacer"></span><button class="wbtn pri" onclick="goStep(4)">다음: 상담 신청 →</button></div>
+        <div class="wbtns"><button class="wbtn" onclick="goStep(2)" id="t-back3"></button><span class="spacer"></span><button class="wbtn pri" onclick="goStep(4)" id="t-next3"></button></div>
       </div>
-
-      <!-- STEP 4 -->
       <div class="panel" id="p4">
         <div class="fform">
-          <label>이름 *</label>
-          <input id="f-name" placeholder="홍길동">
-          <label>연락처 *</label>
-          <input id="f-phone" inputmode="tel" placeholder="010-0000-0000">
-          <label>남기실 말씀 (선택)</label>
-          <textarea id="f-memo" rows="2" placeholder="희망 시기, 궁금한 점 등"></textarea>
+          <label id="t-fname"></label>
+          <input id="f-name">
+          <label id="t-fphone"></label>
+          <input id="f-phone" inputmode="tel">
+          <label id="t-fmemo"></label>
+          <textarea id="f-memo" rows="2"></textarea>
         </div>
         <div class="errmsg" id="werr"></div>
-        <div class="wbtns"><button class="wbtn" onclick="goStep(3)">← 이전</button><span class="spacer"></span><button class="wbtn pri" id="submitBtn" onclick="submitMatch()">맞춤 병원 확인하기</button></div>
-        <div class="hint" style="text-align:center;">신청 즉시 조건에 맞는 병원명을 알려드리며, 확정 견적은 상담원이 연락드려 안내합니다.</div>
+        <div class="wbtns"><button class="wbtn" onclick="goStep(3)" id="t-back4"></button><span class="spacer"></span><button class="wbtn pri" id="submitBtn" onclick="submitMatch()"></button></div>
+        <div class="hint" style="text-align:center;" id="t-hint4"></div>
       </div>
-
-      <!-- STEP 5 (결과) -->
       <div class="panel" id="p5">
         <div class="result">
           <div class="big">🎉</div>
-          <h3>고객님 조건에 맞는 병원을 찾았습니다</h3>
+          <h3 id="t-r-title"></h3>
           <div class="hn" id="r-hosp">-</div>
-          <p id="r-sub">접수 안내를 문자로 보내드렸습니다.<br>상담원이 곧 연락드려 확정 견적과 예약을 안내해 드립니다.<br>견적 금액은 개인별 상태에 따라 달라질 수 있어 상담 시 정확히 안내됩니다.</p>
-          <button class="wbtn pri" style="margin-top:18px;" onclick="resetWizard()">처음으로</button>
+          <p id="t-r-sub"></p>
+          <button class="wbtn pri" style="margin-top:18px;" onclick="resetWizard()" id="t-restart"></button>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<div class="legal">
+<div class="legal" id="legal">
   <div class="wrap">
     <img src="/fk-news-logo.png" alt="FOLLOW KOREA" style="height:30px;margin-bottom:14px;display:block;">
-    <b style="color:#3d4a63;">유의사항</b><br>
-    · 견적 비교에 사용되는 가격은 각 의료기관이 제공한 비급여 진료비 정가 기준이며, 개인의 상태·시술 범위에 따라 실제 비용은 달라질 수 있습니다.<br>
-    · 본 페이지는 의료기관 간 순위·우열 비교를 제공하지 않으며, 견적 비교는 가격 정보 제공 목적입니다. 협력 의료기관 소개는 가나다순입니다.<br>
-    · 모든 의료 시술에는 부작용이 발생할 수 있으므로 반드시 의료인과 충분히 상담한 후 결정하시기 바랍니다.<br>
-    · (주)팔로우코리아는 광고 매체로서 의료행위 및 진료계약의 당사자가 아닙니다.<br><br>
-    주식회사 팔로우코리아 · 대표자: 하장환 외 1인 · 사업자등록번호: 696-86-03627<br>
+    <b style="color:#3d4a63;" id="t-l-title"></b><br>
+    <span id="t-l-body"></span><br><br>
+    주식회사 팔로우코리아 (Follow Korea Co., Ltd.) · 대표자: 하장환 외 1인 · 사업자등록번호: 696-86-03627<br>
     외국인환자 유치업 등록: 제 A-2026-01-01-06622 호 (2026.01.21~2029.01.20) · 관광사업 등록: 종합여행업 제 2026-000022 호<br>
     통신판매업 신고 · 서울특별시 서초구 강남대로 373, 13층 116호 · contact@followkorea.co.kr
   </div>
 </div>
 
 <script>
-var HOSPITALS=[{"name":"더이다의원","dept":"피부/미용성형 (눈·코·귀·어깨·힙)","cat":"성형외과/피부","treats":["눈","코","귀필러","어깨필러","힙·골반","리프팅","스킨부스터"],"loc":"서울 중구 약수","overview":"더이다의원(ESTD 2010)은 눈·코·귀·어깨·힙 전문 의원입니다. 허선녕 대표원장(가슴성형 2,000례+, 가슴 필러 1,000례+, 필러·리프팅 6,000례+)이 직접 진료하며, 6호선 버티고개역 도보 3분·건물 내 무료주차가 가능합니다.","doctors":["허선녕 대표원장"]},{"name":"원진성형외과피부과의원","dept":"성형외과/피부과/줄기세포","cat":"성형외과","treats":["눈","코","윤곽","양악","가슴","줄기세포"],"loc":"서울 강남","overview":"원진성형외과피부과의원은 강남 종합 의료미용 병원으로 눈·코 수술, 안면윤곽, 양악수술, 줄기세포 등 전방위 서비스를 제공합니다.","doctors":["강문석 원장","강진석 원장","김규희 원장","김승민 원장","김영은 원장","김용배 원장","김지안 원장","박성용 원장","박장우 원장","박종철 원장","손유리 원장","송그라메 원장","안창환 원장","오세영 원장","원기정 원장","이선구 원장","이종석 원장","이혁재 원장","정대균 원장","최수경 원장","황윤주 원장"]},{"name":"지유의원 (사적인아름다움)","dept":"리프팅/필러/줄기세포","cat":"줄기세포","treats":["리프팅","필러","보톡스","줄기세포"],"loc":"서울 강남","overview":"지유의원은 리프팅, 필러, 줄기세포 전문으로 오후 9시까지 연장 진료하며 주말에도 운영합니다.","doctors":["박기범 대표원장","박혜민 총괄원장","정연성 총괄원장","나윤채 줄기세포 센터장","안광용 교육원장","김영민 교육원장","김선빈 원장","김진현 원장","원지명 원장","김민선 원장","김혁수 원장","김현탁 원장","이재관 원장","이건 원장","나용규 원장","윤도혁 원장","배재훈 원장","정우석 원장","김보영 원장","이종은 원장","정환호 원장","김주훈 원장","이가희 원장","양재우 원장","박종원 원장","김현아 원장","한창현 원장","황제완 자문의","박세현 자문의"]},{"name":"신상성형외과","dept":"성형외과/피부","cat":"성형외과","treats":["이중턱","거상","눈","코","지방흡입"],"loc":"서울 강남","overview":"신상성형외과는 강남팔로우 핵심 제휴 병원으로 눈·코 수술, 거상술, 쁘띠 시술을 전문으로 합니다.","doctors":["이영재 대표원장","김재희 원장","어필선 원장","최서길 원장","윤형우 원장","도경현 원장","윤현식 원장","정윤조 원장","오예지 원장","김지훈 원장","김아라 원장","김진현 원장","이규원 원장"]},{"name":"드림성형외과","dept":"성형외과","cat":"성형외과","treats":["눈","코","양악","가슴"],"loc":"서울 강남","overview":"드림성형외과는 눈·코 성형, 양악수술, 가슴성형 전문 병원입니다.","doctors":["박양수 대표원장","김영준 원장","유원재 원장","유안나 원장","박이현 원장","조승우 원장","배한솔 원장","강지원 원장"]},{"name":"셀리닉의원","dept":"줄기세포/리프팅","cat":"줄기세포","treats":["줄기세포","리프팅","레이저"],"loc":"서울 강남","overview":"셀리닉의원은 줄기세포 치료와 리프팅에 특화된 프리미엄 의원입니다.","doctors":["김건우 대표원장"]},{"name":"차움","dept":"종합검진/항노화/줄기세포/피부","cat":"검진/항노화/줄기세포","treats":["VIP 종합검진","정밀 암검진","전신 MRI 검진","항노화·면역 검사","줄기세포 재생","리프팅·스킨부스터"],"loc":"서울 강남","overview":"차움은 개인 HIVE룸에서 진행하는 VIP 종합검진 센터입니다. 검진 전 담당의 1:1 상담으로 프로그램을 맞추고, 전담 간호사와 중국어·영어 통역이 전 과정을 동행하며 당일 결과 상담까지 제공합니다. 기본검진·정밀암검진·전신검진(MRI)·Noble VIP 4종에 소화기·심장·뇌·면역·항노화 추가검진을 선택할 수 있고, 줄기세포 재생과 리프팅·스킨부스터 등 피부 프로그램도 함께 운영합니다.","doctors":["강문선 교수","구슬아 교수","김가희 교수","김동현 교수","김영탁 교수","김인화 교수","김종석 교수","김종진 교수","김진우 교수","김효주 교수","박단비 교수","박미영 교수","박원근 교수","백승준 교수","서신영 교수","서은경 교수","양지헌 교수","오수연 교수","오하영 교수","오효주 교수","윤수미 교수","이경미 교수","이상인 교수","이상형 교수","이영수 교수","이윤경 교수","임지현 교수","장소용 교수","진석인 교수","차충근 교수","최중언 교수","한광협 교수","황세나 교수"]},{"name":"원셀의원","dept":"줄기세포/피부/성형","cat":"줄기세포","treats":["줄기세포","피부","성형","통증"],"loc":"서울 강남","overview":"원셀의원은 줄기세포 치료, 피부관리, 성형 수술을 종합 제공합니다.","doctors":["서명원 대표원장","이찬양 대표원장","최재현 원장","장재훈 원장","이호준 원장","김진영 원장","손은택 원장","양동준 대표원장","신요섭 대표원장","박소영 원장"]},{"name":"글로비성형외과","dept":"성형외과/줄기세포","cat":"성형외과","treats":["줄기세포","눈","코","가슴"],"loc":"서울 압구정","overview":"글로비성형외과는 압구정에 위치한 종합 성형외과로 줄기세포, 눈·코 수술, 가슴성형을 제공합니다.","doctors":["노봉일 원장","박종철 원장","김재인 원장","남상재 협진원장","신미영 원장","오택훈 원장"]},{"name":"라미체의원","dept":"다이어트/리프팅/피부","cat":"체형","treats":["다이어트","리프팅","피부"],"loc":"서울 강남","overview":"라미체의원은 다이어트, 리프팅, 피부관리에 특화된 의원입니다.","doctors":["주종호 대표원장","이상영 대표원장","정다혜 원장","신현희 원장","한재현 원장","지명은 원장","이진현 원장","김나영 원장","박성준 원장","오승호 원장","서화니 원장","송하정 원장","한상택 원장","박소현 원장"]},{"name":"뷰성형외과","dept":"성형외과","cat":"성형외과","treats":["눈","코","가슴","안면윤곽"],"loc":"서울 강남","overview":"뷰성형외과는 눈·코 수술, 가슴성형, 안면윤곽에 특화된 강남 유명 성형병원입니다.","doctors":["최순우 원장","윤창운 원장","김정민 원장","김도형 원장","정재현 원장","조진우 원장","손유성 원장","이동규 원장","김소영 원장","도수빈 원장","오원석 원장","박건욱 원장","박진우 원장","오정석 원장","오준석 원장","고은석 원장","김민수 원장","김영민 원장","이승현 원장","이지현 원장","오혜미 원장","성보현 원장","최진화 원장","송규영 원장","김유나 원장","안예나 원장","김경림 원장"]},{"name":"바른길산부인과","dept":"여성의학","cat":"여성의학","treats":["자궁하이푸","소음순 교정","음핵리프팅"],"loc":"서울 강남","overview":"바른길산부인과는 자궁하이푸, 소음순 교정 등 여성 의료미용 서비스 전문 병원입니다.","doctors":["길기현 원장(대표)"]},{"name":"강남다움의원","dept":"리프팅/다이어트","cat":"피부","treats":["리프팅","다이어트","스킨부스터","실리프팅"],"loc":"서울 강남","overview":"강남다움의원은 리프팅, 다이어트, 피부관리를 합리적인 가격으로 제공합니다.","doctors":["김석준 대표원장","이재영 원장"]},{"name":"더뷰티성형외과","dept":"성형외과/피부/줄기세포","cat":"성형외과/줄기세포","treats":["롱브이리프팅","안면거상","눈성형(상·하안검)","코성형","가슴성형","줄기세포테라피","모발이식"],"loc":"서울 강남 (논현역)","overview":"더뷰티성형외과는 논현역 인근에 위치한 성형외과로, 원장 5인이 분야별 협진하며 롱브이리프팅·안면거상·눈/코 성형·가슴성형·줄기세포테라피·모발이식을 진료합니다.","doctors":["이영근 대표원장","정성훈 원장","신국현 원장","정진수 원장","문보민 원장"]},{"name":"신소애여성의원","dept":"여성의학","cat":"여성의학","treats":["소음순","난소줄기세포","자궁근종"],"loc":"서울 강남","overview":"신소애여성의원은 소음순 교정, 난소 줄기세포, 자궁근종 치료 전문 병원입니다.","doctors":["박정원 대표원장","홍혜리 원장","김정민 원장","임이랑 원장","김수경 원장"]},{"name":"히어피부과","dept":"피부/리프팅","cat":"피부","treats":["리프팅","수액테라피"],"loc":"서울 강남","overview":"히어피부과는 리프팅과 수액테라피 전문 피부과입니다.","doctors":["이상신 대표원장","정유석 원장"]},{"name":"히어산부인과","dept":"여성의학","cat":"여성의학","treats":["여성성형","질타이트닝"],"loc":"서울 강남","overview":"히어산부인과는 여성성형과 질 타이트닝 전문 산부인과입니다.","doctors":["송윤경 대표원장"]},{"name":"셀로라의원 (with 지유)","dept":"줄기세포","cat":"줄기세포","treats":["줄기세포","세포노화검사"],"loc":"서울 강남","overview":"셀로라의원은 줄기세포 치료와 세포노화검사 전문 의원입니다.","doctors":["박기범 대표원장","나윤채 원장"]},{"name":"리프톤의원","dept":"리프팅/필러","cat":"피부","treats":["리프팅","필러"],"loc":"서울 강남","overview":"리프톤의원은 리프팅과 필러 전문 피부과로 저녁 8시까지 진료합니다.","doctors":[]},{"name":"청담서클의원","dept":"리프팅/안면교정","cat":"피부","treats":["엘란세","실루엣소프트","안면교정"],"loc":"서울 강남","overview":"청담서클의원은 엘란세, 실루엣소프트, 안면교정 전문 의원입니다.","doctors":["서희원 대표원장","손효경 원장","박영윤 원장"]},{"name":"루비성형외과(신사점)","dept":"성형외과","cat":"성형외과","treats":["눈","코","가슴","리프팅","지방흡입"],"loc":"서울 신사","overview":"루비성형외과(신사점)는 눈·코 수술, 가슴성형, 리프팅 전문 병원입니다.","doctors":["김재원 대표원장","허정 대표원장","이동민 원장"]},{"name":"벤자민의원","dept":"리프팅/흉터","cat":"피부","treats":["리프팅","흉터치료"],"loc":"서울 강남","overview":"벤자민의원은 리프팅과 흉터치료 전문 의원입니다.","doctors":["심준호 대표원장","신동민 원장","장동휘 원장"]},{"name":"고운몸의원","dept":"바디필러","cat":"체형","treats":["골반필러","힙필러","가슴필러"],"loc":"서울 강남","overview":"고운몸의원은 골반·힙·가슴 필러 전문 바디 성형 의원입니다.","doctors":["김희경 대표원장"]},{"name":"티알 트리니티라파엘로 청담의원","dept":"항노화/줄기세포","cat":"항노화","treats":["항노화","튼살","흉터","줄기세포"],"loc":"서울 강남","overview":"티알 청담의원은 비수술 항노화, 줄기세포, 흉터 치료 전문 의원입니다.","doctors":["김유인 대표원장","김동일 담당책임의사","박언휘 담당책임의사"]},{"name":"GV 성형외과","dept":"줄기세포/바디리프팅","cat":"줄기세포","treats":["줄기세포","바디리프팅"],"loc":"서울 강남","overview":"GV성형외과는 줄기세포 치료와 바디리프팅 전문 성형외과입니다.","doctors":["문주혁 대표원장","정동학 대표원장"]},{"name":"페이스라인성형외과의원","dept":"성형외과","cat":"성형외과","treats":["양악","윤곽","눈","코"],"loc":"서울 강남","overview":"페이스라인성형외과는 양악수술, 안면윤곽, 눈·코 성형 전문 병원입니다.","doctors":["이태희 대표원장","이진수 원장","이신정 원장"]},{"name":"강남서울안과의원","dept":"안과","cat":"안과","treats":["라식","라섹","백내장"],"loc":"서울 강남","overview":"강남서울안과는 라식, 라섹, 백내장 전문 안과입니다.","doctors":["김용명 대표원장"]},{"name":"JD피부성형(장덕)","dept":"피부/줄기세포/한방","cat":"줄기세포/한방","treats":["줄기세포","한방","슈링크","쥬브젠"],"loc":"서울 강남","overview":"JD피부성형(장덕)은 줄기세포, 슈링크, 쥬브젠 전문 피부성형 의원이며 한방 진료도 함께 제공합니다.","doctors":[]},{"name":"나나성형외과","dept":"성형외과/피부","cat":"성형외과","treats":["눈성형","코성형","가슴성형","안면윤곽·리프팅"],"loc":"서울 압구정","overview":"나나성형외과는 압구정로데오역 앞 청담동에 위치한 성형외과로 눈·코·가슴 성형과 안면윤곽·리프팅을 진료합니다.","doctors":[]},{"name":"디에이성형외과의원","dept":"성형외과/피부","cat":"성형외과/피부","treats":["눈성형","코성형","안면윤곽","가슴성형","리프팅"],"loc":"서울 강남","overview":"디에이성형외과의원은 테헤란로 단독 건물에 위치한 성형외과로 눈·코·안면윤곽·가슴 성형과 리프팅, 피부 진료를 함께 제공합니다.","doctors":[]},{"name":"VC성형외과의원","dept":"성형외과/피부/줄기세포","cat":"성형외과/줄기세포","treats":["이중턱 재배치","눈밑 재배치","하안검·중안면거상","지방흡입","줄기세포"],"loc":"서울 압구정","overview":"VC성형외과의원은 압구정에 위치한 프라이빗 성형외과로, 성형외과 전문의가 상담부터 수술까지 직접 담당하며 피부·에스테틱 관리를 한 공간에서 함께 제공합니다.","doctors":["최민석 대표원장"]},{"name":"블랑쉬치과의원","dept":"치과","cat":"치과","treats":["임플란트","치아교정","라미네이트"],"loc":"서울 강남","overview":"블랑쉬치과의원은 강남대로에 위치한 치과로 임플란트·치아교정·라미네이트를 진료합니다. 화·수 야간진료(~21시)와 주말 진료를 운영합니다.","doctors":["김태형 대표원장","박경리 원장","한건희 원장","백주희 원장","김하영 원장","김민주 원장"]},{"name":"세라치과의원","dept":"치과","cat":"치과","treats":["임플란트","치아교정","라미네이트","세라멜"],"loc":"서울 강남","overview":"세라치과의원은 봉은사로에 위치한 치과로 임플란트·치아교정·라미네이트를 진료합니다.","doctors":["우상엽 대표원장"]},{"name":"KMI한국의학연구소 강남센터","dept":"건강검진","cat":"검진","treats":["종합검진","외국인 검진","정밀검진"],"loc":"서울 강남","overview":"KMI한국의학연구소 강남센터는 선릉역 인근 건강검진 전문기관으로, 외국인 전용 검진 프로그램을 운영하며 영어·중국어·일본어·몽골어 응대가 가능합니다.","doctors":[]},{"name":"분당차병원","dept":"종합검진/국제진료","cat":"검진","treats":["STANDARD 기본검진","EXECUTIVE 검진","PREMIUM 심장·뇌","VIP 숙박형 검진","INTENSIVE 특화검진"],"loc":"경기 성남 분당","overview":"분당차병원 건강증진센터는 국제진료 전담팀을 두고 성별·연령·병력에 맞춘 1:1 맞춤 검진을 제공합니다. PET-CT·MRI 등 최신 장비와 VIP존·레이디존을 갖췄고, 당일 검진부터 1박 2일 숙박형까지 선택할 수 있습니다.","doctors":[]},{"name":"하나로의료재단 강남센터","dept":"건강검진","cat":"검진","treats":["종합건강검진","정밀검진","해외검진(이민·유학·취업)"],"loc":"서울 강남","overview":"하나로의료재단 강남센터(하나로리더스의원)는 역삼아이타워에 위치한 건강검진 전문기관으로 종합건강검진과 이민·유학·해외취업 검진을 제공합니다.","doctors":[]},{"name":"강남스마트신경과의원","dept":"신경과","cat":"신경과","treats":["어지럼증","저림·떨림","자율신경","수면"],"loc":"서울 강남","overview":"강남스마트신경과의원은 강남대로에 위치한 신경과로 어지럼증·저림·떨림·자율신경·수면 클리닉을 운영합니다.","doctors":["권하님 대표원장","손형곤 대표원장","서진영 대표원장"]},{"name":"지우의원","dept":"피부과","cat":"피부","treats":["리쥬란","울쎄라 PRIME","써마지 FLX","포텐자","피코레이저"],"loc":"서울 강남","overview":"지우의원(JIWOO Clinic)은 강남역 인근에 위치한 피부과로 리쥬란, 울쎄라 PRIME, 써마지 FLX, 포텐자, 피코레이저 등 피부 시술을 전문으로 합니다.","doctors":["김회원 대표원장","김우형 원장","조임철 원장"]},{"name":"온오프피부과의원","dept":"피부과","cat":"피부","treats":["보톡스","필러","스킨부스터","리프팅","색소치료"],"loc":"서울 강남","overview":"온오프피부과의원은 보톡스, 필러, 스킨부스터, 리프팅, 색소치료 등 종합 피부 시술을 제공합니다.","doctors":[]},{"name":"셀온피부과의원","dept":"피부과","cat":"피부","treats":["색소치료","리프팅","보톡스","필러"],"loc":"서울 강남","overview":"셀온피부과의원(청담)은 피부과 전문의 원장이 직접 진료하며 색소치료, 리프팅, 보톡스, 필러를 전문으로 합니다.","doctors":["강승훈 대표원장"]},{"name":"아우레아의원","dept":"피부과","cat":"피부","treats":["리프팅","스킨부스터","보톡스","필러"],"loc":"서울 명동","overview":"아우레아의원(명동)은 명동 중심가에 위치해 연중무휴로 운영되며 리프팅(울쎄라·써마지·온다), 스킨부스터, 보톡스, 필러를 전문으로 합니다.","doctors":["강대영 대표원장"]}];
+var HOSPITALS=[{"name":"더이다의원","zh":"ida医疗美容诊所","en":"The ida Clinic","dept":"피부/미용성형 (눈·코·귀·어깨·힙)","cat":"성형외과/피부","treats":["눈","코","귀필러","어깨필러","힙·골반","리프팅","스킨부스터"],"trzh":["眼部","鼻部","耳部填充","肩部填充","臀部·骨盆","提升","皮肤管理"],"tren":["Eye","Nose","Ear Filler","Shoulder Filler","Hip/Pelvis","Lifting","Skin Booster"],"loc":"서울 중구 약수","overview":"더이다의원(ESTD 2010)은 눈·코·귀·어깨·힙 전문 의원입니다. 허선녕 대표원장(가슴성형 2,000례+, 가슴 필러 1,000례+, 필러·리프팅 6,000례+)이 직접 진료하며, 6호선 버티고개역 도보 3분·건물 내 무료주차가 가능합니다.","ovzh":"ida医疗美容诊所（ESTD 2010）专注于眼、鼻、耳、肩、臀部的精细化医美项目，由代表院长亲自主诊。位于首尔中区，地铁6号线药水站附近步行3分钟，楼内免费停车，环境安静私密。","oven":"The ida Clinic (ESTD 2010) specializes in eye, nose, ear, shoulder and hip aesthetics with the head director performing all procedures. Located in Jung-gu, Seoul — 3 min walk from Beotigogae Stn. with free in-building parking.","doctors":["허선녕 대표원장"]},{"name":"원진성형외과피부과의원","zh":"原辰整形外科皮肤科","en":"Wonjin Plastic Surgery & Dermatology","dept":"성형외과/피부과/줄기세포","cat":"성형외과","treats":["눈","코","윤곽","양악","가슴","줄기세포"],"trzh":["眼部","鼻部","轮廓","正颌","胸部","干细胞"],"tren":["Eye","Nose","Contouring","Jaw","Breast","Stem Cell"],"loc":"서울 강남","overview":"원진성형외과피부과의원은 강남 종합 의료미용 병원으로 눈·코 수술, 안면윤곽, 양악수술, 줄기세포 등 전방위 서비스를 제공합니다.","ovzh":"原辰整形外科皮肤科是首尔江南的综合医美医院，提供整形外科、皮肤科及干细胞治疗。拥有眼鼻手术、面部轮廓、正颌手术及隆胸等全方位服务，中文服务完善，全程专属顾问陪同。","oven":"Wonjin Plastic Surgery & Dermatology is a comprehensive medical aesthetic hospital in Gangnam offering eye/nose surgery, contouring, jaw surgery, breast surgery and stem cell treatments.","doctors":["강문석 원장","강진석 원장","김규희 원장","김승민 원장","김영은 원장","김용배 원장","김지안 원장","박성용 원장","박장우 원장","박종철 원장","손유리 원장","송그라메 원장","안창환 원장","오세영 원장","원기정 원장","이선구 원장","이종석 원장","이혁재 원장","정대균 원장","최수경 원장","황윤주 원장"]},{"name":"지유의원 (사적인아름다움)","zh":"GU医院（私密之美）","en":"GU Clinic (Private Beauty)","dept":"리프팅/필러/줄기세포","cat":"줄기세포","treats":["리프팅","필러","보톡스","줄기세포"],"trzh":["提升","填充","肉毒素","干细胞"],"tren":["Lifting","Filler","Botox","Stem Cell"],"loc":"서울 강남","overview":"지유의원은 리프팅, 필러, 줄기세포 전문으로 오후 9시까지 연장 진료하며 주말에도 운영합니다.","ovzh":"GU医院专注于提升紧致、填充及干细胞疗法，营业时间延长至晚上9点，周末也营业，中文专属服务。","oven":"GU Clinic specializes in lifting, filler, and stem cell therapy with extended hours until 9PM and weekend availability.","doctors":["박기범 대표원장","박혜민 총괄원장","정연성 총괄원장","나윤채 줄기세포 센터장","안광용 교육원장","김영민 교육원장","김선빈 원장","김진현 원장","원지명 원장","김민선 원장","김혁수 원장","김현탁 원장","이재관 원장","이건 원장","나용규 원장","윤도혁 원장","배재훈 원장","정우석 원장","김보영 원장","이종은 원장","정환호 원장","김주훈 원장","이가희 원장","양재우 원장","박종원 원장","김현아 원장","한창현 원장","황제완 자문의","박세현 자문의"]},{"name":"신상성형외과","zh":"新常整形外科","en":"Shinsang Plastic Surgery","dept":"성형외과/피부","cat":"성형외과","treats":["이중턱","거상","눈","코","지방흡입"],"trzh":["双下巴","面部提升","眼部","鼻部","吸脂"],"tren":["Double Chin","Lifting","Eye","Nose","Liposuction"],"loc":"서울 강남","overview":"신상성형외과는 강남팔로우 핵심 제휴 병원으로 눈·코 수술, 거상술, 쁘띠 시술을 전문으로 합니다.","ovzh":"新常整形外科是江南FOLLOW最核心的合作医院，拥有多位专属医生团队，擅长眼鼻手术、面部提升及各种注射项目。","oven":"Shinsang Plastic Surgery is a core Gangnam Follow partner clinic specializing in eye/nose surgery, face lifting, and petit treatments.","doctors":["이영재 대표원장","김재희 원장","어필선 원장","최서길 원장","윤형우 원장","도경현 원장","윤현식 원장","정윤조 원장","오예지 원장","김지훈 원장","김아라 원장","김진현 원장","이규원 원장"]},{"name":"드림성형외과","zh":"Dream整形外科","en":"Dream Plastic Surgery","dept":"성형외과","cat":"성형외과","treats":["눈","코","양악","가슴"],"trzh":["眼部","鼻部","正颌","胸部"],"tren":["Eye","Nose","Jaw","Breast"],"loc":"서울 강남","overview":"드림성형외과는 눈·코 성형, 양악수술, 가슴성형 전문 병원입니다.","ovzh":"Dream整形外科专注于眼鼻整形、正颌手术及隆胸手术，以精细的技术和自然的术后效果著称。","oven":"Dream Plastic Surgery specializes in eye/nose surgery, jaw surgery, and breast augmentation.","doctors":["박양수 대표원장","김영준 원장","유원재 원장","유안나 원장","박이현 원장","조승우 원장","배한솔 원장","강지원 원장"]},{"name":"셀리닉의원","zh":"Cellinique医院","en":"Cellinique Clinic","dept":"줄기세포/리프팅","cat":"줄기세포","treats":["줄기세포","리프팅","레이저"],"trzh":["干细胞","提升","激光"],"tren":["Stem Cell","Lifting","Laser"],"loc":"서울 강남","overview":"셀리닉의원은 줄기세포 치료와 리프팅에 특화된 프리미엄 의원입니다.","ovzh":"Cellinique是专注于干细胞疗法和提升项目的高端医院，提供个性化抗衰老解决方案。","oven":"Cellinique specializes in premium stem cell therapy and lifting treatments.","doctors":["김건우 대표원장"]},{"name":"차움","zh":"CHAUM抗衰老中心","en":"CHAUM Anti-aging Center","dept":"종합검진/항노화/줄기세포/피부","cat":"검진/항노화/줄기세포","treats":["VIP 종합검진","정밀 암검진","전신 MRI 검진","항노화·면역 검사","줄기세포 재생","리프팅·스킨부스터"],"trzh":["VIP综合体检","精密癌症筛查","全身MRI体检","抗衰老·免疫检查","干细胞再生","提升·水光针"],"tren":["VIP Comprehensive Checkup","Advanced Cancer Screening","Whole-body MRI","Anti-aging & Immunity Test","Stem Cell Regeneration","Lifting & Skin Booster"],"loc":"서울 강남","overview":"차움은 개인 HIVE룸에서 진행하는 VIP 종합검진 센터입니다. 검진 전 담당의 1:1 상담으로 프로그램을 맞추고, 전담 간호사와 중국어·영어 통역이 전 과정을 동행하며 당일 결과 상담까지 제공합니다. 기본검진·정밀암검진·전신검진(MRI)·Noble VIP 4종에 소화기·심장·뇌·면역·항노화 추가검진을 선택할 수 있고, 줄기세포 재생과 리프팅·스킨부스터 등 피부 프로그램도 함께 운영합니다.","ovzh":"CHAUM抗衰老中心提供VIP专属体检（个人HIVE诊室、专属护士与中文翻译全程陪同、当日结果面诊），设有综合体检、精密癌症筛查、全身MRI、抗衰老与免疫检查，并提供干细胞再生、提升及皮肤管理项目。","oven":"CHAUM offers VIP checkups in private HIVE rooms with a 1:1 pre-consultation, a dedicated nurse and English/Chinese interpreter throughout, and same-day result consultation. Four main programs (Basic, Intensive Cancer, Whole Body, Noble) can be combined with digestive, heart, brain, immunity and anti-aging add-ons, alongside stem cell regeneration and skin programs.","doctors":["강문선 교수","구슬아 교수","김가희 교수","김동현 교수","김영탁 교수","김인화 교수","김종석 교수","김종진 교수","김진우 교수","김효주 교수","박단비 교수","박미영 교수","박원근 교수","백승준 교수","서신영 교수","서은경 교수","양지헌 교수","오수연 교수","오하영 교수","오효주 교수","윤수미 교수","이경미 교수","이상인 교수","이상형 교수","이영수 교수","이윤경 교수","임지현 교수","장소용 교수","진석인 교수","차충근 교수","최중언 교수","한광협 교수","황세나 교수"]},{"name":"원셀의원","zh":"One Cell医院","en":"One Cell Clinic","dept":"줄기세포/피부/성형","cat":"줄기세포","treats":["줄기세포","피부","성형","통증"],"trzh":["干细胞","皮肤","整形","疼痛"],"tren":["Stem Cell","Skin","Plastic","Pain"],"loc":"서울 강남","overview":"원셀의원은 줄기세포 치료, 피부관리, 성형 수술을 종합 제공합니다.","ovzh":"One Cell医院综合提供干细胞疗法、皮肤管理及整形手术，采用最新细胞再生技术。","oven":"One Cell Clinic offers comprehensive stem cell therapy, skin care, and plastic surgery.","doctors":["서명원 대표원장","이찬양 대표원장","최재현 원장","장재훈 원장","이호준 원장","김진영 원장","손은택 원장","양동준 대표원장","신요섭 대표원장","박소영 원장"]},{"name":"글로비성형외과","zh":"Glovi整形外科","en":"Glovi Plastic Surgery","dept":"성형외과/줄기세포","cat":"성형외과","treats":["줄기세포","눈","코","가슴"],"trzh":["干细胞","眼部","鼻部","胸部"],"tren":["Stem Cell","Eye","Nose","Breast"],"loc":"서울 압구정","overview":"글로비성형외과는 압구정에 위치한 종합 성형외과로 줄기세포, 눈·코 수술, 가슴성형을 제공합니다.","ovzh":"Glovi整形外科位于狎鸥亭，提供干细胞疗法、眼鼻手术及隆胸手术，以精密内视镜技术著称。","oven":"Glovi Plastic Surgery in Apgujeong offers stem cell therapy, eye/nose surgery, and breast augmentation.","doctors":["노봉일 원장","박종철 원장","김재인 원장","남상재 협진원장","신미영 원장","오택훈 원장"]},{"name":"라미체의원","zh":"Lamiche医院","en":"Lamiche Clinic","dept":"다이어트/리프팅/피부","cat":"체형","treats":["다이어트","리프팅","피부"],"trzh":["减肥","提升","皮肤"],"tren":["Diet","Lifting","Skin"],"loc":"서울 강남","overview":"라미체의원은 다이어트, 리프팅, 피부관리에 특화된 의원입니다.","ovzh":"Lamiche医院专注于体型管理、提升及皮肤护理，提供全面的减肥和美容项目。","oven":"Lamiche Clinic specializes in body management, lifting, and skin care.","doctors":["주종호 대표원장","이상영 대표원장","정다혜 원장","신현희 원장","한재현 원장","지명은 원장","이진현 원장","김나영 원장","박성준 원장","오승호 원장","서화니 원장","송하정 원장","한상택 원장","박소현 원장"]},{"name":"뷰성형외과","zh":"VIEW整形外科","en":"View Plastic Surgery","dept":"성형외과","cat":"성형외과","treats":["눈","코","가슴","안면윤곽"],"trzh":["眼部","鼻部","胸部","面部轮廓"],"tren":["Eye","Nose","Breast","Facial Contouring"],"loc":"서울 강남","overview":"뷰성형외과는 눈·코 수술, 가슴성형, 안면윤곽에 특화된 강남 유명 성형병원입니다.","ovzh":"VIEW整形外科是江南知名的综合整形医院，专长于眼鼻手术、隆胸及面部轮廓整形，提供中文翻译服务。","oven":"View Plastic Surgery is a renowned clinic in Gangnam specializing in eye/nose surgery, breast augmentation, and facial contouring.","doctors":["최순우 원장","윤창운 원장","김정민 원장","김도형 원장","정재현 원장","조진우 원장","손유성 원장","이동규 원장","김소영 원장","도수빈 원장","오원석 원장","박건욱 원장","박진우 원장","오정석 원장","오준석 원장","고은석 원장","김민수 원장","김영민 원장","이승현 원장","이지현 원장","오혜미 원장","성보현 원장","최진화 원장","송규영 원장","김유나 원장","안예나 원장","김경림 원장"]},{"name":"바른길산부인과","zh":"正路妇科医院","en":"Barunhifu Women's Clinic","dept":"여성의학","cat":"여성의학","treats":["자궁하이푸","소음순 교정","음핵리프팅"],"trzh":["子宫海扶刀","阴唇整形","阴蒂提升"],"tren":["Uterine HIFU","Labiaplasty","Clitoral Lifting"],"loc":"서울 강남","overview":"바른길산부인과는 자궁하이푸, 소음순 교정 등 여성 의료미용 서비스 전문 병원입니다.","ovzh":"正路妇科医院专注于女性妇科手术，提供子宫海扶刀、阴唇整形等专业服务。","oven":"Barunhifu Women's Clinic specializes in gynecological procedures including uterine HIFU and labiaplasty.","doctors":["길기현 원장(대표)"]},{"name":"강남다움의원","zh":"江南多样医院","en":"Gangnam Daum Clinic","dept":"리프팅/다이어트","cat":"피부","treats":["리프팅","다이어트","스킨부스터","실리프팅"],"trzh":["提升","减肥","皮肤补水","线雕提升"],"tren":["Lifting","Diet","Skin Booster","Thread Lifting"],"loc":"서울 강남","overview":"강남다움의원은 리프팅, 다이어트, 피부관리를 합리적인 가격으로 제공합니다.","ovzh":"江南多样医院提供提升、减肥及皮肤护理等综合服务。","oven":"Gangnam Daum Clinic provides lifting, diet, and skin care services.","doctors":["김석준 대표원장","이재영 원장"]},{"name":"더뷰티성형외과","zh":"THE BEAUTY整形外科","en":"The Beauty Plastic Surgery","dept":"성형외과/피부/줄기세포","cat":"성형외과/줄기세포","treats":["롱브이리프팅","안면거상","눈성형(상·하안검)","코성형","가슴성형","줄기세포테라피","모발이식"],"trzh":["Long-V线雕提升","面部提升","眼部整形(上·下眼睑)","鼻部整形","胸部整形","干细胞疗法","植发"],"tren":["Long-V Thread Lifting","Face Lift","Eye Surgery (Upper/Lower)","Nose Surgery","Breast Surgery","Stem Cell Therapy","Hair Transplant"],"loc":"서울 강남 (논현역)","overview":"더뷰티성형외과는 논현역 인근에 위치한 성형외과로, 원장 5인이 분야별 협진하며 롱브이리프팅·안면거상·눈/코 성형·가슴성형·줄기세포테라피·모발이식을 진료합니다.","ovzh":"THE BEAUTY整形外科位于论岘站附近，由整形外科专科医生等5位院长按领域协诊，提供线雕提升、面部提升、眼部及鼻部整形、胸部整形、干细胞疗法与植发。","oven":"The Beauty Plastic Surgery, near Nonhyeon Station, operates with five directors collaborating by specialty, offering thread and face lifting, eye and nose surgery, breast surgery, stem cell therapy and hair transplant.","doctors":["이영근 대표원장","정성훈 원장","신국현 원장","정진수 원장","문보민 원장"]},{"name":"신소애여성의원","zh":"新素爱女性医院","en":"Sinsoa Women's Clinic","dept":"여성의학","cat":"여성의학","treats":["소음순","난소줄기세포","자궁근종"],"trzh":["阴唇整形","卵巢干细胞","子宫肌瘤"],"tren":["Labiaplasty","Ovarian Stem Cell","Uterine Fibroid"],"loc":"서울 강남","overview":"신소애여성의원은 소음순 교정, 난소 줄기세포, 자궁근종 치료 전문 병원입니다.","ovzh":"新素爱女性医院专注于女性妇科整形和干细胞治疗。","oven":"Sinsoa Women's Clinic specializes in female aesthetic procedures and stem cell treatments.","doctors":["박정원 대표원장","홍혜리 원장","김정민 원장","임이랑 원장","김수경 원장"]},{"name":"히어피부과","zh":"Heer皮肤科","en":"Heer Dermatology","dept":"피부/리프팅","cat":"피부","treats":["리프팅","수액테라피"],"trzh":["提升","水光疗法"],"tren":["Lifting","IV Therapy"],"loc":"서울 강남","overview":"히어피부과는 리프팅과 수액테라피 전문 피부과입니다.","ovzh":"Heer皮肤科专注于皮肤提升和水光疗法。","oven":"Heer Dermatology specializes in skin lifting and IV therapy.","doctors":["이상신 대표원장","정유석 원장"]},{"name":"히어산부인과","zh":"Heer妇科","en":"Heer Women's Clinic","dept":"여성의학","cat":"여성의학","treats":["여성성형","질타이트닝"],"trzh":["女性整形","阴道紧缩"],"tren":["Female Rejuvenation","Vaginal Tightening"],"loc":"서울 강남","overview":"히어산부인과는 여성성형과 질 타이트닝 전문 산부인과입니다.","ovzh":"Heer妇科专注于女性整形和阴道紧缩治疗。","oven":"Heer Women's Clinic specializes in female rejuvenation and vaginal tightening.","doctors":["송윤경 대표원장"]},{"name":"셀로라의원 (with 지유)","zh":"Cellora医院","en":"Cellora Clinic","dept":"줄기세포","cat":"줄기세포","treats":["줄기세포","세포노화검사"],"trzh":["干细胞","细胞老化检测"],"tren":["Stem Cell","Cell Aging Test"],"loc":"서울 강남","overview":"셀로라의원은 줄기세포 치료와 세포노화검사 전문 의원입니다.","ovzh":"Cellora医院专注于干细胞疗法和细胞老化检测。","oven":"Cellora Clinic specializes in stem cell therapy and cell aging testing.","doctors":["박기범 대표원장","나윤채 원장"]},{"name":"리프톤의원","zh":"Lifton皮肤医院","en":"Lifton Skin Clinic","dept":"리프팅/필러","cat":"피부","treats":["리프팅","필러"],"trzh":["提升","填充"],"tren":["Lifting","Filler"],"loc":"서울 강남","overview":"리프톤의원은 리프팅과 필러 전문 피부과로 저녁 8시까지 진료합니다.","ovzh":"Lifton皮肤医院专注于提升和填充治疗，延长至晚上8点营业。","oven":"Lifton Skin Clinic specializes in lifting and filler with extended evening hours.","doctors":[]},{"name":"청담서클의원","zh":"清潭Circle医院","en":"Cheongdam Circle Clinic","dept":"리프팅/안면교정","cat":"피부","treats":["엘란세","실루엣소프트","안면교정"],"trzh":["Ellanse","Silhouette Soft","面部矫正"],"tren":["Ellanse","Silhouette Soft","Facial Correction"],"loc":"서울 강남","overview":"청담서클의원은 엘란세, 실루엣소프트, 안면교정 전문 의원입니다.","ovzh":"清潭Circle医院专注于Ellanse长效填充和Silhouette Soft线雕提升。","oven":"Cheongdam Circle Clinic specializes in Ellanse filler and Silhouette Soft thread lifting.","doctors":["서희원 대표원장","손효경 원장","박영윤 원장"]},{"name":"루비성형외과(신사점)","zh":"Ruby整形外科（新沙店）","en":"Ruby Plastic Surgery (Sinsa)","dept":"성형외과","cat":"성형외과","treats":["눈","코","가슴","리프팅","지방흡입"],"trzh":["眼部","鼻部","胸部","提升","吸脂"],"tren":["Eye","Nose","Breast","Lifting","Liposuction"],"loc":"서울 신사","overview":"루비성형외과(신사점)는 눈·코 수술, 가슴성형, 리프팅 전문 병원입니다.","ovzh":"Ruby整形外科（新沙店）专注于眼鼻整形、隆胸及提升手术，由金明哲代表院长领衔。","oven":"Ruby Plastic Surgery (Sinsa) specializes in eye/nose surgery, breast augmentation, and lifting.","doctors":["김재원 대표원장","허정 대표원장","이동민 원장"]},{"name":"벤자민의원","zh":"Benjamin医院","en":"Benjamin Clinic","dept":"리프팅/흉터","cat":"피부","treats":["리프팅","흉터치료"],"trzh":["提升","疤痕治疗"],"tren":["Lifting","Scar Treatment"],"loc":"서울 강남","overview":"벤자민의원은 리프팅과 흉터치료 전문 의원입니다.","ovzh":"Benjamin医院专注于提升和疤痕治疗。","oven":"Benjamin Clinic specializes in lifting and scar treatment.","doctors":["심준호 대표원장","신동민 원장","장동휘 원장"]},{"name":"고운몸의원","zh":"美身医院","en":"Gowoonmom Body Clinic","dept":"바디필러","cat":"체형","treats":["골반필러","힙필러","가슴필러"],"trzh":["骨盆填充","臀部填充","胸部填充"],"tren":["Pelvis Filler","Hip Filler","Breast Filler"],"loc":"서울 강남","overview":"고운몸의원은 골반·힙·가슴 필러 전문 바디 성형 의원입니다.","ovzh":"美身医院专注于骨盆、臀部及胸部填充等身体塑形项目。","oven":"Gowoonmom Body Clinic specializes in body shaping via pelvis, hip, and breast filler.","doctors":["김희경 대표원장"]},{"name":"티알 트리니티라파엘로 청담의원","zh":"TR Trinity Raffaello清潭医院","en":"TR Trinity Raffaello Clinic","dept":"항노화/줄기세포","cat":"항노화","treats":["항노화","튼살","흉터","줄기세포"],"trzh":["抗衰老","妊娠纹","疤痕","干细胞"],"tren":["Anti-aging","Stretch Marks","Scar","Stem Cell"],"loc":"서울 강남","overview":"티알 청담의원은 비수술 항노화, 줄기세포, 흉터 치료 전문 의원입니다.","ovzh":"TR Trinity Raffaello清潭医院专注于非手术抗衰老疗程，包括干细胞疗法及疤痕治疗。","oven":"TR Trinity Raffaello Clinic specializes in non-surgical anti-aging and stem cell therapy.","doctors":["김유인 대표원장","김동일 담당책임의사","박언휘 담당책임의사"]},{"name":"GV 성형외과","zh":"GV整形外科","en":"GV Plastic Surgery","dept":"줄기세포/바디리프팅","cat":"줄기세포","treats":["줄기세포","바디리프팅"],"trzh":["干细胞","身体提升"],"tren":["Stem Cell","Body Lifting"],"loc":"서울 강남","overview":"GV성형외과는 줄기세포 치료와 바디리프팅 전문 성형외과입니다.","ovzh":"GV整形外科提供干细胞疗法和全身提升项目。","oven":"GV Plastic Surgery offers stem cell therapy and body lifting.","doctors":["문주혁 대표원장","정동학 대표원장"]},{"name":"페이스라인성형외과의원","zh":"Faceline整形外科","en":"Faceline Plastic Surgery","dept":"성형외과","cat":"성형외과","treats":["양악","윤곽","눈","코"],"trzh":["正颌","轮廓","眼部","鼻部"],"tren":["Jaw","Contouring","Eye","Nose"],"loc":"서울 강남","overview":"페이스라인성형외과는 양악수술, 안면윤곽, 눈·코 성형 전문 병원입니다.","ovzh":"Faceline整形外科专注于正颌手术、面部轮廓及眼鼻整形。","oven":"Faceline Plastic Surgery specializes in jaw surgery, facial contouring, and eye/nose surgery.","doctors":["이태희 대표원장","이진수 원장","이신정 원장"]},{"name":"강남서울안과의원","zh":"江南首尔眼科","en":"Gangnam Seoul Eye Clinic","dept":"안과","cat":"안과","treats":["라식","라섹","백내장"],"trzh":["准分子激光","LASEK","白内障"],"tren":["LASIK","LASEK","Cataract"],"loc":"서울 강남","overview":"강남서울안과는 라식, 라섹, 백내장 전문 안과입니다.","ovzh":"江南首尔眼科专门提供准分子激光视力矫正及白内障手术。","oven":"Gangnam Seoul Eye Clinic specializes in LASIK, LASEK, and cataract surgery.","doctors":["김용명 대표원장"]},{"name":"JD피부성형(장덕)","zh":"JD皮肤整形（张德）","en":"JD Skin & Plastic Clinic","dept":"피부/줄기세포/한방","cat":"줄기세포/한방","treats":["줄기세포","한방","슈링크","쥬브젠"],"trzh":["干细胞","韩医","Shrink","Juvelook"],"tren":["Stem Cell","Korean Medicine","Shrink","Juvelook"],"loc":"서울 강남","overview":"JD피부성형(장덕)은 줄기세포, 슈링크, 쥬브젠 전문 피부성형 의원이며 한방 진료도 함께 제공합니다.","ovzh":"JD皮肤整形（张德）提供干细胞疗法、Shrink及Juvelook等皮肤再生项目，同时设有韩医（韩方）诊疗科室。","oven":"JD Skin & Plastic Clinic offers stem cell therapy, Shrink, and Juvelook skin regeneration, alongside a Korean Medicine (Hanbang) department.","doctors":[]},{"name":"나나성형외과","zh":"NANA整形外科","en":"NANA Plastic Surgery","dept":"성형외과/피부","cat":"성형외과","treats":["눈성형","코성형","가슴성형","안면윤곽·리프팅"],"trzh":["眼部整形","鼻部整形","胸部整形","轮廓·提升"],"tren":["Eye Surgery","Nose Surgery","Breast Surgery","Contouring & Lifting"],"loc":"서울 압구정","overview":"나나성형외과는 압구정로데오역 앞 청담동에 위치한 성형외과로 눈·코·가슴 성형과 안면윤곽·리프팅을 진료합니다.","ovzh":"NANA整形外科位于清潭洞狎鸥亭罗德奥站前，提供眼部、鼻部、胸部整形及轮廓·提升项目。","oven":"NANA Plastic Surgery, in Cheongdam-dong near Apgujeong Rodeo Station, offers eye, nose and breast surgery as well as facial contouring and lifting.","doctors":[]},{"name":"디에이성형외과의원","zh":"DA整形外科","en":"DA Plastic Surgery","dept":"성형외과/피부","cat":"성형외과/피부","treats":["눈성형","코성형","안면윤곽","가슴성형","리프팅"],"trzh":["眼部整形","鼻部整形","轮廓整形","胸部整形","提升"],"tren":["Eye Surgery","Nose Surgery","Facial Contouring","Breast Surgery","Lifting"],"loc":"서울 강남","overview":"디에이성형외과의원은 테헤란로 단독 건물에 위치한 성형외과로 눈·코·안면윤곽·가슴 성형과 리프팅, 피부 진료를 함께 제공합니다.","ovzh":"DA整形外科位于德黑兰路独栋大楼，提供眼部、鼻部、轮廓、胸部整形以及提升与皮肤诊疗服务。","oven":"DA Plastic Surgery, in its own building on Teheran-ro, provides eye, nose, facial contouring and breast surgery along with lifting and skin treatments.","doctors":[]},{"name":"VC성형외과의원","zh":"VC整形外科","en":"VC Plastic Surgery","dept":"성형외과/피부/줄기세포","cat":"성형외과/줄기세포","treats":["이중턱 재배치","눈밑 재배치","하안검·중안면거상","지방흡입","줄기세포"],"trzh":["双下巴重塑","眼下重塑","下眼睑·中面部提升","吸脂","干细胞"],"tren":["Double Chin Contouring","Under-eye Repositioning","Lower Blepharoplasty & Midface Lift","Liposuction","Stem Cell"],"loc":"서울 압구정","overview":"VC성형외과의원은 압구정에 위치한 프라이빗 성형외과로, 성형외과 전문의가 상담부터 수술까지 직접 담당하며 피부·에스테틱 관리를 한 공간에서 함께 제공합니다.","ovzh":"VC整形外科位于狎鸥亭，是一对一私密诊疗的整形外科，由整形外科专科医生亲自负责咨询与手术，并在同一空间内提供皮肤及美容管理服务。","oven":"VC Plastic Surgery in Apgujeong is a private clinic where a board-certified plastic surgeon handles consultation through surgery, with skin and esthetic care available in the same space.","doctors":["최민석 대표원장"]},{"name":"블랑쉬치과의원","zh":"布朗雪牙科","en":"Blanche Dental Clinic","dept":"치과","cat":"치과","treats":["임플란트","치아교정","라미네이트"],"trzh":["种植牙","牙齿矫正","贴面"],"tren":["Implant","Orthodontics","Laminate"],"loc":"서울 강남","overview":"블랑쉬치과의원은 강남대로에 위치한 치과로 임플란트·치아교정·라미네이트를 진료합니다. 화·수 야간진료(~21시)와 주말 진료를 운영합니다.","ovzh":"布朗雪牙科位于江南大路，提供种植牙、牙齿矫正及贴面等诊疗项目。周二·周三设有夜间门诊，周末亦可就诊。","oven":"Blanche Dental Clinic on Gangnam-daero provides implant, orthodontic and laminate treatments, with evening hours on Tue/Wed and weekend opening.","doctors":["김태형 대표원장","박경리 원장","한건희 원장","백주희 원장","김하영 원장","김민주 원장"]},{"name":"세라치과의원","zh":"CERA牙科","en":"CERA Dental Clinic","dept":"치과","cat":"치과","treats":["임플란트","치아교정","라미네이트","세라멜"],"trzh":["种植牙","牙齿矫正","贴面"],"tren":["Implant","Orthodontics","Laminate"],"loc":"서울 강남","overview":"세라치과의원은 봉은사로에 위치한 치과로 임플란트·치아교정·라미네이트를 진료합니다.","ovzh":"CERA牙科位于奉恩寺路，提供种植牙、牙齿矫正及贴面等诊疗项目。","oven":"CERA Dental Clinic on Bongeunsa-ro provides implant, orthodontic and laminate treatments.","doctors":["우상엽 대표원장"]},{"name":"KMI한국의학연구소 강남센터","zh":"KMI韩国医学研究所 江南中心","en":"KMI Korea Medical Institute (Gangnam)","dept":"건강검진","cat":"검진","treats":["종합검진","외국인 검진","정밀검진"],"trzh":["综合体检","外籍人士体检","精密体检"],"tren":["Comprehensive Checkup","Checkup for Foreigners","Advanced Screening"],"loc":"서울 강남","overview":"KMI한국의학연구소 강남센터는 선릉역 인근 건강검진 전문기관으로, 외국인 전용 검진 프로그램을 운영하며 영어·중국어·일본어·몽골어 응대가 가능합니다.","ovzh":"KMI韩国医学研究所江南中心位于宣陵站附近，设有面向外籍人士的体检项目，可提供中文、英文、日文、蒙古语接待。","oven":"KMI Korea Medical Institute Gangnam Center, near Seolleung Station, runs dedicated health checkup programs for international visitors with English, Chinese, Japanese and Mongolian support.","doctors":[]},{"name":"분당차병원","zh":"盆唐CHA医院","en":"CHA Bundang Medical Center","dept":"종합검진/국제진료","cat":"검진","treats":["STANDARD 기본검진","EXECUTIVE 검진","PREMIUM 심장·뇌","VIP 숙박형 검진","INTENSIVE 특화검진"],"trzh":["基础体检","行政人员体检","心脏·脑部精密体检","VIP住宿型体检","特化精密体检"],"tren":["Standard Checkup","Executive Checkup","Premium Heart/Brain","VIP Overnight Checkup","Intensive Screening"],"loc":"경기 성남 분당","overview":"분당차병원 건강증진센터는 국제진료 전담팀을 두고 성별·연령·병력에 맞춘 1:1 맞춤 검진을 제공합니다. PET-CT·MRI 등 최신 장비와 VIP존·레이디존을 갖췄고, 당일 검진부터 1박 2일 숙박형까지 선택할 수 있습니다.","ovzh":"盆唐CHA医院健康增进中心设有国际诊疗部，按性别·年龄提供1:1定制体检，配备PET-CT、MRI等尖端设备，并设VIP专区与女性专区，可选当日或住宿型（1晚2日）体检。","oven":"The Health Promotion Center of CHA Bundang Medical Center runs a dedicated international clinic offering 1:1 customized checkups by sex, age and history, with PET-CT and MRI, VIP and Lady zones, and options from same-day to overnight programs.","doctors":[]},{"name":"하나로의료재단 강남센터","zh":"哈娜路医疗财团 江南中心","en":"Hanaro Medical Foundation (Gangnam)","dept":"건강검진","cat":"검진","treats":["종합건강검진","정밀검진","해외검진(이민·유학·취업)"],"trzh":["综合健康体检","精密体检","海外体检（移民·留学·就业）"],"tren":["Comprehensive Checkup","Advanced Screening","Overseas (Immigration/Study/Work) Checkup"],"loc":"서울 강남","overview":"하나로의료재단 강남센터(하나로리더스의원)는 역삼아이타워에 위치한 건강검진 전문기관으로 종합건강검진과 이민·유학·해외취업 검진을 제공합니다.","ovzh":"哈娜路医疗财团江南中心（Hanaro Leaders Clinic）位于驿三I-Tower，提供综合健康体检及移民·留学·海外就业体检服务。","oven":"Hanaro Medical Foundation Gangnam Center (Hanaro Leaders Clinic), in Yeoksam I-Tower, provides comprehensive health checkups including immigration, study-abroad and overseas employment screenings.","doctors":[]},{"name":"강남스마트신경과의원","zh":"江南SMART神经内科","en":"Gangnam Smart Neurology","dept":"신경과","cat":"신경과","treats":["어지럼증","저림·떨림","자율신경","수면"],"trzh":["神经内科","内科","自主神经门诊","睡眠门诊"],"tren":["Dizziness","Numbness & Tremor","Autonomic Nerve","Sleep"],"loc":"서울 강남","overview":"강남스마트신경과의원은 강남대로에 위치한 신경과로 어지럼증·저림·떨림·자율신경·수면 클리닉을 운영합니다.","ovzh":"江南SMART神经内科位于江南大路，设有神经内科及内科专科医生门诊。","oven":"Gangnam Smart Neurology on Gangnam-daero runs clinics for dizziness, numbness and tremor, autonomic nerve conditions and sleep.","doctors":["권하님 대표원장","손형곤 대표원장","서진영 대표원장"]},{"name":"지우의원","zh":"挚友医院","en":"JIWOO Clinic","dept":"피부과","cat":"피부","treats":["리쥬란","울쎄라 PRIME","써마지 FLX","포텐자","피코레이저"],"trzh":["Rejuran","Ultherapy PRIME","热玛吉FLX","Potenza","皮秒激光"],"tren":["Rejuran","Ultherapy PRIME","Thermage FLX","Potenza","Pico Laser"],"loc":"서울 강남","overview":"지우의원(JIWOO Clinic)은 강남역 인근에 위치한 피부과로 리쥬란, 울쎄라 PRIME, 써마지 FLX, 포텐자, 피코레이저 등 피부 시술을 전문으로 합니다.","ovzh":"挚友医院（JIWOO Clinic）位于江南站附近，专注于Rejuran、Ultherapy、热玛吉FLX、Potenza及皮秒激光等皮肤管理项目。","oven":"JIWOO Clinic, near Gangnam Station, specializes in dermatology treatments including Rejuran, Ultherapy PRIME, Thermage FLX, Potenza, and pico laser.","doctors":["김회원 대표원장","김우형 원장","조임철 원장"]},{"name":"온오프피부과의원","zh":"ONOFF皮肤科","en":"ONOFF Dermatology Clinic","dept":"피부과","cat":"피부","treats":["보톡스","필러","스킨부스터","리프팅","색소치료"],"trzh":["肉毒素","填充","水光针","提升","色素治疗"],"tren":["Botox","Filler","Skin Booster","Lifting","Pigmentation Treatment"],"loc":"서울 강남","overview":"온오프피부과의원은 보톡스, 필러, 스킨부스터, 리프팅, 색소치료 등 종합 피부 시술을 제공합니다.","ovzh":"ONOFF皮肤科提供肉毒素、填充、水光针、提升及色素治疗等综合皮肤管理项目。","oven":"ONOFF Dermatology Clinic offers comprehensive skin treatments including Botox, filler, skin booster, lifting, and pigmentation treatment.","doctors":[]},{"name":"셀온피부과의원","zh":"CELLON皮肤科","en":"Cellon Clinic","dept":"피부과","cat":"피부","treats":["색소치료","리프팅","보톡스","필러"],"trzh":["色素治疗","提升","肉毒素","填充"],"tren":["Pigmentation Treatment","Lifting","Botox","Filler"],"loc":"서울 강남","overview":"셀온피부과의원(청담)은 피부과 전문의 원장이 직접 진료하며 색소치료, 리프팅, 보톡스, 필러를 전문으로 합니다.","ovzh":"CELLON皮肤科（清潭）由皮肤科专科院长亲自诊疗，专注于色素治疗、提升、肉毒素及填充项目。","oven":"Cellon Clinic in Cheongdam is led by a board-certified dermatologist, specializing in pigmentation treatment, lifting, Botox, and filler.","doctors":["강승훈 대표원장"]},{"name":"아우레아의원","zh":"AUREA皮肤科","en":"Aurea Clinic","dept":"피부과","cat":"피부","treats":["리프팅","스킨부스터","보톡스","필러"],"trzh":["提升","皮肤焕活针","肉毒素","填充"],"tren":["Lifting","Skin Booster","Botox","Filler"],"loc":"서울 명동","overview":"아우레아의원(명동)은 명동 중심가에 위치해 연중무휴로 운영되며 리프팅(울쎄라·써마지·온다), 스킨부스터, 보톡스, 필러를 전문으로 합니다.","ovzh":"AUREA皮肤科（明洞）位于首尔明洞中心，全年无休，专注于提升（超声刀·热玛吉·ONDA）、皮肤焕活、肉毒素与填充项目。","oven":"Aurea Clinic in Myeongdong is open year-round, specializing in lifting (Ultherapy, Thermage, ONDA), skin boosters, Botox, and fillers.","doctors":["강대영 대표원장"]}];
 var API='https://tbrtfccvsvtusfkqdyow.supabase.co/functions/v1/b2c-pricelist';
 var THUMB_BASE='https://gnfollow.com/';
 var HOSP_THUMB={"나나성형외과":"hthumb/nana.jpg","디에이성형외과의원":"hthumb/daprs.jpg","VC성형외과의원":"hthumb/vcps.jpg","블랑쉬치과의원":"hthumb/blanche.jpg","세라치과의원":"hthumb/cera.jpg","KMI한국의학연구소 강남센터":"hthumb/kmi.jpg","하나로의료재단 강남센터":"hthumb/hanaro.jpg","강남스마트신경과의원":"hthumb/gnsmart.jpg","더이다의원":"hthumb/ida.jpg","원진성형외과피부과의원":"hthumb/wonjin.jpg","지유의원 (사적인아름다움)":"hthumb/gu.jpg","신상성형외과":"hthumb/shinsang.jpg","드림성형외과":"hthumb/dream.jpg","셀리닉의원":"hthumb/cellinique.jpg","차움":"hthumb/chaum.jpg","원셀의원":"hthumb/onecell.jpg","글로비성형외과":"hthumb/glovi.jpg","라미체의원":"hthumb/lamiche.jpg","뷰성형외과":"hthumb/view.jpg","바른길산부인과":"hthumb/barunhifu.jpg","강남다움의원":"hthumb/gangnamdaum.jpg","더뷰티성형외과":"hthumb/thebeauty.jpg","신소애여성의원":"hthumb/sinsoa.jpg","히어피부과":"hthumb/heerskin.jpg","히어산부인과":"hthumb/heerwomen.jpg","셀로라의원 (with 지유)":"hthumb/cellora.jpg","리프톤의원":"hthumb/lifton.jpg","청담서클의원":"hthumb/cheongdamcircle.jpg","루비성형외과(신사점)":"hthumb/ruby.jpg","벤자민의원":"hthumb/benjamin.jpg","고운몸의원":"hthumb/gowoonmom.jpg","티알 트리니티라파엘로 청담의원":"hthumb/tr.jpg","GV 성형외과":"hthumb/gv.jpg","페이스라인성형외과의원":"hthumb/faceline.jpg","강남서울안과의원":"hthumb/kseye.jpg"};
-var TRAITS=['1인 원장','원장 직접 상담·집도','원장 책임제','당일 상담 가능','당일 시술 가능','프라이빗 스위트 진료실(올인원)','가성비 중심 대형 시스템','줄기세포 치료 정식 인증','중국어 전담 인력 상주','한국인 이용 많은 병원','강남 외 지역도 무관'];
-var QUICK=[
- {g:'피부 시술',ks:[['보톡스'],['필러'],['스킨부스터'],['리쥬란'],['미백'],['색소'],['여드름'],['흉터'],['모공'],['점 제거','점'],['문신제거'],['레이저토닝','토닝']]},
- {g:'리프팅·탄력',ks:[['울쎄라'],['써마지'],['온다'],['실리프팅'],['리프팅']]},
- {g:'성형수술',ks:[['쌍꺼풀'],['눈매교정'],['눈성형','눈 '],['코성형','코 '],['안면윤곽','윤곽'],['지방흡입'],['지방이식'],['가슴성형','가슴'],['이중턱']]},
- {g:'치과',ks:[['임플란트'],['치아교정','치과 / 교정'],['보철·심미','보철']]},
- {g:'여성·검진',ks:[['여성의학 시술','여성'],['종합검진','검진']]},
- {g:'바디·제모',ks:[['제모'],['바디보톡스'],['지방분해']]},
- {g:'기타',ks:[['수액·영양주사','수액'],['모발이식','모발'],['줄기세포']]}
-];
-function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
-function won(n){return (n||0).toLocaleString('ko-KR')+'원';}
 
-/* ─── 협력 병원 소개 ─── */
+/* ─── 다국어 사전 (기본 中文) ─── */
+var LANG=localStorage.getItem('b2c_lang')||'zh';
+var LANG_META=[['zh','中文','cn'],['ko','한국어','kr'],['en','English','us'],['ja','日本語','jp']];
+var I18N={
+ zh:{nav:['公司介绍','服务','合作医院','定制报价'],navcta:'获取定制报价',adnote:'本页面包含医疗广告<br>FollowKorea为广告媒介',
+  badge:'韩国保健福祉部 外国人患者招揽业注册 · 第 A-2026-01-01-06622 号',
+  h1:'最懂医院的营销公司<br><b>为您提供值得信赖的医院信息</b>',
+  lead:'FollowKorea 专注于<b>外国人患者招揽</b>与<b>网红体验测评营销</b>。<br>我们透明介绍直接合作医院的信息，并为您匹配符合条件的医院。',
+  cta:'获取适合我的医院报价 →',chipfloat:'与41家合作医疗机构携手同行',
+  stats:[['41家','合作医疗机构 — 整形·皮肤·体检·牙科等'],['官方注册','保健福祉部注册招揽机构 · 综合旅行社注册'],['网红资源','小红书·抖音体验测评内容制作与传播'],['中国法人','悦集江南(上海) — 中国境内合法运营']],
+  svcTitle:'我们的服务',svcSub:'作为广告·营销媒介，在医院与患者之间传递准确信息。',
+  svc:[['外国人患者招揽','作为注册招揽机构，为中国·全球患者提供医院访问支持：咨询翻译、行程安排、术后管理。'],['网红体验测评营销','粉丝百万级网红亲自到院体验，在小红书·抖音发布测评内容。'],['医院广告·介绍','作为广告媒介，向消费者介绍合作医疗机构的诊疗领域与医疗团队。'],['定制报价服务','选择项目和条件，比较合作医院报价，为您匹配合适的医院。']],
+  hTitle:'合作医疗机构',hSub:'与FollowKorea合作的医疗机构，按名称排序，不代表排名或评价。',hMore:'查看更多合作医院',docs:'医疗团队 {n} 名',all:'全部',
+  qTitle:'定制报价',ad:'广告',qSub:'选择想做的项目，比较合作医院报价，并匹配符合条件的医院。医院名称在确定咨询前不公开。',
+  steps:['1. 选择项目','2. 比较报价','3. 医院条件','4. 申请咨询'],
+  ph:'输入项目名 — 例：超声刀、肉毒素',add:'添加',
+  hint1:'· 可添加多个项目。报价按各医院价目表中该项目的最低定价合计计算。',
+  toStep2:'比较报价 →',
+  hint2:'以下为按所选项目计算的各医院预估报价（医院名不公开 · 价格从低到高）。点击卡片可查看明细。可选择心仪的报价，或直接进入下一步按条件匹配。',
+  back:'← 上一步',next2:'下一步：选择医院条件 →',
+  hint3:'请选择您希望的医院特点（可多选），我们将为您匹配最符合的合作医院。',
+  next3:'下一步：申请咨询 →',
+  fname:'姓名 *',fphone:'联系方式（手机/微信）*',fmemo:'留言（选填）',fmemoPh:'希望时间、想了解的内容等',
+  submit:'查看匹配医院',submitting:'匹配中…',
+  hint4:'提交后立即显示匹配医院名称，最终报价由顾问联系您确认。',
+  rTitle:'已为您找到符合条件的医院',
+  rSub:'受理通知已通过短信发送。<br>顾问将尽快与您联系，告知最终报价与预约安排。<br>实际费用因个人情况而异，以咨询时告知为准。',
+  restart:'重新开始',
+  errNeed:'请填写姓名和联系方式。',errNoMatch:'未找到符合条件的医院，请更换项目重试。',errRetry:'请稍后重试。如仍有问题请联系 contact@followkorea.co.kr',errNet:'网络错误 — 请稍后重试。',
+  qcTag:'所选项目 {h}/{t} 项可做',qcNone:'未找到可做所选项目的合作医院，请更换项目名称重试。',qcMiss:'无该项目',
+  lTitle:'注意事项',
+  lBody:'· 报价所用价格为各医疗机构提供的非医保项目定价，实际费用因个人情况·施术范围而异。<br>· 本页面不提供医院间排名·优劣比较，报价比较仅为价格信息参考，合作医院按名称排序。<br>· 所有医疗美容项目均可能产生副作用，请务必与医生充分咨询后决定。<br>· FollowKorea为广告媒介，非医疗行为及诊疗合同当事方。',
+  traits:['独立院长(一人院长)','院长亲自面诊·主刀','院长责任制','可当日面诊','可当日施术','一站式私密套间诊室','高性价比大型系统','干细胞治疗正式认证','中文专职人员常驻','韩国本地人常去的医院','江南以外地区也可'],
+  quick:[
+   {g:'皮肤项目',ks:[['肉毒素','보톡스'],['玻尿酸填充','필러'],['水光针','스킨부스터'],['丽珠兰','리쥬란'],['美白','미백'],['色素','색소'],['痘痘','여드름'],['疤痕','흉터'],['毛孔','모공'],['祛痣','점'],['洗纹身','문신제거'],['激光净肤','토닝']]},
+   {g:'提升紧致',ks:[['超声刀','울쎄라'],['热玛吉','써마지'],['ONDA','온다'],['线雕','실리프팅'],['提升','리프팅']]},
+   {g:'整形手术',ks:[['双眼皮','쌍꺼풀'],['眼型矫正','눈매교정'],['眼部整形','눈 '],['鼻部整形','코 '],['面部轮廓','윤곽'],['吸脂','지방흡입'],['脂肪填充','지방이식'],['胸部整形','가슴'],['双下巴','이중턱']]},
+   {g:'牙科',ks:[['种植牙','임플란트'],['牙齿矫正','치과 / 교정'],['美学修复','보철']]},
+   {g:'妇科·体检',ks:[['妇科项目','여성'],['综合体检','검진']]},
+   {g:'身体·脱毛',ks:[['脱毛','제모'],['身体肉毒','바디보톡스'],['溶脂','지방분해']]},
+   {g:'其他',ks:[['营养输液','수액'],['植发','모발'],['干细胞','줄기세포']]}]
+ },
+ ko:{nav:['회사 소개','서비스','협력 병원','맞춤 견적'],navcta:'맞춤 견적 받기',adnote:'본 페이지는 의료광고를 포함합니다<br>(주)팔로우코리아는 광고 매체입니다',
+  badge:'보건복지부 외국인환자 유치업 등록 · 제 A-2026-01-01-06622 호',
+  h1:'병원을 가장 잘 아는 마케팅 회사가<br><b>믿을 수 있는 병원 정보</b>를 전합니다',
+  lead:'팔로우코리아는 <b>외국인 환자 유치</b>와 <b>왕홍 체험 리뷰 마케팅</b> 전문 회사입니다.<br>직접 협력하는 병원의 정보를 투명하게 소개하고, 조건에 맞는 병원을 찾아드립니다.',
+  cta:'내게 맞는 병원 견적 받기 →',chipfloat:'협력 의료기관 41곳과 함께합니다',
+  stats:[['41곳','협력 의료기관 — 성형·피부·검진·치과 등'],['유치업 등록','보건복지부 등록 외국인환자 유치업체 · 종합여행업 등록'],['왕홍 네트워크','샤오홍슈·도우인 체험 리뷰 콘텐츠 제작·확산'],['중국 현지법인','悦集江南(上海) — 중국 내 합법 마케팅 운영']],
+  svcTitle:'팔로우코리아가 하는 일',svcSub:'병원과 환자 사이에서, 광고·마케팅 매체로서 정확한 정보를 연결합니다.',
+  svc:[['외국인 환자 유치','등록 유치업체로서 중국·글로벌 환자의 병원 방문을 지원합니다. 상담 통역, 방문 일정, 사후 관리까지.'],['왕홍 체험 리뷰 마케팅','팔로워 100만 전후 왕홍이 병원을 직접 방문하고, 샤오홍슈·도우인에 체험 콘텐츠를 게재합니다.'],['병원 광고·소개','광고 매체로서 협력 의료기관의 진료 분야·의료진 정보를 소비자에게 소개합니다.'],['맞춤 견적 서비스','원하는 시술과 조건을 고르면 협력 병원 견적을 비교하고 맞는 병원을 찾아드립니다.']],
+  hTitle:'협력 의료기관',hSub:'팔로우코리아와 함께하는 의료기관입니다. 가나다순으로 표시되며 순위·추천·평가를 의미하지 않습니다.',hMore:'협력 병원 더 보기',docs:'의료진 {n}명',all:'전체',
+  qTitle:'맞춤 견적',ad:'광고',qSub:'원하는 시술을 고르면 협력 병원별 예상 견적을 비교하고, 조건에 맞는 병원을 찾아드립니다. 병원명은 상담 확정 전까지 공개되지 않습니다.',
+  steps:['1. 시술 선택','2. 견적 비교','3. 원하는 병원 조건','4. 상담 신청'],
+  ph:'시술명 입력 — 예: 울쎄라, 리쥬란, 보톡스',add:'추가',
+  hint1:'· 시술을 여러 개 담을 수 있습니다. 견적은 각 병원 수가표에서 해당 시술의 최저 정가를 합산해 계산합니다.',
+  toStep2:'견적 비교하기 →',
+  hint2:'선택 시술 기준 병원별 예상 견적입니다 (병원명 비공개 · 저렴한 순). 카드를 누르면 항목별 금액이 열립니다. 마음에 드는 견적을 선택하거나, 그대로 다음 단계에서 조건으로 찾아드립니다.',
+  back:'← 이전',next2:'다음: 병원 조건 선택 →',
+  hint3:'원하시는 병원의 특징을 선택하세요 (복수 선택 가능). 조건에 가장 맞는 협력 병원을 찾아드립니다.',
+  next3:'다음: 상담 신청 →',
+  fname:'이름 *',fphone:'연락처 *',fmemo:'남기실 말씀 (선택)',fmemoPh:'희망 시기, 궁금한 점 등',
+  submit:'맞춤 병원 확인하기',submitting:'확인 중…',
+  hint4:'신청 즉시 조건에 맞는 병원명을 알려드리며, 확정 견적은 상담원이 연락드려 안내합니다.',
+  rTitle:'고객님 조건에 맞는 병원을 찾았습니다',
+  rSub:'접수 안내를 문자로 보내드렸습니다.<br>상담원이 곧 연락드려 확정 견적과 예약을 안내해 드립니다.<br>견적 금액은 개인별 상태에 따라 달라질 수 있어 상담 시 정확히 안내됩니다.',
+  restart:'처음으로',
+  errNeed:'이름과 연락처를 입력해주세요.',errNoMatch:'조건에 맞는 병원을 찾지 못했습니다. 시술 선택을 바꿔보세요.',errRetry:'잠시 후 다시 시도해주세요. 계속 안 되면 contact@followkorea.co.kr로 문의해주세요.',errNet:'네트워크 오류 — 잠시 후 다시 시도해주세요.',
+  qcTag:'선택 시술 {h}/{t}개 취급',qcNone:'선택하신 시술을 취급하는 협력 병원을 찾지 못했습니다. 시술명을 바꿔서 검색해 보세요.',qcMiss:'해당 항목 없음',
+  lTitle:'유의사항',
+  lBody:'· 견적 비교에 사용되는 가격은 각 의료기관이 제공한 비급여 진료비 정가 기준이며, 개인의 상태·시술 범위에 따라 실제 비용은 달라질 수 있습니다.<br>· 본 페이지는 의료기관 간 순위·우열 비교를 제공하지 않으며, 견적 비교는 가격 정보 제공 목적입니다. 협력 의료기관 소개는 가나다순입니다.<br>· 모든 의료 시술에는 부작용이 발생할 수 있으므로 반드시 의료인과 충분히 상담한 후 결정하시기 바랍니다.<br>· (주)팔로우코리아는 광고 매체로서 의료행위 및 진료계약의 당사자가 아닙니다.',
+  traits:['1인 원장','원장 직접 상담·집도','원장 책임제','당일 상담 가능','당일 시술 가능','프라이빗 스위트 진료실(올인원)','가성비 중심 대형 시스템','줄기세포 치료 정식 인증','중국어 전담 인력 상주','한국인 이용 많은 병원','강남 외 지역도 무관'],
+  quick:[
+   {g:'피부 시술',ks:[['보톡스','보톡스'],['필러','필러'],['스킨부스터','스킨부스터'],['리쥬란','리쥬란'],['미백','미백'],['색소','색소'],['여드름','여드름'],['흉터','흉터'],['모공','모공'],['점 제거','점'],['문신제거','문신제거'],['레이저토닝','토닝']]},
+   {g:'리프팅·탄력',ks:[['울쎄라','울쎄라'],['써마지','써마지'],['온다','온다'],['실리프팅','실리프팅'],['리프팅','리프팅']]},
+   {g:'성형수술',ks:[['쌍꺼풀','쌍꺼풀'],['눈매교정','눈매교정'],['눈성형','눈 '],['코성형','코 '],['안면윤곽','윤곽'],['지방흡입','지방흡입'],['지방이식','지방이식'],['가슴성형','가슴'],['이중턱','이중턱']]},
+   {g:'치과',ks:[['임플란트','임플란트'],['치아교정','치과 / 교정'],['보철·심미','보철']]},
+   {g:'여성·검진',ks:[['여성의학 시술','여성'],['종합검진','검진']]},
+   {g:'바디·제모',ks:[['제모','제모'],['바디보톡스','바디보톡스'],['지방분해','지방분해']]},
+   {g:'기타',ks:[['수액·영양주사','수액'],['모발이식','모발'],['줄기세포','줄기세포']]}]
+ },
+ en:{nav:['About','Services','Partner Clinics','Get a Quote'],navcta:'Get My Quote',adnote:'This page contains medical ads<br>Follow Korea is an ad medium',
+  badge:'Registered Foreign Patient Attraction Agency (MOHW Korea) · No. A-2026-01-01-06622',
+  h1:'The marketing company that knows hospitals best —<br><b>trusted clinic information for you</b>',
+  lead:'Follow Korea specializes in <b>international patient attraction</b> and <b>influencer review marketing</b>.<br>We transparently introduce our partner clinics and match you with the right one.',
+  cta:'Get my personalized quote →',chipfloat:'Working with 41 partner clinics',
+  stats:[['41 clinics','Partner clinics — plastic, derma, checkup, dental'],['Licensed','MOHW-registered agency · Travel business registered'],['Influencer network','Xiaohongshu & Douyin review content'],['China entity','Yueji Jiangnan (Shanghai) — legal operations']],
+  svcTitle:'What we do',svcSub:'As an advertising medium, we connect patients and clinics with accurate information.',
+  svc:[['Patient attraction','As a registered agency we support clinic visits for international patients: interpreting, scheduling, aftercare.'],['Influencer review marketing','Influencers with ~1M followers visit clinics and publish reviews on Xiaohongshu & Douyin.'],['Clinic advertising','As an ad medium we introduce partner clinics\' specialties and medical staff.'],['Custom quote service','Pick procedures and preferences — we compare partner-clinic quotes and match you.']],
+  hTitle:'Partner Clinics',hSub:'Clinics partnered with Follow Korea, listed alphabetically — no ranking implied.',hMore:'Show more clinics',docs:'{n} doctors',all:'All',
+  qTitle:'Custom Quote',ad:'AD',qSub:'Pick procedures, compare anonymous clinic quotes, and get matched. Clinic names are revealed only after you apply.',
+  steps:['1. Procedures','2. Compare','3. Preferences','4. Contact'],
+  ph:'Type a procedure — e.g. Ulthera, Botox',add:'Add',
+  hint1:'· Add multiple procedures. Quotes sum the lowest list price of each procedure per clinic.',
+  toStep2:'Compare quotes →',
+  hint2:'Estimated quotes per clinic (names hidden · cheapest first). Tap a card for line items. Pick one you like, or continue to match by preferences.',
+  back:'← Back',next2:'Next: clinic preferences →',
+  hint3:'Select the clinic features you want (multiple allowed). We\'ll match the best-fitting partner clinic.',
+  next3:'Next: contact →',
+  fname:'Name *',fphone:'Phone / WeChat *',fmemo:'Message (optional)',fmemoPh:'Preferred dates, questions…',
+  submit:'Find my clinic',submitting:'Matching…',
+  hint4:'You\'ll see the matched clinic right away; our consultant will contact you with the final quote.',
+  rTitle:'We found your matching clinic',
+  rSub:'A confirmation was sent by SMS.<br>Our consultant will contact you shortly with the final quote and booking.<br>Actual costs vary by individual condition.',
+  restart:'Start over',
+  errNeed:'Please enter your name and phone.',errNoMatch:'No clinic matches those procedures — try different ones.',errRetry:'Please try again later, or email contact@followkorea.co.kr',errNet:'Network error — please try again.',
+  qcTag:'{h}/{t} of your procedures available',qcNone:'No partner clinic offers the selected procedures. Try different names.',qcMiss:'not available',
+  lTitle:'Notes',
+  lBody:'· Prices are list prices of non-covered treatments provided by each clinic; actual costs vary by individual condition and scope.<br>· This page provides price information only and implies no ranking between clinics; clinics are listed alphabetically.<br>· All medical procedures can have side effects — always consult a medical professional.<br>· Follow Korea is an advertising medium and not a party to any medical treatment or contract.',
+  traits:['Single-director clinic','Director consults & operates','Director accountability','Same-day consult','Same-day procedure','All-in-one private suite','Value-focused large clinic','Certified stem-cell therapy','Chinese-speaking staff','Popular with Koreans','Outside Gangnam OK'],
+  quick:[
+   {g:'Skin',ks:[['Botox','보톡스'],['Filler','필러'],['Skin booster','스킨부스터'],['Rejuran','리쥬란'],['Whitening','미백'],['Pigment','색소'],['Acne','여드름'],['Scar','흉터'],['Pores','모공'],['Mole removal','점'],['Tattoo removal','문신제거'],['Laser toning','토닝']]},
+   {g:'Lifting',ks:[['Ulthera','울쎄라'],['Thermage','써마지'],['ONDA','온다'],['Thread lift','실리프팅'],['Lifting','리프팅']]},
+   {g:'Plastic surgery',ks:[['Double eyelid','쌍꺼풀'],['Eye correction','눈매교정'],['Eye surgery','눈 '],['Rhinoplasty','코 '],['Contouring','윤곽'],['Liposuction','지방흡입'],['Fat graft','지방이식'],['Breast','가슴'],['Double chin','이중턱']]},
+   {g:'Dental',ks:[['Implant','임플란트'],['Orthodontics','치과 / 교정'],['Cosmetic dental','보철']]},
+   {g:'Women · Checkup',ks:[['Women\'s health','여성'],['Health checkup','검진']]},
+   {g:'Body · Hair removal',ks:[['Hair removal','제모'],['Body botox','바디보톡스'],['Lipolysis','지방분해']]},
+   {g:'Others',ks:[['IV therapy','수액'],['Hair transplant','모발'],['Stem cell','줄기세포']]}]
+ },
+ ja:{nav:['会社紹介','サービス','提携病院','見積もり'],navcta:'見積もりを受け取る',adnote:'当ページには医療広告が含まれます<br>Follow Koreaは広告媒体です',
+  badge:'韓国保健福祉部 外国人患者誘致業 登録 · 第 A-2026-01-01-06622 号',
+  h1:'病院を最もよく知るマーケティング会社が<br><b>信頼できる病院情報</b>をお届けします',
+  lead:'Follow Koreaは<b>外国人患者誘致</b>と<b>ワンホン体験レビュー</b>の専門会社です。<br>提携病院の情報を透明に紹介し、条件に合う病院をご案内します。',
+  cta:'私に合う病院の見積もりを受け取る →',chipfloat:'提携医療機関41院とともに',
+  stats:[['41院','提携医療機関 — 整形・皮膚・健診・歯科など'],['誘致業登録','保健福祉部登録 誘致業者 · 総合旅行業登録'],['ワンホン網','小紅書・抖音の体験レビュー制作・拡散'],['中国現地法人','悦集江南(上海) — 中国国内で合法運営']],
+  svcTitle:'私たちの仕事',svcSub:'広告・マーケティング媒体として、正確な情報をつなぎます。',
+  svc:[['外国人患者誘致','登録誘致業者として、通訳・日程調整・アフターケアまで来院をサポートします。'],['ワンホン体験レビュー','フォロワー100万規模のワンホンが来院し、小紅書・抖音にレビューを掲載します。'],['病院広告・紹介','広告媒体として提携医療機関の診療分野・医療陣を紹介します。'],['カスタム見積もり','施術と条件を選ぶと、提携病院の見積もりを比較しマッチングします。']],
+  hTitle:'提携医療機関',hSub:'Follow Koreaの提携医療機関です。名称順で、順位・評価ではありません。',hMore:'もっと見る',docs:'医師 {n} 名',all:'すべて',
+  qTitle:'カスタム見積もり',ad:'広告',qSub:'施術を選ぶと匿名の病院別見積もりを比較し、条件に合う病院をマッチング。病院名は申込後に公開されます。',
+  steps:['1. 施術選択','2. 見積比較','3. 病院条件','4. 相談申込'],
+  ph:'施術名を入力 — 例：ウルセラ、ボトックス',add:'追加',
+  hint1:'· 複数の施術を追加できます。見積もりは各病院の価格表の最低定価を合算します。',
+  toStep2:'見積もりを比較 →',
+  hint2:'選択した施術に基づく病院別の概算見積もりです（病院名非公開・安い順）。カードをタップすると明細が開きます。',
+  back:'← 戻る',next2:'次へ：病院条件 →',
+  hint3:'ご希望の病院の特徴を選んでください（複数可）。最も合う提携病院をご案内します。',
+  next3:'次へ：相談申込 →',
+  fname:'お名前 *',fphone:'連絡先 *',fmemo:'メッセージ（任意）',fmemoPh:'希望時期、質問など',
+  submit:'マッチング病院を確認',submitting:'確認中…',
+  hint4:'申込後すぐにマッチング病院名を表示し、最終見積もりは担当者よりご連絡します。',
+  rTitle:'条件に合う病院が見つかりました',
+  rSub:'受付案内をSMSでお送りしました。<br>担当者よりご連絡し、最終見積もりとご予約をご案内します。<br>実際の費用は個人の状態により異なります。',
+  restart:'最初から',
+  errNeed:'お名前と連絡先を入力してください。',errNoMatch:'条件に合う病院が見つかりません。施術を変えてお試しください。',errRetry:'しばらくして再度お試しください。',errNet:'ネットワークエラー — 再度お試しください。',
+  qcTag:'選択施術 {h}/{t} 件対応',qcNone:'選択した施術を扱う提携病院が見つかりません。',qcMiss:'該当なし',
+  lTitle:'ご注意',
+  lBody:'· 価格は各医療機関提供の自由診療定価であり、実際の費用は個人の状態・範囲により異なります。<br>· 当ページは病院間の順位・優劣比較を提供せず、価格情報の提供が目的です。提携医療機関は名称順です。<br>· すべての医療施術には副作用の可能性があります。必ず医療者と十分ご相談ください。<br>· Follow Koreaは広告媒体であり、医療行為・診療契約の当事者ではありません。',
+  traits:['院長1人体制','院長が直接カウンセリング・執刀','院長責任制','当日カウンセリング可','当日施術可','オールインワン個室スイート','コスパ重視の大型システム','幹細胞治療の正式認証','中国語専任スタッフ常駐','韓国人利用の多い病院','江南以外でも可'],
+  quick:[
+   {g:'スキン施術',ks:[['ボトックス','보톡스'],['ヒアルロン酸','필러'],['スキンブースター','스킨부스터'],['リジュラン','리쥬란'],['美白','미백'],['色素','색소'],['ニキビ','여드름'],['傷跡','흉터'],['毛穴','모공'],['ほくろ除去','점'],['タトゥー除去','문신제거'],['レーザートーニング','토닝']]},
+   {g:'リフトアップ',ks:[['ウルセラ','울쎄라'],['サーマージ','써마지'],['ONDA','온다'],['糸リフト','실리프팅'],['リフティング','리프팅']]},
+   {g:'整形手術',ks:[['二重','쌍꺼풀'],['目元矯正','눈매교정'],['目の整形','눈 '],['鼻整形','코 '],['輪郭','윤곽'],['脂肪吸引','지방흡입'],['脂肪注入','지방이식'],['胸整形','가슴'],['二重あご','이중턱']]},
+   {g:'歯科',ks:[['インプラント','임플란트'],['歯列矯正','치과 / 교정'],['審美補綴','보철']]},
+   {g:'婦人科・健診',ks:[['婦人科施術','여성'],['総合健診','검진']]},
+   {g:'ボディ・脱毛',ks:[['脱毛','제모'],['ボディボトックス','바디보톡스'],['脂肪溶解','지방분해']]},
+   {g:'その他',ks:[['点滴','수액'],['植毛','모발'],['幹細胞','줄기세포']]}]
+ }
+};
+function T(){return I18N[LANG]||I18N.zh;}
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+function won(n){return (n||0).toLocaleString('ko-KR')+(LANG==='ko'?'원':' KRW');}
+function hName(h){return (LANG==='zh'&&h.zh)?h.zh:((LANG==='en'||LANG==='ja')&&h.en?h.en:h.name);}
+function hOv(h){return (LANG==='zh'&&h.ovzh)?h.ovzh:((LANG==='en'||LANG==='ja')&&h.oven?h.oven:h.overview);}
+function hTreats(h){return (LANG==='zh'&&h.trzh&&h.trzh.length)?h.trzh:((LANG==='en'||LANG==='ja')&&h.tren&&h.tren.length?h.tren:h.treats);}
+
+var QGSEL=0;
+function applyLang(l){
+  LANG=l; localStorage.setItem('b2c_lang',l);
+  document.documentElement.lang=l;
+  var t=T();
+  document.getElementById('langs').innerHTML=LANG_META.map(function(m){
+    return '<button class="'+(m[0]===LANG?'on':'')+'" onclick="applyLang(\''+m[0]+'\')"><img src="https://flagcdn.com/w20/'+m[2]+'.png" alt="">'+m[1]+'</button>';
+  }).join('');
+  var anchors=['#about','#services','#hospitals','#quote'];
+  document.getElementById('nav').innerHTML=t.nav.map(function(x,i){return '<a href="'+anchors[i]+'">'+esc(x)+'</a>';}).join('');
+  document.getElementById('navcta').textContent=t.navcta;
+  document.getElementById('adnote').innerHTML=t.adnote;
+  document.getElementById('t-badge').textContent=t.badge;
+  document.getElementById('t-h1').innerHTML=t.h1;
+  document.getElementById('t-lead').innerHTML=t.lead;
+  document.getElementById('t-cta').textContent=t.cta;
+  document.getElementById('t-chipfloat').textContent=t.chipfloat;
+  var links=['#hospitals','#legal','https://gnpulse.kr/','https://gnfollow-cn.netlify.app/'];
+  document.getElementById('stats').innerHTML=t.stats.map(function(sset,i){
+    var ext=links[i].indexOf('http')===0;
+    return '<a class="st" href="'+links[i]+'"'+(ext?' target="_blank" rel="noopener"':'')+'><div class="n">'+esc(sset[0])+'</div><div class="l">'+esc(sset[1])+' →</div></a>';
+  }).join('');
+  document.getElementById('t-svc-title').textContent=t.svcTitle;
+  document.getElementById('t-svc-sub').textContent=t.svcSub;
+  document.getElementById('svc-cards').innerHTML=t.svc.map(function(c,i){
+    return '<div class="card"><div class="num">0'+(i+1)+'</div><h3>'+esc(c[0])+'</h3><p>'+esc(c[1])+'</p></div>';
+  }).join('');
+  document.getElementById('t-h-title').textContent=t.hTitle;
+  document.getElementById('t-h-sub').textContent=t.hSub;
+  document.getElementById('hmoreBtn').textContent=t.hMore;
+  document.getElementById('t-q-title').textContent=t.qTitle;
+  document.getElementById('t-ad').textContent=t.ad;
+  document.getElementById('t-q-sub').textContent=t.qSub;
+  document.getElementById('wsteps').innerHTML=t.steps.map(function(x,i){return '<span class="stp'+(document.getElementById('p'+(i+1))&&document.getElementById('p'+(i+1)).classList.contains('on')?' on':'')+'" id="stp'+(i+1)+'">'+esc(x)+'</span>';}).join('');
+  document.getElementById('kwq').placeholder=t.ph;
+  document.getElementById('t-addbtn').textContent=t.add;
+  document.getElementById('t-hint1').textContent=t.hint1;
+  document.getElementById('toStep2').textContent=t.toStep2;
+  document.getElementById('t-hint2').textContent=t.hint2;
+  document.getElementById('t-back2').textContent=t.back;
+  document.getElementById('t-next2').textContent=t.next2;
+  document.getElementById('t-hint3').textContent=t.hint3;
+  document.getElementById('t-back3').textContent=t.back;
+  document.getElementById('t-next3').textContent=t.next3;
+  document.getElementById('t-fname').textContent=t.fname;
+  document.getElementById('t-fphone').textContent=t.fphone;
+  document.getElementById('t-fmemo').textContent=t.fmemo;
+  document.getElementById('f-memo').placeholder=t.fmemoPh;
+  document.getElementById('t-back4').textContent=t.back;
+  document.getElementById('submitBtn').textContent=t.submit;
+  document.getElementById('t-hint4').textContent=t.hint4;
+  document.getElementById('t-r-title').textContent=t.rTitle;
+  document.getElementById('t-r-sub').innerHTML=t.rSub;
+  document.getElementById('t-restart').textContent=t.restart;
+  document.getElementById('t-l-title').textContent=t.lTitle;
+  document.getElementById('t-l-body').innerHTML=t.lBody;
+  var koTraits=I18N.ko.traits;
+  document.getElementById('tsel').innerHTML=t.traits.map(function(x,i){
+    return '<span class="topt'+(SEL_TRAITS.indexOf(koTraits[i])>=0?' on':'')+'" onclick="togT(this)" data-t="'+esc(koTraits[i])+'">'+esc(x)+'</span>';
+  }).join('');
+  renderQuick();
+  renderKws();
+  renderHchips();
+  renderHosps(true);
+}
+/* 빠른 선택 — 분야 탭 1줄 + 선택 분야의 칩 1줄 (시선 분산 방지) */
+function renderQuick(){
+  var t=T();
+  if(QGSEL>=t.quick.length)QGSEL=0;
+  document.getElementById('qgtabs').innerHTML=t.quick.map(function(gr,i){
+    return '<span class="gtab'+(i===QGSEL?' on':'')+'" onclick="selQG('+i+')">'+esc(gr.g)+'</span>';
+  }).join('');
+  document.getElementById('qgchips').innerHTML=t.quick[QGSEL].ks.map(function(k){
+    var on=KWS.some(function(x){return x.v===k[1];});
+    return '<span class="chip'+(on?' on':'')+'" data-l="'+esc(k[0])+'" data-v="'+esc(k[1])+'" onclick="addKwChip(this)">'+esc(k[0])+'</span>';
+  }).join('');
+}
+function selQG(i){QGSEL=i;renderQuick();}
+
 var HCAT='', HPAGE=1, HPER=9;
 HOSPITALS.sort(function(a,b){return a.name.localeCompare(b.name,'ko');});
-(function(){
+function renderHchips(){
   var cats=[]; HOSPITALS.forEach(function(h){ (h.cat||'').split('/').forEach(function(c){ c=c.trim(); if(c&&cats.indexOf(c)<0)cats.push(c); }); });
   cats.sort(function(a,b){return a.localeCompare(b,'ko');});
-  document.getElementById('hchips').innerHTML='<span class="chip on" data-c="" onclick="setHCat(this)">전체</span>'
-    +cats.map(function(c){return '<span class="chip" data-c="'+esc(c)+'" onclick="setHCat(this)">'+esc(c)+'</span>';}).join('');
-  var st=document.getElementById('stat-hosp'); if(st)st.textContent=HOSPITALS.length+'곳';
-  renderHosps();
-})();
+  document.getElementById('hchips').innerHTML='<span class="chip'+(HCAT===''?' on':'')+'" data-c="" onclick="setHCat(this)">'+esc(T().all)+'</span>'
+    +cats.map(function(c){return '<span class="chip'+(HCAT===c?' on':'')+'" data-c="'+esc(c)+'" onclick="setHCat(this)">'+esc(c)+'</span>';}).join('');
+}
 function setHCat(el){
   HCAT=el.getAttribute('data-c')||'';
   document.querySelectorAll('#hchips .chip').forEach(function(c){c.classList.toggle('on',c===el);});
   HPAGE=1; renderHosps();
 }
-function thumbHtml(name){
-  var p=HOSP_THUMB[name];
-  if(p)return '<img class="thumb" loading="lazy" src="'+THUMB_BASE+p+'" alt="'+esc(name)+'" onerror="this.outerHTML=\'<div class=\\\'thumb ph\\\'>'+esc(name.slice(0,1))+'</div>\'">';
-  return '<div class="thumb ph">'+esc(name.slice(0,1))+'</div>';
+function thumbHtml(h){
+  var p=HOSP_THUMB[h.name];
+  var nm=hName(h);
+  if(p)return '<img class="thumb" loading="lazy" src="'+THUMB_BASE+p+'" alt="'+esc(nm)+'" onerror="this.outerHTML=\'<div class=\\\'thumb ph\\\'>'+esc(nm.slice(0,1))+'</div>\'">';
+  return '<div class="thumb ph">'+esc(nm.slice(0,1))+'</div>';
 }
-function renderHosps(append){
-  if(!append)HPAGE=1;
+function renderHosps(keepPage){
+  if(!keepPage)HPAGE=1;
+  var t=T();
   var f=HOSPITALS.filter(function(h){ return !HCAT || (h.cat||'').indexOf(HCAT)>=0; });
   var show=f.slice(0,HPAGE*HPER);
   document.getElementById('hgrid').innerHTML=show.map(function(h){
-    return '<div class="hosp">'+thumbHtml(h.name)
+    var tr=hTreats(h)||[];
+    return '<div class="hosp">'+thumbHtml(h)
       +'<div class="body">'
-      +'<h3>'+esc(h.name)+' <span class="badge-ad">광고</span></h3>'
+      +'<h3>'+esc(hName(h))+' <span class="badge-ad">'+esc(t.ad)+'</span></h3>'
       +'<div class="meta">'+esc(h.dept||h.cat||'')+(h.loc?' · '+esc(h.loc):'')+'</div>'
-      +(h.overview?'<div class="ov">'+esc(h.overview)+'</div>':'')
-      +(h.treats&&h.treats.length?'<div class="treats">'+h.treats.slice(0,5).map(function(t){return '<span>'+esc(t)+'</span>';}).join('')+'</div>':'')
-      +(h.doctors&&h.doctors.length?'<div class="docs">의료진 '+h.doctors.length+'명'+(h.doctors[0]?' — '+esc(h.doctors.slice(0,2).join(', '))+(h.doctors.length>2?' 외':''):'')+'</div>':'')
+      +(hOv(h)?'<div class="ov">'+esc(hOv(h))+'</div>':'')
+      +(tr.length?'<div class="treats">'+tr.slice(0,5).map(function(x){return '<span>'+esc(x)+'</span>';}).join('')+'</div>':'')
+      +(h.doctors&&h.doctors.length?'<div class="docs">'+esc(t.docs.replace('{n}',h.doctors.length))+'</div>':'')
       +'</div></div>';
   }).join('');
   document.getElementById('hmoreBtn').style.display=f.length>show.length?'block':'none';
 }
 
-/* ─── 맞춤 견적 마법사 ─── */
 var HOSPS=[], KWS=[], SEL_TRAITS=[], PREFER='';
-function addKwPair(l,v){ l=(l||'').trim(); v=(v||l).trim(); if(!l)return; if(!KWS.some(function(k){return k.v===v;}))KWS.push({l:l,v:v}); renderKws(); }
 fetch(API).then(function(r){return r.json();}).then(function(d){ HOSPS=(d.hospitals||[]); }).catch(function(){});
 (function(){
-  var t=document.getElementById('mqtrack'); if(!t)return;
+  var mt=document.getElementById('mqtrack'); if(!mt)return;
   var ps=Object.keys(HOSP_THUMB).slice(0,14).map(function(k){return THUMB_BASE+HOSP_THUMB[k];});
-  t.innerHTML=ps.concat(ps).map(function(u){return '<img src="'+u+'" alt="협력 병원" loading="lazy">';}).join('');
+  mt.innerHTML=ps.concat(ps).map(function(u){return '<img src="'+u+'" alt="" loading="lazy">';}).join('');
 })();
-document.getElementById('quick').innerHTML=QUICK.map(function(gr){
-  return '<div style="margin-top:10px;"><div style="font-size:11px;font-weight:800;color:var(--mute);margin-bottom:6px;">'+esc(gr.g)+'</div><div class="chips" style="margin-top:0;">'+gr.ks.map(function(k){var l=k[0],v=k[1]||k[0];return '<span class="chip" data-l="'+esc(l)+'" data-v="'+esc(v)+'" onclick="addKwChip(this)">'+esc(l)+'</span>';}).join('')+'</div></div>';
-}).join('');
 function addKwChip(el){ addKwPair(el.getAttribute('data-l'), el.getAttribute('data-v')); }
-function addKw(){ var v=document.getElementById('kwq').value.trim(); if(v){addKwVal(v);document.getElementById('kwq').value='';} }
-function addKwVal(v){ addKwPair(v,v); }
-function delKw(i){KWS.splice(i,1);renderKws();}
+function addKwPair(l,v){
+  l=(l||'').trim(); v=(v||l).trim(); if(!l)return;
+  var i=KWS.findIndex(function(k){return k.v===v;});
+  if(i>=0)KWS.splice(i,1); else KWS.push({l:l,v:v}); // 다시 누르면 해제
+  renderKws(); renderQuick();
+}
+function addKw(){ var v=document.getElementById('kwq').value.trim(); if(v){addKwPair(v,v);document.getElementById('kwq').value='';} }
+function delKw(i){KWS.splice(i,1);renderKws();renderQuick();}
 function renderKws(){
   document.getElementById('kws').innerHTML=KWS.map(function(k,i){return '<span class="kw">'+esc(k.l)+'<b onclick="delKw('+i+')">✕</b></span>';}).join('');
   document.getElementById('toStep2').disabled=!KWS.length;
@@ -360,30 +561,32 @@ function goStep(n){
   }
   document.getElementById('quote').scrollIntoView({behavior:'smooth'});
 }
+function itemText(i){return (i.ko+' '+(i.zh||'')+' '+i.cat).toLowerCase();}
+function itemLabel(i){return (LANG==='zh'&&i.zh)?i.zh:i.ko;}
 function quoteAll(){
   return HOSPS.map(function(h){
     var sum=0,hit=0,lines=[];
     KWS.forEach(function(kwo){
-      var kw=kwo.l;
       var k=kwo.v.toLowerCase();
-      var m=h.items.filter(function(i){return (i.ko+' '+i.cat).toLowerCase().indexOf(k)>=0;});
-      if(m.length){var best=m.reduce(function(a,b){return a.krw<=b.krw?a:b;});hit++;sum+=best.krw;lines.push({kw:kw,ko:best.ko,krw:best.krw});}
-      else lines.push({kw:kw,ko:null,krw:0});
+      var m=h.items.filter(function(i){return itemText(i).indexOf(k)>=0;});
+      if(m.length){var best=m.reduce(function(a,b){return a.krw<=b.krw?a:b;});hit++;sum+=best.krw;lines.push({kw:kwo.l,it:best});}
+      else lines.push({kw:kwo.l,it:null});
     });
     return {anon:h.anon,vat:h.vat_note,sum:sum,hit:hit,lines:lines};
   }).filter(function(q){return q.hit>0;})
     .sort(function(a,b){return (b.hit-a.hit)||(a.sum-b.sum);});
 }
 function goStep2(){
+  var t=T();
   var qs=quoteAll();
   var box=document.getElementById('qcards');
-  if(!qs.length){box.innerHTML='<div style="text-align:center;color:#94a3b8;padding:26px;font-size:13px;">선택하신 시술을 취급하는 협력 병원을 찾지 못했습니다. 시술명을 바꿔서 검색해 보세요.</div>';}
+  if(!qs.length){box.innerHTML='<div style="text-align:center;color:#94a3b8;padding:26px;font-size:13px;">'+esc(t.qcNone)+'</div>';}
   else{
     box.innerHTML=qs.map(function(q){
       return '<div class="qcard'+(PREFER===q.anon?' on':'')+'" data-anon="'+q.anon+'" onclick="pickQ(this)">'
-        +'<div class="row"><span class="anm">'+q.anon+' 병원<span class="tag">선택 시술 '+q.hit+'/'+KWS.length+'개 취급</span></span>'
+        +'<div class="row"><span class="anm">'+q.anon+'<span class="tag">'+esc(t.qcTag.replace('{h}',q.hit).replace('{t}',KWS.length))+'</span></span>'
         +'<span class="amt">'+won(q.sum)+(q.vat?'<span class="u"> ('+esc(q.vat)+')</span>':'')+'</span></div>'
-        +'<div class="det">'+q.lines.map(function(l){return l.ko?('· '+esc(l.kw)+' → '+esc(l.ko)+' <b>'+won(l.krw)+'</b>'):('· '+esc(l.kw)+' → 해당 항목 없음');}).join('<br>')+'</div>'
+        +'<div class="det">'+q.lines.map(function(l){return l.it?('· '+esc(l.kw)+' → '+esc(itemLabel(l.it))+' <b>'+won(l.it.krw)+'</b>'):('· '+esc(l.kw)+' → '+esc(t.qcMiss));}).join('<br>')+'</div>'
         +'</div>';
     }).join('');
   }
@@ -395,7 +598,6 @@ function pickQ(el){
   PREFER=a;
   document.querySelectorAll('.qcard').forEach(function(c){c.classList.toggle('on',c===el);});
 }
-document.getElementById('tsel').innerHTML=TRAITS.map(function(t){return '<span class="topt" onclick="togT(this)" data-t="'+esc(t)+'">'+esc(t)+'</span>';}).join('');
 function togT(el){
   var t=el.getAttribute('data-t');
   var i=SEL_TRAITS.indexOf(t);
@@ -404,7 +606,7 @@ function togT(el){
 }
 function resetWizard(){
   KWS=[]; SEL_TRAITS=[]; PREFER='';
-  renderKws();
+  renderKws(); renderQuick();
   document.querySelectorAll('.topt').forEach(function(e){e.classList.remove('on');});
   document.getElementById('qcards').innerHTML='';
   ['f-name','f-phone','f-memo','kwq'].forEach(function(id){var e=document.getElementById(id);if(e)e.value='';});
@@ -412,28 +614,27 @@ function resetWizard(){
   goStep(1);
 }
 function submitMatch(){
+  var t=T();
   var name=document.getElementById('f-name').value.trim();
   var phone=document.getElementById('f-phone').value.trim();
   var err=document.getElementById('werr'); err.textContent='';
-  if(!name||!phone){err.textContent='이름과 연락처를 입력해주세요.';return;}
-  var btn=document.getElementById('submitBtn'); btn.disabled=true; btn.textContent='확인 중…';
+  if(!name||!phone){err.textContent=t.errNeed;return;}
+  var btn=document.getElementById('submitBtn'); btn.disabled=true; btn.textContent=t.submitting;
   fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({picks:KWS.map(function(k){return {kw:k.v};}),traits:SEL_TRAITS,prefer_anon:PREFER,name:name,phone:phone,memo:document.getElementById('f-memo').value.trim()})
+    body:JSON.stringify({picks:KWS.map(function(k){return {kw:k.v};}),traits:SEL_TRAITS,prefer_anon:PREFER,name:name,phone:phone,memo:document.getElementById('f-memo').value.trim(),lang:LANG})
   }).then(function(r){return r.json();}).then(function(d){
-    btn.disabled=false; btn.textContent='맞춤 병원 확인하기';
+    btn.disabled=false; btn.textContent=t.submit;
     if(d&&d.ok&&d.hospital){
       document.getElementById('r-hosp').textContent=d.hospital;
       goStep(5);
-    }else if(d&&d.error==='no_match'){
-      err.textContent='조건에 맞는 병원을 찾지 못했습니다. 시술 선택을 바꿔보세요.';
-    }else{
-      err.textContent='잠시 후 다시 시도해주세요. 계속 안 되면 contact@followkorea.co.kr로 문의해주세요.';
-    }
+    }else if(d&&d.error==='no_match'){ err.textContent=t.errNoMatch; }
+    else{ err.textContent=t.errRetry; }
   }).catch(function(){
-    btn.disabled=false; btn.textContent='맞춤 병원 확인하기';
-    err.textContent='네트워크 오류 — 잠시 후 다시 시도해주세요.';
+    btn.disabled=false; btn.textContent=t.submit;
+    err.textContent=t.errNet;
   });
 }
+applyLang(LANG);
 </script>
 </body>
 </html>
