@@ -282,7 +282,15 @@ var API='https://tbrtfccvsvtusfkqdyow.supabase.co/functions/v1/b2c-pricelist';
 var THUMB_BASE='https://gnfollow.com/';
 var HOSP_THUMB={"나나성형외과":"hthumb/nana.jpg","디에이성형외과의원":"hthumb/daprs.jpg","VC성형외과의원":"hthumb/vcps.jpg","블랑쉬치과의원":"hthumb/blanche.jpg","세라치과의원":"hthumb/cera.jpg","KMI한국의학연구소 강남센터":"hthumb/kmi.jpg","하나로의료재단 강남센터":"hthumb/hanaro.jpg","강남스마트신경과의원":"hthumb/gnsmart.jpg","더이다의원":"hthumb/ida.jpg","원진성형외과피부과의원":"hthumb/wonjin.jpg","지유의원 (사적인아름다움)":"hthumb/gu.jpg","신상성형외과":"hthumb/shinsang.jpg","드림성형외과":"hthumb/dream.jpg","셀리닉의원":"hthumb/cellinique.jpg","차움":"hthumb/chaum.jpg","원셀의원":"hthumb/onecell.jpg","글로비성형외과":"hthumb/glovi.jpg","라미체의원":"hthumb/lamiche.jpg","뷰성형외과":"hthumb/view.jpg","바른길산부인과":"hthumb/barunhifu.jpg","강남다움의원":"hthumb/gangnamdaum.jpg","더뷰티성형외과":"hthumb/thebeauty.jpg","신소애여성의원":"hthumb/sinsoa.jpg","히어피부과":"hthumb/heerskin.jpg","히어산부인과":"hthumb/heerwomen.jpg","셀로라의원 (with 지유)":"hthumb/cellora.jpg","리프톤의원":"hthumb/lifton.jpg","청담서클의원":"hthumb/cheongdamcircle.jpg","루비성형외과(신사점)":"hthumb/ruby.jpg","벤자민의원":"hthumb/benjamin.jpg","고운몸의원":"hthumb/gowoonmom.jpg","티알 트리니티라파엘로 청담의원":"hthumb/tr.jpg","GV 성형외과":"hthumb/gv.jpg","페이스라인성형외과의원":"hthumb/faceline.jpg","강남서울안과의원":"hthumb/kseye.jpg"};
 var TRAITS=['1인 원장','원장 직접 상담·집도','원장 책임제','당일 상담 가능','당일 시술 가능','프라이빗 스위트 진료실(올인원)','가성비 중심 대형 시스템','줄기세포 치료 정식 인증','중국어 전담 인력 상주','한국인 이용 많은 병원','강남 외 지역도 무관'];
-var QUICK=['보톡스','필러','울쎄라','리쥬란','스킨부스터','리프팅','레이저토닝','제모','여드름','미백'];
+var QUICK=[
+ {g:'피부 시술',ks:[['보톡스'],['필러'],['스킨부스터'],['리쥬란'],['미백'],['색소'],['여드름'],['흉터'],['모공'],['점 제거','점'],['문신제거'],['레이저토닝','토닝']]},
+ {g:'리프팅·탄력',ks:[['울쎄라'],['써마지'],['온다'],['실리프팅'],['리프팅']]},
+ {g:'성형수술',ks:[['쌍꺼풀'],['눈매교정'],['눈성형','눈 '],['코성형','코 '],['안면윤곽','윤곽'],['지방흡입'],['지방이식'],['가슴성형','가슴'],['이중턱']]},
+ {g:'치과',ks:[['임플란트'],['치아교정','치과 / 교정'],['보철·심미','보철']]},
+ {g:'여성·검진',ks:[['여성의학 시술','여성'],['종합검진','검진']]},
+ {g:'바디·제모',ks:[['제모'],['바디보톡스'],['지방분해']]},
+ {g:'기타',ks:[['수액·영양주사','수액'],['모발이식','모발'],['줄기세포']]}
+];
 function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
 function won(n){return (n||0).toLocaleString('ko-KR')+'원';}
 
@@ -326,22 +334,22 @@ function renderHosps(append){
 
 /* ─── 맞춤 견적 마법사 ─── */
 var HOSPS=[], KWS=[], SEL_TRAITS=[], PREFER='';
+function addKwPair(l,v){ l=(l||'').trim(); v=(v||l).trim(); if(!l)return; if(!KWS.some(function(k){return k.v===v;}))KWS.push({l:l,v:v}); renderKws(); }
 fetch(API).then(function(r){return r.json();}).then(function(d){ HOSPS=(d.hospitals||[]); }).catch(function(){});
 (function(){
   var t=document.getElementById('mqtrack'); if(!t)return;
   var ps=Object.keys(HOSP_THUMB).slice(0,14).map(function(k){return THUMB_BASE+HOSP_THUMB[k];});
   t.innerHTML=ps.concat(ps).map(function(u){return '<img src="'+u+'" alt="협력 병원" loading="lazy">';}).join('');
 })();
-document.getElementById('quick').innerHTML=QUICK.map(function(k){return '<span class="chip" onclick="addKwVal(\''+k+'\')">'+k+'</span>';}).join('');
+document.getElementById('quick').innerHTML=QUICK.map(function(gr){
+  return '<div style="margin-top:10px;"><div style="font-size:11px;font-weight:800;color:var(--mute);margin-bottom:6px;">'+esc(gr.g)+'</div><div class="chips" style="margin-top:0;">'+gr.ks.map(function(k){var l=k[0],v=k[1]||k[0];return '<span class="chip" data-l="'+esc(l)+'" data-v="'+esc(v)+'" onclick="addKwChip(this)">'+esc(l)+'</span>';}).join('')+'</div></div>';
+}).join('');
+function addKwChip(el){ addKwPair(el.getAttribute('data-l'), el.getAttribute('data-v')); }
 function addKw(){ var v=document.getElementById('kwq').value.trim(); if(v){addKwVal(v);document.getElementById('kwq').value='';} }
-function addKwVal(v){
-  v=v.trim(); if(!v)return;
-  if(KWS.indexOf(v)<0)KWS.push(v);
-  renderKws();
-}
+function addKwVal(v){ addKwPair(v,v); }
 function delKw(i){KWS.splice(i,1);renderKws();}
 function renderKws(){
-  document.getElementById('kws').innerHTML=KWS.map(function(k,i){return '<span class="kw">'+esc(k)+'<b onclick="delKw('+i+')">✕</b></span>';}).join('');
+  document.getElementById('kws').innerHTML=KWS.map(function(k,i){return '<span class="kw">'+esc(k.l)+'<b onclick="delKw('+i+')">✕</b></span>';}).join('');
   document.getElementById('toStep2').disabled=!KWS.length;
 }
 function goStep(n){
@@ -354,8 +362,9 @@ function goStep(n){
 function quoteAll(){
   return HOSPS.map(function(h){
     var sum=0,hit=0,lines=[];
-    KWS.forEach(function(kw){
-      var k=kw.toLowerCase();
+    KWS.forEach(function(kwo){
+      var kw=kwo.l;
+      var k=kwo.v.toLowerCase();
       var m=h.items.filter(function(i){return (i.ko+' '+i.cat).toLowerCase().indexOf(k)>=0;});
       if(m.length){var best=m.reduce(function(a,b){return a.krw<=b.krw?a:b;});hit++;sum+=best.krw;lines.push({kw:kw,ko:best.ko,krw:best.krw});}
       else lines.push({kw:kw,ko:null,krw:0});
@@ -399,7 +408,7 @@ function submitMatch(){
   if(!name||!phone){err.textContent='이름과 연락처를 입력해주세요.';return;}
   var btn=document.getElementById('submitBtn'); btn.disabled=true; btn.textContent='확인 중…';
   fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({picks:KWS.map(function(k){return {kw:k};}),traits:SEL_TRAITS,prefer_anon:PREFER,name:name,phone:phone,memo:document.getElementById('f-memo').value.trim()})
+    body:JSON.stringify({picks:KWS.map(function(k){return {kw:k.v};}),traits:SEL_TRAITS,prefer_anon:PREFER,name:name,phone:phone,memo:document.getElementById('f-memo').value.trim()})
   }).then(function(r){return r.json();}).then(function(d){
     btn.disabled=false; btn.textContent='맞춤 병원 확인하기';
     if(d&&d.ok&&d.hospital){
