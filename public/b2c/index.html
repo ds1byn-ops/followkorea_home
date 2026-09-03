@@ -198,6 +198,8 @@ h2{font-size:clamp(20px,3.6vw,27px);font-weight:900;letter-spacing:-.5px;}
       </div>
       <div class="panel" id="p4">
         <div class="fform">
+          <label id="t-felig"></label>
+          <div id="f-elig" style="display:grid;gap:7px;"></div>
           <label id="t-fname"></label>
           <input id="f-name">
           <label id="t-fphone"></label>
@@ -291,6 +293,11 @@ var I18N={
   rTitle:'已为您找到符合条件的医院',
   rSub:'受理通知已通过短信发送。<br>顾问将尽快与您联系，告知最终报价与预约安排。<br>实际费用因个人情况而异，以咨询时告知为准。',
   restart:'重新开始',
+  eligLabel:'客户身份 * — 确认是否属于海外患者招揽服务对象',
+  eligOpts:['外国国籍，未加入韩国国民健康保险','已加入韩国国民健康保险的外国人','大韩民国国民'],
+  eligNeed:'请选择客户身份。',
+  rTitleInfo:'为您提供医院信息',
+  rSubInfo:'以下是符合您条件的医院信息。<br>依据韩国法律，已加入韩国国民健康保险者（含韩国国民）不适用咨询对接·招揽服务。<br>诊疗咨询与预约请直接联系医院。',
   errNeed:'请填写姓名和联系方式。',errNoMatch:'未找到符合条件的医院，请更换项目重试。',errRetry:'请稍后重试。如仍有问题请联系 contact@followkorea.co.kr',errNet:'网络错误 — 请稍后重试。',
   qcTag:'所选项目 {h}/{t} 项可做',qcNone:'未找到可做所选项目的合作医院，请更换项目名称重试。',qcMiss:'无该项目',
   lTitle:'注意事项',
@@ -329,6 +336,11 @@ var I18N={
   rTitle:'고객님 조건에 맞는 병원을 찾았습니다',
   rSub:'접수 안내를 문자로 보내드렸습니다.<br>상담원이 곧 연락드려 확정 견적과 예약을 안내해 드립니다.<br>견적 금액은 개인별 상태에 따라 달라질 수 있어 상담 시 정확히 안내됩니다.',
   restart:'처음으로',
+  eligLabel:'고객 구분 * — 해외 환자 유치 서비스 대상 확인',
+  eligOpts:['외국 국적이며, 한국 국민건강보험에 가입되어 있지 않습니다','한국 국민건강보험에 가입된 외국인입니다','대한민국 국민입니다'],
+  eligNeed:'고객 구분을 선택해주세요.',
+  rTitleInfo:'병원 정보를 안내드립니다',
+  rSubInfo:'선택하신 조건에 맞는 병원 정보입니다.<br>대한민국 국민건강보험 가입자(내국인 포함)에게는 법령상 상담 연결·유치 서비스를 제공하지 않습니다.<br>진료 상담과 예약은 병원에 직접 문의해 주세요.',
   errNeed:'이름과 연락처를 입력해주세요.',errNoMatch:'조건에 맞는 병원을 찾지 못했습니다. 시술 선택을 바꿔보세요.',errRetry:'잠시 후 다시 시도해주세요. 계속 안 되면 contact@followkorea.co.kr로 문의해주세요.',errNet:'네트워크 오류 — 잠시 후 다시 시도해주세요.',
   qcTag:'선택 시술 {h}/{t}개 취급',qcNone:'선택하신 시술을 취급하는 협력 병원을 찾지 못했습니다. 시술명을 바꿔서 검색해 보세요.',qcMiss:'해당 항목 없음',
   lTitle:'유의사항',
@@ -367,6 +379,11 @@ var I18N={
   rTitle:'We found your matching clinic',
   rSub:'A confirmation was sent by SMS.<br>Our consultant will contact you shortly with the final quote and booking.<br>Actual costs vary by individual condition.',
   restart:'Start over',
+  eligLabel:'Eligibility * — for the international patient service',
+  eligOpts:['Foreign national, NOT enrolled in Korean NHIS','Foreigner enrolled in Korean NHIS','Korean citizen'],
+  eligNeed:'Please select your eligibility.',
+  rTitleInfo:'Clinic information',
+  rSubInfo:'Here is the clinic matching your criteria.<br>By Korean law, consultation referral is not provided to Korean NHIS members (including Korean citizens).<br>Please contact the clinic directly for consultation and booking.',
   errNeed:'Please enter your name and phone.',errNoMatch:'No clinic matches those procedures — try different ones.',errRetry:'Please try again later, or email contact@followkorea.co.kr',errNet:'Network error — please try again.',
   qcTag:'{h}/{t} of your procedures available',qcNone:'No partner clinic offers the selected procedures. Try different names.',qcMiss:'not available',
   lTitle:'Notes',
@@ -405,6 +422,11 @@ var I18N={
   rTitle:'条件に合う病院が見つかりました',
   rSub:'受付案内をSMSでお送りしました。<br>担当者よりご連絡し、最終見積もりとご予約をご案内します。<br>実際の費用は個人の状態により異なります。',
   restart:'最初から',
+  eligLabel:'お客様区分 * — 海外患者誘致サービス対象の確認',
+  eligOpts:['外国籍で、韓国の国民健康保険に未加入です','韓国の国民健康保険に加入している外国人です','大韓民国国民です'],
+  eligNeed:'お客様区分を選択してください。',
+  rTitleInfo:'病院情報のご案内',
+  rSubInfo:'ご条件に合う病院情報です。<br>韓国の法令上、国民健康保険加入者（韓国国民を含む）には相談仲介・誘致サービスを提供していません。<br>診療相談・ご予約は病院へ直接お問い合わせください。',
   errNeed:'お名前と連絡先を入力してください。',errNoMatch:'条件に合う病院が見つかりません。施術を変えてお試しください。',errRetry:'しばらくして再度お試しください。',errNet:'ネットワークエラー — 再度お試しください。',
   qcTag:'選択施術 {h}/{t} 件対応',qcNone:'選択した施術を扱う提携病院が見つかりません。',qcMiss:'該当なし',
   lTitle:'ご注意',
@@ -473,6 +495,12 @@ function applyLang(l){
   document.getElementById('t-hint3').textContent=t.hint3;
   document.getElementById('t-back3').textContent=t.back;
   document.getElementById('t-next3').textContent=t.next3;
+  document.getElementById('t-felig').textContent=t.eligLabel;
+  document.getElementById('f-elig').innerHTML=['foreign','nhis_foreigner','korean'].map(function(v,i){
+    return '<label style="display:flex;align-items:flex-start;gap:8px;font-size:13px;font-weight:600;color:#3d4a63;cursor:pointer;border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;background:#fbfcfe;">'
+      +'<input type="radio" name="elig" value="'+v+'"'+(ELIG===v?' checked':'')+' onchange="ELIG=this.value" style="margin-top:3px;accent-color:var(--brand);">'
+      +'<span>'+esc(t.eligOpts[i])+'</span></label>';
+  }).join('');
   document.getElementById('t-fname').textContent=t.fname;
   document.getElementById('t-fphone').textContent=t.fphone;
   document.getElementById('t-fmemo').textContent=t.fmemo;
@@ -547,7 +575,7 @@ function renderHosps(keepPage){
   document.getElementById('hmoreBtn').style.display=f.length>show.length?'block':'none';
 }
 
-var HOSPS=[], KWS=[], SEL_TRAITS=[], PREFER='';
+var HOSPS=[], KWS=[], SEL_TRAITS=[], PREFER='', ELIG='';
 fetch(API).then(function(r){return r.json();}).then(function(d){ HOSPS=(d.hospitals||[]); }).catch(function(){});
 (function(){
   var mt=document.getElementById('mqtrack'); if(!mt)return;
@@ -618,7 +646,7 @@ function togT(el){
   else{SEL_TRAITS.push(t);el.classList.add('on');}
 }
 function resetWizard(){
-  KWS=[]; SEL_TRAITS=[]; PREFER='';
+  KWS=[]; SEL_TRAITS=[]; PREFER=''; ELIG='';
   renderKws(); renderQuick();
   document.querySelectorAll('.topt').forEach(function(e){e.classList.remove('on');});
   document.getElementById('qcards').innerHTML='';
@@ -632,13 +660,22 @@ function submitMatch(){
   var phone=document.getElementById('f-phone').value.trim();
   var err=document.getElementById('werr'); err.textContent='';
   if(!name||!phone){err.textContent=t.errNeed;return;}
+  if(!ELIG){err.textContent=t.eligNeed;return;}
   var btn=document.getElementById('submitBtn'); btn.disabled=true; btn.textContent=t.submitting;
   fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({picks:KWS.map(function(k){return {kw:k.v};}),traits:SEL_TRAITS,prefer_anon:PREFER,name:name,phone:phone,memo:document.getElementById('f-memo').value.trim(),lang:LANG})
+    body:JSON.stringify({picks:KWS.map(function(k){return {kw:k.v};}),traits:SEL_TRAITS,prefer_anon:PREFER,name:name,phone:phone,memo:document.getElementById('f-memo').value.trim(),lang:LANG,elig:ELIG})
   }).then(function(r){return r.json();}).then(function(d){
     btn.disabled=false; btn.textContent=t.submit;
     if(d&&d.ok&&d.hospital){
       document.getElementById('r-hosp').textContent=d.hospital;
+      // 내국인·건보가입자: 정보 안내만 (상담 연결·문자 없음)
+      if(d.info_only){
+        document.getElementById('t-r-title').textContent=t.rTitleInfo;
+        document.getElementById('t-r-sub').innerHTML=t.rSubInfo;
+      }else{
+        document.getElementById('t-r-title').textContent=t.rTitle;
+        document.getElementById('t-r-sub').innerHTML=t.rSub;
+      }
       goStep(5);
     }else if(d&&d.error==='no_match'){ err.textContent=t.errNoMatch; }
     else{ err.textContent=t.errRetry; }
