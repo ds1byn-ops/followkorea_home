@@ -109,6 +109,9 @@ h2{font-size:clamp(20px,3.6vw,27px);font-weight:900;letter-spacing:-.5px;}
 .topt.on{border-color:var(--brand);background:#FDEEF1;color:var(--brand-d);}
 .fform label{display:block;font-size:13px;font-weight:800;color:#2a3550;margin:14px 0 6px;}
 .fform input,.fform textarea{width:100%;padding:13px 14px;border:1px solid #d8deea;border-radius:10px;font-size:14.5px;font-family:inherit;background:#fbfcfe;}
+#f-elig label{display:flex;align-items:flex-start;gap:9px;text-align:left;font-size:13px;font-weight:600;color:#3d4a63;cursor:pointer;border:1.5px solid var(--line);border-radius:10px;padding:11px 13px;background:#fbfcfe;margin:0;}
+#f-elig input[type=radio]{width:16px;height:16px;flex:none;padding:0;margin:2px 0 0;accent-color:var(--brand);}
+#f-elig label:has(input:checked){border-color:var(--brand);background:#FDEEF1;}
 .result{text-align:center;padding:22px 8px;}
 .result .big{font-size:44px;}
 .result h3{font-size:20px;font-weight:900;margin:10px 0 4px;}
@@ -497,8 +500,8 @@ function applyLang(l){
   document.getElementById('t-next3').textContent=t.next3;
   document.getElementById('t-felig').textContent=t.eligLabel;
   document.getElementById('f-elig').innerHTML=['foreign','nhis_foreigner','korean'].map(function(v,i){
-    return '<label style="display:flex;align-items:flex-start;gap:8px;font-size:13px;font-weight:600;color:#3d4a63;cursor:pointer;border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;background:#fbfcfe;">'
-      +'<input type="radio" name="elig" value="'+v+'"'+(ELIG===v?' checked':'')+' onchange="ELIG=this.value" style="margin-top:3px;accent-color:var(--brand);">'
+    return '<label>'
+      +'<input type="radio" name="elig" value="'+v+'"'+(ELIG===v?' checked':'')+' onchange="ELIG=this.value">'
       +'<span>'+esc(t.eligOpts[i])+'</span></label>';
   }).join('');
   document.getElementById('t-fname').textContent=t.fname;
