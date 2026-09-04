@@ -164,7 +164,7 @@ const WH_I18N: Record<string, {
   tag: string; title: string; sub: string;
   steps: { t: string; d: string; icon: string }[];
   points: { t: string; d: string }[];
-  cta: string; note: string;
+  cta: string; note: string; videoCap: string;
 }> = {
   KR: {
     tag: 'Wanghong Review Program',
@@ -183,6 +183,7 @@ const WH_I18N: Record<string, {
     ],
     cta: '체험단 상담 신청',
     note: '진료는 각 협력 의료기관이 수행하며, 당사는 섭외·일정·콘텐츠 제작을 지원합니다.',
+    videoCap: '왕홍이 직접 병원을 방문해 체험하고, 그대로 샤오홍슈 피드에 올립니다 — 실제 촬영 영상',
   },
   EN: {
     tag: 'Wanghong Review Program',
@@ -201,6 +202,7 @@ const WH_I18N: Record<string, {
     ],
     cta: 'Request a consultation',
     note: 'Medical treatment is provided by each partner institution; we support casting, scheduling and content production.',
+    videoCap: 'A wanghong visits the clinic in person and posts the experience straight to her Xiaohongshu feed — actual footage',
   },
   CN: {
     tag: 'Wanghong Review Program',
@@ -219,6 +221,7 @@ const WH_I18N: Record<string, {
     ],
     cta: '咨询体验团方案',
     note: '诊疗由各合作医疗机构实施，我方提供邀约 · 行程 · 内容制作支持。',
+    videoCap: '网红亲自到院体验，直接发布到小红书笔记 — 实拍视频',
   },
   JP: {
     tag: 'Wanghong Review Program',
@@ -237,6 +240,7 @@ const WH_I18N: Record<string, {
     ],
     cta: '体験プログラムを相談',
     note: '診療は各提携医療機関が行い、当社は手配・日程・コンテンツ制作を支援します。',
+    videoCap: 'ワンホンが実際に来院して体験し、そのまま小紅書フィードに投稿します — 実際の撮影映像',
   },
   VI: {
     tag: 'Wanghong Review Program',
@@ -255,6 +259,7 @@ const WH_I18N: Record<string, {
     ],
     cta: 'Đăng ký tư vấn',
     note: 'Việc điều trị do từng cơ sở y tế đối tác thực hiện; chúng tôi hỗ trợ mời, lên lịch và sản xuất nội dung.',
+    videoCap: 'KOL đến tận bệnh viện trải nghiệm và đăng thẳng lên Xiaohongshu — video thực tế',
   },
   ID: {
     tag: 'Wanghong Review Program',
@@ -273,6 +278,7 @@ const WH_I18N: Record<string, {
     ],
     cta: 'Ajukan konsultasi',
     note: 'Perawatan medis dilakukan oleh masing-masing institusi mitra; kami mendukung pemilihan, penjadwalan dan produksi konten.',
+    videoCap: 'Influencer datang langsung ke klinik dan mengunggahnya ke feed Xiaohongshu — video asli',
   },
   RU: {
     tag: 'Wanghong Review Program',
@@ -291,6 +297,7 @@ const WH_I18N: Record<string, {
     ],
     cta: 'Запросить консультацию',
     note: 'Лечение проводят партнёрские медучреждения; мы обеспечиваем подбор, график и производство контента.',
+    videoCap: 'Ванхун лично посещает клинику и публикует опыт в ленте Xiaohongshu — реальное видео',
   },
 };
 
@@ -804,13 +811,28 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
             {/* 04-2. 왕홍 리뷰 체험단 — 병원 대상 B2B 소개 */}
       <section id="wanghong" className="py-20 md:py-32 px-6 md:px-12 lg:px-24 bg-white scroll-mt-24 overflow-hidden">
         <div className="max-w-[1440px] mx-auto">
-          <Reveal>
-            <div className="max-w-3xl">
-              <span className="text-[10px] md:text-xs font-bold tracking-[0.3em] text-[#5a82c2] uppercase">{wh.tag}</span>
-              <h2 className={`mt-4 text-[30px] md:text-[46px] font-black tracking-tighter leading-[1.15] text-gray-900 whitespace-pre-line ${krBreak}`}>{wh.title}</h2>
-              <p className={`mt-6 text-base md:text-lg text-gray-500 font-medium leading-relaxed ${krBreak}`}>{wh.sub}</p>
-            </div>
-          </Reveal>
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-12 lg:gap-20 items-center">
+            <Reveal>
+              <div className="max-w-3xl">
+                <span className="text-[10px] md:text-xs font-bold tracking-[0.3em] text-[#5a82c2] uppercase">{wh.tag}</span>
+                <h2 className={`mt-4 text-[30px] md:text-[46px] font-black tracking-tighter leading-[1.15] text-gray-900 whitespace-pre-line ${krBreak}`}>{wh.title}</h2>
+                <p className={`mt-6 text-base md:text-lg text-gray-500 font-medium leading-relaxed ${krBreak}`}>{wh.sub}</p>
+              </div>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <div className="mx-auto w-[240px] md:w-[260px]">
+                <div className="relative rounded-[2.4rem] border border-gray-200 bg-gray-900 p-2 shadow-2xl shadow-gray-300/60">
+                  <div className="absolute top-3.5 left-1/2 -translate-x-1/2 w-16 h-1.5 rounded-full bg-gray-700 z-10"></div>
+                  <video
+                    src="/xhs-hospital-visit.mp4"
+                    className="w-full aspect-[9/16] object-cover rounded-[1.9rem] bg-black"
+                    autoPlay muted loop playsInline controls preload="metadata"
+                  />
+                </div>
+                <p className={`mt-4 text-center text-[12.5px] text-gray-500 font-medium leading-relaxed px-2 ${krBreak}`}>{wh.videoCap}</p>
+              </div>
+            </Reveal>
+          </div>
 
           {/* 진행 4단계 */}
           <div className="mt-14 md:mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
