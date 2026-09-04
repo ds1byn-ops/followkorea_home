@@ -164,7 +164,7 @@ const WH_I18N: Record<string, {
   tag: string; title: string; sub: string;
   steps: { t: string; d: string; icon: string }[];
   points: { t: string; d: string }[];
-  cta: string; note: string; videoCap: string;
+  cta: string; note: string; videoCap: string; proofCta: string;
 }> = {
   KR: {
     tag: 'Wanghong Review Program',
@@ -184,6 +184,7 @@ const WH_I18N: Record<string, {
     cta: '체험단 상담 신청',
     note: '진료는 각 협력 의료기관이 수행하며, 당사는 섭외·일정·콘텐츠 제작을 지원합니다.',
     videoCap: '왕홍이 직접 방문해 체험하고, 샤오홍슈 피드에 올립니다',
+    proofCta: '실제 운영 기록 전체 보기',
   },
   EN: {
     tag: 'Wanghong Review Program',
@@ -203,6 +204,7 @@ const WH_I18N: Record<string, {
     cta: 'Request a consultation',
     note: 'Medical treatment is provided by each partner institution; we support casting, scheduling and content production.',
     videoCap: 'Filmed on a real clinic visit — posted to Xiaohongshu',
+    proofCta: 'See the full operations log',
   },
   CN: {
     tag: 'Wanghong Review Program',
@@ -222,6 +224,7 @@ const WH_I18N: Record<string, {
     cta: '咨询体验团方案',
     note: '诊疗由各合作医疗机构实施，我方提供邀约 · 行程 · 内容制作支持。',
     videoCap: '网红亲自到院体验，直接发布到小红书',
+    proofCta: '查看完整运营记录',
   },
   JP: {
     tag: 'Wanghong Review Program',
@@ -241,6 +244,7 @@ const WH_I18N: Record<string, {
     cta: '体験プログラムを相談',
     note: '診療は各提携医療機関が行い、当社は手配・日程・コンテンツ制作を支援します。',
     videoCap: 'ワンホンが実際に来院し、小紅書に投稿した映像',
+    proofCta: '運営記録をすべて見る',
   },
   VI: {
     tag: 'Wanghong Review Program',
@@ -260,6 +264,7 @@ const WH_I18N: Record<string, {
     cta: 'Đăng ký tư vấn',
     note: 'Việc điều trị do từng cơ sở y tế đối tác thực hiện; chúng tôi hỗ trợ mời, lên lịch và sản xuất nội dung.',
     videoCap: 'KOL đến trải nghiệm và đăng lên Xiaohongshu',
+    proofCta: 'Xem toàn bộ nhật ký vận hành',
   },
   ID: {
     tag: 'Wanghong Review Program',
@@ -279,6 +284,7 @@ const WH_I18N: Record<string, {
     cta: 'Ajukan konsultasi',
     note: 'Perawatan medis dilakukan oleh masing-masing institusi mitra; kami mendukung pemilihan, penjadwalan dan produksi konten.',
     videoCap: 'Influencer berkunjung dan mengunggah ke Xiaohongshu',
+    proofCta: 'Lihat catatan operasional lengkap',
   },
   RU: {
     tag: 'Wanghong Review Program',
@@ -298,6 +304,7 @@ const WH_I18N: Record<string, {
     cta: 'Запросить консультацию',
     note: 'Лечение проводят партнёрские медучреждения; мы обеспечиваем подбор, график и производство контента.',
     videoCap: 'Ванхун посещает клинику и публикует в Xiaohongshu',
+    proofCta: 'Смотреть все записи работы',
   },
 };
 
@@ -829,6 +836,15 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
                   />
                 </div>
                 <p className="mt-4 text-center text-[12.5px] text-gray-500 font-medium leading-relaxed px-2 whitespace-nowrap">{wh.videoCap}</p>
+                <div className="mt-5 grid grid-cols-2 gap-3">
+                  <img src="/proof-1.jpg" alt="wechat operations 1" loading="lazy" className="w-full h-36 object-cover object-top rounded-xl border border-gray-200" />
+                  <img src="/proof-2.jpg" alt="wechat operations 2" loading="lazy" className="w-full h-36 object-cover object-top rounded-xl border border-gray-200" />
+                </div>
+                <a href="https://gnpulse.kr/#proof" target="_blank" rel="noopener"
+                   className="mt-4 flex items-center justify-center gap-2 w-full border border-gray-300 hover:border-[#5a82c2] hover:text-[#5a82c2] text-gray-600 font-bold text-[13.5px] py-3 rounded-full transition-colors">
+                  {wh.proofCta}
+                  <span className="iconify" data-icon="solar:arrow-right-up-linear"></span>
+                </a>
               </div>
             </Reveal>
           </div>
