@@ -55,7 +55,8 @@ export const HOSPITAL_DATA: HospDetail[] = [
         "title": "부원장",
         "spec": ["대한미용학회 정회원", "피부·수광", "스킨부스터"]
       }
-    ]
+    ],
+    "thumb": "hthumb/reberry.jpg"
   },
   {
     "name": {
