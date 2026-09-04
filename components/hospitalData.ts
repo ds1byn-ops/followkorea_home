@@ -3054,16 +3054,16 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "cat": "피부",
     "badge": "NEW",
     "treats": {
-      "kr": ["보톡스", "필러", "스킨부스터", "리프팅", "색소치료"],
-      "en": ["Botox", "Filler", "Skin Booster", "Lifting", "Pigmentation Treatment"],
-      "zh": ["肉毒素", "填充", "水光针", "提升", "色素治疗"]
+      "kr": ["울쎄라", "써마지", "소프웨이브", "리프팅"],
+      "en": ["Ulthera", "Thermage", "Sofwave", "Lifting"],
+      "zh": ["超声刀", "热玛吉", "索夫波", "提升"]
     },
     "hours": "예약제 (진료시간 문의)",
     "loc": { "ko": "서울 강남", "zh": "首尔江南", "en": "Gangnam, Seoul" },
     "overview": {
-      "kr": "온오프피부과의원은 보톡스, 필러, 스킨부스터, 리프팅, 색소치료 등 종합 피부 시술을 제공합니다.",
-      "en": "ONOFF Dermatology Clinic offers comprehensive skin treatments including Botox, filler, skin booster, lifting, and pigmentation treatment.",
-      "zh": "ONOFF皮肤科提供肉毒素、填充、水光针、提升及色素治疗等综合皮肤管理项目。"
+      "kr": "온오프피부과의원은 울쎄라, 써마지, 소프웨이브 등 리프팅 시술을 대표로 하는 피부과입니다.",
+      "en": "ONOFF Dermatology Clinic specializes in lifting treatments such as Ulthera, Thermage and Sofwave.",
+      "zh": "ONOFF皮肤科以超声刀、热玛吉、索夫波等提升类抗衰项目为特色。"
     },
     "doctors": []
   },
