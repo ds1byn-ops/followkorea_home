@@ -833,6 +833,8 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
                     src="/xhs-hospital-visit.mp4"
                     className="w-full aspect-video object-cover rounded-[1.2rem] bg-black"
                     autoPlay muted loop playsInline controls preload="metadata"
+                    controlsList="nodownload noremoteplayback" disablePictureInPicture
+                    onContextMenu={(e) => e.preventDefault()}
                   />
                 </div>
                 <p className="mt-4 text-center text-[12.5px] text-gray-500 font-medium leading-relaxed px-2 whitespace-nowrap">{wh.videoCap}</p>
