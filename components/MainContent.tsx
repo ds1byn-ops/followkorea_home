@@ -820,12 +820,11 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
               </div>
             </Reveal>
             <Reveal delay={0.1}>
-              <div className="mx-auto w-[240px] md:w-[260px]">
-                <div className="relative rounded-[2.4rem] border border-gray-200 bg-gray-900 p-2 shadow-2xl shadow-gray-300/60">
-                  <div className="absolute top-3.5 left-1/2 -translate-x-1/2 w-16 h-1.5 rounded-full bg-gray-700 z-10"></div>
+              <div className="mx-auto w-full max-w-md lg:w-[440px]">
+                <div className="rounded-[1.6rem] bg-gray-900 p-2 shadow-2xl shadow-gray-300/60">
                   <video
                     src="/xhs-hospital-visit.mp4"
-                    className="w-full aspect-[9/16] object-cover rounded-[1.9rem] bg-black"
+                    className="w-full aspect-video object-cover rounded-[1.2rem] bg-black"
                     autoPlay muted loop playsInline controls preload="metadata"
                   />
                 </div>
