@@ -17,6 +17,48 @@ export interface HospDetail {
 export const HOSPITAL_DATA: HospDetail[] = [
   {
     "name": {
+      "kr": "리베리의원 강남점",
+      "en": "RE:BERRY Clinic Gangnam",
+      "zh": "丽贝瑞医院 江南店"
+    },
+    "dept": {
+      "kr": "피부/레이저·리프팅·쁘띠",
+      "en": "Skin / Laser·Lifting·Aesthetic",
+      "zh": "皮肤/激光·提升·轻医美"
+    },
+    "cat": "피부",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["울쎄라", "써마지", "온다", "실리프팅", "수광·리쥬란", "필러", "보톡스", "줄기세포"],
+      "en": ["Ultherapy", "Thermage", "ONDA", "Thread Lifting", "Skin Booster", "Filler", "Botox", "Stem Cell"],
+      "zh": ["超声刀", "热玛吉", "ONDA", "线雕提升", "水光·丽珠兰", "玻尿酸", "肉毒", "干细胞"]
+    },
+    "hours": "By appointment / 예약제 (Tel 02-2039-2822)",
+    "loc": {
+      "ko": "서울 서초구 신논현(강남대로)",
+      "zh": "首尔瑞草区·新论岘(江南大路)",
+      "en": "Sinnonhyeon, Seoul"
+    },
+    "overview": {
+      "kr": "리베리의원 강남점(RE:BERRY)은 신논현역 도보권 KI타워 지하1·2층의 피부·레이저 전문 의원입니다. 울쎄라 프라임·써마지 FLX·온다·소프웨이브 등 리프팅 장비와 리쥬란·콜라겐 수광·실리프팅·줄기세포 프로그램, SRE 시그니처 맞춤 케어를 운영합니다.",
+      "en": "RE:BERRY Clinic Gangnam, steps from Sinnonhyeon Station (B1-B2, KI Tower), focuses on lifting devices such as Ulthera Prime, Thermage FLX, ONDA and Sofwave, alongside Rejuran, collagen boosters, thread lifting, stem-cell programs and the SRE signature care series.",
+      "zh": "丽贝瑞医院江南店(RE:BERRY)位于新论岘站步行圈KI塔地下1·2层。主打Ulthera Prime·Thermage FLX·ONDA·Sofwave等提升设备与丽珠兰·胶原水光·线雕·干细胞项目，提供SRE签名系列定制护理。"
+    },
+    "doctors": [
+      {
+        "name": "류윤곤",
+        "title": "대표원장",
+        "spec": ["대한미용성형레이저학회 정회원", "리프팅·레이저", "쁘띠·주사시술"]
+      },
+      {
+        "name": "오예진",
+        "title": "부원장",
+        "spec": ["대한미용학회 정회원", "피부·수광", "스킨부스터"]
+      }
+    ]
+  },
+  {
+    "name": {
       "kr": "더이다의원",
       "en": "The ida Clinic",
       "zh": "ida医疗美容诊所"
