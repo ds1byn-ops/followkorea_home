@@ -50,7 +50,8 @@ export const HOSPITAL_DATA: HospDetail[] = [
         "title": "대표원장",
         "spec": ["가슴성형·가슴교정", "가슴 재수술", "유방재건"]
       }
-    ]
+    ],
+    "thumb": "hthumb/melon.jpg"
   },
   {
     "name": {
@@ -2908,7 +2909,8 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "en": "JD Skin & Plastic Clinic offers stem cell therapy, Shrink, and Juvelook skin regeneration, alongside a Korean Medicine (Hanbang) department.",
       "zh": "JD皮肤整形（张德）提供干细胞疗法、Shrink及Juvelook等皮肤再生项目，同时设有韩医（韩方）诊疗科室。"
     },
-    "doctors": []
+    "doctors": [],
+    "thumb": "hthumb/jdskin.jpg"
   },
   {
     "name": { "kr": "나나성형외과", "en": "NANA Plastic Surgery", "zh": "NANA整形外科" },
@@ -3126,7 +3128,8 @@ export const HOSPITAL_DATA: HospDetail[] = [
       { "name": "김회원", "title": "대표원장", "spec": ["피부과"] },
       { "name": "김우형", "title": "원장", "spec": ["피부과"] },
       { "name": "조임철", "title": "원장", "spec": ["피부과"] }
-    ]
+    ],
+    "thumb": "hthumb/jiwoo.jpg"
   },
   {
     "name": { "kr": "온오프피부과의원", "en": "ONOFF Dermatology Clinic", "zh": "ONOFF皮肤科" },
@@ -3145,7 +3148,8 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "en": "ONOFF Dermatology Clinic specializes in lifting treatments such as Ulthera, Thermage and Sofwave.",
       "zh": "ONOFF皮肤科以超声刀、热玛吉、索夫波等提升类抗衰项目为特色。"
     },
-    "doctors": []
+    "doctors": [],
+    "thumb": "hthumb/onoff.jpg"
   },
   {
     "name": { "kr": "셀온피부과의원", "en": "Cellon Clinic", "zh": "CELLON皮肤科" },
@@ -3166,7 +3170,8 @@ export const HOSPITAL_DATA: HospDetail[] = [
     },
     "doctors": [
       { "name": "강승훈", "title": "대표원장", "spec": ["피부과 전문의"] }
-    ]
+    ],
+    "thumb": "hthumb/cellon.jpg"
   },
   {
     "name": { "kr": "아우레아의원", "en": "Aurea Clinic", "zh": "AUREA皮肤科" },
@@ -3187,6 +3192,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
     },
     "doctors": [
       { "name": "강대영", "title": "대표원장", "spec": ["피부클리닉"] }
-    ]
+    ],
+    "thumb": "hthumb/aurea.jpg"
   }
 ];
