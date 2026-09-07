@@ -17,6 +17,43 @@ export interface HospDetail {
 export const HOSPITAL_DATA: HospDetail[] = [
   {
     "name": {
+      "kr": "멜론성형외과",
+      "en": "MELON Plastic Surgery",
+      "zh": "MELON整形外科"
+    },
+    "dept": {
+      "kr": "성형외과/가슴성형 전문",
+      "en": "Plastic Surgery / Breast Specialist",
+      "zh": "整形外科/胸部整形专科"
+    },
+    "cat": "성형외과",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["가슴성형(모티바·멘토)", "가슴교정", "가슴 재수술", "유두교정", "여유증", "부유방", "유방재건"],
+      "en": ["Breast Augmentation (Motiva·Mentor)", "Breast Correction", "Revision Surgery", "Nipple Correction", "Gynecomastia", "Accessory Breast", "Breast Reconstruction"],
+      "zh": ["假体隆胸(魔滴·曼托)", "胸部矫正", "胸部修复手术", "乳头矫正", "男性乳房发育", "副乳", "乳房再造"]
+    },
+    "hours": "Mon-Thu 09:30-18:30 / Fri 09:30-20:00 / Sat 09:30-16:00 / Sun·Holiday Closed",
+    "loc": {
+      "ko": "서울 강남구 강남역(테헤란로)",
+      "zh": "首尔江南区·江南站(德黑兰路)",
+      "en": "Gangnam Stn., Seoul"
+    },
+    "overview": {
+      "kr": "멜론성형외과는 강남역 인근 서림빌딩 6층의 가슴성형 전문 의원입니다. 김주원 대표원장이 직접 진료하며 모티바·멘토 보형물 가슴성형과 처진가슴 교정·축소·재수술·유두교정·여유증·유방재건까지, 주치의의 1:1 세심한 상담으로 최적의 모양을 설계합니다.",
+      "en": "MELON Plastic Surgery, near Gangnam Station, is a breast surgery specialist clinic led by Dr. Kim Ju-won — covering Motiva and Mentor implant augmentation, ptosis correction, reduction, revision surgery, nipple correction, gynecomastia and breast reconstruction with meticulous one-on-one consultation.",
+      "zh": "MELON整形外科是位于江南站商圈的胸部整形专科医院，由金周源代表院长亲自主诊。专注于魔滴(Motiva)·曼托(Mentor)假体隆胸与下垂矫正·缩胸·修复手术·乳头矫正·男性乳房发育·乳房再造，以主治医生一对一细致面诊著称。"
+    },
+    "doctors": [
+      {
+        "name": "김주원",
+        "title": "대표원장",
+        "spec": ["가슴성형·가슴교정", "가슴 재수술", "유방재건"]
+      }
+    ]
+  },
+  {
+    "name": {
       "kr": "리베리의원 강남점",
       "en": "RE:BERRY Clinic Gangnam",
       "zh": "丽贝瑞医院 江南店"
