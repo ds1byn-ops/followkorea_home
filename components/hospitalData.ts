@@ -3194,5 +3194,39 @@ export const HOSPITAL_DATA: HospDetail[] = [
       { "name": "강대영", "title": "대표원장", "spec": ["피부클리닉"] }
     ],
     "thumb": "hthumb/aurea.jpg"
+  },
+  {
+    "name": {
+      "kr": "타토아의원",
+      "en": "TATOA Clinic (Sinsa)",
+      "zh": "TATOA皮肤科(新沙)"
+    },
+    "dept": {
+      "kr": "피부과 (문신·반영구 제거 특화)",
+      "en": "Dermatology (Tattoo & PMU Removal)",
+      "zh": "皮肤科 (纹身·半永久去除特化)"
+    },
+    "cat": "피부",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["문신·반영구 제거", "레이저토닝", "제모", "보톡스·필러", "실리프팅"],
+      "en": ["Tattoo & PMU Removal", "Laser Toning", "Hair Removal", "Botox & Filler", "Thread Lift"],
+      "zh": ["纹身·半永久去除", "激光净肤", "脱毛", "肉毒·玻尿酸", "线雕提升"]
+    },
+    "hours": "Mon-Fri 10:00-20:00 / Sat 10:00-15:00 (Sun/Holiday Closed)",
+    "loc": {
+      "ko": "서울 강남구 신사역",
+      "zh": "首尔江南区·新沙站",
+      "en": "Sinsa Stn., Seoul"
+    },
+    "overview": {
+      "kr": "타토아의원은 신사역 인근 ICT타워 2층의 피부과로, 문신·반영구 제거와 레이저 피부관리에 특화되어 있습니다. 젠틀맥스프로·울쎄라·써마지·슈링크 등 장비를 보유하며 원주점·명동센터를 함께 운영합니다.",
+      "en": "TATOA Clinic, on the 2nd floor of ICT Tower near Sinsa Station, specializes in tattoo & permanent-makeup removal and laser skin care, equipped with GentleMax Pro, Ulthera, Thermage and Shurink, with branches in Wonju and Myeongdong.",
+      "zh": "TATOA皮肤科位于新沙站旁ICT大厦2层，专注纹身·半永久去除与激光皮肤管理，拥有GentleMax Pro、Ulthera、Thermage、Shurink等设备，并在原州和明洞设有分支。"
+    },
+    "doctors": [
+      { "name": "최동준", "title": "대표원장", "spec": ["문신·반영구 제거", "레이저 피부관리"] }
+    ],
+    "thumb": "hthumb/tatoa.jpg"
   }
 ];
