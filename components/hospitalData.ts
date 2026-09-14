@@ -3296,5 +3296,31 @@ export const HOSPITAL_DATA: HospDetail[] = [
       { "name": "최승호", "title": "대표원장", "spec": ["눈성형", "코성형·재수술"] }
     ],
     "thumb": "hthumb/chai.jpg"
+  },
+  {
+    "name": { "kr": "강남JS병원", "en": "Gangnam JS Hospital", "zh": "江南JS医院" },
+    "dept": { "kr": "정형외과·신경외과", "en": "Orthopedics · Neurosurgery", "zh": "骨科·神经外科" },
+    "cat": "정형·척추",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["줄기세포 연골재생", "척추내시경", "전방십자인대 재건", "BMAC 주사", "인공관절"],
+      "en": ["Stem Cell Cartilage Regeneration", "Endoscopic Spine Surgery", "ACL Reconstruction", "BMAC Injection", "Joint Surgery"],
+      "zh": ["干细胞软骨再生", "脊柱内镜", "前交叉韧带重建", "BMAC注射", "关节手术"]
+    },
+    "hours": "Mon-Fri 09:00-18:00 / Sat 09:00-13:00",
+    "loc": {
+      "ko": "서울 강남구 도곡로 122",
+      "zh": "首尔江南区·道谷路122",
+      "en": "122 Dogok-ro, Gangnam, Seoul"
+    },
+    "overview": {
+      "kr": "강남JS병원(Gangnam JS Hospital)은 강남 도곡로에 위치한 척추·관절 전문병원으로, 대표원장 송준섭을 중심으로 줄기세포 연골재생(카티스템), 척추내시경 수술, 스포츠 손상·관절 치료를 전문으로 하며 국제환자 전담 진료를 제공합니다.",
+      "en": "Gangnam JS Hospital is a spine and joint specialty hospital in Dogok-ro, Gangnam, led by Dr. Song Jun-seob, specializing in stem cell cartilage regeneration (Cartistem), endoscopic spine surgery, and sports/joint treatment with a dedicated international patient service.",
+      "zh": "江南JS医院（Gangnam JS Hospital）位于首尔江南道谷路，是脊柱·关节专科医院，专注于干细胞软骨再生（Cartistem）、脊柱内镜手术、运动损伤及关节治疗，设有国际患者专属诊疗服务。"
+    },
+    "doctors": [
+      { "name": "송준섭", "title": "대표원장", "spec": ["정형외과 전문의"] },
+      { "name": "김나민", "title": "병원장", "spec": ["정형외과"] }
+    ]
   }
 ];
