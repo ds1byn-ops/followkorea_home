@@ -3228,5 +3228,39 @@ export const HOSPITAL_DATA: HospDetail[] = [
       { "name": "최동준", "title": "대표원장", "spec": ["문신·반영구 제거", "레이저 피부관리"] }
     ],
     "thumb": "hthumb/tatoa.jpg"
+  },
+  {
+    "name": {
+      "kr": "포브의원",
+      "en": "PO:VE Clinic",
+      "zh": "PO:VE皮肤科"
+    },
+    "dept": {
+      "kr": "피부과 (프라이빗 리프팅)",
+      "en": "Dermatology (Private Lifting Clinic)",
+      "zh": "皮肤科 (私密提升诊疗)"
+    },
+    "cat": "피부",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["울쎄라·소프웨이브·써마지", "스킨부스터·콜라겐부스터", "보톡스·필러", "바디·웰니스 수액"],
+      "en": ["Ulthera·Sofwave·Thermage", "Skin & Collagen Boosters", "Botox & Filler", "Body Care & Wellness IV"],
+      "zh": ["Ulthera·Sofwave·Thermage提升", "皮肤·胶原蛋白助推", "肉毒·玻尿酸", "身体管理·营养输液"]
+    },
+    "hours": "Mon/Tue/Fri 10:00-19:00 / Thu 10:00-21:00 / Sat 10:00-17:00 (Wed·Sun Closed)",
+    "loc": {
+      "ko": "서울 강남구 언주로",
+      "zh": "首尔江南区·彦州路",
+      "en": "Eonju-ro, Gangnam, Seoul"
+    },
+    "overview": {
+      "kr": "포브의원은 강남 언주로에 2026년 9월 개원한 프라이빗 피부과입니다. \"Pain Off, Private On\" 콘셉트로 통증 완화 프로토콜과 마주치지 않는 동선을 갖췄으며, 원장이 직접 진단·시술하는 울쎄라·소프웨이브·써마지 리프팅과 VIP 전용 공간을 운영합니다.",
+      "en": "PO:VE Clinic, opened in September 2026 on Eonju-ro in Gangnam, is a private dermatology clinic built around \"Pain Off, Private On\" — pain-managed protocols, a no-crossing private flow, and doctor-led Ulthera, Sofwave and Thermage lifting with a dedicated VIP suite.",
+      "zh": "PO:VE皮肤科于2026年9月在江南彦州路开业，以\"Pain Off, Private On\"为理念，注重疼痛管理与不与他人照面的私密动线，由院长亲自问诊并进行Ulthera、Sofwave、Thermage等提升项目，设有VIP专属空间。"
+    },
+    "doctors": [
+      { "name": "하재선", "title": "대표원장", "spec": ["가정의학과 전문의"] }
+    ],
+    "thumb": "hthumb/pove.jpg"
   }
 ];
