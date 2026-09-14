@@ -3262,5 +3262,39 @@ export const HOSPITAL_DATA: HospDetail[] = [
       { "name": "하재선", "title": "대표원장", "spec": ["가정의학과 전문의"] }
     ],
     "thumb": "hthumb/pove.jpg"
+  },
+  {
+    "name": {
+      "kr": "차이성형외과",
+      "en": "CHAI Plastic Surgery",
+      "zh": "CHAI整形外科"
+    },
+    "dept": {
+      "kr": "성형외과 (눈·코 특화)",
+      "en": "Plastic Surgery (Eye & Nose)",
+      "zh": "整形外科 (眼鼻特化)"
+    },
+    "cat": "성형외과",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["쌍꺼풀·눈매교정·트임", "상·하안검·눈썹거상", "코성형·재수술", "리쥬란·보톡스·실리프팅"],
+      "en": ["Double Eyelid & Eye Shape", "Blepharoplasty & Brow Lift", "Rhinoplasty & Revision", "Rejuran·Botox·Thread Lifting"],
+      "zh": ["双眼皮·眼型矫正·开眼角", "上/下眼睑·提眉", "鼻整形·修复手术", "丽珠兰·肉毒·线雕提升"]
+    },
+    "hours": "Mon-Sat / Sun·Holiday Closed",
+    "loc": {
+      "ko": "서울 강남구 강남대로 406 (강남역)",
+      "zh": "首尔江南区·江南大路406 (江南站)",
+      "en": "406 Gangnam-daero, Seoul (Gangnam Stn.)"
+    },
+    "overview": {
+      "kr": "차이성형외과는 강남역 인근의 눈·코 성형 특화 의원입니다. \"실력의 차이가 결과의 차이\"를 슬로건으로 최승호 대표원장이 직접 상담·집도하며, 쌍꺼풀·눈매교정·상하안검과 코 성형·재수술, 리쥬란·보톡스·실리프팅 등 시술을 함께 운영합니다.",
+      "en": "CHAI Plastic Surgery, near Gangnam Station, specializes in eye and nose surgery. Under the motto \"the difference in skill makes the difference in results\", director Choi Seung-ho personally consults and operates — double eyelid, canthoplasty, blepharoplasty, primary and revision rhinoplasty, plus Rejuran, Botox and thread lifting.",
+      "zh": "CHAI整形外科位于江南站旁，专注眼部·鼻部整形。以\"实力的差异成就结果的差异\"为理念，由代表院长崔承浩亲自面诊与主刀，提供双眼皮·眼型矫正·上下眼睑手术、鼻整形与修复手术，以及丽珠兰·肉毒等皮肤项目。"
+    },
+    "doctors": [
+      { "name": "최승호", "title": "대표원장", "spec": ["눈성형", "코성형·재수술"] }
+    ],
+    "thumb": "hthumb/chai.jpg"
   }
 ];
