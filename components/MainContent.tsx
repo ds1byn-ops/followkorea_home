@@ -96,8 +96,19 @@ const CountUp: React.FC<{ end: number; duration?: number; decimals?: number }> =
 };
 
 // 우리 서비스 — 3개 제품 허브 (강남펄스 ERP / 글로벌 플랫폼 / 왕홍 마케팅)
-const SVC_LINKS = ['https://gnpulse.kr/demo', 'https://followkorea.kr', 'https://gnpulse.kr', 'https://gnpulse.kr/guide'];
+const SVC_LINKS = ['https://gnpulse.kr/demo', 'https://followkorea.kr', 'https://gnpulse.kr', 'https://gnpulse.kr/beauty/', 'https://gnpulse.kr/guide'];
 const AGENCY_ERP: Record<string, string> = { KR: '에이전시 관리 ERP', EN: 'Agency Management ERP', CN: '代理商管理 ERP', JP: 'エージェンシー管理 ERP', ID: 'ERP Manajemen Agensi', AR: 'نظام إدارة الوكالات', KH: 'ERP គ្រប់គ្រងភ្នាក់ងារ', VI: 'ERP Quản lý Đại lý', RU: 'ERP управления агентствами' };
+const BEAUTY_I18N: Record<string, { t: string; d: string; c: string; tag?: string }> = {
+  KR: { t: '뷰티 중국진출 컨설팅', d: '화장품 브랜드의 중국 진출 — 왕홍 시딩·콰징 입점·인허가까지 원스톱 컨설팅.', c: '컨설팅 알아보기', tag: 'K-뷰티' },
+  EN: { t: 'K-Beauty China Consulting', d: 'One-stop consulting for cosmetic brands entering China — wanghong seeding, cross-border e-commerce, and licensing.', c: 'Learn More', tag: 'K-Beauty' },
+  CN: { t: 'K-Beauty中国市场咨询', d: '化妆品品牌进军中国——网红种草·跨境电商入驻·许可申请一站式咨询。', c: '了解咨询', tag: 'K-Beauty' },
+  JP: { t: 'K-ビューティー中国進出コンサル', d: '化粧品ブランドの中国進出 — ワンホン施策・越境EC・許認可までワンストップ。', c: '詳しく見る', tag: 'K-Beauty' },
+  ID: { t: 'Konsultasi K-Beauty ke Tiongkok', d: 'Konsultasi satu pintu untuk brand kosmetik masuk Tiongkok — wanghong, e-commerce lintas batas, perizinan.', c: 'Pelajari', tag: 'K-Beauty' },
+  AR: { t: 'استشارات دخول الصين للتجميل', d: 'استشارات شاملة لدخول علامات التجميل إلى الصين — تسويق المؤثرين والتجارة العابرة للحدود والتراخيص.', c: 'اعرف المزيد', tag: 'K-Beauty' },
+  KH: { t: 'ប្រឹក្សា K-Beauty ចូលទីផ្សារចិន', d: 'ប្រឹក្សាមួយកន្លែងសម្រាប់ម៉ាកគ្រឿងសម្អាងចូលទីផ្សារចិន។', c: 'ស្វែងយល់', tag: 'K-Beauty' },
+  VI: { t: 'Tư vấn K-Beauty vào Trung Quốc', d: 'Tư vấn trọn gói cho thương hiệu mỹ phẩm vào Trung Quốc — wanghong, TMĐT xuyên biên giới, giấy phép.', c: 'Tìm hiểu', tag: 'K-Beauty' },
+  RU: { t: 'K-Beauty: выход в Китай', d: 'Комплексный консалтинг для косметических брендов — ванхуны, трансграничная e-commerce, лицензии.', c: 'Подробнее', tag: 'K-Beauty' },
+};
 const GUIDE_I18N: Record<string, { t: string; d: string; c: string; tag?: string }> = {
   KR: { t: '통역 가이드 모집', d: '한국 거주 중화권 분들을 협력 가이드로 모십니다. 중국 고객 소개 시 수수료를 드립니다.', c: '가이드 지원하기', tag: '인재 모집' },
   EN: { t: 'Interpreter Guide Recruiting', d: 'Recruiting Chinese-speaking residents in Korea as partner guides. Earn commission for referring Chinese clients.', c: 'Apply as Guide', tag: 'Recruiting' },
@@ -696,8 +707,8 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
             <p className="text-gray-400 mt-5 text-base md:text-lg font-medium max-w-2xl mx-auto">{svc.sub}</p>
           </div>
         </Reveal>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
-          {svc.items.concat([GUIDE_I18N[lang] || GUIDE_I18N.EN]).map((it, i) => {
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 md:gap-6">
+          {svc.items.concat([BEAUTY_I18N[lang] || BEAUTY_I18N.EN, GUIDE_I18N[lang] || GUIDE_I18N.EN]).map((it, i) => {
             const featured = i === 0;        // ERP: 2단 타이틀
             // 단어 단위 줄바꿈은 한국어만 — 일본어·중국어는 keep-all이 오히려 줄바꿈을 막아 글자가 넘침
             const krBreak = lang === 'KR' ? 'break-keep' : '';
@@ -706,6 +717,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
               { bg: 'bg-gradient-to-br from-[#5a82c2] to-[#41608f] shadow-2xl shadow-[#5a82c2]/30 hover:from-[#6b93d4] hover:to-[#466a9e] hover:shadow-[#5a82c2]/50', cta: 'bg-white text-[#5a82c2] group-hover:bg-blue-50' },
               { bg: 'bg-gradient-to-br from-[#3d5a8a] to-[#273c61] shadow-2xl shadow-[#3d5a8a]/30 hover:from-[#48699e] hover:to-[#2e4671] hover:shadow-[#3d5a8a]/50', cta: 'bg-white text-[#3d5a8a] group-hover:bg-blue-50' },
               { bg: 'bg-gradient-to-br from-[#e5384f] to-[#b02a3f] shadow-2xl shadow-[#e5384f]/30 hover:from-[#f04d63] hover:to-[#c23148] hover:shadow-[#e5384f]/50', cta: 'bg-white text-[#e5384f] group-hover:bg-red-50' },
+              { bg: 'bg-gradient-to-br from-[#b8925a] to-[#8a6a3c] shadow-2xl shadow-[#b8925a]/30 hover:from-[#c9a468] hover:to-[#9a7844] hover:shadow-[#b8925a]/50', cta: 'bg-white text-[#8a6a3c] group-hover:bg-amber-50' },
               { bg: 'bg-gradient-to-br from-[#a63252] to-[#7a2340] shadow-2xl shadow-[#a63252]/30 hover:from-[#b83d5f] hover:to-[#8a2a49] hover:shadow-[#a63252]/50', cta: 'bg-white text-[#a63252] group-hover:bg-rose-50' },
             ];
             const colored = true;            // 4장 전부 컬러 배경 + 흰 텍스트
