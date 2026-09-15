@@ -3321,6 +3321,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "doctors": [
       { "name": "송준섭", "title": "대표원장", "spec": ["정형외과 전문의"] },
       { "name": "김나민", "title": "병원장", "spec": ["정형외과"] }
-    ]
+    ],
+    "thumb": "hthumb/gnjs.jpg"
   }
 ];
