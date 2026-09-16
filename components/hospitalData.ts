@@ -3323,5 +3323,506 @@ export const HOSPITAL_DATA: HospDetail[] = [
       { "name": "김나민", "title": "병원장", "spec": ["정형외과"] }
     ],
     "thumb": "hthumb/gnjs.jpg"
+  },
+  {
+    "name": {
+      "kr": "헤어온의원",
+      "en": "HairON Clinic",
+      "zh": "HairON脱发医院"
+    },
+    "dept": {
+      "kr": "탈모 치료 전문",
+      "en": "Hair Loss Clinic",
+      "zh": "脱发治疗专科"
+    },
+    "cat": "피부",
+    "icon": "💇",
+    "badge": "NEW",
+    "treats": {
+      "kr": [
+        "줄기세포 탈모치료",
+        "헤어온 FolliOn 주사",
+        "두피 순환 개선 주사",
+        "두피·모낭 정밀검사",
+        "약물치료"
+      ],
+      "en": [
+        "Stem Cell Hair Loss Treatment",
+        "FolliOn Scalp Injection",
+        "Scalp Circulation Injection",
+        "Scalp & Follicle Diagnosis",
+        "Medication"
+      ],
+      "zh": [
+        "干细胞脱发治疗",
+        "FolliOn毛囊强化针",
+        "头皮循环改善注射",
+        "头皮·毛囊精密检查",
+        "药物治疗"
+      ]
+    },
+    "hours": "Mon-Fri 10:00-20:00 / Sat 10:00-15:00 / Sun·Holiday Closed",
+    "loc": {
+      "ko": "서울 서초구 강남역(강남대로)",
+      "zh": "首尔瑞草区·江南站(江南大路)",
+      "en": "Gangnam Stn., Seoul"
+    },
+    "overview": {
+      "kr": "헤어온의원은 강남역 6번 출구 인근(강남대로 373, 홍우빌딩 3층)의 탈모 치료 전문 의원입니다. 내과 전문의 손형곤 원장이 문진·두피모낭검사·혈액검사·자율신경검사 4단계 정밀 진단으로 탈모 원인을 찾고, 줄기세포 탈모치료·FolliOn 모낭강화주사·두피 순환 개선 주사·약물치료를 원인에 맞게 조합합니다.",
+      "en": "HairON Clinic, near Exit 6 of Gangnam Station (3F Hongwoo Bldg., 373 Gangnam-daero), is a hair-loss specialty clinic. Dr. Son Hyung-gon, an internal medicine specialist, identifies the cause through a 4-step diagnosis (consultation, scalp/follicle exam, blood test, autonomic nerve test) and combines stem cell therapy, FolliOn scalp injections, scalp circulation injections and medication.",
+      "zh": "HairON脱发医院位于江南站6号出口附近(江南大路373, 弘宇大厦3层), 是脱发治疗专科医院。由内科专科医生孙亨坤院长通过问诊·头皮毛囊检查·血液检查·自主神经检查四步精密诊断找出脱发原因, 并结合干细胞脱发治疗·FolliOn毛囊强化针·头皮循环改善注射·药物治疗进行个性化治疗。"
+    },
+    "doctors": [
+      {
+        "name": "손형곤",
+        "title": "원장",
+        "spec": [
+          "내과 전문의",
+          "탈모 치료"
+        ]
+      }
+    ],
+    "thumb": "hthumb/hairon.jpg"
+  },
+  {
+    "name": {
+      "kr": "오크우드봄의원",
+      "en": "Oakwood Bom Clinic",
+      "zh": "Oakwood Bom医院"
+    },
+    "dept": {
+      "kr": "산부인과·성형외과·피부·검진 협진",
+      "en": "OB/GYN · Plastic · Skin · Checkup",
+      "zh": "妇科·整形·皮肤·体检联合诊疗"
+    },
+    "cat": "여성의학/성형외과/피부/검진",
+    "icon": "🌸",
+    "badge": "NEW",
+    "treats": {
+      "kr": [
+        "자궁보존 치료(하이푸)",
+        "여성성형·요실금",
+        "하지정맥류",
+        "눈·코성형",
+        "필러·보톡스·리프팅",
+        "건강검진"
+      ],
+      "en": [
+        "Uterus-Preserving Treatment (HIFU)",
+        "Feminine Surgery · Incontinence",
+        "Varicose Veins",
+        "Eye · Nose Surgery",
+        "Filler · Botox · Lifting",
+        "Health Checkup"
+      ],
+      "zh": [
+        "子宫保留治疗(海扶刀)",
+        "女性私密整形·尿失禁",
+        "下肢静脉曲张",
+        "眼鼻整形",
+        "玻尿酸·肉毒·提升",
+        "健康体检"
+      ]
+    },
+    "hours": "Mon·Wed·Thu 10:00-19:00 / Tue·Fri 10:00-20:00 / Sat 10:00-16:00 / Sun Closed",
+    "loc": {
+      "ko": "서울 강남구 삼성역(오크우드프리미어)",
+      "zh": "首尔江南区·三成站(Oakwood Premier)",
+      "en": "Samseong Stn., Seoul"
+    },
+    "overview": {
+      "kr": "오크우드봄의원은 삼성역 오크우드프리미어 호텔 B1(테헤란로87길 46)에 위치한 협진형 의원으로, 산부인과 전문의 김인현 대표원장(前 강남차병원 산부인과 부장)을 중심으로 흉부외과·외과·내과·성형외과 전문의가 함께 진료합니다. 자궁보존 하이푸·여성성형·하지정맥류·건강검진부터 눈코성형·필러·리프팅까지 한 곳에서 검진·외래·수술이 가능합니다.",
+      "en": "Oakwood Bom Clinic, on B1 of Oakwood Premier Hotel by Samseong Station (46 Teheran-ro 87-gil), is a multi-specialty clinic led by Dr. Kim In-hyun, OB/GYN specialist and former head of OB/GYN at Gangnam CHA Hospital, together with thoracic, general, internal medicine and plastic surgery specialists — from uterus-preserving HIFU, feminine surgery, varicose veins and health checkups to eye/nose surgery, fillers and lifting, all in one place.",
+      "zh": "Oakwood Bom医院位于三成站Oakwood Premier酒店B1(德黑兰路87街46), 是多科室联合诊疗医院。以妇科专科医生·医学博士金仁贤代表院长(原江南CHA医院妇科部长)为核心, 胸外科·外科·内科·整形外科专科医生共同诊疗, 子宫保留海扶刀·女性私密整形·下肢静脉曲张·健康体检到眼鼻整形·玻尿酸·提升, 体检·门诊·手术一站式完成。"
+    },
+    "doctors": [
+      {
+        "name": "김인현",
+        "title": "대표원장",
+        "spec": [
+          "산부인과 전문의",
+          "의학박사"
+        ]
+      },
+      {
+        "name": "조창욱",
+        "title": "원장",
+        "spec": [
+          "심장혈관흉부외과 전문의",
+          "하지정맥센터장"
+        ]
+      },
+      {
+        "name": "김재영",
+        "title": "원장",
+        "spec": [
+          "내과 전문의",
+          "건강검진센터장"
+        ]
+      },
+      {
+        "name": "이종희",
+        "title": "원장",
+        "spec": [
+          "성형외과 전문의",
+          "의학박사"
+        ]
+      },
+      {
+        "name": "김동일",
+        "title": "원장",
+        "spec": [
+          "뷰티성형센터",
+          "안면거상"
+        ]
+      }
+    ],
+    "thumb": "hthumb/owbom.jpg"
+  },
+  {
+    "name": {
+      "kr": "이에스청담성형외과",
+      "en": "ES Cheongdam Plastic Surgery",
+      "zh": "ES清潭整形外科"
+    },
+    "dept": {
+      "kr": "성형외과/피부과",
+      "en": "Plastic Surgery / Dermatology",
+      "zh": "整形外科/皮肤科"
+    },
+    "cat": "성형외과/피부",
+    "icon": "💎",
+    "badge": "NEW",
+    "treats": {
+      "kr": [
+        "눈성형·눈재수술",
+        "코성형·코재수술",
+        "이마거상·리프팅",
+        "가슴성형",
+        "지방흡입·지방이식",
+        "보톡스·필러"
+      ],
+      "en": [
+        "Eye Surgery · Revision",
+        "Rhinoplasty · Revision",
+        "Forehead Lift · Lifting",
+        "Breast Surgery",
+        "Liposuction · Fat Graft",
+        "Botox · Filler"
+      ],
+      "zh": [
+        "眼部整形·眼修复",
+        "鼻整形·鼻修复",
+        "额头提升·提升",
+        "胸部整形",
+        "吸脂·脂肪填充",
+        "肉毒·玻尿酸"
+      ]
+    },
+    "hours": "Mon-Fri 10:00-19:00 / Sat 10:00-16:00 / Sun·Holiday Closed",
+    "loc": {
+      "ko": "서울 강남구 청담동(압구정로데오역)",
+      "zh": "首尔江南区·清潭洞(狎鸥亭罗德奥站)",
+      "en": "Cheongdam, Seoul"
+    },
+    "overview": {
+      "kr": "이에스청담성형외과&피부과의원은 압구정로데오역 4번 출구 인근(도산대로 435, 삼이빌딩 6층)의 성형외과·피부과 의원입니다. 순천향대학교병원 성형외과 외래교수인 이준호 대표원장과 류형래 원장(성형외과 전문의)이 자연유착 쌍꺼풀·고난도 눈재수술, 코재수술, 이마거상·리프팅, 가슴·체형성형을 직접 집도하며 피부센터에서 리프팅 레이저·스킨부스터·보톡스·필러를 함께 제공합니다.",
+      "en": "ES Cheongdam Plastic Surgery & Dermatology, near Exit 4 of Apgujeong Rodeo Station (6F Sami Bldg., 435 Dosan-daero), is led by Dr. Lee Jun-ho (visiting professor of plastic surgery, Soonchunhyang University Hospital) and Dr. Ryu Hyung-rae, both board-certified plastic surgeons, who personally perform natural-adhesion double eyelid and complex eye revision, rhinoplasty revision, forehead lift and lifting, breast and body contouring; the skin center offers lifting lasers, skin boosters, Botox and fillers.",
+      "zh": "ES清潭整形外科&皮肤科位于狎鸥亭罗德奥站4号出口附近(岛山大路435, 三二大厦6层)。顺天乡大学医院整形外科外聘教授李俊浩代表院长与柳亨来院长(整形外科专科医生)亲自主刀自然粘连双眼皮·高难度眼修复、鼻修复、额头提升·提升、胸部·体型整形, 皮肤中心同时提供提升激光·皮肤焕活·肉毒·玻尿酸项目。"
+    },
+    "doctors": [
+      {
+        "name": "이준호",
+        "title": "대표원장",
+        "spec": [
+          "성형외과 전문의",
+          "눈·코 재수술",
+          "리프팅"
+        ]
+      },
+      {
+        "name": "류형래",
+        "title": "원장",
+        "spec": [
+          "성형외과 전문의",
+          "눈·코·가슴"
+        ]
+      }
+    ],
+    "thumb": "hthumb/escheongdam.jpg"
+  },
+  {
+    "name": {
+      "kr": "더힐피부과의원 신사본점",
+      "en": "The Heal Dermatology Clinic Sinsa",
+      "zh": "THE HEAL皮肤科 新沙本店"
+    },
+    "dept": {
+      "kr": "피부과 전문의 진료",
+      "en": "Dermatology (Board-certified)",
+      "zh": "皮肤科专科医生诊疗"
+    },
+    "cat": "피부",
+    "icon": "🌿",
+    "badge": "NEW",
+    "treats": {
+      "kr": [
+        "울쎄라·써마지",
+        "소프웨이브·올리지오",
+        "피코 레이저(색소)",
+        "스킨부스터",
+        "보톡스·필러",
+        "여드름·흉터"
+      ],
+      "en": [
+        "Ultherapy · Thermage",
+        "Sofwave · Oligio",
+        "Pico Laser (Pigment)",
+        "Skin Booster",
+        "Botox · Filler",
+        "Acne · Scar"
+      ],
+      "zh": [
+        "超声刀·热玛吉",
+        "索夫波·Oligio",
+        "皮秒激光(色素)",
+        "皮肤焕活针",
+        "肉毒·玻尿酸",
+        "痘痘·痘坑"
+      ]
+    },
+    "hours": "Mon-Thu 10:00-19:30 / Fri 10:00-20:00 / Sat 09:30-16:00 / Sun Closed",
+    "loc": {
+      "ko": "서울 강남구 신사역(신사스퀘어)",
+      "zh": "首尔江南区·新沙站(新沙广场)",
+      "en": "Sinsa Stn., Seoul"
+    },
+    "overview": {
+      "kr": "더힐피부과의원 신사본점은 신사역 인근 신사스퀘어 3층·7층(강남대로 652)에 위치한 피부과 전문의 진료 의원입니다. 박주혁 대표원장(피부과 전문의)이 울쎄라·써마지·소프웨이브·올리지오 등 리프팅과 피코웨이·엑셀V 색소치료, 스킨부스터·보톡스·필러, 여드름·흉터 치료를 프라이빗 룸에서 진료합니다.",
+      "en": "The Heal Dermatology Clinic Sinsa, on the 3rd and 7th floors of Sinsa Square near Sinsa Station (652 Gangnam-daero), is led by board-certified dermatologist Dr. Park Ju-hyuk — offering Ultherapy, Thermage, Sofwave and Oligio lifting, PicoWay and Excel V pigment treatment, skin boosters, Botox, fillers and acne/scar care in private treatment rooms.",
+      "zh": "THE HEAL皮肤科新沙本店位于新沙站附近新沙广场3层·7层(江南大路652), 由皮肤科专科医生朴柱赫代表院长诊疗。提供超声刀·热玛吉·索夫波·Oligio等提升项目, PicoWay·Excel V色素治疗, 皮肤焕活·肉毒·玻尿酸及痘痘·痘坑治疗, 全程私密诊室。"
+    },
+    "doctors": [
+      {
+        "name": "박주혁",
+        "title": "대표원장",
+        "spec": [
+          "피부과 전문의"
+        ]
+      }
+    ],
+    "thumb": "hthumb/theheal.jpg"
+  },
+  {
+    "name": {
+      "kr": "플래뉴의원",
+      "en": "Planew Clinic",
+      "zh": "PLANEW皮肤科"
+    },
+    "dept": {
+      "kr": "피부과/리프팅·스킨부스터",
+      "en": "Dermatology / Lifting · Skin Booster",
+      "zh": "皮肤科/提升·皮肤焕活"
+    },
+    "cat": "피부",
+    "icon": "🪞",
+    "badge": "NEW",
+    "treats": {
+      "kr": [
+        "울쎄라피 프라임",
+        "써마지",
+        "티타늄·온다",
+        "스킨부스터(리쥬란·쥬베룩)",
+        "보톡스·필러",
+        "바디 컨투어링"
+      ],
+      "en": [
+        "Ultherapy Prime",
+        "Thermage",
+        "Titanium · ONDA",
+        "Skin Booster (Rejuran · Juvelook)",
+        "Botox · Filler",
+        "Body Contouring"
+      ],
+      "zh": [
+        "超声刀Prime",
+        "热玛吉",
+        "钛提升·ONDA",
+        "皮肤焕活(丽珠兰·Juvelook)",
+        "肉毒·玻尿酸",
+        "身体塑形"
+      ]
+    },
+    "hours": "Mon-Fri 10:30-20:30 / Sat 10:00-16:30 / Sun·Holiday Closed",
+    "loc": {
+      "ko": "서울 서초구 강남역(홍우제2빌딩)",
+      "zh": "首尔瑞草区·江南站(弘宇第2大厦)",
+      "en": "Gangnam Stn., Seoul"
+    },
+    "overview": {
+      "kr": "플래뉴의원은 강남역 6번 출구 도보 1분(서초대로78길 22, 홍우제2빌딩 4층)의 리프팅·스킨부스터 전문 피부과입니다. 고대우 대표원장(연세대 의대)이 울쎄라피 프라임·써마지·티타늄·온다 등 프리미엄 리프팅 장비를 해부학적 분석에 맞춰 조합하고, 리쥬란·쥬베룩 스킨부스터·보톡스·필러·바디 컨투어링까지 프라이빗 룸에서 점심시간 없이 진료합니다.",
+      "en": "Planew Clinic, a one-minute walk from Exit 6 of Gangnam Station (4F Hongwoo 2nd Bldg., 22 Seocho-daero 78-gil), specializes in lifting and skin boosters. Dr. Koh Dae-woo (Yonsei University College of Medicine) combines premium lifting devices — Ultherapy Prime, Thermage, Titanium, ONDA — based on anatomical analysis, plus Rejuran/Juvelook skin boosters, Botox, fillers and body contouring, in private rooms with no lunch break.",
+      "zh": "PLANEW皮肤科位于江南站6号出口步行1分钟(瑞草大路78街22, 弘宇第2大厦4层), 是提升·皮肤焕活专科皮肤科。高大宇代表院长(延世大学医学院)根据解剖学分析组合超声刀Prime·热玛吉·钛提升·ONDA等高端提升设备, 并提供丽珠兰·Juvelook皮肤焕活·肉毒·玻尿酸·身体塑形, 私密诊室, 午休不间断诊疗。"
+    },
+    "doctors": [
+      {
+        "name": "고대우",
+        "title": "대표원장",
+        "spec": [
+          "리프팅",
+          "스킨부스터",
+          "바디 컨투어링"
+        ]
+      }
+    ],
+    "thumb": "hthumb/planew.jpg"
+  },
+  {
+    "name": {
+      "kr": "TU치과의원(티유치과)",
+      "en": "TU Dental Clinic",
+      "zh": "TU牙科(TU Dental)"
+    },
+    "dept": {
+      "kr": "심미치과/라미네이트·임플란트·교정",
+      "en": "Aesthetic Dentistry / Veneer · Implant · Ortho",
+      "zh": "美学牙科/贴面·种植·矫正"
+    },
+    "cat": "치과",
+    "icon": "🦷",
+    "badge": "NEW",
+    "treats": {
+      "kr": [
+        "제로네이트(무삭제 라미네이트)",
+        "라미네이트",
+        "임플란트",
+        "치아교정(투명교정)",
+        "치아미백",
+        "보존·보철"
+      ],
+      "en": [
+        "ZERONATE (No-prep Veneer)",
+        "Veneers",
+        "Implants",
+        "Orthodontics (Clear Aligner)",
+        "Whitening",
+        "Restorative · Prosthetic"
+      ],
+      "zh": [
+        "ZERONATE(无磨牙贴面)",
+        "牙齿贴面",
+        "种植牙",
+        "牙齿矫正(隐形)",
+        "牙齿美白",
+        "保存·修复"
+      ]
+    },
+    "hours": "Mon-Fri 10:00-20:00 / Sat 10:00-17:00 / Sun Closed",
+    "loc": {
+      "ko": "서울 서초구 강남역(서초W타워)",
+      "zh": "首尔瑞草区·江南站(瑞草W大厦)",
+      "en": "Gangnam Stn., Seoul"
+    },
+    "overview": {
+      "kr": "TU치과의원(티유치과)은 강남역 인근 서초W타워 12·13층(서초대로77길 54)의 심미치과로, 치아를 깎지 않는 무삭제 라미네이트 \"제로네이트(ZERONATE)\"로 알려져 있습니다. 서재원 대표원장을 비롯한 통합치의학과 의료진이 라미네이트·임플란트·투명교정·미백·보존보철을 분야별 공동 진료하며, 마취과 전문의 상주와 야간진료(평일 20시)로 해외 환자 일정에 맞추기 좋습니다.",
+      "en": "TU Dental Clinic, on the 12th and 13th floors of Seocho W Tower near Gangnam Station (54 Seocho-daero 77-gil), is an aesthetic dental clinic known for ZERONATE no-prep veneers. Led by Dr. Seo Jae-won, its team of integrated dentistry specialists jointly covers veneers, implants, clear aligners, whitening and restorative care, with an on-site anesthesiologist and evening hours (weekdays to 8 pm) that suit international patients.",
+      "zh": "TU牙科位于江南站附近瑞草W大厦12·13层(瑞草大路77街54), 是以不磨牙贴面\"ZERONATE\"闻名的美学牙科。以徐载元代表院长为首的综合牙科医疗团队分科联合诊疗贴面·种植牙·隐形矫正·美白·保存修复, 麻醉科专科医生常驻, 平日夜间诊疗至20点, 便于海外患者安排行程。"
+    },
+    "doctors": [
+      {
+        "name": "서재원",
+        "title": "대표원장",
+        "spec": [
+          "심미치과",
+          "라미네이트"
+        ]
+      },
+      {
+        "name": "신채훈",
+        "title": "원장",
+        "spec": [
+          "통합치의학과"
+        ]
+      },
+      {
+        "name": "김준희",
+        "title": "원장",
+        "spec": [
+          "통합치의학과"
+        ]
+      },
+      {
+        "name": "김준식",
+        "title": "원장",
+        "spec": [
+          "통합치의학과"
+        ]
+      }
+    ],
+    "thumb": "hthumb/tu.jpg"
+  },
+  {
+    "name": {
+      "kr": "바이미성형외과의원",
+      "en": "ByMe Plastic Surgery",
+      "zh": "BYME整形外科(江南百美)"
+    },
+    "dept": {
+      "kr": "성형외과/쁘띠·리프팅",
+      "en": "Plastic Surgery / Aesthetic · Lifting",
+      "zh": "整形外科/轻医美·提升"
+    },
+    "cat": "성형외과/피부",
+    "icon": "🎀",
+    "badge": "NEW",
+    "treats": {
+      "kr": [
+        "비절개 코성형(코프팅)",
+        "프리미엄 필러",
+        "시그니처 리프팅",
+        "눈성형",
+        "초음파 지방흡입·윤곽교정",
+        "스킨부스터"
+      ],
+      "en": [
+        "Non-incision Rhinoplasty",
+        "Premium Filler",
+        "Signature Lifting",
+        "Eye Surgery",
+        "Ultrasonic Lipo · Contouring",
+        "Skin Booster"
+      ],
+      "zh": [
+        "非切开鼻整形(Nofting)",
+        "高端玻尿酸",
+        "招牌提升",
+        "眼部整形",
+        "超声吸脂·轮廓矫正",
+        "皮肤焕活针"
+      ]
+    },
+    "hours": "Mon-Fri 11:00-20:00 / Sat 10:00-16:00 / Sun·Holiday Closed",
+    "loc": {
+      "ko": "서울 서초구 신사역(휴먼타워)",
+      "zh": "首尔瑞草区·新沙站(Human Tower)",
+      "en": "Sinsa Stn., Seoul"
+    },
+    "overview": {
+      "kr": "바이미성형외과의원은 신사역 4번 출구 도보 2분(강남대로 605, 휴먼타워 12층)의 성형외과입니다. 성형외과 전문의 18년 경력의 최한무 대표원장(건국대병원 성형외과 겸직교수)이 비절개 코성형 \"코프팅\", 입술·윤곽 프리미엄 필러, 시그니처 리프팅, 눈성형, 초음파 지방흡입·심부볼 제거 등 비수술 윤곽교정을 직접 시술하며 중국어 상담(위챗)을 지원합니다.",
+      "en": "ByMe Plastic Surgery, a two-minute walk from Exit 4 of Sinsa Station (12F Human Tower, 605 Gangnam-daero), is led by Dr. Choi Han-moo, a board-certified plastic surgeon with 18 years of experience and adjunct professor at Konkuk University Hospital. He personally performs non-incision rhinoplasty (\"Nofting\"), premium lip and contour fillers, signature lifting, eye surgery, ultrasonic liposuction and buccal fat removal; Chinese consultation via WeChat is available.",
+      "zh": "BYME整形外科(江南百美)位于新沙站4号出口步行2分钟(江南大路605, Human Tower 12层)。拥有18年整形外科专科经验的崔汉茂代表院长(建国大学医院整形外科兼职教授)亲自操作非切开鼻整形\"Nofting\"、唇部·轮廓高端玻尿酸、招牌提升、眼部整形、超声吸脂·颊脂垫去除等非手术轮廓矫正, 提供微信中文咨询。"
+    },
+    "doctors": [
+      {
+        "name": "최한무",
+        "title": "대표원장",
+        "spec": [
+          "성형외과 전문의",
+          "비절개 코성형",
+          "필러·리프팅"
+        ]
+      }
+    ],
+    "thumb": "hthumb/byme.jpg"
   }
 ];
