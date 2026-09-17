@@ -17,6 +17,59 @@ export interface HospDetail {
 export const HOSPITAL_DATA: HospDetail[] = [
   {
     "name": {
+      "kr": "삼성서울병원",
+      "en": "Samsung Medical Center",
+      "zh": "三星首尔医院"
+    },
+    "dept": {
+      "kr": "종합병원/국제진료센터",
+      "en": "General Hospital / International Healthcare Center",
+      "zh": "综合医院/国际诊疗中心"
+    },
+    "cat": "검진",
+    "badge": "NEW",
+    "treats": {
+      "kr": [
+        "종합건강검진",
+        "암 진료(삼성암병원)",
+        "심장·뇌혈관",
+        "양성자치료",
+        "장기이식",
+        "국제진료센터 1:1 코디"
+      ],
+      "en": [
+        "Comprehensive Checkup",
+        "Cancer Care (SCCC)",
+        "Heart·Brain·Vascular",
+        "Proton Therapy",
+        "Organ Transplant",
+        "IHC 1:1 Coordination"
+      ],
+      "zh": [
+        "综合体检",
+        "癌症诊疗(三星癌症医院)",
+        "心脑血管",
+        "质子治疗",
+        "器官移植",
+        "国际诊疗中心1:1协调"
+      ]
+    },
+    "hours": "Mon-Fri (International Healthcare Center, by appointment) · +82-2-3410-0200",
+    "loc": {
+      "ko": "서울 강남 (일원)",
+      "zh": "首尔江南(逸院)",
+      "en": "Irwon, Gangnam, Seoul"
+    },
+    "overview": {
+      "kr": "삼성서울병원은 1994년 개원한 서울 강남구 일원로 81의 대학병원급 종합병원으로, 삼성암병원·심장뇌혈관병원·양성자치료센터·건강의학센터를 갖추고 있습니다. 1995년부터 운영 중인 국제진료센터(IHC)는 120여 개국 환자를 진료해 왔으며, 외국인 전용 외래와 1:1 코디네이션, 통역, 화상 상담, 전문센터 연계 진료를 제공합니다.",
+      "en": "Samsung Medical Center, founded in 1994 at 81 Irwon-ro, Gangnam-gu, is a leading academic medical center with the Samsung Comprehensive Cancer Center, Heart Vascular Stroke Institute, Proton Therapy Center and Health Promotion Center. Its International Healthcare Center, operating since 1995, has served patients from over 120 countries with a dedicated outpatient clinic, 1:1 care coordination, interpreters, video consultations and referrals to specialty centers.",
+      "zh": "三星首尔医院成立于1994年，位于首尔江南区逸院路81，是大学医院级综合医院，设有三星癌症医院、心脏脑血管医院、质子治疗中心和健康医学中心。自1995年起运营的国际诊疗中心(IHC)已接诊来自120多个国家的患者，提供外国人专属门诊、1:1协调、翻译、视频咨询及专科中心转诊。"
+    },
+    "doctors": [],
+    "thumb": "hthumb/smc.jpg"
+  },
+  {
+    "name": {
       "kr": "멜론성형외과",
       "en": "MELON Plastic Surgery",
       "zh": "MELON整形外科"
