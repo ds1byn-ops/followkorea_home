@@ -96,7 +96,7 @@ const CountUp: React.FC<{ end: number; duration?: number; decimals?: number }> =
 };
 
 // 우리 서비스 — 3개 제품 허브 (강남펄스 ERP / 글로벌 플랫폼 / 왕홍 마케팅)
-const SVC_LINKS = ['https://gnpulse.kr/demo', 'https://followkorea.kr', 'https://gnpulse.kr', 'https://gnpulse.kr/beauty/', 'https://gnpulse.kr/guide'];
+const SVC_LINKS = ['https://gnpulse.kr/demo', 'https://followkorea.co.kr/b2c/', 'https://gnpulse.kr', 'https://gnpulse.kr/beauty/', 'https://gnpulse.kr/guide'];
 const AGENCY_ERP: Record<string, string> = { KR: '에이전시 관리 ERP', EN: 'Agency Management ERP', CN: '代理商管理 ERP', JP: 'エージェンシー管理 ERP', ID: 'ERP Manajemen Agensi', AR: 'نظام إدارة الوكالات', KH: 'ERP គ្រប់គ្រងភ្នាក់ងារ', VI: 'ERP Quản lý Đại lý', RU: 'ERP управления агентствами' };
 const BEAUTY_I18N: Record<string, { t: string; d: string; c: string; tag?: string }> = {
   KR: { t: '뷰티 중국진출 컨설팅', d: '화장품 브랜드의 중국 진출 — 왕홍 시딩·콰징 입점·인허가까지 원스톱 컨설팅.', c: '컨설팅 알아보기', tag: 'K-뷰티' },
