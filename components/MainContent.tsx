@@ -15,7 +15,7 @@ interface MainContentProps {
 }
 
 // 스크롤 시 나타나는 애니메이션 컴포넌트
-const Reveal: React.FC<{ children: React.ReactNode; width?: "fit-content" | "100%"; delay?: number }> = ({ children, width = "100%", delay = 0 }) => {
+const Reveal: React.FC<{ children: React.ReactNode; width?: "fit-content" | "100%"; delay?: number; fill?: boolean }> = ({ children, width = "100%", delay = 0, fill = false }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -42,6 +42,7 @@ const Reveal: React.FC<{ children: React.ReactNode; width?: "fit-content" | "100
       ref={ref}
       style={{ 
         width, 
+        height: fill ? '100%' : undefined,
         position: 'relative', 
         overflow: 'visible',
         opacity: isVisible ? 1 : 0,
@@ -716,7 +717,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
             <p className="text-gray-400 mt-5 text-base md:text-lg font-medium max-w-2xl mx-auto">{svc.sub}</p>
           </div>
         </Reveal>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 md:gap-6 xl:gap-4">
           {svc.items.concat([BEAUTY_I18N[lang] || BEAUTY_I18N.EN, GUIDE_I18N[lang] || GUIDE_I18N.EN]).map((it, i) => {
             const featured = i === 0;        // ERP: 2단 타이틀
             // 단어 단위 줄바꿈은 한국어만 — 일본어·중국어는 keep-all이 오히려 줄바꿈을 막아 글자가 넘침
@@ -733,12 +734,12 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
             const cardBg = CARD_STYLES[i].bg;
             const ctaColor = CARD_STYLES[i].cta;
             return (
-            <Reveal key={i} delay={i * 0.1}>
+            <Reveal key={i} delay={i * 0.1} fill>
               <a
                 href={SVC_LINKS[i]}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`group flex flex-col h-full relative rounded-[2rem] md:rounded-[2.5rem] p-8 md:p-10 transition-all duration-500 hover:-translate-y-2 ${colored ? 'text-white' : ''} ${cardBg}`}
+                className={`group flex flex-col h-full relative rounded-[2rem] md:rounded-[2.5rem] p-8 md:p-10 xl:p-6 2xl:p-8 transition-all duration-500 hover:-translate-y-2 ${colored ? 'text-white' : ''} ${cardBg}`}
               >
                 {it.tag && <span className={`self-start text-[11px] font-black px-3 py-1.5 rounded-full mb-5 uppercase tracking-wider ${colored ? 'bg-white/20 text-white' : 'text-[#5a82c2] bg-[#5a82c2]/10'}`}>{it.tag}</span>}
                 {featured ? (
@@ -750,7 +751,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
                   <h3 className={`text-[19px] md:text-[21px] font-bold mb-3 tracking-tight leading-[1.3] ${krBreak} ${colored ? 'text-white' : 'text-gray-900 transition-colors group-hover:text-[#5a82c2]'}`}>{it.t}</h3>
                 )}
                 <p className={`text-sm md:text-[14.5px] leading-[1.75] font-medium flex-1 ${krBreak} ${colored ? 'text-white/85' : 'text-gray-600'}`}>{it.d}</p>
-                <span className={`mt-7 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full font-bold text-sm md:text-base transition-all group-hover:gap-3 ${ctaColor}`}>
+                <span className={`mt-7 self-start inline-flex items-center justify-center gap-2 px-5 md:px-6 xl:px-3.5 py-3.5 rounded-full font-bold text-sm md:text-base xl:text-sm whitespace-nowrap transition-all group-hover:gap-3 ${ctaColor}`}>
                   {it.c}
                   <span className="iconify transition-transform" data-icon="solar:arrow-right-linear"></span>
                 </span>
