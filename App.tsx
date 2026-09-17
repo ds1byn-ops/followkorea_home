@@ -7,6 +7,7 @@ import NewsList from './components/NewsList';
 import ReviewList from './components/ReviewList';
 import TermsOverlay from './components/TermsOverlay';
 import PrivacyOverlay from './components/PrivacyOverlay';
+import KimesPopup from './components/KimesPopup';
 
 export type LanguageCode = 'KR' | 'EN' | 'CN' | 'JP' | 'ID' | 'AR' | 'KH' | 'VI' | 'RU';
 
@@ -123,6 +124,8 @@ const App: React.FC = () => {
         currentLang={currentLang}
         onLangChange={setCurrentLang}
       />
+
+      {!isAnyOverlayOpen && <KimesPopup lang={currentLang} />}
 
       <ConsultationModal
         isOpen={isConsultOpen}

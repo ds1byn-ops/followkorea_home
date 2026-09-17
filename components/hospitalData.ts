@@ -686,7 +686,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "整形外科/皮肤"
     },
     "cat": "성형외과",
-    "badge": "BEST",
     "treats": {
       "kr": [
         "이중턱",
