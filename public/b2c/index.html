@@ -269,15 +269,15 @@ var HOSP_THUMB={"스튜디오 숲 서울":"hthumb/studiosoop.jpg","순수 청담
 /* ─── 다국어 사전 (기본 中文) ─── */
 // URL로 언어 강제: ?lang=ko|zh|en|ja (국내 광고 유입은 ?lang=ko 링크 사용)
 var _ql=new URLSearchParams(location.search).get('lang');
-var LANG=(['ko','zh','en','ja'].indexOf(_ql)>=0)?_ql:(localStorage.getItem('b2c_lang')||'zh');
+var LANG=(['ko','zh','en','ja'].indexOf(_ql)>=0)?_ql:((function(){try{return sessionStorage.getItem('b2c_lang');}catch(e){return null;}})()||'zh'); // 기본 中文 (새 방문마다)
 var LANG_META=[['zh','中文','cn'],['ko','한국어','kr'],['en','English','us'],['ja','日本語','jp']];
 var I18N={
  zh:{nav:['公司介绍','服务','合作医院','定制报价'],navcta:'获取定制报价',adnote:'本页面包含医疗广告<br>FollowKorea为广告媒介',
   badge:'韩国保健福祉部 外国人患者招揽业注册 · 第 A-2026-01-01-06622 号',
   h1:'最懂韩国医院的<br><b>海外患者招揽专业企业</b><br>为您提供值得信赖的医院信息',
   lead:'FollowKorea 是韩国保健福祉部注册的<b>海外患者招揽专业企业</b>。<br>结合网红体验测评，透明介绍直接合作医院的信息，并为您匹配符合条件的医院。',
-  cta:'获取适合我的医院报价 →',chipfloat:'与54家合作医疗机构携手同行',
-  stats:[['54家','合作医疗机构 — 整形·皮肤·体检·牙科等'],['官方注册','保健福祉部注册招揽机构 · 综合旅行社注册'],['网红资源','小红书·抖音体验测评内容制作与传播'],['中国法人','悦集江南(上海) — 中国境内合法运营']],
+  cta:'获取适合我的医院报价 →',chipfloat:'与{N}家合作医疗机构携手同行',
+  stats:[['{N}家','合作医疗机构 — 整形·皮肤·体检·牙科等'],['官方注册','保健福祉部注册招揽机构 · 综合旅行社注册'],['网红资源','小红书·抖音体验测评内容制作与传播'],['中国法人','悦集江南(上海) — 中国境内合法运营']],
   svcTitle:'我们的服务',svcSub:'作为海外招揽专业企业，在医院与患者之间传递准确信息。',
   svc:[['外国人患者招揽','作为注册招揽机构，为中国·全球患者提供医院访问支持：咨询翻译、行程安排、术后管理。'],['网红体验测评营销','粉丝百万级网红亲自到院体验，在小红书·抖音发布测评内容。'],['医院介绍','向消费者准确介绍合作医疗机构的诊疗领域与医疗团队。'],['定制报价服务','选择项目和条件，比较合作医院报价，为您匹配合适的医院。']],
   hTitle:'合作医疗机构',hSub:'与FollowKorea合作的医疗机构，每次访问随机排序，不代表排名或评价。',hMore:'查看更多合作医院',docs:'医疗团队 {n} 名',all:'全部',
@@ -319,8 +319,8 @@ var I18N={
   badge:'보건복지부 외국인환자 유치업 등록 · 제 A-2026-01-01-06622 호',
   h1:'병원을 가장 잘 아는<br><b>해외 환자 유치 전문기업</b>이<br>믿을 수 있는 병원 정보를 전합니다',
   lead:'팔로우코리아는 보건복지부 등록 <b>해외 환자 유치 전문기업</b>입니다.<br>왕홍 체험 리뷰와 함께 직접 협력하는 병원의 정보를 투명하게 소개하고, 조건에 맞는 병원을 찾아드립니다.',
-  cta:'내게 맞는 병원 견적 받기 →',chipfloat:'협력 의료기관 54곳과 함께합니다',
-  stats:[['54곳','협력 의료기관 — 성형·피부·검진·치과 등'],['유치업 등록','보건복지부 등록 외국인환자 유치업체 · 종합여행업 등록'],['왕홍 네트워크','샤오홍슈·도우인 체험 리뷰 콘텐츠 제작·확산'],['중국 현지법인','悦集江南(上海) — 중국 내 합법 마케팅 운영']],
+  cta:'내게 맞는 병원 견적 받기 →',chipfloat:'협력 의료기관 {N}곳과 함께합니다',
+  stats:[['{N}곳','협력 의료기관 — 성형·피부·검진·치과 등'],['유치업 등록','보건복지부 등록 외국인환자 유치업체 · 종합여행업 등록'],['왕홍 네트워크','샤오홍슈·도우인 체험 리뷰 콘텐츠 제작·확산'],['중국 현지법인','悦集江南(上海) — 중국 내 합법 마케팅 운영']],
   svcTitle:'팔로우코리아가 하는 일',svcSub:'병원과 환자 사이에서, 해외 유치 전문기업으로서 정확한 정보를 연결합니다.',
   svc:[['외국인 환자 유치','등록 유치업체로서 중국·글로벌 환자의 병원 방문을 지원합니다. 상담 통역, 방문 일정, 사후 관리까지.'],['왕홍 체험 리뷰 마케팅','팔로워 100만 전후 왕홍이 병원을 직접 방문하고, 샤오홍슈·도우인에 체험 콘텐츠를 게재합니다.'],['병원 소개','협력 의료기관의 진료 분야·의료진 정보를 소비자에게 정확하게 소개합니다.'],['맞춤 견적 서비스','원하는 시술과 조건을 고르면 협력 병원 견적을 비교하고 맞는 병원을 찾아드립니다.']],
   hTitle:'협력 의료기관',hSub:'팔로우코리아와 함께하는 의료기관입니다. 접속할 때마다 무작위 순서로 표시되며 순위·추천·평가를 의미하지 않습니다.',hMore:'협력 병원 더 보기',docs:'의료진 {n}명',all:'전체',
@@ -362,8 +362,8 @@ var I18N={
   badge:'Registered Foreign Patient Attraction Agency (MOHW Korea) · No. A-2026-01-01-06622',
   h1:'The <b>patient attraction specialist</b><br>that knows Korean clinics best —<br>trusted information for you',
   lead:'Follow Korea is a government-registered <b>international patient attraction specialist</b>.<br>Combining influencer reviews, we transparently introduce partner clinics and match you with the right one.',
-  cta:'Get my personalized quote →',chipfloat:'Working with 54 partner clinics',
-  stats:[['54 clinics','Partner clinics — plastic, derma, checkup, dental'],['Licensed','MOHW-registered agency · Travel business registered'],['Influencer network','Xiaohongshu & Douyin review content'],['China entity','Yueji Jiangnan (Shanghai) — legal operations']],
+  cta:'Get my personalized quote →',chipfloat:'Working with {N} partner clinics',
+  stats:[['{N} clinics','Partner clinics — plastic, derma, checkup, dental'],['Licensed','MOHW-registered agency · Travel business registered'],['Influencer network','Xiaohongshu & Douyin review content'],['China entity','Yueji Jiangnan (Shanghai) — legal operations']],
   svcTitle:'What we do',svcSub:'As a patient-attraction specialist, we connect patients and clinics with accurate information.',
   svc:[['Patient attraction','As a registered agency we support clinic visits for international patients: interpreting, scheduling, aftercare.'],['Influencer review marketing','Influencers with ~1M followers visit clinics and publish reviews on Xiaohongshu & Douyin.'],['Clinic introduction','We accurately introduce partner clinics’ specialties and medical staff.'],['Custom quote service','Pick procedures and preferences — we compare partner-clinic quotes and match you.']],
   hTitle:'Partner Clinics',hSub:'Clinics partnered with Follow Korea, shown in random order — no ranking implied.',hMore:'Show more clinics',docs:'{n} doctors',all:'All',
@@ -405,8 +405,8 @@ var I18N={
   badge:'韓国保健福祉部 外国人患者誘致業 登録 · 第 A-2026-01-01-06622 号',
   h1:'病院を最もよく知る<br><b>海外患者誘致の専門企業</b>が<br>信頼できる病院情報をお届けします',
   lead:'Follow Koreaは韓国保健福祉部登録の<b>海外患者誘致専門企業</b>です。<br>ワンホン体験レビューとともに提携病院の情報を透明に紹介し、条件に合う病院をご案内します。',
-  cta:'私に合う病院の見積もりを受け取る →',chipfloat:'提携医療機関54院とともに',
-  stats:[['54院','提携医療機関 — 整形・皮膚・健診・歯科など'],['誘致業登録','保健福祉部登録 誘致業者 · 総合旅行業登録'],['ワンホン網','小紅書・抖音の体験レビュー制作・拡散'],['中国現地法人','悦集江南(上海) — 中国国内で合法運営']],
+  cta:'私に合う病院の見積もりを受け取る →',chipfloat:'提携医療機関{N}院とともに',
+  stats:[['{N}院','提携医療機関 — 整形・皮膚・健診・歯科など'],['誘致業登録','保健福祉部登録 誘致業者 · 総合旅行業登録'],['ワンホン網','小紅書・抖音の体験レビュー制作・拡散'],['中国現地法人','悦集江南(上海) — 中国国内で合法運営']],
   svcTitle:'私たちの仕事',svcSub:'海外誘致の専門企業として、正確な情報をつなぎます。',
   svc:[['外国人患者誘致','登録誘致業者として、通訳・日程調整・アフターケアまで来院をサポートします。'],['ワンホン体験レビュー','フォロワー100万規模のワンホンが来院し、小紅書・抖音にレビューを掲載します。'],['病院紹介','提携医療機関の診療分野・医療陣を正確に紹介します。'],['カスタム見積もり','施術と条件を選ぶと、提携病院の見積もりを比較しマッチングします。']],
   hTitle:'提携医療機関',hSub:'Follow Koreaの提携医療機関です。表示順はランダムで、順位・評価ではありません。',hMore:'もっと見る',docs:'医師 {n} 名',all:'すべて',
@@ -456,7 +456,7 @@ function hLoc(h){if(LANG==='zh'&&h.loczh)return h.loczh;if(LANG==='ja'&&h.locja)
 
 var QGSEL=0;
 function applyLang(l){
-  LANG=l; localStorage.setItem('b2c_lang',l);
+  LANG=l; try{sessionStorage.setItem('b2c_lang',l);}catch(e){}
   document.documentElement.lang=l;
   var t=T();
   document.getElementById('langs').innerHTML=LANG_META.map(function(m){
@@ -470,11 +470,12 @@ function applyLang(l){
   document.getElementById('t-h1').innerHTML=t.h1;
   document.getElementById('t-lead').innerHTML=t.lead;
   document.getElementById('t-cta').textContent=t.cta;
-  document.getElementById('t-chipfloat').textContent=t.chipfloat;
+  var N=String(HOSPITALS.length); var fN=function(x){return String(x).replace(/{N}/g,N);}; // 협력 의료기관 수 = 카드 수 자동
+  document.getElementById('t-chipfloat').textContent=fN(t.chipfloat);
   var links=['#hospitals','#legal','https://gnpulse.kr/','https://gnfollow-cn.netlify.app/'];
   document.getElementById('stats').innerHTML=t.stats.map(function(sset,i){
     var ext=links[i].indexOf('http')===0;
-    return '<a class="st" href="'+links[i]+'"'+(ext?' target="_blank" rel="noopener"':'')+'><div class="n">'+esc(sset[0])+'</div><div class="l">'+esc(sset[1])+' →</div></a>';
+    return '<a class="st" href="'+links[i]+'"'+(ext?' target="_blank" rel="noopener"':'')+'><div class="n">'+esc(fN(sset[0]))+'</div><div class="l">'+esc(sset[1])+' →</div></a>';
   }).join('');
   document.getElementById('t-svc-title').textContent=t.svcTitle;
   document.getElementById('t-svc-sub').textContent=t.svcSub;
