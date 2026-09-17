@@ -585,8 +585,10 @@ var HOSPS=[], KWS=[], SEL_TRAITS=[], PREFER='', ELIG='';
 fetch(API).then(function(r){return r.json();}).then(function(d){ HOSPS=(d.hospitals||[]); }).catch(function(){});
 (function(){
   var mt=document.getElementById('mqtrack'); if(!mt)return;
-  var ps=Object.keys(HOSP_THUMB).slice(0,14).map(function(k){return THUMB_BASE+HOSP_THUMB[k];});
-  mt.innerHTML=ps.concat(ps).map(function(u){return '<img src="'+u+'" alt="" loading="lazy">';}).join('');
+  // 흐르는 배너 = 썸네일이 있는 협력 의료기관 전부 (HOSP_THUMB 순서, 새 병원이 앞에 추가되면 자동 포함). 속도는 장수에 비례.
+  var ps=Object.keys(HOSP_THUMB).map(function(k){return THUMB_BASE+HOSP_THUMB[k];});
+  mt.innerHTML=ps.concat(ps).map(function(u,i){return '<img src="'+u+'" alt="" loading="'+(i<8?'eager':'lazy')+'">';}).join('');
+  mt.style.animationDuration=Math.round(ps.length*3.6)+'s';
 })();
 function addKwChip(el){ addKwPair(el.getAttribute('data-l'), el.getAttribute('data-v')); }
 function addKwPair(l,v){
