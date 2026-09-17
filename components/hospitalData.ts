@@ -3385,6 +3385,32 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "thumb": "hthumb/mellow.jpg"
   },
   {
+    "name": { "kr": "더플러스성형외과", "en": "THE PLUS Plastic Surgery", "zh": "THE PLUS整形外科" },
+    "dept": { "kr": "성형외과(코 재건 특화)", "en": "Plastic Surgery (Nasal Reconstruction)", "zh": "整形外科(鼻部再造)" },
+    "cat": "성형외과",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["코 재건술", "코 재수술", "코성형", "안면윤곽", "눈성형"],
+      "en": ["Nasal Reconstruction", "Revision Rhinoplasty", "Rhinoplasty", "Facial Contouring", "Eye Surgery"],
+      "zh": ["鼻部再造手术", "鼻修复手术", "鼻整形", "面部轮廓", "眼部整形"]
+    },
+    "hours": "",
+    "loc": {
+      "ko": "서울 강남구 가로수길 9, 3-4층 (신사동)",
+      "zh": "首尔新沙·林荫路",
+      "en": "Garosu-gil, Sinsa, Seoul"
+    },
+    "overview": {
+      "kr": "더플러스성형외과(THE PLUS Plastic Surgery)는 신사 가로수길에 위치한 성형외과로, 코 재건술·코 재수술 등 난도 높은 코 수술에 특화되어 있습니다. 정재용 원장을 비롯한 성형외과 의료진이 직접 상담·집도하며, 안면윤곽·눈·가슴 성형도 함께 진료합니다. 영어·중국어·일본어·러시아어·태국어 사이트를 운영할 만큼 해외환자 진료 경험이 풍부합니다.",
+      "en": "THE PLUS Plastic Surgery, on Garosu-gil in Sinsa, specializes in advanced nose surgery — nasal reconstruction and revision rhinoplasty — alongside facial contouring, eye and breast surgery. Led by Dr. Jung Jae-yong, the clinic has extensive experience with international patients, running dedicated English, Chinese, Japanese, Russian and Thai websites.",
+      "zh": "THE PLUS整形外科位于新沙洞林荫路，专注高难度鼻部手术——鼻部再造与鼻修复手术，同时开展面部轮廓·眼部·胸部整形。由郑在容院长等专科医生亲自面诊与主刀，运营英·中·日·俄·泰多语官网，国际患者诊疗经验丰富。"
+    },
+    "doctors": [
+      { "name": "정재용", "title": "원장", "spec": ["코성형·코재건"] }
+    ],
+    "thumb": "hthumb/theplus.jpg"
+  },
+  {
     "name": {
       "kr": "헤어온의원",
       "en": "HairON Clinic",
