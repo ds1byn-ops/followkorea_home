@@ -3359,6 +3359,32 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "thumb": "hthumb/yonseian.jpg"
   },
   {
+    "name": { "kr": "멜로우피부과의원 청담점", "en": "Mellow Dermatology Clinic Cheongdam", "zh": "Mellow皮肤科(清潭店)" },
+    "dept": { "kr": "피부과", "en": "Dermatology", "zh": "皮肤科" },
+    "cat": "피부",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["써마지·울쎄라피 프라임", "온다·소프라노 티타늄", "스킨부스터·리쥬란", "보톡스·필러", "피코토닝·색소"],
+      "en": ["Thermage & Ultherapy Prime", "ONDA & Soprano Titanium", "Skin Boosters & Rejuran", "Botox & Filler", "Pico Toning & Pigment"],
+      "zh": ["热玛吉·超声炮Prime", "ONDA·Soprano", "皮肤管理·丽珠兰", "肉毒素·玻尿酸", "皮秒净肤·色素"]
+    },
+    "hours": "Mon 10:00-20:00 · Tue-Thu 10:00-19:00 · Fri 10:00-21:00 · Sat 10:00-16:00",
+    "loc": {
+      "ko": "서울 강남구 도산대로 429, 2층",
+      "zh": "首尔江南·清潭",
+      "en": "Cheongdam, Seoul"
+    },
+    "overview": {
+      "kr": "멜로우피부과의원 청담점(Mellow Dermatology Clinic)은 도산대로 429에 위치한 피부과 전문 의원입니다. 대표원장 박복원을 중심으로 써마지·울쎄라피 프라임·온다 등 리프팅과 멜로우부스터·리투오·레이어드 프로그램 등 맞춤 스킨부스터, 4개 브랜드 보톡스와 필러, 피코토닝 색소치료·제모까지 폭넓은 피부 프로그램을 운영합니다. 금요일 야간(21시)·토요일 진료로 방문이 편리합니다.",
+      "en": "Mellow Dermatology Clinic Cheongdam, at 429 Dosan-daero, is a dermatology specialty clinic led by Dr. Park Bok-won. It offers lifting (Thermage, Ultherapy Prime, ONDA), customized skin boosters (Mellow Booster, Re2O, layered programs), four brands of botulinum toxin, fillers, pico toning for pigmentation, and hair removal. Open late on Fridays (9pm) and on Saturdays.",
+      "zh": "Mellow皮肤科清潭店位于岛山大路429号，是皮肤科专科医院，由代表院长朴福源主诊。提供热玛吉·超声炮Prime·ONDA等提升项目、Mellow定制水光·Re2O·分层水光等皮肤管理，四大品牌肉毒素与玻尿酸填充、皮秒净肤色素治疗及脱毛等全方位皮肤项目。周五夜间(21点)·周六也可就诊。"
+    },
+    "doctors": [
+      { "name": "박복원", "title": "대표원장", "spec": ["피부과"] }
+    ],
+    "thumb": "hthumb/mellow.jpg"
+  },
+  {
     "name": {
       "kr": "헤어온의원",
       "en": "HairON Clinic",
