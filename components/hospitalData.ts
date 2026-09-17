@@ -3411,6 +3411,126 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "thumb": "hthumb/theplus.jpg"
   },
   {
+    "name": { "kr": "스튜디오 숲 서울", "en": "Studio Soop Seoul", "zh": "Studio Soop 首尔" },
+    "dept": { "kr": "사진 스튜디오", "en": "Photo Studio", "zh": "摄影工作室" },
+    "cat": "기타 서비스",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["프로필 촬영","화보 촬영","커플·우정 스냅","뷰티 스냅"],
+      "en": ["Profile Shoots","Editorial Shoots","Couple & Friend Snaps","Beauty Snaps"],
+      "zh": ["形象照拍摄","写真拍摄","情侣·闺蜜快照","美妆快照"]
+    },
+    "hours": "",
+    "loc": {
+      "ko": "서울",
+      "zh": "首尔",
+      "en": "Seoul"
+    },
+    "overview": {
+      "kr": "스튜디오 숲 서울은 프로필·화보 촬영 전문 사진 스튜디오입니다. 시술 전후 기념 촬영, 여행 스냅 등 방한 일정에 맞춘 촬영을 예약제로 진행합니다.",
+      "en": "Studio Soop Seoul is a photo studio specializing in profile and editorial shoots. Sessions are by reservation and can be scheduled around your visit — including post-treatment portraits and travel snaps.",
+      "zh": "Studio Soop首尔是专业形象照·写真摄影工作室。采取预约制，可配合访韩行程安排拍摄，包括术后纪念照与旅行快照。"
+    },
+    "doctors": [],
+    "thumb": "hthumb/studiosoop.jpg"
+  },
+  {
+    "name": { "kr": "순수 청담본점", "en": "SOONSOO Cheongdam", "zh": "SOONSOO清潭总店" },
+    "dept": { "kr": "토탈 뷰티살롱", "en": "Total Beauty Salon", "zh": "综合美容沙龙" },
+    "cat": "기타 서비스",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["헤어 스타일링","메이크업","웨딩 헤어·메이크업","연예인 스타일링"],
+      "en": ["Hair Styling","Makeup","Wedding Hair & Makeup","Celebrity Styling"],
+      "zh": ["发型设计","化妆造型","婚礼妆发","明星造型"]
+    },
+    "hours": "",
+    "loc": {
+      "ko": "서울 강남구 도산대로61길 4, 순수빌딩 (청담동)",
+      "zh": "首尔清潭",
+      "en": "Cheongdam, Seoul"
+    },
+    "overview": {
+      "kr": "순수(SOONSOO) 청담본점은 청담동의 대표 토탈 뷰티살롱으로, 헤어·메이크업·웨딩·연예인 스타일링을 전문으로 합니다. 촬영·행사·시술 전후 스타일링까지 프리미엄 뷰티 서비스를 제공합니다.",
+      "en": "SOONSOO Cheongdam is a leading total beauty salon in Cheongdam-dong, specializing in hair, makeup, wedding and celebrity styling — premium beauty services for shoots, events, and before or after your treatments.",
+      "zh": "SOONSOO清潭总店是清潭洞代表性的综合美容沙龙，专注美发·化妆·婚礼与明星造型，为拍摄·活动·术前术后提供高端美容服务。"
+    },
+    "doctors": [],
+    "thumb": "hthumb/soonsoo.jpg"
+  },
+  {
+    "name": { "kr": "준오헤어 코엑스도심공항점", "en": "JUNO Hair COEX CALT", "zh": "JUNO Hair COEX都心机场店" },
+    "dept": { "kr": "헤어살롱", "en": "Hair Salon", "zh": "美发沙龙" },
+    "cat": "기타 서비스",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["컷·스타일링","염색","펌","헤어 클리닉","두피 스파"],
+      "en": ["Cut & Styling","Color","Perm","Hair Clinic","Scalp Spa"],
+      "zh": ["剪发造型","染发","烫发","头发护理","头皮SPA"]
+    },
+    "hours": "",
+    "loc": {
+      "ko": "서울 강남구 테헤란로87길 36, 도심공항타워 B2층 B22호",
+      "zh": "首尔三成·COEX",
+      "en": "COEX, Samseong, Seoul"
+    },
+    "overview": {
+      "kr": "준오헤어 코엑스도심공항점은 1982년 시작된 대한민국 대표 헤어 프랜차이즈 준오헤어의 코엑스 지점입니다. 컷·염색·펌·클리닉·두피 스파를 제공하며 매일 09:30~21:00 영업, 영어 상담이 가능해 외국인 고객이 이용하기 편리합니다.",
+      "en": "JUNO Hair COEX CALT is the COEX branch of JUNO Hair, Korea’s leading hair franchise since 1982. Cut, color, perm, hair clinic and scalp spa — open daily 09:30-21:00, with English consultations available.",
+      "zh": "JUNO Hair COEX都心机场店是1982年创立的韩国代表美发连锁JUNO Hair的COEX分店。提供剪·染·烫·护理·头皮SPA，每天09:30-21:00营业，可英文咨询，外国顾客使用便利。"
+    },
+    "doctors": [],
+    "thumb": "hthumb/junocoex.jpg"
+  },
+  {
+    "name": { "kr": "에코자르딘 코엑스 삼성점", "en": "ECO JARDIN COEX Samseong", "zh": "ECO JARDIN COEX三成店" },
+    "dept": { "kr": "헤어살롱", "en": "Hair Salon", "zh": "美发沙龙" },
+    "cat": "기타 서비스",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["컷·스타일링","염색","펌","트리트먼트"],
+      "en": ["Cut & Styling","Color","Perm","Treatment"],
+      "zh": ["剪发造型","染发","烫发","护理"]
+    },
+    "hours": "",
+    "loc": {
+      "ko": "서울 강남구 삼성동 코엑스",
+      "zh": "首尔三成·COEX",
+      "en": "COEX, Samseong, Seoul"
+    },
+    "overview": {
+      "kr": "에코자르딘 코엑스 삼성점은 코엑스에 위치한 헤어살롱으로, 컷·염색·펌·트리트먼트를 제공합니다. 쇼핑·전시 일정과 함께 이용하기 좋은 접근성이 강점입니다.",
+      "en": "ECO JARDIN COEX Samseong is a hair salon inside COEX offering cut, color, perm and treatments — easy to combine with shopping or exhibition schedules.",
+      "zh": "ECO JARDIN COEX三成店位于COEX内，提供剪·染·烫·护理服务，可与购物·展会行程轻松衔接。"
+    },
+    "doctors": [],
+    "thumb": "hthumb/ecojardin.jpg"
+  },
+  {
+    "name": { "kr": "카마스튜디오", "en": "KAMA Studio", "zh": "KAMA摄影工作室" },
+    "dept": { "kr": "사진 스튜디오", "en": "Photo Studio", "zh": "摄影工作室" },
+    "cat": "기타 서비스",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["웨딩 촬영","프로필 촬영","화보 촬영","가족 촬영"],
+      "en": ["Wedding Shoots","Profile Shoots","Editorial Shoots","Family Shoots"],
+      "zh": ["婚纱摄影","形象照拍摄","写真拍摄","家庭摄影"]
+    },
+    "hours": "",
+    "loc": {
+      "ko": "서울 강남구 선릉로 822, 6층 (청담동)",
+      "zh": "首尔清潭",
+      "en": "Cheongdam, Seoul"
+    },
+    "overview": {
+      "kr": "카마스튜디오(KAMA Studio)는 청담동의 사진 스튜디오로, \"빛의 예술\"을 모토로 웨딩·프로필·화보 촬영을 전문으로 합니다. 연예인·아이돌 화보 촬영 경험이 풍부합니다.",
+      "en": "KAMA Studio, in Cheongdam-dong, specializes in wedding, profile and editorial photography under the motto “the art of light”, with extensive experience shooting celebrities and idols.",
+      "zh": "KAMA摄影工作室位于清潭洞，以“光之艺术”为理念，专注婚纱·形象照·写真拍摄，拥有丰富的艺人·偶像写真拍摄经验。"
+    },
+    "doctors": [],
+    "thumb": "hthumb/kama.jpg"
+  },
+  {
     "name": {
       "kr": "헤어온의원",
       "en": "HairON Clinic",
