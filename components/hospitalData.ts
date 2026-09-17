@@ -3325,6 +3325,40 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "thumb": "hthumb/gnjs.jpg"
   },
   {
+    "name": { "kr": "연세안마취통증의학과", "en": "Yonsei An Pain Clinic", "zh": "延世安疼痛医学科" },
+    "dept": { "kr": "마취통증의학과(비수술 통증치료)", "en": "Anesthesiology & Pain Medicine", "zh": "麻醉疼痛医学科(非手术治疗)" },
+    "cat": "정형·척추",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["신경차단·하이드로디섹션", "도수치료", "체외충격파", "척추 감압치료", "PDRN·프롤로 주사"],
+      "en": ["Nerve Block & Hydrodissection", "Manual Therapy", "ESWT (Shockwave)", "Spinal Decompression", "PDRN & Prolotherapy"],
+      "zh": ["神经阻滞·神经水分离", "徒手治疗", "体外冲击波", "脊柱减压治疗", "PDRN·增生疗法注射"]
+    },
+    "hours": "Mon/Wed/Fri 09:00-20:00 · Tue/Thu 09:00-18:00 · Sat 09:00-14:00",
+    "loc": {
+      "ko": "경기 부천시 소사구 경인로 511, 역곡유림빌딩 3층 (1호선 역곡역 1번 출구)",
+      "zh": "京畿富川·驿谷站1号出口",
+      "en": "Yeokgok, Bucheon (Line 1)"
+    },
+    "overview": {
+      "kr": "연세안마취통증의학과(Yonsei An Pain Clinic)는 1호선 역곡역 1번 출구 앞 역곡유림빌딩 3층에 위치한 통증 전문 의원입니다. 통증의학과·신경외과·정형외과 의료진이 협진하며, 정밀 초진 평가(X-ray·뇌파·맥파 검사) 후 신경차단·도수치료·체외충격파·척추 감압 등 비수술 맞춤 치료를 제공합니다. 영어 의료통역이 상주하고 공항 픽업과 국제보험 청구 서류를 지원합니다.",
+      "en": "Yonsei An Pain Clinic is a pain-medicine specialty clinic on the 3rd floor of Yeokgok Yurim Bldg., right by Exit 1 of Yeokgok Station (Line 1), Bucheon. A multidisciplinary team of pain medicine, neurosurgery and orthopedics provides non-surgical personalized care — nerve blocks, manual therapy, ESWT and spinal decompression — after a precise initial assessment. English medical interpreter on site; airport pickup and international insurance paperwork supported.",
+      "zh": "延世安疼痛医学科（Yonsei An Pain Clinic）位于富川驿谷站1号出口旁驿谷儒林大厦3层，是疼痛专科医院。疼痛医学科·神经外科·骨科医生联合诊疗，经精密初诊评估（X光·脑电波·脉搏检查）后提供神经阻滞·徒手治疗·体外冲击波·脊柱减压等非手术个性化治疗。常驻英文医疗翻译，支持机场接机及国际保险理赔材料。"
+    },
+    "doctors": [
+      { "name": "조남룡", "title": "대표원장", "spec": ["신경외과"] },
+      { "name": "김지웅", "title": "원장", "spec": ["통증의학"] },
+      { "name": "이지은", "title": "원장", "spec": ["마취통증의학과"] },
+      { "name": "송신미", "title": "원장", "spec": ["마취통증의학과"] },
+      { "name": "김계숙", "title": "원장", "spec": ["통증의학"] },
+      { "name": "이상은", "title": "원장", "spec": ["통증의학"] },
+      { "name": "최영서", "title": "원장", "spec": ["통증의학"] },
+      { "name": "박해리", "title": "원장", "spec": ["통증의학"] },
+      { "name": "최낙철", "title": "원장", "spec": ["통증의학"] }
+    ],
+    "thumb": "hthumb/yonseian.jpg"
+  },
+  {
     "name": {
       "kr": "헤어온의원",
       "en": "HairON Clinic",
