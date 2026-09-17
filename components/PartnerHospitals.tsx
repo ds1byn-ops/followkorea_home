@@ -23,11 +23,11 @@ const BADGE_DEFAULT = 'bg-slate-700/90';
 const badgeCls = (badge?: string) =>
   `${BADGE_COLOR[badge || ''] || BADGE_DEFAULT} backdrop-blur text-white text-[10px] font-black tracking-wider px-2.5 py-1 rounded-md uppercase shadow-sm`;
 
-// 초기 노출 8곳 — 2026-08-20 사용자 지시로 주력 병원을 앞으로 배치
+// 초기 노출 12곳(4×3 그리드) — 2026-09-17 사용자 지시로 갯수 고정
 const FEATURED: string[] = [
   '신상성형외과', 'VC성형외과의원', '드림성형외과', '글로비성형외과', 'KMI한국의학연구소 강남센터',
   '더이다의원', '차움', '원진성형외과피부과의원', '타토아의원', '포브의원', '차이성형외과',
-  '멜론성형외과', '리베리의원 강남점',
+  '멜론성형외과',
 ];
 
 // 카테고리 필터 — 병원 cat 값의 부분일치로 매칭
