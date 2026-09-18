@@ -3,7 +3,7 @@ import type { LanguageCode } from '../App';
 
 // 삼성서울병원 입점 안내 팝업 — 2026-09-18 추가. 노출 종료일 지나면 자동 미노출.
 const HIDE_KEY = 'smc_popup_hide_until';
-const SHOW_UNTIL = '2026-10-18';
+const SHOW_UNTIL = '2026-09-30';
 
 const TEXT: Record<string, { badge: string; title: string; sub: string; desc: string; items: string[]; cta: string; today: string; close: string }> = {
   KR: {
