@@ -134,7 +134,7 @@ const PromoPopups: React.FC<{ lang: LanguageCode }> = ({ lang }) => {
   return (
     <div className="fixed inset-0 z-[90] overflow-y-auto" role="dialog" aria-modal="true">
       <div className="absolute inset-0 bg-black/55 backdrop-blur-[2px]" onClick={closeAll} />
-      <div className="relative min-h-full flex flex-col lg:flex-row items-center justify-center gap-5 p-4 py-8">
+      <div className="relative min-h-full flex flex-col lg:flex-row items-center lg:items-stretch justify-center gap-5 p-4 py-8">
         {smc && (
           <Card t={smcT}
             grad="linear-gradient(135deg, #02305F 0%, #034EA2 55%, #2F74C9 100%)"
