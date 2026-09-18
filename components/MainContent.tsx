@@ -1100,14 +1100,6 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
                   <span>{({KR:'회사 소개서 다운로드',EN:'Download Company Profile',CN:'下载公司介绍',JP:'会社案内をダウンロード',ID:'Unduh Profil Perusahaan',AR:'تحميل ملف الشركة',KH:'ទាញយកប្រវត្តិក្រុមហ៊ុន',VI:'Tải hồ sơ công ty',RU:'Скачать профиль компании'} as Record<string,string>)[lang] ?? 'Download Company Profile'}</span>
                 </a>
                 <a
-                  href={({KR:'/downloads/followkorea-partner-hospitals-ko.xlsx',CN:'/downloads/followkorea-partner-hospitals-zh.xlsx'} as Record<string,string>)[lang] ?? '/downloads/followkorea-partner-hospitals-en.xlsx'}
-                  download
-                  className="inline-flex items-center gap-2.5 bg-white text-[#1F3864] border-2 border-[#5a82c2]/40 px-6 md:px-7 py-3.5 md:py-4 rounded-full text-[13px] md:text-sm font-bold hover:border-[#5a82c2] hover:bg-[#f3f7fc] transition-all shadow-lg shadow-[#5a82c2]/10 active:scale-95"
-                >
-                  <span className="iconify text-lg md:text-xl" data-icon="solar:hospital-bold"></span>
-                  <span>{({KR:'제휴 병원 리스트 다운로드',EN:'Download Partner Hospital List',CN:'下载合作医院名单',JP:'提携病院リストをダウンロード',ID:'Unduh Daftar Rumah Sakit Mitra',AR:'تحميل قائمة المستشفيات الشريكة',KH:'ទាញយកបញ្ជីមន្ទីរពេទ្យដៃគូ',VI:'Tải danh sách bệnh viện đối tác',RU:'Скачать список клиник-партнёров'} as Record<string,string>)[lang] ?? 'Download Partner Hospital List'}</span>
-                </a>
-                <a
                   href="https://pf.kakao.com/_xfZxjiX/chat"
                   target="_blank"
                   rel="noopener noreferrer"
