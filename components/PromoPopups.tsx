@@ -95,10 +95,10 @@ function initialVisible(hideKey: string, showUntil: string): boolean {
 }
 
 const Card: React.FC<{
-  t: CardText; grad: string; accent: string; ctaText?: string;
+  t: CardText; grad: string; accent: string; ctaText?: string; wrapClass?: string;
   onClose: () => void; onHideToday: () => void;
-}> = ({ t, grad, accent, ctaText = 'text-white', onClose, onHideToday }) => (
-  <div className="relative w-full max-w-md rounded-3xl overflow-hidden bg-white shadow-2xl flex flex-col">
+}> = ({ t, grad, accent, ctaText = 'text-white', wrapClass = '', onClose, onHideToday }) => (
+  <div className={"relative w-full rounded-3xl overflow-hidden bg-white shadow-2xl ring-1 ring-black/5 flex flex-col " + wrapClass}>
     <div className="relative px-7 pt-7 pb-6 text-white min-h-[148px]" style={{ background: grad }}>
       <div className="absolute -right-8 -top-10 w-44 h-44 rounded-full bg-white/10" />
       <div className="absolute right-12 bottom-1 w-14 h-14 rounded-full bg-white/10" />
@@ -158,33 +158,48 @@ const PromoPopups: React.FC<{ lang: LanguageCode }> = ({ lang }) => {
   const kimesT = KIMES_TEXT[lang] || KIMES_TEXT.EN;
   const yjT = YJ_TEXT[lang] || YJ_TEXT.EN;
 
+  // 부채꼴 카드 덱 — 보이는 카드 수에 따라 기울기·겹침·z-order 배치 (모바일은 세로 스택)
+  const cards: { key: string; el: React.ReactNode }[] = [];
+  if (smc) cards.push({ key: 'smc', el: (
+    <Card t={smcT}
+      grad="linear-gradient(135deg, #02305F 0%, #034EA2 55%, #2F74C9 100%)"
+      accent="#034EA2"
+      onClose={() => setSmc(false)}
+      onHideToday={hide(SMC_HIDE_KEY, setSmc)} />
+  )});
+  if (kimes) cards.push({ key: 'kimes', el: (
+    <Card t={kimesT}
+      grad="linear-gradient(135deg, #16224d 0%, #2c437e 55%, #5a82c2 100%)"
+      accent="#5a82c2"
+      ctaText="text-[#1a1a1a]"
+      onClose={() => setKimes(false)}
+      onHideToday={hide(KIMES_HIDE_KEY, setKimes)} />
+  )});
+  if (yj) cards.push({ key: 'yj', el: (
+    <Card t={yjT}
+      grad="linear-gradient(135deg, #571523 0%, #A62838 55%, #C4505C 100%)"
+      accent="#A62838"
+      onClose={() => setYj(false)}
+      onHideToday={hide(YJ_HIDE_KEY, setYj)} />
+  )});
+
+  const fan: Record<number, string[]> = {
+    1: [''],
+    2: ['lg:rotate-[-3deg] lg:translate-y-2 z-10', 'lg:rotate-[3deg] lg:translate-y-2 z-20'],
+    3: ['lg:rotate-[-6deg] lg:translate-y-5 lg:scale-[0.97] z-10', 'z-30', 'lg:rotate-[6deg] lg:translate-y-5 lg:scale-[0.97] z-10'],
+  };
+  const wraps = fan[cards.length] || [];
+
   return (
     <div className="fixed inset-0 z-[90] overflow-y-auto" role="dialog" aria-modal="true">
-      <div className="absolute inset-0 bg-black/55 backdrop-blur-[2px]" onClick={closeAll} />
-      <div className="relative min-h-full flex items-center justify-center p-4 py-8">
-       <div className="flex flex-col lg:flex-row lg:flex-wrap items-center lg:items-stretch justify-center gap-5 w-full lg:w-auto">
-        {smc && (
-          <Card t={smcT}
-            grad="linear-gradient(135deg, #02305F 0%, #034EA2 55%, #2F74C9 100%)"
-            accent="#034EA2"
-            onClose={() => setSmc(false)}
-            onHideToday={hide(SMC_HIDE_KEY, setSmc)} />
-        )}
-        {kimes && (
-          <Card t={kimesT}
-            grad="linear-gradient(135deg, #16224d 0%, #2c437e 55%, #5a82c2 100%)"
-            accent="#5a82c2"
-            ctaText="text-[#1a1a1a]"
-            onClose={() => setKimes(false)}
-            onHideToday={hide(KIMES_HIDE_KEY, setKimes)} />
-        )}
-        {yj && (
-          <Card t={yjT}
-            grad="linear-gradient(135deg, #571523 0%, #A62838 55%, #C4505C 100%)"
-            accent="#A62838"
-            onClose={() => setYj(false)}
-            onHideToday={hide(YJ_HIDE_KEY, setYj)} />
-        )}
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-[3px]" onClick={closeAll} />
+      <div className="relative min-h-full flex items-center justify-center p-4 py-10">
+       <div className="flex flex-col lg:flex-row items-center justify-center gap-5 lg:gap-0 lg:-space-x-10 w-full lg:w-auto">
+        {cards.map((c, i) => (
+          <div key={c.key} className={'relative w-full max-w-[390px] lg:w-[390px] transition-all duration-300 ease-out lg:hover:!rotate-0 lg:hover:!translate-y-0 lg:hover:!scale-[1.04] hover:z-40 lg:hover:drop-shadow-[0_30px_50px_rgba(5,15,40,0.5)] ' + (wraps[i] || '')}>
+            {c.el}
+          </div>
+        ))}
        </div>
       </div>
     </div>
