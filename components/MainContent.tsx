@@ -320,6 +320,22 @@ const WH_I18N: Record<string, {
   },
 };
 
+
+// 히어로 분기(2026-09-18): KR = 병원(B2B) 메시지 유지 + 환자용 작은 링크 / 외국어 = 환자용 견적 CTA를 주 버튼으로, 병원 상담은 보조
+const B2C_LANG: Record<string,string> = { CN:'zh', EN:'en', JP:'ja', KR:'ko' };
+const b2cUrl = (lang: string) => '/b2c/?lang=' + (B2C_LANG[lang] || 'en') + '&utm_source=home_hero&utm_medium=cta';
+const HERO_B2C: Record<string,{title:string;sub:string;btn:string;hosp:string}> = {
+  EN:{ title:"Get a Personalized Quote\nfrom Gangnam's Top Clinics", sub:'Compare verified clinic prices for your treatment — free, in your language.', btn:'Get My Quote', hosp:'For hospitals · Partner with us' },
+  CN:{ title:'为您匹配首尔江南医院\n并获取专属报价', sub:'按您想做的项目比较认证医院价格 — 免费 · 中文服务', btn:'获取我的报价', hosp:'医院合作咨询' },
+  JP:{ title:'江南の提携クリニックから\nあなたに合った見積もりを', sub:'希望施術で認証クリニックの価格を比較 — 無料・日本語対応', btn:'見積もりを受け取る', hosp:'医療機関の方はこちら' },
+  ID:{ title:'Dapatkan Penawaran Personal\ndari Klinik Terbaik Gangnam', sub:'Bandingkan harga klinik terverifikasi untuk perawatan Anda — gratis.', btn:'Minta Penawaran', hosp:'Untuk rumah sakit · Bermitra' },
+  AR:{ title:'احصل على عرض سعر مخصص\nمن أفضل عيادات جانجنام', sub:'قارن أسعار العيادات المعتمدة لعلاجك — مجاناً وبلغتك.', btn:'اطلب عرض السعر', hosp:'للمستشفيات · الشراكة معنا' },
+  KH:{ title:'ទទួលបានការស្នើតម្លៃផ្ទាល់ខ្លួន\nពីគ្លីនិកកំពូលនៅ Gangnam', sub:'ប្រៀបធៀបតម្លៃគ្លីនិកដែលបានផ្ទៀងផ្ទាត់សម្រាប់ការព្យាបាលរបស់អ្នក — ឥតគិតថ្លៃ', btn:'ស្នើសុំតម្លៃ', hosp:'សម្រាប់មន្ទីរពេទ្យ' },
+  VI:{ title:'Nhận báo giá cá nhân hóa\ntừ các phòng khám hàng đầu Gangnam', sub:'So sánh giá phòng khám đã xác minh cho liệu trình của bạn — miễn phí, tiếng Việt.', btn:'Nhận báo giá', hosp:'Dành cho bệnh viện · Hợp tác' },
+  RU:{ title:'Персональное предложение\nот лучших клиник Каннама', sub:'Сравните цены проверенных клиник на вашу процедуру — бесплатно, на вашем языке.', btn:'Получить расчёт', hosp:'Для клиник · Сотрудничество' },
+};
+const KR_PATIENT_LINK = '환자이신가요? 시술 맞춤 견적 받기';
+
 const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, onOpenReviews, onOpenTerms, onOpenPrivacy, lang }) => {
   const t = {
     KR: {
@@ -687,23 +703,37 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
             </Reveal>
             <Reveal delay={0.2}>
               <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold leading-[1.2] tracking-tight mb-6 drop-shadow-2xl whitespace-pre-line" style={{ color: '#F5F5F5' }}>
-                {t.heroTitle}
+                {HERO_B2C[lang] ? HERO_B2C[lang].title : t.heroTitle}
               </h1>
             </Reveal>
             <Reveal delay={0.35}>
               <p className="text-base md:text-xl lg:text-2xl font-medium text-white/85 mb-10 md:mb-12 max-w-2xl drop-shadow-lg">
-                {({ KR: 'Connecting Global Patients to Korean Medical Care', EN: 'Connecting Global Patients to Korean Medical Care', CN: '连接全球患者与韩国顶尖医疗', JP: '世界中の患者を韓国医療へつなぐ', ID: 'Menghubungkan Pasien Global dengan Layanan Medis Korea', AR: 'نربط المرضى من حول العالم بالرعاية الطبية الكورية', KH: 'ភ្ជាប់អ្នកជំងឺទូទាំងពិភពលោក ជាមួយសេវាវេជ្ជសាស្ត្រកូរ៉េ', VI: 'Kết nối bệnh nhân toàn cầu với Y tế Hàn Quốc', RU: 'Соединяем пациентов со всего мира с медициной Кореи' } as Record<string, string>)[lang]}
+                {HERO_B2C[lang] ? HERO_B2C[lang].sub : (({ KR: 'Connecting Global Patients to Korean Medical Care', EN: 'Connecting Global Patients to Korean Medical Care', CN: '连接全球患者与韩国顶尖医疗', JP: '世界中の患者を韓国医療へつなぐ', ID: 'Menghubungkan Pasien Global dengan Layanan Medis Korea', AR: 'نربط المرضى من حول العالم بالرعاية الطبية الكورية', KH: 'ភ្ជាប់អ្នកជំងឺទូទាំងពិភពលោក ជាមួយសេវាវេជ្ជសាស្ត្រកូរ៉េ', VI: 'Kết nối bệnh nhân toàn cầu với Y tế Hàn Quốc', RU: 'Соединяем пациентов со всего мира с медициной Кореи' } as Record<string, string>)[lang])}
               </p>
             </Reveal>
             <Reveal delay={0.5}>
-              <div className="flex flex-wrap gap-5">
+              <div className="flex flex-wrap items-center gap-5">
+                {HERO_B2C[lang] && (
+                  <a href={b2cUrl(lang)} onClick={(e) => e.stopPropagation()}
+                    className="bg-[#5a82c2] text-white px-8 md:px-10 py-4 md:py-5 rounded-full font-bold hover:bg-[#4a6da3] transition-all flex items-center gap-3 group shadow-2xl shadow-[#5a82c2]/20 active:scale-95 text-sm md:text-base">
+                    <span>{HERO_B2C[lang].btn}</span>
+                    <span className="iconify text-lg md:text-xl group-hover:translate-x-1 transition-transform" data-icon="solar:alt-arrow-right-linear"></span>
+                  </a>
+                )}
                 <button
                   onClick={(e) => { e.stopPropagation(); onOpenConsult(); }}
-                  className="bg-[#5a82c2] text-white px-8 md:px-10 py-4 md:py-5 rounded-full font-bold hover:bg-[#4a6da3] transition-all flex items-center gap-3 group shadow-2xl shadow-[#5a82c2]/20 active:scale-95 text-sm md:text-base"
+                  className={HERO_B2C[lang] ? 'bg-white/10 backdrop-blur-md border border-white/40 text-white px-7 md:px-9 py-4 md:py-5 rounded-full font-bold hover:bg-white/20 transition-all flex items-center gap-3 group active:scale-95 text-sm md:text-base' : 'bg-[#5a82c2] text-white px-8 md:px-10 py-4 md:py-5 rounded-full font-bold hover:bg-[#4a6da3] transition-all flex items-center gap-3 group shadow-2xl shadow-[#5a82c2]/20 active:scale-95 text-sm md:text-base'}
                 >
-                  <span>{t.consultBtn}</span>
+                  <span>{HERO_B2C[lang] ? HERO_B2C[lang].hosp : t.consultBtn}</span>
                   <span className="iconify text-lg md:text-xl group-hover:translate-x-1 transition-transform" data-icon="solar:alt-arrow-right-linear"></span>
                 </button>
+                {!HERO_B2C[lang] && (
+                  <a href={b2cUrl(lang)} onClick={(e) => e.stopPropagation()}
+                    className="inline-flex items-center gap-1.5 text-white/85 hover:text-white text-sm md:text-[15px] font-semibold underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors">
+                    <span>{KR_PATIENT_LINK}</span>
+                    <span className="iconify text-base" data-icon="solar:alt-arrow-right-linear"></span>
+                  </a>
+                )}
               </div>
             </Reveal>
           </div>
