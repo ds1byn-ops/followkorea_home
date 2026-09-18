@@ -121,6 +121,7 @@ h2{font-size:clamp(20px,3.6vw,27px);font-weight:900;letter-spacing:-.5px;}
 .totop{position:fixed;bottom:22px;left:calc(50% + 540px + 14px);width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--brand-d);font-size:19px;font-weight:900;cursor:pointer;box-shadow:0 8px 22px rgba(120,35,50,.18);display:none;align-items:center;justify-content:center;z-index:45;}
 .totop.on{display:flex;}
 @media(max-width:1220px){.totop{left:auto;right:16px;}}
+.kakao-btn{display:inline-flex;align-items:center;gap:8px;margin:12px 0 4px;padding:10px 18px;border-radius:999px;background:#FEE500;color:#191919;font-size:13px;font-weight:700;line-height:1;text-decoration:none;}.kakao-btn:hover{background:#f5dc00;}
 .legal{background:#fff;border-top:1px solid var(--line);padding:26px 0 40px;font-size:11.5px;color:var(--mute);line-height:2;}
 @media(max-width:900px){.hgrid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:820px){.stats{grid-template-columns:1fr 1fr;}.cards{grid-template-columns:1fr 1fr;}.tsel{grid-template-columns:1fr 1fr;}.hero2{grid-template-columns:1fr;}.hright{display:none;}}
@@ -251,7 +252,8 @@ h2{font-size:clamp(20px,3.6vw,27px);font-weight:900;letter-spacing:-.5px;}
   <div class="wrap">
     <img src="/fk-news-logo.png" alt="FOLLOW KOREA" style="height:30px;margin-bottom:14px;display:block;">
     <b style="color:#3d4a63;" id="t-l-title"></b><br>
-    <span id="t-l-body"></span><br><br>
+    <span id="t-l-body"></span><br>
+    <a class="kakao-btn" href="https://pf.kakao.com/_xfZxjiX/chat" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="#191919" d="M12 3C6.48 3 2 6.58 2 10.99c0 2.82 1.85 5.29 4.64 6.7-.2.75-.75 2.74-.86 3.16-.13.53.19.52.4.38.17-.11 2.66-1.8 3.74-2.53.68.1 1.38.15 2.08.15 5.52 0 10-3.58 10-7.86S17.52 3 12 3z"/></svg><span id="t-l-kakao"></span></a><br><br>
     주식회사 팔로우코리아 (Follow Korea Co., Ltd.) · 대표자: 하장환 외 1인 · 사업자등록번호: 696-86-03627<br>
     외국인환자 유치업 등록: 제 A-2026-01-01-06622 호 (2026.01.21~2029.01.20) · 관광사업 등록: 종합여행업 제 2026-000022 호<br>
     통신판매업 신고 · 서울특별시 서초구 강남대로 373, 13층 116호 · contact@followkorea.co.kr
@@ -303,7 +305,7 @@ var I18N={
   rSubInfo:'以下是符合您条件的医院信息。<br>依据韩国法律，已加入韩国国民健康保险者（含韩国国民）不适用咨询对接·招揽服务。<br>诊疗咨询与预约请直接联系医院。',
   errNeed:'请填写姓名和联系方式。',errNoMatch:'未找到符合条件的医院，请更换项目重试。',errRetry:'请稍后重试。如仍有问题请联系 contact@followkorea.co.kr',errNet:'网络错误 — 请稍后重试。',
   qcTag:'所选项目 {h}/{t} 项可做',qcNone:'未找到可做所选项目的合作医院，请更换项目名称重试。',qcMiss:'无该项目',
-  lTitle:'注意事项',
+  lTitle:'注意事项',lKakao:'KakaoTalk 频道咨询',
   lBody:'· 报价所用价格为各医疗机构提供的非医保项目定价，实际费用因个人情况·施术范围而异。<br>· 本页面不提供医院间排名·优劣比较，报价比较仅为价格信息参考，合作医院随机排序展示。<br>· 所有医疗美容项目均可能产生副作用，请务必与医生充分咨询后决定。<br>· FollowKorea为广告媒介，非医疗行为及诊疗合同当事方。',
   traits:['独立院长(一人院长)','院长亲自面诊·主刀','院长责任制','可当日面诊','可当日施术','一站式私密套间诊室','高性价比大型系统','干细胞治疗正式认证','中文专职人员常驻','韩国本地人常去的医院','江南地区','新沙地区','狎鸥亭地区','江南以外地区也可'],
   quick:[
@@ -346,7 +348,7 @@ var I18N={
   rSubInfo:'선택하신 조건에 맞는 병원 정보입니다.<br>대한민국 국민건강보험 가입자(내국인 포함)에게는 법령상 상담 연결·유치 서비스를 제공하지 않습니다.<br>진료 상담과 예약은 병원에 직접 문의해 주세요.',
   errNeed:'이름과 연락처를 입력해주세요.',errNoMatch:'조건에 맞는 병원을 찾지 못했습니다. 시술 선택을 바꿔보세요.',errRetry:'잠시 후 다시 시도해주세요. 계속 안 되면 contact@followkorea.co.kr로 문의해주세요.',errNet:'네트워크 오류 — 잠시 후 다시 시도해주세요.',
   qcTag:'선택 시술 {h}/{t}개 취급',qcNone:'선택하신 시술을 취급하는 협력 병원을 찾지 못했습니다. 시술명을 바꿔서 검색해 보세요.',qcMiss:'해당 항목 없음',
-  lTitle:'유의사항',
+  lTitle:'유의사항',lKakao:'카카오톡 채널 상담하기',
   lBody:'· 견적 비교에 사용되는 가격은 각 의료기관이 제공한 비급여 진료비 정가 기준이며, 개인의 상태·시술 범위에 따라 실제 비용은 달라질 수 있습니다.<br>· 본 페이지는 의료기관 간 순위·우열 비교를 제공하지 않으며, 견적 비교는 가격 정보 제공 목적입니다. 협력 의료기관 소개는 무작위 순서입니다.<br>· 모든 의료 시술에는 부작용이 발생할 수 있으므로 반드시 의료인과 충분히 상담한 후 결정하시기 바랍니다.<br>· (주)팔로우코리아는 광고 매체로서 의료행위 및 진료계약의 당사자가 아닙니다.',
   traits:['1인 원장','원장 직접 상담·집도','원장 책임제','당일 상담 가능','당일 시술 가능','프라이빗 스위트 진료실(올인원)','가성비 중심 대형 시스템','줄기세포 치료 정식 인증','중국어 전담 인력 상주','한국인 이용 많은 병원','강남 지역','신사 지역','압구정 지역','강남 외 지역도 무관'],
   quick:[
@@ -389,7 +391,7 @@ var I18N={
   rSubInfo:'Here is the clinic matching your criteria.<br>By Korean law, consultation referral is not provided to Korean NHIS members (including Korean citizens).<br>Please contact the clinic directly for consultation and booking.',
   errNeed:'Please enter your name and phone.',errNoMatch:'No clinic matches those procedures — try different ones.',errRetry:'Please try again later, or email contact@followkorea.co.kr',errNet:'Network error — please try again.',
   qcTag:'{h}/{t} of your procedures available',qcNone:'No partner clinic offers the selected procedures. Try different names.',qcMiss:'not available',
-  lTitle:'Notes',
+  lTitle:'Notes',lKakao:'Chat on KakaoTalk',
   lBody:'· Prices are list prices of non-covered treatments provided by each clinic; actual costs vary by individual condition and scope.<br>· This page provides price information only and implies no ranking between clinics; clinics are shown in random order.<br>· All medical procedures can have side effects — always consult a medical professional.<br>· Follow Korea is an advertising medium and not a party to any medical treatment or contract.',
   traits:['Single-director clinic','Director consults & operates','Director accountability','Same-day consult','Same-day procedure','All-in-one private suite','Value-focused large clinic','Certified stem-cell therapy','Chinese-speaking staff','Popular with Koreans','Gangnam area','Sinsa area','Apgujeong area','Outside Gangnam OK'],
   quick:[
@@ -432,7 +434,7 @@ var I18N={
   rSubInfo:'ご条件に合う病院情報です。<br>韓国の法令上、国民健康保険加入者（韓国国民を含む）には相談仲介・誘致サービスを提供していません。<br>診療相談・ご予約は病院へ直接お問い合わせください。',
   errNeed:'お名前と連絡先を入力してください。',errNoMatch:'条件に合う病院が見つかりません。施術を変えてお試しください。',errRetry:'しばらくして再度お試しください。',errNet:'ネットワークエラー — 再度お試しください。',
   qcTag:'選択施術 {h}/{t} 件対応',qcNone:'選択した施術を扱う提携病院が見つかりません。',qcMiss:'該当なし',
-  lTitle:'ご注意',
+  lTitle:'ご注意',lKakao:'カカオトークで相談する',
   lBody:'· 価格は各医療機関提供の自由診療定価であり、実際の費用は個人の状態・範囲により異なります。<br>· 当ページは病院間の順位・優劣比較を提供せず、価格情報の提供が目的です。提携医療機関の表示順はランダムです。<br>· すべての医療施術には副作用の可能性があります。必ず医療者と十分ご相談ください。<br>· Follow Koreaは広告媒体であり、医療行為・診療契約の当事者ではありません。',
   traits:['院長1人体制','院長が直接カウンセリング・執刀','院長責任制','当日カウンセリング可','当日施術可','オールインワン個室スイート','コスパ重視の大型システム','幹細胞治療の正式認証','中国語専任スタッフ常駐','韓国人利用の多い病院','江南エリア','新沙エリア','狎鴎亭エリア','江南以外でも可'],
   quick:[
@@ -519,6 +521,7 @@ function applyLang(l){
   document.getElementById('t-restart').textContent=t.restart;
   document.getElementById('t-l-title').textContent=t.lTitle;
   document.getElementById('t-l-body').innerHTML=t.lBody;
+  document.getElementById('t-l-kakao').textContent=t.lKakao;
   var koTraits=I18N.ko.traits;
   document.getElementById('tsel').innerHTML=t.traits.map(function(x,i){
     return '<span class="topt'+(SEL_TRAITS.indexOf(koTraits[i])>=0?' on':'')+'" onclick="togT(this)" data-t="'+esc(koTraits[i])+'">'+esc(x)+'</span>';
