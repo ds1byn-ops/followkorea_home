@@ -334,7 +334,7 @@ const HERO_B2C: Record<string,{title:string;sub:string;btn:string;hosp:string}> 
   VI:{ title:'Nhận báo giá cá nhân hóa\ntừ các phòng khám hàng đầu Gangnam', sub:'So sánh giá phòng khám đã xác minh cho liệu trình của bạn — miễn phí, tiếng Việt.', btn:'Nhận báo giá', hosp:'Dành cho bệnh viện · Hợp tác' },
   RU:{ title:'Персональное предложение\nот лучших клиник Каннама', sub:'Сравните цены проверенных клиник на вашу процедуру — бесплатно, на вашем языке.', btn:'Получить расчёт', hosp:'Для клиник · Сотрудничество' },
 };
-const KR_PATIENT_LINK = '환자이신가요? 시술 맞춤 견적 받기';
+const KR_PATIENT_LINK = '환자용 · 시술 맞춤 견적 받기';
 
 const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, onOpenReviews, onOpenTerms, onOpenPrivacy, lang }) => {
   const t = {
@@ -729,9 +729,9 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
                 </button>
                 {!HERO_B2C[lang] && (
                   <a href={b2cUrl(lang)} onClick={(e) => e.stopPropagation()}
-                    className="inline-flex items-center gap-1.5 text-white/85 hover:text-white text-sm md:text-[15px] font-semibold underline underline-offset-4 decoration-white/40 hover:decoration-white transition-colors">
+                    className="bg-white text-[#1F3864] px-7 md:px-9 py-4 md:py-5 rounded-full font-bold hover:bg-[#eef3fa] transition-all flex items-center gap-3 group shadow-2xl shadow-black/20 active:scale-95 text-sm md:text-base">
                     <span>{KR_PATIENT_LINK}</span>
-                    <span className="iconify text-base" data-icon="solar:alt-arrow-right-linear"></span>
+                    <span className="iconify text-lg md:text-xl group-hover:translate-x-1 transition-transform" data-icon="solar:alt-arrow-right-linear"></span>
                   </a>
                 )}
               </div>

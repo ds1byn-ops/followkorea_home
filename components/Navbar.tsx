@@ -34,16 +34,17 @@ const Navbar: React.FC<NavbarProps> = ({
   const [isLangOpen, setIsLangOpen] = useState(false);
   const langRef = useRef<HTMLDivElement>(null);
 
-  const languages: { code: LanguageCode; label: string }[] = [
-    { code: 'KR', label: '한국어' },
-    { code: 'EN', label: 'English' },
-    { code: 'CN', label: '中文(简体)' },
-    { code: 'JP', label: '日本語' },
-    { code: 'ID', label: 'Indonesia' },
-    { code: 'AR', label: 'العربية' },
-    { code: 'KH', label: 'ភាសាខ្មែរ' },
-    { code: 'VI', label: 'Tiếng Việt' },
-    { code: 'RU', label: 'Русский' },
+  // flag: iconify circle-flags(SVG) — 윈도우에서 국기 이모지가 글자로 깨지는 문제 회피
+  const languages: { code: LanguageCode; label: string; flag: string }[] = [
+    { code: 'KR', label: '한국어', flag: 'circle-flags:kr' },
+    { code: 'EN', label: 'English', flag: 'circle-flags:us' },
+    { code: 'CN', label: '中文(简体)', flag: 'circle-flags:cn' },
+    { code: 'JP', label: '日本語', flag: 'circle-flags:jp' },
+    { code: 'ID', label: 'Indonesia', flag: 'circle-flags:id' },
+    { code: 'AR', label: 'العربية', flag: 'circle-flags:sa' },
+    { code: 'KH', label: 'ភាសាខ្មែរ', flag: 'circle-flags:kh' },
+    { code: 'VI', label: 'Tiếng Việt', flag: 'circle-flags:vn' },
+    { code: 'RU', label: 'Русский', flag: 'circle-flags:ru' },
   ];
 
   const labels = {
@@ -120,7 +121,7 @@ const Navbar: React.FC<NavbarProps> = ({
           </button>
 
           {isLangOpen && (
-            <div className="absolute top-full end-0 mt-2 w-32 md:w-36 bg-white rounded-xl shadow-2xl border border-[#5a82c2]/10 py-2 overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200">
+            <div className="absolute top-full end-0 mt-2 w-40 md:w-44 bg-white rounded-xl shadow-2xl border border-[#5a82c2]/10 py-2 overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200">
               {languages.map((lang) => (
                 <button
                   key={lang.code}
@@ -132,7 +133,7 @@ const Navbar: React.FC<NavbarProps> = ({
                     currentLang === lang.code ? 'text-[#5a82c2] bg-[#5a82c2]/10' : 'text-gray-500 hover:bg-gray-50 hover:text-gray-900'
                   }`}
                 >
-                  {lang.label}
+                  <span className="flex items-center gap-2.5"><span className="iconify text-[18px] shrink-0" data-icon={lang.flag}></span><span>{lang.label}</span></span>
                   {currentLang === lang.code && <span className="iconify" data-icon="solar:check-read-linear"></span>}
                 </button>
               ))}
