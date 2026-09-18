@@ -1090,14 +1090,25 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
                     <span>{t.footerContact}</span>
                   </p>
                 </div>
+                <div className="flex flex-wrap items-center gap-3 mt-8 md:mt-10">
                 <a
                   href={({KR:'/brochure/followkorea-company-profile-ko.pdf',CN:'/brochure/followkorea-company-profile-cn.pdf',EN:'/brochure/followkorea-company-profile-en.pdf'} as Record<string,string>)[lang] ?? '/brochure/followkorea-company-profile-en.pdf'}
                   download
-                  className="inline-flex items-center gap-2.5 mt-8 md:mt-10 bg-[#5a82c2] text-white px-6 md:px-7 py-3.5 md:py-4 rounded-full text-[13px] md:text-sm font-bold hover:bg-[#4a6da3] transition-all shadow-xl shadow-[#5a82c2]/20 active:scale-95"
+                  className="inline-flex items-center gap-2.5 bg-[#5a82c2] text-white px-6 md:px-7 py-3.5 md:py-4 rounded-full text-[13px] md:text-sm font-bold hover:bg-[#4a6da3] transition-all shadow-xl shadow-[#5a82c2]/20 active:scale-95"
                 >
                   <span className="iconify text-lg md:text-xl" data-icon="solar:download-minimalistic-bold"></span>
                   <span>{({KR:'회사 소개서 다운로드',EN:'Download Company Profile',CN:'下载公司介绍',JP:'会社案内をダウンロード',ID:'Unduh Profil Perusahaan',AR:'تحميل ملف الشركة',KH:'ទាញយកប្រវត្តិក្រុមហ៊ុន',VI:'Tải hồ sơ công ty',RU:'Скачать профиль компании'} as Record<string,string>)[lang] ?? 'Download Company Profile'}</span>
                 </a>
+                <a
+                  href="https://pf.kakao.com/_xfZxjiX/chat"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2.5 bg-[#FEE500] text-[#191919] px-6 md:px-7 py-3.5 md:py-4 rounded-full text-[13px] md:text-sm font-bold hover:bg-[#f5dc00] transition-all shadow-xl shadow-[#FEE500]/30 active:scale-95"
+                >
+                  <span className="iconify text-lg md:text-xl" data-icon="simple-icons:kakaotalk"></span>
+                  <span>{({KR:'카카오톡 채널 상담하기',EN:'Chat on KakaoTalk',CN:'KakaoTalk 咨询',JP:'カカオトークで相談',ID:'Chat via KakaoTalk',AR:'تواصل عبر كاكاوتوك',KH:'ជជែកតាម KakaoTalk',VI:'Tư vấn qua KakaoTalk',RU:'Чат в KakaoTalk'} as Record<string,string>)[lang] ?? 'Chat on KakaoTalk'}</span>
+                </a>
+                </div>
               </div>
             </div>
           </Reveal>
