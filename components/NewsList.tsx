@@ -15,6 +15,7 @@ const NewsList: React.FC<NewsListProps> = ({ onClose, lang }) => {
       sub: '글로벌 의료 시장의 변화와 새로운 혁신의 순간들을 공유합니다.', 
       back: '메인 페이지로 돌아가기',
       items: [
+        { category: '보도자료', title: '팔로우코리아, KIMES BUSAN 2026서 외국인환자 유치 솔루션 ‘강남펄스’ 공개…합법 네트워크로 병원 성장을 돕는다', date: '2026.09.18', img: 'https://cdn.kr.aving.net/news/photo/202609/1814571_780375_1130.jpg', url: 'https://kr.aving.net/news/articleView.html?idxno=1814571' },
         { category: '보도자료', title: '팔로우코리아, 중국 상해 법인 설립 완료…중국인 환자유치 본격화', date: '2026.09.16', img: '/fk-news-cn.png', url: 'https://www.etnews.com/20260916000307' },
         { category: '보도자료', title: '팔로우코리아, 신우성 공동대표 영입…글로벌 의료관광 사업 강화', date: '2026.07.24', img: '/fk-news-logo.png', url: 'https://www.etnews.com/20260724000213' },
         { category: '보도자료', title: '팔로우코리아 의료관광 예약 플랫폼 출시…AI 기반 다국어 VIP 의료관광 가속', date: '2026.06.24', img: 'https://cdn.e2news.com/news/photo/202606/331630_229656_364.jpg', url: 'https://www.e2news.com/news/articleView.html?idxno=331630' },
@@ -31,6 +32,7 @@ const NewsList: React.FC<NewsListProps> = ({ onClose, lang }) => {
       sub: 'Sharing moments of innovation and changes in the global medical market.', 
       back: 'Back to Main Page',
       items: [
+        { category: 'Press', title: 'Follow Korea to Unveil Patient-Acquisition Solution ‘Gangnam Pulse’ at KIMES BUSAN 2026', date: '2026.09.18', img: 'https://cdn.kr.aving.net/news/photo/202609/1814571_780375_1130.jpg', url: 'https://kr.aving.net/news/articleView.html?idxno=1814571' },
         { category: 'Press', title: 'Follow Korea Completes Shanghai Subsidiary, Accelerating Chinese Patient Attraction', date: '2026.09.16', img: '/fk-news-cn.png', url: 'https://www.etnews.com/20260916000307' },
         { category: 'Press', title: 'Follow Korea Appoints Shin Woo-sung as Co-CEO to Strengthen Global Medical Tourism', date: '2026.07.24', img: '/fk-news-logo.png', url: 'https://www.etnews.com/20260724000213' },
         { category: 'Press', title: 'Follow Korea Launches Medical Tourism Booking Platform… AI-Powered Multilingual VIP Meditour Accelerates', date: '2026.06.24', img: 'https://cdn.e2news.com/news/photo/202606/331630_229656_364.jpg', url: 'https://www.e2news.com/news/articleView.html?idxno=331630' },
@@ -46,6 +48,7 @@ const NewsList: React.FC<NewsListProps> = ({ onClose, lang }) => {
       sub: '分享全球医疗市场的变化和创新的瞬间。', 
       back: '返回首页',
       items: [
+        { category: '新闻', title: 'Follow Korea 将在 KIMES BUSAN 2026 发布海外患者引流解决方案「江南脉动」', date: '2026.09.18', img: 'https://cdn.kr.aving.net/news/photo/202609/1814571_780375_1130.jpg', url: 'https://kr.aving.net/news/articleView.html?idxno=1814571' },
         { category: '新闻', title: 'Follow Korea 完成上海法人设立，全面启动中国患者引流业务', date: '2026.09.16', img: '/fk-news-cn.png', url: 'https://www.etnews.com/20260916000307' },
         { category: '新闻', title: 'Follow Korea 引入申宇成为共同代表，强化全球医疗旅游业务', date: '2026.07.24', img: '/fk-news-logo.png', url: 'https://www.etnews.com/20260724000213' },
         { category: '新闻', title: 'Follow Korea 医疗旅游预约平台上线…基于AI的多语言VIP医疗旅游加速', date: '2026.06.24', img: 'https://cdn.e2news.com/news/photo/202606/331630_229656_364.jpg', url: 'https://www.e2news.com/news/articleView.html?idxno=331630' },
