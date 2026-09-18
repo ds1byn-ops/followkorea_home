@@ -33,7 +33,7 @@ const SMC_TEXT: Record<string, CardText> = {
 
 const KIMES_TEXT: Record<string, CardText> = {
   KR: {
-    badge: '전시회 참가 안내', title: 'KIMES BUSAN 2026', sub: '2026. 10. 23(금) ~ 10. 25(일) · BEXCO 부산 · J405 부스',
+    badge: '전시회 참가 안내', title: 'KIMES BUSAN 2026', sub: '2026. 10. 23(금)~25(일) · BEXCO 부산 · J405 부스',
     desc: '팔로우코리아가 부산 국제 의료기기·병원설비 전시회에 참가합니다.\n부스에 방문하시면 아래 내용을 직접 시연해 드립니다.',
     items: ['해외환자 유치 플랫폼 · 65개 제휴 병원', '병원 운영 SaaS 강남펄스 실화면 데모', '왕홍·KOL+KOC 중국 마케팅 · 중국 진출 상담'],
     cta: '카카오톡으로 미팅 예약',
@@ -41,7 +41,7 @@ const KIMES_TEXT: Record<string, CardText> = {
     today: '오늘 하루 보지 않기', close: '닫기',
   },
   EN: {
-    badge: 'Exhibition Notice', title: 'KIMES BUSAN 2026', sub: 'Oct 23 (Fri) – 25 (Sun), 2026 · BEXCO, Busan · Booth J405',
+    badge: 'Exhibition Notice', title: 'KIMES BUSAN 2026', sub: 'Oct 23–25, 2026 · BEXCO Busan · Booth J405',
     desc: 'Follow Korea is exhibiting at KIMES Busan.\nVisit our booth for a live demo of:',
     items: ['International patient platform · 65 partner hospitals', 'Gangnam Pulse clinic SaaS live demo', 'China marketing (Wanghong · KOL+KOC) consulting'],
     cta: 'Book a meeting via KakaoTalk',
@@ -49,7 +49,7 @@ const KIMES_TEXT: Record<string, CardText> = {
     today: 'Don’t show again today', close: 'Close',
   },
   CN: {
-    badge: '展会参展通知', title: 'KIMES BUSAN 2026', sub: '2026.10.23(周五) ~ 10.25(周日) · 釜山 BEXCO · J405展位',
+    badge: '展会参展通知', title: 'KIMES BUSAN 2026', sub: '2026.10.23~25 · 釜山BEXCO · J405展位',
     desc: 'Follow Korea 将参加釜山国际医疗器械展。\n欢迎莅临展位，现场演示：',
     items: ['海外患者引流平台 · 65家合作医院', '医院运营SaaS 江南Pulse 实机演示', '网红·KOL+KOC 中国营销 · 中国市场进入咨询'],
     cta: '通过KakaoTalk预约洽谈',
@@ -75,7 +75,7 @@ const Card: React.FC<{
   onClose: () => void; onHideToday: () => void;
 }> = ({ t, grad, accent, ctaText = 'text-white', onClose, onHideToday }) => (
   <div className="relative w-full max-w-md rounded-3xl overflow-hidden bg-white shadow-2xl flex flex-col">
-    <div className="relative px-7 pt-7 pb-6 text-white" style={{ background: grad }}>
+    <div className="relative px-7 pt-7 pb-6 text-white min-h-[148px]" style={{ background: grad }}>
       <div className="absolute -right-8 -top-10 w-44 h-44 rounded-full bg-white/10" />
       <div className="absolute right-12 bottom-1 w-14 h-14 rounded-full bg-white/10" />
       <span className="inline-block text-[11px] tracking-widest font-semibold bg-white/15 border border-white/30 rounded-full px-3 py-1 mb-3">{t.badge}</span>
@@ -97,7 +97,7 @@ const Card: React.FC<{
         style={{ background: accent === '#5a82c2' ? '#FEE500' : accent }}>
         {t.cta}
       </a>
-      {t.invite && <p className="mt-2.5 text-center text-[12px] text-gray-500">{t.invite}</p>}
+      <p className="mt-2.5 text-center text-[12px] text-gray-500 min-h-[18px]">{t.invite || ' '}</p>
     </div>
     <div className="flex items-center justify-between border-t border-gray-100 px-7 py-3 text-[12.5px] text-gray-500">
       <button type="button" onClick={onHideToday} className="hover:text-gray-800">{t.today}</button>
