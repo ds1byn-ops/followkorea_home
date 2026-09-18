@@ -3463,6 +3463,32 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "thumb": "hthumb/theplus.jpg"
   },
   {
+    "name": { "kr": "아도의원", "en": "ADO Clinic", "zh": "ADO皮肤科" },
+    "dept": { "kr": "피부과(안티에이징·리프팅)", "en": "Dermatology (Anti-aging & Lifting)", "zh": "皮肤科(抗衰·提升)" },
+    "cat": "피부",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["울쎄라피 프라임·써마지 FLX", "스컬트라·리쥬란", "필러·보톡스", "줄기세포 프로그램", "온다·포텐자"],
+      "en": ["Ultherapy Prime & Thermage FLX", "Sculptra & Rejuran", "Filler & Botox", "Stem Cell Programs", "ONDA & Potenza"],
+      "zh": ["超声炮Prime·凤凰电波FLX", "童颜针·丽珠兰", "玻尿酸·肉毒素", "干细胞项目", "ONDA·黄金微针"]
+    },
+    "hours": "Mon-Fri 10:30-21:00 · Sat/Holidays 10:30-19:00",
+    "loc": {
+      "ko": "서울 강남구 봉은사로 110, RDL타워 3~4층 (신논현역 4번출구)",
+      "zh": "首尔江南·新论岘",
+      "en": "Sinnonhyeon, Gangnam, Seoul"
+    },
+    "overview": {
+      "kr": "아도의원(ADO Clinic)은 신논현역 4번 출구 앞 RDL타워 3~4층에 위치한 피부과로, 대표원장 박승원을 중심으로 울쎄라피 프라임·써마지 FLX·온다 등 리프팅과 스컬트라·리쥬란 등 재생 시술, 필러·보톡스, 줄기세포 프로그램까지 안티에이징 전 영역을 다룹니다. 부원장·대표원장 이원 진료 체계로 시그니처 시술을 운영하며, 홈페이지를 한·중 병기로 운영할 만큼 중국 환자 응대 경험이 풍부합니다. 평일 밤 9시까지 진료합니다.",
+      "en": "ADO Clinic, on the 3rd-4th floors of RDL Tower by Exit 4 of Sinnonhyeon Station, is a dermatology clinic led by Dr. Park Seung-won. It covers the full anti-aging spectrum — Ultherapy Prime, Thermage FLX and ONDA lifting, Sculptra and Rejuran regenerative treatments, fillers, botox and stem-cell programs — with a two-tier system of associate and head-director signature procedures. The clinic runs a bilingual Korean-Chinese website and is open weekdays until 9pm.",
+      "zh": "ADO皮肤科(아도의원)位于新论岘站4号出口旁RDL大厦3-4层，由代表院长朴承源主诊。涵盖超声炮Prime·凤凰电波FLX·ONDA提升、SCULPTRA童颜针·丽珠兰再生、玻尿酸·肉毒素及干细胞项目等全方位抗衰内容，设副院长/代表院长双轨诊疗与院长签名项目。官网中韩双语运营，中国顾客接待经验丰富，平日营业至晚9点。"
+    },
+    "doctors": [
+      { "name": "박승원", "title": "대표원장", "spec": ["피부과"] }
+    ],
+    "thumb": "hthumb/ado.jpg"
+  },
+  {
     "name": { "kr": "스튜디오 숲 서울", "en": "Studio Soop Seoul", "zh": "Studio Soop 首尔" },
     "dept": { "kr": "사진 스튜디오", "en": "Photo Studio", "zh": "摄影工作室" },
     "cat": "기타 서비스",
