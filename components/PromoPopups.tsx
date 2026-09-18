@@ -5,6 +5,8 @@ import type { LanguageCode } from '../App';
 // 각 카드별 노출 종료일·'오늘 하루 보지 않기' 독립 동작, 모바일에서는 세로 스택.
 const SMC_HIDE_KEY = 'smc_popup_hide_until';
 const SMC_SHOW_UNTIL = '2026-09-30';
+const YJ_HIDE_KEY = 'yueji_popup_hide_until';
+const YJ_SHOW_UNTIL = '2026-10-31';
 const KIMES_HIDE_KEY = 'kimes2026_hide_until';
 const KIMES_SHOW_UNTIL = '2026-10-25';
 
@@ -55,6 +57,28 @@ const KIMES_TEXT: Record<string, CardText> = {
     cta: '通过KakaoTalk预约洽谈',
     invite: '通过KakaoTalk预约洽谈，我们将为您发送展会邀请券。',
     today: '今日不再显示', close: '关闭',
+  },
+};
+
+
+const YJ_TEXT: Record<string, CardText> = {
+  KR: {
+    badge: '중국 법인 설립', title: '悦集江南 상하이 법인', sub: 'Yueji Jiangnan (Shanghai) · 2026. 9. 설립',
+    desc: '팔로우코리아가 중국 상하이 현지 법인을 설립했습니다.\n이제 중국 내 직접 마케팅이 가능합니다.',
+    items: ['병원 중국 직접 마케팅 — 왕홍·KOL+KOC·샤오홍슈', '뷰티·화장품 브랜드 중국 진출 대행(콰징 입점)', '중국 플랫폼 계정 개설·운영 대행 상담'],
+    cta: '중국 마케팅 상담 신청', today: '오늘 하루 보지 않기', close: '닫기',
+  },
+  EN: {
+    badge: 'China Subsidiary', title: 'Yueji Jiangnan Shanghai', sub: 'Established Sep 2026, Shanghai',
+    desc: 'Follow Korea has established its own subsidiary in Shanghai.\nDirect marketing inside China is now available.',
+    items: ['Direct China marketing for clinics — Wanghong, KOL+KOC, Xiaohongshu', 'China market entry for beauty brands (cross-border e-commerce)', 'Chinese platform account setup & operation'],
+    cta: 'Request China Marketing Consultation', today: 'Don’t show again today', close: 'Close',
+  },
+  CN: {
+    badge: '中国法人成立', title: '悦集江南(上海)', sub: '2026年9月 于上海成立',
+    desc: 'Follow Korea 在上海设立自有法人，\n现可在中国境内开展直接营销业务。',
+    items: ['医院中国直营营销 — 网红·KOL+KOC·小红书', '美妆品牌中国市场进入代理(跨境电商入驻)', '中国平台账号开设·运营代理咨询'],
+    cta: '申请中国营销咨询', today: '今日不再显示', close: '关闭',
   },
 };
 
@@ -110,32 +134,35 @@ const PromoPopups: React.FC<{ lang: LanguageCode }> = ({ lang }) => {
   const [ready, setReady] = useState(false);
   const [smc, setSmc] = useState(false);
   const [kimes, setKimes] = useState(false);
+  const [yj, setYj] = useState(false);
 
   useEffect(() => {
     const id = setTimeout(() => {
       setSmc(initialVisible(SMC_HIDE_KEY, SMC_SHOW_UNTIL));
       setKimes(initialVisible(KIMES_HIDE_KEY, KIMES_SHOW_UNTIL));
+      setYj(initialVisible(YJ_HIDE_KEY, YJ_SHOW_UNTIL));
       setReady(true);
     }, 800);
     return () => clearTimeout(id);
   }, []);
 
-  if (!ready || (!smc && !kimes)) return null;
+  if (!ready || (!smc && !kimes && !yj)) return null;
 
   const hide = (key: string, setter: (v: boolean) => void) => () => {
     try { localStorage.setItem(key, kstToday()); } catch { /* ignore */ }
     setter(false);
   };
-  const closeAll = () => { setSmc(false); setKimes(false); };
+  const closeAll = () => { setSmc(false); setKimes(false); setYj(false); };
 
   const smcT = SMC_TEXT[lang] || SMC_TEXT.EN;
   const kimesT = KIMES_TEXT[lang] || KIMES_TEXT.EN;
+  const yjT = YJ_TEXT[lang] || YJ_TEXT.EN;
 
   return (
     <div className="fixed inset-0 z-[90] overflow-y-auto" role="dialog" aria-modal="true">
       <div className="absolute inset-0 bg-black/55 backdrop-blur-[2px]" onClick={closeAll} />
       <div className="relative min-h-full flex items-center justify-center p-4 py-8">
-       <div className="flex flex-col lg:flex-row items-center lg:items-stretch justify-center gap-5 w-full lg:w-auto">
+       <div className="flex flex-col lg:flex-row lg:flex-wrap items-center lg:items-stretch justify-center gap-5 w-full lg:w-auto">
         {smc && (
           <Card t={smcT}
             grad="linear-gradient(135deg, #02305F 0%, #034EA2 55%, #2F74C9 100%)"
@@ -150,6 +177,13 @@ const PromoPopups: React.FC<{ lang: LanguageCode }> = ({ lang }) => {
             ctaText="text-[#1a1a1a]"
             onClose={() => setKimes(false)}
             onHideToday={hide(KIMES_HIDE_KEY, setKimes)} />
+        )}
+        {yj && (
+          <Card t={yjT}
+            grad="linear-gradient(135deg, #571523 0%, #A62838 55%, #C4505C 100%)"
+            accent="#A62838"
+            onClose={() => setYj(false)}
+            onHideToday={hide(YJ_HIDE_KEY, setYj)} />
         )}
        </div>
       </div>
