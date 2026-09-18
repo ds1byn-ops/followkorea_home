@@ -7,8 +7,7 @@ import NewsList from './components/NewsList';
 import ReviewList from './components/ReviewList';
 import TermsOverlay from './components/TermsOverlay';
 import PrivacyOverlay from './components/PrivacyOverlay';
-import KimesPopup from './components/KimesPopup';
-import SamsungPopup from './components/SamsungPopup';
+import PromoPopups from './components/PromoPopups';
 
 export type LanguageCode = 'KR' | 'EN' | 'CN' | 'JP' | 'ID' | 'AR' | 'KH' | 'VI' | 'RU';
 
@@ -20,7 +19,6 @@ const App: React.FC = () => {
   const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
   const [currentLang, setCurrentLang] = useState<LanguageCode>('KR');
   const [showTop, setShowTop] = useState(false);
-  const [smcPopupDone, setSmcPopupDone] = useState(false);
 
   useEffect(() => {
     const htmlLangMap: Record<LanguageCode, string> = {
@@ -127,8 +125,7 @@ const App: React.FC = () => {
         onLangChange={setCurrentLang}
       />
 
-      {!isAnyOverlayOpen && <SamsungPopup lang={currentLang} onDone={() => setSmcPopupDone(true)} />}
-      {!isAnyOverlayOpen && smcPopupDone && <KimesPopup lang={currentLang} />}
+      {!isAnyOverlayOpen && <PromoPopups lang={currentLang} />}
 
       <ConsultationModal
         isOpen={isConsultOpen}
