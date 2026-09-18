@@ -322,7 +322,7 @@ const WH_I18N: Record<string, {
 
 
 // 히어로 분기(2026-09-18): KR = 병원(B2B) 메시지 유지 + 환자용 작은 링크 / 외국어 = 환자용 견적 CTA를 주 버튼으로, 병원 상담은 보조
-const B2C_LANG: Record<string,string> = { CN:'zh', EN:'en', JP:'ja', KR:'ko' };
+const B2C_LANG: Record<string,string> = { CN:'zh', EN:'en', JP:'ja', KR:'zh' }; // 한국어 사이트에서도 b2c 디폴트는 중문(9/18 지시)
 const b2cUrl = (lang: string) => '/b2c/?lang=' + (B2C_LANG[lang] || 'en') + '&utm_source=home_hero&utm_medium=cta';
 const HERO_B2C: Record<string,{title:string;sub:string;btn:string;hosp:string}> = {
   EN:{ title:"Get a Personalized Quote\nfrom Gangnam's Top Clinics", sub:'Compare verified clinic prices for your treatment — free, in your language.', btn:'Get My Quote', hosp:'For hospitals · Partner with us' },
