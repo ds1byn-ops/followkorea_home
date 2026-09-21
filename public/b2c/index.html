@@ -74,6 +74,11 @@ h2{font-size:clamp(20px,3.6vw,27px);font-weight:900;letter-spacing:-.5px;}
 .treats{display:flex;gap:5px;flex-wrap:wrap;margin-top:9px;}
 .treats span{font-size:10.5px;background:#FDECEF;color:var(--brand-d);border-radius:6px;padding:2px 7px;font-weight:600;}
 .hosp .docs{font-size:11px;color:var(--mute);margin-top:8px;}
+.rv-stat{font-size:12px;color:#6b7280;margin-top:4px;cursor:pointer}.rv-stat .st{color:#E8455F}.rv-stat b{color:#2A2226}.rv-stat:hover{text-decoration:underline}
+.rv-filter{display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
+.rv-filter select{padding:9px 12px;border:1px solid #E7DADD;border-radius:9px;font-size:13px;background:#fff;max-width:100%}
+.rv-sum{font-size:13px;color:#6b7280}.rv-sum .st{color:#E8455F}.rv-sum b{color:#2A2226;font-size:15px}
+.rv-badge{display:inline-block;margin-top:10px;font-size:10.5px;font-weight:700;color:#8a6d2b;background:#fdf6e3;border:1px solid #ecdcae;border-radius:5px;padding:2px 7px}
 .badge-ad{display:inline-block;font-size:10px;font-weight:700;color:#8a6d2b;background:#fdf6e3;border:1px solid #ecdcae;border-radius:5px;padding:1px 6px;vertical-align:2px;}
 .hmore{display:block;margin:16px auto 0;padding:10px 26px;border:1px solid var(--line);border-radius:10px;background:#fff;font-size:13px;cursor:pointer;color:#3d4a63;}
 .wiz{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px 24px;margin-top:22px;box-shadow:0 10px 34px rgba(120,35,50,.06);}
@@ -578,6 +583,7 @@ function renderHosps(keepPage){
       +'<div class="body">'
       +'<h3>'+esc(hName(h))+' <span class="badge-ad">'+esc(t.ad)+'</span></h3>'
       +'<div class="meta">'+esc(hDept(h))+(hLoc(h)?' · '+esc(hLoc(h)):'')+'</div>'
+      +(typeof rvStatHtml==='function'?rvStatHtml(h.name):'')
       +(hOv(h)?'<div class="ov">'+esc(hOv(h))+'</div>':'')
       +(tr.length?'<div class="treats">'+tr.slice(0,5).map(function(x){return '<span>'+esc(x)+'</span>';}).join('')+'</div>':'')
       +(h.doctors&&h.doctors.length?'<div class="docs">'+esc(t.docs.replace('{n}',h.doctors.length))+'</div>':'')
@@ -744,29 +750,44 @@ function renderReward(){
 /* 고객 후기 게시판 — 2026-09-21. 승인제(utb b2c_reviews, RLS: anon은 pending 작성·approved 열람만). */
 var RV_URL='https://utbhlvybdutepnkvboko.supabase.co/rest/v1/b2c_reviews';
 var RV_KEY='sb_publishable_LdLPNdjrD49iuOVLK8KVEA_SGgg9mkj';
+var RV_SAMPLE_URL='./reviews-sample.json';
+var RV_BADGE={zh:'体验团/合作评价（赞助）',kr:'체험단/제휴 후기(협찬)',en:'Sponsored partner review',ja:'体験団・提携レビュー（PR）'};
+var RV_ALL={zh:'全部医院',kr:'전체 병원',en:'All hospitals',ja:'すべての医院'};
+var RV_MORE={zh:'查看更多点评',kr:'후기 더보기',en:'More reviews',ja:'もっと見る'};
+var RV_CNT={zh:'{n} 条点评',kr:'후기 {n}건',en:'{n} reviews',ja:'レビュー {n}件'};
 var RV_I18N={
- zh:{title:'顾客点评',sub:'通过 FollowKorea 完成诊疗的顾客的真实点评（经核实后发布）',
+ zh:{title:'顾客点评',sub:'通过 FollowKorea 就诊顾客的点评。含体验团/合作评价，均已标注“赞助”（经核实后发布）',
   empty:'暂无点评。成为第一位分享体验的顾客吧！',write:'写点评',name:'称呼',hospital:'就诊医院',rating:'满意度',content:'点评内容（10字以上）',
   pledge:'本点评基于本人真实就诊经历；如获得体验支持，已在内容中注明。',
   submit:'提交点评',done:'已提交！经工作人员核实后将会发布。',err:'提交失败，请稍后重试',need:'请填写所有必填项并勾选确认',
   ph:'请分享就诊过程、服务与感受……'},
- kr:{title:'고객 후기',sub:'FollowKorea를 통해 진료받은 고객의 실제 후기입니다 (검수 후 게시)',
+ kr:{title:'고객 후기',sub:'FollowKorea를 통해 진료받은 고객의 후기입니다. 체험단/제휴 후기는 모두 "협찬" 표시 (검수 후 게시)',
   empty:'아직 후기가 없습니다. 첫 후기의 주인공이 되어주세요!',write:'후기 작성',name:'성함(닉네임)',hospital:'이용 병원',rating:'만족도',content:'후기 내용(10자 이상)',
   pledge:'본 후기는 실제 이용 경험이며, 체험 지원을 받은 경우 그 사실을 내용에 표기했습니다.',
   submit:'후기 제출',done:'제출되었습니다! 검수 후 게시됩니다.',err:'제출 실패 — 잠시 후 다시 시도해주세요',need:'모든 항목을 입력하고 확인란에 체크해주세요',
   ph:'진료 과정, 서비스, 느낀 점을 자유롭게 남겨주세요…'},
- en:{title:'Patient Reviews',sub:'Real reviews from patients who visited through FollowKorea (published after verification)',
+ en:{title:'Patient Reviews',sub:'Reviews from patients who visited through FollowKorea. Sponsored partner reviews are labeled as such (published after verification)',
   empty:'No reviews yet. Be the first to share your experience!',write:'Write a Review',name:'Name (nickname)',hospital:'Hospital Visited',rating:'Rating',content:'Your review (10+ characters)',
   pledge:'This review is based on my real experience; if I received support, I have disclosed it in the review.',
   submit:'Submit Review',done:'Submitted! It will be published after verification.',err:'Submission failed — please try again later',need:'Please fill in all fields and check the confirmation box',
   ph:'Share your treatment journey, service and impressions…'},
- ja:{title:'お客様レビュー',sub:'FollowKorea を通じて受診されたお客様の実際のレビュー（確認後に掲載）',
+ ja:{title:'お客様レビュー',sub:'FollowKorea を通じて受診されたお客様のレビュー。体験団・提携レビューはすべて「PR」表示（確認後に掲載）',
   empty:'まだレビューがありません。最初のレビューをお寄せください！',write:'レビューを書く',name:'お名前(ニックネーム)',hospital:'受診した医院',rating:'満足度',content:'レビュー内容(10文字以上)',
   pledge:'本レビューは実際の利用経験に基づき、体験支援を受けた場合はその旨を本文に記載しています。',
   submit:'レビューを送信',done:'送信されました！確認後に掲載されます。',err:'送信に失敗しました。しばらくして再度お試しください',need:'すべての項目を入力し、確認欄にチェックしてください',
   ph:'診療の流れ、サービス、感想を自由にお書きください…'}
 };
-var RV_CACHE=null;
+var RV_CACHE=null, RV_HOSP='', RV_PAGE=1, RV_PER=24, RV_STATS={};
+function rvIsSponsored(r){return !!r.sponsored || /【体验团\/合作评价（赞助）】/.test(String(r.content||''));}
+function rvBuildStats(){
+  RV_STATS={};
+  (RV_CACHE||[]).forEach(function(r){var k=r.hospital||'';if(!k)return;var o=RV_STATS[k]||(RV_STATS[k]={n:0,sum:0});o.n++;o.sum+=(+r.rating||0);});
+  Object.keys(RV_STATS).forEach(function(k){var o=RV_STATS[k];o.avg=Math.round(o.sum/o.n*10)/10;});
+}
+function rvStatHtml(name){var o=RV_STATS[name];if(!o)return '';var c=(RV_CNT[LANG]||RV_CNT.en).replace('{n}',o.n);
+  return '<div class="rv-stat" onclick="rvGo(\''+esc(name).replace(/'/g,"\\'")+'\')"><span class="st">★</span> <b>'+o.avg.toFixed(1)+'</b> <span class="c">· '+c+'</span></div>';}
+function rvGo(name){RV_HOSP=name;RV_PAGE=1;renderB2cReviews();var el=document.getElementById('reviews-b2c');if(el)el.scrollIntoView({behavior:'smooth'});}
+function rvSetHosp(v){RV_HOSP=v;RV_PAGE=1;renderB2cReviews();}
 function rvMask(n){n=String(n||'').trim();return n.length<=1?n+'**':n.charAt(0)+'**'+(n.length>3?n.slice(-1):'');}
 function rvStars(r){var s='';for(var i=1;i<=5;i++)s+=(i<=r?'★':'☆');return s;}
 function renderB2cReviews(){
@@ -774,21 +795,35 @@ function renderB2cReviews(){
   var w=document.getElementById('rvWrap'); if(!w)return;
   var hospOpts='<option value="">--</option>'+HOSPITALS.map(function(h){return '<option>'+esc(h.name)+'</option>';}).join('')+'<option>기타</option>';
   var listHtml='<div class="muted" style="text-align:center;padding:26px;color:#8a93a8;font-size:13.5px">'+d.empty+'</div>';
+  var filterHtml='';
   if(RV_CACHE&&RV_CACHE.length){
-    listHtml='<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px">'+RV_CACHE.map(function(r){
-      return '<div style="background:#fff;border:1px solid #F0DDE1;border-radius:14px;padding:18px 16px">'
+    var badge=RV_BADGE[LANG]||RV_BADGE.en;
+    var names=Object.keys(RV_STATS).sort(function(a,b){return RV_STATS[b].n-RV_STATS[a].n;});
+    filterHtml='<div class="rv-filter"><select onchange="rvSetHosp(this.value)"><option value="">'+(RV_ALL[LANG]||RV_ALL.en)+' ('+RV_CACHE.length+')</option>'
+      +names.map(function(n){var h=HOSPITALS.find(function(x){return x.name===n;});var label=h?hName(h):n;
+        return '<option value="'+esc(n)+'"'+(RV_HOSP===n?' selected':'')+'>'+esc(label)+' · ★'+RV_STATS[n].avg.toFixed(1)+' ('+RV_STATS[n].n+')</option>';}).join('')+'</select>';
+    if(RV_HOSP&&RV_STATS[RV_HOSP]){var o=RV_STATS[RV_HOSP];filterHtml+='<div class="rv-sum"><span class="st">★</span> <b>'+o.avg.toFixed(1)+'</b> <span>· '+(RV_CNT[LANG]||RV_CNT.en).replace('{n}',o.n)+'</span></div>';}
+    filterHtml+='</div>';
+    var list=RV_CACHE.filter(function(r){return !RV_HOSP||r.hospital===RV_HOSP;});
+    var show=list.slice(0,RV_PAGE*RV_PER);
+    listHtml='<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px">'+show.map(function(r){
+      var h=HOSPITALS.find(function(x){return x.name===r.hospital;});var hl=h?hName(h):(r.hospital||'');
+      var sp=rvIsSponsored(r);
+      return '<div style="background:#fff;border:1px solid #F0DDE1;border-radius:14px;padding:18px 16px;position:relative">'
         +'<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">'
-        +'<b style="font-size:13.5px;color:#2A2226">'+esc(rvMask(r.name))+'</b>'
+        +'<b style="font-size:13.5px;color:#2A2226">'+esc(rvMask(r.name))+(r.city?' <span style="font-weight:500;color:#8a93a8;font-size:11.5px">· '+esc(r.city)+'</span>':'')+'</b>'
         +'<span style="color:#E8455F;font-size:13px;letter-spacing:2px">'+rvStars(r.rating)+'</span></div>'
-        +'<div style="font-size:11.5px;color:#B03A48;font-weight:700;margin-bottom:8px">'+esc(r.hospital||'')+'</div>'
+        +'<div style="font-size:11.5px;color:#B03A48;font-weight:700;margin-bottom:8px">'+esc(hl)+(r.item?' <span style="color:#8a93a8;font-weight:500">· '+esc(r.item)+'</span>':'')+'</div>'
         +'<div style="font-size:12.5px;line-height:1.75;color:#4a4247;white-space:pre-wrap">'+esc(String(r.content||'').slice(0,400))+'</div>'
+        +(sp?'<div class="rv-badge">'+esc(badge)+'</div>':'')
         +'</div>';
     }).join('')+'</div>';
+    if(list.length>show.length)listHtml+='<div style="text-align:center;margin-top:16px"><button class="hmore" style="display:inline-block" onclick="RV_PAGE++;renderB2cReviews()">'+(RV_MORE[LANG]||RV_MORE.en)+'</button></div>';
   }
   w.innerHTML='<div style="text-align:center;margin-bottom:20px">'
     +'<h2 style="font-size:24px;font-weight:800;color:#2A2226;margin:0">'+d.title+'</h2>'
     +'<p style="font-size:12.5px;color:#8a93a8;margin:8px 0 0">'+d.sub+'</p></div>'
-    +listHtml
+    +filterHtml+listHtml
     +'<div style="max-width:640px;margin:26px auto 0;background:#fff;border:1px solid #F0DDE1;border-radius:16px;padding:22px 20px">'
     +'<div style="font-size:15px;font-weight:800;color:#2A2226;margin-bottom:12px">'+d.write+'</div>'
     +'<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px">'
@@ -800,9 +835,19 @@ function renderB2cReviews(){
     +'<button onclick="rvSubmit()" id="rv-btn" style="width:100%;background:linear-gradient(135deg,#E8455F,#B02440);color:#fff;font-weight:800;font-size:14px;border:none;border-radius:11px;padding:12px;cursor:pointer">'+d.submit+'</button>'
     +'<div id="rv-msg" style="text-align:center;font-size:12.5px;margin-top:9px;min-height:16px"></div></div>';
 }
+var RV_HMAP={"더힐피부과":"더힐피부과의원 신사본점","원진성형외과피부과(성형30)":"원진성형외과피부과의원","원진성형외과피부과(피부20)":"원진성형외과피부과의원","KMI 한국의학연구소 강남센터":"KMI한국의학연구소 강남센터","JD피부성형센터(장덕한방)":"JD피부성형(장덕)"};
 function rvLoad(){
-  fetch(RV_URL+'?select=name,hospital,rating,content,created_at&order=created_at.desc&limit=24',{headers:{apikey:RV_KEY,Authorization:'Bearer '+RV_KEY}})
-    .then(function(r){return r.json();}).then(function(j){RV_CACHE=Array.isArray(j)?j:[];renderB2cReviews();}).catch(function(){RV_CACHE=[];renderB2cReviews();});
+  var live=fetch(RV_URL+'?select=name,hospital,rating,content,created_at&order=created_at.desc&limit=200',{headers:{apikey:RV_KEY,Authorization:'Bearer '+RV_KEY}})
+    .then(function(r){return r.json();}).then(function(j){return Array.isArray(j)?j:[];}).catch(function(){return [];});
+  var sample=fetch(RV_SAMPLE_URL).then(function(r){return r.json();}).then(function(j){
+    return (j&&j.reviews||[]).map(function(r){return {name:r.reviewer,hospital:RV_HMAP[r.hospital]||r.hospital,rating:r.rating,content:r.review,created_at:r.date,city:r.city,item:r.item,sponsored:true};});
+  }).catch(function(){return [];});
+  Promise.all([live,sample]).then(function(a){
+    var seen={}; a[1].forEach(function(r){seen[String(r.content||"").trim()]=1;});
+    var live=a[0].filter(function(r){return !seen[String(r.content||"").trim()];}); // 샘플과 동일 본문은 중복 제거
+    RV_CACHE=live.concat(a[1]).sort(function(x,y){return String(y.created_at||'').localeCompare(String(x.created_at||''));});
+    rvBuildStats(); renderB2cReviews(); try{renderHosps(true);}catch(e){}
+  });
 }
 function rvSubmit(){
   var d=RV_I18N[LANG]||RV_I18N.en;
