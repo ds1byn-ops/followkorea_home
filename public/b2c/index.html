@@ -249,6 +249,7 @@ h2{font-size:clamp(20px,3.6vw,27px);font-weight:900;letter-spacing:-.5px;}
 
 
 
+<section class="sec" id="reviews-b2c"><div class="wrap" id="rvWrap"></div></section>
 <div class="legal" id="legal">
   <div class="wrap">
     <img src="/fk-news-logo.png" alt="FOLLOW KOREA" style="height:30px;margin-bottom:14px;display:block;">
@@ -736,6 +737,96 @@ function renderReward(){
   var orig=applyLang;
   applyLang=function(l){orig(l);try{renderReward();}catch(e){}};
   try{renderReward();}catch(e){}
+})();
+</script>
+
+<script>
+/* 고객 후기 게시판 — 2026-09-21. 승인제(utb b2c_reviews, RLS: anon은 pending 작성·approved 열람만). */
+var RV_URL='https://utbhlvybdutepnkvboko.supabase.co/rest/v1/b2c_reviews';
+var RV_KEY='sb_publishable_LdLPNdjrD49iuOVLK8KVEA_SGgg9mkj';
+var RV_I18N={
+ zh:{title:'顾客点评',sub:'通过 FollowKorea 完成诊疗的顾客的真实点评（经核实后发布）',
+  empty:'暂无点评。成为第一位分享体验的顾客吧！',write:'写点评',name:'称呼',hospital:'就诊医院',rating:'满意度',content:'点评内容（10字以上）',
+  pledge:'本点评基于本人真实就诊经历；如获得体验支持，已在内容中注明。',
+  submit:'提交点评',done:'已提交！经工作人员核实后将会发布。',err:'提交失败，请稍后重试',need:'请填写所有必填项并勾选确认',
+  ph:'请分享就诊过程、服务与感受……'},
+ kr:{title:'고객 후기',sub:'FollowKorea를 통해 진료받은 고객의 실제 후기입니다 (검수 후 게시)',
+  empty:'아직 후기가 없습니다. 첫 후기의 주인공이 되어주세요!',write:'후기 작성',name:'성함(닉네임)',hospital:'이용 병원',rating:'만족도',content:'후기 내용(10자 이상)',
+  pledge:'본 후기는 실제 이용 경험이며, 체험 지원을 받은 경우 그 사실을 내용에 표기했습니다.',
+  submit:'후기 제출',done:'제출되었습니다! 검수 후 게시됩니다.',err:'제출 실패 — 잠시 후 다시 시도해주세요',need:'모든 항목을 입력하고 확인란에 체크해주세요',
+  ph:'진료 과정, 서비스, 느낀 점을 자유롭게 남겨주세요…'},
+ en:{title:'Patient Reviews',sub:'Real reviews from patients who visited through FollowKorea (published after verification)',
+  empty:'No reviews yet. Be the first to share your experience!',write:'Write a Review',name:'Name (nickname)',hospital:'Hospital Visited',rating:'Rating',content:'Your review (10+ characters)',
+  pledge:'This review is based on my real experience; if I received support, I have disclosed it in the review.',
+  submit:'Submit Review',done:'Submitted! It will be published after verification.',err:'Submission failed — please try again later',need:'Please fill in all fields and check the confirmation box',
+  ph:'Share your treatment journey, service and impressions…'},
+ ja:{title:'お客様レビュー',sub:'FollowKorea を通じて受診されたお客様の実際のレビュー（確認後に掲載）',
+  empty:'まだレビューがありません。最初のレビューをお寄せください！',write:'レビューを書く',name:'お名前(ニックネーム)',hospital:'受診した医院',rating:'満足度',content:'レビュー内容(10文字以上)',
+  pledge:'本レビューは実際の利用経験に基づき、体験支援を受けた場合はその旨を本文に記載しています。',
+  submit:'レビューを送信',done:'送信されました！確認後に掲載されます。',err:'送信に失敗しました。しばらくして再度お試しください',need:'すべての項目を入力し、確認欄にチェックしてください',
+  ph:'診療の流れ、サービス、感想を自由にお書きください…'}
+};
+var RV_CACHE=null;
+function rvMask(n){n=String(n||'').trim();return n.length<=1?n+'**':n.charAt(0)+'**'+(n.length>3?n.slice(-1):'');}
+function rvStars(r){var s='';for(var i=1;i<=5;i++)s+=(i<=r?'★':'☆');return s;}
+function renderB2cReviews(){
+  var d=RV_I18N[LANG]||RV_I18N.en;
+  var w=document.getElementById('rvWrap'); if(!w)return;
+  var hospOpts='<option value="">--</option>'+HOSPITALS.map(function(h){return '<option>'+esc(h.name)+'</option>';}).join('')+'<option>기타</option>';
+  var listHtml='<div class="muted" style="text-align:center;padding:26px;color:#8a93a8;font-size:13.5px">'+d.empty+'</div>';
+  if(RV_CACHE&&RV_CACHE.length){
+    listHtml='<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px">'+RV_CACHE.map(function(r){
+      return '<div style="background:#fff;border:1px solid #F0DDE1;border-radius:14px;padding:18px 16px">'
+        +'<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">'
+        +'<b style="font-size:13.5px;color:#2A2226">'+esc(rvMask(r.name))+'</b>'
+        +'<span style="color:#E8455F;font-size:13px;letter-spacing:2px">'+rvStars(r.rating)+'</span></div>'
+        +'<div style="font-size:11.5px;color:#B03A48;font-weight:700;margin-bottom:8px">'+esc(r.hospital||'')+'</div>'
+        +'<div style="font-size:12.5px;line-height:1.75;color:#4a4247;white-space:pre-wrap">'+esc(String(r.content||'').slice(0,400))+'</div>'
+        +'<div style="font-size:10.5px;color:#b3a9ad;margin-top:10px">'+String(r.created_at||'').slice(0,10)+'</div></div>';
+    }).join('')+'</div>';
+  }
+  w.innerHTML='<div style="text-align:center;margin-bottom:20px">'
+    +'<h2 style="font-size:24px;font-weight:800;color:#2A2226;margin:0">'+d.title+'</h2>'
+    +'<p style="font-size:12.5px;color:#8a93a8;margin:8px 0 0">'+d.sub+'</p></div>'
+    +listHtml
+    +'<div style="max-width:640px;margin:26px auto 0;background:#fff;border:1px solid #F0DDE1;border-radius:16px;padding:22px 20px">'
+    +'<div style="font-size:15px;font-weight:800;color:#2A2226;margin-bottom:12px">'+d.write+'</div>'
+    +'<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px">'
+    +'<div><div style="font-size:12px;font-weight:700;margin-bottom:5px">'+d.name+' *</div><input id="rv-name" maxlength="40" style="width:100%;padding:9px 11px;border:1px solid #E7DADD;border-radius:9px;font-size:13px"></div>'
+    +'<div><div style="font-size:12px;font-weight:700;margin-bottom:5px">'+d.hospital+' *</div><select id="rv-hosp" style="width:100%;padding:9px 11px;border:1px solid #E7DADD;border-radius:9px;font-size:13px">'+hospOpts+'</select></div></div>'
+    +'<div style="margin-bottom:10px"><div style="font-size:12px;font-weight:700;margin-bottom:5px">'+d.rating+' *</div><select id="rv-rate" style="padding:9px 11px;border:1px solid #E7DADD;border-radius:9px;font-size:13px"><option value="5">★★★★★</option><option value="4">★★★★☆</option><option value="3">★★★☆☆</option><option value="2">★★☆☆☆</option><option value="1">★☆☆☆☆</option></select></div>'
+    +'<div style="margin-bottom:10px"><div style="font-size:12px;font-weight:700;margin-bottom:5px">'+d.content+' *</div><textarea id="rv-content" maxlength="2000" placeholder="'+d.ph+'" style="width:100%;min-height:90px;padding:10px 11px;border:1px solid #E7DADD;border-radius:9px;font-size:13px;resize:vertical"></textarea></div>'
+    +'<label style="display:flex;gap:8px;align-items:flex-start;font-size:11.5px;color:#7A6437;background:#FBF3E8;border:1px dashed #C7A25A;border-radius:9px;padding:9px 11px;margin-bottom:12px;line-height:1.6"><input type="checkbox" id="rv-pledge" style="margin-top:2px;flex:none">'+d.pledge+'</label>'
+    +'<button onclick="rvSubmit()" id="rv-btn" style="width:100%;background:linear-gradient(135deg,#E8455F,#B02440);color:#fff;font-weight:800;font-size:14px;border:none;border-radius:11px;padding:12px;cursor:pointer">'+d.submit+'</button>'
+    +'<div id="rv-msg" style="text-align:center;font-size:12.5px;margin-top:9px;min-height:16px"></div></div>';
+}
+function rvLoad(){
+  fetch(RV_URL+'?select=name,hospital,rating,content,created_at&order=created_at.desc&limit=24',{headers:{apikey:RV_KEY,Authorization:'Bearer '+RV_KEY}})
+    .then(function(r){return r.json();}).then(function(j){RV_CACHE=Array.isArray(j)?j:[];renderB2cReviews();}).catch(function(){RV_CACHE=[];renderB2cReviews();});
+}
+function rvSubmit(){
+  var d=RV_I18N[LANG]||RV_I18N.en;
+  var msg=document.getElementById('rv-msg');
+  var name=document.getElementById('rv-name').value.trim();
+  var hosp=document.getElementById('rv-hosp').value;
+  var rate=parseInt(document.getElementById('rv-rate').value)||5;
+  var content=document.getElementById('rv-content').value.trim();
+  if(!name||!hosp||content.length<10||!document.getElementById('rv-pledge').checked){msg.style.color='#B02440';msg.textContent=d.need;return;}
+  var btn=document.getElementById('rv-btn');btn.disabled=true;
+  fetch(RV_URL,{method:'POST',headers:{apikey:RV_KEY,Authorization:'Bearer '+RV_KEY,'Content-Type':'application/json',Prefer:'return=minimal'},
+    body:JSON.stringify({name:name,hospital:hosp,rating:rate,content:content,lang:LANG})})
+  .then(function(r){
+    btn.disabled=false;
+    if(r.ok){msg.style.color='#0f766e';msg.textContent=d.done;
+      document.getElementById('rv-name').value='';document.getElementById('rv-content').value='';document.getElementById('rv-pledge').checked=false;}
+    else{msg.style.color='#B02440';msg.textContent=d.err;}
+  }).catch(function(){btn.disabled=false;msg.style.color='#B02440';msg.textContent=d.err;});
+}
+(function(){
+  var orig=applyLang;
+  applyLang=function(l){orig(l);try{renderB2cReviews();}catch(e){}};
+  try{renderB2cReviews();}catch(e){}
+  rvLoad();
 })();
 </script>
 </body>
