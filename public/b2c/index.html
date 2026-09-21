@@ -74,10 +74,10 @@ h2{font-size:clamp(20px,3.6vw,27px);font-weight:900;letter-spacing:-.5px;}
 .treats{display:flex;gap:5px;flex-wrap:wrap;margin-top:9px;}
 .treats span{font-size:10.5px;background:#FDECEF;color:var(--brand-d);border-radius:6px;padding:2px 7px;font-weight:600;}
 .hosp .docs{font-size:11px;color:var(--mute);margin-top:8px;}
-.rv-stat{font-size:12px;color:#6b7280;margin-top:4px;cursor:pointer}.rv-stat .st{color:#E8455F}.rv-stat b{color:#2A2226}.rv-stat:hover{text-decoration:underline}
+.rv-stat{font-size:12px;color:#6b7280;margin-top:4px;cursor:pointer}.rv-stat .rv-star{color:#E8455F}.rv-stat b{color:#2A2226}.rv-stat:hover{text-decoration:underline}
 .rv-filter{display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
 .rv-filter select{padding:9px 12px;border:1px solid #E7DADD;border-radius:9px;font-size:13px;background:#fff;max-width:100%}
-.rv-sum{font-size:13px;color:#6b7280}.rv-sum .st{color:#E8455F}.rv-sum b{color:#2A2226;font-size:15px}
+.rv-sum{font-size:13px;color:#6b7280}.rv-sum .rv-star{color:#E8455F}.rv-sum b{color:#2A2226;font-size:15px}
 .rv-badge{display:inline-block;margin-top:10px;font-size:10.5px;font-weight:700;color:#8a6d2b;background:#fdf6e3;border:1px solid #ecdcae;border-radius:5px;padding:2px 7px}
 .badge-ad{display:inline-block;font-size:10px;font-weight:700;color:#8a6d2b;background:#fdf6e3;border:1px solid #ecdcae;border-radius:5px;padding:1px 6px;vertical-align:2px;}
 .hmore{display:block;margin:16px auto 0;padding:10px 26px;border:1px solid var(--line);border-radius:10px;background:#fff;font-size:13px;cursor:pointer;color:#3d4a63;}
@@ -785,7 +785,7 @@ function rvBuildStats(){
   Object.keys(RV_STATS).forEach(function(k){var o=RV_STATS[k];o.avg=Math.round(o.sum/o.n*10)/10;});
 }
 function rvStatHtml(name){var o=RV_STATS[name];if(!o)return '';var c=(RV_CNT[LANG]||RV_CNT.en).replace('{n}',o.n);
-  return '<div class="rv-stat" onclick="rvGo(\''+esc(name).replace(/'/g,"\\'")+'\')"><span class="st">★</span> <b>'+o.avg.toFixed(1)+'</b> <span class="c">· '+c+'</span></div>';}
+  return '<div class="rv-stat" onclick="rvGo(\''+esc(name).replace(/'/g,"\\'")+'\')"><span class="rv-star">★</span> <b>'+o.avg.toFixed(1)+'</b> <span class="c">· '+c+'</span></div>';}
 function rvGo(name){RV_HOSP=name;RV_PAGE=1;renderB2cReviews();var el=document.getElementById('reviews-b2c');if(el)el.scrollIntoView({behavior:'smooth'});}
 function rvSetHosp(v){RV_HOSP=v;RV_PAGE=1;renderB2cReviews();}
 function rvMask(n){n=String(n||'').trim();return n.length<=1?n+'**':n.charAt(0)+'**'+(n.length>3?n.slice(-1):'');}
@@ -802,7 +802,7 @@ function renderB2cReviews(){
     filterHtml='<div class="rv-filter"><select onchange="rvSetHosp(this.value)"><option value="">'+(RV_ALL[LANG]||RV_ALL.en)+' ('+RV_CACHE.length+')</option>'
       +names.map(function(n){var h=HOSPITALS.find(function(x){return x.name===n;});var label=h?hName(h):n;
         return '<option value="'+esc(n)+'"'+(RV_HOSP===n?' selected':'')+'>'+esc(label)+' · ★'+RV_STATS[n].avg.toFixed(1)+' ('+RV_STATS[n].n+')</option>';}).join('')+'</select>';
-    if(RV_HOSP&&RV_STATS[RV_HOSP]){var o=RV_STATS[RV_HOSP];filterHtml+='<div class="rv-sum"><span class="st">★</span> <b>'+o.avg.toFixed(1)+'</b> <span>· '+(RV_CNT[LANG]||RV_CNT.en).replace('{n}',o.n)+'</span></div>';}
+    if(RV_HOSP&&RV_STATS[RV_HOSP]){var o=RV_STATS[RV_HOSP];filterHtml+='<div class="rv-sum"><span class="rv-star">★</span> <b>'+o.avg.toFixed(1)+'</b> <span>· '+(RV_CNT[LANG]||RV_CNT.en).replace('{n}',o.n)+'</span></div>';}
     filterHtml+='</div>';
     var list=RV_CACHE.filter(function(r){return !RV_HOSP||r.hospital===RV_HOSP;});
     var show=list.slice(0,RV_PAGE*RV_PER);
