@@ -1096,7 +1096,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
           <Reveal>
             <div className="flex flex-col lg:flex-row justify-between items-start gap-12 mb-16 md:mb-24">
               <div className="max-w-xl">
-                <span className="inline-flex items-start mb-8"><img src="/fk-news-logo.png" alt="Footer Logo" className="h-12 md:h-16 w-auto object-contain" /><span className="text-[11px] md:text-[13px] font-bold text-gray-700 leading-none ml-0.5">®</span></span>
+                <img src="/fk-logo-r.png" alt="Footer Logo" className="h-10 md:h-14 w-auto object-contain mb-8" />
                 <div className="space-y-3 md:space-y-4 text-gray-400 text-[13px] md:text-sm font-medium">
                   <p className="flex items-start gap-2">
                     <span>{t.footerAddr}</span>
