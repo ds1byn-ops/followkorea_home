@@ -704,17 +704,17 @@ window.addEventListener('scroll',function(){var b=document.getElementById('totop
 /* 리뷰 리워드 프로그램 안내 — 2026-09-21. 대상: 건보 미가입 외국인 한정. 할인율 홍보는 이 글로벌판에만(중국판 금지). */
 var REWARD_I18N={
  zh:{title:'点评回馈计划',sub:'通过本站获取报价并完成诊疗的顾客专享',
-  steps:[['01','预约立减 5%','通过本站获取报价并预约，结算时立即享受 5% 优惠。'],['02','分享真实点评','诊疗结束后，在本站或社交平台发布真实体验点评（需注明获得了体验支持，内容完全自由）。'],['03','返现 5~10% 或优惠券','点评确认后，通过微信支付/支付宝返现 5~10%，或发放下次使用优惠券。']],
-  fine:'· 仅限未加入韩国国民健康保险的外国患者（需核对护照） · 点评内容完全自由，仅确认是否发布 · 返现比例因医院/项目而异，咨询时告知 · 本回馈为本公司行程服务促销，与医疗行为费用无关'},
+  steps:[['01','预约立减 5%','通过本站获取报价并预约，结算时立即享受 5% 优惠。'],['02','分享真实点评','诊疗结束后，在本站或社交平台发布真实体验点评（需注明获得了体验支持，内容完全自由）。'],['03','5% 现金返还','点评确认后，通过微信支付/支付宝返还结算金额的 5%。']],
+  fine:'· 仅限未加入韩国国民健康保险的外国患者（需核对护照） · 点评内容完全自由，仅确认是否发布 · 部分医院/项目可能不适用，咨询时确认 · 本回馈为本公司行程服务促销，与医疗行为费用无关'},
  kr:{title:'리뷰 리워드 프로그램',sub:'사이트에서 견적받고 진료까지 완료한 고객 전용',
-  steps:[['01','예약 시 5% 즉시 할인','사이트에서 견적을 받고 예약하면 결제 시 5%를 바로 할인해 드립니다.'],['02','솔직한 후기 작성','치료 후 사이트 또는 SNS에 이용 후기를 남겨주세요. (체험 지원 사실 표기 필요, 내용은 완전 자유)'],['03','5~10% 페이백 또는 쿠폰','후기 확인 후 위챗페이·알리페이로 5~10% 페이백 또는 재방문 쿠폰을 드립니다.']],
-  fine:'· 한국 국민건강보험에 가입하지 않은 외국인 환자 한정(여권 확인) · 후기 내용은 자유이며 작성 여부만 확인합니다 · 페이백률은 병원·시술에 따라 상이(상담 시 안내) · 본 혜택은 당사 여정 서비스 프로모션으로 의료행위 비용과 무관합니다'},
+  steps:[['01','예약 시 5% 즉시 할인','사이트에서 견적을 받고 예약하면 결제 시 5%를 바로 할인해 드립니다.'],['02','솔직한 후기 작성','치료 후 사이트 또는 SNS에 이용 후기를 남겨주세요. (체험 지원 사실 표기 필요, 내용은 완전 자유)'],['03','5% 캐시백','후기 확인 후 결제금액의 5%를 위챗페이·알리페이로 돌려드립니다.']],
+  fine:'· 한국 국민건강보험에 가입하지 않은 외국인 환자 한정(여권 확인) · 후기 내용은 자유이며 작성 여부만 확인합니다 · 일부 병원·시술은 제외될 수 있음(상담 시 안내) · 본 혜택은 당사 여정 서비스 프로모션으로 의료행위 비용과 무관합니다'},
  en:{title:'Review Reward Program',sub:'For patients who get a quote here and complete treatment',
-  steps:[['01','5% Instant Discount','Get a quote and book through this site — 5% off at payment, instantly.'],['02','Share an Honest Review','After treatment, post a review on this site or your social media. (Disclosure of support required; content entirely up to you.)'],['03','5–10% Payback or Coupon','Once verified, receive 5–10% payback via WeChat Pay/Alipay, or a revisit coupon.']],
-  fine:'· Foreign patients not enrolled in Korean NHIS only (passport check) · Review content is free; only posting is verified · Payback rate varies by hospital/procedure · This is a promotion for our concierge services, not for medical fees'},
+  steps:[['01','5% Instant Discount','Get a quote and book through this site — 5% off at payment, instantly.'],['02','Share an Honest Review','After treatment, post a review on this site or your social media. (Disclosure of support required; content entirely up to you.)'],['03','5% Cashback','Once verified, receive 5% of your payment back via WeChat Pay or Alipay.']],
+  fine:'· Foreign patients not enrolled in Korean NHIS only (passport check) · Review content is free; only posting is verified · Some hospitals/procedures may be excluded · This is a promotion for our concierge services, not for medical fees'},
  ja:{title:'レビュー特典プログラム',sub:'当サイトで見積り・治療まで完了された方限定',
-  steps:[['01','予約で5%即時割引','当サイトで見積り後に予約すると、お会計時に5%割引。'],['02','率直なレビュー投稿','治療後、当サイトまたはSNSにレビューを投稿。（体験支援を受けた旨の表記が必要・内容は完全に自由）'],['03','5~10%ペイバック/クーポン','確認後、WeChat Pay/Alipayで5~10%ペイバック、または再訪クーポンを進呈。']],
-  fine:'· 韓国の国民健康保険に未加入の外国人患者限定（パスポート確認） · レビュー内容は自由、投稿の有無のみ確認 · 還元率は医院・施術により異なります · 本特典は当社コンシェルジュサービスのプロモーションであり、医療費とは無関係です'}
+  steps:[['01','予約で5%即時割引','当サイトで見積り後に予約すると、お会計時に5%割引。'],['02','率直なレビュー投稿','治療後、当サイトまたはSNSにレビューを投稿。（体験支援を受けた旨の表記が必要・内容は完全に自由）'],['03','5%キャッシュバック','確認後、お支払い金額の5%をWeChat Pay/Alipayで還元します。']],
+  fine:'· 韓国の国民健康保険に未加入の外国人患者限定（パスポート確認） · レビュー内容は自由、投稿の有無のみ確認 · 一部の医院・施術は対象外の場合があります · 本特典は当社コンシェルジュサービスのプロモーションであり、医療費とは無関係です'}
 };
 function renderReward(){
   var d=REWARD_I18N[LANG]||REWARD_I18N.en;
