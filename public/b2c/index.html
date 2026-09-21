@@ -172,6 +172,7 @@ h2{font-size:clamp(20px,3.6vw,27px);font-weight:900;letter-spacing:-.5px;}
 
 <div class="mq"><div class="mqtrack" id="mqtrack"></div></div>
 
+<section class="sec" id="reward"><div class="wrap" id="rewardWrap"></div></section>
 <section class="sec" id="quote">
   <div class="wrap">
     <h2><span id="t-q-title"></span> <span class="badge-ad" id="t-ad"></span></h2>
@@ -697,6 +698,45 @@ function submitMatch(){
 }
 applyLang(LANG);
 window.addEventListener('scroll',function(){var b=document.getElementById('totop');if(b)b.classList.toggle('on',window.scrollY>500);},{passive:true});
+</script>
+
+<script>
+/* 리뷰 리워드 프로그램 안내 — 2026-09-21. 대상: 건보 미가입 외국인 한정. 할인율 홍보는 이 글로벌판에만(중국판 금지). */
+var REWARD_I18N={
+ zh:{title:'点评回馈计划',sub:'通过本站获取报价并完成诊疗的顾客专享',
+  steps:[['01','预约立减 5%','通过本站获取报价并预约，结算时立即享受 5% 优惠。'],['02','分享真实点评','诊疗结束后，在本站或社交平台发布真实体验点评（需注明获得了体验支持，内容完全自由）。'],['03','返现 5~10% 或优惠券','点评确认后，通过微信支付/支付宝返现 5~10%，或发放下次使用优惠券。']],
+  fine:'· 仅限未加入韩国国民健康保险的外国患者（需核对护照） · 点评内容完全自由，仅确认是否发布 · 返现比例因医院/项目而异，咨询时告知 · 本回馈为本公司行程服务促销，与医疗行为费用无关'},
+ kr:{title:'리뷰 리워드 프로그램',sub:'사이트에서 견적받고 진료까지 완료한 고객 전용',
+  steps:[['01','예약 시 5% 즉시 할인','사이트에서 견적을 받고 예약하면 결제 시 5%를 바로 할인해 드립니다.'],['02','솔직한 후기 작성','치료 후 사이트 또는 SNS에 이용 후기를 남겨주세요. (체험 지원 사실 표기 필요, 내용은 완전 자유)'],['03','5~10% 페이백 또는 쿠폰','후기 확인 후 위챗페이·알리페이로 5~10% 페이백 또는 재방문 쿠폰을 드립니다.']],
+  fine:'· 한국 국민건강보험에 가입하지 않은 외국인 환자 한정(여권 확인) · 후기 내용은 자유이며 작성 여부만 확인합니다 · 페이백률은 병원·시술에 따라 상이(상담 시 안내) · 본 혜택은 당사 여정 서비스 프로모션으로 의료행위 비용과 무관합니다'},
+ en:{title:'Review Reward Program',sub:'For patients who get a quote here and complete treatment',
+  steps:[['01','5% Instant Discount','Get a quote and book through this site — 5% off at payment, instantly.'],['02','Share an Honest Review','After treatment, post a review on this site or your social media. (Disclosure of support required; content entirely up to you.)'],['03','5–10% Payback or Coupon','Once verified, receive 5–10% payback via WeChat Pay/Alipay, or a revisit coupon.']],
+  fine:'· Foreign patients not enrolled in Korean NHIS only (passport check) · Review content is free; only posting is verified · Payback rate varies by hospital/procedure · This is a promotion for our concierge services, not for medical fees'},
+ ja:{title:'レビュー特典プログラム',sub:'当サイトで見積り・治療まで完了された方限定',
+  steps:[['01','予約で5%即時割引','当サイトで見積り後に予約すると、お会計時に5%割引。'],['02','率直なレビュー投稿','治療後、当サイトまたはSNSにレビューを投稿。（体験支援を受けた旨の表記が必要・内容は完全に自由）'],['03','5~10%ペイバック/クーポン','確認後、WeChat Pay/Alipayで5~10%ペイバック、または再訪クーポンを進呈。']],
+  fine:'· 韓国の国民健康保険に未加入の外国人患者限定（パスポート確認） · レビュー内容は自由、投稿の有無のみ確認 · 還元率は医院・施術により異なります · 本特典は当社コンシェルジュサービスのプロモーションであり、医療費とは無関係です'}
+};
+function renderReward(){
+  var d=REWARD_I18N[LANG]||REWARD_I18N.en;
+  var w=document.getElementById('rewardWrap'); if(!w)return;
+  w.innerHTML='<div style="background:linear-gradient(135deg,#7E2531,#B03A48);border-radius:22px;padding:38px 30px;color:#fff">'
+    +'<div style="text-align:center;margin-bottom:26px"><span style="display:inline-block;font-size:11.5px;letter-spacing:.15em;border:1px solid rgba(232,213,172,.6);color:#E8D5AC;border-radius:99px;padding:4px 14px;margin-bottom:12px">REVIEW REWARD</span>'
+    +'<h2 style="font-size:26px;font-weight:800;margin:0">'+d.title+'</h2>'
+    +'<p style="margin:8px 0 0;font-size:13.5px;color:#F2D9DD">'+d.sub+'</p></div>'
+    +'<div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center">'
+    +d.steps.map(function(s){return '<div style="flex:1;min-width:220px;max-width:320px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:20px 18px">'
+      +'<div style="font-size:12px;font-weight:800;color:#E8D5AC;letter-spacing:.12em;margin-bottom:8px">STEP '+s[0]+'</div>'
+      +'<div style="font-size:16.5px;font-weight:800;margin-bottom:8px">'+s[1]+'</div>'
+      +'<div style="font-size:12.5px;line-height:1.75;color:rgba(255,255,255,.88)">'+s[2]+'</div></div>';}).join('')
+    +'</div>'
+    +'<p style="margin:22px auto 0;max-width:860px;font-size:11px;line-height:1.8;color:rgba(255,255,255,.72);border-top:1px dashed rgba(255,255,255,.3);padding-top:14px">'+d.fine+'</p>'
+    +'</div>';
+}
+(function(){
+  var orig=applyLang;
+  applyLang=function(l){orig(l);try{renderReward();}catch(e){}};
+  try{renderReward();}catch(e){}
+})();
 </script>
 </body>
 </html>
