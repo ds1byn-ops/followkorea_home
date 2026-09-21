@@ -82,13 +82,12 @@ const Navbar: React.FC<NavbarProps> = ({
       }}
     >
       <div className="flex items-center gap-2 md:gap-3">
-        <button onClick={onBackToHome} className="flex items-start group">
+        <button onClick={onBackToHome} className="flex items-center group">
           <img
-            src="https://cdn.imweb.me/upload/S20260120a0cc4980014ac/944293da5fc36.png"
+            src="/fk-logo-r.png"
             alt="Follow Korea Logo"
             className="h-6 md:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-          />
-          <span className="text-[9px] md:text-[11px] font-bold text-gray-800 leading-none ml-0.5">®</span>
+          />
         </button>
       </div>
 
