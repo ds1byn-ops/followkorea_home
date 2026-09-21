@@ -712,16 +712,16 @@ window.addEventListener('scroll',function(){var b=document.getElementById('totop
 /* 리뷰 리워드 프로그램 안내 — 2026-09-21. 대상: 건보 미가입 외국인 한정. 할인율 홍보는 이 글로벌판에만(중국판 금지). */
 var REWARD_I18N={
  zh:{title:'点评回馈计划',sub:'通过本站获取报价并完成诊疗的顾客专享',
-  steps:[['01','预约立减 5%','通过本站获取报价并预约，结算时立即享受 5% 优惠。'],['02','分享真实点评','诊疗结束后，在本站或社交平台发布真实体验点评（需注明获得了体验支持，内容完全自由）。'],['03','5% 现金返还','点评确认后，通过微信支付/支付宝返还结算金额的 5%。']],
+  steps:[['01','预约立减 5%','通过本站获取报价并预约，结算时立即享受 5% 优惠。'],['02','分享真实点评','诊疗结束后，在本站或社交平台发布真实体验点评（需注明获得了体验支持，内容完全自由）。'],['03','5% 现金返还','点评确认后，通过微信支付/支付宝返还结算金额的 5%。确认后请在微信客服发送点评链接与收款账户即可。']],
   fine:'· 仅限未加入韩国国民健康保险的外国患者（需核对护照） · 点评内容完全自由，仅确认是否发布 · 部分医院/项目可能不适用，咨询时确认 · 本回馈为本公司行程服务促销，与医疗行为费用无关'},
  ko:{title:'리뷰 리워드 프로그램',sub:'사이트에서 견적받고 진료까지 완료한 고객 전용',
-  steps:[['01','예약 시 5% 즉시 할인','사이트에서 견적을 받고 예약하면 결제 시 5%를 바로 할인해 드립니다.'],['02','솔직한 후기 작성','치료 후 사이트 또는 SNS에 이용 후기를 남겨주세요. (체험 지원 사실 표기 필요, 내용은 완전 자유)'],['03','5% 캐시백','후기 확인 후 결제금액의 5%를 위챗페이·알리페이로 돌려드립니다.']],
+  steps:[['01','예약 시 5% 즉시 할인','사이트에서 견적을 받고 예약하면 결제 시 5%를 바로 할인해 드립니다.'],['02','솔직한 후기 작성','치료 후 사이트 또는 SNS에 이용 후기를 남겨주세요. (체험 지원 사실 표기 필요, 내용은 완전 자유)'],['03','5% 캐시백','후기 확인 후 결제금액의 5%를 위챗페이·알리페이로 돌려드립니다. 후기 링크와 수취 계정은 위챗 상담 채팅으로 보내주시면 됩니다.']],
   fine:'· 한국 국민건강보험에 가입하지 않은 외국인 환자 한정(여권 확인) · 후기 내용은 자유이며 작성 여부만 확인합니다 · 일부 병원·시술은 제외될 수 있음(상담 시 안내) · 본 혜택은 당사 여정 서비스 프로모션으로 의료행위 비용과 무관합니다'},
  en:{title:'Review Reward Program',sub:'For patients who get a quote here and complete treatment',
-  steps:[['01','5% Instant Discount','Get a quote and book through this site — 5% off at payment, instantly.'],['02','Share an Honest Review','After treatment, post a review on this site or your social media. (Disclosure of support required; content entirely up to you.)'],['03','5% Cashback','Once verified, receive 5% of your payment back via WeChat Pay or Alipay.']],
+  steps:[['01','5% Instant Discount','Get a quote and book through this site — 5% off at payment, instantly.'],['02','Share an Honest Review','After treatment, post a review on this site or your social media. (Disclosure of support required; content entirely up to you.)'],['03','5% Cashback','Once verified, receive 5% of your payment back via WeChat Pay or Alipay. Just send your review link and payout account to our WeChat support.']],
   fine:'· Foreign patients not enrolled in Korean NHIS only (passport check) · Review content is free; only posting is verified · Some hospitals/procedures may be excluded · This is a promotion for our concierge services, not for medical fees'},
  ja:{title:'レビュー特典プログラム',sub:'当サイトで見積り・治療まで完了された方限定',
-  steps:[['01','予約で5%即時割引','当サイトで見積り後に予約すると、お会計時に5%割引。'],['02','率直なレビュー投稿','治療後、当サイトまたはSNSにレビューを投稿。（体験支援を受けた旨の表記が必要・内容は完全に自由）'],['03','5%キャッシュバック','確認後、お支払い金額の5%をWeChat Pay/Alipayで還元します。']],
+  steps:[['01','予約で5%即時割引','当サイトで見積り後に予約すると、お会計時に5%割引。'],['02','率直なレビュー投稿','治療後、当サイトまたはSNSにレビューを投稿。（体験支援を受けた旨の表記が必要・内容は完全に自由）'],['03','5%キャッシュバック','確認後、お支払い金額の5%をWeChat Pay/Alipayで還元します。レビューのリンクと受取アカウントはWeChatサポートへお送りください。']],
   fine:'· 韓国の国民健康保険に未加入の外国人患者限定（パスポート確認） · レビュー内容は自由、投稿の有無のみ確認 · 一部の医院・施術は対象外の場合があります · 本特典は当社コンシェルジュサービスのプロモーションであり、医療費とは無関係です'}
 };
 function renderReward(){
@@ -760,22 +760,22 @@ var RV_I18N={
  zh:{title:'顾客点评',sub:'通过 FollowKorea 就诊顾客的点评。含体验团/合作评价，均已标注“赞助”（经核实后发布）',
   empty:'暂无点评。成为第一位分享体验的顾客吧！',write:'写点评',name:'称呼',hospital:'就诊医院',rating:'满意度',content:'点评内容（10字以上）',
   pledge:'本点评基于本人真实就诊经历；如获得体验支持，已在内容中注明。',
-  submit:'提交点评',done:'已提交！经工作人员核实后将会发布。',err:'提交失败，请稍后重试',need:'请填写所有必填项并勾选确认',
+  submit:'提交点评',done:'已提交！经工作人员核实后将会发布。回馈申请：请在微信客服发送点评链接 + 收款账户（微信/支付宝）。',err:'提交失败，请稍后重试',need:'请填写所有必填项并勾选确认',
   ph:'请分享就诊过程、服务与感受……'},
  ko:{title:'고객 후기',sub:'FollowKorea를 통해 진료받은 고객의 후기입니다. 체험단/제휴 후기는 모두 "협찬" 표시 (검수 후 게시)',
   empty:'아직 후기가 없습니다. 첫 후기의 주인공이 되어주세요!',write:'후기 작성',name:'성함(닉네임)',hospital:'이용 병원',rating:'만족도',content:'후기 내용(10자 이상)',
   pledge:'본 후기는 실제 이용 경험이며, 체험 지원을 받은 경우 그 사실을 내용에 표기했습니다.',
-  submit:'후기 제출',done:'제출되었습니다! 검수 후 게시됩니다.',err:'제출 실패 — 잠시 후 다시 시도해주세요',need:'모든 항목을 입력하고 확인란에 체크해주세요',
+  submit:'후기 제출',done:'제출되었습니다! 검수 후 게시됩니다. 리워드 신청은 위챗 상담 채팅으로 후기 링크 + 수취 계정(위챗/알리페이)을 보내주세요.',err:'제출 실패 — 잠시 후 다시 시도해주세요',need:'모든 항목을 입력하고 확인란에 체크해주세요',
   ph:'진료 과정, 서비스, 느낀 점을 자유롭게 남겨주세요…'},
  en:{title:'Patient Reviews',sub:'Reviews from patients who visited through FollowKorea. Sponsored partner reviews are labeled as such (published after verification)',
   empty:'No reviews yet. Be the first to share your experience!',write:'Write a Review',name:'Name (nickname)',hospital:'Hospital Visited',rating:'Rating',content:'Your review (10+ characters)',
   pledge:'This review is based on my real experience; if I received support, I have disclosed it in the review.',
-  submit:'Submit Review',done:'Submitted! It will be published after verification.',err:'Submission failed — please try again later',need:'Please fill in all fields and check the confirmation box',
+  submit:'Submit Review',done:'Submitted! It will be published after verification. For the reward, send your review link + payout account (WeChat/Alipay) to our WeChat support.',err:'Submission failed — please try again later',need:'Please fill in all fields and check the confirmation box',
   ph:'Share your treatment journey, service and impressions…'},
  ja:{title:'お客様レビュー',sub:'FollowKorea を通じて受診されたお客様のレビュー。体験団・提携レビューはすべて「PR」表示（確認後に掲載）',
   empty:'まだレビューがありません。最初のレビューをお寄せください！',write:'レビューを書く',name:'お名前(ニックネーム)',hospital:'受診した医院',rating:'満足度',content:'レビュー内容(10文字以上)',
   pledge:'本レビューは実際の利用経験に基づき、体験支援を受けた場合はその旨を本文に記載しています。',
-  submit:'レビューを送信',done:'送信されました！確認後に掲載されます。',err:'送信に失敗しました。しばらくして再度お試しください',need:'すべての項目を入力し、確認欄にチェックしてください',
+  submit:'レビューを送信',done:'送信されました！確認後に掲載されます。特典はWeChatサポートへレビューのリンク＋受取アカウント（WeChat/Alipay）をお送りください。',err:'送信に失敗しました。しばらくして再度お試しください',need:'すべての項目を入力し、確認欄にチェックしてください',
   ph:'診療の流れ、サービス、感想を自由にお書きください…'}
 };
 var RV_CACHE=null, RV_HOSP='', RV_PAGE=1, RV_PER=24, RV_STATS={};
