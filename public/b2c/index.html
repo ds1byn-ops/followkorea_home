@@ -918,7 +918,7 @@ function rvSubmit(){
 <!-- 추석 인사 팝업 (~2026-09-26, 오늘 하루 닫기) -->
 <div id="csPopup" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,.6); overflow-y:auto; -webkit-backdrop-filter:blur(3px); backdrop-filter:blur(3px);">
   <div id="csPopupWrap" style="min-height:100%; display:flex; align-items:center; justify-content:center; padding:24px 16px;">
-    <div style="position:relative; width:100%; max-width:380px; border-radius:20px; overflow:hidden; background:#0b1633; box-shadow:0 30px 60px rgba(5,15,40,.5);">
+    <div style="position:relative; width:min(600px, 92vw, calc((100vh - 160px) * 0.8)); border-radius:20px; overflow:hidden; background:#0b1633; box-shadow:0 30px 60px rgba(5,15,40,.5);">
       <img src="/promo/chuseok-2026.webp" style="display:block; width:100%; height:auto;" alt="2026 추석 인사">
       <div style="display:flex; align-items:center; justify-content:space-between; padding:11px 18px; background:#fff; font-size:12.5px;">
         <button id="csToday" type="button" style="border:0; background:none; color:#666; cursor:pointer; padding:0; font-size:12.5px;">오늘 하루 보지 않기 · 今日不再显示</button>

@@ -212,7 +212,9 @@ const PromoPopups: React.FC<{ lang: LanguageCode }> = ({ lang }) => {
       <div className="relative min-h-full flex items-center justify-center p-4 py-10">
        <div className="flex flex-col lg:flex-row items-center justify-center gap-5 lg:gap-0 lg:-space-x-10 w-full lg:w-auto">
         {cards.map((c, i) => (
-          <div key={c.key} className={'relative w-full max-w-[390px] lg:w-[390px] transition-all duration-300 ease-out lg:hover:!rotate-0 lg:hover:!translate-y-0 lg:hover:!scale-[1.04] hover:z-40 lg:hover:drop-shadow-[0_30px_50px_rgba(5,15,40,0.5)] ' + (wraps[i] || '')}>
+          <div key={c.key}
+            className={'relative w-full transition-all duration-300 ease-out lg:hover:!rotate-0 lg:hover:!translate-y-0 lg:hover:!scale-[1.04] hover:z-40 lg:hover:drop-shadow-[0_30px_50px_rgba(5,15,40,0.5)] ' + (c.key === 'cs' ? '' : 'max-w-[390px] lg:w-[390px] ') + (wraps[i] || '')}
+            style={c.key === 'cs' ? { width: 'min(600px, 92vw, calc((100vh - 160px) * 0.8))' } : undefined}>
             {c.el}
           </div>
         ))}
