@@ -3610,13 +3610,13 @@ export const HOSPITAL_DATA: HospDetail[] = [
   },
   {
     "name": { "kr": "모아뜨 성수점", "en": "MOATTE Seongsu", "zh": "MOATTE 圣水店" },
-    "dept": { "kr": "헤어살롱", "en": "Hair Salon", "zh": "美发沙龙" },
+    "dept": { "kr": "헤어&메이크업 스튜디오", "en": "Hair & Makeup Studio", "zh": "美发&化妆工作室" },
     "cat": "기타 서비스",
     "badge": "NEW",
     "treats": {
-      "kr": ["커트·펌","염색·클리닉","슬릭펌·맨즈컷","1:1 맞춤 스타일링"],
-      "en": ["Cut & Perm","Color & Clinic","Slick Perm & Men's Cut","1:1 Personal Styling"],
-      "zh": ["剪发·烫发","染发·护理","丝滑烫·男士剪发","1:1定制造型"]
+      "kr": ["데일리·아이돌·혼주 메이크업","드라이·업스타일","헤어+메이크업 세트","커트·펌·염색","1:1 맞춤 스타일링"],
+      "en": ["Daily·Idol·Family Makeup","Blow-dry & Updo","Hair + Makeup Set","Cut·Perm·Color","1:1 Personal Styling"],
+      "zh": ["日常·爱豆·主婚人妆","吹风·盘发造型","妆发套餐","剪发·烫发·染发","1:1定制造型"]
     },
     "hours": "10:00~18:00 (월요일 휴무)",
     "loc": {
@@ -3625,9 +3625,9 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "en": "Seongsu-dong, Seoul (Seoul Forest)"
     },
     "overview": {
-      "kr": "모아뜨 성수점은 서울숲·뚝섬역 인근의 프라이빗 프리미엄 헤어살롱입니다. 1:1 상담으로 고객에게 가장 잘 어울리는 스타일을 제안하고 프리미엄 제품만 사용합니다. 시술·촬영 일정에 맞춘 헤어 스타일링을 예약제로 진행합니다. (월요일 휴무)",
-      "en": "MOATTE Seongsu is a private premium hair salon near Seoul Forest and Ttukseom Station. Through 1:1 consultations it proposes the most flattering style for each client, using premium products only. Sessions are by reservation and can be scheduled around your treatments or photo shoots. (Closed Mondays)",
-      "zh": "MOATTE圣水店是位于首尔林·纛岛站附近的私密高端美发沙龙。通过1:1咨询为顾客提案最合适的发型，仅使用高端产品。采取预约制，可配合施术·拍摄日程安排造型。(周一休)"
+      "kr": "모아뜨 성수점은 서울숲·뚝섬역 인근의 프라이빗 헤어&메이크업 스튜디오입니다. 데일리·아이돌·혼주 메이크업과 드라이·업스타일, 헤어+메이크업 세트를 1:1 예약제로 진행하며, 새벽 조기 시작(추가요금)도 가능해 촬영·웨딩·행사 일정에 맞추기 좋습니다. (월요일 휴무)",
+      "en": "MOATTE Seongsu is a private hair & makeup studio near Seoul Forest and Ttukseom Station. It offers daily, idol and wedding-family makeup, blow-dry and updo styling, and hair+makeup sets by 1:1 reservation — early-morning starts are available (surcharge), ideal for shoots, weddings and events. (Closed Mondays)",
+      "zh": "MOATTE圣水店是位于首尔林·纛岛站附近的私密妆发工作室。提供日常·爱豆·主婚人妆、吹风·盘发造型及妆发套餐，1:1预约制，可清晨提前开工(需加收费用)，适合拍摄·婚礼·活动日程。(周一休)"
     },
     "doctors": [],
     "thumb": "hthumb/moatt.jpg"
