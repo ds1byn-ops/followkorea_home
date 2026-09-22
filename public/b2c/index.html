@@ -61,6 +61,8 @@ h2{font-size:clamp(20px,3.6vw,27px);font-weight:900;letter-spacing:-.5px;}
 .chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:16px;}
 .chip{padding:6px 12px;border:1px solid var(--line);border-radius:99px;background:#fff;font-size:12px;color:#3d4a63;cursor:pointer;user-select:none;}
 .chip.on{background:var(--brand);border-color:var(--brand);color:#fff;font-weight:700;}
+.chip.life{border-style:dashed;margin-left:8px;}
+.chip.life.on{background:#7E1F2E;border-color:#7E1F2E;border-style:solid;}
 .gtab{padding:8px 15px;border:1px solid var(--line);border-radius:10px;background:#fff;font-size:12.5px;font-weight:700;color:#3d4a63;cursor:pointer;user-select:none;}
 .gtab.on{background:#7E1F2E;border-color:#7E1F2E;color:#fff;}
 .hgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px;}
@@ -461,7 +463,7 @@ function won(n){return (n||0).toLocaleString('ko-KR')+(LANG==='ko'?'원':' KRW')
 function hName(h){return (LANG==='zh'&&h.zh)?h.zh:((LANG==='en'||LANG==='ja')&&h.en?h.en:h.name);}
 function hOv(h){if(LANG==='zh'&&h.ovzh)return h.ovzh;if(LANG==='ja'&&h.ovja)return h.ovja;if((LANG==='en'||LANG==='ja')&&h.oven)return h.oven;return h.overview;}
 function hTreats(h){if(LANG==='zh'&&h.trzh&&h.trzh.length)return h.trzh;if(LANG==='ja'&&h.trja&&h.trja.length)return h.trja;if((LANG==='en'||LANG==='ja')&&h.tren&&h.tren.length)return h.tren;return h.treats;}
-function hDept(h){if(LANG==='zh'&&h.deptzh)return h.deptzh;if(LANG==='ja'&&h.deptja)return h.deptja;if((LANG==='en'||LANG==='ja')&&h.depten)return h.depten;return h.dept||h.cat||'';}
+function hDept(h){if(LANG==='zh'&&h.deptzh)return h.deptzh;if(LANG==='ja'&&h.deptja)return h.deptja;if((LANG==='en'||LANG==='ja')&&h.depten)return h.depten;return h.dept||catLabel(h.cat||'')||'';}
 function hLoc(h){if(LANG==='zh'&&h.loczh)return h.loczh;if(LANG==='ja'&&h.locja)return h.locja;if((LANG==='en'||LANG==='ja')&&h.locen)return h.locen;return h.loc||'';}
 
 var QGSEL=0;
@@ -556,11 +558,22 @@ function selQG(i){QGSEL=i;renderQuick();}
 var HCAT='', HPAGE=1, HPER=9;
 // 접속·새로고침마다 무작위 순서 (중립 표시 — 순위 아님)
 for(var _i=HOSPITALS.length-1;_i>0;_i--){var _j=Math.floor(Math.random()*(_i+1));var _t=HOSPITALS[_i];HOSPITALS[_i]=HOSPITALS[_j];HOSPITALS[_j]=_t;}
+// 분야 칩 라벨 (ko 키 → 언어별). '기타 서비스' = 헤어살롱·뷰티살롱·사진 스튜디오 등 비의료 제휴처 — 병원과 구분해 맨 뒤 그룹으로 표시
+var CAT_L10N={
+  '성형외과':{zh:'整形外科',en:'Plastic Surgery',ja:'美容外科'},'피부':{zh:'皮肤',en:'Skin',ja:'皮膚'},'줄기세포':{zh:'干细胞',en:'Stem Cell',ja:'幹細胞'},
+  '검진':{zh:'体检',en:'Checkup',ja:'健診'},'치과':{zh:'牙科',en:'Dental',ja:'歯科'},'여성의학':{zh:'女性医学',en:"Women's Health",ja:'婦人科'},
+  '체형':{zh:'体型',en:'Body',ja:'ボディ'},'항노화':{zh:'抗衰老',en:'Anti-aging',ja:'アンチエイジング'},'안과':{zh:'眼科',en:'Eye',ja:'眼科'},
+  '한방':{zh:'韩医',en:'Korean Med',ja:'韓方'},'신경과':{zh:'神经内科',en:'Neurology',ja:'神経内科'},'정형외과':{zh:'骨科',en:'Orthopedics',ja:'整形外科'},
+  '기타 서비스':{zh:'美发·美容·摄影',en:'Hair·Beauty·Studio',ja:'ヘア・ビューティー・スタジオ'}
+};
+var LIFE_CAT='기타 서비스';
+function catLabel(c){ var m=CAT_L10N[c]; return (m&&m[LANG])||c; }
+function isLife(h){ return (h.cat||'').indexOf(LIFE_CAT)>=0; }
 function renderHchips(){
   var cats=[]; HOSPITALS.forEach(function(h){ (h.cat||'').split('/').forEach(function(c){ c=c.trim(); if(c&&cats.indexOf(c)<0)cats.push(c); }); });
-  cats.sort(function(a,b){return a.localeCompare(b,'ko');});
+  cats.sort(function(a,b){ if(a===LIFE_CAT)return 1; if(b===LIFE_CAT)return -1; return a.localeCompare(b,'ko'); });
   document.getElementById('hchips').innerHTML='<span class="chip'+(HCAT===''?' on':'')+'" data-c="" onclick="setHCat(this)">'+esc(T().all)+'</span>'
-    +cats.map(function(c){return '<span class="chip'+(HCAT===c?' on':'')+'" data-c="'+esc(c)+'" onclick="setHCat(this)">'+esc(c)+'</span>';}).join('');
+    +cats.map(function(c){return '<span class="chip'+(HCAT===c?' on':'')+(c===LIFE_CAT?' life':'')+'" data-c="'+esc(c)+'" onclick="setHCat(this)">'+esc(catLabel(c))+'</span>';}).join('');
 }
 function setHCat(el){
   HCAT=el.getAttribute('data-c')||'';
@@ -577,6 +590,7 @@ function renderHosps(keepPage){
   if(!keepPage)HPAGE=1;
   var t=T();
   var f=HOSPITALS.filter(function(h){ return !HCAT || (h.cat||'').indexOf(HCAT)>=0; });
+  if(!HCAT) f=f.filter(function(h){return !isLife(h);}).concat(f.filter(isLife));
   var show=f.slice(0,HPAGE*HPER);
   document.getElementById('hgrid').innerHTML=show.map(function(h){
     var tr=hTreats(h)||[];
