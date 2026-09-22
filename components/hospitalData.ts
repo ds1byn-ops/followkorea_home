@@ -2918,6 +2918,32 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "thumb": "hthumb/kseye.jpg"
   },
   {
+    "name": { "kr": "강남아이원스안과의원", "en": "EYEONCE Eye Clinic Gangnam", "zh": "江南EYEONCE眼科" },
+    "dept": { "kr": "안과", "en": "Ophthalmology", "zh": "眼科" },
+    "cat": "안과",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["스마일프로·스마일라식","원데이라식·투데이라섹","ICL 렌즈삽입술","노안·백내장","안구건조증 IPL"],
+      "en": ["SMILE Pro & SMILE LASIK","One-Day LASIK·LASEK","ICL Implantation","Presbyopia·Cataract","Dry-Eye IPL"],
+      "zh": ["SMILE Pro·全飞秒","One-Day半飞秒·LASEK","ICL晶体植入","老花·白内障","干眼症IPL"]
+    },
+    "hours": "평일 09:00~18:00 · 금 ~20:00(야간 예약) · 토 ~16:00 · 수/일/공휴일 휴진",
+    "loc": {
+      "ko": "서울 서초구 사평대로 368, 5·6층 (신논현역)",
+      "zh": "首尔新论岘站(教保大厦旁)",
+      "en": "Sinnonhyeon, Seoul"
+    },
+    "overview": {
+      "kr": "강남아이원스안과는 신논현역 교보타워 인근(사평대로 368, 5~6층)의 시력교정·노안백내장 전문 안과입니다. 스마일프로·스마일라식·원데이라식·투데이라섹·ICL 렌즈삽입술과 안구건조증 IPL 치료를 진행하며, 모든 수술 전 정밀 안검진(검진비 별도)을 시행합니다. 원내 통역이 상주해 외국인 환자도 편하게 진료받을 수 있습니다. (수·일요일 휴진, 금요일 야간 예약진료)",
+      "en": "EYEONCE Eye Clinic Gangnam, near Sinnonhyeon Station (5-6F, 368 Sapyeong-daero), specializes in vision correction and presbyopia-cataract care — SMILE Pro, SMILE LASIK, One-Day LASIK, Two-Day LASEK, ICL implantation and IPL dry-eye treatment. A precision eye exam (separate fee) precedes every surgery, and an in-house interpreter supports international patients. (Closed Wed/Sun; Friday evenings by appointment)",
+      "zh": "江南EYEONCE眼科位于新论岘站教保大厦旁(思平大路368，5~6层)，专注视力矫正与老花·白内障——SMILE Pro微创全飞秒、SMILE全飞秒、One-Day全激光LASIK、Two-Day LASEK、ICL晶体植入及干眼症IPL治疗。所有手术前进行精密眼科检查(检查费另计)，院内常驻翻译，外国患者就诊无忧。(周三·周日休诊，周五夜间需预约)"
+    },
+    "doctors": [
+      { "name": "백동원", "title": "대표원장", "spec": ["안과"] }
+    ],
+    "thumb": "hthumb/eyeonce.jpg"
+  },
+  {
     "name": {
       "kr": "JD피부성형(장덕)",
       "en": "JD Skin & Plastic Clinic",
