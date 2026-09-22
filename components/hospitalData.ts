@@ -3490,13 +3490,13 @@ export const HOSPITAL_DATA: HospDetail[] = [
   },
   {
     "name": { "kr": "스튜디오 숲 서울", "en": "Studio Soop Seoul", "zh": "Studio Soop 首尔" },
-    "dept": { "kr": "사진 스튜디오", "en": "Photo Studio", "zh": "摄影工作室" },
+    "dept": { "kr": "반영구 메이크업 · 사진 스튜디오", "en": "Permanent Makeup · Photo Studio", "zh": "半永久定妆·摄影工作室" },
     "cat": "기타 서비스",
     "badge": "NEW",
     "treats": {
-      "kr": ["프로필 촬영","화보 촬영","커플·우정 스냅","뷰티 스냅"],
-      "en": ["Profile Shoots","Editorial Shoots","Couple & Friend Snaps","Beauty Snaps"],
-      "zh": ["形象照拍摄","写真拍摄","情侣·闺蜜快照","美妆快照"]
+      "kr": ["반영구 눈썹(눈썹문신)","애교살·아이라인 반영구","BB 립블러쉬","프로필 촬영","화보 촬영","커플·우정 스냅","뷰티 스냅"],
+      "en": ["Eyebrow Tattoo (PMU Brows)","Undereye & Eyeliner PMU","BB Lip Blush","Profile Shoots","Editorial Shoots","Couple & Friend Snaps","Beauty Snaps"],
+      "zh": ["半永久纹眉","卧蚕·美瞳线半永久","BB唇定妆","形象照拍摄","写真拍摄","情侣·闺蜜快照","美妆快照"]
     },
     "hours": "",
     "loc": {
@@ -3505,9 +3505,9 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "en": "Seoul"
     },
     "overview": {
-      "kr": "스튜디오 숲 서울은 프로필·화보 촬영 전문 사진 스튜디오입니다. 시술 전후 기념 촬영, 여행 스냅 등 방한 일정에 맞춘 촬영을 예약제로 진행합니다.",
-      "en": "Studio Soop Seoul is a photo studio specializing in profile and editorial shoots. Sessions are by reservation and can be scheduled around your visit — including post-treatment portraits and travel snaps.",
-      "zh": "Studio Soop首尔是专业形象照·写真摄影工作室。采取预约制，可配合访韩行程安排拍摄，包括术后纪念照与旅行快照。"
+      "kr": "스튜디오 숲 서울은 반영구 메이크업과 프로필·화보 촬영을 함께 운영하는 뷰티 스튜디오입니다. 눈썹문신(자연눈썹·쉐도우·아트브로우)과 애교살·아이라인·립블러쉬 반영구를 전문으로 하며, 시술 전후 기념 촬영, 여행 스냅 등 방한 일정에 맞춘 촬영을 예약제로 진행합니다.",
+      "en": "Studio Soop Seoul is a beauty studio offering both permanent makeup and profile/editorial photography. It specializes in eyebrow tattoo (natural, shadow and art brows) plus undereye, eyeliner and lip-blush PMU, with photo sessions by reservation scheduled around your visit — including post-treatment portraits and travel snaps.",
+      "zh": "Studio Soop首尔是集半永久定妆与形象照·写真拍摄于一体的美妆工作室。专注半永久纹眉(自然眉·雾眉·仿真眉)及卧蚕·美瞳线·BB唇定妆，拍摄采取预约制，可配合访韩行程安排，包括术后纪念照与旅行快照。"
     },
     "doctors": [],
     "thumb": "hthumb/studiosoop.jpg"
