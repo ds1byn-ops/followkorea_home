@@ -3609,6 +3609,30 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "thumb": "hthumb/kama.jpg"
   },
   {
+    "name": { "kr": "모아뜨 성수점", "en": "MOATT Seongsu", "zh": "MOATT 圣水店" },
+    "dept": { "kr": "헤어살롱", "en": "Hair Salon", "zh": "美发沙龙" },
+    "cat": "기타 서비스",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["커트·펌","염색·클리닉","슬릭펌·맨즈컷","1:1 맞춤 스타일링"],
+      "en": ["Cut & Perm","Color & Clinic","Slick Perm & Men's Cut","1:1 Personal Styling"],
+      "zh": ["剪发·烫发","染发·护理","丝滑烫·男士剪发","1:1定制造型"]
+    },
+    "hours": "10:00~18:00 (월요일 휴무)",
+    "loc": {
+      "ko": "서울 성동구 성수동 (서울숲·뚝섬역)",
+      "zh": "首尔圣水洞(首尔林)",
+      "en": "Seongsu-dong, Seoul (Seoul Forest)"
+    },
+    "overview": {
+      "kr": "모아뜨 성수점은 서울숲·뚝섬역 인근의 프라이빗 프리미엄 헤어살롱입니다. 1:1 상담으로 고객에게 가장 잘 어울리는 스타일을 제안하고 프리미엄 제품만 사용합니다. 시술·촬영 일정에 맞춘 헤어 스타일링을 예약제로 진행합니다. (월요일 휴무)",
+      "en": "MOATT Seongsu is a private premium hair salon near Seoul Forest and Ttukseom Station. Through 1:1 consultations it proposes the most flattering style for each client, using premium products only. Sessions are by reservation and can be scheduled around your treatments or photo shoots. (Closed Mondays)",
+      "zh": "MOATT圣水店是位于首尔林·纛岛站附近的私密高端美发沙龙。通过1:1咨询为顾客提案最合适的发型，仅使用高端产品。采取预约制，可配合施术·拍摄日程安排造型。(周一休)"
+    },
+    "doctors": [],
+    "thumb": "hthumb/moatt.jpg"
+  },
+  {
     "name": {
       "kr": "헤어온의원",
       "en": "HairON Clinic",
