@@ -3,12 +3,16 @@ import type { LanguageCode } from '../App';
 
 // 홍보 팝업 2종(삼성서울병원 입점 · KIMES BUSAN 2026)을 한 오버레이에 나란히 표시 — 2026-09-18
 // 각 카드별 노출 종료일·'오늘 하루 보지 않기' 독립 동작, 모바일에서는 세로 스택.
+// 2026-09-22: 추석 인사 팝업 추가(~9/26 단독 노출), 기존 3종은 9/27부터 재노출.
 const SMC_HIDE_KEY = 'smc_popup_hide_until';
 const SMC_SHOW_UNTIL = '2026-09-30';
 const YJ_HIDE_KEY = 'yueji_popup_hide_until';
 const YJ_SHOW_UNTIL = '2026-10-31';
 const KIMES_HIDE_KEY = 'kimes2026_hide_until';
 const KIMES_SHOW_UNTIL = '2026-10-25';
+const CS_HIDE_KEY = 'chuseok2026_hide_until';
+const CS_SHOW_UNTIL = '2026-09-26';
+const OTHERS_SHOW_FROM = '2026-09-27'; // 추석 팝업 기간에는 나머지 팝업 숨김
 
 type CardText = { badge: string; title: string; sub: string; desc: string; items: string[]; cta: string; invite?: string; today: string; close: string };
 
@@ -84,9 +88,10 @@ const YJ_TEXT: Record<string, CardText> = {
 
 const kstToday = () => new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10);
 
-function initialVisible(hideKey: string, showUntil: string): boolean {
+function initialVisible(hideKey: string, showUntil: string, showFrom?: string): boolean {
   const today = kstToday();
   if (today > showUntil) return false;
+  if (showFrom && today < showFrom) return false;
   try {
     const hideUntil = localStorage.getItem(hideKey);
     if (hideUntil && hideUntil >= today) return false;
@@ -135,24 +140,26 @@ const PromoPopups: React.FC<{ lang: LanguageCode }> = ({ lang }) => {
   const [smc, setSmc] = useState(false);
   const [kimes, setKimes] = useState(false);
   const [yj, setYj] = useState(false);
+  const [cs, setCs] = useState(false);
 
   useEffect(() => {
     const id = setTimeout(() => {
-      setSmc(initialVisible(SMC_HIDE_KEY, SMC_SHOW_UNTIL));
-      setKimes(initialVisible(KIMES_HIDE_KEY, KIMES_SHOW_UNTIL));
-      setYj(initialVisible(YJ_HIDE_KEY, YJ_SHOW_UNTIL));
+      setSmc(initialVisible(SMC_HIDE_KEY, SMC_SHOW_UNTIL, OTHERS_SHOW_FROM));
+      setKimes(initialVisible(KIMES_HIDE_KEY, KIMES_SHOW_UNTIL, OTHERS_SHOW_FROM));
+      setYj(initialVisible(YJ_HIDE_KEY, YJ_SHOW_UNTIL, OTHERS_SHOW_FROM));
+      setCs(initialVisible(CS_HIDE_KEY, CS_SHOW_UNTIL));
       setReady(true);
     }, 800);
     return () => clearTimeout(id);
   }, []);
 
-  if (!ready || (!smc && !kimes && !yj)) return null;
+  if (!ready || (!smc && !kimes && !yj && !cs)) return null;
 
   const hide = (key: string, setter: (v: boolean) => void) => () => {
     try { localStorage.setItem(key, kstToday()); } catch { /* ignore */ }
     setter(false);
   };
-  const closeAll = () => { setSmc(false); setKimes(false); setYj(false); };
+  const closeAll = () => { setSmc(false); setKimes(false); setYj(false); setCs(false); };
 
   const smcT = SMC_TEXT[lang] || SMC_TEXT.EN;
   const kimesT = KIMES_TEXT[lang] || KIMES_TEXT.EN;
@@ -160,6 +167,15 @@ const PromoPopups: React.FC<{ lang: LanguageCode }> = ({ lang }) => {
 
   // 부채꼴 카드 덱 — 보이는 카드 수에 따라 기울기·겹침·z-order 배치 (모바일은 세로 스택)
   const cards: { key: string; el: React.ReactNode }[] = [];
+  if (cs) cards.push({ key: 'cs', el: (
+    <div className="relative w-full rounded-3xl overflow-hidden bg-[#0b1633] shadow-2xl ring-1 ring-black/5 flex flex-col">
+      <img src="/promo/chuseok-2026.webp" alt="2026 추석 인사 — 한가위 보름달처럼 풍성한 결실 맺는 명절 보내시길 바랍니다" className="block w-full h-auto" />
+      <div className="flex items-center justify-between bg-white border-t border-gray-100 px-7 py-3 text-[12.5px] text-gray-500">
+        <button type="button" onClick={hide(CS_HIDE_KEY, setCs)} className="hover:text-gray-800">{smcT.today}</button>
+        <button type="button" onClick={() => setCs(false)} className="font-semibold text-gray-700 hover:text-black">{smcT.close}</button>
+      </div>
+    </div>
+  )});
   if (smc) cards.push({ key: 'smc', el: (
     <Card t={smcT}
       grad="linear-gradient(135deg, #02305F 0%, #034EA2 55%, #2F74C9 100%)"
