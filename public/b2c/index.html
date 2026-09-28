@@ -221,6 +221,8 @@ h2{font-size:clamp(20px,3.6vw,27px);font-weight:900;letter-spacing:-.5px;}
           <input id="f-name">
           <label id="t-fphone"></label>
           <input id="f-phone" inputmode="tel">
+          <label id="t-fmsg"></label>
+          <div style="display:flex;gap:7px;"><select id="f-msgr" onchange="this.dataset.touched=1" style="flex:0 0 118px;padding:0 10px;border:1px solid #d8deea;border-radius:10px;font-size:14px;font-family:inherit;background:#fbfcfe;"><option value="WeChat">WeChat</option><option value="WhatsApp">WhatsApp</option></select><input id="f-msgid" style="flex:1;min-width:0;" autocomplete="off"></div>
           <label id="t-fmemo"></label>
           <textarea id="f-memo" rows="2"></textarea>
         </div>
@@ -314,7 +316,7 @@ var I18N={
   back:'← 上一步',next2:'下一步：选择医院条件 →',
   hint3:'请选择您希望的医院特点（可多选），我们将为您匹配最符合的合作医院。',
   next3:'下一步：申请咨询 →',
-  fname:'姓名 *',fphone:'联系方式（手机/微信）*',fmemo:'留言（选填）',fmemoPh:'希望时间、想了解的内容等',
+  fname:'姓名 *',fphone:'手机号 *',fmsg:'微信 / WhatsApp ID（选填）',fmsgPh:'便于顾问联系您',fmemo:'留言（选填）',fmemoPh:'希望时间、想了解的内容等',
   submit:'查看匹配医院',submitting:'匹配中…',
   hint4:'提交后立即显示匹配医院名称，最终报价由顾问联系您确认。',
   rTitle:'已为您找到符合条件的医院',
@@ -357,7 +359,7 @@ var I18N={
   back:'← 이전',next2:'다음: 병원 조건 선택 →',
   hint3:'원하시는 병원의 특징을 선택하세요 (복수 선택 가능). 조건에 가장 맞는 협력 병원을 찾아드립니다.',
   next3:'다음: 상담 신청 →',
-  fname:'이름 *',fphone:'연락처 *',fmemo:'남기실 말씀 (선택)',fmemoPh:'희망 시기, 궁금한 점 등',
+  fname:'이름 *',fphone:'연락처 *',fmsg:'위챗 / 왓츠앱 ID (선택)',fmsgPh:'상담원이 메신저로 연락드려요',fmemo:'남기실 말씀 (선택)',fmemoPh:'희망 시기, 궁금한 점 등',
   submit:'맞춤 병원 확인하기',submitting:'확인 중…',
   hint4:'신청 즉시 조건에 맞는 병원명을 알려드리며, 확정 견적은 상담원이 연락드려 안내합니다.',
   rTitle:'고객님 조건에 맞는 병원을 찾았습니다',
@@ -400,7 +402,7 @@ var I18N={
   back:'← Back',next2:'Next: clinic preferences →',
   hint3:'Select the clinic features you want (multiple allowed). We\'ll match the best-fitting partner clinic.',
   next3:'Next: contact →',
-  fname:'Name *',fphone:'Phone / WeChat *',fmemo:'Message (optional)',fmemoPh:'Preferred dates, questions…',
+  fname:'Name *',fphone:'Phone *',fmsg:'WeChat / WhatsApp ID (optional)',fmsgPh:'So our coordinator can message you',fmemo:'Message (optional)',fmemoPh:'Preferred dates, questions…',
   submit:'Find my clinic',submitting:'Matching…',
   hint4:'You\'ll see the matched clinic right away; our consultant will contact you with the final quote.',
   rTitle:'We found your matching clinic',
@@ -443,7 +445,7 @@ var I18N={
   back:'← 戻る',next2:'次へ：病院条件 →',
   hint3:'ご希望の病院の特徴を選んでください（複数可）。最も合う提携病院をご案内します。',
   next3:'次へ：相談申込 →',
-  fname:'お名前 *',fphone:'連絡先 *',fmemo:'メッセージ（任意）',fmemoPh:'希望時期、質問など',
+  fname:'お名前 *',fphone:'連絡先 *',fmsg:'WeChat / WhatsApp ID（任意）',fmsgPh:'担当者からメッセンジャーでご連絡します',fmemo:'メッセージ（任意）',fmemoPh:'希望時期、質問など',
   submit:'マッチング病院を確認',submitting:'確認中…',
   hint4:'申込後すぐにマッチング病院名を表示し、最終見積もりは担当者よりご連絡します。',
   rTitle:'条件に合う病院が見つかりました',
@@ -548,6 +550,8 @@ function applyLang(l){
   }).join('');
   document.getElementById('t-fname').textContent=t.fname;
   document.getElementById('t-fphone').textContent=t.fphone;
+  document.getElementById('t-fmsg').textContent=t.fmsg; document.getElementById('f-msgid').placeholder=t.fmsgPh;
+  var _ms=document.getElementById('f-msgr'); if(_ms&&!_ms.dataset.touched)_ms.value=(LANG==='zh'?'WeChat':'WhatsApp');
   document.getElementById('t-fmemo').textContent=t.fmemo;
   document.getElementById('f-memo').placeholder=t.fmemoPh;
   document.getElementById('t-back4').textContent=t.back;
@@ -728,7 +732,7 @@ function resetWizard(){
   renderKws(); renderQuick();
   document.querySelectorAll('.topt').forEach(function(e){e.classList.remove('on');});
   document.getElementById('qcards').innerHTML='';
-  ['f-name','f-phone','f-memo','kwq'].forEach(function(id){var e=document.getElementById(id);if(e)e.value='';});
+  ['f-name','f-phone','f-msgid','f-memo','kwq'].forEach(function(id){var e=document.getElementById(id);if(e)e.value='';});
   document.getElementById('werr').textContent='';
   goStep(1);
 }
@@ -741,7 +745,7 @@ function submitMatch(){
   if(!ELIG){err.textContent=t.eligNeed;return;}
   var btn=document.getElementById('submitBtn'); btn.disabled=true; btn.textContent=t.submitting;
   fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({picks:KWS.map(function(k){return {kw:k.v};}),traits:SEL_TRAITS,prefer_anon:PREFER,name:name,phone:phone,memo:document.getElementById('f-memo').value.trim(),lang:LANG,elig:ELIG})
+    body:JSON.stringify({picks:KWS.map(function(k){return {kw:k.v};}),traits:SEL_TRAITS,prefer_anon:PREFER,name:name,phone:phone,memo:document.getElementById('f-memo').value.trim(),messenger:document.getElementById('f-msgr').value,messenger_id:document.getElementById('f-msgid').value.trim(),lang:LANG,elig:ELIG})
   }).then(function(r){return r.json();}).then(function(d){
     btn.disabled=false; btn.textContent=t.submit;
     if(d&&d.ok&&d.hospital){
