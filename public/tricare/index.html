@@ -143,6 +143,11 @@ a{color:var(--navy)}
 .qlines{margin-top:9px;font-size:13.5px;color:var(--mute);display:grid;gap:3px}
 .qlines > span{display:flex;justify-content:space-between;gap:12px;font-variant-numeric:tabular-nums}
 .qlines .qmiss{display:block;margin-top:6px;padding-top:6px;border-top:1px dashed var(--line);color:var(--no);font-size:13px}
+.qint{margin-top:11px;padding-top:10px;border-top:1px solid var(--line);font-size:13.5px;color:var(--mute);display:grid;gap:4px}
+.qint .ir{display:flex;justify-content:space-between;gap:12px;font-variant-numeric:tabular-nums}
+.qint .ir.tot{color:var(--ink);font-weight:700;font-size:15px}
+.qint .igap{color:var(--accent);font-size:12.5px}
+.qint.free{color:var(--ok);font-weight:600}
 
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 @media(max-width:620px){.frow{grid-template-columns:1fr}}
@@ -551,6 +556,7 @@ en:{
  s2lead:'Indicative starting prices from {n} partner clinic{s}. Clinic names are shared after you apply. Final price depends on examination.',
  s2none:"We don't have a listed rate for that combination yet. Continue anyway and we'll get a quote from a clinic directly.",
  matched:'{h} of {t} matched', from:'from', vat:'VAT extra', notOffered:'Not offered at this clinic: {x}',
+ interpFee:'Interpreter escort — 2 hrs on site, {h}/hr after', interpTotal:'Estimated total', interpGap:'Add {x} more and the interpreter is free.', interpFree:'Interpreter escort included at no charge (₩1,000,000+)',
  selNone:'Nothing selected yet.', selSome:'Selected: <b>{x}</b>',
  howEyebrow:'How it works', howH2:'Four steps, no runaround',
  hw1t:'Tell us what you need', hw1p:'Two minutes on the form above. Nothing is booked and nothing is charged.',
@@ -629,6 +635,7 @@ ko:{
  s2lead:'제휴 병원 {n}곳의 시작가입니다. 병원명은 신청 후 안내되며, 최종 금액은 진료 후 확정됩니다.',
  s2none:'해당 조합의 등록 수가가 아직 없습니다. 그대로 진행하시면 병원에 직접 견적을 받아 회신드립니다.',
  matched:'{t}개 중 {h}개 해당', from:'부터', vat:'VAT 별도', notOffered:'이 병원에 없는 항목: {x}',
+ interpFee:'통역 동행 — 현장 2시간 포함, 초과 시간당 {h}', interpTotal:'예상 합계', interpGap:'{x} 더 담으면 통역 동행이 무료입니다.', interpFree:'통역 동행 무료 (100만원 이상)',
  selNone:'아직 선택한 항목이 없습니다.', selSome:'선택: <b>{x}</b>',
  howEyebrow:'진행 절차', howH2:'4단계로 끝납니다',
  hw1t:'필요한 내용 알려주기', hw1p:'위 신청서 2분. 예약도 결제도 발생하지 않습니다.',
@@ -754,6 +761,21 @@ function quoteFor(h){
   return {anon:h.anon,vat:h.vat_note,sum:sum,hit:hit,lines:lines,missing:missing};
 }
 
+// 통역 동행비 — /b2c 및 엣지함수(b2c-pricelist)와 동일 규칙.
+// 시술 합계 100만원 미만: 정액 4만원(현장 2시간 포함, 초과 시간당 2만원) / 100만원 이상: 무료.
+var INTERP_FREE=1000000, INTERP_FEE=40000, INTERP_HOUR=20000;
+function interpBlock(sum){
+  if(sum>=INTERP_FREE){
+    return '<div class="qint free">'+t('interpFree')+'</div>';
+  }
+  var gap=INTERP_FREE-sum;
+  return '<div class="qint">'
+    +'<span class="ir"><span>'+t('interpFee').replace('{h}',krw(INTERP_HOUR))+'</span><span>+'+krw(INTERP_FEE)+'</span></span>'
+    +'<span class="ir tot"><span>'+t('interpTotal')+'</span><span>'+krw(sum+INTERP_FEE)+'</span></span>'
+    +'<span class="igap">'+t('interpGap').replace('{x}',krw(gap))+'</span>'
+    +'</div>';
+}
+
 function renderQuotes(){
   var box=document.getElementById('qres');
   if(!box) return;
@@ -773,7 +795,7 @@ function renderQuotes(){
           return '<span><span>'+esc(l.label)+'</span><span>'+krw(l.krw)+'</span></span>';
         }).join('')
       +(q.missing.length?'<span class="qmiss">'+t('notOffered').replace('{x}',esc(q.missing.join(', ')))+'</span>':'')
-      +'</div></div>';
+      +'</div>'+interpBlock(q.sum)+'</div>';
   }).join('');
   [].slice.call(box.querySelectorAll('.qcard')).forEach(function(c){
     var pick=function(){ PREFER=c.getAttribute('data-anon'); renderQuotes(); };
