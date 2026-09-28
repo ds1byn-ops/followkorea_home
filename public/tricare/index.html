@@ -52,8 +52,12 @@ a{color:var(--navy)}
 .cta:hover{background:var(--navy-d)}
 .cta.ghost{background:transparent;color:var(--navy);border:1.5px solid var(--navy)}
 .cta.ghost:hover{background:#eef2f7}
-@media(max-width:980px){.nav{display:none}}
-@media(max-width:560px){.top .cta{display:none}}
+.kko{display:inline-flex;align-items:center;gap:7px;background:#FEE500;color:#191919;font-weight:700;font-size:14px;padding:10px 16px;border-radius:8px;text-decoration:none;white-space:nowrap}
+.kko:hover{background:#f5dc00}
+.kko:focus-visible{outline:3px solid var(--navy);outline-offset:2px}
+@media(max-width:1100px){.nav{display:none}}
+@media(max-width:620px){.top .cta{display:none}}
+@media(max-width:420px){.top .kko span{display:none}.top .kko{padding:10px 12px}}
 
 .hero{background:linear-gradient(170deg,#fff 0%,#eef2f7 100%);border-bottom:1px solid var(--line)}
 .hero .wrap{padding-top:54px;padding-bottom:50px}
@@ -195,6 +199,8 @@ footer a{color:#e3ebf3}
 .dl:hover{background:rgba(255,255,255,.12)}
 .dl:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 .dlnote{margin-top:8px;font-size:12px;color:#93a6b8}
+.fkko{margin-top:26px;padding:18px 20px;border:1px solid rgba(255,255,255,.18);border-radius:10px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.fkko p{font-size:14.5px;color:#e3ebf3;margin:0;max-width:58ch}
 .legal{margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,255,.16);font-size:12.5px;color:#93a6b8;line-height:1.7}
 </style>
 </head>
@@ -216,6 +222,10 @@ footer a{color:#e3ebf3}
         <button type="button" id="lang-ko" onclick="setLang('ko')">한국어</button>
       </div>
       <a class="cta" href="#quote" data-i="ctaTop"></a>
+      <a class="kko" href="https://pf.kakao.com/_xfZxjiX/chat" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path fill="currentColor" d="M12 3C6.48 3 2 6.58 2 10.99c0 2.82 1.85 5.29 4.64 6.7-.2.75-.75 2.74-.86 3.16-.13.53.19.52.4.38.17-.11 2.66-1.8 3.74-2.53.68.1 1.38.15 2.08.15 5.52 0 10-3.58 10-7.86S17.52 3 12 3z"/></svg>
+        <span data-i="kakao"></span>
+      </a>
     </div>
   </div>
 </header>
@@ -473,6 +483,13 @@ footer a{color:#e3ebf3}
         <p class="dlnote" data-i="fProfileNote"></p>
       </div>
     </div>
+    <div class="fkko">
+      <p data-i="kakaoPitch"></p>
+      <a class="kko" href="https://pf.kakao.com/_xfZxjiX/chat" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3C6.48 3 2 6.58 2 10.99c0 2.82 1.85 5.29 4.64 6.7-.2.75-.75 2.74-.86 3.16-.13.53.19.52.4.38.17-.11 2.66-1.8 3.74-2.53.68.1 1.38.15 2.08.15 5.52 0 10-3.58 10-7.86S17.52 3 12 3z"/></svg>
+        <span data-i="kakao"></span>
+      </a>
+    </div>
     <p class="legal" data-i="legal"></p>
   </div>
 </footer>
@@ -559,6 +576,7 @@ en:{
  addr:'13F #116, 373 Gangnam-daero, Seocho-gu, Seoul, Republic of Korea',
  fService:'Service', fAlso:'Also from us', fCorp:'Follow Korea (corporate)', fIntl:'International patient site',
  fProfile:'Company profile', fProfileNote:'PDF · partner hospitals, services and credentials',
+ kakao:'KakaoTalk', kakaoPitch:'Prefer to just ask a question first? Message us on KakaoTalk — a coordinator answers in English during Korean business hours.',
  legal:'Follow Korea Co., Ltd. (주식회사 팔로우코리아) · Representatives: Ha Jang-hwan and 1 other · Business Reg. No. 696-86-03627<br>Foreign Patient Attraction Business Registration No. A-2026-01-01-06622 (2026.01.21–2029.01.20) · Travel Agency Registration No. 2026-000022<br>This page is an advertisement for medical coordination services directed at foreign nationals in the Republic of Korea who are not enrolled in Korean National Health Insurance.'
 },
 ko:{
@@ -636,6 +654,7 @@ ko:{
  addr:'서울특별시 서초구 강남대로 373, 13층 116호',
  fService:'서비스', fAlso:'다른 사이트', fCorp:'팔로우코리아 (회사 소개)', fIntl:'외국인환자 사이트',
  fProfile:'회사 소개서', fProfileNote:'PDF · 제휴 병원, 서비스, 등록 현황',
+ kakao:'카카오톡 상담하기', kakaoPitch:'먼저 가볍게 물어보고 싶으시다면 카카오톡으로 문의하세요. 근무 시간에 담당자가 답변드립니다.',
  legal:'주식회사 팔로우코리아 · 대표자: 하장환 외 1인 · 사업자등록번호 696-86-03627<br>외국인환자 유치업 등록 제 A-2026-01-01-06622 호 (2026.01.21~2029.01.20) · 관광사업 등록 종합여행업 제 2026-000022 호<br>본 페이지는 국민건강보험에 가입되지 않은 국내 체류 외국인을 대상으로 한 의료 코디네이션 서비스 광고입니다.'
 }};
 
