@@ -112,6 +112,10 @@ h2{font-size:clamp(20px,3.6vw,27px);font-weight:900;letter-spacing:-.5px;}
 .qcard .amt .u{font-size:10.5px;color:var(--mute);font-weight:500;}
 .qcard .det{font-size:11.8px;color:var(--mute);margin-top:7px;display:none;line-height:1.8;}
 .qcard.on .det{display:block;}
+.qcard .interp{font-size:11.8px;color:#475569;margin-top:6px;text-align:right;line-height:1.6;}
+.qcard .interp b{color:var(--brand-d);}
+.qcard .interp.free{color:#059669;font-weight:700;}
+.qcard .interp .more{color:#059669;font-size:11px;}
 .tsel{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px;}
 .topt{border:1.5px solid var(--line);border-radius:11px;padding:11px 13px;font-size:12.8px;font-weight:700;color:#3d4a63;cursor:pointer;text-align:center;background:#fbfcfe;user-select:none;}
 .topt.on{border-color:var(--brand);background:#FDEEF1;color:var(--brand-d);}
@@ -468,6 +472,21 @@ var I18N={
 function T(){return I18N[LANG]||I18N.zh;}
 function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
 function won(n){return (n||0).toLocaleString('ko-KR')+(LANG==='ko'?'원':' KRW');}
+/* 통역 동행비 — 2026-09-28. 시술 합계 100만원 미만은 정액 4만원(2시간 포함, 초과 시간당 2만원), 이상은 무료. 병원 수가와 분리 표시. */
+var INTERP_FREE=1000000, INTERP_FEE=40000, INTERP_HOUR=20000;
+var INTERP_I18N={
+ zh:{fee:'+ 陪同翻译 {f}（含2小时，超时每小时 {h}）',total:'合计 {t}',free:'陪同翻译免费',more:'再加 {m} 即可免费陪同翻译'},
+ ko:{fee:'+ 통역 동행 {f} (2시간 포함, 초과 시 시간당 {h})',total:'합계 {t}',free:'통역 동행 무료',more:'{m} 더 담으면 통역 무료'},
+ en:{fee:'+ Interpreter {f} (2 hrs incl., {h}/hr after)',total:'Total {t}',free:'Interpreter included free',more:'Add {m} more for a free interpreter'},
+ ja:{fee:'+ 通訳同行 {f}（2時間込み、超過は1時間 {h}）',total:'合計 {t}',free:'通訳同行 無料',more:'あと {m} で通訳無料'}
+};
+function interpHtml(sum){
+  var t=INTERP_I18N[LANG]||INTERP_I18N.zh;
+  if(sum>=INTERP_FREE)return '<div class="interp free">'+esc(t.free)+'</div>';
+  return '<div class="interp">'+esc(t.fee.replace('{f}',won(INTERP_FEE)).replace('{h}',won(INTERP_HOUR)))
+    +' · <b>'+esc(t.total.replace('{t}',won(sum+INTERP_FEE)))+'</b>'
+    +'<br><span class="more">'+esc(t.more.replace('{m}',won(INTERP_FREE-sum)))+'</span></div>';
+}
 function hName(h){return (LANG==='zh'&&h.zh)?h.zh:((LANG==='en'||LANG==='ja')&&h.en?h.en:h.name);}
 function hOv(h){if(LANG==='zh'&&h.ovzh)return h.ovzh;if(LANG==='ja'&&h.ovja)return h.ovja;if((LANG==='en'||LANG==='ja')&&h.oven)return h.oven;return h.overview;}
 function hTreats(h){if(LANG==='zh'&&h.trzh&&h.trzh.length)return h.trzh;if(LANG==='ja'&&h.trja&&h.trja.length)return h.trja;if((LANG==='en'||LANG==='ja')&&h.tren&&h.tren.length)return h.tren;return h.treats;}
@@ -685,6 +704,7 @@ function goStep2(){
       return '<div class="qcard'+(PREFER===q.anon?' on':'')+'" data-anon="'+q.anon+'" onclick="pickQ(this)">'
         +'<div class="row"><span class="anm">'+q.anon+'<span class="tag">'+esc(t.qcTag.replace('{h}',q.hit).replace('{t}',KWS.length))+'</span></span>'
         +'<span class="amt">'+won(q.sum)+(q.vat?'<span class="u"> ('+esc(q.vat)+')</span>':'')+'</span></div>'
+        +interpHtml(q.sum)
         +'<div class="det">'+q.lines.map(function(l){return l.it?('· '+esc(l.kw)+' → '+esc(itemLabel(l.it))+' <b>'+won(l.it.krw)+'</b>'):('· '+esc(l.kw)+' → '+esc(t.qcMiss));}).join('<br>')+'</div>'
         +'</div>';
     }).join('');
