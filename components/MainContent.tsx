@@ -334,7 +334,7 @@ const HERO_B2C: Record<string,{title:string;sub:string;btn:string;hosp:string}> 
   VI:{ title:'Nhận báo giá cá nhân hóa\ntừ các phòng khám hàng đầu Gangnam', sub:'So sánh giá phòng khám đã xác minh cho liệu trình của bạn — miễn phí, tiếng Việt.', btn:'Nhận báo giá', hosp:'Dành cho bệnh viện · Hợp tác' },
   RU:{ title:'Персональное предложение\nот лучших клиник Каннама', sub:'Сравните цены проверенных клиник на вашу процедуру — бесплатно, на вашем языке.', btn:'Получить расчёт', hosp:'Для клиник · Сотрудничество' },
 };
-const KR_PATIENT_LINK = '환자용 · 시술 맞춤 견적 받기';
+const KR_PATIENT_LINK = '患者专用 · 获取定制报价'; // 연결되는 b2c가 중문(B2C_LANG.KR='zh')이라 버튼도 중문 (9/28 지시)
 
 const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, onOpenReviews, onOpenTerms, onOpenPrivacy, lang }) => {
   const t = {
