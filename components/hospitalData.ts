@@ -3515,6 +3515,32 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "thumb": "hthumb/ado.jpg"
   },
   {
+    "name": { "kr": "옐로우성형외과", "en": "Yellow Plastic Surgery", "zh": "Yellow整形外科" },
+    "dept": { "kr": "성형외과(눈·코)", "en": "Plastic Surgery (Eyes & Nose)", "zh": "整形外科(眼·鼻)" },
+    "cat": "성형외과",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["쌍꺼풀·눈매교정", "눈 재수술", "코성형", "코 재수술", "안검하수 교정"],
+      "en": ["Double Eyelid & Eye Shape Correction", "Revision Eye Surgery", "Rhinoplasty", "Revision Rhinoplasty", "Ptosis Correction"],
+      "zh": ["双眼皮·眼型矫正", "眼部修复手术", "鼻整形", "鼻修复手术", "上睑下垂矫正"]
+    },
+    "hours": "Mon-Fri 10:00-19:00 · Sat 10:00-17:00",
+    "loc": {
+      "ko": "서울 강남구 강남대로 406 글라스타워 5층 (강남역 11번출구)",
+      "zh": "首尔江南·江南站",
+      "en": "Gangnam Station, Seoul"
+    },
+    "overview": {
+      "kr": "옐로우성형외과(Yellow Plastic Surgery)는 강남역 11번 출구 앞 글라스타워 5층에 위치한 눈·코 성형 전문 의원입니다. 대표원장 이대성이 수술 전 직접 상담부터 집도·경과 체크까지 전담하며, 쌍꺼풀·눈매교정·눈 재수술과 코성형·코 재수술에 특화되어 있습니다. 전 수술실에 CCTV를 설치해 운영하고 한·중·일·베트남어 안내를 제공합니다. 평일 19시, 토요일 17시까지 진료합니다.",
+      "en": "Yellow Plastic Surgery, on the 5th floor of Glass Tower by Exit 11 of Gangnam Station, specializes in eye and nose surgery — double eyelid, eye-shape correction and revision eye surgery, plus primary and revision rhinoplasty. Dr. Lee Dae-seong personally handles consultation, surgery and follow-up, with CCTV installed in every operating room. Open weekdays until 7pm and Saturdays until 5pm.",
+      "zh": "Yellow整形外科位于江南站11号出口前Glass Tower 5层，是眼·鼻整形专科医院。李大成代表院长术前亲自面诊、主刀并跟进术后恢复，专注双眼皮·眼型矫正·眼部修复手术及鼻整形·鼻修复手术。全部手术室配备CCTV，提供中·日·越南语咨询指引。平日营业至19点，周六至17点。"
+    },
+    "doctors": [
+      { "name": "이대성", "title": "대표원장", "spec": ["성형외과 전문의", "눈·코 재수술"] }
+    ],
+    "thumb": "hthumb/yellow.jpg"
+  },
+  {
     "name": { "kr": "스튜디오 숲 서울", "en": "Studio Soop Seoul", "zh": "Studio Soop 首尔" },
     "dept": { "kr": "반영구 메이크업 · 사진 스튜디오", "en": "Permanent Makeup · Photo Studio", "zh": "半永久定妆·摄影工作室" },
     "cat": "기타 서비스",
