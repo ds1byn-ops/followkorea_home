@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Follow Korea — Medical Care Coordination for USFK Families</title>
+<meta name="description" content="English-speaking medical coordination for U.S. military families in Korea. Vision, dental, dermatology, health screening. Licensed Korean medical travel facilitator. Not affiliated with TRICARE or the U.S. Department of Defense.">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Follow Korea — Medical Care Coordination for USFK Families">
+<meta property="og:description" content="Written English quotes, appointment booking, interpreter escort, and transport from Pyeongtaek. Licensed by the Korean Ministry of Health and Welfare.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --ink:#16202b; --ink2:#3b4a5c; --mute:#6c7c8e; --line:#dde4ec;
+  --bg:#f6f8fa; --card:#ffffff;
+  --navy:#1b3a5c; --navy-d:#12283f; --accent:#b4623a; --accent-s:#fbf1ec;
+  --ok:#2f6b4f; --ok-s:#eef6f1; --no:#9a3b3b; --no-s:#faf0ef;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:Barlow,'Helvetica Neue',Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding-left:18px;padding-right:18px}
+h1,h2,h3{letter-spacing:-.01em;text-wrap:balance}
+h2{font-size:clamp(23px,3.4vw,31px);font-weight:700;line-height:1.2}
+h3{font-size:18px;font-weight:700}
+.eyebrow{font-family:'Barlow Condensed',Barlow,sans-serif;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:13px;color:var(--accent)}
+.sub{color:var(--mute);margin-top:9px;font-size:15.5px}
+.sec{padding-top:60px;padding-bottom:60px}
+.sec.alt{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+a{color:var(--navy)}
+
+/* header */
+.top{background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.brand img{height:22px;display:block}
+.brand b{font-family:'Barlow Condensed',Barlow,sans-serif;font-size:19px;letter-spacing:.06em;text-transform:uppercase}
+.nav{display:flex;gap:2px}
+.nav a{padding:7px 11px;border-radius:7px;font-size:14px;font-weight:600;color:var(--ink2);text-decoration:none}
+.nav a:hover{background:var(--bg);color:var(--navy)}
+.cta{background:var(--navy);color:#fff;font-weight:700;font-size:14px;padding:10px 17px;border-radius:8px;text-decoration:none;white-space:nowrap;display:inline-block}
+.cta:hover{background:var(--navy-d)}
+.cta.ghost{background:transparent;color:var(--navy);border:1.5px solid var(--navy)}
+.cta.ghost:hover{background:#eef2f7}
+@media(max-width:860px){.nav{display:none}}
+
+/* hero */
+.hero{background:linear-gradient(170deg,#fff 0%,#eef2f7 100%);border-bottom:1px solid var(--line)}
+.hero .wrap{padding-top:54px;padding-bottom:50px}
+.hgrid{display:grid;grid-template-columns:1.25fr .75fr;gap:44px;align-items:start}
+@media(max-width:860px){.hgrid{grid-template-columns:1fr;gap:30px}}
+.hero h1{font-size:clamp(31px,5.4vw,50px);font-weight:700;line-height:1.08;margin:14px 0 16px}
+.hero p.lede{font-size:17px;color:var(--ink2);max-width:52ch}
+.hbtns{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.hfacts{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+.hfacts dl{display:grid;gap:14px}
+.hfacts dt{font-family:'Barlow Condensed',Barlow,sans-serif;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.hfacts dd{font-size:15px;font-weight:600;margin-top:1px}
+.hfacts dd small{display:block;font-weight:400;color:var(--mute);font-size:13px;letter-spacing:0}
+
+/* notice */
+.notice{background:#fff8f4;border:1px solid #f0d9cd;border-left:4px solid var(--accent);border-radius:8px;padding:15px 18px;font-size:14.5px;color:var(--ink2)}
+.notice b{color:var(--ink)}
+
+/* coverage table */
+.cov{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
+@media(max-width:760px){.cov{grid-template-columns:1fr}}
+.covcard{border-radius:12px;padding:22px;border:1px solid var(--line);background:var(--card)}
+.covcard.yes{background:var(--ok-s);border-color:#cfe3d7}
+.covcard.no{background:var(--no-s);border-color:#eed5d3}
+.covcard h3{display:flex;align-items:center;gap:9px;font-size:16.5px}
+.pill{font-family:'Barlow Condensed',Barlow,sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:99px;font-weight:700}
+.covcard.yes .pill{background:var(--ok);color:#fff}
+.covcard.no .pill{background:var(--no);color:#fff}
+.covcard ul{list-style:none;margin-top:14px;display:grid;gap:8px}
+.covcard li{font-size:14.5px;padding-left:20px;position:relative;color:var(--ink2)}
+.covcard li::before{content:"";position:absolute;left:4px;top:9px;width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.45}
+.covcard p.note{margin-top:15px;font-size:13.5px;color:var(--mute);border-top:1px dashed rgba(0,0,0,.12);padding-top:13px}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px;counter-reset:s}
+@media(max-width:860px){.steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+.step{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:20px}
+.step::before{counter-increment:s;content:counter(s,decimal-leading-zero);font-family:'Barlow Condensed',Barlow,sans-serif;font-size:26px;font-weight:700;color:var(--accent);display:block;line-height:1;margin-bottom:10px}
+.step h3{font-size:15.5px;margin-bottom:5px}
+.step p{font-size:14px;color:var(--mute)}
+
+/* services / quote */
+.grp{margin-top:20px}
+.grp h3{font-family:'Barlow Condensed',Barlow,sans-serif;letter-spacing:.1em;text-transform:uppercase;font-size:13px;color:var(--mute);margin-bottom:9px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1.5px solid var(--line);background:var(--card);border-radius:99px;padding:8px 15px;font-size:14px;font-weight:600;color:var(--ink2);cursor:pointer;user-select:none;font-family:inherit}
+.chip:hover{border-color:#b9c6d4}
+.chip.on{border-color:var(--navy);background:var(--navy);color:#fff}
+.chip:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+.qbox{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;margin-top:26px}
+@media(max-width:520px){.qbox{padding:18px}}
+.qres{margin-top:22px;display:grid;gap:10px}
+.qcard{border:1.5px solid var(--line);border-radius:11px;padding:15px 17px;cursor:pointer;background:#fff}
+.qcard.on{border-color:var(--navy);box-shadow:0 0 0 3px rgba(27,58,92,.09)}
+.qcard .row{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.anm{font-weight:700;font-size:16px}
+.anm .tag{font-family:'Barlow Condensed',Barlow,sans-serif;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin-left:8px;font-weight:700}
+.qsum{font-weight:700;font-size:17px;font-variant-numeric:tabular-nums}
+.qsum small{font-weight:400;color:var(--mute);font-size:12.5px;display:block;text-align:right}
+.qlines{margin-top:9px;font-size:13.5px;color:var(--mute);display:grid;gap:3px}
+.qlines span{display:flex;justify-content:space-between;gap:12px;font-variant-numeric:tabular-nums}
+.qlines .qmiss{display:block;margin-top:6px;padding-top:6px;border-top:1px dashed var(--line);color:var(--no);font-size:13px}
+
+form .frow{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:620px){form .frow{grid-template-columns:1fr}}
+label{display:block;font-size:13px;font-weight:600;color:var(--ink2);margin-bottom:5px}
+label .req{color:var(--accent)}
+input,select,textarea{width:100%;border:1.5px solid var(--line);border-radius:9px;padding:11px 13px;font-size:15px;font-family:inherit;color:var(--ink);background:#fff}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(27,58,92,.1)}
+.fld{margin-bottom:14px}
+button.submit{width:100%;background:var(--navy);color:#fff;border:0;border-radius:10px;padding:15px;font-size:16px;font-weight:700;cursor:pointer;font-family:inherit;margin-top:6px}
+button.submit:hover{background:var(--navy-d)}
+button.submit:disabled{opacity:.55;cursor:not-allowed}
+.consent{display:flex;gap:9px;align-items:flex-start;font-size:13px;color:var(--mute);margin-top:12px}
+.consent input{width:auto;margin-top:3px;flex:none}
+.msg{margin-top:14px;padding:14px 16px;border-radius:9px;font-size:14.5px;display:none}
+.msg.ok{display:block;background:var(--ok-s);border:1px solid #cfe3d7;color:#245640}
+.msg.err{display:block;background:var(--no-s);border:1px solid #eed5d3;color:#7d2f2f}
+
+/* logistics */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
+@media(max-width:760px){.two{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px}
+.card h3{margin-bottom:9px}
+.card p,.card li{font-size:14.5px;color:var(--ink2)}
+.card ul{list-style:none;display:grid;gap:7px;margin-top:10px}
+.card li{padding-left:18px;position:relative}
+.card li::before{content:"—";position:absolute;left:0;color:var(--accent)}
+
+/* faq */
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin-top:10px}
+details[open]{border-color:#c4d0dc}
+summary{cursor:pointer;font-weight:600;font-size:15.5px;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";float:right;color:var(--accent);font-weight:700;font-size:19px;line-height:1}
+details[open] summary::after{content:"−"}
+details p{margin-top:11px;font-size:14.5px;color:var(--ink2)}
+details p + p{margin-top:8px}
+
+/* footer */
+footer{background:var(--navy-d);color:#c3d0dd;padding-top:44px;padding-bottom:44px;font-size:13.5px}
+footer h4{font-family:'Barlow Condensed',Barlow,sans-serif;letter-spacing:.12em;text-transform:uppercase;font-size:13px;color:#fff;margin-bottom:10px}
+footer a{color:#e3ebf3}
+.disc{border:1px solid rgba(255,255,255,.18);border-radius:10px;padding:16px 18px;margin-bottom:26px;line-height:1.65}
+.disc b{color:#fff}
+.fgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:26px}
+@media(max-width:760px){.fgrid{grid-template-columns:1fr;gap:20px}}
+.fgrid ul{list-style:none;display:grid;gap:6px}
+.legal{margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,255,.16);font-size:12.5px;color:#93a6b8;line-height:1.7}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/fk-logo-r.png" alt="" onerror="this.style.display='none'"><b>Follow Korea</b></a>
+    <nav class="nav">
+      <a href="#coverage">What TRICARE Covers</a>
+      <a href="#services">Services</a>
+      <a href="#quote">Get a Quote</a>
+      <a href="#logistics">Getting There</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="cta" href="#quote">Request a Quote</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hgrid">
+      <div>
+        <span class="eyebrow">For U.S. military families in Korea</span>
+        <h1>Korean healthcare, without the guesswork.</h1>
+        <p class="lede">You are stationed in one of the best countries in the world for dental, vision and dermatology care — at a fraction of stateside prices. We handle the part that is hard: finding the right clinic, getting a written English quote up front, booking the appointment, and sending an interpreter with you.</p>
+        <div class="hbtns">
+          <a class="cta" href="#quote">Get a written quote</a>
+          <a class="cta ghost" href="#coverage">Is it covered by TRICARE?</a>
+        </div>
+      </div>
+      <aside class="hfacts">
+        <dl>
+          <div><dt>Licensed facilitator</dt><dd>MOHW Reg. A-2026-01-01-06622<small>Korean Ministry of Health and Welfare</small></dd></div>
+          <div><dt>Partner clinics</dt><dd>54 across Seoul &amp; Gyeonggi<small>Vision, dental, derm, screening</small></dd></div>
+          <div><dt>What you pay us</dt><dd>Nothing for elective care<small>Our fee comes from the clinic, not from you</small></dd></div>
+          <div><dt>Response time</dt><dd>1 business day<small>Written quote in English</small></dd></div>
+        </dl>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="coverage">
+  <div class="wrap">
+    <span class="eyebrow">Start here</span>
+    <h2>Two different situations. Don't mix them up.</h2>
+    <p class="sub">Almost everything people ask us about falls into one of these two buckets, and they work completely differently.</p>
+
+    <div class="cov">
+      <div class="covcard no">
+        <h3><span class="pill">Not covered</span> Elective &amp; cosmetic care</h3>
+        <ul>
+          <li>LASIK, LASEK, SMILE, implantable contact lenses</li>
+          <li>Orthodontics, implants, whitening, cosmetic dentistry</li>
+          <li>Dermatology: lasers, acne, pigmentation, skin tightening</li>
+          <li>Botox, filler, body contouring, hair transplant</li>
+          <li>Executive-style comprehensive health screening</li>
+          <li>Fertility treatment and IVF</li>
+        </ul>
+        <p class="note"><b>You pay out of pocket.</b> This is where Korea is dramatically cheaper than the U.S., and this is what we do: fixed written quote in USD and KRW, VAT included, no surprise add-ons. Our fee is paid by the clinic.</p>
+      </div>
+      <div class="covcard yes">
+        <h3><span class="pill">Covered</span> Medically necessary care</h3>
+        <ul>
+          <li>Specialist care your MTF referred you off-base for</li>
+          <li>Obstetrics, pediatrics, orthopedics, physical therapy</li>
+          <li>Behavioral health, dermatology for skin disease</li>
+          <li>Emergency and urgent care</li>
+        </ul>
+        <p class="note"><b>TRICARE handles the bill</b>, not us. Use a TRICARE Overseas Program network hospital for cashless billing, or pay and file for reimbursement. We can book the appointment, send an interpreter, and help you assemble English-language invoices and diagnosis records — for a flat fee. <b>We never take a referral commission on care billed to TRICARE.</b></p>
+      </div>
+    </div>
+
+    <div class="notice" style="margin-top:22px">
+      <b>Check with your PCM first.</b> If you are active duty, some elective procedures — LASIK in particular — need command or flight-surgeon approval before you book anything. We can hold your appointment while you sort that out.
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="services">
+  <div class="wrap">
+    <span class="eyebrow">What we book most</span>
+    <h2>Services</h2>
+    <p class="sub">Select what you're interested in below and we'll send you a written quote. Clinic names are shared after you apply — Korean advertising law restricts publishing clinic-by-clinic prices.</p>
+
+    <div class="qbox">
+      <div class="grp">
+        <h3>Vision</h3>
+        <div class="chips" data-grp="vision">
+          <button type="button" class="chip" data-kw="라식">LASIK</button>
+          <button type="button" class="chip" data-kw="라섹">LASEK / PRK</button>
+          <button type="button" class="chip" data-kw="스마일">SMILE</button>
+          <button type="button" class="chip" data-kw="렌즈삽입">Implantable lens (ICL)</button>
+        </div>
+      </div>
+      <div class="grp">
+        <h3>Dental</h3>
+        <div class="chips">
+          <button type="button" class="chip" data-kw="임플란트">Dental implant</button>
+          <button type="button" class="chip" data-kw="교정">Orthodontics / braces</button>
+          <button type="button" class="chip" data-kw="미백">Teeth whitening</button>
+          <button type="button" class="chip" data-kw="스케일링">Cleaning / scaling</button>
+        </div>
+      </div>
+      <div class="grp">
+        <h3>Dermatology &amp; aesthetics</h3>
+        <div class="chips">
+          <button type="button" class="chip" data-kw="여드름">Acne treatment</button>
+          <button type="button" class="chip" data-kw="색소">Pigmentation / melasma</button>
+          <button type="button" class="chip" data-kw="토닝">Laser toning</button>
+          <button type="button" class="chip" data-kw="리프팅">Skin tightening / lifting</button>
+          <button type="button" class="chip" data-kw="울쎄라">Ultherapy</button>
+          <button type="button" class="chip" data-kw="써마지">Thermage</button>
+          <button type="button" class="chip" data-kw="보톡스">Botox</button>
+          <button type="button" class="chip" data-kw="필러">Filler</button>
+          <button type="button" class="chip" data-kw="제모">Laser hair removal</button>
+        </div>
+      </div>
+      <div class="grp">
+        <h3>Wellness</h3>
+        <div class="chips">
+          <button type="button" class="chip" data-kw="검진">Comprehensive health screening</button>
+          <button type="button" class="chip" data-kw="모발">Hair transplant</button>
+          <button type="button" class="chip" data-kw="수액">IV therapy</button>
+        </div>
+      </div>
+      <p class="sub" style="margin-top:18px">Looking for something not listed — fertility/IVF, orthopedics, a second opinion? Select nothing and describe it in the message box below.</p>
+
+      <div class="qres" id="qres" hidden></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="quote">
+  <div class="wrap">
+    <span class="eyebrow">Step 1 of 1</span>
+    <h2>Request a written quote</h2>
+    <p class="sub">No payment, no obligation. A coordinator replies within one business day with the clinic name, the itemized price, and the next available dates.</p>
+
+    <div class="qbox">
+      <form id="leadForm" autocomplete="on" novalidate>
+        <div class="frow">
+          <div class="fld">
+            <label for="f-name">Full name <span class="req">*</span></label>
+            <input id="f-name" name="name" type="text" required autocomplete="name" placeholder="First Last">
+          </div>
+          <div class="fld">
+            <label for="f-phone">Phone (Korean number preferred) <span class="req">*</span></label>
+            <input id="f-phone" name="phone" type="tel" required autocomplete="tel" placeholder="010-0000-0000">
+          </div>
+        </div>
+        <div class="frow">
+          <div class="fld">
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@mail.mil or personal">
+          </div>
+          <div class="fld">
+            <label for="f-base">Installation</label>
+            <select id="f-base" name="base">
+              <option value="">Select…</option>
+              <option>Camp Humphreys</option>
+              <option>Osan Air Base</option>
+              <option>Yongsan / Seoul area</option>
+              <option>Camp Walker / Henry (Daegu)</option>
+              <option>Kunsan Air Base</option>
+              <option>Camp Casey / Area I</option>
+              <option>Other / off-post</option>
+            </select>
+          </div>
+        </div>
+        <div class="frow">
+          <div class="fld">
+            <label for="f-status">Status</label>
+            <select id="f-status" name="status">
+              <option value="">Select…</option>
+              <option>Active duty</option>
+              <option>Family member / dependent</option>
+              <option>DoD civilian</option>
+              <option>Contractor</option>
+              <option>Retiree / veteran</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="fld">
+            <label for="f-when">Preferred timing</label>
+            <select id="f-when" name="when">
+              <option value="">Select…</option>
+              <option>As soon as possible</option>
+              <option>Within 2 weeks</option>
+              <option>Within 1–2 months</option>
+              <option>Before I PCS out</option>
+              <option>Just gathering information</option>
+            </select>
+          </div>
+        </div>
+        <div class="fld">
+          <label for="f-memo">What are you looking for?</label>
+          <textarea id="f-memo" name="memo" rows="4" placeholder="e.g. LASIK for me and braces for my 14-year-old. We'd like a Saturday appointment and we're coming from Humphreys."></textarea>
+        </div>
+
+        <label class="consent" for="f-elig">
+          <input type="checkbox" id="f-elig" required>
+          <span>I confirm I am <b>not enrolled in Korean National Health Insurance</b> (SOFA-status personnel and their dependents are not enrolled). Korean law limits this service to foreign patients outside the national insurance system.</span>
+        </label>
+        <label class="consent" for="f-privacy">
+          <input type="checkbox" id="f-privacy" required>
+          <span>I agree that Follow Korea may use my contact details to respond to this request and share the selected procedures with a partner clinic to prepare a quote.</span>
+        </label>
+
+        <button class="submit" type="submit" id="btnSubmit">Send my request</button>
+        <div class="msg" id="formMsg" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="how">
+  <div class="wrap">
+    <span class="eyebrow">How it works</span>
+    <h2>Four steps, no runaround</h2>
+    <div class="steps">
+      <div class="step"><h3>Tell us what you need</h3><p>Two minutes on the form above. Nothing is booked and nothing is charged.</p></div>
+      <div class="step"><h3>Get a written quote</h3><p>Itemized, in English, USD and KRW, VAT included. One business day.</p></div>
+      <div class="step"><h3>We book it</h3><p>Appointment confirmed, interpreter assigned, directions and transport sorted.</p></div>
+      <div class="step"><h3>We show up with you</h3><p>An English-speaking coordinator meets you at the clinic and stays through consultation and payment.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="logistics">
+  <div class="wrap">
+    <span class="eyebrow">Getting there</span>
+    <h2>Pyeongtaek to Seoul, handled</h2>
+    <p class="sub">Most of our partner clinics are in Gangnam, Seoul. From Camp Humphreys that's about 70 minutes by car, or Line 1 plus a subway transfer.</p>
+    <div class="two">
+      <div class="card">
+        <h3>Transport</h3>
+        <ul>
+          <li>Saturday group shuttle from the Humphreys gate area on scheduled procedure days</li>
+          <li>Private pickup for procedures where you shouldn't drive yourself home — LASIK, sedation dentistry</li>
+          <li>Or meet us at the clinic if you'd rather drive; we'll send the exact entrance and parking</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Bring with you</h3>
+        <ul>
+          <li>Passport or ID card — clinics are required to record foreign patient identity</li>
+          <li>Your TRICARE card if the visit might turn out to be covered</li>
+          <li>A U.S. or Korean credit card; most clinics take both</li>
+          <li>For orthodontics or implants, any prior X-rays or records you have</li>
+        </ul>
+      </div>
+    </div>
+    <div class="notice" style="margin-top:20px">
+      <b>Leaving Korea soon?</b> Tell us your PCS date. Orthodontics and multi-stage implant work need a treatment window — we'll tell you honestly if there isn't enough time rather than start something you can't finish.
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="faq">
+  <div class="wrap">
+    <span class="eyebrow">Questions</span>
+    <h2>Frequently asked</h2>
+
+    <details><summary>Are you affiliated with TRICARE or the U.S. military?</summary>
+      <p>No. Follow Korea is a private Korean company licensed by the Korean Ministry of Health and Welfare as a foreign-patient facilitator. We are not affiliated with, endorsed by, or sponsored by TRICARE, International SOS, the U.S. Department of Defense, or United States Forces Korea. We use the word TRICARE only to describe the insurance program our clients are enrolled in.</p></details>
+
+    <details><summary>What does this cost me?</summary>
+      <p>For elective, self-pay procedures: nothing. We're compensated by the partner clinic, and the price you're quoted is the price you pay — we don't add a markup on top of the clinic's rate. If your procedure total is under ₩1,000,000 there is a ₩40,000 interpreter escort fee covering two hours on site, which we show on the quote before you commit.</p>
+      <p>For care billed to TRICARE, we charge a flat coordination fee and take no commission from anyone. That's a deliberate legal line, not a preference — see the next question.</p></details>
+
+    <details><summary>Why won't you take a commission on TRICARE-covered care?</summary>
+      <p>TRICARE is a U.S. federal health program, and the federal Anti-Kickback Statute prohibits paying or receiving anything of value in exchange for referring patients whose care that program pays for. Arrangements that ignore this put the clinic and the patient at risk, not just the facilitator. So we keep the two sides of our business strictly separate: commission-based for self-pay elective care, flat-fee for anything touching TRICARE.</p></details>
+
+    <details><summary>Why don't you publish prices on this page?</summary>
+      <p>Korean medical advertising law restricts publishing clinic-identified pricing to the general public. What we can do — and do — is give you an itemized written quote for your specific case, with the clinic named, before you commit to anything.</p></details>
+
+    <details><summary>Will anyone speak English at the clinic?</summary>
+      <p>Some of our partner clinics have English-speaking staff; many don't, and the ones that are best at a given procedure aren't always the ones with the best English. That's why a coordinator goes with you rather than just handing you an address. Interpretation covers the consultation, the consent forms, and payment.</p></details>
+
+    <details><summary>Can I get records for a TRICARE reimbursement claim?</summary>
+      <p>Yes. We ask the clinic for an English itemized invoice and a diagnosis statement with ICD-10 codes, which is what the claim form needs. Ask for this before the visit — it is much harder to get after the fact.</p></details>
+
+    <details><summary>I'm a retiree or veteran living in Korea. Can you help?</summary>
+      <p>Yes for self-pay procedures. If your condition is service-connected, the VA Foreign Medical Program may reimburse care received overseas; that's between you and the VA, but we can supply the documentation.</p></details>
+
+    <details><summary>Is it safe? How do you choose the clinics?</summary>
+      <p>Every partner is a licensed Korean medical institution under a written agreement with us, and we visit them. We are not a review site and we don't pretend to be neutral — we're paid by clinics, which is exactly why we tell you that up front, show you the itemized price before you go, and don't push procedures you didn't ask about.</p></details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="disc">
+      <b>Disclaimer.</b> Follow Korea Co., Ltd. is a private medical travel facilitator registered with the Republic of Korea Ministry of Health and Welfare. We are <b>not affiliated with, endorsed by, or sponsored by</b> TRICARE, the Defense Health Agency, International SOS, the U.S. Department of Defense, or United States Forces Korea. Nothing on this page is medical advice, a benefits determination, or a guarantee of coverage or reimbursement — coverage decisions are made solely by TRICARE. Verify your benefits with your PCM, your MTF, or TRICARE Overseas before scheduling. We do not accept referral-based compensation for any care billed to TRICARE or any other U.S. federal health program.
+    </div>
+    <div class="fgrid">
+      <div>
+        <h4>Follow Korea Co., Ltd.</h4>
+        <p>13F #116, 373 Gangnam-daero, Seocho-gu, Seoul, Republic of Korea</p>
+        <p style="margin-top:8px"><a href="mailto:contact@followkorea.co.kr">contact@followkorea.co.kr</a><br>+82-10-8037-2535</p>
+      </div>
+      <div>
+        <h4>Service</h4>
+        <ul>
+          <li><a href="#coverage">What TRICARE covers</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#quote">Request a quote</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Also from us</h4>
+        <ul>
+          <li><a href="/">Follow Korea (corporate)</a></li>
+          <li><a href="/b2c/">International patient site</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="legal">
+      Follow Korea Co., Ltd. (주식회사 팔로우코리아) · Representatives: Ha Jang-hwan and 1 other · Business Reg. No. 696-86-03627<br>
+      Foreign Patient Attraction Business Registration No. A-2026-01-01-06622 (2026.01.21–2029.01.20) · Travel Agency Registration No. 2026-000022<br>
+      This page is an advertisement for medical coordination services directed at foreign nationals in the Republic of Korea who are not enrolled in Korean National Health Insurance.
+    </p>
+  </div>
+</footer>
+
+<script>
+(function(){
+'use strict';
+var API='https://tbrtfccvsvtusfkqdyow.supabase.co/functions/v1/b2c-pricelist';
+var HOSPS=[], KWS=[], PREFER='';
+
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+function krw(n){return '₩'+Number(n||0).toLocaleString('en-US');}
+
+fetch(API).then(function(r){return r.json();}).then(function(d){HOSPS=d.hospitals||[];render();})
+  .catch(function(){/* 가격 매칭 실패해도 폼 제출은 동작 */});
+
+var chips=[].slice.call(document.querySelectorAll('.chip'));
+chips.forEach(function(b){
+  b.addEventListener('click',function(){
+    b.classList.toggle('on');
+    KWS=chips.filter(function(x){return x.classList.contains('on');})
+             .map(function(x){return {v:x.getAttribute('data-kw'),label:x.textContent.trim()};});
+    PREFER='';
+    render();
+  });
+});
+
+function quoteFor(h){
+  var sum=0,hit=0,lines=[],missing=[];
+  KWS.forEach(function(k){
+    var kw=k.v.toLowerCase();
+    var ms=(h.items||[]).filter(function(i){
+      return ((i.ko||'')+' '+(i.zh||'')+' '+(i.cat||'')).toLowerCase().indexOf(kw)>-1;
+    });
+    if(ms.length){
+      var min=Math.min.apply(null,ms.map(function(m){return m.krw;}));
+      hit++; sum+=min; lines.push({label:k.label,krw:min});
+    } else {
+      missing.push(k.label);
+    }
+  });
+  return {anon:h.anon,vat:h.vat_note,sum:sum,hit:hit,lines:lines,missing:missing};
+}
+
+function render(){
+  var box=document.getElementById('qres');
+  if(!KWS.length || !HOSPS.length){ box.hidden=true; box.innerHTML=''; return; }
+  var qs=HOSPS.map(quoteFor).filter(function(q){return q.hit>0;});
+  if(!qs.length){
+    box.hidden=false;
+    box.innerHTML='<div class="notice">We don\'t have a listed rate for that combination yet. Send the form below and we\'ll get a quote from a clinic directly.</div>';
+    return;
+  }
+  var maxHit=Math.max.apply(null,qs.map(function(q){return q.hit;}));
+  qs=qs.filter(function(q){return q.hit===maxHit;}).sort(function(a,b){return a.sum-b.sum;}).slice(0,5);
+  box.hidden=false;
+  box.innerHTML='<p class="sub" style="margin:0 0 4px">Indicative starting prices from '+qs.length+' partner clinic'+(qs.length>1?'s':'')
+    +'. Clinic names are shared after you apply. Final price depends on examination.</p>'
+    + qs.map(function(q){
+      return '<div class="qcard'+(PREFER===q.anon?' on':'')+'" data-anon="'+esc(q.anon)+'" tabindex="0" role="button">'
+        +'<div class="row"><span class="anm">Clinic '+esc(q.anon)
+        +'<span class="tag">'+q.hit+' of '+KWS.length+' matched</span></span>'
+        +'<span class="qsum">'+krw(q.sum)+'<small>from'+(q.vat?' · VAT extra':'')+'</small></span></div>'
+        +'<div class="qlines">'+q.lines.map(function(l){
+            return '<span><span>'+esc(l.label)+'</span><span>'+krw(l.krw)+'</span></span>';
+          }).join('')
+        +(q.missing.length?'<span class="qmiss">Not offered at this clinic: '+esc(q.missing.join(', '))+'</span>':'')
+        +'</div></div>';
+    }).join('');
+  [].slice.call(box.querySelectorAll('.qcard')).forEach(function(c){
+    var pick=function(){ PREFER=c.getAttribute('data-anon'); render(); };
+    c.addEventListener('click',pick);
+    c.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); pick(); } });
+  });
+}
+
+document.getElementById('leadForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  var msg=document.getElementById('formMsg'), btn=document.getElementById('btnSubmit');
+  var name=document.getElementById('f-name').value.trim();
+  var phone=document.getElementById('f-phone').value.trim();
+  var show=function(kind,text){ msg.className='msg '+kind; msg.textContent=text; };
+  if(!name||!phone){ show('err','Please enter your name and a phone number we can reach you on.'); return; }
+  if(!document.getElementById('f-elig').checked || !document.getElementById('f-privacy').checked){
+    show('err','Please confirm both checkboxes so we can process your request.'); return;
+  }
+  if(!KWS.length && !document.getElementById('f-memo').value.trim()){
+    show('err','Select at least one service above, or describe what you need in the message box.'); return;
+  }
+  btn.disabled=true; show('ok','Sending…');
+
+  var memoParts=[];
+  var when=document.getElementById('f-when').value;
+  if(when) memoParts.push('Timing: '+when);
+  if(!KWS.length) memoParts.push('(no service selected — free-text request)');
+  var free=document.getElementById('f-memo').value.trim();
+  if(free) memoParts.push(free);
+
+  fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({
+      channel:'usfk',
+      picks:(KWS.length?KWS:[{v:'검진'}]).map(function(k){return {kw:k.v};}),
+      traits:[], prefer_anon:PREFER,
+      name:name, phone:phone,
+      email:document.getElementById('f-email').value.trim(),
+      base:document.getElementById('f-base').value,
+      status:document.getElementById('f-status').value,
+      memo:memoParts.join(' | '),
+      lang:'en', elig:'foreign'
+    })
+  }).then(function(r){return r.json();}).then(function(d){
+    btn.disabled=false;
+    if(d && d.ok){
+      show('ok','Request received. A coordinator will contact you within one business day with a written quote in English. If you gave a Korean mobile number, you\'ll get a confirmation text shortly.');
+      document.getElementById('leadForm').reset();
+      chips.forEach(function(c){c.classList.remove('on');}); KWS=[]; PREFER=''; render();
+    } else {
+      show('err','We couldn\'t submit that. Please email contact@followkorea.co.kr or text +82-10-8037-2535 and we\'ll pick it up from there.');
+    }
+  }).catch(function(){
+    btn.disabled=false;
+    show('err','Network error. Please email contact@followkorea.co.kr or text +82-10-8037-2535.');
+  });
+});
+})();
+</script>
+</body>
+</html>
