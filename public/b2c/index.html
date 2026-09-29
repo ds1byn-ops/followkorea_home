@@ -602,7 +602,7 @@ function catLabel(c){ var m=CAT_L10N[c]; return (m&&m[LANG])||c; }
 function isLife(h){ return (h.cat||'').indexOf(LIFE_CAT)>=0; }
 function renderHchips(){
   var cats=[]; HOSPITALS.forEach(function(h){ if(isLife(h))return; (h.cat||'').split('/').forEach(function(c){ c=c.trim(); if(c&&cats.indexOf(c)<0)cats.push(c); }); });
-  cats.sort(function(a,b){ if(a===LIFE_CAT)return 1; if(b===LIFE_CAT)return -1; return a.localeCompare(b,'ko'); });
+  var CAT_PRI=['피부·성형']; cats.sort(function(a,b){ if(a===LIFE_CAT)return 1; if(b===LIFE_CAT)return -1; var pa=CAT_PRI.indexOf(a),pb=CAT_PRI.indexOf(b); if(pa>=0||pb>=0){ if(pa<0)pa=99; if(pb<0)pb=99; if(pa!==pb)return pa-pb; } return a.localeCompare(b,'ko'); });
   document.getElementById('hchips').innerHTML='<span class="chip'+(HCAT===''?' on':'')+'" data-c="" onclick="setHCat(this)">'+esc(T().all)+'</span>'
     +cats.map(function(c){return '<span class="chip'+(HCAT===c?' on':'')+(c===LIFE_CAT?' life':'')+'" data-c="'+esc(c)+'" onclick="setHCat(this)">'+esc(catLabel(c))+'</span>';}).join('');
 }
