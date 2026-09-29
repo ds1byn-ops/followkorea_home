@@ -529,6 +529,91 @@ footer a{color:#e3ebf3}
 (function(){
 'use strict';
 var API='https://tbrtfccvsvtusfkqdyow.supabase.co/functions/v1/b2c-pricelist';
+
+/* ══════════════════════════════════════════════════════════════════════
+   전환 추적 — 아래 ID만 채우면 작동한다. 비어 있으면 스크립트를 아예
+   로드하지 않으므로 지금 상태로도 페이지는 정상이고 쿠키도 심지 않는다.
+
+   Lead 전환은 "건강보험 미가입 외국인(elig=foreign)"이 신청을 완료한
+   경우에만 집계한다. 건강보험 가입자·내국인은 서버가 info_only로
+   돌려보내 리드로 저장되지도 않으므로 전환에서도 제외한다.
+   ══════════════════════════════════════════════════════════════════════ */
+var TRACK = {
+  metaPixelId:    '',   // 예: '1234567890123456'
+  googleAdsId:    '',   // 예: 'AW-1234567890'
+  googleAdsLabel: '',   // 예: 'AbC-D_efGhIjKlMn'  (전환 액션 라벨)
+  ga4Id:          ''    // 예: 'G-XXXXXXXXXX'
+};
+
+var TRK = (function(){
+  var fired = {};                       // 중복 집계 방지
+  var on = function(k){ return !!(TRACK[k] && String(TRACK[k]).trim()); };
+
+  function loadScript(src, cb){
+    var s=document.createElement('script');
+    s.async=true; s.src=src;
+    if(cb) s.onload=cb;
+    document.head.appendChild(s);
+  }
+
+  // --- Meta Pixel ---
+  if(on('metaPixelId')){
+    (function(f,b,e,v,n,t,s){
+      if(f.fbq)return; n=f.fbq=function(){ n.callMethod ? n.callMethod.apply(n,arguments) : n.queue.push(arguments); };
+      if(!f._fbq)f._fbq=n; n.push=n; n.loaded=true; n.version='2.0'; n.queue=[];
+      t=b.createElement(e); t.async=true; t.src=v;
+      s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s);
+    })(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    window.fbq('init', TRACK.metaPixelId);
+    window.fbq('track', 'PageView');
+  }
+
+  // --- Google (gtag: GA4 + Google Ads) ---
+  if(on('ga4Id') || on('googleAdsId')){
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    var first = on('ga4Id') ? TRACK.ga4Id : TRACK.googleAdsId;
+    loadScript('https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(first));
+    if(on('ga4Id'))       window.gtag('config', TRACK.ga4Id);
+    if(on('googleAdsId')) window.gtag('config', TRACK.googleAdsId);
+  }
+
+  function meta(ev, params, custom){
+    if(!on('metaPixelId') || !window.fbq) return;
+    try{ window.fbq(custom ? 'trackCustom' : 'track', ev, params || {}); }catch(e){}
+  }
+  function ga(ev, params){
+    if(!window.gtag) return;
+    try{ window.gtag('event', ev, params || {}); }catch(e){}
+  }
+
+  return {
+    // 마법사 단계 이동 — 리드 수가 적을 때 상위 퍼널로 최적화하기 위한 신호
+    step: function(n){
+      var k='step'+n;
+      if(fired[k]) return; fired[k]=true;
+      meta('QuoteStep', { step:n }, true);
+      ga('quote_step', { step:n });
+    },
+    // 신청 완료 (유치 대상 외국인만)
+    lead: function(info){
+      if(info) return;                   // 건강보험 가입자·내국인 제외
+      if(fired.lead) return; fired.lead=true;
+      meta('Lead', { content_name:'USFK quote request' });
+      ga('generate_lead', { currency:'KRW', value:0 });
+      if(on('googleAdsId') && on('googleAdsLabel')){
+        ga('conversion', { send_to: TRACK.googleAdsId + '/' + TRACK.googleAdsLabel });
+      }
+    },
+    // 유치 대상이 아니어서 안내만 나간 경우 — 전환 아님, 참고용으로만 기록
+    infoOnly: function(){
+      if(fired.info) return; fired.info=true;
+      meta('QuoteIneligible', {}, true);
+      ga('quote_ineligible', {});
+    }
+  };
+})();
 var HOSPS=[], KWS=[], PREFER='', STEP=1, LANG='en';
 
 var T={
@@ -731,6 +816,7 @@ window.goStep=function(n){
   if(n===2 && !KWS.length) return;
   STEP=n;
   var we=document.getElementById('werr'); if(we) we.classList.remove('on');
+  if(n>=2 && n<=4){ try{ TRK.step(n); }catch(e){} }
   [1,2,3,4,5].forEach(function(i){ var p=document.getElementById('p'+i); if(p) p.classList.toggle('on', i===n); });
   renderSteps();
   if(n===2) renderQuotes();
@@ -877,6 +963,8 @@ window.submitLead=function(){
       var hn=document.getElementById('rHosp');
       if(info && d.hospital){ hn.textContent=d.hospital; hn.hidden=false; } else { hn.hidden=true; }
       document.getElementById('rSub').textContent = t(info?'rSubInfo':'rSub');
+      // 추적이 실패해도 결과 화면은 반드시 떠야 한다
+      try{ if(info) TRK.infoOnly(); else TRK.lead(false); }catch(e){ console.error('tracking',e); }
       STEP=5; goStep(5);
     } else { showErr('errNet'); }
   }).catch(function(){
