@@ -3541,6 +3541,34 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "thumb": "hthumb/yellow.jpg"
   },
   {
+    "name": { "kr": "마블성형외과의원", "en": "Marble Plastic Surgery", "zh": "Marble整形外科" },
+    "dept": { "kr": "성형외과(가슴·코·눈)", "en": "Plastic Surgery (Breast·Nose·Eyes)", "zh": "整形外科(胸·鼻·眼)" },
+    "cat": "성형외과",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["가슴성형(모티바·바운스)", "코성형·코재수술", "쌍꺼풀·눈매교정", "눈 재수술", "안면거상·동안성형"],
+      "en": ["Breast Augmentation (Motiva·Bounce)", "Rhinoplasty & Revision", "Double Eyelid & Eye Shape", "Revision Eye Surgery", "Facial Lifting"],
+      "zh": ["胸部整形(Motiva·Bounce)", "鼻整形·鼻修复", "双眼皮·眼型矫正", "眼部修复手术", "面部提升·抗衰"]
+    },
+    "hours": "Mon-Fri 10:00-19:00 · Sat 10:00-16:00",
+    "loc": {
+      "ko": "서울 서초구 강남대로 435 주류성빌딩 3층 (강남역·신논현역 도보5분)",
+      "zh": "首尔瑞草·江南站",
+      "en": "Gangnam Station, Seoul"
+    },
+    "overview": {
+      "kr": "마블성형외과의원(Marble Plastic Surgery)은 강남역·신논현역 인근 서초구 강남대로 435 주류성빌딩 3층에 위치한 성형외과로, 가슴성형(모티바·바운스 등 보형물)·코성형·눈성형을 중심으로 안면거상·윤곽·바디성형까지 폭넓게 진료합니다. 성형외과 전문의 서일범 대표원장과 김준형 원장, 마취통증의학과 박소영 원장이 함께하며, 마블TV 등 콘텐츠로 시술 정보를 공개하고 안전 사후케어 시스템을 운영합니다. 평일 19시, 토요일 16시까지 진료합니다.",
+      "en": "Marble Plastic Surgery, on the 3rd floor of Juryuseong Building at 435 Gangnam-daero in Seocho (5 min from Gangnam and Sinnonhyeon stations), focuses on breast augmentation (Motiva, Bounce and other implants), rhinoplasty and eye surgery, while also offering facial lifting, contouring and body procedures. Led by plastic surgeon Dr. Seo Il-beom with Dr. Kim Jun-hyeong and anesthesiologist Dr. Park So-young, the clinic shares treatment information openly and runs a dedicated post-op safety care system. Open weekdays until 7pm and Saturdays until 4pm.",
+      "zh": "Marble整形外科位于瑞草区江南大道435酒类城大厦3层(江南站·新论岘站步行5分钟)，以胸部整形(Motiva·Bounce等假体)·鼻整形·眼部整形为主，并涵盖面部提升·轮廓·身体整形。由整形外科专科医生徐一凡代表院长、金俊亨院长及麻醉疼痛医学科朴昭映院长坐诊，通过Marble TV等内容公开手术信息，运营安全术后护理系统。平日营业至19点，周六至16点。"
+    },
+    "doctors": [
+      { "name": "서일범", "title": "대표원장", "spec": ["성형외과 전문의", "가슴성형", "코·눈성형"] },
+      { "name": "김준형", "title": "원장", "spec": ["성형외과 전문의"] },
+      { "name": "박소영", "title": "원장", "spec": ["마취통증의학과 전문의"] }
+    ],
+    "thumb": "hthumb/marble.jpg"
+  },
+  {
     "name": { "kr": "스튜디오 숲 서울", "en": "Studio Soop Seoul", "zh": "Studio Soop 首尔" },
     "dept": { "kr": "반영구 메이크업 · 사진 스튜디오", "en": "Permanent Makeup · Photo Studio", "zh": "半永久定妆·摄影工作室" },
     "cat": "기타 서비스",
