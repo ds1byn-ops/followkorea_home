@@ -3611,6 +3611,26 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "thumb": "hthumb/365mc.jpg"
   },
   {
+    "name": { "kr": "더봄 퍼스널컬러 메이크업 명동", "en": "The Bom Personal Color & Makeup", "zh": "The Bom个人色彩·妆容(明洞)" },
+    "dept": { "kr": "퍼스널컬러·메이크업", "en": "Personal Color & Makeup", "zh": "个人色彩·妆容" },
+    "cat": "기타 서비스",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["퍼스널컬러 진단", "메이크업", "퍼스널컬러+메이크업", "영·중·일 통역"],
+      "en": ["Personal Color Analysis", "Makeup", "Color + Makeup", "EN/CN/JP Interpreter"],
+      "zh": ["个人色彩诊断", "妆容", "个人色彩+妆容", "英·中·日翻译"]
+    },
+    "hours": "",
+    "loc": { "ko": "서울 중구 퇴계로18길 7 (명동)", "zh": "首尔明洞", "en": "Myeongdong, Seoul" },
+    "overview": {
+      "kr": "더봄 퍼스널컬러 메이크업 명동은 서울 명동(중구 퇴계로18길)에 위치한 퍼스널컬러·메이크업 스튜디오로, 1:1~그룹 퍼스널컬러 진단과 메이크업을 제공합니다. 영어·중국어·일본어 통역이 가능해 외국인 방문객도 편하게 이용할 수 있습니다.",
+      "en": "The Bom Personal Color & Makeup, in Myeongdong, Seoul, offers 1:1 and group personal-color analysis and makeup, with English, Chinese and Japanese interpretation for international visitors.",
+      "zh": "The Bom个人色彩·妆容(明洞)位于首尔明洞，提供1:1至小组个人色彩诊断与妆容服务，可提供英·中·日语翻译，方便外国访客预约。"
+    },
+    "doctors": [],
+    "thumb": "hthumb/thebom.jpg"
+  },
+  {
     "name": { "kr": "스튜디오 숲 서울", "en": "Studio Soop Seoul", "zh": "Studio Soop 首尔" },
     "dept": { "kr": "반영구 메이크업 · 사진 스튜디오", "en": "Permanent Makeup · Photo Studio", "zh": "半永久定妆·摄影工作室" },
     "cat": "기타 서비스",
