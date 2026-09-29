@@ -3569,6 +3569,48 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "thumb": "hthumb/marble.jpg"
   },
   {
+    "name": { "kr": "다이트한의원 서울점", "en": "DAEAT Korean Medicine Clinic", "zh": "DAEAT韩方减肥医院" },
+    "dept": { "kr": "한방 다이어트", "en": "Korean Medicine Diet", "zh": "韩方减肥" },
+    "cat": "다이어트",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["한방 다이어트", "당질조절 다이어트", "한약 처방", "1:1 밀착 코칭", "요요방지 관리"],
+      "en": ["Korean Medicine Diet", "Low-carb Program", "Herbal Prescription", "1:1 Coaching", "Anti-yoyo Care"],
+      "zh": ["韩方减肥", "控糖减肥", "中药调理", "1:1贴身指导", "防反弹管理"]
+    },
+    "hours": "",
+    "loc": { "ko": "서울 강남구 선릉로 803 메타타워 4~5층", "zh": "首尔江南·宣陵路", "en": "Gangnam, Seoul" },
+    "overview": {
+      "kr": "다이트한의원 서울점은 서울 강남구 선릉로 803 메타타워에 위치한 한방 다이어트 전문 한의원으로, 방민우 대표원장이 당질조절 다이어트와 개인별 한약 처방, 1:1 밀착 코칭, 요요방지 관리까지 체계적으로 진행합니다. 무리한 절식이 아닌 체질·생활습관 기반의 한방 관리로 건강한 감량을 돕습니다.",
+      "en": "DAEAT Korean Medicine Clinic (Seoul), at Meta Tower, 803 Seolleung-ro in Gangnam, is a Korean-medicine weight-loss clinic. Led by Dr. Bang Min-woo, it combines low-carb dieting, personalized herbal prescriptions, one-on-one coaching and anti-rebound care to help clients lose weight healthily.",
+      "zh": "DAEAT韩方减肥医院(首尔店)位于首尔江南区宣陵路803 Meta Tower，是韩方减肥专科韩医院。方旻宇代表院长通过控糖减肥、个人化中药处方、1:1贴身指导及防反弹管理，帮助顾客健康减重，而非极端节食。"
+    },
+    "doctors": [
+      { "name": "방민우", "title": "대표원장", "spec": ["한의사", "한방 다이어트"] }
+    ],
+    "thumb": "hthumb/daeatdiet.jpg"
+  },
+  {
+    "name": { "kr": "365mc 강남본점", "en": "365mc Liposuction (Gangnam)", "zh": "365mc吸脂减肥(江南本院)" },
+    "dept": { "kr": "비만·지방흡입", "en": "Obesity & Liposuction", "zh": "肥胖·吸脂" },
+    "cat": "다이어트",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["지방흡입", "람스(LAMS)", "무한람스", "AI 지방흡입", "대용량 지방흡입", "지방분해주사"],
+      "en": ["Liposuction", "LAMS", "Unlimited LAMS", "AI Liposuction", "High-volume Liposuction", "Fat-dissolving Injection"],
+      "zh": ["吸脂手术", "LAMS", "无限LAMS", "AI吸脂", "大容量吸脂", "溶脂针"]
+    },
+    "hours": "",
+    "loc": { "ko": "서울 강남 (강남역 인근)", "zh": "首尔江南", "en": "Gangnam, Seoul" },
+    "overview": {
+      "kr": "365mc는 지방흡입·람스(LAMS)에 특화된 비만 클리닉 네트워크로, 강남본점을 비롯해 전국에 병원·의원을 운영합니다. 무한람스, AI 기반 지방흡입, 대용량 지방흡입, 지방분해주사 등 비만·체형 관리에 집중하며 다수의 지방흡입 수술 경험을 보유하고 있습니다.",
+      "en": "365mc is an obesity-clinic network specializing in liposuction and LAMS (fat-reduction surgery), operating its Gangnam main branch and clinics nationwide. It focuses on weight and body management — unlimited LAMS, AI-assisted and high-volume liposuction, and fat-dissolving injections.",
+      "zh": "365mc是专注吸脂与LAMS(减脂手术)的肥胖专科网络，在江南本院及全国运营医院与医院。提供无限LAMS、AI吸脂、大容量吸脂、溶脂针等肥胖·体型管理项目，拥有丰富的吸脂手术经验。"
+    },
+    "doctors": [],
+    "thumb": "hthumb/365mc.jpg"
+  },
+  {
     "name": { "kr": "스튜디오 숲 서울", "en": "Studio Soop Seoul", "zh": "Studio Soop 首尔" },
     "dept": { "kr": "반영구 메이크업 · 사진 스튜디오", "en": "Permanent Makeup · Photo Studio", "zh": "半永久定妆·摄影工作室" },
     "cat": "기타 서비스",
