@@ -3569,7 +3569,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "thumb": "hthumb/marble.jpg"
   },
   {
-    "name": { "kr": "다이트한의원 서울점", "en": "DAEAT Korean Medicine Clinic", "zh": "DAEAT韩方减肥医院" },
+    "name": { "kr": "다이트한의원 강남점", "en": "DAEAT Korean Medicine Clinic", "zh": "DAEAT韩方减肥医院" },
     "dept": { "kr": "한방 다이어트", "en": "Korean Medicine Diet", "zh": "韩方减肥" },
     "cat": "다이어트",
     "badge": "NEW",
@@ -3581,9 +3581,9 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "hours": "",
     "loc": { "ko": "서울 강남구 선릉로 803 메타타워 4~5층", "zh": "首尔江南·宣陵路", "en": "Gangnam, Seoul" },
     "overview": {
-      "kr": "다이트한의원 서울점은 서울 강남구 선릉로 803 메타타워에 위치한 한방 다이어트 전문 한의원으로, 방민우 대표원장이 당질조절 다이어트와 개인별 한약 처방, 1:1 밀착 코칭, 요요방지 관리까지 체계적으로 진행합니다. 무리한 절식이 아닌 체질·생활습관 기반의 한방 관리로 건강한 감량을 돕습니다.",
-      "en": "DAEAT Korean Medicine Clinic (Seoul), at Meta Tower, 803 Seolleung-ro in Gangnam, is a Korean-medicine weight-loss clinic. Led by Dr. Bang Min-woo, it combines low-carb dieting, personalized herbal prescriptions, one-on-one coaching and anti-rebound care to help clients lose weight healthily.",
-      "zh": "DAEAT韩方减肥医院(首尔店)位于首尔江南区宣陵路803 Meta Tower，是韩方减肥专科韩医院。方旻宇代表院长通过控糖减肥、个人化中药处方、1:1贴身指导及防反弹管理，帮助顾客健康减重，而非极端节食。"
+      "kr": "다이트한의원 강남점은 서울 강남구 선릉로 803 메타타워에 위치한 한방 다이어트 전문 한의원으로, 방민우 대표원장이 당질조절 다이어트와 개인별 한약 처방, 1:1 밀착 코칭, 요요방지 관리까지 체계적으로 진행합니다. 무리한 절식이 아닌 체질·생활습관 기반의 한방 관리로 건강한 감량을 돕습니다.",
+      "en": "DAEAT Korean Medicine Clinic (Gangnam), at Meta Tower, 803 Seolleung-ro in Gangnam, is a Korean-medicine weight-loss clinic. Led by Dr. Bang Min-woo, it combines low-carb dieting, personalized herbal prescriptions, one-on-one coaching and anti-rebound care to help clients lose weight healthily.",
+      "zh": "DAEAT韩方减肥医院(江南店)位于首尔江南区宣陵路803 Meta Tower，是韩方减肥专科韩医院。方旻宇代表院长通过控糖减肥、个人化中药处方、1:1贴身指导及防反弹管理，帮助顾客健康减重，而非极端节食。"
     },
     "doctors": [
       { "name": "방민우", "title": "대표원장", "spec": ["한의사", "한방 다이어트"] }
