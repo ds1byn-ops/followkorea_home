@@ -79,7 +79,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "en": "Plastic Surgery / Breast Specialist",
       "zh": "整形外科/胸部整形专科"
     },
-    "cat": "성형외과",
+    "cat": "피부·성형",
     "badge": "NEW",
     "treats": {
       "kr": ["가슴성형(모티바·멘토)", "가슴교정", "가슴 재수술", "유두교정", "여유증", "부유방", "유방재건"],
@@ -117,7 +117,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "en": "Skin / Laser·Lifting·Aesthetic",
       "zh": "皮肤/激光·提升·轻医美"
     },
-    "cat": "피부",
+    "cat": "피부·성형",
     "badge": "NEW",
     "treats": {
       "kr": ["울쎄라", "써마지", "온다", "실리프팅", "수광·리쥬란", "필러", "보톡스", "줄기세포"],
@@ -160,7 +160,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "en": "Skin / Aesthetic (Eye·Nose·Ear·Shoulder·Hip)",
       "zh": "皮肤/医美 (眼·鼻·耳·肩·臀)"
     },
-    "cat": "성형외과/피부",
+    "cat": "피부·성형",
     "badge": "NEW",
     "treats": {
       "kr": [
@@ -227,7 +227,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "en": "Plastic Surgery / Dermatology / Stem Cell",
       "zh": "整形外科/皮肤科/干细胞"
     },
-    "cat": "성형외과",
+    "cat": "피부·성형",
     "badge": "BEST",
     "treats": {
       "kr": [
@@ -738,7 +738,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "en": "Plastic Surgery / Skin",
       "zh": "整形外科/皮肤"
     },
-    "cat": "성형외과",
+    "cat": "피부·성형",
     "treats": {
       "kr": [
         "이중턱",
@@ -885,7 +885,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "en": "Plastic Surgery",
       "zh": "整形外科"
     },
-    "cat": "성형외과",
+    "cat": "피부·성형",
     "badge": "추천",
     "treats": {
       "kr": [
@@ -1459,7 +1459,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "en": "Plastic Surgery / Stem Cell",
       "zh": "整形外科/干细胞"
     },
-    "cat": "성형외과",
+    "cat": "피부·성형",
     "badge": "추천",
     "treats": {
       "kr": [
@@ -1704,7 +1704,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "en": "Plastic Surgery",
       "zh": "整形外科"
     },
-    "cat": "성형외과",
+    "cat": "피부·성형",
     "badge": "VIP",
     "treats": {
       "kr": [
@@ -1996,7 +1996,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "en": "Lifting / Diet",
       "zh": "提升/减肥"
     },
-    "cat": "피부",
+    "cat": "피부·성형",
     "badge": "추천",
     "treats": {
       "kr": [
@@ -2065,7 +2065,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "en": "Plastic Surgery / Skin / Stem Cell",
       "zh": "整形外科/皮肤/干细胞"
     },
-    "cat": "성형외과/줄기세포",
+    "cat": "피부·성형/줄기세포",
     "badge": "리프팅전문",
     "treats": {
       "kr": [
@@ -2208,7 +2208,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "en": "Skin / Lifting",
       "zh": "皮肤/提升"
     },
-    "cat": "피부",
+    "cat": "피부·성형",
     "badge": "피부전문",
     "treats": {
       "kr": [
@@ -2369,7 +2369,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "en": "Lifting / Filler",
       "zh": "提升/填充"
     },
-    "cat": "피부",
+    "cat": "피부·성형",
     "badge": "리프팅전문",
     "treats": {
       "kr": [
@@ -2410,7 +2410,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "en": "Lifting / Facial Correction",
       "zh": "提升/面部矫正"
     },
-    "cat": "피부",
+    "cat": "피부·성형",
     "badge": "NEW",
     "treats": {
       "kr": [
@@ -2480,7 +2480,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "en": "Plastic Surgery",
       "zh": "整形外科"
     },
-    "cat": "성형외과",
+    "cat": "피부·성형",
     "badge": "VIP",
     "treats": {
       "kr": [
@@ -2558,7 +2558,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "en": "Lifting / Scar",
       "zh": "提升/疤痕"
     },
-    "cat": "피부",
+    "cat": "피부·성형",
     "badge": "전문",
     "treats": {
       "kr": [
@@ -2806,7 +2806,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "en": "Plastic Surgery",
       "zh": "整形外科"
     },
-    "cat": "성형외과",
+    "cat": "피부·성형",
     "badge": "윤곽전문",
     "treats": {
       "kr": [
@@ -2993,7 +2993,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
   {
     "name": { "kr": "나나성형외과", "en": "NANA Plastic Surgery", "zh": "NANA整形外科" },
     "dept": { "kr": "성형외과/피부", "en": "Plastic Surgery / Skin", "zh": "整形外科/皮肤" },
-    "cat": "성형외과",
+    "cat": "피부·성형",
     "badge": "성형전문",
     "treats": {
       "kr": ["눈성형", "코성형", "가슴성형", "안면윤곽·리프팅"],
@@ -3013,7 +3013,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
   {
     "name": { "kr": "디에이성형외과의원", "en": "DA Plastic Surgery", "zh": "DA整形外科" },
     "dept": { "kr": "성형외과/피부", "en": "Plastic Surgery / Skin", "zh": "整形外科/皮肤" },
-    "cat": "성형외과/피부",
+    "cat": "피부·성형",
     "badge": "성형전문",
     "treats": {
       "kr": ["눈성형", "코성형", "안면윤곽", "가슴성형", "리프팅"],
@@ -3033,7 +3033,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
   {
     "name": { "kr": "VC성형외과의원", "en": "VC Plastic Surgery", "zh": "VC整形外科" },
     "dept": { "kr": "성형외과/피부/줄기세포", "en": "Plastic Surgery / Skin / Stem Cell", "zh": "整形外科/皮肤/干细胞" },
-    "cat": "성형외과/줄기세포",
+    "cat": "피부·성형/줄기세포",
     "badge": "프리미엄",
     "treats": {
       "kr": ["이중턱 재배치", "눈밑 재배치", "하안검·중안면거상", "지방흡입", "줄기세포"],
@@ -3188,7 +3188,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
   {
     "name": { "kr": "지우의원", "en": "JIWOO Clinic", "zh": "挚友医院" },
     "dept": { "kr": "피부과", "en": "Dermatology", "zh": "皮肤科" },
-    "cat": "피부",
+    "cat": "피부·성형",
     "badge": "NEW",
     "treats": {
       "kr": ["리쥬란", "울쎄라 PRIME", "써마지 FLX", "포텐자", "피코레이저"],
@@ -3212,7 +3212,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
   {
     "name": { "kr": "온오프피부과의원", "en": "ONOFF Dermatology Clinic", "zh": "ONOFF皮肤科" },
     "dept": { "kr": "피부과", "en": "Dermatology", "zh": "皮肤科" },
-    "cat": "피부",
+    "cat": "피부·성형",
     "badge": "NEW",
     "treats": {
       "kr": ["울쎄라", "써마지", "소프웨이브", "리프팅"],
@@ -3232,7 +3232,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
   {
     "name": { "kr": "셀온피부과의원", "en": "Cellon Clinic", "zh": "CELLON皮肤科" },
     "dept": { "kr": "피부과", "en": "Dermatology", "zh": "皮肤科" },
-    "cat": "피부",
+    "cat": "피부·성형",
     "badge": "NEW",
     "treats": {
       "kr": ["색소치료", "리프팅", "보톡스", "필러"],
@@ -3254,7 +3254,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
   {
     "name": { "kr": "아우레아의원", "en": "Aurea Clinic", "zh": "AUREA皮肤科" },
     "dept": { "kr": "피부과", "en": "Dermatology", "zh": "皮肤科" },
-    "cat": "피부",
+    "cat": "피부·성형",
     "badge": "NEW",
     "treats": {
       "kr": ["리프팅", "스킨부스터", "보톡스", "필러"],
@@ -3284,7 +3284,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "en": "Dermatology (Tattoo & PMU Removal)",
       "zh": "皮肤科 (纹身·半永久去除特化)"
     },
-    "cat": "피부",
+    "cat": "피부·성형",
     "badge": "NEW",
     "treats": {
       "kr": ["문신·반영구 제거", "레이저토닝", "제모", "보톡스·필러", "실리프팅"],
@@ -3318,7 +3318,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "en": "Dermatology (Private Lifting Clinic)",
       "zh": "皮肤科 (私密提升诊疗)"
     },
-    "cat": "피부",
+    "cat": "피부·성형",
     "badge": "NEW",
     "treats": {
       "kr": ["울쎄라·소프웨이브·써마지", "스킨부스터·콜라겐부스터", "보톡스·필러", "바디·웰니스 수액"],
@@ -3352,7 +3352,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "en": "Plastic Surgery (Eye & Nose)",
       "zh": "整形外科 (眼鼻特化)"
     },
-    "cat": "성형외과",
+    "cat": "피부·성형",
     "badge": "NEW",
     "treats": {
       "kr": ["쌍꺼풀·눈매교정·트임", "상·하안검·눈썹거상", "코성형·재수술", "리쥬란·보톡스·실리프팅"],
@@ -3439,7 +3439,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
   {
     "name": { "kr": "멜로우피부과의원 청담점", "en": "Mellow Dermatology Clinic Cheongdam", "zh": "Mellow皮肤科(清潭店)" },
     "dept": { "kr": "피부과", "en": "Dermatology", "zh": "皮肤科" },
-    "cat": "피부",
+    "cat": "피부·성형",
     "badge": "NEW",
     "treats": {
       "kr": ["써마지·울쎄라피 프라임", "온다·소프라노 티타늄", "스킨부스터·리쥬란", "보톡스·필러", "피코토닝·색소"],
@@ -3465,7 +3465,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
   {
     "name": { "kr": "더플러스성형외과", "en": "THE PLUS Plastic Surgery", "zh": "THE PLUS整形外科" },
     "dept": { "kr": "성형외과(코 재건 특화)", "en": "Plastic Surgery (Nasal Reconstruction)", "zh": "整形外科(鼻部再造)" },
-    "cat": "성형외과",
+    "cat": "피부·성형",
     "badge": "NEW",
     "treats": {
       "kr": ["코 재건술", "코 재수술", "코성형", "안면윤곽", "눈성형"],
@@ -3491,7 +3491,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
   {
     "name": { "kr": "아도의원", "en": "ADO Clinic", "zh": "ADO皮肤科" },
     "dept": { "kr": "피부과(안티에이징·리프팅)", "en": "Dermatology (Anti-aging & Lifting)", "zh": "皮肤科(抗衰·提升)" },
-    "cat": "피부",
+    "cat": "피부·성형",
     "badge": "NEW",
     "treats": {
       "kr": ["울쎄라피 프라임·써마지 FLX", "스컬트라·리쥬란", "필러·보톡스", "줄기세포 프로그램", "온다·포텐자"],
@@ -3517,7 +3517,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
   {
     "name": { "kr": "옐로우성형외과", "en": "Yellow Plastic Surgery", "zh": "Yellow整形外科" },
     "dept": { "kr": "성형외과(눈·코)", "en": "Plastic Surgery (Eyes & Nose)", "zh": "整形外科(眼·鼻)" },
-    "cat": "성형외과",
+    "cat": "피부·성형",
     "badge": "NEW",
     "treats": {
       "kr": ["쌍꺼풀·눈매교정", "눈 재수술", "코성형", "코 재수술", "안검하수 교정"],
@@ -3543,7 +3543,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
   {
     "name": { "kr": "마블성형외과의원", "en": "Marble Plastic Surgery", "zh": "Marble整形外科" },
     "dept": { "kr": "성형외과(가슴·코·눈)", "en": "Plastic Surgery (Breast·Nose·Eyes)", "zh": "整形外科(胸·鼻·眼)" },
-    "cat": "성형외과",
+    "cat": "피부·성형",
     "badge": "NEW",
     "treats": {
       "kr": ["가슴성형(모티바·바운스)", "코성형·코재수술", "쌍꺼풀·눈매교정", "눈 재수술", "안면거상·동안성형"],
@@ -3723,7 +3723,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "en": "Hair Loss Clinic",
       "zh": "脱发治疗专科"
     },
-    "cat": "피부",
+    "cat": "피부·성형",
     "icon": "💇",
     "badge": "NEW",
     "treats": {
@@ -3783,7 +3783,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "en": "OB/GYN · Plastic · Skin · Checkup",
       "zh": "妇科·整形·皮肤·体检联合诊疗"
     },
-    "cat": "여성의학/성형외과/피부/검진",
+    "cat": "여성의학/피부·성형/검진",
     "icon": "🌸",
     "badge": "NEW",
     "treats": {
@@ -3878,7 +3878,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "en": "Plastic Surgery / Dermatology",
       "zh": "整形外科/皮肤科"
     },
-    "cat": "성형외과/피부",
+    "cat": "피부·성형",
     "icon": "💎",
     "badge": "NEW",
     "treats": {
@@ -3950,7 +3950,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "en": "Dermatology (Board-certified)",
       "zh": "皮肤科专科医生诊疗"
     },
-    "cat": "피부",
+    "cat": "피부·성형",
     "icon": "🌿",
     "badge": "NEW",
     "treats": {
@@ -4012,7 +4012,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "en": "Dermatology / Lifting · Skin Booster",
       "zh": "皮肤科/提升·皮肤焕活"
     },
-    "cat": "피부",
+    "cat": "피부·성형",
     "icon": "🪞",
     "badge": "NEW",
     "treats": {
@@ -4160,7 +4160,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "en": "Plastic Surgery / Aesthetic · Lifting",
       "zh": "整形外科/轻医美·提升"
     },
-    "cat": "성형외과/피부",
+    "cat": "피부·성형",
     "icon": "🎀",
     "badge": "NEW",
     "treats": {
