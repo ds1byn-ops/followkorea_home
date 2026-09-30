@@ -885,6 +885,19 @@ window.submitLead=function(){
   });
 };
 
+// 언어 결정 순서: URL ?lang= > 이전 선택(localStorage) > 브라우저 언어
+// 광고 랜딩을 언어별로 고정하기 위해 URL 파라미터를 최우선으로 둔다.
+//   예) /tricare/?lang=ko  (네이버 등 국문 매체)   /tricare/?lang=en  (영문 매체)
+function langFromUrl(){
+  try{
+    var m=/[?&]lang=([a-z-]+)/i.exec(window.location.search);
+    if(!m) return null;
+    var v=m[1].toLowerCase();
+    if(v==='ko'||v==='kr'||v==='ko-kr') return 'ko';
+    if(v==='en'||v==='us'||v==='en-us') return 'en';
+  }catch(e){}
+  return null;
+}
 var saved=null; try{saved=localStorage.getItem('fk_tricare_lang');}catch(e){}
 
 /* ==== 제휴 의료기관 (b2c 데이터 재사용, 2026-09-29 주입) ==== */
@@ -913,7 +926,7 @@ T.en.hospH2='Where we coordinate your care'; T.ko.hospH2='이곳에서 진료를
 T.en.hospSub='Follow Korea coordinates care with these Korean medical institutions. The order is randomized on each visit and does not imply any ranking or endorsement. For USFK families, health-screening, eye and OB-GYN clinics are listed first.'; T.ko.hospSub='팔로우코리아가 협력하는 한국 의료기관입니다. 순서는 방문 시마다 무작위이며 순위·평가를 의미하지 않습니다. 주한미군 가족을 위해 검진·안과·산부인과를 앞에 표시합니다.';
 var _origSetLang=window.setLang; window.setLang=function(l){ _origSetLang(l); renderTriHosps(); };
 
-setLang(saved || ((navigator.language||'').toLowerCase().indexOf('ko')===0 ? 'ko' : 'en'));
+setLang(langFromUrl() || saved || ((navigator.language||'').toLowerCase().indexOf('ko')===0 ? 'ko' : 'en'));
 renderTriHosps();
 })();
 </script>
