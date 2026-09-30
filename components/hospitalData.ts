@@ -3631,6 +3631,26 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "thumb": "hthumb/thebom.jpg"
   },
   {
+    "name": { "kr": "보그헤어 홍대점", "en": "VOG HAIR Hongdae", "zh": "VOG HAIR 弘大" },
+    "dept": { "kr": "헤어살롱(외국인·무슬림 프렌들리)", "en": "Hair Salon (Foreigner·Muslim-friendly)", "zh": "发廊(外国人·穆斯林友好)" },
+    "cat": "기타 서비스",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["커트·펌·컬러", "헤어 클리닉", "헤드스파", "외국인 헤어 메이크오버", "프라이빗룸"],
+      "en": ["Cut·Perm·Color", "Hair Clinic", "Head Spa", "Foreigner Makeover", "Private Room"],
+      "zh": ["剪发·烫发·染发", "头发护理", "头皮SPA", "外国人造型改造", "私人包间"]
+    },
+    "hours": "",
+    "loc": { "ko": "서울 마포구 양화로18안길 7 (홍대·동교동)", "zh": "首尔弘大", "en": "Hongdae, Seoul" },
+    "overview": {
+      "kr": "보그헤어(VOG HAIR) 홍대는 서울 홍대(마포구 동교동)의 헤어살롱으로, 홍대점·홍대거리점·홍대라운지점 3개 지점을 운영합니다. 외국인 영어 응대·무슬림 프렌들리·프라이빗룸·헤드스파를 갖추고 커트·펌·컬러·클리닉과 외국인 메이크오버를 전문으로 합니다. 비건 제품을 보유합니다.",
+      "en": "VOG HAIR Hongdae is a foreigner- and Muslim-friendly hair salon in Hongdae (Mapo), Seoul, with three branches, private rooms and head spa — cuts, perms, color, hair clinic and makeovers for international guests, with vegan products.",
+      "zh": "VOG HAIR 弘大(보그헤어)是首尔弘大(麻浦区)的发廊，设弘大店·弘大街店·弘大Lounge店三家门店。外国人友好·穆斯林友好·私人包间·头皮SPA，专注剪发·烫发·染发·护理与外国人造型改造，持有纯素产品。"
+    },
+    "doctors": [],
+    "thumb": "hthumb/vog.jpg"
+  },
+  {
     "name": { "kr": "스튜디오 숲 서울", "en": "Studio Soop Seoul", "zh": "Studio Soop 首尔" },
     "dept": { "kr": "반영구 메이크업 · 사진 스튜디오", "en": "Permanent Makeup · Photo Studio", "zh": "半永久定妆·摄影工作室" },
     "cat": "기타 서비스",
