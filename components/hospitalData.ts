@@ -3651,6 +3651,38 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "thumb": "hthumb/vog.jpg"
   },
   {
+    "name": { "kr": "월드케이팝센터", "en": "World K-POP Center", "zh": "世界K-POP中心" },
+    "dept": { "kr": "K-POP 체험·공연", "en": "K-POP Experience", "zh": "K-POP体验·演出" },
+    "cat": "기타 서비스",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["K-POP 체험 프로그램","댄스·보컬 클래스","오디션·교육","공연·콘서트 관람","스타 메이크업·의상 체험"],
+      "en": ["K-POP Experience","Dance·Vocal Class","Audition·Training","Concert Viewing","Star Styling"],
+      "zh": ["K-POP体验项目","舞蹈·声乐课程","选拔·培训","演出·演唱会观赏","明星妆造体验"]
+    },
+    "hours": "",
+    "loc": { "ko": "서울 중구 (K-POP 체험센터)", "zh": "首尔中区", "en": "Jung-gu, Seoul" },
+    "overview": { "kr": "월드케이팝센터(World K-POP Center)는 K-POP 교육·오디션·체험·공연을 아우르는 플랫폼으로 서울 중구에 위치합니다. 외국인 방문객을 위한 K-POP 체험 프로그램(댄스·보컬 클래스·스타 메이크업·공연 관람)을 운영합니다.", "en": "World K-POP Center in Jung-gu, Seoul spans K-POP education, auditions, experiences and performances, running K-POP experience programs for international visitors.", "zh": "世界K-POP中心位于首尔中区，集K-POP教育·选拔·体验·演出于一体，面向外国访客提供K-POP体验项目。" },
+    "doctors": [],
+    "thumb": "hthumb/wkpop.jpg"
+  },
+  {
+    "name": { "kr": "오다리집 명동", "en": "Odarijip Myeongdong", "zh": "Odarijip 明洞" },
+    "dept": { "kr": "한류 맛집(간장게장·갈비)", "en": "Korean Restaurant", "zh": "韩流餐厅(酱蟹·烤排骨)" },
+    "cat": "기타 서비스",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["간장게장","소양념갈비","한정식","명동 맛집","단체 예약"],
+      "en": ["Soy Marinated Crab","Marinated Beef Ribs","Korean Set Meal","Myeongdong Eatery","Group Booking"],
+      "zh": ["酱油蟹","牛肉腌排骨","韩定食","明洞美食","团体预约"]
+    },
+    "hours": "",
+    "loc": { "ko": "서울 중구 명동8나길 28 (명동)", "zh": "首尔明洞", "en": "Myeongdong, Seoul" },
+    "overview": { "kr": "오다리집은 서울 명동의 한류식당으로, 연평도 알꽃게 간장게장과 짚불·숯불 소양념갈비가 대표 메뉴입니다. 서울시 공인 한류식당으로 명동 본점·사보이호텔점을 운영하며 외국인 관광객에게 인기입니다.", "en": "Odarijip is a Seoul-certified Hallyu restaurant in Myeongdong, famous for soy-marinated crab and twice-grilled beef ribs, popular with international tourists.", "zh": "Odarijip是首尔明洞的韩流餐厅，招牌为酱油蟹与两次烤制的牛肉腌排骨，是首尔公认的韩流餐厅，深受外国游客欢迎。" },
+    "doctors": [],
+    "thumb": "hthumb/odarijip.jpg"
+  },
+  {
     "name": { "kr": "스튜디오 숲 서울", "en": "Studio Soop Seoul", "zh": "Studio Soop 首尔" },
     "dept": { "kr": "반영구 메이크업 · 사진 스튜디오", "en": "Permanent Makeup · Photo Studio", "zh": "半永久定妆·摄影工作室" },
     "cat": "기타 서비스",
