@@ -130,6 +130,7 @@ function buildDoc(p){
       +'<div style="font-weight:800;margin-bottom:5px;">[갑] (甲方 / Party A)</div>'
       +'<div style="margin-bottom:3px;">상호명 (公司名): <b>주식회사 팔로우코리아</b><br>FOLLOW KOREA Co., Ltd.</div>'
       +'<div style="margin-bottom:3px;">사업자등록번호: 696-86-03627</div>'
+      +'<div style="margin-bottom:3px;">업태 (业务类型): 외국인환자 유치업 · 종합여행업 (外国人患者招徕业·综合旅游业)</div>'
       +'<div style="margin-bottom:3px;">주소 (地址): 서울 서초구 강남대로 373, 116 13층</div>'
       +fld('담당자 (联系人)',p.conA)+fld('연락처 (电话)',p.phoneA)
       +'<div style="margin-top:6px;">대표자 (代表者): <b>하장환</b> <img src="'+SEAL+'" style="height:15mm;vertical-align:middle;margin:-5mm 0 -5mm 2mm;"></div>'
@@ -138,8 +139,10 @@ function buildDoc(p){
       +'<div style="font-weight:800;margin-bottom:5px;">[을] (乙方 / Party B)</div>'
       +fld('상호명 (公司名)',p.cn,150)
       +fld('통일사회신용코드 (统一社会信用代码)',p.reg,120)
+      +fld('업태 (业务类型)',p.bizB,110)
       +fld('주소 (地址)',p.addr,150)
       +fld('담당자 (联系人)',p.conB)+fld('연락처 (电话)',p.phoneB)
+      +fld('위챗 (微信)',p.wechatB,110)
       +'<div style="margin-bottom:3px;">개호은행 (开户银行): '+U(p.bank,90)+'  SWIFT: '+U(p.swift,70)+'</div>'
       +fld('계좌번호 (账号)',p.account,150)
       +'<div style="margin-top:6px;">법정대표인 (法定代表人): '+U(p.legalRep,80)+'  (인)(印)</div>'
@@ -175,7 +178,7 @@ if(vkey){
 /* ── 서명 모드 (?d=파라미터 / 파라미터 없으면 공란 신규 — 브로슈어 QR용) ── */
 var dRaw=qs('d');
 if(dRaw){ try{ P=JSON.parse(b64uDec(dRaw)); }catch(e){} }
-else { P={aid:null,cn:'',en:'',reg:'',addr:'',rate:'20',cur:'CNY',stmtDay:'10',payDays:'5',conA:'손이나 (孙依娜)',phoneA:'+86 158-5812-2829',conB:'',phoneB:'',bank:'',swift:'',account:'',legalRep:''}; }
+else { P={aid:null,cn:'',en:'',reg:'',addr:'',rate:'20',cur:'CNY',stmtDay:'10',payDays:'5',conA:'손이나 (孙依娜)',phoneA:'+86 158-5812-2829',conB:'',phoneB:'',wechatB:'',bizB:'旅行社',bank:'',swift:'',account:'',legalRep:''}; }
 if(!P||(dRaw&&!P.cn)){
   app.innerHTML='<div class="card err">链接无效。请向 FOLLOW KOREA 负责人索取新的二维码。<div class="muted" style="margin-top:4px;">링크가 유효하지 않습니다. 담당자에게 새 QR을 요청하세요.</div></div>';
 }else{
@@ -190,6 +193,8 @@ if(!P||(dRaw&&!P.cn)){
     +'<div style="grid-column:1/-1;"><label>地址 (주소)</label><input id="f-addr"></div>'
     +'<div><label>联系人 (담당자)</label><input id="f-conb"></div>'
     +'<div><label>电话 (연락처)</label><input id="f-phoneb"></div>'
+    +'<div><label>微信 (위챗)</label><input id="f-wechat"></div>'
+    +'<div><label>业务类型 (업태)</label><input id="f-biztype" placeholder="旅行社"></div>'
     +'<div><label>开户银行</label><input id="f-bank"></div>'
     +'<div><label>SWIFT</label><input id="f-swift"></div>'
     +'<div style="grid-column:1/-1;"><label>账号 (계좌번호)</label><input id="f-account"></div>'
@@ -202,12 +207,14 @@ if(!P||(dRaw&&!P.cn)){
   ['cn','reg','addr'].forEach(function(k){document.getElementById('f-'+k).value=P[k]||'';});
   document.getElementById('f-conb').value=P.conB||'';
   document.getElementById('f-phoneb').value=P.phoneB||'';
+  document.getElementById('f-wechat').value=P.wechatB||'';
+  document.getElementById('f-biztype').value=P.bizB||'旅行社';
   document.getElementById('f-bank').value=P.bank||'';
   document.getElementById('f-swift').value=P.swift||'';
   document.getElementById('f-account').value=P.account||'';
   document.getElementById('f-legal').value=P.legalRep||'';
   renderDoc();
-  ['f-cn','f-reg','f-addr','f-conb','f-phoneb','f-bank','f-swift','f-account','f-legal'].forEach(function(id){document.getElementById(id).addEventListener('input',renderDoc);});
+  ['f-cn','f-reg','f-addr','f-conb','f-phoneb','f-wechat','f-biztype','f-bank','f-swift','f-account','f-legal'].forEach(function(id){document.getElementById(id).addEventListener('input',renderDoc);});
   // 서명 패드
   (function(){
     var cv=document.getElementById('pad'),ctx=cv.getContext('2d');
@@ -225,7 +232,7 @@ function curP(withSign){
   var cv=document.getElementById('pad');
   return {cn:g('f-cn'),en:P.en||'',reg:g('f-reg'),addr:g('f-addr'),
     rate:P.rate,cur:P.cur,stmtDay:P.stmtDay,payDays:P.payDays,date:P.date,
-    conA:P.conA||'',phoneA:P.phoneA||'',conB:g('f-conb'),phoneB:g('f-phoneb'),
+    conA:P.conA||'',phoneA:P.phoneA||'',conB:g('f-conb'),phoneB:g('f-phoneb'),wechatB:g('f-wechat'),bizB:g('f-biztype'),
     bank:g('f-bank'),swift:g('f-swift'),account:g('f-account'),legalRep:g('f-legal'),
     signA:null,signB:(withSign&&cv&&cv._dirty)?cv.toDataURL('image/png'):null};
 }
