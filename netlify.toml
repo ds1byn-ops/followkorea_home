@@ -8,11 +8,11 @@
 [build.environment]
   NODE_VERSION = "20"
 
-# 여행사 전자계약 서명 페이지 (펄스 sign.html) — 브로슈어 QR용 짧은 주소
+# 여행사 전자계약 서명 페이지 — 브로슈어 QR용 짧은 주소 (같은 도메인에서 직접 서빙 — netlify.app 리다이렉트는 위챗/중국망에서 인증서 경고 발생)
 [[redirects]]
   from = "/sign"
-  to = "https://followkorea.netlify.app/sign.html"
-  status = 302
+  to = "/sign.html"
+  status = 200
   force = true
 
 # Single-page app: serve index.html for any unmatched path

@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>境外客源介绍服务合同 — FOLLOW KOREA</title>
+<style>
+*{box-sizing:border-box;}
+body{margin:0;background:#eef2f7;font-family:'Microsoft YaHei','Malgun Gothic',sans-serif;color:#111827;}
+.wrap{max-width:720px;margin:0 auto;padding:14px 10px 40px;}
+.card{background:#fff;border:1px solid #dbe3ee;border-radius:12px;padding:14px;margin-bottom:12px;}
+.hd{text-align:center;padding:14px 10px 4px;}
+.hd .logo{font-weight:800;font-size:15px;color:#1f3864;letter-spacing:1px;}
+.hd .t{font-size:12px;color:#64748b;margin-top:2px;}
+label{display:block;font-size:11.5px;color:#334155;font-weight:700;margin:8px 0 3px;}
+input{width:100%;padding:9px 10px;border:1px solid #cbd5e1;border-radius:8px;font-size:14px;}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:0 10px;}
+@media(max-width:480px){.grid{grid-template-columns:1fr;}}
+.btn{display:inline-block;border:1px solid #cbd5e1;background:#fff;border-radius:9px;padding:10px 16px;font-size:14px;cursor:pointer;}
+.btn.primary{background:#1f3864;border-color:#1f3864;color:#fff;font-weight:700;}
+.btn.block{display:block;width:100%;text-align:center;}
+canvas.pad{width:100%;height:150px;border:2px dashed #0ea5e9;border-radius:10px;background:#f0f9ff;touch-action:none;}
+.doc{border:1px solid #dbe3ee;border-radius:10px;background:#fff;max-height:52vh;overflow:auto;}
+.muted{font-size:11px;color:#64748b;}
+.ok{color:#0f766e;font-weight:700;}
+.err{color:#dc2626;font-weight:700;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hd"><div class="logo">FOLLOW KOREA</div><div class="t">境外客源介绍服务合同 · 电子签署</div></div>
+  <div id="app"><div class="card muted">加载中… (불러오는 중)</div></div>
+</div>
+<script>
+var SUPA_URL='https://tbrtfccvsvtusfkqdyow.supabase.co';
+var SUPA_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRicnRmY2N2c3Z0dXNma3FkeW93Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODExNDk1MTksImV4cCI6MjA5NjcyNTUxOX0.cs_hfXJle5cEPbjcSFAMd4P0uAyG-8x_jkvjMA8ipVQ';
+function esc(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+/* ⚠ 계약서 본문 — 펄스 index.html의 taContractDoc()와 동일 문안. 수정 시 두 곳을 함께 고칠 것 */
+function buildDoc(p){
+  var E=esc;
+  var U=function(v,w){return v?'<b>'+E(v)+'</b>':'<span style="display:inline-block;min-width:'+(w||60)+'px;border-bottom:1px solid #94a3b8;">&nbsp;</span>';};
+  var sec=function(t){return '<div style="font-weight:800;font-size:11px;margin:11px 0 3px;color:#0c1f3f;">'+t+'</div>';};
+  var pr=function(kr,zh){return '<div style="margin-bottom:5px;"><div style="font-size:10.5px;line-height:1.55;">'+kr+'</div><div style="font-size:10px;line-height:1.5;color:#475569;">'+zh+'</div></div>';};
+  var curKo=p.cur==='USD'?'USD(미달러)':'CNY(위안화)', curZh=p.cur==='USD'?'美元':'人民币';
+  var dKo='20______년 ______월 ______일', dZh='20______年 ______月 ______日';
+  if(p.date){var m=p.date.split('-'); if(m.length===3){dKo=parseInt(m[0])+'년 '+parseInt(m[1])+'월 '+parseInt(m[2])+'일'; dZh=parseInt(m[0])+'年'+parseInt(m[1])+'月'+parseInt(m[2])+'日';}}
+  var fld=function(label,val,w){return '<div style="margin-bottom:3px;">'+label+': '+U(val,w||110)+'</div>';};
+  return '<div style="font-family:\'Malgun Gothic\',\'Microsoft YaHei\',sans-serif;padding:24px 28px;color:#111827;background:#fff;">'
+    +'<div style="text-align:center;font-size:16px;font-weight:800;">해외 고객 소개(모객) 용역 계약서</div>'
+    +'<div style="text-align:center;font-size:12px;font-weight:700;color:#334155;margin:2px 0 12px;">境外客源介绍服务合同</div>'
+    +pr('주식회사 팔로우코리아(이하 "갑")와 '+U(p.cn,150)+'(이하 "을")은 "을"이 중화인민공화국 내에서 대한민국의 의료·미용 서비스를 희망하는 고객을 모집하여 "갑"에게 소개하는 용역과 관련하여 다음과 같이 계약을 체결한다.',
+        'FOLLOW KOREA Co., Ltd.（以下简称"甲方"）与 '+U(p.cn,150)+'（以下简称"乙方"）就乙方在中华人民共和国境内招募有意接受大韩民国医疗·美容服务的客户并介绍给甲方的服务事宜，达成如下协议。')
+    +sec('제 1 조 (목적) / 第一条 (目的)')
+    +pr('본 계약은 "을"이 중화인민공화국 내에서 수행하는 고객 모집·안내·예약 연결 용역의 내용과, "갑"이 지급하는 소개료의 산정·지급 방법 및 양 당사자의 권리·의무를 정하는 것을 목적으로 한다.',
+        '本协议旨在约定乙方在中华人民共和国境内开展的客户招募、咨询引导及预约对接服务的内容，甲方应支付介绍费的计算与支付方式，以及双方的权利与义务。')
+    +sec('제 2 조 (용역의 내용 및 수행 장소) / 第二条 (服务内容及履行地)')
+    +pr('1. 용역 내용: "을"은 중국 내에서 ① 고객 모집 및 상담, ② 대한민국 제휴 의료기관·서비스 안내, ③ 방문 희망일 확인 및 예약 연결, ④ 고객 기초정보의 전달 용역을 수행한다.',
+        '1. 服务内容：乙方在中国境内提供以下服务：①客户招募及咨询；②大韩民国合作医疗机构及服务的介绍；③确认意向到访日期并对接预约；④客户基本信息的传递。')
+    +pr('2. 수행 장소: 본 계약에 따른 "을"의 모든 용역은 중화인민공화국 영역 내에서 수행된다. "을"은 대한민국 내에 지점·사무소·고정사업장을 두지 아니하며, 대한민국 내에서는 어떠한 용역도 수행하지 아니한다.',
+        '2. 服务履行地：本协议项下乙方的全部服务均在中华人民共和国境内履行。乙方在大韩民国境内不设分支机构、办事处或常设机构，亦不在大韩民国境内提供任何服务。')
+    +pr('3. "을"의 임직원이 고객과 함께 대한민국에 입국하여 동행·통역·인솔 등의 업무를 수행하는 경우, 해당 업무는 본 계약에 포함되지 아니하며 별도의 계약으로 체결한다.',
+        '3. 乙方员工随客户入境大韩民国并提供随行、翻译、引导等工作的，该工作不属于本协议范围，须另行签订合同。')
+    +pr('4. "을"은 의료행위·진단·처방을 하거나 치료 결과를 보장하는 행위를 하지 아니한다.',
+        '4. 乙方不得实施医疗行为、诊断、处方，亦不得对治疗效果作出保证。')
+    +sec('제 3 조 (소개료) / 第三条 (介绍费)')
+    +pr('1. 요율: "갑"은 "을"이 소개한 고객이 대한민국 제휴 의료기관에서 실제로 결제·수납한 금액(이하 "실수납액")의 '+U(p.rate,40)+'%를 소개료로 "을"에게 지급한다.',
+        '1. 费率：甲方按乙方介绍的客户在大韩民国合作医疗机构实际支付并入账的金额（以下简称"实收金额"）的 '+U(p.rate,40)+'% 向乙方支付介绍费。')
+    +pr('2. 통화 및 환율: 소개료는 '+U(curKo,90)+'로 산정·지급하며, 환율은 송금일 전 영업일의 서울외국환중개 매매기준율을 적용한다.',
+        '2. 币种及汇率：介绍费以 '+U(curZh,70)+' 计算并支付，汇率采用汇款日前一营业日首尔外汇中介公布的基准汇率。')
+    +pr('3. 제외 사유: 예약 취소·환불·미방문(노쇼) 건과, 고객이 "갑" 또는 제휴 의료기관과 이미 거래관계에 있던 건은 소개료 산정에서 제외한다.',
+        '3. 除外情形：预约取消、退款、未到访（No-show）的订单，以及客户与甲方或合作医疗机构此前已存在交易关系的订单，不计入介绍费。')
+    +pr('4. 수수료 부담: 대한민국 측 송금 수수료는 "갑"이 부담하고, 중개은행 및 수취은행 수수료는 "을"이 부담한다.',
+        '4. 费用承担：大韩民国一方的汇出手续费由甲方承担，中间行及收款行手续费由乙方承担。')
+    +sec('제 4 조 (정산 및 실적 확인) / 第四条 (结算及业绩确认)')
+    +pr('1. 정산은 매월 말일을 기준으로 마감하며, "갑"은 익월 '+U(p.stmtDay,36)+'일까지 "을"에게 소개 실적 대조표(고객·방문일·실수납액·소개료)를 송부한다.',
+        '1. 结算以每月最后一日为截止日，甲方于次月 '+U(p.stmtDay,36)+' 日前向乙方发送介绍业绩对照表（客户、到访日、实收金额、介绍费）。')
+    +pr('2. "을"은 대조표 수령일로부터 7일 내에 서면으로 이의를 제기할 수 있으며, 기간 내 이의가 없으면 해당 대조표의 내용은 확정된다.',
+        '2. 乙方可自收到对照表之日起7日内以书面方式提出异议；期限内未提出异议的，该对照表内容即为确定。')
+    +pr('3. "갑"은 확정일로부터 '+U(p.payDays,36)+'영업일 내에 송금한다. 단, 제5조 및 제6조의 서류가 모두 구비된 경우에 한한다.',
+        '3. 甲方自确定日起 '+U(p.payDays,36)+' 个营业日内汇款，但以第五条及第六条所列资料齐备为前提。')
+    +sec('제 5 조 (세금의 부담) / 第五条 (税费承担)')
+    +pr('1. 본 계약과 관련하여 각 당사자에게 자국 법령에 따라 부과되는 조세·공과금은 각자 부담한다.',
+        '1. 与本协议有关、依照各自所属国家法律法规课征的税费，由各方自行承担。')
+    +pr('2. 제2조 제2항에 따라 "을"의 용역은 대한민국 영역 외에서 수행되므로 본 계약에 따른 소개료는 대한민국 법인세법상 국내원천소득에 해당하지 아니하며, "을"은 대한민국 내에 고정사업장을 두지 아니하므로 한·중 조세조약 제7조에 따라 대한민국에서 과세되지 아니한다.',
+        '2. 根据第二条第2款，乙方的服务在大韩民国境外履行，故本协议的介绍费不属于大韩民国法人税法下的境内源泉所得；且乙方在大韩民国境内无常设机构，依据《中韩税收协定》第七条，在大韩民国不予征税。')
+    +pr('3. 제2항에도 불구하고 대한민국 과세당국이 원천징수를 요구하거나 관계 법령의 해석·개정으로 원천징수 의무가 발생하는 경우, "갑"은 해당 세액을 원천징수한 후의 잔액을 지급하며 "을"은 이에 동의한다. 이 경우 "갑"은 "을"에게 원천징수영수증을 교부한다.',
+        '3. 尽管有第2款约定，若大韩民国税务机关要求代扣代缴，或因相关法律的解释、修订而产生代扣代缴义务，甲方将在扣缴相应税款后支付余额，乙方对此予以同意。此时甲方应向乙方交付扣缴凭证。')
+    +pr('4. "을"은 "갑"의 요청이 있는 경우 지체 없이 ① 중국 세무당국이 발급한 거주자증명서(中国税收居民身份证明), ② 영업집조(营业执照) 사본, ③ 법정대표인 신분증 사본, ④ 수취계좌 증명서류를 제공한다.',
+        '4. 经甲方要求，乙方应及时提供：①中国税务机关开具的《中国税收居民身份证明》；②《营业执照》副本；③法定代表人身份证件复印件；④收款账户证明文件。')
+    +pr('5. "을"이 제4항의 서류를 제공하지 아니하여 "갑"이 원천징수를 하게 되는 경우, 그로 인한 세액은 "을"이 부담한다.',
+        '5. 因乙方未提供第4款资料而导致甲方实施扣缴的，由此产生的税款由乙方承担。')
+    +sec('제 6 조 (증빙서류 및 인보이스) / 第六条 (凭证及发票)')
+    +pr('1. "을"은 송금 요청 시 ① 인보이스(发票 또는 Commercial Invoice), ② 월별 소개 고객 명단, ③ 확정된 실적 대조표 서명본을 "갑"에게 제출한다.',
+        '1. 乙方在申请汇款时，应向甲方提交：①发票或 Commercial Invoice；②当月介绍客户名单；③已确认的业绩对照表签署版。')
+    +pr('2. "갑"은 대한민국 「외국환거래법」 및 지정거래 외국환은행의 요구에 따라 본 계약서 및 인보이스를 은행에 제출할 수 있으며, "을"은 이에 협조한다.',
+        '2. 甲方可依据大韩民国《外汇交易法》及指定外汇银行的要求，向银行提交本协议及发票，乙方应予配合。')
+    +sec('제 7 조 (고객 정보의 보호) / 第七条 (客户信息保护)')
+    +pr('1. "을"은 고객정보를 수집·제공하기 전에 고객으로부터 국외 이전 및 의료기관 제공에 관한 명시적 동의를 받아야 하며, 그 증빙을 보관하여 "갑"의 요청 시 제시한다.',
+        '1. 乙方在收集并提供客户信息前，须取得客户关于信息跨境传输及向医疗机构提供的明示同意，并保存相关证明，经甲方要求时予以出示。')
+    +pr('2. 양 당사자는 대한민국 「개인정보 보호법」 및 중화인민공화국 「个人信息保护法」을 각각 준수하고, 고객정보를 본 계약의 목적 외로 사용하지 아니하며, 계약 종료 시 반환 또는 파기한다.',
+        '2. 双方应分别遵守大韩民国《个人信息保护法》及中华人民共和国《个人信息保护法》，不得将客户信息用于本协议目的之外，协议终止时予以返还或销毁。')
+    +sec('제 8 조 (준법 의무) / 第八条 (合规义务)')
+    +pr('1. 본 계약의 소개 대상은 대한민국 「의료 해외진출 및 외국인환자 유치 지원에 관한 법률」상 외국인환자에 한한다. "을"은 대한민국 「의료법」상 환자 유인·알선 금지 규정을 준수하며, 대한민국 거주자(내국인)에 대한 소개·알선 행위를 하지 아니한다.',
+        '1. 本协议的介绍对象仅限于大韩民国《医疗海外拓展及外国患者招揽支援法》所规定的外国患者。乙方应遵守大韩民国《医疗法》关于禁止诱引、介绍患者的规定，不得对大韩民国居民（本国人）实施介绍、招揽行为。')
+    +pr('2. "을"은 중화인민공화국 「广告法」 및 의료광고 관련 법령을 준수하며, 가격 표시, 치료효과 보장, 시술 전후 비교 사진 등 금지된 표현을 사용하지 아니한다.',
+        '2. 乙方应遵守中华人民共和国《广告法》及医疗广告相关法规，不得使用价格标示、疗效保证、术前术后对比照片等被禁止的表述。')
+    +pr('3. 양 당사자는 상대방 및 제3자(의료기관 임직원, 공무원 등)에게 부당한 금품이나 향응을 제공하지 아니한다.',
+        '3. 双方不得向对方及第三方（医疗机构职员、公务人员等）提供不当财物或招待。')
+    +pr('4. "을"이 본 조를 위반하여 "갑"에게 손해가 발생한 경우 "을"은 그 손해를 배상한다.',
+        '4. 乙方违反本条致甲方损失的，应予赔偿。')
+    +sec('제 9 조 (계약기간) / 第九条 (协议期限)')
+    +pr('본 계약의 기간은 체결일로부터 1년으로 하며, 기간 만료 30일 전까지 어느 일방의 서면 이의가 없으면 동일한 조건으로 1년간 자동 연장된다.',
+        '本协议期限自签署之日起1年；期满前30日内任何一方未提出书面异议的，按同等条件自动延长1年。')
+    +sec('제 10 조 (해지) / 第十条 (解除)')
+    +pr('1. 일방이 본 계약을 중대하게 위반한 경우 상대방은 서면 통지로 즉시 계약을 해지할 수 있다. 2. 각 당사자는 30일 전 서면 통지로 계약을 해지할 수 있다. 3. 해지 시에도 해지일 이전에 발생한 소개료는 제4조에 따라 정산하여 지급한다.',
+        '1. 一方严重违反本协议时，另一方可书面通知立即解除协议。2. 各方可提前30日书面通知解除协议。3. 协议解除后，解除日前已发生的介绍费仍按第四条结算支付。')
+    +sec('제 11 조 (비밀유지) / 第十一条 (保密)')
+    +pr('양 당사자는 본 계약의 내용, 소개료 요율, 고객정보, 의료기관의 가격 정보 등을 제3자에게 누설하지 아니하며, 이 의무는 계약 종료 후 3년간 존속한다.',
+        '双方不得向第三方泄露本协议内容、介绍费费率、客户信息及医疗机构价格信息等，该义务在协议终止后继续存续3年。')
+    +sec('제 12 조 (준거법 및 분쟁해결) / 第十二条 (适用法律及争议解决)')
+    +pr('본 계약의 준거법은 대한민국 법으로 한다. 분쟁은 상호 협의로 해결하되, 협의가 성립되지 아니하는 경우 대한상사중재원(KCAB)의 중재규칙에 따라 서울에서 중재로 최종 해결한다.',
+        '本协议适用大韩民国法律。争议应通过友好协商解决；协商不成的，依据大韩商事仲裁院（KCAB）仲裁规则在首尔仲裁并终局解决。')
+    +sec('제 13 조 (기타) / 第十三条 (其他)')
+    +pr('1. 본 계약은 국문과 중문으로 작성하며, 해석상 불일치가 있는 경우 국문을 우선한다. 2. 본 계약에 정하지 아니한 사항은 양 당사자가 협의하여 정한다. 3. 본 계약은 2부를 작성하여 각 1부씩 보관한다.',
+        '1. 本协议以韩文及中文书就，解释存在歧义时以韩文为准。2. 本协议未尽事宜由双方协商确定。3. 本协议正本两份，双方各持一份。')
+    +'<div style="text-align:center;font-size:12px;font-weight:700;margin:16px 0 14px;">'+dKo+' / '+dZh+'</div>'
+    +'<div style="display:flex;gap:18px;flex-wrap:wrap;font-size:10.5px;">'
+    +'<div style="flex:1;min-width:250px;border:1px solid #e2e8f0;border-radius:8px;padding:10px 12px;">'
+      +'<div style="font-weight:800;margin-bottom:5px;">[갑] (甲方 / Party A)</div>'
+      +'<div style="margin-bottom:3px;">상호명 (公司名): <b>주식회사 팔로우코리아</b><br>FOLLOW KOREA Co., Ltd.</div>'
+      +'<div style="margin-bottom:3px;">사업자등록번호: 696-86-03627</div>'
+      +'<div style="margin-bottom:3px;">주소 (地址): 서울 서초구 강남대로 373, 116 13층</div>'
+      +fld('담당자 (联系人)',p.conA)+fld('연락처 (电话)',p.phoneA)
+      +'<div style="margin-top:6px;">대표자 (代表者): <b>하장환</b>  (인)(印)</div>'
+      +(p.signA?'<img src="'+p.signA+'" style="height:50px;margin-top:2px;">':'<div style="height:50px;"></div>')+'</div>'
+    +'<div style="flex:1;min-width:250px;border:1px solid #bae6fd;border-radius:8px;padding:10px 12px;background:#f8fdff;">'
+      +'<div style="font-weight:800;margin-bottom:5px;">[을] (乙方 / Party B)</div>'
+      +fld('상호명 (公司名)',p.cn,150)
+      +fld('통일사회신용코드 (统一社会信用代码)',p.reg,120)
+      +fld('주소 (地址)',p.addr,150)
+      +fld('담당자 (联系人)',p.conB)+fld('연락처 (电话)',p.phoneB)
+      +'<div style="margin-bottom:3px;">개호은행 (开户银行): '+U(p.bank,90)+'  SWIFT: '+U(p.swift,70)+'</div>'
+      +fld('계좌번호 (账号)',p.account,150)
+      +'<div style="margin-top:6px;">법정대표인 (法定代表人): '+U(p.legalRep,80)+'  (인)(印)</div>'
+      +(p.signB?'<img src="'+p.signB+'" style="height:50px;margin-top:2px;">':'<div style="height:50px;"></div>')+'</div>'
+    +'</div></div>';
+}
+function fullHtml(p){
+  return '<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>境外客源介绍服务合同 — '+esc(p.cn)+'</title></head><body style="margin:0;background:#fff;">'+buildDoc(p)+'</body></html>';
+}
+function b64uDec(s){ s=s.replace(/-/g,'+').replace(/_/g,'/'); while(s.length%4)s+='='; return decodeURIComponent(escape(atob(s))); }
+function qs(n){ var m=location.search.match(new RegExp('[?&]'+n+'=([^&]+)')); return m?m[1]:null; }
+function randKey(){ var a=new Uint8Array(16); crypto.getRandomValues(a); return Array.prototype.map.call(a,function(b){return ('0'+b.toString(16)).slice(-2);}).join(''); }
+function dl(name,html){ var a=document.createElement('a'); a.href='data:text/html;base64,'+btoa(unescape(encodeURIComponent(html))); a.download=name; document.body.appendChild(a); a.click(); a.remove(); }
+
+var P=null, app=document.getElementById('app');
+
+/* ── 열람 모드 (?v=키): 완료된 계약서 ── */
+var vkey=qs('v');
+if(vkey){
+  fetch(SUPA_URL+'/rest/v1/rpc/ta_contract_html',{method:'POST',headers:{apikey:SUPA_KEY,Authorization:'Bearer '+SUPA_KEY,'Content-Type':'application/json'},body:JSON.stringify({p_key:vkey})})
+  .then(function(r){return r.json();})
+  .then(function(j){
+    if(!j||!j.html){app.innerHTML='<div class="card err">未找到合同。(계약서를 찾을 수 없습니다)</div>';return;}
+    window._viewHtml=j.html; window._viewName='合同_'+(j.agency_name||'contract')+'.html';
+    app.innerHTML='<div class="card"><div class="ok" style="margin-bottom:8px;">✓ 已签署合同 (서명 완료된 계약서)</div>'
+      +'<div style="display:flex;gap:8px;margin-bottom:10px;"><button class="btn primary" onclick="dl(window._viewName,window._viewHtml)">保存合同文件 (다운로드)</button><button class="btn" onclick="window.print()">打印 (인쇄)</button></div>'
+      +'<div class="doc" style="max-height:none;" id="vdoc"></div></div>';
+    var ifr=document.createElement('iframe'); ifr.style.cssText='width:100%;height:1200px;border:0;'; document.getElementById('vdoc').appendChild(ifr);
+    ifr.srcdoc=j.html;
+  })
+  .catch(function(e){app.innerHTML='<div class="card err">加载失败: '+esc(e.message)+'</div>';});
+}else{
+/* ── 서명 모드 (?d=파라미터 / 파라미터 없으면 공란 신규 — 브로슈어 QR용) ── */
+var dRaw=qs('d');
+if(dRaw){ try{ P=JSON.parse(b64uDec(dRaw)); }catch(e){} }
+else { P={aid:null,cn:'',en:'',reg:'',addr:'',rate:'20',cur:'CNY',stmtDay:'10',payDays:'5',conA:'손이나 (孙依娜)',phoneA:'+86 158-5812-2829',conB:'',phoneB:'',bank:'',swift:'',account:'',legalRep:''}; }
+if(!P||(dRaw&&!P.cn)){
+  app.innerHTML='<div class="card err">链接无效。请向 FOLLOW KOREA 负责人索取新的二维码。<div class="muted" style="margin-top:4px;">링크가 유효하지 않습니다. 담당자에게 새 QR을 요청하세요.</div></div>';
+}else{
+  P.date=P.date||new Date().toISOString().slice(0,10);
+  app.innerHTML=''
+  +'<div class="card"><div style="font-weight:800;font-size:14px;">'+(P.cn?esc(P.cn):'旅行社合作协议 · 在线签署')+'</div><div class="muted">请确认以下合同内容 (아래 계약 내용을 확인하세요) · 介绍费 <b>'+esc(P.rate)+'%</b> · '+esc(P.cur)+(P.cn?'':'<br>请在下方填写贵社信息后签字提交。(아래에 회사 정보를 입력 후 서명하세요)')+'</div></div>'
+  +'<div class="card"><div class="doc" id="doc"></div></div>'
+  +'<div class="card"><div style="font-weight:800;font-size:13px;margin-bottom:4px;">乙方信息 (을방 정보)</div>'
+    +'<div class="grid">'
+    +'<div><label>公司名 (상호명) *</label><input id="f-cn"></div>'
+    +'<div><label>统一社会信用代码</label><input id="f-reg"></div>'
+    +'<div style="grid-column:1/-1;"><label>地址 (주소)</label><input id="f-addr"></div>'
+    +'<div><label>联系人 (담당자)</label><input id="f-conb"></div>'
+    +'<div><label>电话 (연락처)</label><input id="f-phoneb"></div>'
+    +'<div><label>开户银行</label><input id="f-bank"></div>'
+    +'<div><label>SWIFT</label><input id="f-swift"></div>'
+    +'<div style="grid-column:1/-1;"><label>账号 (계좌번호)</label><input id="f-account"></div>'
+    +'<div><label>法定代表人 (법정대표인) *</label><input id="f-legal"></div>'
+    +'</div></div>'
+  +'<div class="card"><div style="display:flex;justify-content:space-between;align-items:center;"><div style="font-weight:800;font-size:13px;">签字 (서명) *</div><button class="btn" style="padding:5px 12px;font-size:12px;" onclick="padClear()">重写 (지우기)</button></div>'
+    +'<div class="muted" style="margin:4px 0 6px;">请法定代表人在下方框内签字 (법정대표인이 아래에 서명하세요)</div>'
+    +'<canvas id="pad" class="pad" width="640" height="200"></canvas></div>'
+  +'<div class="card"><button class="btn primary block" id="submit-btn" onclick="submitSign()">提交签署 (서명 제출)</button><div class="muted" style="margin-top:6px;text-align:center;">提交后合同自动发送至 FOLLOW KOREA。(제출 시 계약서가 팔로우코리아로 전송됩니다)</div></div>';
+  ['cn','reg','addr'].forEach(function(k){document.getElementById('f-'+k).value=P[k]||'';});
+  document.getElementById('f-conb').value=P.conB||'';
+  document.getElementById('f-phoneb').value=P.phoneB||'';
+  document.getElementById('f-bank').value=P.bank||'';
+  document.getElementById('f-swift').value=P.swift||'';
+  document.getElementById('f-account').value=P.account||'';
+  document.getElementById('f-legal').value=P.legalRep||'';
+  renderDoc();
+  ['f-cn','f-reg','f-addr','f-conb','f-phoneb','f-bank','f-swift','f-account','f-legal'].forEach(function(id){document.getElementById(id).addEventListener('input',renderDoc);});
+  // 서명 패드
+  (function(){
+    var cv=document.getElementById('pad'),ctx=cv.getContext('2d');
+    ctx.lineWidth=2.8;ctx.lineCap='round';ctx.lineJoin='round';ctx.strokeStyle='#111827';
+    var draw=false,last=null;
+    function pos(e){var r=cv.getBoundingClientRect();return {x:(e.clientX-r.left)*cv.width/r.width,y:(e.clientY-r.top)*cv.height/r.height};}
+    cv.addEventListener('pointerdown',function(e){draw=true;last=pos(e);cv._dirty=true;try{cv.setPointerCapture(e.pointerId);}catch(x){}e.preventDefault();});
+    cv.addEventListener('pointermove',function(e){if(!draw)return;var p2=pos(e);ctx.beginPath();ctx.moveTo(last.x,last.y);ctx.lineTo(p2.x,p2.y);ctx.stroke();last=p2;e.preventDefault();});
+    ['pointerup','pointercancel','pointerleave'].forEach(function(ev){cv.addEventListener(ev,function(){draw=false;});});
+  })();
+}
+}
+function curP(withSign){
+  var g=function(id){return (document.getElementById(id)||{value:''}).value.trim();};
+  var cv=document.getElementById('pad');
+  return {cn:g('f-cn'),en:P.en||'',reg:g('f-reg'),addr:g('f-addr'),
+    rate:P.rate,cur:P.cur,stmtDay:P.stmtDay,payDays:P.payDays,date:P.date,
+    conA:P.conA||'',phoneA:P.phoneA||'',conB:g('f-conb'),phoneB:g('f-phoneb'),
+    bank:g('f-bank'),swift:g('f-swift'),account:g('f-account'),legalRep:g('f-legal'),
+    signA:null,signB:(withSign&&cv&&cv._dirty)?cv.toDataURL('image/png'):null};
+}
+function renderDoc(){ document.getElementById('doc').innerHTML=buildDoc(curP(false)); }
+function padClear(){ var cv=document.getElementById('pad'); cv.getContext('2d').clearRect(0,0,cv.width,cv.height); cv._dirty=false; }
+function submitSign(){
+  var p=curP(true);
+  if(!p.cn){alert('请填写公司名 (상호명을 입력하세요)');return;}
+  if(!p.legalRep){alert('请填写法定代表人 (법정대표인을 입력하세요)');return;}
+  if(!p.signB){alert('请先签字 (먼저 서명해 주세요)');return;}
+  var btn=document.getElementById('submit-btn'); btn.disabled=true; btn.textContent='提交中…';
+  var html=fullHtml(p), key=randKey();
+  var dd=JSON.parse(JSON.stringify(p)); delete dd.signA; delete dd.signB;
+  fetch(SUPA_URL+'/rest/v1/ta_contracts',{method:'POST',headers:{apikey:SUPA_KEY,Authorization:'Bearer '+SUPA_KEY,'Content-Type':'application/json',Prefer:'return=minimal'},
+    body:JSON.stringify({agency_id:P.aid||null,agency_name:p.cn,data:dd,html:html,processed:false,view_key:key})})
+  .then(function(r){
+    if(!r.ok)throw new Error('HTTP '+r.status);
+    window._doneHtml=html; window._doneName='合同_'+p.cn+'_'+p.date+'.html';
+    var vurl=location.origin+location.pathname+'?v='+key;
+    app.innerHTML='<div class="card" style="text-align:center;">'
+      +'<div style="font-size:40px;">✅</div><div class="ok" style="font-size:16px;">签署完成！(서명 완료)</div>'
+      +'<div class="muted" style="margin:6px 0 12px;">合同已发送至 FOLLOW KOREA。您可保存合同副本：<br>계약서가 팔로우코리아로 전송되었습니다. 사본을 보관하세요.</div>'
+      +'<button class="btn primary block" onclick="dl(window._doneName,window._doneHtml)" style="margin-bottom:8px;">保存合同文件 (계약서 다운로드)</button>'
+      +'<div class="muted" style="word-break:break-all;">合同查看链接 (열람 링크):<br><a href="'+vurl+'">'+vurl+'</a><br>可收藏或转发到微信保存。(위챗에 전달해 보관할 수 있습니다)</div></div>';
+    window.scrollTo(0,0);
+  })
+  .catch(function(e){ btn.disabled=false; btn.textContent='提交签署 (서명 제출)'; alert('提交失败，请重试。(제출 실패: '+e.message+')'); });
+}
+</script>
+</body>
+</html>
