@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /sign.html
+Disallow: /promo/
+
+Sitemap: https://followkorea.co.kr/sitemap.xml

@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { HOSPITAL_DATA } from './hospitalData';
+// 제휴 병원 수 = 의료기관만(헤어·뷰티·스튜디오 '기타 서비스' 제외) — 병원 추가 시 숫자 자동 반영
+const N_HOSP = HOSPITAL_DATA.filter(h => !h.cat.includes('기타 서비스')).length;
 import type { LanguageCode } from '../App';
 
 // 홍보 팝업 2종(삼성서울병원 입점 · KIMES BUSAN 2026)을 한 오버레이에 나란히 표시 — 2026-09-18
@@ -41,7 +44,7 @@ const KIMES_TEXT: Record<string, CardText> = {
   KR: {
     badge: '전시회 참가 안내', title: 'KIMES BUSAN 2026', sub: '2026. 10. 23(금)~25(일) · BEXCO 부산 · J405 부스',
     desc: '팔로우코리아가 부산 국제 의료기기·병원설비 전시회에 참가합니다.\n부스에 방문하시면 아래 내용을 직접 시연해 드립니다.',
-    items: ['해외환자 유치 플랫폼 · 65개 제휴 병원', '병원 운영 SaaS 강남펄스 실화면 데모', '왕홍·KOL+KOC 중국 마케팅 · 중국 진출 상담'],
+    items: [`해외환자 유치 플랫폼 · ${N_HOSP}개 제휴 병원`, '병원 운영 SaaS 강남펄스 실화면 데모', '왕홍·KOL+KOC 중국 마케팅 · 중국 진출 상담'],
     cta: '카카오톡으로 미팅 예약',
     invite: '카카오톡으로 미팅을 요청하시면 전시회 초대권을 보내드립니다.',
     today: '오늘 하루 보지 않기', close: '닫기',
@@ -49,7 +52,7 @@ const KIMES_TEXT: Record<string, CardText> = {
   EN: {
     badge: 'Exhibition Notice', title: 'KIMES BUSAN 2026', sub: 'Oct 23–25, 2026 · BEXCO Busan · Booth J405',
     desc: 'Follow Korea is exhibiting at KIMES Busan.\nVisit our booth for a live demo of:',
-    items: ['International patient platform · 65 partner hospitals', 'Gangnam Pulse clinic SaaS live demo', 'China marketing (Wanghong · KOL+KOC) consulting'],
+    items: [`International patient platform · ${N_HOSP} partner hospitals`, 'Gangnam Pulse clinic SaaS live demo', 'China marketing (Wanghong · KOL+KOC) consulting'],
     cta: 'Book a meeting via KakaoTalk',
     invite: 'Request a meeting on KakaoTalk and we will send you a free exhibition pass.',
     today: 'Don’t show again today', close: 'Close',
