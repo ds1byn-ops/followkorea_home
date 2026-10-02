@@ -1147,6 +1147,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
             <div className="flex gap-6 md:gap-10 text-[10px] md:text-[11px] font-black text-gray-400 uppercase tracking-widest">
               <button onClick={onOpenPrivacy} className="hover:text-gray-900 transition-colors uppercase">{t.privacy}</button>
               <button onClick={onOpenTerms} className="hover:text-gray-900 transition-colors uppercase">{t.terms}</button>
+              <a href={lang === 'KR' ? '/faq/' : lang === 'CN' ? '/faq/zh.html' : '/faq/en.html'} className="hover:text-gray-900 transition-colors uppercase">FAQ</a>
             </div>
           </div>
         </div>
