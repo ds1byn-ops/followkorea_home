@@ -4326,5 +4326,30 @@ export const HOSPITAL_DATA: HospDetail[] = [
       }
     ],
     "thumb": "hthumb/byme.jpg"
+  },
+  {
+    "name": { "kr": "셀이즈랩의원", "en": "Cellis LAB Clinic", "zh": "Cellis LAB诊所" },
+    "dept": { "kr": "줄기세포·역노화(세포치료)", "en": "Stem Cell · Anti-aging", "zh": "干细胞·抗衰老(细胞治疗)" },
+    "cat": "줄기세포",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["줄기세포 치료", "NK세포 면역", "역노화 수액(NAD+)", "지방이식·흡입", "피부재생·통증"],
+      "en": ["Stem Cell Therapy", "NK Cell Immunity", "Anti-aging IV (NAD+)", "Fat Graft & Lipo", "Skin Regen & Pain"],
+      "zh": ["干细胞治疗", "NK细胞免疫", "抗衰输液(NAD+)", "脂肪移植·吸脂", "皮肤再生·疼痛"]
+    },
+    "hours": "화·수·금 10:00-19:00 · 목 10:00-21:00 · 토 10:00-17:00 (일·월 휴진)",
+    "loc": {
+      "ko": "서울 서초구 효령로 244 (셀이즈랩의원 1~7층)",
+      "zh": "首尔瑞草区孝令路244(1-7层)",
+      "en": "244 Hyoryeong-ro, Seocho-gu, Seoul"
+    },
+    "overview": {
+      "kr": "셀이즈랩의원(Cellis LAB)은 서울 서초구 효령로 244에 위치한 줄기세포·역노화(리버스에이징) 전문 의원입니다. 대표원장 박태혁을 중심으로 원내 줄기세포 연구소를 두고 지방유래 줄기세포·MCT 자가혈·NMN+제대줄기세포·NK세포 면역치료와 지방이식·흡입, 피부재생·통증치료를 제공합니다. 기능의학 검사로 근본 원인을 분석해 개인별 맞춤 세포치료를 설계합니다.",
+      "en": "Cellis LAB Clinic, on Hyoryeong-ro 244 in Seocho, Seoul, is a stem-cell and anti-aging (reverse-aging) clinic led by Dr. Park Tae-hyeok with an in-house stem-cell laboratory. It offers adipose-derived stem cells, MCT autologous blood, NMN + umbilical-cord stem cells and NK-cell immunotherapy, plus fat grafting/liposuction, skin regeneration and pain care.",
+      "zh": "Cellis LAB诊所位于首尔瑞草区孝令路244，是干细胞·抗衰老(逆龄)专科诊所。由院长朴泰赫领衔，设有院内干细胞研究所，提供脂肪来源干细胞·MCT自体血·NMN+脐带干细胞·NK细胞免疫治疗，以及脂肪移植·吸脂、皮肤再生与疼痛治疗。"
+    },
+    "doctors": [
+      { "name": "박태혁", "title": "대표원장", "spec": ["줄기세포·역노화", "면역(NK세포) 치료"] }
+    ]
   }
 ];
