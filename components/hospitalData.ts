@@ -4269,6 +4269,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
     },
     "doctors": [
       { "name": "박태혁", "title": "대표원장", "spec": ["줄기세포·역노화", "면역(NK세포) 치료"] }
-    ]
+    ],
+    "thumb": "hthumb/cellis.jpg"
   }
 ];
