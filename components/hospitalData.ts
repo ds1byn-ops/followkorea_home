@@ -4318,6 +4318,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "en": "RE:BERRY Clinic Myeongdong, in Myeongdong, Seoul, is a dermatology clinic that designs combined treatments — lifting, injectables, laser and pigment care, pore and scar treatment, and skin boosters — based on precise diagnosis, with the same standardized 1:1 care as its branches nationwide.",
       "zh": "丽贝瑞皮肤科(明洞店)位于首尔明洞，是以精准诊断为基础的皮肤科，根据肌肤状态组合设计提升·紧致、填充·肉毒、激光·色素、毛孔·疤痕及皮肤焕活等项目。与江南·麻浦·东滩等全国分院采用统一标准的1:1定制诊疗。"
     },
-    "doctors": []
+    "doctors": [],
+    "thumb": "hthumb/reberry_md.jpg"
   }
 ];
