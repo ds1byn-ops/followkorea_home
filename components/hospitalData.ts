@@ -4271,5 +4271,30 @@ export const HOSPITAL_DATA: HospDetail[] = [
       { "name": "박태혁", "title": "대표원장", "spec": ["줄기세포·역노화", "면역(NK세포) 치료"] }
     ],
     "thumb": "hthumb/cellis.jpg"
+  },
+  {
+    "name": { "kr": "제이린안과", "en": "JRYN Eye Clinic", "zh": "JRYN眼科" },
+    "dept": { "kr": "안과(스마일라식·ICL·백내장)", "en": "Ophthalmology (SMILE·ICL·Cataract)", "zh": "眼科(全飞秒·ICL·白内障)" },
+    "cat": "안과",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["스마일라식", "ICL 렌즈삽입술", "노안·백내장", "라식·라섹", "드림렌즈"],
+      "en": ["SMILE LASIK", "ICL Implantation", "Presbyopia·Cataract", "LASIK·LASEK", "Ortho-K"],
+      "zh": ["SMILE全飞秒", "ICL晶体植入", "老视·白内障", "LASIK·LASEK", "角膜塑形镜"]
+    },
+    "hours": "월~금 09:00-18:00 · 토 09:00-13:00 (일·공휴일 휴진)",
+    "loc": {
+      "ko": "부산 부산진구 가야대로 753 (서면, 제이린메디컬타워)",
+      "zh": "釜山西面(伽倻大路753)",
+      "en": "Seomyeon, Busanjin-gu, Busan"
+    },
+    "overview": {
+      "kr": "제이린안과(JRYN)는 부산 서면에 위치한 안과로, 대표원장 한상엽을 중심으로 스마일라식·ICL·라식/라섹 시력교정과 노안·백내장 수술을 전문으로 합니다. ZEISS 스마일라식 3대 인증(엑설런스 센터·베스트 스킬 서전·애드미럴 서전), ICL 글로벌 트레이너, 노안백내장 15,000례 이상의 경험을 보유하고 있습니다.",
+      "en": "JRYN Eye Clinic in Seomyeon, Busan, led by Dr. Han Sang-youp, specializes in SMILE, ICL and LASIK/LASEK vision correction and presbyopia/cataract surgery, with three ZEISS SMILE certifications, ICL global trainer status, and over 15,000 presbyopia-cataract cases.",
+      "zh": "JRYN眼科位于釜山西面，由院长韩相烨主诊，专注于SMILE全飞秒·ICL·LASIK/LASEK视力矫正及老视·白内障手术。拥有蔡司SMILE三大认证、ICL全球培训师资质，老视白内障手术经验超15,000例。"
+    },
+    "doctors": [
+      { "name": "한상엽", "title": "대표원장", "spec": ["안과 전문의", "스마일라식·ICL", "노안·백내장"] }
+    ]
   }
 ];
