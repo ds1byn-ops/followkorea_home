@@ -4296,5 +4296,28 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "doctors": [
       { "name": "한상엽", "title": "대표원장", "spec": ["안과 전문의", "스마일라식·ICL", "노안·백내장"] }
     ]
+  },
+  {
+    "name": { "kr": "리베리의원 명동점", "en": "RE:BERRY Clinic Myeongdong", "zh": "丽贝瑞皮肤科(明洞店)" },
+    "dept": { "kr": "피부과", "en": "Dermatology", "zh": "皮肤科" },
+    "cat": "피부·성형",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["리프팅·탄력", "쁘띠·필러·보톡스", "레이저·색소", "모공·흉터", "스킨부스터"],
+      "en": ["Lifting", "Filler·Botox", "Laser·Pigment", "Pore·Scar", "Skin Booster"],
+      "zh": ["提升·紧致", "填充·肉毒", "激光·色素", "毛孔·疤痕", "皮肤焕活"]
+    },
+    "hours": "",
+    "loc": {
+      "ko": "서울 중구 명동10길 58, 2·3층 (명동)",
+      "zh": "首尔中区明洞10街58",
+      "en": "Myeongdong, Jung-gu, Seoul"
+    },
+    "overview": {
+      "kr": "리베리의원(RE:BERRY) 명동점은 서울 명동(중구 명동10길 58)에 위치한 피부과로, 정확한 진단을 바탕으로 리프팅·탄력, 쁘띠·필러·보톡스, 레이저·색소, 모공·흉터, 스킨부스터 등을 피부 상태에 맞게 조합해 설계합니다. 강남·마포·동탄·영종도·청주 등 전국 지점과 동일한 기준의 1:1 맞춤 진료를 제공합니다.",
+      "en": "RE:BERRY Clinic Myeongdong, in Myeongdong, Seoul, is a dermatology clinic that designs combined treatments — lifting, injectables, laser and pigment care, pore and scar treatment, and skin boosters — based on precise diagnosis, with the same standardized 1:1 care as its branches nationwide.",
+      "zh": "丽贝瑞皮肤科(明洞店)位于首尔明洞，是以精准诊断为基础的皮肤科，根据肌肤状态组合设计提升·紧致、填充·肉毒、激光·色素、毛孔·疤痕及皮肤焕活等项目。与江南·麻浦·东滩等全国分院采用统一标准的1:1定制诊疗。"
+    },
+    "doctors": []
   }
 ];
