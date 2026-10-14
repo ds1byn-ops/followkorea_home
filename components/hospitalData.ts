@@ -4320,5 +4320,31 @@ export const HOSPITAL_DATA: HospDetail[] = [
     },
     "doctors": [],
     "thumb": "hthumb/reberry_md.jpg"
+  },
+  {
+    "name": { "kr": "허쉬성형외과", "en": "HER:SHE Plastic Surgery", "zh": "HER:SHE整形外科" },
+    "dept": { "kr": "성형외과(안티에이징)", "en": "Plastic Surgery (Anti-aging)", "zh": "整形外科(抗衰)" },
+    "cat": "피부·성형",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["안면거상(맥스리프팅)", "중년 눈성형", "에피티콘 실리프팅", "지방이식·줄기세포", "어깨·힙 필러·힙업"],
+      "en": ["Face Lift", "Mid-age Eye Surgery", "Epiticon Thread Lift", "Fat Graft·Stem Cell", "Shoulder·Hip Filler"],
+      "zh": ["面部提升(除皱拉皮)", "中年眼整形", "Epiticon线雕", "脂肪移植·干细胞", "肩部·臀部填充"]
+    },
+    "hours": "월~금 10:00-19:00 · 토 10:00-16:00",
+    "loc": {
+      "ko": "서울 강남구 삼성로 730, 2~4층 (청담동)",
+      "zh": "首尔清潭洞 三成路730",
+      "en": "Cheongdam, Gangnam, Seoul"
+    },
+    "overview": {
+      "kr": "허쉬성형외과(HER:SHE)는 1992년 개원한 서울 청담동의 안티에이징 성형외과로, 성형외과 전문의로만 구성된 의료진이 실명제로 진료합니다. 안면거상(맥스리프팅·딥플레인)·중년 눈성형·에피티콘 실리프팅·지방이식·줄기세포, 어깨/가슴/힙 필러와 힙업리프팅까지 'Beauty Aging'을 전문으로 하며, 누적 4만여 건의 상담·수술과 50개국 이상 외국인 환자 진료 경험을 보유하고 보건복지부 첨단재생의료실시기관으로 지정되었습니다.",
+      "en": "HER:SHE Plastic Surgery, founded in 1992 in Cheongdam, Seoul, is an anti-aging plastic surgery clinic staffed entirely by board-certified plastic surgeons under a named-doctor system, specializing in face lifts, mid-age eye surgery, Epiticon thread lifting, fat grafting, stem cells and shoulder/hip fillers — with 40,000+ procedures, patients from 50+ countries, and advanced regenerative medicine designation.",
+      "zh": "HER:SHE整形外科成立于1992年，位于首尔清潭洞，是以抗衰(Beauty Aging)为专长的整形外科，由整形外科专科医生组成并实行医生实名制。专注面部提升、中年眼整形、Epiticon线雕、脂肪移植·干细胞及肩部/臀部填充，累计约4万例手术、接诊50多个国家患者，并获指定为尖端再生医疗实施机构。"
+    },
+    "doctors": [
+      { "name": "정영춘", "title": "대표원장", "spec": ["성형외과 전문의", "안면거상·안티에이징", "중년 눈성형"] }
+    ],
+    "thumb": "hthumb/hershe.jpg"
   }
 ];
