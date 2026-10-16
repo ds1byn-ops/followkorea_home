@@ -2057,7 +2057,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
   {
     "name": {
       "kr": "신소애여성의원",
-      "en": "Sinsoa Women's Clinic",
+      "en": "Sinsoe Women's Clinic",
       "zh": "新素爱女性医院"
     },
     "dept": {
@@ -2092,7 +2092,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
     },
     "overview": {
       "kr": "신소애여성의원은 소음순 교정, 난소 줄기세포, 자궁근종 치료 전문 병원입니다.",
-      "en": "Sinsoa Women's Clinic specializes in female aesthetic procedures and stem cell treatments.",
+      "en": "Sinsoe Women's Clinic specializes in female aesthetic procedures and stem cell treatments.",
       "zh": "新素爱女性医院专注于女性妇科整形和干细胞治疗。"
     },
     "doctors": [
@@ -3322,7 +3322,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
   {
     "name": { "kr": "강남JS병원", "en": "Gangnam JS Hospital", "zh": "江南JS医院" },
     "dept": { "kr": "정형외과·신경외과", "en": "Orthopedics · Neurosurgery", "zh": "骨科·神经外科" },
-    "cat": "정형·척추",
+    "cat": "정형·척추/줄기세포",
     "badge": "NEW",
     "treats": {
       "kr": ["줄기세포 연골재생", "척추내시경", "전방십자인대 재건", "BMAC 주사", "인공관절"],
@@ -4320,7 +4320,8 @@ export const HOSPITAL_DATA: HospDetail[] = [
     },
     "doctors": [
       { "name": "한상엽", "title": "대표원장", "spec": ["안과 전문의", "스마일라식·ICL", "노안·백내장"] }
-    ]
+    ],
+    "thumb": "hthumb/jryn.jpg"
   },
   {
     "name": { "kr": "리베리의원 명동점", "en": "RE:BERRY Clinic Myeongdong", "zh": "丽贝瑞皮肤科(明洞店)" },
