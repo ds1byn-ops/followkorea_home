@@ -157,8 +157,38 @@ footer .ftlinks a{display:inline-flex;align-items:center;gap:6px;font-size:12px;
 footer .ftlinks a:hover{border-color:#B08D3F;color:#fff;}
 .totop{position:fixed;right:16px;bottom:16px;width:42px;height:42px;border-radius:50%;background:#fff;border:1px solid var(--line);color:var(--gold-d);font-size:17px;cursor:pointer;opacity:0;pointer-events:none;transition:.2s;box-shadow:0 6px 18px rgba(0,0,0,.1);z-index:60;}
 .totop.on{opacity:1;pointer-events:auto;}
-@media(max-width:900px){.g3,.pcards,.jr,.ccards{grid-template-columns:1fr 1fr;}.stats{grid-template-columns:1fr 1fr;}}
-@media(max-width:620px){.g3,.g2,.pcards,.jr,.gloss,.row2,.ccards{grid-template-columns:1fr;}.sec{padding:44px 0;}.hero{padding:40px 0 38px;}}
+/* visual refresh — 텍스트 축소 · 이미지 확대 */
+.hgrid{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center;}
+.hphotos{display:grid;grid-template-columns:1.15fr 1fr;grid-template-rows:1fr 1fr;gap:10px;height:430px;}
+.hphotos img{width:100%;height:100%;object-fit:cover;border-radius:16px;display:block;background:#EFE6D3;box-shadow:0 12px 30px rgba(60,40,10,.14);}
+.hphotos img:first-child{grid-row:1/3;}
+#a-sub,#c-sub,#j-sub,#cl-sub,#g-sub{display:none;}
+.stp{padding:0;overflow:hidden;}
+.stp .stimg{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;}
+.stp .stb{padding:16px 18px 18px;}
+#a-pillars{grid-template-columns:repeat(3,minmax(0,1fr));}
+#a-pillars .box{padding:15px 18px;text-align:center;}
+#a-pillars .box p{display:none;}
+#a-pillars .box h3{margin-top:0;font-size:15px;color:var(--gold-d);}
+.band{width:100%;height:230px;object-fit:cover;border-radius:16px;display:block;margin-top:22px;}
+#c-list1 li:nth-child(n+5),#c-list2 li:nth-child(n+5){display:none;}
+.sbanner{height:130px;border-radius:14px;background-size:cover;background-position:center;position:relative;overflow:hidden;margin-top:8px;}
+.sbanner:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(30,22,10,.62),rgba(30,22,10,.08));}
+.sbanner h3.sname{position:absolute;left:20px;bottom:14px;margin:0;padding:0;border:none;color:#fff;font-size:15px;letter-spacing:.3em;}
+.series p.sdesc{display:none;}
+.pc .price{display:none;}
+.cc .ph{aspect-ratio:4/3;}
+.cc ul li:nth-child(n+2){display:none;}
+.gtoggle{margin-top:18px;border:1px solid var(--gold-l);background:#fff;color:var(--gold-d);font-weight:800;font-size:13px;border-radius:99px;padding:9px 20px;cursor:pointer;font-family:inherit;}
+#g-list{display:none;}
+#g-list.open{display:grid;}
+.jr{grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;}
+.jc{text-align:center;padding:16px 8px;position:relative;}
+.jc p{display:none;}
+.jc .n{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#C6A253,#8A6B26);color:#fff;font-size:14px;letter-spacing:0;display:flex;align-items:center;justify-content:center;margin:0 auto;}
+.jc b{font-size:13.5px;margin-top:10px;}
+@media(max-width:900px){.g3,.pcards,.ccards{grid-template-columns:1fr 1fr;}.jr{grid-template-columns:repeat(3,minmax(0,1fr));}.stats{grid-template-columns:1fr 1fr;}.hgrid{grid-template-columns:1fr;gap:24px;}.hphotos{height:300px;}}
+@media(max-width:620px){.g3,.g2,.pcards,.gloss,.row2,.ccards{grid-template-columns:1fr;}#a-pillars{grid-template-columns:1fr;}.jr{grid-template-columns:repeat(2,minmax(0,1fr));}.sec{padding:44px 0;}.hero{padding:40px 0 38px;}.hphotos{height:240px;}.band{height:150px;}}
 </style>
 </head>
 <body>
@@ -175,11 +205,20 @@ footer .ftlinks a:hover{border-color:#B08D3F;color:#fff;}
 
 <section class="hero">
   <div class="wrap">
-    <div class="eyebrow" id="h-eyebrow"></div>
-    <h1 id="h-title"></h1>
-    <p class="lead" id="h-lead"></p>
-    <div class="hbadges" id="h-badges"></div>
-    <button class="cta" id="h-cta" onclick="document.getElementById('quote').scrollIntoView({behavior:'smooth'})"></button>
+    <div class="hgrid">
+      <div>
+        <div class="eyebrow" id="h-eyebrow"></div>
+        <h1 id="h-title"></h1>
+        <p class="lead" id="h-lead"></p>
+        <div class="hbadges" id="h-badges"></div>
+        <button class="cta" id="h-cta" onclick="document.getElementById('quote').scrollIntoView({behavior:'smooth'})"></button>
+      </div>
+      <div class="hphotos">
+        <img src="/stem/img/hero-a.jpg" alt="" decoding="async">
+        <img src="/stem/img/hero-b.jpg" alt="" decoding="async">
+        <img src="/stem/img/hero-c.jpg" alt="" decoding="async">
+      </div>
+    </div>
     <div class="stats" id="h-stats"></div>
   </div>
 </section>
@@ -199,6 +238,7 @@ footer .ftlinks a:hover{border-color:#B08D3F;color:#fff;}
     <div class="eyebrow" id="c-eyebrow"></div>
     <h2 id="c-title"></h2>
     <p class="sub" id="c-sub"></p>
+    <img class="band" src="/stem/img/band-care.jpg" alt="" loading="lazy" decoding="async">
     <div class="g2">
       <div class="box"><h3 id="c-l1"></h3><ul class="lst" id="c-list1"></ul></div>
       <div class="box"><h3 id="c-l2"></h3><ul class="lst" id="c-list2"></ul></div>
@@ -235,6 +275,7 @@ footer .ftlinks a:hover{border-color:#B08D3F;color:#fff;}
     <div class="eyebrow" id="g-eyebrow"></div>
     <h2 id="g-title"></h2>
     <p class="sub" id="g-sub"></p>
+    <button class="gtoggle" id="g-toggle" type="button" onclick="el('g-list').classList.toggle('open');this.setAttribute('aria-expanded',el('g-list').classList.contains('open'));"></button>
     <div class="gloss" id="g-list"></div>
   </div>
 </section>
@@ -866,7 +907,7 @@ function render(){
   el('h-stats').innerHTML=t.stats.map(function(s){return '<div class="st"><div class="n">'+esc(s[0])+'</div><div class="l">'+esc(s[1])+'</div></div>';}).join('');
 
   el('a-eyebrow').textContent=t.aEyebrow; el('a-title').textContent=t.aTitle; el('a-sub').textContent=t.aSub;
-  el('a-steps').innerHTML=t.aSteps.map(function(s){return '<div class="box"><div class="num">'+esc(s[0])+'</div><h3>'+esc(s[1])+'</h3><p>'+esc(s[2])+'</p></div>';}).join('');
+  el('a-steps').innerHTML=t.aSteps.map(function(s,i){return '<div class="box stp"><img class="stimg" src="/stem/img/step'+(i+1)+'.jpg" alt="" loading="lazy" decoding="async"><div class="stb"><div class="num">'+esc(s[0])+'</div><h3>'+esc(s[1])+'</h3><p>'+esc(s[2])+'</p></div></div>';}).join('');
   el('a-pillars').innerHTML=t.aPillars.map(function(s){return '<div class="box"><h3>'+esc(s[0])+'</h3><p>'+esc(s[1])+'</p></div>';}).join('');
 
   el('c-eyebrow').textContent=t.cEyebrow; el('c-title').textContent=t.cTitle; el('c-sub').textContent=t.cSub;
@@ -876,7 +917,7 @@ function render(){
 
   el('p-eyebrow').textContent=t.pEyebrow; el('p-title').textContent=t.pTitle; el('p-sub').textContent=t.pSub;
   el('p-series').innerHTML=SERIES.map(function(s){
-    return '<div class="series"><h3 class="sname">'+esc(s.id)+'</h3><p class="sdesc">'+esc(t.sDesc[s.id])+'</p><div class="pcards">'+
+    return '<div class="series"><div class="sbanner" style="background-image:url(/stem/img/ser-'+(s.id==='FEMME'?'femme':s.id==='HOMME'?'homme':'pure')+'.jpg)"><h3 class="sname">'+esc(s.id)+'</h3></div><p class="sdesc">'+esc(t.sDesc[s.id])+'</p><div class="pcards">'+
       s.packs.map(function(p){
         var d=t.packs[p.id];
         return '<div class="pc'+(p.feat?' feat':'')+'">'+
@@ -907,6 +948,7 @@ function render(){
       '</div></div>';
   }).join('');
   el('g-eyebrow').textContent=t.gEyebrow; el('g-title').textContent=t.gTitle; el('g-sub').textContent=t.gSub;
+  el('g-toggle').textContent=({en:'Show glossary',ko:'용어 설명 보기',zh:'查看术语说明',ja:'用語の説明を見る',ru:'Показать термины'})[LANG]||'Glossary';
   el('g-list').innerHTML=t.gloss.map(function(g){return '<div class="gi"><b>'+esc(g[0])+'</b><p>'+esc(g[1])+'</p></div>';}).join('');
 
   el('q-eyebrow').textContent=t.qEyebrow; el('q-title').textContent=t.qTitle; el('q-sub').textContent=t.qSub;
