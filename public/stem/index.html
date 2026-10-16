@@ -91,6 +91,7 @@ h3{font-size:16px;font-weight:800;}
 .ccards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:26px;}
 .cc{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;}
 .cc .ph{width:100%;aspect-ratio:16/10;object-fit:cover;background:#F1EADD;display:block;}
+.cc .mono{width:100%;aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#F7F0E1,#E9DBBE);color:var(--gold-d);font-size:clamp(17px,2.2vw,25px);font-weight:900;letter-spacing:.16em;text-align:center;padding:0 12px;line-height:1.25;}
 .cc .bd{padding:15px 17px 18px;display:flex;flex-direction:column;flex:1;}
 .cc .cn{font-size:15.5px;font-weight:800;letter-spacing:-.2px;line-height:1.4;}
 .cc .cd{font-size:11.5px;color:var(--gold-d);font-weight:700;margin-top:5px;letter-spacing:.02em;}
@@ -347,18 +348,18 @@ var SERIES=[
 var CLINIC_IMG='https://gnfollow.com/';
 var CLINICS=[
  {id:'cellis',     thumb:'hthumb/cellis.jpg',     area:'seocho'},
- {id:'chaum',      thumb:'hthumb/chaum.jpg',      area:'gangnam'},
- {id:'cellinique', thumb:'hthumb/cellinique.jpg', area:'gangnam'},
+ {id:'chaum',      thumb:'hthumb/chaum.jpg',      area:'gangnam',noimg:1},
+ {id:'cellinique', thumb:'hthumb/cellinique.jpg', area:'gangnam',noimg:1},
  {id:'onecell',    thumb:'hthumb/onecell.jpg',    area:'gangnam'},
  {id:'cellora',    thumb:'hthumb/cellora.jpg',    area:'gangnam'},
  {id:'tr',         thumb:'hthumb/tr.jpg',         area:'gangnam'},
- {id:'gv',         thumb:'hthumb/gv.jpg',         area:'gangnam'},
- {id:'gu',         thumb:'hthumb/gu.jpg',         area:'gangnam'},
+ {id:'gv',         thumb:'hthumb/gv.jpg',         area:'gangnam',noimg:1},
+ {id:'gu',         thumb:'hthumb/gu.jpg',         area:'gangnam',noimg:1},
  {id:'jdskin',     thumb:'hthumb/jdskin.jpg',     area:'gangnam'},
- {id:'sinsoa',     thumb:'hthumb/sinsoa.jpg',     area:'gangnam'},
+ {id:'sinsoa',     thumb:'hthumb/sinsoa.jpg',     area:'gangnam',noimg:1},
  {id:'vcps',       thumb:'hthumb/vcps.jpg',       area:'apgujeong'},
- {id:'wonjin',     thumb:'hthumb/wonjin.jpg',     area:'gangnam'},
- {id:'glovi',      thumb:'hthumb/glovi.jpg',      area:'apgujeong'}
+ {id:'wonjin',     thumb:'hthumb/wonjin.jpg',     area:'gangnam',noimg:1},
+ {id:'glovi',      thumb:'hthumb/glovi.jpg',      area:'apgujeong',noimg:1}
 ];
 /* 병원명: ko=국문 / zh=중문 / en·ja·ru=영문 표기 */
 var CNAMES={
@@ -898,7 +899,8 @@ function render(){
     var nm=CNAMES[c.id], d=t.clinics[c.id];
     var label=(LANG==='ko'?nm.ko:LANG==='zh'?nm.zh:nm.en);
     return '<div class="cc">'+
-      '<img class="ph" src="'+CLINIC_IMG+c.thumb+'" alt="'+esc(label)+'" loading="lazy" decoding="async">'+
+      (c.noimg ? '<div class="mono">'+esc(nm.en.split(' ')[0].toUpperCase())+'</div>'
+              : '<img class="ph" src="'+CLINIC_IMG+c.thumb+'" alt="'+esc(label)+'" loading="lazy" decoding="async">')+
       '<div class="bd"><div class="cn">'+esc(label)+'</div>'+
       '<div class="cd">'+esc(d.d)+'</div>'+
       '<div class="cl">'+esc(t.areas[c.area])+'</div>'+
