@@ -140,6 +140,9 @@ footer{background:#241F1A;color:#CFC6B8;padding:40px 0 48px;margin-top:0;}
 footer .wrap{font-size:12px;line-height:1.85;}
 footer b{color:#fff;font-size:13px;display:block;margin-bottom:8px;letter-spacing:.14em;}
 footer .legal{margin-top:16px;padding-top:16px;border-top:1px solid #3A332B;font-size:11px;color:#9C9286;}
+footer .ftlinks{margin-top:14px;}
+footer .ftlinks a{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:#E3D3AC;text-decoration:none;border:1px solid #4A4138;border-radius:8px;padding:7px 14px;}
+footer .ftlinks a:hover{border-color:#B08D3F;color:#fff;}
 .totop{position:fixed;right:16px;bottom:16px;width:42px;height:42px;border-radius:50%;background:#fff;border:1px solid var(--line);color:var(--gold-d);font-size:17px;cursor:pointer;opacity:0;pointer-events:none;transition:.2s;box-shadow:0 6px 18px rgba(0,0,0,.1);z-index:60;}
 .totop.on{opacity:1;pointer-events:auto;}
 @media(max-width:900px){.g3,.pcards,.jr{grid-template-columns:1fr 1fr;}.stats{grid-template-columns:1fr 1fr;}}
@@ -293,6 +296,7 @@ footer .legal{margin-top:16px;padding-top:16px;border-top:1px solid #3A332B;font
   <div class="wrap">
     <b>FOLLOW KOREA CO., LTD.</b>
     <div id="ft-info"></div>
+    <div class="ftlinks"><a id="ft-home" href="https://followkorea.co.kr/" target="_blank" rel="noopener"></a></div>
     <div class="legal" id="ft-legal"></div>
   </div>
 </footer>
@@ -384,6 +388,7 @@ en:{
  faq:[['Is the treatment safe?','Every treatment is decided by the attending specialist based on your individual health status and is performed in accordance with Korean medical law and related regulations. Blood screening is carried out beforehand to confirm suitability.'],['When will I notice a change?','This differs from person to person, in both timing and degree. Your specialist will explain the expected course and aftercare at consultation.'],['Can I return to normal activity right away?','Most procedures are performed without admission. Programs that include adipose collection require a rest period afterwards, and the clinic will explain the precautions for each procedure.'],['Is there anyone who cannot receive treatment?','Treatment may be restricted during pregnancy or breastfeeding, or where a condition is under active treatment. This is confirmed through the pre-consultation questionnaire and screening.'],['Why do some programs require more than one visit?','Cultured cells need roughly two weeks after collection, and premium injections are given three weeks to three months apart. Your coordinator will plan the schedule around you.'],['How is my personal information handled?','Consultation and medical details are not shared externally without your consent. A single 1:1 coordinator handles your case from beginning to end.']],
  jEyebrow:'Your journey',jTitle:'From enquiry to aftercare',jSub:'Six steps, managed by one coordinator.',
  journey:[['01','Enquiry','Tell us your gender, age group and the program you are interested in.'],['02','Pre-screening','We review your health status and the specialist checks suitability.'],['03','Schedule','Travel dates, clinic appointments and the final written quote are confirmed.'],['04','Arrival','Day 1 — arrival, clinic consultation and blood screening.'],['05','Treatment','Days 2–3 — treatment and follow-up check.'],['06','Aftercare','Day 4 — departure, with recovery follow-up by messenger.']],
+ ftHome:'Follow Korea corporate site →',
  ftInfo:'13F #116, 373 Gangnam-daero, Seocho-gu, Seoul, Republic of Korea<br>Business registration 696-86-03627 · Representative Ha Janghwan<br>International patient facilitator registration A-2026-01-01-06622<br>contact@followkorea.co.kr · +82-10-8037-2535',
  ftLegal:'Follow Korea is a marketing and coordination agency registered with the Korean government as a facilitator for international patients. We are not a medical institution and do not provide medical services. All diagnosis and treatment are performed by licensed specialists at partner clinics. This page is advertising material. It does not guarantee any treatment outcome; results vary between individuals, and the final treatment plan is determined by the attending specialist. Programs and availability may change. This page is intended for foreign patients not enrolled in the Korean National Health Insurance Service.'
 },
@@ -453,6 +458,7 @@ ko:{
  faq:[['시술은 안전한가요?','모든 시술은 전문의 진료 후 개인 건강 상태에 맞춰 결정되며, 대한민국 의료법과 관련 법령에 따라 진행됩니다. 시술 전 혈액검사로 적합 여부를 먼저 확인합니다.'],['언제부터 변화를 느낄 수 있나요?','변화를 느끼는 시점과 정도는 개인에 따라 다릅니다. 전문의 상담에서 개인별 예상 경과와 관리 방법을 안내해 드립니다.'],['시술 후 바로 일상생활이 가능한가요?','대부분의 시술은 입원 없이 진행됩니다. 지방 채취가 포함된 코스는 시술 후 안정 시간이 필요하며, 시술별 주의사항은 병원에서 안내합니다.'],['시술을 받을 수 없는 경우가 있나요?','임신·수유 중이거나 치료 중인 질환이 있는 경우 시술이 제한될 수 있습니다. 사전 문진과 검사에서 확인합니다.'],['왜 여러 번 방한해야 하나요?','배양 줄기세포는 채취 후 약 2주의 배양 기간이 필요하고, 프리미엄 코스의 주사는 3주~3개월 간격으로 진행됩니다. 일정은 전담 매니저가 맞춰 드립니다.'],['개인정보는 보호되나요?','상담과 진료 내용은 본인 동의 없이 외부에 제공되지 않습니다. 1:1 전담 매니저가 처음부터 끝까지 응대합니다.']],
  jEyebrow:'진행 절차',jTitle:'문의부터 사후관리까지',jSub:'전담 매니저 한 명이 6단계를 관리합니다.',
  journey:[['01','상담 신청','성별, 연령대, 희망 프로그램을 알려주세요.'],['02','사전 문진','건강 상태를 확인하고 전문의가 적합 여부를 검토합니다.'],['03','일정 확정','방한 일정, 병원 예약, 최종 견적을 확정합니다.'],['04','입국 · 진료','1일차 입국, 병원 상담과 혈액검사.'],['05','시술 · 경과','2~3일차 시술과 경과 확인.'],['06','귀국 · 사후관리','4일차 귀국, 메신저로 회복 경과 관리.']],
+ ftHome:'팔로우코리아 기업 사이트 →',
  ftInfo:'서울특별시 서초구 강남대로 373, 13층 116호 (서초동, 홍우빌딩)<br>사업자등록번호 696-86-03627 · 대표 하장환<br>외국인환자 유치사업자 등록 A-2026-01-01-06622<br>contact@followkorea.co.kr · 010-8037-2535',
  ftLegal:'팔로우코리아는 정부에 등록된 외국인환자 유치기관이자 마케팅·코디네이션 대행사입니다. 의료기관이 아니며 의료행위를 제공하지 않습니다. 모든 진단과 시술은 협력 의료기관의 전문의가 수행합니다. 본 페이지는 광고물이며 치료 효과를 보장하지 않습니다. 결과는 개인에 따라 다르고 최종 시술 구성은 전문의 진료 후 결정됩니다. 프로그램 구성은 변경될 수 있습니다. 본 페이지는 국민건강보험에 가입하지 않은 외국인 환자를 대상으로 합니다.'
 },
@@ -522,6 +528,7 @@ zh:{
  faq:[['诊疗安全吗？','所有诊疗均由专科医师面诊后，根据个人健康状况决定，并依据韩国医疗法及相关法令进行。诊疗前先通过血液检查确认适应性。'],['多久能感受到变化？','感受到变化的时间与程度因人而异。专科医师会在面诊时说明个人预期过程与护理方法。'],['诊疗后能马上正常生活吗？','大部分诊疗无需住院。含脂肪采集的方案在诊疗后需要休息时间，各项注意事项由医院说明。'],['有不能接受诊疗的情况吗？','妊娠·哺乳期间或正在治疗某些疾病时可能受限。将在事前问诊与检查中确认。'],['为什么需要多次赴韩？','培养干细胞在采集后约需 2 周培养期，尊享方案的注射间隔为 3 周~3 个月。日程由专属顾问为您安排。'],['个人信息会被保护吗？','未经本人同意，咨询与诊疗内容不会对外提供。由 1:1 专属顾问自始至终负责。']],
  jEyebrow:'进行流程',jTitle:'从咨询到后续跟进',jSub:'由一位专属顾问管理 6 个步骤。',
  journey:[['01','申请咨询','请告知性别、年龄段与希望的项目。'],['02','事前问诊','确认健康状况，专科医师审核适应性。'],['03','确定日程','确定赴韩日程、医院预约与最终报价。'],['04','入境 · 面诊','第 1 天入境，医院咨询与血液检查。'],['05','诊疗 · 复查','第 2~3 天诊疗与复查。'],['06','回国 · 跟进','第 4 天回国，通过微信跟进恢复情况。']],
+ ftHome:'FollowKorea 公司网站 →',
  ftInfo:'韩国首尔特别市瑞草区江南大路 373，13 层 116 号<br>营业执照 696-86-03627 · 代表 河章焕<br>外国患者招揽业者注册 A-2026-01-01-06622<br>contact@followkorea.co.kr · +82-10-8037-2535',
  ftLegal:'FollowKorea 是在韩国政府注册的外国患者招揽机构及营销·协调代理公司，并非医疗机构，不提供医疗服务。所有诊断与诊疗均由合作医疗机构的专科医师实施。本页面为广告物，不保证治疗效果；结果因人而异，最终方案由主治专科医师在面诊后确定。项目构成可能变更。本页面面向未加入韩国国民健康保险的外国患者。'
 },
@@ -591,6 +598,7 @@ ja:{
  faq:[['施術は安全ですか？','すべての施術は専門医の診察後、個人の健康状態に合わせて決定され、韓国の医療法および関連法令に従って行われます。施術前に血液検査で適合性を確認します。'],['いつ頃から変化を感じられますか？','変化を感じる時期と程度は個人によって異なります。専門医の診察で個別の経過の見通しとケア方法をご案内します。'],['施術後すぐに日常生活は可能ですか？','ほとんどの施術は入院なしで行われます。脂肪採取を含むコースは施術後に安静時間が必要で、施術ごとの注意事項は病院からご案内します。'],['施術を受けられない場合はありますか？','妊娠・授乳中の方、治療中の疾患がある方は施術が制限される場合があります。事前問診と検査で確認します。'],['なぜ複数回の訪韓が必要なのですか？','培養幹細胞は採取後に約 2 週間の培養期間が必要で、プレミアムコースの注射は 3 週間~3 か月間隔で行います。日程は専任担当が調整します。'],['個人情報は保護されますか？','相談と診療の内容はご本人の同意なく外部に提供しません。1:1 専任担当が最初から最後まで対応します。']],
  jEyebrow:'進行の流れ',jTitle:'お問い合わせからアフターケアまで',jSub:'専任担当 1 名が 6 ステップを管理します。',
  journey:[['01','相談申込','性別、年齢層、ご希望のプログラムをお知らせください。'],['02','事前問診','健康状態を確認し、専門医が適合性を検討します。'],['03','日程確定','訪韓日程、病院予約、最終見積もりを確定します。'],['04','入国 · 診察','1 日目 入国、病院での相談と血液検査。'],['05','施術 · 経過確認','2~3 日目 施術と経過確認。'],['06','帰国 · アフターケア','4 日目 帰国、メッセンジャーで回復経過をフォロー。']],
+ ftHome:'Follow Korea 企業サイト →',
  ftInfo:'大韓民国 ソウル特別市 瑞草区 江南大路 373、13 階 116 号<br>事業者登録番号 696-86-03627 · 代表 ハ・ジャンファン<br>外国人患者誘致事業者登録 A-2026-01-01-06622<br>contact@followkorea.co.kr · +82-10-8037-2535',
  ftLegal:'Follow Korea は韓国政府に登録された外国人患者誘致機関であり、マーケティング・コーディネーション代行会社です。医療機関ではなく、医療行為は提供しません。すべての診断と施術は提携医療機関の専門医が行います。本ページは広告物であり、治療効果を保証するものではありません。結果は個人により異なり、最終的な施術構成は専門医の診察後に決定されます。プログラム構成は変更される場合があります。本ページは韓国の国民健康保険に加入していない外国人患者を対象としています。'
 },
@@ -660,6 +668,7 @@ ru:{
  faq:[['Это безопасно?','Каждая процедура определяется лечащим врачом по итогам оценки вашего состояния и проводится в соответствии с медицинским законодательством Кореи. Перед процедурой выполняется анализ крови для оценки пригодности.'],['Когда будут заметны изменения?','Сроки и степень различаются у разных людей. Врач на консультации объяснит ожидаемое течение и рекомендации по уходу.'],['Можно ли сразу вернуться к обычной жизни?','Большинство процедур проводится без госпитализации. Программы с забором жировой ткани требуют периода покоя, клиника объяснит рекомендации по каждой процедуре.'],['Кому процедуры противопоказаны?','Процедуры могут быть ограничены при беременности, грудном вскармливании или при активно лечащемся заболевании. Это уточняется при предварительном опросе и обследовании.'],['Почему нужно приезжать несколько раз?','Культивирование клеток занимает около двух недель после забора, а инъекции программ Premium выполняются с интервалом от трёх недель до трёх месяцев. График подберёт ваш координатор.'],['Как защищены мои данные?','Содержание консультации и лечения не передаётся третьим лицам без вашего согласия. Ваш случай от начала до конца ведёт один координатор.']],
  jEyebrow:'Этапы',jTitle:'От обращения до сопровождения',jSub:'Шесть шагов под управлением одного координатора.',
  journey:[['01','Обращение','Сообщите пол, возраст и интересующую программу.'],['02','Предварительный опрос','Мы уточняем состояние здоровья, врач оценивает пригодность.'],['03','График','Подтверждаем даты поездки, запись в клинику и итоговую смету.'],['04','Приезд','День 1 — прилёт, консультация в клинике и анализ крови.'],['05','Процедура','Дни 2–3 — процедура и контрольный осмотр.'],['06','После','День 4 — вылет, сопровождение восстановления в мессенджере.']],
+ ftHome:'Корпоративный сайт Follow Korea →',
  ftInfo:'13F #116, 373 Gangnam-daero, Seocho-gu, Сеул, Республика Корея<br>Рег. номер компании 696-86-03627 · Директор Ха Чжанхван<br>Регистрация оператора A-2026-01-01-06622<br>contact@followkorea.co.kr · +82-10-8037-2535',
  ftLegal:'Follow Korea — маркетинговое и координационное агентство, зарегистрированное в Корее как оператор по приёму иностранных пациентов. Компания не является медицинским учреждением и не оказывает медицинских услуг. Диагностику и лечение проводят профильные врачи партнёрских клиник. Эта страница является рекламным материалом. Она не гарантирует результат лечения: результаты индивидуальны, окончательный план определяет лечащий врач. Состав программ может меняться. Страница предназначена для иностранных пациентов, не состоящих в Национальной службе медицинского страхования Кореи.'
 }
@@ -766,6 +775,7 @@ function render(){
   el('j-list').innerHTML=t.journey.map(function(j){return '<div class="jc"><div class="n">'+esc(j[0])+'</div><b>'+esc(j[1])+'</b><p>'+esc(j[2])+'</p></div>';}).join('');
 
   el('ft-info').innerHTML=t.ftInfo;
+  el('ft-home').textContent=t.ftHome;
   el('ft-legal').textContent=t.ftLegal;
   el('werr').textContent=''; el('werr3').textContent='';
 }
