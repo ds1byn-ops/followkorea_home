@@ -87,6 +87,17 @@ h3{font-size:16px;font-weight:800;}
 .pc .pbtn{margin-top:10px;width:100%;text-align:center;}
 .optwrap{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;}
 .optwrap span{font-size:12.5px;background:#fff;border:1px solid var(--line);border-radius:99px;padding:7px 14px;color:#54493f;}
+/* clinics */
+.ccards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:26px;}
+.cc{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;}
+.cc .ph{width:100%;aspect-ratio:16/10;object-fit:cover;background:#F1EADD;display:block;}
+.cc .bd{padding:15px 17px 18px;display:flex;flex-direction:column;flex:1;}
+.cc .cn{font-size:15.5px;font-weight:800;letter-spacing:-.2px;line-height:1.4;}
+.cc .cd{font-size:11.5px;color:var(--gold-d);font-weight:700;margin-top:5px;letter-spacing:.02em;}
+.cc .cl{font-size:11.5px;color:var(--mute);margin-top:2px;}
+.cc ul{list-style:none;margin-top:11px;display:grid;gap:6px;flex:1;}
+.cc ul li{font-size:12.5px;color:#54493f;padding-left:14px;position:relative;line-height:1.5;}
+.cc ul li:before{content:'\25C6';position:absolute;left:0;top:0;font-size:7px;color:var(--gold);line-height:2.2;}
 /* glossary */
 .gloss{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px;margin-top:22px;}
 .gi{padding:13px 0;border-bottom:1px solid var(--line);}
@@ -145,8 +156,8 @@ footer .ftlinks a{display:inline-flex;align-items:center;gap:6px;font-size:12px;
 footer .ftlinks a:hover{border-color:#B08D3F;color:#fff;}
 .totop{position:fixed;right:16px;bottom:16px;width:42px;height:42px;border-radius:50%;background:#fff;border:1px solid var(--line);color:var(--gold-d);font-size:17px;cursor:pointer;opacity:0;pointer-events:none;transition:.2s;box-shadow:0 6px 18px rgba(0,0,0,.1);z-index:60;}
 .totop.on{opacity:1;pointer-events:auto;}
-@media(max-width:900px){.g3,.pcards,.jr{grid-template-columns:1fr 1fr;}.stats{grid-template-columns:1fr 1fr;}}
-@media(max-width:620px){.g3,.g2,.pcards,.jr,.gloss,.row2{grid-template-columns:1fr;}.sec{padding:44px 0;}.hero{padding:40px 0 38px;}}
+@media(max-width:900px){.g3,.pcards,.jr,.ccards{grid-template-columns:1fr 1fr;}.stats{grid-template-columns:1fr 1fr;}}
+@media(max-width:620px){.g3,.g2,.pcards,.jr,.gloss,.row2,.ccards{grid-template-columns:1fr;}.sec{padding:44px 0;}.hero{padding:40px 0 38px;}}
 </style>
 </head>
 <body>
@@ -205,6 +216,16 @@ footer .ftlinks a:hover{border-color:#B08D3F;color:#fff;}
       <div class="optwrap" id="p-options"></div>
       <p class="note" id="p-optnote"></p>
     </div>
+  </div>
+</section>
+
+<section class="sec" id="clinics">
+  <div class="wrap">
+    <div class="eyebrow" id="cl-eyebrow"></div>
+    <h2 id="cl-title"></h2>
+    <p class="sub" id="cl-sub"></p>
+    <div class="ccards" id="cl-list"></div>
+    <p class="note" id="cl-note"></p>
   </div>
 </section>
 
@@ -322,6 +343,40 @@ var SERIES=[
    {id:'Pure Homme',tier:'cord',feat:false}]}
 ];
 
+/* 제휴 병원 — 사진은 gnfollow.com/hthumb (글로벌 플랫폼과 동일 소스) */
+var CLINIC_IMG='https://gnfollow.com/';
+var CLINICS=[
+ {id:'cellis',     thumb:'hthumb/cellis.jpg',     area:'seocho'},
+ {id:'chaum',      thumb:'hthumb/chaum.jpg',      area:'gangnam'},
+ {id:'cellinique', thumb:'hthumb/cellinique.jpg', area:'gangnam'},
+ {id:'onecell',    thumb:'hthumb/onecell.jpg',    area:'gangnam'},
+ {id:'cellora',    thumb:'hthumb/cellora.jpg',    area:'gangnam'},
+ {id:'tr',         thumb:'hthumb/tr.jpg',         area:'gangnam'},
+ {id:'gv',         thumb:'hthumb/gv.jpg',         area:'gangnam'},
+ {id:'gu',         thumb:'hthumb/gu.jpg',         area:'gangnam'},
+ {id:'jdskin',     thumb:'hthumb/jdskin.jpg',     area:'gangnam'},
+ {id:'sinsoa',     thumb:'hthumb/sinsoa.jpg',     area:'gangnam'},
+ {id:'vcps',       thumb:'hthumb/vcps.jpg',       area:'apgujeong'},
+ {id:'wonjin',     thumb:'hthumb/wonjin.jpg',     area:'gangnam'},
+ {id:'glovi',      thumb:'hthumb/glovi.jpg',      area:'apgujeong'}
+];
+/* 병원명: ko=국문 / zh=중문 / en·ja·ru=영문 표기 */
+var CNAMES={
+ cellis:{ko:'셀이즈랩의원',zh:'Cellis LAB医院',en:'Cellis LAB Clinic'},
+ chaum:{ko:'차움',zh:'CHAUM抗衰老中心',en:'CHAUM Anti-aging Center'},
+ cellinique:{ko:'셀리닉의원',zh:'Cellinique医院',en:'Cellinique Clinic'},
+ onecell:{ko:'원셀의원',zh:'One Cell医院',en:'One Cell Clinic'},
+ cellora:{ko:'셀로라의원',zh:'Cellora医院',en:'Cellora Clinic'},
+ tr:{ko:'티알 트리니티라파엘로 청담의원',zh:'TR Trinity Raffaello清潭医院',en:'TR Trinity Raffaello Clinic'},
+ gv:{ko:'GV성형외과',zh:'GV整形外科',en:'GV Plastic Surgery'},
+ gu:{ko:'지유의원 (사적인아름다움)',zh:'GU医院（私密之美）',en:'GU Clinic'},
+ jdskin:{ko:'JD피부성형 (장덕)',zh:'JD皮肤整形（张德）',en:'JD Skin & Plastic Clinic'},
+ sinsoa:{ko:'신소애여성의원',zh:'新素爱女性医院',en:"Sinsoa Women's Clinic"},
+ vcps:{ko:'VC성형외과의원',zh:'VC整形外科',en:'VC Plastic Surgery'},
+ wonjin:{ko:'원진성형외과피부과의원',zh:'原辰整形外科皮肤科',en:'Wonjin Plastic Surgery & Dermatology'},
+ glovi:{ko:'글로비성형외과',zh:'Glovi整形外科',en:'Glovi Plastic Surgery'}
+};
+
 var T={
 en:{
  ad:'Advertisement',
@@ -330,7 +385,7 @@ en:{
  hLead:'A concierge-managed program with specialist clinics in Gangnam. Every treatment is prescribed and performed by a licensed specialist after an in-person consultation. Follow Korea handles the scheduling, interpretation and aftercare.',
  hBadges:['Government-registered patient facilitator','Partner clinics in Gangnam, Seoul','Interpretation throughout'],
  hCta:'Request a consultation',
- stats:[['4','Partner clinics'],['8','Programs'],['1:1','Concierge'],['5','Languages']],
+ stats:[['13','Partner clinics'],['8','Programs'],['1:1','Concierge'],['5','Languages']],
  aEyebrow:'About the program',
  aTitle:'How the program works',
  aSub:'Stem cells can differentiate into several cell types and release growth factors that support the surrounding tissue. This program draws on those properties to support overall condition, circulation and tissue tone. The final composition is decided by the attending specialist.',
@@ -342,7 +397,7 @@ en:{
  cL1:'Included with every program',
  cList1:['A dedicated 1:1 coordinator from first enquiry to departure','Interpretation throughout consultation and treatment','Accompanied transfers between clinics','Appointments and itinerary managed in one place','Follow-up by messenger after you return home','Strict handling of your personal and medical information'],
  cL2:'Clinics and specialists',
- cList2:['Four stem cell clinics in Gangnam, Seoul','Consultation and treatment performed by the specialist in person','Blood screening before treatment to confirm suitability','All procedures follow Korean medical law and related regulations','A government-registered facilitator manages the whole process','Premium grade includes private scheduling and VIP transfers'],
+ cList2:['Thirteen stem cell and anti-aging partner clinics in Seoul','Consultation and treatment performed by the specialist in person','Blood screening before treatment to confirm suitability','All procedures follow Korean medical law and related regulations','A government-registered facilitator manages the whole process','Premium grade includes private scheduling and VIP transfers'],
  pEyebrow:'Programs',
  pTitle:'Three series, eight programs',
  pSub:'Prices are not published here. After your enquiry a coordinator sends a written quote based on the specialist consultation.',
@@ -362,6 +417,26 @@ en:{
  pOptTitle:'OPTIONAL ADD-ONS',
  pOptions:['Additional functional care injection','Premium upgrade: cultured cord stem cells','Comprehensive health screening (incl. NK / cancer markers)','NAD+ IV, 3-session course','Autologous cell banking, 5 years','Growth hormone injection','NK immune cell therapy','Women\u2019s filler 3cc'],
  pOptNote:'Add-ons are quoted separately and are confirmed with the specialist at consultation. Cultured preparations require approximately two weeks, so the visit is split accordingly.',
+  clEyebrow:'Partner clinics',
+ clTitle:'Where the program is delivered',
+ clSub:'Thirteen stem cell and anti-aging partner clinics in Seoul. The clinic for your program is assigned at consultation, based on the specialist assessment and your schedule.',
+ clNote:'The order shown is not a ranking and carries no evaluation. Partner clinics and their availability may change. Photographs are provided by the clinics.',
+ areas:{gangnam:'Gangnam, Seoul',seocho:'Seocho, Seoul',apgujeong:'Apgujeong, Seoul'},
+ clinics:{
+  cellis:{d:'Stem Cell · Immune Cells · Anti-aging',f:['Dedicated stem cell and NK immune cell clinic','Reverse-aging programs with a standard screening panel']},
+  chaum:{d:'Health Screening · Anti-aging · Stem Cell',f:['VIP screening in a private suite, results reviewed the same day','Chinese and English interpreters accompany the whole visit']},
+  cellinique:{d:'Stem Cell · Lifting',f:['Premium clinic focused on stem cell treatment','Lifting programs run alongside']},
+  onecell:{d:'Stem Cell · Skin · Plastic Surgery',f:['Stem cell, skin and surgical care under one roof','Pain management also available']},
+  cellora:{d:'Stem Cell · Cellular Ageing Testing',f:['Cellular ageing assessment before treatment','Single focus on stem cell treatment']},
+  tr:{d:'Anti-aging · Stem Cell',f:['Non-surgical anti-aging programs','Scar and stretch mark regeneration']},
+  gv:{d:'Stem Cell · Body Lifting',f:['Stem cell care combined with body lifting','Surgeon-led consultation']},
+  gu:{d:'Lifting · Filler · Stem Cell',f:['Open until 9pm and at weekends','Lifting and filler alongside stem cell care']},
+  jdskin:{d:'Skin · Stem Cell · Korean Medicine',f:['Stem cell care with Korean medicine in parallel','Regenerative injectables and lifting devices']},
+  sinsoa:{d:"Women's Health",f:["Women's health specialists — relevant to the FEMME series",'Ovarian stem cell and functional care']},
+  vcps:{d:'Plastic Surgery · Skin · Stem Cell',f:['One specialist handles consultation through surgery','Skin and aesthetic care in the same space']},
+  wonjin:{d:'Plastic Surgery · Dermatology · Stem Cell',f:['Full-service aesthetic hospital in Gangnam','Surgery, dermatology and stem cell care in one place']},
+  glovi:{d:'Plastic Surgery · Stem Cell',f:['Full-service plastic surgery in Apgujeong','Stem cell care offered alongside']}
+ },
  gEyebrow:'Glossary',
  gTitle:'Terms used in this program',
  gSub:'Plain explanations of the terms that appear in the program descriptions.',
@@ -400,7 +475,7 @@ ko:{
  hLead:'강남 전문 의료기관과 함께하는 전담 매니저형 프로그램입니다. 모든 시술은 전문의가 직접 진료한 뒤 결정하고 시행하며, 팔로우코리아는 일정·통역·사후관리를 맡습니다.',
  hBadges:['정부 등록 외국인환자 유치기관','서울 강남 협력 의료기관','전 과정 통역 동행'],
  hCta:'상담 신청하기',
- stats:[['4','협력 병원'],['8','프로그램'],['1:1','전담 매니저'],['5','지원 언어']],
+ stats:[['13','협력 병원'],['8','프로그램'],['1:1','전담 매니저'],['5','지원 언어']],
  aEyebrow:'프로그램 소개',
  aTitle:'프로그램 진행 방식',
  aSub:'줄기세포는 여러 종류의 세포로 분화할 수 있고, 주변 조직의 회복을 돕는 성장인자를 분비하는 세포입니다. 이 프로그램은 그 특성을 활용해 전신 컨디션, 혈류, 조직 탄력 관리를 돕습니다. 최종 구성은 전문의 진료 후 결정됩니다.',
@@ -412,7 +487,7 @@ ko:{
  cL1:'모든 프로그램 공통',
  cList1:['문의부터 귀국까지 1:1 전담 매니저','상담·시술 전 과정 통역 동행','병원 이동 동행','예약과 일정을 한 곳에서 관리','귀국 후 메신저 사후관리','개인정보·진료정보 철저 보호'],
  cL2:'병원과 의료진',
- cList2:['서울 강남의 줄기세포 전문 의료기관 4곳','상담부터 시술까지 전문의가 직접 진행','시술 전 혈액검사로 적합 여부 확인','모든 시술은 대한민국 의료법과 관련 법령에 따름','정부 등록 유치기관이 전 과정을 관리','프리미엄 등급은 프라이빗 동선과 VIP 의전 포함'],
+ cList2:['서울의 줄기세포·항노화 제휴 의료기관 13곳','상담부터 시술까지 전문의가 직접 진행','시술 전 혈액검사로 적합 여부 확인','모든 시술은 대한민국 의료법과 관련 법령에 따름','정부 등록 유치기관이 전 과정을 관리','프리미엄 등급은 프라이빗 동선과 VIP 의전 포함'],
  pEyebrow:'프로그램',
  pTitle:'3개 시리즈, 8개 프로그램',
  pSub:'가격은 이 페이지에 공개하지 않습니다. 문의를 남겨 주시면 전문의 진료를 거쳐 확정 견적을 서면으로 안내드립니다.',
@@ -432,6 +507,26 @@ ko:{
  pOptTitle:'추가 선택 항목',
  pOptions:['기능 케어 주사 회차 추가','프리미엄 업그레이드 (배양 제대 줄기세포)','종합 건강검진 (NK·암세포 검사 포함)','NAD+ 수액 3회 코스','자가 세포 보관 5년','성장호르몬 주사','NK 면역세포 치료','여성 필러 3cc'],
  pOptNote:'추가 항목은 별도 견적이며 전문의 상담에서 확정합니다. 배양이 필요한 항목은 약 2주가 소요되어 방한을 나누어 진행합니다.',
+  clEyebrow:'제휴 병원',
+ clTitle:'프로그램이 진행되는 병원',
+ clSub:'서울의 줄기세포·항노화 제휴 의료기관 13곳입니다. 어느 병원에서 진행할지는 전문의 판단과 고객 일정에 따라 상담에서 배정됩니다.',
+ clNote:'표시 순서는 순위가 아니며 평가를 담고 있지 않습니다. 제휴 병원과 진료 가능 여부는 변경될 수 있습니다. 사진은 각 병원이 제공한 것입니다.',
+ areas:{gangnam:'서울 강남',seocho:'서울 서초',apgujeong:'서울 압구정'},
+ clinics:{
+  cellis:{d:'줄기세포 · 면역세포 · 역노화',f:['줄기세포와 NK 면역세포 전문 의원','공통검사 체계를 갖춘 역노화 프로그램']},
+  chaum:{d:'종합검진 · 항노화 · 줄기세포',f:['개인 전용 룸 VIP 검진, 당일 결과 상담','중국어·영어 통역이 전 과정 동행']},
+  cellinique:{d:'줄기세포 · 리프팅',f:['줄기세포 치료에 특화된 프리미엄 의원','리프팅 프로그램 병행']},
+  onecell:{d:'줄기세포 · 피부 · 성형',f:['줄기세포·피부·성형을 한 곳에서','통증 치료도 함께 운영']},
+  cellora:{d:'줄기세포 · 세포노화검사',f:['시술 전 세포노화검사 운영','줄기세포 치료 단일 집중']},
+  tr:{d:'항노화 · 줄기세포',f:['비수술 항노화 프로그램','흉터·튼살 재생 치료']},
+  gv:{d:'줄기세포 · 바디리프팅',f:['줄기세포와 바디리프팅 결합','성형외과 전문의 상담']},
+  gu:{d:'리프팅 · 필러 · 줄기세포',f:['오후 9시까지 연장 진료, 주말 진료','리프팅·필러를 줄기세포와 함께']},
+  jdskin:{d:'피부 · 줄기세포 · 한방',f:['줄기세포와 한방 진료 병행','재생 주사와 리프팅 장비 운영']},
+  sinsoa:{d:'여성의학',f:['여성의학 전문 — FEMME 시리즈와 연계','난소 줄기세포와 여성 기능 케어']},
+  vcps:{d:'성형외과 · 피부 · 줄기세포',f:['상담부터 수술까지 전문의 1인이 담당','피부·에스테틱 관리를 같은 공간에서']},
+  wonjin:{d:'성형외과 · 피부과 · 줄기세포',f:['강남 종합 의료미용 병원','성형·피부·줄기세포를 한 곳에서']},
+  glovi:{d:'성형외과 · 줄기세포',f:['압구정 종합 성형외과','줄기세포 진료 병행']}
+ },
  gEyebrow:'용어 풀이',
  gTitle:'프로그램에 쓰인 용어',
  gSub:'프로그램 설명에 나오는 용어를 쉬운 말로 정리했습니다.',
@@ -470,7 +565,7 @@ zh:{
  hLead:'与江南专科医疗机构合作的专属顾问式项目。所有诊疗均由专科医师面诊后决定并实施，FollowKorea 负责行程、翻译与后续跟进。',
  hBadges:['政府注册外国患者招揽机构','首尔江南合作医疗机构','全程中文翻译陪同'],
  hCta:'申请咨询',
- stats:[['4','合作医院'],['8','项目'],['1:1','专属顾问'],['5','支持语言']],
+ stats:[['13','合作医院'],['8','项目'],['1:1','专属顾问'],['5','支持语言']],
  aEyebrow:'项目介绍',
  aTitle:'项目如何进行',
  aSub:'干细胞可以分化为多种细胞，并分泌有助于周围组织修复的生长因子。本项目利用这一特性，协助管理整体状态、血液循环与组织弹性。最终方案由主治专科医师在面诊后确定。',
@@ -482,7 +577,7 @@ zh:{
  cL1:'所有项目通用',
  cList1:['从咨询到回国的 1:1 专属顾问','面诊与诊疗全程翻译陪同','医院之间的陪同接送','预约与行程统一管理','回国后通过微信持续跟进','个人信息与诊疗信息严格保护'],
  cL2:'医院与医师',
- cList2:['首尔江南的干细胞专科医疗机构 4 家','从咨询到诊疗由专科医师亲自进行','诊疗前通过血液检查确认适应性','所有诊疗均依据韩国医疗法及相关法令','政府注册招揽机构全程管理','尊享等级含专属就诊动线与 VIP 用车'],
+ cList2:['首尔的干细胞·抗衰老合作医疗机构 13 家','从咨询到诊疗由专科医师亲自进行','诊疗前通过血液检查确认适应性','所有诊疗均依据韩国医疗法及相关法令','政府注册招揽机构全程管理','尊享等级含专属就诊动线与 VIP 用车'],
  pEyebrow:'项目',
  pTitle:'三大系列，八个项目',
  pSub:'本页不公开价格。留下咨询后，顾问将在专科医师面诊的基础上以书面形式提供报价。',
@@ -502,6 +597,26 @@ zh:{
  pOptTitle:'可选附加项目',
  pOptions:['功能护理注射 追加次数','尊享升级（培养脐带干细胞）','综合体检（含 NK·癌细胞检查）','NAD+ 点滴 3 次疗程','自体细胞保存 5 年','生长激素注射','NK 免疫细胞治疗','女性填充 3cc'],
  pOptNote:'附加项目单独报价，并在专科医师面诊时确定。需要培养的项目约需 2 周，因此分次赴韩。',
+  clEyebrow:'合作医院',
+ clTitle:'项目实施的医院',
+ clSub:'首尔的干细胞·抗衰老合作医疗机构共 13 家。具体由哪家医院实施，将在咨询时根据专科医师的判断与您的行程安排确定。',
+ clNote:'显示顺序并非排名，也不包含评价。合作医院与可预约情况可能变更。照片由各医院提供。',
+ areas:{gangnam:'首尔江南',seocho:'首尔瑞草',apgujeong:'首尔狎鸥亭'},
+ clinics:{
+  cellis:{d:'干细胞 · 免疫细胞 · 抗衰老',f:['干细胞与 NK 免疫细胞专科医院','配备统一检查体系的抗衰老项目']},
+  chaum:{d:'综合体检 · 抗衰老 · 干细胞',f:['独立诊室 VIP 体检，当日结果面谈','中文·英文翻译全程陪同']},
+  cellinique:{d:'干细胞 · 提升',f:['专注干细胞治疗的高端医院','同时提供提升项目']},
+  onecell:{d:'干细胞 · 皮肤 · 整形',f:['干细胞·皮肤·整形一站式','同时提供疼痛治疗']},
+  cellora:{d:'干细胞 · 细胞衰老检查',f:['治疗前进行细胞衰老检查','专注干细胞治疗单一领域']},
+  tr:{d:'抗衰老 · 干细胞',f:['非手术抗衰老项目','疤痕·妊娠纹再生治疗']},
+  gv:{d:'干细胞 · 身体提升',f:['干细胞与身体提升相结合','整形外科专科医师面诊']},
+  gu:{d:'提升 · 填充 · 干细胞',f:['延长至晚 9 点，周末亦可就诊','提升·填充与干细胞并行']},
+  jdskin:{d:'皮肤 · 干细胞 · 韩方',f:['干细胞与韩方诊疗并行','再生注射与提升设备']},
+  sinsoa:{d:'女性医学',f:['女性医学专科 — 与 FEMME 系列相关','卵巢干细胞与女性功能护理']},
+  vcps:{d:'整形外科 · 皮肤 · 干细胞',f:['由同一位专科医师负责从咨询到手术','皮肤·美容护理在同一空间完成']},
+  wonjin:{d:'整形外科 · 皮肤科 · 干细胞',f:['江南综合医疗美容医院','整形·皮肤·干细胞一站式']},
+  glovi:{d:'整形外科 · 干细胞',f:['狎鸥亭综合整形外科','同时提供干细胞诊疗']}
+ },
  gEyebrow:'术语说明',
  gTitle:'项目中出现的术语',
  gSub:'用通俗的说法整理了项目说明中出现的术语。',
@@ -540,7 +655,7 @@ ja:{
  hLead:'江南の専門医療機関と連携した専任コーディネーター型プログラムです。すべての施術は専門医が直接診察のうえ決定・実施し、Follow Korea が日程・通訳・アフターケアを担当します。',
  hBadges:['政府登録 外国人患者誘致機関','ソウル江南の提携医療機関','全行程で通訳同行'],
  hCta:'相談を申し込む',
- stats:[['4','提携病院'],['8','プログラム'],['1:1','専任担当'],['5','対応言語']],
+ stats:[['13','提携病院'],['8','プログラム'],['1:1','専任担当'],['5','対応言語']],
  aEyebrow:'プログラム紹介',
  aTitle:'プログラムの進め方',
  aSub:'幹細胞はさまざまな細胞へ分化し、周囲の組織の回復を助ける成長因子を分泌する細胞です。本プログラムはその特性を活かし、全身のコンディション、血流、組織の弾力の管理を助けます。最終的な構成は専門医の診察後に決定されます。',
@@ -552,7 +667,7 @@ ja:{
  cL1:'すべてのプログラム共通',
  cList1:['問い合わせから帰国まで 1:1 専任コーディネーター','診察・施術の全行程で通訳同行','病院間の同行移動','予約と日程を一括管理','帰国後はメッセンジャーでアフターフォロー','個人情報・診療情報を厳重に保護'],
  cL2:'病院と医師',
- cList2:['ソウル江南の幹細胞専門医療機関 4 施設','相談から施術まで専門医が直接担当','施術前に血液検査で適合性を確認','すべての施術は韓国の医療法および関連法令に準拠','政府登録の誘致機関が全行程を管理','プレミアムはプライベート動線と VIP 送迎つき'],
+ cList2:['ソウルの幹細胞・抗老化提携医療機関 13 施設','相談から施術まで専門医が直接担当','施術前に血液検査で適合性を確認','すべての施術は韓国の医療法および関連法令に準拠','政府登録の誘致機関が全行程を管理','プレミアムはプライベート動線と VIP 送迎つき'],
  pEyebrow:'プログラム',
  pTitle:'3 シリーズ、8 プログラム',
  pSub:'価格はこのページでは公開していません。お問い合わせ後、専門医の診察を踏まえた確定見積もりを書面でご案内します。',
@@ -572,6 +687,26 @@ ja:{
  pOptTitle:'追加オプション',
  pOptions:['機能ケア注射の回数追加','プレミアムアップグレード（培養臍帯幹細胞）','総合健康診断（NK・がん細胞検査を含む）','NAD+ 点滴 3 回コース','自家細胞の 5 年保管','成長ホルモン注射','NK 免疫細胞治療','女性フィラー 3cc'],
  pOptNote:'追加項目は別途見積もりとなり、専門医の診察で確定します。培養が必要な項目は約 2 週間かかるため、訪韓を分けて行います。',
+  clEyebrow:'提携病院',
+ clTitle:'プログラムを行う病院',
+ clSub:'ソウルの幹細胞・抗老化提携医療機関 13 施設です。どの病院で行うかは、専門医の判断とお客様の日程に応じて相談時に決定します。',
+ clNote:'表示順は順位ではなく、評価を含みません。提携病院と受診可否は変更される場合があります。写真は各病院から提供されたものです。',
+ areas:{gangnam:'ソウル江南',seocho:'ソウル瑞草',apgujeong:'ソウル狎鴎亭'},
+ clinics:{
+  cellis:{d:'幹細胞 · 免疫細胞 · 抗老化',f:['幹細胞と NK 免疫細胞の専門クリニック','共通検査を備えた抗老化プログラム']},
+  chaum:{d:'総合健診 · 抗老化 · 幹細胞',f:['個室での VIP 健診、当日結果カウンセリング','中国語・英語の通訳が全行程に同行']},
+  cellinique:{d:'幹細胞 · リフティング',f:['幹細胞治療に特化したプレミアムクリニック','リフティングプログラムを併設']},
+  onecell:{d:'幹細胞 · 皮膚 · 形成',f:['幹細胞・皮膚・形成を一か所で','ペインケアも併せて提供']},
+  cellora:{d:'幹細胞 · 細胞老化検査',f:['施術前に細胞老化検査を実施','幹細胞治療に単一集中']},
+  tr:{d:'抗老化 · 幹細胞',f:['非手術の抗老化プログラム','瘢痕・妊娠線の再生治療']},
+  gv:{d:'幹細胞 · ボディリフティング',f:['幹細胞とボディリフティングの組み合わせ','形成外科専門医によるカウンセリング']},
+  gu:{d:'リフティング · フィラー · 幹細胞',f:['21 時まで延長診療、週末も診療','リフティング・フィラーを幹細胞と併行']},
+  jdskin:{d:'皮膚 · 幹細胞 · 韓方',f:['幹細胞と韓方診療を併行','再生注射とリフティング機器']},
+  sinsoa:{d:'女性医学',f:['女性医学専門 — FEMME シリーズと関連','卵巣幹細胞と女性機能ケア']},
+  vcps:{d:'形成外科 · 皮膚 · 幹細胞',f:['相談から手術まで専門医 1 名が担当','皮膚・エステ管理を同じ空間で']},
+  wonjin:{d:'形成外科 · 皮膚科 · 幹細胞',f:['江南の総合医療美容病院','形成・皮膚・幹細胞を一か所で']},
+  glovi:{d:'形成外科 · 幹細胞',f:['狎鴎亭の総合形成外科','幹細胞診療も併設']}
+ },
  gEyebrow:'用語解説',
  gTitle:'プログラムで使われる用語',
  gSub:'プログラム説明に出てくる用語をわかりやすく整理しました。',
@@ -610,7 +745,7 @@ ru:{
  hLead:'Программа с персональным координатором в партнёрских клиниках Каннама. Все процедуры назначает и выполняет профильный врач после очной консультации. Follow Korea берёт на себя запись, перевод и сопровождение после возвращения.',
  hBadges:['Зарегистрированный государством оператор по приёму иностранных пациентов','Партнёрские клиники в Каннаме, Сеул','Перевод на всех этапах'],
  hCta:'Записаться на консультацию',
- stats:[['4','Клиники-партнёры'],['8','Программ'],['1:1','Координатор'],['5','Языков']],
+ stats:[['13','Клиники-партнёры'],['8','Программ'],['1:1','Координатор'],['5','Языков']],
  aEyebrow:'О программе',
  aTitle:'Как устроена программа',
  aSub:'Стволовые клетки способны дифференцироваться в разные типы клеток и выделять факторы роста, поддерживающие окружающие ткани. Программа опирается на эти свойства для поддержания общего состояния, кровообращения и тонуса тканей. Окончательный состав определяет лечащий врач.',
@@ -622,7 +757,7 @@ ru:{
  cL1:'Входит во все программы',
  cList1:['Персональный координатор 1:1 от обращения до вылета','Перевод на консультации и во время процедур','Сопровождение при переездах между клиниками','Запись и маршрут в одном месте','Сопровождение в мессенджере после возвращения домой','Строгое обращение с личными и медицинскими данными'],
  cL2:'Клиники и врачи',
- cList2:['Четыре профильные клиники в Каннаме, Сеул','Консультацию и процедуру проводит врач лично','Анализ крови перед процедурой для оценки пригодности','Все процедуры соответствуют медицинскому законодательству Кореи','Весь процесс ведёт зарегистрированный оператор','Уровень Premium включает приватный маршрут и VIP-трансферы'],
+ cList2:['Тринадцать партнёрских клиник в Сеуле, работающих со стволовыми клетками','Консультацию и процедуру проводит врач лично','Анализ крови перед процедурой для оценки пригодности','Все процедуры соответствуют медицинскому законодательству Кореи','Весь процесс ведёт зарегистрированный оператор','Уровень Premium включает приватный маршрут и VIP-трансферы'],
  pEyebrow:'Программы',
  pTitle:'Три линейки, восемь программ',
  pSub:'Цены на этой странице не публикуются. После обращения координатор направит письменную смету по итогам консультации врача.',
@@ -642,6 +777,26 @@ ru:{
  pOptTitle:'ДОПОЛНИТЕЛЬНЫЕ ОПЦИИ',
  pOptions:['Дополнительная инъекция функциональной поддержки','Апгрейд Premium: культивированные клетки пуповины','Комплексное обследование (вкл. NK / онкомаркеры)','Курс инфузий NAD+, 3 процедуры','Хранение собственных клеток, 5 лет','Инъекция гормона роста','Терапия NK-клетками','Женский филлер 3 мл'],
  pOptNote:'Дополнительные опции оцениваются отдельно и подтверждаются врачом на консультации. Культивирование занимает около двух недель, поэтому визит разделяется.',
+  clEyebrow:'Клиники-партнёры',
+ clTitle:'Где проходит программа',
+ clSub:'Тринадцать партнёрских клиник в Сеуле, работающих со стволовыми клетками и антивозрастными программами. Конкретная клиника определяется на консультации — по заключению врача и вашему графику.',
+ clNote:'Порядок показа не является рейтингом и не содержит оценки. Состав партнёров и доступность могут меняться. Фотографии предоставлены клиниками.',
+ areas:{gangnam:'Каннам, Сеул',seocho:'Сочо, Сеул',apgujeong:'Апкучжон, Сеул'},
+ clinics:{
+  cellis:{d:'Стволовые клетки · Иммунные клетки · Антивозрастные программы',f:['Профильная клиника по стволовым и NK-иммунным клеткам','Программы омоложения с единым протоколом обследования']},
+  chaum:{d:'Чек-ап · Антивозрастные программы · Стволовые клетки',f:['VIP-обследование в отдельном кабинете, разбор результатов в тот же день','Переводчики с китайского и английского сопровождают весь визит']},
+  cellinique:{d:'Стволовые клетки · Лифтинг',f:['Премиальная клиника с акцентом на клеточную терапию','Параллельно — программы лифтинга']},
+  onecell:{d:'Стволовые клетки · Кожа · Пластическая хирургия',f:['Клеточная терапия, дерматология и хирургия в одном месте','Также ведётся работа с болевым синдромом']},
+  cellora:{d:'Стволовые клетки · Тесты клеточного старения',f:['Оценка клеточного старения перед процедурой','Единственное направление — клеточная терапия']},
+  tr:{d:'Антивозрастные программы · Стволовые клетки',f:['Безоперационные антивозрастные программы','Работа с рубцами и растяжками']},
+  gv:{d:'Стволовые клетки · Лифтинг тела',f:['Клеточная терапия в сочетании с лифтингом тела','Консультацию ведёт хирург']},
+  gu:{d:'Лифтинг · Филлеры · Стволовые клетки',f:['Приём до 21:00 и по выходным','Лифтинг и филлеры вместе с клеточной терапией']},
+  jdskin:{d:'Кожа · Стволовые клетки · Корейская медицина',f:['Клеточная терапия параллельно с корейской медициной','Регенеративные инъекции и аппаратный лифтинг']},
+  sinsoa:{d:'Женское здоровье',f:['Специализация на женском здоровье — связана с линейкой FEMME','Овариальные клеточные и функциональные программы']},
+  vcps:{d:'Пластическая хирургия · Кожа · Стволовые клетки',f:['Один специалист ведёт от консультации до операции','Уход за кожей и эстетика в том же пространстве']},
+  wonjin:{d:'Пластическая хирургия · Дерматология · Стволовые клетки',f:['Многопрофильная эстетическая клиника в Каннаме','Хирургия, дерматология и клеточная терапия в одном месте']},
+  glovi:{d:'Пластическая хирургия · Стволовые клетки',f:['Многопрофильная пластическая хирургия в Апкучжоне','Клеточная терапия как дополнительное направление']}
+ },
  gEyebrow:'Глоссарий',
  gTitle:'Термины программы',
  gSub:'Простые пояснения к терминам из описания программ.',
@@ -737,6 +892,19 @@ function render(){
   el('p-options').innerHTML=t.pOptions.map(function(o){return '<span>'+esc(o)+'</span>';}).join('');
   el('p-optnote').textContent=t.pOptNote;
 
+  el('cl-eyebrow').textContent=t.clEyebrow; el('cl-title').textContent=t.clTitle;
+  el('cl-sub').textContent=t.clSub; el('cl-note').textContent=t.clNote;
+  el('cl-list').innerHTML=CLINICS.map(function(c){
+    var nm=CNAMES[c.id], d=t.clinics[c.id];
+    var label=(LANG==='ko'?nm.ko:LANG==='zh'?nm.zh:nm.en);
+    return '<div class="cc">'+
+      '<img class="ph" src="'+CLINIC_IMG+c.thumb+'" alt="'+esc(label)+'" loading="lazy" decoding="async">'+
+      '<div class="bd"><div class="cn">'+esc(label)+'</div>'+
+      '<div class="cd">'+esc(d.d)+'</div>'+
+      '<div class="cl">'+esc(t.areas[c.area])+'</div>'+
+      '<ul>'+d.f.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul>'+
+      '</div></div>';
+  }).join('');
   el('g-eyebrow').textContent=t.gEyebrow; el('g-title').textContent=t.gTitle; el('g-sub').textContent=t.gSub;
   el('g-list').innerHTML=t.gloss.map(function(g){return '<div class="gi"><b>'+esc(g[0])+'</b><p>'+esc(g[1])+'</p></div>';}).join('');
 
