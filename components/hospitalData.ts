@@ -2106,6 +2106,43 @@ export const HOSPITAL_DATA: HospDetail[] = [
   },
   {
     "name": {
+      "kr": "강남K뷰티성형외과의원",
+      "en": "Gangnam K-Beauty Plastic Surgery",
+      "zh": "江南K-Beauty整形外科"
+    },
+    "dept": {
+      "kr": "성형외과/피부과",
+      "en": "Plastic Surgery / Dermatology",
+      "zh": "整形外科/皮肤科"
+    },
+    "cat": "피부·성형",
+    "badge": "제주",
+    "treats": {
+      "kr": ["가슴성형", "눈성형", "코성형", "윤곽성형", "안티에이징", "쁘띠"],
+      "en": ["Breast", "Eye", "Nose", "Facial Contouring", "Anti-aging", "Petit"],
+      "zh": ["胸部整形", "眼部整形", "鼻部整形", "轮廓整形", "抗衰老", "微整形"]
+    },
+    "hours": "Mon-Fri 10:00-19:00 / Sat 10:00-17:00",
+    "loc": {
+      "ko": "제주 제주시 (노형동)",
+      "zh": "济州市",
+      "en": "Jeju-si, Jeju"
+    },
+    "overview": {
+      "kr": "강남K뷰티성형외과의원은 제주 소재 성형외과 전문의 병원으로 가슴·눈·코·윤곽성형과 안티에이징 리프팅·피부 시술을 하며, Dr.Yoo Cog 눈밑지방재배치 등 독자 특허기술을 보유하고 있습니다.",
+      "en": "Gangnam K-Beauty Plastic Surgery in Jeju offers breast, eye, nose and facial contouring surgery plus anti-aging lifting and skin care, with proprietary patented techniques.",
+      "zh": "江南K-Beauty整形外科(济州)由整形外科专科医生主诊，专注于胸部·眼部·鼻部·轮廓整形与抗衰提升、皮肤管理，提供中文服务。"
+    },
+    "doctors": [
+      { "name": "유중석", "title": "대표원장", "spec": ["성형외과 전문의", "가슴·눈·코·윤곽성형"] },
+      { "name": "심호섭", "title": "대표원장", "spec": ["성형외과"] },
+      { "name": "탁병모", "title": "원장", "spec": ["성형외과·피부"] },
+      { "name": "권성주", "title": "원장", "spec": ["성형외과·피부"] }
+    ],
+    "thumb": "hthumb/gkbeauty.jpg"
+  },
+  {
+    "name": {
       "kr": "히어피부과",
       "en": "Heer Dermatology",
       "zh": "Heer皮肤科"
