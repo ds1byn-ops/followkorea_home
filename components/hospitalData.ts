@@ -2142,6 +2142,46 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "thumb": "hthumb/gkbeauty.jpg"
   },
   {
+    "name": { "kr": "연세아이미스템의원", "en": "Yonsei IMIStem Clinic", "zh": "延世IMISTEM干细胞诊所" },
+    "dept": { "kr": "줄기세포/재생의학", "en": "Stem Cell / Regenerative Medicine", "zh": "干细胞/再生医学" },
+    "cat": "줄기세포",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["IMI 3종 복합주사", "줄기세포 항노화", "NK세포 면역", "혈장교환술", "발기부전"],
+      "en": ["IMI Triple Injection", "Stem Cell Anti-aging", "NK Cell Immune", "Plasma Exchange", "ED"],
+      "zh": ["IMI三合一复合注射", "干细胞抗衰", "NK细胞免疫", "血浆置换", "勃起功能障碍"]
+    },
+    "hours": "Mon-Fri 09:30-18:30 / Sat 예약제",
+    "loc": { "ko": "서울 강남 (강남역)", "zh": "首尔江南(江南站)", "en": "Gangnam Station, Seoul" },
+    "overview": {
+      "kr": "연세아이미스템의원은 보건복지부 지정 첨단재생의료 실시기관으로, 강남역에 위치해 줄기세포(IMI 3종 복합주사·항노화·얼굴·탈모)·면역세포(NK/PRF/SPM)·혈장교환술·발기부전 치료를 전문으로 합니다.",
+      "en": "Yonsei IMIStem Clinic, a Ministry-designated advanced regenerative medicine institution near Gangnam Station, specializes in stem cell and immune cell therapy, plasma exchange and ED treatment.",
+      "zh": "延世IMISTEM诊所是保健福祉部指定的尖端再生医疗实施机构，位于江南站，专注于干细胞、免疫细胞治疗、血浆置换及勃起功能障碍治疗。"
+    },
+    "doctors": [ { "name": "정인선", "title": "대표원장", "spec": ["줄기세포·재생의학", "혈장교환술", "면역세포치료"] } ],
+    "thumb": "hthumb/imistem.jpg"
+  },
+  {
+    "name": { "kr": "세레스의원", "en": "Ceres Clinic", "zh": "Ceres医院" },
+    "dept": { "kr": "피부과/다이어트/검진", "en": "Dermatology / Diet / Checkup", "zh": "皮肤科/减肥/体检" },
+    "cat": "피부·성형",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["피부 정밀케어", "의학 다이어트", "잡티·윤곽", "정밀 검진", "리프팅"],
+      "en": ["Skin Care", "Medical Diet", "Pigment·Contour", "Health Screening", "Lifting"],
+      "zh": ["皮肤精密护理", "医学减肥", "色斑·轮廓", "精密体检", "提升"]
+    },
+    "hours": "평일 진료 / 토요일 휴진",
+    "loc": { "ko": "서울 강남 (논현)", "zh": "首尔江南(论岘)", "en": "Nonhyeon, Gangnam, Seoul" },
+    "overview": {
+      "kr": "세레스의원은 강남 논현에 위치한 피부과로, 의학 다이어트(식단·운동 없는 의학 감량)·피부 정밀케어·검진센터 3개 센터를 운영하며 잡티·윤곽·리프팅과 정밀 검진을 제공합니다.",
+      "en": "Ceres Clinic in Nonhyeon, Gangnam operates three centers — dermatology, medical diet and health screening — offering precise skin care, contouring, lifting and comprehensive checkups.",
+      "zh": "Ceres医院位于江南论岘，由皮肤科·医学减肥·精密体检三大中心组成，提供皮肤精密护理、轮廓管理、提升及综合健康检查。"
+    },
+    "doctors": [],
+    "thumb": "hthumb/ceres.jpg"
+  },
+  {
     "name": {
       "kr": "히어피부과",
       "en": "Heer Dermatology",
