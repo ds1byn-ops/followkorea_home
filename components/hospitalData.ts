@@ -2182,6 +2182,26 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "thumb": "hthumb/ceres.jpg"
   },
   {
+    "name": { "kr": "닥터스피부과의원 신사본점", "en": "Doctors Dermatology (Sinsa)", "zh": "Doctors皮肤科 (新沙本店)" },
+    "dept": { "kr": "피부과(리프팅)", "en": "Dermatology (Lifting)", "zh": "皮肤科(提升)" },
+    "cat": "피부·성형",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["울쎄라·써마지","소프웨이브·XERF","스킨부스터","보톡스·필러","줄기세포"],
+      "en": ["Ulthera·Thermage","Sofwave·XERF","Skin Booster","Botox·Filler","Stem Cell"],
+      "zh": ["超声刀·热玛吉","索夫波·XERF","水光针","肉毒·玻尿酸","干细胞"]
+    },
+    "hours": "평일 09:30-15:30 / 일요일 진료 / 공휴일 휴진",
+    "loc": { "ko": "서울 강남 (신사)", "zh": "首尔江南(新沙)", "en": "Sinsa, Gangnam, Seoul" },
+    "overview": {
+      "kr": "닥터스피부과 신사본점은 \"리프팅은 닥터스\"로 알려진 리프팅 특화 피부과로, 성현철 대표원장을 중심으로 울쎄라·써마지·소프웨이브·XERF·덴시티·ONDA·티타늄 리프팅과 스킨부스터·보톡스·필러·줄기세포를 진료합니다.",
+      "en": "Doctors Dermatology Sinsa, known for lifting, led by Dr. Sung Hyun-chul, offers Ulthera, Thermage, Sofwave, XERF, Density, ONDA and titanium lifting plus skin boosters, botox, filler and stem cell therapy.",
+      "zh": "Doctors皮肤科(新沙本店)是以提升闻名的皮肤科, 由成炫哲代表院长主诊, 提供超声刀·热玛吉·索夫波·XERF·Density·ONDA·钛提升等提升及水光针·肉毒·玻尿酸·干细胞, 中文接待。"
+    },
+    "doctors": [ { "name": "성현철", "title": "대표원장", "spec": ["피부과 전문의", "리프팅", "명품 울쎄라·스컬트라"] }, { "name": "오영주", "title": "원장", "spec": ["피부과", "디자인 리프팅"] } ],
+    "thumb": "hthumb/doctors.jpg"
+  },
+  {
     "name": {
       "kr": "히어피부과",
       "en": "Heer Dermatology",
@@ -3739,7 +3759,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "thumb": "hthumb/junocoex.jpg"
   },
   {
-    "name": { "kr": "에코자르딘 코엑스 삼성점", "en": "ECO JARDIN COEX Samseong", "zh": "ECO JARDIN COEX三成店" },
+    "name": { "kr": "에코자뎅 코엑스 삼성점", "en": "ECO JARDIN COEX Samseong", "zh": "ECO JARDIN COEX三成店" },
     "dept": { "kr": "헤어살롱", "en": "Hair Salon", "zh": "美发沙龙" },
     "cat": "기타 서비스",
     "badge": "NEW",
@@ -3755,7 +3775,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "en": "COEX, Samseong, Seoul"
     },
     "overview": {
-      "kr": "에코자르딘 코엑스 삼성점은 코엑스에 위치한 헤어살롱으로, 컷·염색·펌·트리트먼트를 제공합니다. 쇼핑·전시 일정과 함께 이용하기 좋은 접근성이 강점입니다.",
+      "kr": "에코자뎅 코엑스 삼성점은 코엑스에 위치한 헤어살롱으로, 컷·염색·펌·트리트먼트를 제공합니다. 쇼핑·전시 일정과 함께 이용하기 좋은 접근성이 강점입니다.",
       "en": "ECO JARDIN COEX Samseong is a hair salon inside COEX offering cut, color, perm and treatments — easy to combine with shopping or exhibition schedules.",
       "zh": "ECO JARDIN COEX三成店位于COEX内，提供剪·染·烫·护理服务，可与购物·展会行程轻松衔接。"
     },
