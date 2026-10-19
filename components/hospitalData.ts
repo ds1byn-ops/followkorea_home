@@ -3519,30 +3519,35 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "thumb": "hthumb/ado.jpg"
   },
   {
-    "name": { "kr": "옐로우성형외과", "en": "Yellow Plastic Surgery", "zh": "Yellow整形外科" },
-    "dept": { "kr": "성형외과(눈·코)", "en": "Plastic Surgery (Eyes & Nose)", "zh": "整形外科(眼·鼻)" },
+    "name": { "kr": "디렉터의원", "en": "Director Clinic", "zh": "黛瑞丝皮肤科" },
+    "dept": { "kr": "피부과", "en": "Dermatology", "zh": "皮肤科" },
     "cat": "피부·성형",
     "badge": "NEW",
     "treats": {
-      "kr": ["쌍꺼풀·눈매교정", "눈 재수술", "코성형", "코 재수술", "안검하수 교정"],
-      "en": ["Double Eyelid & Eye Shape Correction", "Revision Eye Surgery", "Rhinoplasty", "Revision Rhinoplasty", "Ptosis Correction"],
-      "zh": ["双眼皮·眼型矫正", "眼部修复手术", "鼻整形", "鼻修复手术", "上睑下垂矫正"]
+      "kr": ["리프팅(울쎄라·써마지·온다·인모드)", "스킨부스터(리쥬란·쥬베룩·엑소좀)", "보톡스·필러", "모공·흉터·여드름", "색소·홍조 레이저", "바디·체형관리"],
+      "en": ["Lifting (Ulthera·Thermage·Onda·InMode)", "Skinbooster (Rejuran·Juvelook·Exosome)", "Botox·Filler", "Pores·Scars·Acne", "Pigment·Redness Laser", "Body·Shaping"],
+      "zh": ["提升(超声刀·热玛吉·Onda·inmode)", "胶原蛋白水光(丽珠兰·Juvelook·外泌体)", "肉毒·玻尿酸", "毛孔·疤痕·痘痘", "色素·泛红激光", "身体·体型管理"]
     },
-    "hours": "Mon-Fri 10:00-19:00 · Sat 10:00-17:00",
+    "hours": "Mon-Sat (by appointment)",
     "loc": {
-      "ko": "서울 강남구 강남대로 406 글라스타워 5층 (강남역 11번출구)",
-      "zh": "首尔江南·江南站",
-      "en": "Gangnam Station, Seoul"
+      "ko": "서울 강남구 (강남점)",
+      "zh": "首尔江南·江南总院",
+      "en": "Gangnam, Seoul"
     },
     "overview": {
-      "kr": "옐로우성형외과(Yellow Plastic Surgery)는 강남역 11번 출구 앞 글라스타워 5층에 위치한 눈·코 성형 전문 의원입니다. 대표원장 이대성이 수술 전 직접 상담부터 집도·경과 체크까지 전담하며, 쌍꺼풀·눈매교정·눈 재수술과 코성형·코 재수술에 특화되어 있습니다. 전 수술실에 CCTV를 설치해 운영하고 한·중·일·베트남어 안내를 제공합니다. 평일 19시, 토요일 17시까지 진료합니다.",
-      "en": "Yellow Plastic Surgery, on the 5th floor of Glass Tower by Exit 11 of Gangnam Station, specializes in eye and nose surgery — double eyelid, eye-shape correction and revision eye surgery, plus primary and revision rhinoplasty. Dr. Lee Dae-seong personally handles consultation, surgery and follow-up, with CCTV installed in every operating room. Open weekdays until 7pm and Saturdays until 5pm.",
-      "zh": "Yellow整形外科位于江南站11号出口前Glass Tower 5层，是眼·鼻整形专科医院。李大成代表院长术前亲自面诊、主刀并跟进术后恢复，专注双眼皮·眼型矫正·眼部修复手术及鼻整形·鼻修复手术。全部手术室配备CCTV，提供中·日·越南语咨询指引。平日营业至19点，周六至17点。"
+      "kr": "디렉터의원(DIRECTOR)은 강남점을 중심으로 운영되는 피부과 네트워크로, 피부과 전문의 이지민 대표원장을 비롯한 원장진이 1:1 맞춤 진료를 제공합니다. 울쎄라·써마지·온다·인모드 리프팅, 리쥬란·쥬베룩·엑소좀 스킨부스터, 보톡스·필러, 모공·흉터·여드름, 색소·홍조 레이저, 바디·체형관리까지 폭넓게 다루며 '과하지 않은 균형(BALANCE, DIRECTED)'을 지향합니다.",
+      "en": "Director Clinic (DIRECTOR), centered on its Gangnam flagship, is a dermatology network where board-certified dermatologist Dr. Lee Ji-min and fellow doctors provide 1:1 personalized care — lifting (Ulthera, Thermage, Onda, InMode), skin boosters (Rejuran, Juvelook, exosome), botox and filler, pores/scars/acne, pigment and redness lasers, and body/shape management — under its 'BALANCE, DIRECTED' philosophy of natural, individually designed results.",
+      "zh": "黛瑞丝皮肤科(DIRECTOR)以江南总院为中心运营，由皮肤科专科医生李智敏代表院长及多位院长提供一对一定制诊疗。涵盖超声刀·热玛吉·Onda·inmode提升，丽珠兰·Juvelook·外泌体胶原蛋白水光，肉毒·玻尿酸，毛孔·疤痕·痘痘，色素·泛红激光及身体·体型管理，秉持'BALANCE, DIRECTED'的自然平衡理念。"
     },
     "doctors": [
-      { "name": "이대성", "title": "대표원장", "spec": ["성형외과 전문의", "눈·코 재수술"] }
+      { "name": "이지민", "title": "대표원장", "spec": ["피부과 전문의", "흉터·여드름·재건", "국제흉터학회(AREC) 회장"] },
+      { "name": "김동섭", "title": "원장", "spec": ["서울대 의대", "울쎄라·래디어스·쥬베룩"] },
+      { "name": "이서원", "title": "원장", "spec": ["인하대 의대", "윤곽·필러·안티에이징"] },
+      { "name": "강승희", "title": "원장", "spec": ["고려대·전북대 의전원", "스컬트라·고난도 필러"] },
+      { "name": "김명은", "title": "원장", "spec": ["연세대·이화 의전원", "바디·체형·항노화"] },
+      { "name": "김하경", "title": "원장", "spec": ["울산대 의대", "특수부위 필러·색소레이저"] }
     ],
-    "thumb": "hthumb/yellow.jpg"
+    "thumb": "hthumb/director.jpg"
   },
   {
     "name": { "kr": "마블성형외과의원", "en": "Marble Plastic Surgery", "zh": "Marble整形外科" },
