@@ -3570,6 +3570,26 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "thumb": "hthumb/goldenbalance.jpg"
   },
   {
+    "name": { "kr": "플랜에스의원", "en": "PLAN;S Clinic", "zh": "PLAN;S 诊所" },
+    "dept": { "kr": "다이어트·바디컨투어링", "en": "Diet & Body Contouring", "zh": "减肥·身体塑形" },
+    "cat": "다이어트",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["다이어트약 프로그램", "뱃주사·HIGH뱃주사(지방분해)", "온다·티타늄 리프팅", "엠스컬프네오·트리플바디", "보톡스·스킨부스터"],
+      "en": ["Diet Medication Program", "Lipolysis Injection", "Onda·Titanium Lifting", "Emsculpt Neo·Triple Body", "Botox·Skinbooster"],
+      "zh": ["减肥药程序", "溶脂针·High溶脂针", "Onda·钛金提拉", "Emsculpt Neo·Triple Body", "肉毒·水光"]
+    },
+    "hours": "",
+    "loc": { "ko": "서울 (주소 확인 필요)", "zh": "首尔", "en": "Seoul" },
+    "overview": {
+      "kr": "플랜에스의원(PLAN;S CLINIC)은 다이어트약 프로그램·뱃주사/HIGH뱃주사(지방분해)·온다/티타늄 리프팅·엠스컬프네오·트리플바디·보톡스·스킨부스터 중심의 바디컨투어링 클리닉으로, FACE-2-BODY 온다 스페셜패키지와 온다×HIGH뱃주사 패키지를 운영합니다. 모든 처방·시술 VAT 별도.",
+      "en": "PLAN;S Clinic ('Standard of beauty') focuses on body contouring — diet-medication programs, lipolysis and HIGH lipolysis injections, Onda and Titanium lifting, Emsculpt Neo, Triple Body, botox and skin boosters — with FACE-2-BODY Onda and Onda x HIGH lipolysis packages. VAT added.",
+      "zh": "PLAN;S Clinic(Standard of beauty)是以减肥·身体塑形为中心的诊所，提供减肥药程序、溶脂针/High溶脂针、Onda/钛金提拉、Emsculpt Neo、Triple Body、肉毒及水光，并有Onda FACE-2-BODY及Onda×High溶脂针套餐。所有项目另加增值税。"
+    },
+    "doctors": [],
+    "thumb": "hthumb/plans.jpg"
+  },
+  {
     "name": { "kr": "마블성형외과의원", "en": "Marble Plastic Surgery", "zh": "Marble整形外科" },
     "dept": { "kr": "성형외과(가슴·코·눈)", "en": "Plastic Surgery (Breast·Nose·Eyes)", "zh": "整形外科(胸·鼻·眼)" },
     "cat": "피부·성형",
