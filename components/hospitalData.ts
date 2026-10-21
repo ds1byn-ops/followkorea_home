@@ -3550,6 +3550,26 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "thumb": "hthumb/director.jpg"
   },
   {
+    "name": { "kr": "골든발란스의원", "en": "Golden Balance (NEOK Aesthetic)", "zh": "Golden Balance 养生馆(念 NEOK)" },
+    "dept": { "kr": "양생·에스테틱 스파", "en": "Korean Wellness & Aesthetic Spa", "zh": "养生·美容SPA" },
+    "cat": "기타 서비스",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["헤드·바디 리추얼", "수기·온열·골드 테라피", "페이스 리추얼(윤곽·미백·재생)", "전신 미백", "멤버십"],
+      "en": ["Head·Body Ritual", "Manual·Hot-stone·Gold Therapy", "Face Ritual", "Full-body Brightening", "Membership"],
+      "zh": ["头·身体护理", "手法·热石·黄金疗法", "面部护理(轮廓·美白·再生)", "全身美白", "会员制"]
+    },
+    "hours": "",
+    "loc": { "ko": "서울 (주소 확인 필요)", "zh": "首尔", "en": "Seoul" },
+    "overview": {
+      "kr": "골든발란스의원(브랜드 넋·NEOK AESTHETIC)은 한국식 양생에서 영감을 받은 프리미엄 에스테틱·스파로, 헤드·바디 리추얼, 수기·온열·골드 테라피, 얼굴 윤곽·미백·재생 페이스 리추얼과 전신 미백, 멤버십을 운영합니다. 모든 항목 부가세 10% 별도.",
+      "en": "Golden Balance (brand NEOK AESTHETIC) is a premium aesthetic spa inspired by Korean 'yangsaeng' wellness, offering head/body rituals, manual/hot-stone/gold therapies, facial contouring, brightening and regeneration rituals and full-body brightening, with a membership program. 10% VAT added.",
+      "zh": "Golden Balance(品牌 念·NEOK AESTHETIC)是以韩国式养生为灵感的高端美容·SPA，提供头部·身体护理、手法/热石/黄金疗法、面部轮廓·美白·再生护理及全身美白，并设有会员制。所有项目另加10%增值税。"
+    },
+    "doctors": [],
+    "thumb": "hthumb/goldenbalance.jpg"
+  },
+  {
     "name": { "kr": "마블성형외과의원", "en": "Marble Plastic Surgery", "zh": "Marble整形外科" },
     "dept": { "kr": "성형외과(가슴·코·눈)", "en": "Plastic Surgery (Breast·Nose·Eyes)", "zh": "整形外科(胸·鼻·眼)" },
     "cat": "피부·성형",
