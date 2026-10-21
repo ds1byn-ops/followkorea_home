@@ -187,6 +187,22 @@ footer .ftlinks a:hover{border-color:#B08D3F;color:#fff;}
 .jc p{display:none;}
 .jc .n{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#C6A253,#8A6B26);color:#fff;font-size:14px;letter-spacing:0;display:flex;align-items:center;justify-content:center;margin:0 auto;}
 .jc b{font-size:13.5px;margin-top:10px;}
+/* mito section */
+.mflow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:26px;position:relative;}
+.mstep{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px 14px 16px;text-align:center;position:relative;}
+.mstep:not(:last-child):after{content:'';position:absolute;right:-10px;top:50%;width:8px;height:8px;border-top:2px solid var(--gold);border-right:2px solid var(--gold);transform:translateY(-50%) rotate(45deg);}
+.mstep svg{width:64px;height:64px;display:block;margin:0 auto 10px;}
+.mstep .mn{font-size:10.5px;font-weight:800;letter-spacing:.16em;color:var(--gold);}
+.mstep b{display:block;font-size:14.5px;margin-top:4px;}
+.mstep p{font-size:12px;color:var(--mute);margin-top:4px;line-height:1.5;}
+.mtime{display:flex;justify-content:center;margin-top:16px;}
+.mtime span{background:linear-gradient(135deg,#C6A253,#8A6B26);color:#fff;font-weight:800;font-size:13px;border-radius:99px;padding:8px 20px;}
+.mcards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:22px;}
+.mcard{background:#FBF3E2;border:1px solid var(--gold-l);border-radius:14px;padding:16px;text-align:center;}
+.mcard b{font-size:14px;color:var(--gold-d);}
+.mcard p{font-size:12px;color:#6b5b3c;margin-top:5px;line-height:1.5;}
+@media(max-width:900px){.mflow{grid-template-columns:1fr 1fr;}.mstep:not(:last-child):after{display:none;}}
+@media(max-width:620px){.mcards{grid-template-columns:1fr;}}
 @media(max-width:900px){.g3,.pcards,.ccards{grid-template-columns:1fr 1fr;}.jr{grid-template-columns:repeat(3,minmax(0,1fr));}.stats{grid-template-columns:1fr 1fr;}.hgrid{grid-template-columns:1fr;gap:24px;}.hphotos{height:300px;}}
 @media(max-width:620px){.g3,.g2,.pcards,.gloss,.row2,.ccards{grid-template-columns:1fr;}#a-pillars{grid-template-columns:1fr;}.jr{grid-template-columns:repeat(2,minmax(0,1fr));}.sec{padding:44px 0;}.hero{padding:40px 0 38px;}.hphotos{height:240px;}.band{height:150px;}}
 </style>
@@ -257,6 +273,18 @@ footer .ftlinks a:hover{border-color:#B08D3F;color:#fff;}
       <div class="optwrap" id="p-options"></div>
       <p class="note" id="p-optnote"></p>
     </div>
+  </div>
+</section>
+
+<section class="sec alt" id="mito">
+  <div class="wrap">
+    <div class="eyebrow" id="m-eyebrow"></div>
+    <h2 id="m-title"></h2>
+    <p class="sub" id="m-sub" style="display:block"></p>
+    <div class="mflow" id="m-flow"></div>
+    <div class="mtime"><span id="m-time"></span></div>
+    <div class="mcards" id="m-cards"></div>
+    <p class="note" id="m-note"></p>
   </div>
 </section>
 
@@ -892,8 +920,51 @@ function setLang(l){
 function el(id){ return document.getElementById(id); }
 function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
+
+var MITO={
+ en:{eyebrow:'Mitochondria-based advanced regenerative care',title:'S-PM CURE — an immune-cell programme built on your own blood',
+  sub:'An advanced regenerative medicine programme offered at a partner clinic. A small blood sample is processed in the clinic\'s own cell-processing facility and returned the same day. The final plan is decided by the physician after consultation.',
+  steps:[['01','Blood draw','A blood sample is taken from you.'],['02','Immune cells','Mononuclear cells (PBMCs) are separated from the sample.'],['03','Processing','Cells are treated with mitochondria-related components.'],['04','Administration','Given by IV or subcutaneous injection.']],
+  time:'About 5 hours from blood draw to administration',
+  cards:[['Mitochondria','The cell\'s energy-producing organelle.'],['Autologous','Prepared from your own blood.'],['Same day','Administered at the same clinic.']],
+  note:'Provided under Korea\'s advanced regenerative medicine framework at a designated institution. Suitability is decided by the physician after consultation and testing. Results vary by individual; no outcome is guaranteed. This page does not describe treatment of any disease.'},
+ ko:{eyebrow:'미토콘드리아 기반 첨단재생의료',title:'S-PM CURE — 본인 혈액으로 만드는 면역세포 프로그램',
+  sub:'협력 의료기관에서 제공하는 첨단재생의료 프로그램입니다. 소량의 혈액을 채취해 병원 내 세포처리시설에서 처리한 뒤 당일 투여합니다. 최종 구성은 전문의 상담 후 결정됩니다.',
+  steps:[['01','채혈','본인의 혈액을 채취합니다.'],['02','면역세포 분리','혈액에서 단핵구 세포(PBMCs)를 분리합니다.'],['03','처리','미토콘드리아 관련 성분으로 세포를 처리합니다.'],['04','투여','정맥주사 또는 피하주사로 투여합니다.']],
+  time:'채혈부터 투여까지 약 5시간',
+  cards:[['미토콘드리아','세포의 에너지를 만드는 소기관'],['자가 방식','본인 혈액으로 제조'],['당일 시술','같은 병원에서 바로 투여']],
+  note:'지정 의료기관에서 첨단재생의료 법령에 따라 제공됩니다. 적합 여부는 전문의 상담과 검사 후 결정되며, 결과는 개인에 따라 다르고 보장되지 않습니다. 이 페이지는 특정 질환의 치료를 설명하지 않습니다.'},
+ zh:{eyebrow:'基于线粒体的先进再生医疗',title:'S-PM CURE — 以本人血液制备的免疫细胞项目',
+  sub:'由合作医疗机构提供的先进再生医疗项目。采集少量血液，在院内细胞处理设施中处理后当日回输。最终方案由专科医师面诊后确定。',
+  steps:[['01','采血','采集本人血液。'],['02','分离免疫细胞','从血液中分离单个核细胞 (PBMCs)。'],['03','处理','以线粒体相关成分处理细胞。'],['04','输注','通过静脉或皮下注射给予。']],
+  time:'从采血到输注约 5 小时',
+  cards:[['线粒体','细胞内产生能量的细胞器'],['自体方式','以本人血液制备'],['当日完成','在同一医院当天输注']],
+  note:'由指定医疗机构依据韩国先进再生医疗相关法令提供。是否适合由专科医师在面诊与检查后判断，结果因人而异，不作任何保证。本页面不涉及任何疾病的治疗说明。'},
+ ja:{eyebrow:'ミトコンドリアを活用した先端再生医療',title:'S-PM CURE — ご自身の血液でつくる免疫細胞プログラム',
+  sub:'提携医療機関で提供する先端再生医療プログラムです。少量の血液を採取し、院内の細胞処理施設で処理して当日投与します。最終的な内容は専門医の診察後に決定します。',
+  steps:[['01','採血','ご自身の血液を採取します。'],['02','免疫細胞の分離','血液から単核球 (PBMCs) を分離します。'],['03','処理','ミトコンドリア関連成分で細胞を処理します。'],['04','投与','点滴または皮下注射で投与します。']],
+  time:'採血から投与まで約 5 時間',
+  cards:[['ミトコンドリア','細胞のエネルギーをつくる小器官'],['自家方式','ご自身の血液から製造'],['当日完了','同じ医院でその日に投与']],
+  note:'指定医療機関で、韓国の先端再生医療関連法令に基づき提供されます。適応は専門医が診察・検査の上で判断し、結果には個人差があり、保証はありません。本ページは特定の疾患の治療を説明するものではありません。'},
+ ru:{eyebrow:'Передовая регенеративная медицина на основе митохондрий',title:'S-PM CURE — программа на иммунных клетках из вашей крови',
+  sub:'Программа передовой регенеративной медицины в клинике-партнёре. Небольшой образец крови обрабатывается в клеточной лаборатории клиники и вводится в тот же день. Итоговый план определяет врач после консультации.',
+  steps:[['01','Забор крови','Берётся образец вашей крови.'],['02','Иммунные клетки','Из образца выделяют мононуклеары (PBMCs).'],['03','Обработка','Клетки обрабатывают компонентами, связанными с митохондриями.'],['04','Введение','Внутривенно или подкожно.']],
+  time:'Около 5 часов от забора крови до введения',
+  cards:[['Митохондрии','Органеллы, вырабатывающие энергию клетки'],['Аутологичный метод','Из вашей собственной крови'],['В тот же день','Введение в той же клинике']],
+  note:'Предоставляется в уполномоченном учреждении в рамках корейского законодательства о передовой регенеративной медицине. Пригодность определяет врач после консультации и обследования. Результаты индивидуальны, гарантий нет. Страница не описывает лечение каких-либо заболеваний.'}
+};
+var MICONS=["<svg viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"#8A6B26\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M32 8c8 11 14 19 14 28a14 14 0 0 1-28 0c0-9 6-17 14-28z\"/><path d=\"M26 38a6 6 0 0 0 6 6\" /></svg>","<svg viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"#8A6B26\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"24\" cy=\"26\" r=\"9\"/><circle cx=\"42\" cy=\"30\" r=\"8\"/><circle cx=\"32\" cy=\"43\" r=\"8\"/><circle cx=\"24\" cy=\"26\" r=\"2.5\"/><circle cx=\"42\" cy=\"30\" r=\"2.5\"/><circle cx=\"32\" cy=\"43\" r=\"2.5\"/></svg>","<svg viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"#8A6B26\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><ellipse cx=\"32\" cy=\"32\" rx=\"22\" ry=\"13\"/><path d=\"M18 30c4 5 6-5 10 0s6-5 10 0 4-3 8 1\"/></svg>","<svg viewBox=\"0 0 64 64\" fill=\"none\" stroke=\"#8A6B26\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M40 10l14 14M36 14l14 14-24 24H12V40z\"/><path d=\"M12 52l6-6M28 28l8 8\"/></svg>"];
+function renderMito(){
+  var m=MITO[LANG]||MITO.en;
+  el('m-eyebrow').textContent=m.eyebrow; el('m-title').textContent=m.title; el('m-sub').textContent=m.sub;
+  el('m-flow').innerHTML=m.steps.map(function(x,i){return '<div class="mstep">'+MICONS[i]+'<div class="mn">'+esc(x[0])+'</div><b>'+esc(x[1])+'</b><p>'+esc(x[2])+'</p></div>';}).join('');
+  el('m-time').textContent=m.time;
+  el('m-cards').innerHTML=m.cards.map(function(c){return '<div class="mcard"><b>'+esc(c[0])+'</b><p>'+esc(c[1])+'</p></div>';}).join('');
+  el('m-note').textContent=m.note;
+}
 function render(){
   var t=T[LANG];
+  renderMito();
   el('adbadge').textContent=t.ad;
   el('langs').innerHTML=LANGS.map(function(l){
     return '<button class="'+(l[0]===LANG?'on':'')+'" onclick="setLang(\''+l[0]+'\')">'+l[1]+'</button>';
