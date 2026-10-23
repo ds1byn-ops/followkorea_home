@@ -3590,6 +3590,26 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "thumb": "hthumb/plans.jpg"
   },
   {
+    "name": { "kr": "미병원", "en": "Mee Hospital", "zh": "美医院(Mee Hospital)" },
+    "dept": { "kr": "줄기세포·세포치료", "en": "Stem Cell & Cell Therapy", "zh": "干细胞·细胞治疗" },
+    "cat": "줄기세포",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["중간엽줄기세포(동종·자가 MSC)", "NK세포 면역치료", "PRP·PRF", "정맥·관절·척수강 투여", "미토콘드리아 활성화 세포"],
+      "en": ["Mesenchymal Stem Cells (MSC)", "NK Cell Immunotherapy", "PRP·PRF", "IV / Joint / Intrathecal", "Mitochondria-Activated Cells"],
+      "zh": ["间充质干细胞(异体·自体MSC)", "NK细胞免疫治疗", "PRP·PRF", "静脉·关节·鞘内给药", "线粒体活化细胞"]
+    },
+    "hours": "",
+    "loc": { "ko": "서울 (주소 확인 필요)", "zh": "首尔", "en": "Seoul" },
+    "overview": {
+      "kr": "미병원(Mee Hospital)은 줄기세포·세포치료 중심 의료기관으로, 미토콘드리아 활성화 동종·자가 중간엽줄기세포(MSC)와 NK세포 면역치료, 자가 PRP/PRF를 제공합니다. '세포제제 기본비용 + 투여경로별 추가비용' 구조이며 정맥·관절강·척수강·경동맥·피부 등 다양한 투여가 가능합니다.",
+      "en": "Mee Hospital focuses on stem-cell and cell therapy — mitochondria-activated allogeneic/autologous mesenchymal stem cells (MSC), NK-cell immunotherapy and autologous PRP/PRF. Pricing combines a cell-product base fee with a route-of-administration surcharge (IV, intra-articular, intrathecal, intra-carotid, skin/scalp).",
+      "zh": "美医院(Mee Hospital)是以干细胞·细胞治疗为中心的医疗机构，提供线粒体活化的异体/自体间充质干细胞(MSC)、NK细胞免疫治疗及自体PRP/PRF。采用'细胞制剂基础费用+给药途径附加费用'的收费方式，支持静脉·关节腔·鞘内·颈动脉·皮肤等多种给药。"
+    },
+    "doctors": [],
+    "thumb": "hthumb/mee.jpg"
+  },
+  {
     "name": { "kr": "마블성형외과의원", "en": "Marble Plastic Surgery", "zh": "Marble整形外科" },
     "dept": { "kr": "성형외과(가슴·코·눈)", "en": "Plastic Surgery (Breast·Nose·Eyes)", "zh": "整形外科(胸·鼻·眼)" },
     "cat": "피부·성형",
