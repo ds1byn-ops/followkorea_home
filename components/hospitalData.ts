@@ -4449,6 +4449,32 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "thumb": "hthumb/jryn.jpg"
   },
   {
+    "name": { "kr": "김병준레다스흉부외과", "en": "KIM BYOUNG JOON LEDAS", "zh": "金炳俊LEDAS胸外科" },
+    "dept": { "kr": "흉부외과(하지정맥류 중점)", "en": "Thoracic Surgery (Varicose Vein Clinic)", "zh": "胸外科(下肢静脉曲张专科)" },
+    "cat": "하지정맥류",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["하지정맥류", "최소침습 비절개", "혈관초음파 진단", "재발·재수술 클리닉", "의료용 압박스타킹"],
+      "en": ["Varicose Veins", "Minimally Invasive", "Vascular Ultrasound", "Recurrence Reoperation", "Compression Stockings"],
+      "zh": ["下肢静脉曲张", "微创非切开", "血管超声诊断", "复发·再手术", "医用压力袜"]
+    },
+    "hours": "월~금 09:00-18:00 (점심 12:30-13:30 · 일요일 휴진)",
+    "loc": {
+      "ko": "부산 부산진구 서면문화로 10 (영광도서빌딩 11~13F)",
+      "zh": "釜山西面(西面文化路10, 荣光图书大厦11~13F)",
+      "en": "Seomyeon, Busanjin-gu, Busan"
+    },
+    "overview": {
+      "kr": "김병준레다스흉부외과는 부산 서면에 위치한 하지정맥류 중점 흉부외과로, 대표원장 김병준을 중심으로 22년·29,000례 이상의 치료경험을 바탕으로 최소침습 비절개 치료, 재발·재수술 클리닉, 레다스 장기검진 시스템을 운영합니다. JCI 기준 감염관리 시스템을 갖추고 있습니다.",
+      "en": "KIM BYOUNG JOON LEDAS is a varicose vein-focused thoracic surgery clinic in Seomyeon, Busan. Led by Dr. Kim Byoung Joon with 22 years and 29,000+ cases, it offers minimally invasive non-incisional treatment, a recurrence reoperation clinic, and long-term follow-up under a JCI-standard infection control system.",
+      "zh": "金炳俊LEDAS胸外科位于釜山西面，专注下肢静脉曲张治疗。院长金炳俊拥有22年、29,000例以上经验，提供微创非切开治疗、复发再手术诊疗及长期随访，并建立JCI标准感染管理体系。"
+    },
+    "doctors": [
+      { "name": "김병준", "title": "대표원장", "spec": ["흉부외과 전문의", "하지정맥류 29,000례+", "최소침습 비절개"] }
+    ],
+    "thumb": "hthumb/ledas.jpg"
+  },
+  {
     "name": { "kr": "리베리의원 명동점", "en": "RE:BERRY Clinic Myeongdong", "zh": "丽贝瑞皮肤科(明洞店)" },
     "dept": { "kr": "피부과", "en": "Dermatology", "zh": "皮肤科" },
     "cat": "피부·성형",
