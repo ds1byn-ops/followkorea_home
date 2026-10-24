@@ -88,6 +88,32 @@ const OFFICIAL_ORGS: { id: string; tag: string; url: string; name: Record<string
       JP: '韓国保健産業振興院（KHIDI）が運営する外国人患者誘致機関の公式登録·管理システム。Follow Koreaは正式登録された外国人患者誘致事業者です。',
     },
   },
+  {
+    id: 'kha', tag: 'KOREAN HOSPITAL ASSOCIATION', url: 'https://www.kha.or.kr/kha_home/index.do',
+    name: {
+      KR: '대한병원협회 (KHA)', EN: 'Korean Hospital Association (KHA)',
+      CN: '大韩医院协会 (KHA)', JP: '大韓病院協会 (KHA)',
+    },
+    desc: {
+      KR: '전국 병원을 대표하는 대한병원협회 공식 사이트. 병원 정책·제도, 의료 질 향상과 국제 교류를 이끄는 대한민국 병원계 대표 단체입니다.',
+      EN: 'Official site of the Korean Hospital Association, the representative body of hospitals in Korea leading hospital policy, quality improvement and international exchange.',
+      CN: '代表韩国全国医院的大韩医院协会官方网站，引领医院政策制度、医疗质量提升与国际交流的韩国医院界代表机构。',
+      JP: '韓国全国の病院を代表する大韓病院協会の公式サイト。病院政策·制度、医療の質向上と国際交流をリードする韓国病院界の代表団体です。',
+    },
+  },
+  {
+    id: 'whc2026', tag: 'WHC 2026 · SEOUL', url: 'https://worldhospitalcongress.org/ko/',
+    name: {
+      KR: '제49차 세계병원대회 (WHC 2026, 서울)', EN: '49th IHF World Hospital Congress (WHC 2026, Seoul)',
+      CN: '第49届世界医院大会 (WHC 2026, 首尔)', JP: '第49回世界病院大会 (WHC 2026, ソウル)',
+    },
+    desc: {
+      KR: '국제병원연맹(IHF)과 대한병원협회가 공동 주최하는 세계 최대 병원·보건의료 국제학술대회. 2026년 10월 20~22일 서울 코엑스 마곡에서 90개국 2,000여 명이 참가합니다.',
+      EN: "The world's leading congress for hospital & healthcare leaders, co-hosted by the IHF and the Korean Hospital Association. Seoul (COEX Magok), Oct 20–22, 2026, with 2,000+ delegates from 90 countries.",
+      CN: '由国际医院联盟(IHF)与大韩医院协会共同主办的全球顶级医院·医疗保健国际学术大会。2026年10月20~22日于首尔COEX麻谷举办，来自90个国家的2,000余名代表参加。',
+      JP: '国際病院連盟(IHF)と大韓病院協会が共同主催する世界最大の病院·ヘルスケア国際学術大会。2026年10月20~22日、ソウル·COEXマゴクにて90か国·2,000名以上が参加します。',
+    },
+  },
 ];
 
 const dataLang = (lang: LanguageCode): 'kr' | 'en' | 'zh' => (lang === 'KR' ? 'kr' : lang === 'CN' ? 'zh' : 'en');
