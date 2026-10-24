@@ -263,6 +263,7 @@ h2{font-size:clamp(20px,3.6vw,27px);font-weight:900;letter-spacing:-.5px;}
     <h2 id="t-h-title"></h2>
     <p class="sub" id="t-h-sub"></p>
     <div class="chips" id="hchips"></div>
+    <div class="chips" id="hrchips" style="display:none;margin-top:6px;"></div>
     <div class="hgrid" id="hgrid"></div>
     <button class="hmore" id="hmoreBtn" style="display:none;" onclick="HPAGE++;renderHosps(true)"></button>
   </div>
@@ -581,6 +582,7 @@ function applyLang(l){
   renderQuick();
   renderKws();
   renderHchips();
+  renderRgChips();
   renderHosps(true);
 }
 /* 빠른 선택 — 분야 탭 1줄 + 선택 분야의 칩 1줄 (시선 분산 방지) */
@@ -597,7 +599,7 @@ function renderQuick(){
 }
 function selQG(i){QGSEL=i;renderQuick();}
 
-var HCAT='', HPAGE=1, HPER=9;
+var HCAT='', HREGION='', HPAGE=1, HPER=9;
 // 접속·새로고침마다 무작위 순서 (중립 표시 — 순위 아님)
 for(var _i=HOSPITALS.length-1;_i>0;_i--){var _j=Math.floor(Math.random()*(_i+1));var _t=HOSPITALS[_i];HOSPITALS[_i]=HOSPITALS[_j];HOSPITALS[_j]=_t;}
 // 분야 칩 라벨 (ko 키 → 언어별). '기타 서비스' = 헤어살롱·뷰티살롱·사진 스튜디오 등 비의료 제휴처 — 병원과 구분해 맨 뒤 그룹으로 표시
@@ -622,6 +624,33 @@ function setHCat(el){
   document.querySelectorAll('#hchips .chip').forEach(function(c){c.classList.toggle('on',c===el);});
   HPAGE=1; renderHosps();
 }
+// ── 지역 필터 (2026-10-24) ── 병원 loc에서 지역 자동추출, 병원 있는 지역만 칩 표시
+var REGION_ORDER=['서울','경기·인천','부산','제주','대구'];
+var REGION_L10N={'서울':{zh:'首尔',en:'Seoul',ja:'ソウル'},'경기·인천':{zh:'京畿·仁川',en:'Gyeonggi·Incheon',ja:'京畿·仁川'},'부산':{zh:'釜山',en:'Busan',ja:'釜山'},'제주':{zh:'济州',en:'Jeju',ja:'済州'},'대구':{zh:'大邱',en:'Daegu',ja:'大邱'}};
+function regionOf(h){
+  var s=(((h.loc||'')+' '+(h.locen||''))).toLowerCase();
+  if(/부산|busan/.test(s))return '부산';
+  if(/제주|jeju/.test(s))return '제주';
+  if(/대구|daegu/.test(s))return '대구';
+  if(/부천|경기|인천|수원|성남|고양|용인|안양|김포|화성|의정부|광명|시흥|평택|bucheon|gyeonggi|incheon|suwon/.test(s))return '경기·인천';
+  return '서울';
+}
+function regionLabel(r){ if(LANG==='ko')return r; var m=REGION_L10N[r]; return (m&&m[LANG])||r; }
+function renderRgChips(){
+  var box=document.getElementById('hrchips'); if(!box)return;
+  var present={}; HOSPITALS.forEach(function(h){ if(!isLife(h)) present[regionOf(h)]=1; });
+  var regions=REGION_ORDER.filter(function(r){return present[r];});
+  if(regions.length<=1){ box.style.display='none'; box.innerHTML=''; HREGION=''; return; }
+  box.style.display='';
+  var allLabel=(LANG==='ko'?'전국':LANG==='zh'?'全国':LANG==='ja'?'全国':'All');
+  box.innerHTML='<span class="chip'+(HREGION===''?' on':'')+'" data-r="" onclick="setHRegion(this)">'+esc(allLabel)+'</span>'
+    +regions.map(function(r){return '<span class="chip'+(HREGION===r?' on':'')+'" data-r="'+esc(r)+'" onclick="setHRegion(this)">'+esc(regionLabel(r))+'</span>';}).join('');
+}
+function setHRegion(el){
+  HREGION=el.getAttribute('data-r')||'';
+  document.querySelectorAll('#hrchips .chip').forEach(function(c){c.classList.toggle('on',c===el);});
+  HPAGE=1; renderHosps();
+}
 function thumbHtml(h){
   var p=HOSP_THUMB[h.name];
   var nm=hName(h);
@@ -631,7 +660,7 @@ function thumbHtml(h){
 function renderHosps(keepPage){
   if(!keepPage)HPAGE=1;
   var t=T();
-  var f=HOSPITALS.filter(function(h){ return !isLife(h) && (!HCAT || (h.cat||'').indexOf(HCAT)>=0); });
+  var f=HOSPITALS.filter(function(h){ return !isLife(h) && (!HCAT || (h.cat||'').indexOf(HCAT)>=0) && (!HREGION || regionOf(h)===HREGION); });
   var show=f.slice(0,HPAGE*HPER);
   document.getElementById('hgrid').innerHTML=show.map(hospCardHtml).join('');
   document.getElementById('hmoreBtn').style.display=f.length>show.length?'block':'none';

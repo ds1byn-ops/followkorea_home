@@ -36,6 +36,26 @@ const CAT_KEYS = ['all', '피부·성형', '줄기세포', '안과', '여성의�
 const LIFE_CAT = '기타 서비스';
 type CatKey = typeof CAT_KEYS[number];
 
+// 지역 필터 (2026-10-24) — 병원 loc에서 지역 자동 추출, 병원 있는 지역만 칩 표시
+const REGION_KEYS = ['all', '서울', '경기·인천', '부산', '제주', '대구'] as const;
+type RegionKey = typeof REGION_KEYS[number];
+const REGION_LABELS: Record<RegionKey, Record<LanguageCode, string>> = {
+  'all':      { KR: '전국', EN: 'All', CN: '全国', JP: '全国', ID: 'Semua', AR: 'الكل', KH: 'ទាំងអស់', VI: 'Toàn quốc', RU: 'Все' },
+  '서울':     { KR: '서울', EN: 'Seoul', CN: '首尔', JP: 'ソウル', ID: 'Seoul', AR: 'سيول', KH: 'សេអ៊ូល', VI: 'Seoul', RU: 'Сеул' },
+  '경기·인천': { KR: '경기·인천', EN: 'Gyeonggi·Incheon', CN: '京畿·仁川', JP: '京畿·仁川', ID: 'Gyeonggi·Incheon', AR: 'كيونغي·إنتشون', KH: 'Gyeonggi', VI: 'Gyeonggi·Incheon', RU: 'Кёнгидо·Инчхон' },
+  '부산':     { KR: '부산', EN: 'Busan', CN: '釜山', JP: '釜山', ID: 'Busan', AR: 'بوسان', KH: 'Busan', VI: 'Busan', RU: 'Пусан' },
+  '제주':     { KR: '제주', EN: 'Jeju', CN: '济州', JP: '済州', ID: 'Jeju', AR: 'جيجو', KH: 'Jeju', VI: 'Jeju', RU: 'Чеджу' },
+  '대구':     { KR: '대구', EN: 'Daegu', CN: '大邱', JP: '大邱', ID: 'Daegu', AR: 'دايغو', KH: 'Daegu', VI: 'Daegu', RU: 'Тэгу' },
+};
+const regionOf = (h: HospDetail): RegionKey => {
+  const s = (((h.loc && (h.loc as any).ko) || '') + ' ' + ((h.loc && (h.loc as any).en) || '')).toLowerCase();
+  if (/부산|busan/.test(s)) return '부산';
+  if (/제주|jeju/.test(s)) return '제주';
+  if (/대구|daegu/.test(s)) return '대구';
+  if (/부천|경기|인천|수원|성남|고양|용인|안양|김포|화성|의정부|광명|시흥|평택|bucheon|gyeonggi|incheon|suwon/.test(s)) return '경기·인천';
+  return '서울';
+};
+
 const dataLang = (lang: LanguageCode): 'kr' | 'en' | 'zh' => (lang === 'KR' ? 'kr' : lang === 'CN' ? 'zh' : 'en');
 const locLang = (lang: LanguageCode): 'ko' | 'en' | 'zh' => (lang === 'KR' ? 'ko' : lang === 'CN' ? 'zh' : 'en');
 
@@ -152,6 +172,7 @@ const PartnerHospitals: React.FC<{ lang: LanguageCode }> = ({ lang }) => {
   const ll = locLang(lang);
   const krBreak = lang === 'KR' ? 'break-keep' : '';
   const [cat, setCat] = useState<CatKey>('all');
+  const [region, setRegion] = useState<RegionKey>('all');
   const [expanded, setExpanded] = useState(false);
   const [selected, setSelected] = useState<HospDetail | null>(null);
 
@@ -169,9 +190,11 @@ const PartnerHospitals: React.FC<{ lang: LanguageCode }> = ({ lang }) => {
   // 제휴 병원(의료기관)과 제휴 서비스(헤어·뷰티·스튜디오)를 분리 — 서비스는 아래 별도 그룹에만 표시
   const HOSPITALS = HOSPITAL_DATA.filter(h => !isLife(h));
   const SERVICES = HOSPITAL_DATA.filter(isLife);
-  const filtered = cat === 'all' ? HOSPITALS : HOSPITALS.filter(h => h.cat.includes(cat));
+  const presentRegions = REGION_KEYS.filter(r => r === 'all' || HOSPITALS.some(h => regionOf(h) === r));
+  const showRegions = presentRegions.length >= 3; // 전국 + 실제 지역 2개 이상일 때만 지역 행 노출
+  const filtered = HOSPITALS.filter(h => (cat === 'all' || h.cat.includes(cat)) && (region === 'all' || regionOf(h) === region));
   const featured = FEATURED.map(n => HOSPITALS.find(h => h.name.kr === n)).filter(Boolean) as HospDetail[];
-  const list = cat !== 'all' || expanded ? filtered : featured;
+  const list = (cat !== 'all' || region !== 'all' || expanded) ? filtered : featured;
 
   const nHosp = HOSPITALS.length;
   const nDoc = HOSPITALS.reduce((a, h) => a + h.doctors.length, 0);
@@ -206,6 +229,19 @@ const PartnerHospitals: React.FC<{ lang: LanguageCode }> = ({ lang }) => {
           ))}
         </div>
       </Reveal>
+      {showRegions && (
+        <Reveal delay={0.17}>
+          <div className="flex flex-wrap justify-center items-center gap-2 mb-10 -mt-4">
+            <span className="text-[12px] text-gray-400 font-bold mr-1">{lang === 'KR' ? '지역' : lang === 'CN' ? '地区' : lang === 'JP' ? '地域' : 'Region'}</span>
+            {presentRegions.map((r) => (
+              <button key={r} type="button" onClick={() => setRegion(r)}
+                className={`text-[13px] px-4 py-2 rounded-full border transition-colors ${region === r ? 'bg-[#5a82c2] text-white border-[#5a82c2] font-bold' : 'border-gray-200 text-gray-500 hover:border-[#5a82c2] hover:text-[#5a82c2]'}`}>
+                {REGION_LABELS[r][lang] || REGION_LABELS[r].EN}
+              </button>
+            ))}
+          </div>
+        </Reveal>
+      )}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
         {list.map((h, i) => (
           <Reveal key={h.name.kr} delay={(i % 4) * 0.08}>
@@ -213,7 +249,7 @@ const PartnerHospitals: React.FC<{ lang: LanguageCode }> = ({ lang }) => {
           </Reveal>
         ))}
       </div>
-      {cat === 'all' && (
+      {cat === 'all' && region === 'all' && (
         <Reveal delay={0.2}>
           <div className="text-center mt-10 md:mt-14">
             <button type="button" onClick={() => setExpanded(!expanded)}
