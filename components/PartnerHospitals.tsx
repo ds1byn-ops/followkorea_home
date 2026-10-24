@@ -56,6 +56,40 @@ const regionOf = (h: HospDetail): RegionKey => {
   return '서울';
 };
 
+// 공식 등록·참가 기관 (제휴 서비스 섹션의 외부 링크 설명 카드, 2026-10-24) — 예약이 아니라 해당 공식 사이트로 이동
+const OFFICIAL_ORGS_TITLE: Record<string, string> = {
+  KR: '공식 등록·참가 기관', EN: 'Official Registration & Partners', CN: '官方登记·参与机构', JP: '公式登録·参加機関',
+  ID: 'Registrasi Resmi & Mitra', AR: 'التسجيل الرسمي والشركاء', KH: 'ការចុះឈ្មោះផ្លូវការ', VI: 'Đăng ký chính thức & Đối tác', RU: 'Офиц. регистрация и партнёры',
+};
+const OFFICIAL_ORGS: { id: string; tag: string; url: string; name: Record<string, string>; desc: Record<string, string> }[] = [
+  {
+    id: 'sitmmt', tag: 'B2B TRAVEL MART', url: 'https://sitmmt.org/sitmmt',
+    name: {
+      KR: 'SITMMT 서울의료관광 국제트래블마트', EN: "SITMMT – Seoul Int'l Travel Mart for Medical Tourism",
+      CN: 'SITMMT 首尔国际医疗观光旅游展', JP: 'SITMMT ソウル国際医療観光トラベルマート',
+    },
+    desc: {
+      KR: '서울시·한국보건산업진흥원이 주최하는 외국인환자 유치 B2B 국제 트래블마트로, 해외 바이어와 국내 의료·유치기관이 1:1 비즈니스 매칭을 진행합니다.',
+      EN: 'A B2B international travel mart for inbound medical tourism hosted in Seoul, connecting overseas buyers with Korean medical & facilitation providers through 1:1 business matching.',
+      CN: '由首尔市·韩国保健产业振兴院主办的外国患者招引B2B国际旅游展，海外买家与韩国医疗·招引机构进行1对1商务配对。',
+      JP: 'ソウル市·韓国保健産業振興院が主催する外国人患者誘致のB2B国際トラベルマート。海外バイヤーと韓国の医療·誘致機関が1対1の商談を行います。',
+    },
+  },
+  {
+    id: 'medicalkorea', tag: 'OFFICIAL REGISTRY · KHIDI', url: 'https://www.medicalkorea.or.kr/korp/main.do',
+    name: {
+      KR: 'MEDICAL KOREA 외국인환자 유치정보시스템', EN: 'MEDICAL KOREA – Foreign Patient Attraction System (KHIDI)',
+      CN: 'MEDICAL KOREA 外国患者招引信息系统（KHIDI）', JP: 'MEDICAL KOREA 外国人患者誘致情報システム（KHIDI）',
+    },
+    desc: {
+      KR: '한국보건산업진흥원(KHIDI)이 운영하는 외국인환자 유치기관 공식 등록·관리 시스템입니다. 팔로우코리아는 정식 등록된 외국인환자 유치사업자입니다.',
+      EN: 'The official registration & management system for foreign-patient attraction agencies, operated by KHIDI. Follow Korea is an officially registered foreign-patient attraction business.',
+      CN: '由韩国保健产业振兴院（KHIDI）运营的外国患者招引机构官方登记·管理系统。Follow Korea为正式登记的外国患者招引企业。',
+      JP: '韓国保健産業振興院（KHIDI）が運営する外国人患者誘致機関の公式登録·管理システム。Follow Koreaは正式登録された外国人患者誘致事業者です。',
+    },
+  },
+];
+
 const dataLang = (lang: LanguageCode): 'kr' | 'en' | 'zh' => (lang === 'KR' ? 'kr' : lang === 'CN' ? 'zh' : 'en');
 const locLang = (lang: LanguageCode): 'ko' | 'en' | 'zh' => (lang === 'KR' ? 'ko' : lang === 'CN' ? 'zh' : 'en');
 
@@ -278,6 +312,25 @@ const PartnerHospitals: React.FC<{ lang: LanguageCode }> = ({ lang }) => {
               </Reveal>
             ))}
           </div>
+          {/* 공식 등록·참가 기관 — 외부 공식 사이트로 이동하는 설명 카드 (2026-10-24) */}
+          <Reveal delay={0.1}>
+            <div className="mt-12 md:mt-16">
+              <h4 className={`text-center text-[13px] font-black text-gray-400 tracking-[0.22em] uppercase mb-6 ${krBreak}`}>{OFFICIAL_ORGS_TITLE[lang] || OFFICIAL_ORGS_TITLE.EN}</h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 max-w-3xl mx-auto">
+                {OFFICIAL_ORGS.map((o) => (
+                  <a key={o.id} href={o.url} target="_blank" rel="noopener noreferrer"
+                    className="group block rounded-2xl border border-gray-200 bg-white p-5 md:p-6 hover:border-[#5a82c2] hover:shadow-lg transition-all">
+                    <div className="flex items-center justify-between mb-2.5">
+                      <span className="text-[10.5px] font-black text-[#5a82c2] tracking-wider uppercase">{o.tag}</span>
+                      <span className="iconify text-lg text-gray-300 group-hover:text-[#5a82c2] transition-colors" data-icon="solar:arrow-right-up-linear"></span>
+                    </div>
+                    <div className={`font-black text-gray-900 text-[15px] md:text-base mb-2 leading-snug ${krBreak}`}>{o.name[lang] || o.name.EN}</div>
+                    <p className={`text-gray-500 text-[13px] leading-relaxed ${krBreak}`}>{o.desc[lang] || o.desc.EN}</p>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </Reveal>
         </div>
       )}
 
