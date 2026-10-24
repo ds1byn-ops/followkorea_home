@@ -4423,6 +4423,30 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "thumb": "hthumb/cellis.jpg"
   },
   {
+    "name": { "kr": "815의원", "en": "815 Clinic", "zh": "815医院" },
+    "dept": { "kr": "피부과(엉덩이·골반 콜라겐·바디 컨투어링)", "en": "Clinic (Hip·Pelvic Collagen·Body Contouring)", "zh": "皮肤科(臀部·骨盆胶原·身体塑形)" },
+    "cat": "피부·성형/체형",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["엉덩이·골반 콜라겐", "바디 콜라겐·쏙주사", "실리프팅(페이스/바디)", "메타셀 줄기세포", "레이저·리프팅"],
+      "en": ["Hip·Pelvic Collagen", "Body Collagen·Lipolysis", "Thread Lift", "Stem Cell", "Laser·Lifting"],
+      "zh": ["臀部·骨盆胶原", "身体胶原·溶脂针", "线雕(面部/身体)", "MetaCell干细胞", "激光·提升"]
+    },
+    "hours": "화·수·목 10:30~19:30 · 금 10:30~20:30 · 토 10:00~17:00 (일·월 휴진)",
+    "loc": {
+      "ko": "서울 강남구 논현로 822 (신사동, 로뎀빌딩 4~6F)",
+      "zh": "首尔江南区论岘路822(新沙洞)",
+      "en": "Sinsa-dong, Gangnam-gu, Seoul"
+    },
+    "overview": {
+      "kr": "815의원(815클리닉)은 서울 강남구 신사동(압구정역·신사역 사이)에 위치한 비수술·쁘띠 중심 의원으로, 엉덩이·골반 콜라겐 주사를 시그니처로 힙딥·무골반 체형을 절개 없이 교정합니다. 바디 콜라겐·쏙주사·페이스/바디 리프팅·메타셀 줄기세포를 함께 운영하며 한국어·영어·일본어·중국어 진료가 가능합니다.",
+      "en": "815 Clinic in Sinsa-dong, Gangnam, Seoul specializes in non-surgical petit procedures, with signature hip & pelvic collagen injections that correct hip dips and a narrow pelvis without incision. It also offers body collagen, lipolysis injections, face/body lifting and MetaCell stem-cell therapy, with care in Korean, English, Japanese and Chinese.",
+      "zh": "815医院(815诊所)位于首尔江南区新沙洞(狎鸥亭站·新沙站之间)，以非手术微整为主，招牌项目为臀部·骨盆胶原注射，无需切开即可矫正臀凹与窄骨盆体型。同时提供身体胶原·溶脂针·面部/身体提升及MetaCell干细胞，可用韩·英·日·中文诊疗。"
+    },
+    "doctors": [],
+    "thumb": "hthumb/815.jpg"
+  },
+  {
     "name": { "kr": "제이린안과", "en": "JRYN Eye Clinic", "zh": "JRYN眼科" },
     "dept": { "kr": "안과(스마일라식·ICL·백내장)", "en": "Ophthalmology (SMILE·ICL·Cataract)", "zh": "眼科(全飞秒·ICL·白内障)" },
     "cat": "안과",
