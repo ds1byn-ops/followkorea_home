@@ -4447,6 +4447,46 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "thumb": "hthumb/815.jpg"
   },
   {
+    "name": { "kr": "강남그랜드안과", "en": "Gangnam Grand Eye Clinic", "zh": "江南格兰德眼科" },
+    "dept": { "kr": "안과(시력교정·노안백내장·안질환)", "en": "Ophthalmology (Vision Correction·Cataract)", "zh": "眼科(视力矫正·老视白内障·眼疾)" },
+    "cat": "안과",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["스마일라식·라식·라섹", "퍼스널아이즈·컨투라비전", "ICL 안내렌즈삽입", "노안·백내장(24렌즈)", "녹내장·안질환"],
+      "en": ["SMILE·LASIK·LASEK", "Personal Eyes·Contoura", "ICL Implant", "Presbyopia·Cataract", "Glaucoma"],
+      "zh": ["SMILE·LASIK·LASEK", "个性化视力矫正", "ICL晶体植入", "老视·白内障(24种晶体)", "青光眼·眼疾"]
+    },
+    "hours": "",
+    "loc": { "ko": "서울 서초구 강남대로 363 강남타워 4·5층 (강남역 5번출구)", "zh": "首尔瑞草区江南大路363(江南站5号出口)", "en": "Gangnam-daero, Seocho-gu, Seoul" },
+    "overview": {
+      "kr": "강남그랜드안과는 강남역 5번출구에 위치한 안과로, 스마일라식·라식·라섹과 퍼스널아이즈·컨투라비전 등 맞춤 시력교정, ICL 안내렌즈삽입술, 24종 프리미엄 렌즈를 활용한 노안·백내장 수술(2만안 이상), 녹내장·안질환까지 전 영역을 진료합니다. 17명의 통역 인력을 갖추고 있습니다.",
+      "en": "Gangnam Grand Eye Clinic (Gangnam Stn. Exit 5) offers SMILE/LASIK/LASEK and personalized vision correction, ICL implantation, presbyopia & cataract surgery with 24 premium lenses (20,000+ cases), and glaucoma/eye-disease care, with 17 interpreters.",
+      "zh": "江南格兰德眼科位于江南站5号出口,提供SMILE·LASIK·LASEK及个性化视力矫正、ICL晶体植入、采用24种高级晶体的老视·白内障手术(超2万眼)及青光眼·眼疾诊疗,配备17名翻译。"
+    },
+    "doctors": [],
+    "thumb": "hthumb/grandeye.jpg"
+  },
+  {
+    "name": { "kr": "미모던피부과의원", "en": "Mimodern Dermatology", "zh": "美摩登皮肤科" },
+    "dept": { "kr": "피부과", "en": "Dermatology", "zh": "皮肤科" },
+    "cat": "피부·성형",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["피부 레이저·색소", "리프팅·탄력", "쁘띠·보톡스·필러", "여드름·흉터", "스킨케어"],
+      "en": ["Laser·Pigment", "Lifting", "Botox·Filler", "Acne·Scar", "Skincare"],
+      "zh": ["皮肤激光·色素", "提升·紧致", "微整·肉毒·填充", "痘痘·疤痕", "皮肤管理"]
+    },
+    "hours": "",
+    "loc": { "ko": "서울 강남구 광평로 280 2층 205호 (수서동, 로즈데일빌딩)", "zh": "首尔江南区光坪路280(水西洞)", "en": "Suseo-dong, Gangnam-gu, Seoul" },
+    "overview": {
+      "kr": "미모던피부과의원은 서울 강남구 수서동(로즈데일빌딩 2층)에 위치한 피부과로, 성바오로·서울성모·인천성모병원 경력의 대표원장이 피부 레이저·색소·리프팅·쁘띠(보톡스·필러)·여드름·흉터 등 맞춤 피부 진료를 제공합니다.",
+      "en": "Mimodern Dermatology in Suseo-dong, Gangnam, Seoul, led by a director experienced at St. Paul's/Seoul St. Mary's/Incheon St. Mary's hospitals, provides laser, pigment, lifting, injectables, acne and scar care.",
+      "zh": "美摩登皮肤科位于首尔江南区水西洞(罗斯戴尔大厦2层),院长拥有圣保罗·首尔圣母·仁川圣母医院经历,提供皮肤激光·色素·提升·微整·痘痘·疤痕等定制皮肤诊疗。"
+    },
+    "doctors": [],
+    "thumb": "hthumb/mimodern.jpg"
+  },
+  {
     "name": { "kr": "제이린안과", "en": "JRYN Eye Clinic", "zh": "JRYN眼科" },
     "dept": { "kr": "안과(스마일라식·ICL·백내장)", "en": "Ophthalmology (SMILE·ICL·Cataract)", "zh": "眼科(全飞秒·ICL·白内障)" },
     "cat": "안과",
