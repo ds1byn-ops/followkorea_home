@@ -161,7 +161,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "皮肤/医美 (眼·鼻·耳·肩·臀)"
     },
     "cat": "피부·성형",
-    "badge": "NEW",
     "treats": {
       "kr": [
         "눈",
@@ -3129,7 +3128,7 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "name": { "kr": "분당차병원", "en": "CHA Bundang Medical Center", "zh": "盆唐CHA医院" },
     "dept": { "kr": "종합검진/국제진료", "en": "Health Checkup / International Clinic", "zh": "综合体检/国际诊疗" },
     "thumb": "hthumb/chabundang.jpg",
-    "cat": "검진",
+    "cat": "검진/여성의학",
     "badge": "검진전문",
     "treats": {
       "kr": ["STANDARD 기본검진", "EXECUTIVE 검진", "PREMIUM 심장·뇌", "VIP 숙박형 검진", "INTENSIVE 특화검진"],
