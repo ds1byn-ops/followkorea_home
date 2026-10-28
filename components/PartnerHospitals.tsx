@@ -116,6 +116,49 @@ const OFFICIAL_ORGS: { id: string; tag: string; url: string; name: Record<string
   },
 ];
 
+// 의료관광·의료 행사 캘린더 (제휴 서비스 섹션, 2026-10-28) — 연간 B2B 행사 일정 참고
+const EVENTS_TITLE: Record<string, string> = {
+  KR: '의료관광 행사 캘린더', EN: 'Medical Tourism Event Calendar', CN: '医疗观光活动日历', JP: '医療観光イベントカレンダー',
+  ID: 'Kalender Acara Wisata Medis', AR: 'تقويم فعاليات السياحة العلاجية', KH: 'ប្រតិទិនព្រឹត្តិការណ៍', VI: 'Lịch sự kiện du lịch y tế', RU: 'Календарь событий медтуризма',
+};
+const EVT_STATUS: Record<string, Record<string, string>> = {
+  upcoming: { KR: '예정', EN: 'Upcoming', CN: '即将', JP: '予定' },
+  annual: { KR: '정기', EN: 'Annual', CN: '定期', JP: '定例' },
+  done: { KR: '종료', EN: 'Ended', CN: '已结束', JP: '終了' },
+};
+const EVENTS: { name: string; status: 'upcoming' | 'annual' | 'done'; url?: string; desc: Record<string, string>; meta: Record<string, string> }[] = [
+  {
+    name: 'SITMMT', status: 'upcoming', url: 'https://sitmmt.org/sitmmt',
+    desc: { KR: '서울의료관광 국제트래블마트', EN: "Seoul Int'l Travel Mart for Medical Tourism", CN: '首尔国际医疗观光旅游展', JP: 'ソウル国際医療観光トラベルマート' },
+    meta: { KR: '연 1회(하반기) · 서울 — 2027 모집 예정 · B2B 바이어 1:1 매칭', EN: 'Annual (H2) · Seoul — 2027 registration upcoming · B2B matching' },
+  },
+  {
+    name: 'WHC · 세계병원대회', status: 'done', url: 'https://worldhospitalcongress.org/ko/',
+    desc: { KR: 'IHF·대한병원협회 공동주최 국제학술대회', EN: 'IHF World Hospital Congress', CN: '世界医院大会(IHF)', JP: '世界病院大会(IHF)' },
+    meta: { KR: '2026.10.20~22 · 서울 코엑스 마곡 — IHF 순회(차기 개최지 미정)', EN: 'Oct 20–22, 2026 · COEX Magok, Seoul — IHF rotating host' },
+  },
+  {
+    name: 'KIMES 부산', status: 'annual',
+    desc: { KR: '국제의료기기·병원설비 전시회', EN: "Int'l Medical & Hospital Equipment Show (Busan)", CN: '国际医疗器械·医院设备展(釜山)', JP: '国際医療機器·病院設備展(釜山)' },
+    meta: { KR: '매년 10월 · 부산 벡스코 — 팔로우코리아 2026 참가(J405)', EN: 'Every Oct · BEXCO, Busan — Follow Korea exhibited 2026 (J405)' },
+  },
+  {
+    name: 'KIMES 서울', status: 'annual',
+    desc: { KR: '국내 최대 국제의료기기 전시회', EN: "Korea's largest medical equipment show", CN: '韩国最大国际医疗器械展', JP: '韓国最大の国際医療機器展' },
+    meta: { KR: '매년 3월 · 서울 코엑스', EN: 'Every Mar · COEX, Seoul' },
+  },
+  {
+    name: 'COITM 베이징', status: 'annual',
+    desc: { KR: '중국 의료관광 교류 행사', EN: 'China medical tourism event', CN: '中国医疗观光交流活动', JP: '中国医療観光交流イベント' },
+    meta: { KR: '매년 10월 · 중국 베이징 — 중국 바이어·여행사 접점', EN: 'Every Oct · Beijing — China buyers & agencies' },
+  },
+  {
+    name: 'MEDICAL KOREA · KHIDI', status: 'annual', url: 'https://www.medicalkorea.or.kr/korp/main.do',
+    desc: { KR: '유치사업자 세미나·실적보고', EN: 'KHIDI attraction-agency seminar & reporting', CN: 'KHIDI 招引机构研讨·实绩申报', JP: 'KHIDI 誘致事業者セミナー·実績報告' },
+    meta: { KR: '실적보고 1~2월 등 수시 · 온라인/서울 — 유치기관 필수 일정', EN: 'Reporting Jan–Feb, etc. · Online/Seoul — required for agencies' },
+  },
+];
+
 const dataLang = (lang: LanguageCode): 'kr' | 'en' | 'zh' => (lang === 'KR' ? 'kr' : lang === 'CN' ? 'zh' : 'en');
 const locLang = (lang: LanguageCode): 'ko' | 'en' | 'zh' => (lang === 'KR' ? 'ko' : lang === 'CN' ? 'zh' : 'en');
 
@@ -355,6 +398,30 @@ const PartnerHospitals: React.FC<{ lang: LanguageCode }> = ({ lang }) => {
                   </a>
                 ))}
               </div>
+            </div>
+          </Reveal>
+          {/* 의료관광 행사 캘린더 (2026-10-28) */}
+          <Reveal delay={0.14}>
+            <div className="mt-10 md:mt-12">
+              <h4 className={`text-center text-[13px] font-black text-gray-400 tracking-[0.22em] uppercase mb-6 ${krBreak}`}>{EVENTS_TITLE[lang] || EVENTS_TITLE.EN}</h4>
+              <div className="max-w-3xl mx-auto rounded-2xl border border-gray-200 bg-white overflow-hidden divide-y divide-gray-100">
+                {EVENTS.map((e) => {
+                  const st = e.status === 'upcoming' ? 'bg-[#5a82c2] text-white' : e.status === 'annual' ? 'bg-[#eef3fb] text-[#5a82c2]' : 'bg-gray-100 text-gray-400';
+                  const Row: any = e.url ? 'a' : 'div';
+                  return (
+                    <Row key={e.name} {...(e.url ? { href: e.url, target: '_blank', rel: 'noopener noreferrer' } : {})}
+                      className={`flex items-start gap-3 p-4 md:p-5 ${e.url ? 'group hover:bg-gray-50 transition-colors' : ''}`}>
+                      <span className={`shrink-0 mt-0.5 text-[11px] font-black px-2.5 py-1 rounded-full ${st}`}>{EVT_STATUS[e.status][lang] || EVT_STATUS[e.status].EN}</span>
+                      <div className="flex-1 min-w-0">
+                        <div className={`font-black text-gray-900 text-[14px] md:text-[15px] ${krBreak}`}>{e.name} <span className="text-gray-400 font-medium">· {e.desc[lang] || e.desc.EN}</span></div>
+                        <div className={`text-gray-500 text-[12.5px] mt-1 ${krBreak}`}>{e.meta[lang] || e.meta.EN}</div>
+                      </div>
+                      {e.url && <span className="iconify text-gray-300 group-hover:text-[#5a82c2] transition-colors mt-1 shrink-0" data-icon="solar:arrow-right-up-linear"></span>}
+                    </Row>
+                  );
+                })}
+              </div>
+              <p className={`text-center text-gray-400 text-[11px] mt-3 ${krBreak}`}>{lang === 'KR' ? '일정은 주최 측 공지에 따라 변동될 수 있습니다.' : 'Dates may change per organizers’ announcements.'}</p>
             </div>
           </Reveal>
         </div>
