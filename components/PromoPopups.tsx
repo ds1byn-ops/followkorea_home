@@ -99,19 +99,19 @@ const STEM_TEXT: Record<string, CardText> = {
   KR: {
     badge: '신규 진료 분야', title: '줄기세포 · 세포치료', sub: '첨단재생의료 실시기관 네트워크',
     desc: '줄기세포·면역세포 치료 제휴 병원이 확대되었습니다.\n국내 첨단재생의료 실시기관을 포함합니다.',
-    items: ['미병원 · 셀이즈랩 · 연세아이미스템 — 세포치료 중점', 'NK세포 면역치료 · 줄기세포 · 혈장교환', '사전 상담 후 치료 계획·비용 안내'],
+    items: ['미병원 · 셀리닉 · 셀이즈랩 · 연세아이미스템 — 세포치료 중점', 'NK세포 면역치료 · 줄기세포 · 혈장교환', '사전 상담 후 치료 계획·비용 안내'],
     cta: '줄기세포 치료 상담 신청', today: '오늘 하루 보지 않기', close: '닫기',
   },
   EN: {
     badge: 'New Specialty', title: 'Stem Cell · Cell Therapy', sub: 'Advanced regenerative medicine network',
     desc: 'Our network of stem cell and immune cell therapy clinics\nhas expanded, including licensed regenerative medicine centers.',
-    items: ['Mee Hospital · Cellis LAB · Yonsei IMIStem', 'NK cell immunotherapy · stem cells · plasma exchange', 'Treatment plan and cost guidance after consultation'],
+    items: ['Mee Hospital · Cellinique · Cellis LAB · Yonsei IMIStem', 'NK cell immunotherapy · stem cells · plasma exchange', 'Treatment plan and cost guidance after consultation'],
     cta: 'Request a Stem Cell Consultation', today: 'Don’t show again today', close: 'Close',
   },
   CN: {
     badge: '新增诊疗领域', title: '干细胞 · 细胞治疗', sub: '尖端再生医疗实施机构网络',
     desc: '干细胞·免疫细胞治疗合作医院已扩充，\n其中包含韩国尖端再生医疗实施机构。',
-    items: ['Mee医院 · Cellis LAB · 延世IMIStem — 细胞治疗中心', 'NK细胞免疫治疗 · 干细胞 · 血浆置换', '咨询后提供治疗方案与费用说明'],
+    items: ['Mee医院 · Cellinique · Cellis LAB · 延世IMIStem — 细胞治疗中心', 'NK细胞免疫治疗 · 干细胞 · 血浆置换', '咨询后提供治疗方案与费用说明'],
     cta: '申请干细胞治疗咨询', today: '今日不再显示', close: '关闭',
   },
 };
