@@ -673,11 +673,13 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
           onClick={() => { const el = document.getElementById('about-us'); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.pageYOffset - 90, behavior: 'smooth' }); }}
           className="relative h-[64vh] md:h-[72vh] w-full rounded-[2.5rem] md:rounded-[4rem] overflow-hidden shadow-2xl cursor-pointer"
         >
-          {/* 2026-10-29: Vimeo 임베드 → KIMES BUSAN 2026 부스 현장 루프 영상으로 교체.
+          {/* 2026-10-29: Vimeo 임베드 → KIMES BUSAN 2026 현장 루프 영상으로 교체.
               종전 iframe 은 min-w/min-h + scale-125 로 과하게 확대돼 모바일에서 가로의 19%만 보였음.
               object-cover 로 좌우 전체를 쓰고 상하만 잘리게 함.
-              좌측에 헤드라인이 올라가므로 피사체가 중앙~우측에 오는 구간(원본 28~36초)을 사용.
-              poster 는 같은 영상의 정지컷이라 로딩 중에도 화면이 비지 않는다. */}
+              6개 대표 장면 몽타주(전시회 외관 → 입장 게이트 → 전시장 전경 → J405 부스 간판 →
+              상담 → 부스 전경. 각 0.5초 디졸브, 16.3초). 끝 0.5초를 머리에 겹쳐 디졸브해
+              루프 이음매가 보이지 않는다.
+              poster 는 영상의 0초 프레임이라 로딩→재생 전환이 보이지 않는다. */}
           <div className="absolute inset-0 w-full h-full pointer-events-none">
             <video
               className="w-full h-full object-cover object-[35%_center] xl:object-center"
@@ -691,9 +693,15 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
               aria-hidden="true"
             />
           </div>
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/20 to-transparent"></div>
-          {/* 모바일은 세로로 길게 잘려 밝은 배너가 헤드라인과 겹치므로 전체 스크림을 한 겹 더 깐다 */}
-          <div className="absolute inset-0 bg-black/25 xl:hidden"></div>
+          {/* 몽타주라 장면마다 밝기가 달라진다(흰 현수막·흰 부스벽이 좌측에 오는 컷이 다수).
+              모든 컷에서 헤드라인이 읽히도록 좌측 스크림을 Tailwind 기본 3-stop 보다 진하게,
+              우측 45% 는 그대로 비도록 정지점을 직접 지정한다. */}
+          <div
+            className="absolute inset-0"
+            style={{ backgroundImage: 'linear-gradient(to right, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.66) 30%, rgba(0,0,0,0.3) 58%, rgba(0,0,0,0.05) 85%)' }}
+          ></div>
+          {/* 모바일은 세로로 길게 잘려 밝은 구간이 헤드라인과 겹치므로 전체 스크림을 한 겹 더 깐다 */}
+          <div className="absolute inset-0 bg-black/25 xl:bg-black/10"></div>
           
           <div className="relative z-10 h-full flex flex-col justify-center px-8 md:px-16 lg:px-24">
             <Reveal delay={0.1}>
