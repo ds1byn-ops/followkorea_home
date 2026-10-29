@@ -673,17 +673,22 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
           onClick={() => { const el = document.getElementById('about-us'); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.pageYOffset - 90, behavior: 'smooth' }); }}
           className="relative h-[64vh] md:h-[72vh] w-full rounded-[2.5rem] md:rounded-[4rem] overflow-hidden shadow-2xl cursor-pointer"
         >
+          {/* 2026-10-29: Vimeo 임베드 → 자체 호스팅 영상 → KIMES BUSAN 2026 부스 현장 사진으로 교체.
+              종전 iframe 은 min-w/min-h + scale-125 로 과하게 확대돼 모바일에서 가로의 19%만 보였음.
+              object-cover 로 좌우 전체를 쓰고 상하만 잘리게 함.
+              좌측에 헤드라인이 올라가므로 피사체가 중앙~우측에 오는 컷을 사용. */}
           <div className="absolute inset-0 w-full h-full pointer-events-none">
-            <iframe
-              className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 scale-125"
-              src="https://player.vimeo.com/video/1157091335?autoplay=1&loop=1&background=1&muted=1&autopause=0"
-              title="Follow Korea Hero Video"
-              frameBorder="0"
-              allow="autoplay; fullscreen"
-              allowFullScreen
-            ></iframe>
+            <img
+              className="w-full h-full object-cover object-[35%_center] md:object-center"
+              src="/hero-main.jpg"
+              alt=""
+              aria-hidden="true"
+              decoding="async"
+            />
           </div>
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/20 to-transparent"></div>
+          {/* 모바일은 세로로 길게 잘려 밝은 배너가 헤드라인과 겹치므로 전체 스크림을 한 겹 더 깐다 */}
+          <div className="absolute inset-0 bg-black/25 md:hidden"></div>
           
           <div className="relative z-10 h-full flex flex-col justify-center px-8 md:px-16 lg:px-24">
             <Reveal delay={0.1}>
