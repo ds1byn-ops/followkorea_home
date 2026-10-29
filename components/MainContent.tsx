@@ -673,22 +673,27 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
           onClick={() => { const el = document.getElementById('about-us'); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.pageYOffset - 90, behavior: 'smooth' }); }}
           className="relative h-[64vh] md:h-[72vh] w-full rounded-[2.5rem] md:rounded-[4rem] overflow-hidden shadow-2xl cursor-pointer"
         >
-          {/* 2026-10-29: Vimeo 임베드 → 자체 호스팅 영상 → KIMES BUSAN 2026 부스 현장 사진으로 교체.
+          {/* 2026-10-29: Vimeo 임베드 → KIMES BUSAN 2026 부스 현장 루프 영상으로 교체.
               종전 iframe 은 min-w/min-h + scale-125 로 과하게 확대돼 모바일에서 가로의 19%만 보였음.
               object-cover 로 좌우 전체를 쓰고 상하만 잘리게 함.
-              좌측에 헤드라인이 올라가므로 피사체가 중앙~우측에 오는 컷을 사용. */}
+              좌측에 헤드라인이 올라가므로 피사체가 중앙~우측에 오는 구간(원본 28~36초)을 사용.
+              poster 는 같은 영상의 정지컷이라 로딩 중에도 화면이 비지 않는다. */}
           <div className="absolute inset-0 w-full h-full pointer-events-none">
-            <img
-              className="w-full h-full object-cover object-[35%_center] lg:object-center"
-              src="/hero-main.jpg"
-              alt=""
+            <video
+              className="w-full h-full object-cover object-[35%_center] xl:object-center"
+              src="/hero-main.mp4"
+              poster="/hero-main.jpg"
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
               aria-hidden="true"
-              decoding="async"
             />
           </div>
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/20 to-transparent"></div>
           {/* 모바일은 세로로 길게 잘려 밝은 배너가 헤드라인과 겹치므로 전체 스크림을 한 겹 더 깐다 */}
-          <div className="absolute inset-0 bg-black/25 lg:hidden"></div>
+          <div className="absolute inset-0 bg-black/25 xl:hidden"></div>
           
           <div className="relative z-10 h-full flex flex-col justify-center px-8 md:px-16 lg:px-24">
             <Reveal delay={0.1}>
