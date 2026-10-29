@@ -168,7 +168,7 @@ const Card: React.FC<{
       <p className="text-[13.5px] leading-relaxed text-gray-800 font-semibold whitespace-pre-line">{t.desc}</p>
       <ul className="mt-3.5 space-y-2.5 flex-1">
         {t.items.map((it, i) => (
-          <li key={i} className="flex items-start gap-2.5 text-[13px] text-gray-800">
+          <li key={i} className="flex items-start gap-2.5 text-[13px] text-gray-800" style={{ wordBreak: 'keep-all' }}>
             <span className="mt-[3px] flex-none w-4 h-4 rounded-full text-white text-[10px] font-bold flex items-center justify-center" style={{ background: accent }}>✓</span>
             {it}
           </li>
