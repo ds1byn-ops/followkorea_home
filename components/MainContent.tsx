@@ -679,7 +679,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
               좌측에 헤드라인이 올라가므로 피사체가 중앙~우측에 오는 컷을 사용. */}
           <div className="absolute inset-0 w-full h-full pointer-events-none">
             <img
-              className="w-full h-full object-cover object-[35%_center] md:object-center"
+              className="w-full h-full object-cover object-[35%_center] lg:object-center"
               src="/hero-main.jpg"
               alt=""
               aria-hidden="true"
@@ -688,7 +688,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
           </div>
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/20 to-transparent"></div>
           {/* 모바일은 세로로 길게 잘려 밝은 배너가 헤드라인과 겹치므로 전체 스크림을 한 겹 더 깐다 */}
-          <div className="absolute inset-0 bg-black/25 md:hidden"></div>
+          <div className="absolute inset-0 bg-black/25 lg:hidden"></div>
           
           <div className="relative z-10 h-full flex flex-col justify-center px-8 md:px-16 lg:px-24">
             <Reveal delay={0.1}>
