@@ -20,8 +20,10 @@ const OTHERS_SHOW_FROM = '2026-09-27'; // 추석 팝업 기간에는 나머지 �
 // 신규 제휴 병원 2종을 추가하고 悦集江南 기간을 연장해 3장 덱으로 복구.
 const STEM_HIDE_KEY = 'stem_popup_hide_until';
 const STEM_SHOW_UNTIL = '2026-12-31';
-const NEWH_HIDE_KEY = 'newhosp_popup_hide_until';
-const NEWH_SHOW_UNTIL = '2026-12-31';
+// 2026-10-30: 신규 제휴 병원 팝업을 내리고, 샤오홍슈 대형 왕홍 2인 참여 병원 모집으로 교체.
+// 신청 마감일(11/3)이 지나면 자동으로 사라진다.
+const WH_HIDE_KEY = 'wanghong_xhs_hide_until';
+const WH_SHOW_UNTIL = '2026-11-03';
 
 type CardText = { badge: string; title: string; sub: string; desc: string; items: string[]; cta: string; invite?: string; today: string; close: string };
 
@@ -116,24 +118,42 @@ const STEM_TEXT: Record<string, CardText> = {
   },
 };
 
-const NEWH_TEXT: Record<string, CardText> = {
+const WH_TEXT: Record<string, CardText> = {
   KR: {
-    badge: '신규 제휴 병원', title: `제휴 병원 ${N_HOSP}곳`, sub: '2026. 10. · 진료 분야 · 지역 확대',
-    desc: '10월에 제휴 병원이 크게 늘었습니다.\n새로 열린 분야와 지역을 확인해 보세요.',
-    items: ['하지정맥류 · 안과 분야 신규 개설', '부산 · 제주 지역 병원 합류', '다이어트 · 바디 컨투어링 전문 의원 추가'],
-    cta: '병원 추천 상담 신청', today: '오늘 하루 보지 않기', close: '닫기',
+    badge: '선착순 참여 병원 모집', title: '샤오홍슈 대형 왕홍 2인', sub: '팬 수 합산 80만 명 · 신청 마감 11월 3일(화)',
+    desc: '팔로우코리아가 엄선한 대형 왕홍이\n귀원의 시술을 직접 받고,\n80만 팬에게 영상으로 소개합니다.',
+    items: [
+      '왕홍 A 45.7만 · 왕홍 B 34.6만 팔로워',
+      '홍보비 1인당 250만 원(VAT 별도) · 시술 무료 제공',
+      '11월 말~12월 초 방한 · 본인 계정에 영상 게시',
+    ],
+    cta: '참여 신청 · 문의하기',
+    invite: '왕홍별 개별 신청 가능 · 담당 김초혜 과장 010-8037-2535',
+    today: '오늘 하루 보지 않기', close: '닫기',
   },
   EN: {
-    badge: 'New Partner Hospitals', title: `${N_HOSP} Partner Hospitals`, sub: 'Oct 2026 · New specialties & regions',
-    desc: 'Our partner network grew considerably in October.\nSee the newly added specialties and regions.',
-    items: ['New specialties — varicose veins & ophthalmology', 'New regions — Busan and Jeju', 'Diet & body contouring clinics added'],
-    cta: 'Get a Hospital Recommendation', today: 'Don’t show again today', close: 'Close',
+    badge: 'Partner Clinics Wanted', title: '2 Top Xiaohongshu Creators', sub: '800K combined followers · Apply by Nov 3 (Tue)',
+    desc: 'Two vetted Chinese creators will receive your treatment in person\nand introduce it to 800,000 followers on video.',
+    items: [
+      'Creator A 457K · Creator B 346K followers — apply for either or both',
+      'KRW 2.5M per creator (excl. VAT) · treatment provided by the clinic',
+      'Visiting Korea late Nov–early Dec · posted on their own Xiaohongshu',
+    ],
+    cta: 'Apply · Enquire',
+    invite: 'Contact Kim Chohye +82 10-8037-2535 · first-come, first-served.',
+    today: 'Don’t show again today', close: 'Close',
   },
   CN: {
-    badge: '新入驻医院', title: `合作医院 ${N_HOSP}家`, sub: '2026年10月 · 诊疗领域·地区扩充',
-    desc: '10月合作医院数量大幅增加，\n欢迎了解新增的诊疗领域与地区。',
-    items: ['新增领域 — 下肢静脉瘤 · 眼科', '新增地区 — 釜山 · 济州', '新增减重 · 身体塑形专科医院'],
-    cta: '申请医院推荐咨询', today: '今日不再显示', close: '关闭',
+    badge: '招募合作医院', title: '小红书头部博主 2 位', sub: '粉丝合计 80 万 · 报名截止 11月3日(周二)',
+    desc: 'Follow Korea 精选的头部博主将亲身体验贵院项目，\n并以视频形式向 80 万粉丝介绍。',
+    items: [
+      '博主A 45.7万 · 博主B 34.6万粉丝 — 可按博主单独报名',
+      '推广费每位 250 万韩元(不含增值税) · 项目由医院提供',
+      '11月底~12月初访韩 · 发布于博主本人小红书账号',
+    ],
+    cta: '申请参与 · 咨询',
+    invite: '咨询电话 010-8037-2535 · 先到先得，可能提前截止。',
+    today: '今日不再显示', close: '关闭',
   },
 };
 
@@ -165,7 +185,7 @@ const Card: React.FC<{
       <p className="mt-2 text-[13px] text-white/90 font-medium">{t.sub}</p>
     </div>
     <div className="px-7 py-5 flex-1 flex flex-col">
-      <p className="text-[13.5px] leading-relaxed text-gray-800 font-semibold whitespace-pre-line">{t.desc}</p>
+      <p className="text-[13.5px] leading-relaxed text-gray-800 font-semibold whitespace-pre-line" style={{ wordBreak: 'keep-all' }}>{t.desc}</p>
       <ul className="mt-3.5 space-y-2.5 flex-1">
         {t.items.map((it, i) => (
           <li key={i} className="flex items-start gap-2.5 text-[13px] text-gray-800" style={{ wordBreak: 'keep-all' }}>
@@ -179,7 +199,7 @@ const Card: React.FC<{
         style={{ background: accent === '#5a82c2' ? '#FEE500' : accent }}>
         {t.cta}
       </a>
-      <p className="mt-2.5 text-center text-[12px] text-gray-500 min-h-[18px]">{t.invite || ' '}</p>
+      <p className="mt-2.5 text-center text-[12px] text-gray-500 min-h-[18px]" style={{ wordBreak: 'keep-all' }}>{t.invite || ' '}</p>
     </div>
     <div className="flex items-center justify-between border-t border-gray-100 px-7 py-3 text-[12.5px] text-gray-500">
       <button type="button" onClick={onHideToday} className="hover:text-gray-800">{t.today}</button>
@@ -195,7 +215,7 @@ const PromoPopups: React.FC<{ lang: LanguageCode }> = ({ lang }) => {
   const [yj, setYj] = useState(false);
   const [cs, setCs] = useState(false);
   const [stem, setStem] = useState(false);
-  const [newh, setNewh] = useState(false);
+  const [wh, setWh] = useState(false);
 
   useEffect(() => {
     const id = setTimeout(() => {
@@ -204,25 +224,25 @@ const PromoPopups: React.FC<{ lang: LanguageCode }> = ({ lang }) => {
       setYj(initialVisible(YJ_HIDE_KEY, YJ_SHOW_UNTIL, OTHERS_SHOW_FROM));
       setCs(initialVisible(CS_HIDE_KEY, CS_SHOW_UNTIL));
       setStem(initialVisible(STEM_HIDE_KEY, STEM_SHOW_UNTIL, OTHERS_SHOW_FROM));
-      setNewh(initialVisible(NEWH_HIDE_KEY, NEWH_SHOW_UNTIL, OTHERS_SHOW_FROM));
+      setWh(initialVisible(WH_HIDE_KEY, WH_SHOW_UNTIL, OTHERS_SHOW_FROM));
       setReady(true);
     }, 800);
     return () => clearTimeout(id);
   }, []);
 
-  if (!ready || (!smc && !kimes && !yj && !cs && !stem && !newh)) return null;
+  if (!ready || (!smc && !kimes && !yj && !cs && !stem && !wh)) return null;
 
   const hide = (key: string, setter: (v: boolean) => void) => () => {
     try { localStorage.setItem(key, kstToday()); } catch { /* ignore */ }
     setter(false);
   };
-  const closeAll = () => { setSmc(false); setKimes(false); setYj(false); setCs(false); setStem(false); setNewh(false); };
+  const closeAll = () => { setSmc(false); setKimes(false); setYj(false); setCs(false); setStem(false); setWh(false); };
 
   const smcT = SMC_TEXT[lang] || SMC_TEXT.EN;
   const kimesT = KIMES_TEXT[lang] || KIMES_TEXT.EN;
   const yjT = YJ_TEXT[lang] || YJ_TEXT.EN;
   const stemT = STEM_TEXT[lang] || STEM_TEXT.EN;
-  const newhT = NEWH_TEXT[lang] || NEWH_TEXT.EN;
+  const whT = WH_TEXT[lang] || WH_TEXT.EN;
 
   // 부채꼴 카드 덱 — 보이는 카드 수에 따라 기울기·겹침·z-order 배치 (모바일은 세로 스택)
   const cards: { key: string; el: React.ReactNode }[] = [];
@@ -258,12 +278,12 @@ const PromoPopups: React.FC<{ lang: LanguageCode }> = ({ lang }) => {
       onClose={() => setStem(false)}
       onHideToday={hide(STEM_HIDE_KEY, setStem)} />
   )});
-  if (newh) cards.push({ key: 'newh', el: (
-    <Card t={newhT}
-      grad="linear-gradient(135deg, #1d2d5e 0%, #3c5ba3 55%, #5a82c2 100%)"
-      accent="#3c5ba3"
-      onClose={() => setNewh(false)}
-      onHideToday={hide(NEWH_HIDE_KEY, setNewh)} />
+  if (wh) cards.push({ key: 'wh', el: (
+    <Card t={whT}
+      grad="linear-gradient(135deg, #16224d 0%, #2c437e 55%, #5a82c2 100%)"
+      accent="#E8701A"
+      onClose={() => setWh(false)}
+      onHideToday={hide(WH_HIDE_KEY, setWh)} />
   )});
   if (yj) cards.push({ key: 'yj', el: (
     <Card t={yjT}
