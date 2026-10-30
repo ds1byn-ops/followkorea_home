@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>중국 시장 마케팅 견적 작성 | FOLLOW KOREA</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{--red:#A62838;--red-d:#5E141F;--red-l:#FBEEF0;--navy:#16306E;--blue:#2B55B8;
+  --ink:#1D1B1F;--mute:#6E6873;--line:#E4DFE1;--bg:#F7F5F6;--card:#fff;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif;background:var(--bg);
+  color:var(--ink);line-height:1.6;word-break:keep-all;-webkit-text-size-adjust:100%;}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px;}
+.bar{background:var(--navy);color:#fff;padding:14px 0;}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+.bar h1{font-size:17px;font-weight:800;letter-spacing:-.4px;}
+.bar .mode{font-size:12px;background:rgba(255,255,255,.16);padding:5px 12px;border-radius:999px;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin-top:16px;}
+.card h2{font-size:14px;font-weight:800;color:var(--navy);margin-bottom:14px;letter-spacing:-.3px;}
+.f{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+.f label{display:block;font-size:12px;color:var(--mute);font-weight:700;margin-bottom:5px;}
+input,textarea,select{width:100%;font-family:inherit;font-size:14px;color:var(--ink);
+  border:1px solid var(--line);border-radius:9px;padding:9px 11px;background:#fff;}
+input:focus,textarea:focus{outline:2px solid #C9D6F2;border-color:#9FB6E3;}
+input[type=number]{text-align:right;}
+textarea{resize:vertical;min-height:70px;line-height:1.7;}
+table{width:100%;border-collapse:collapse;}
+th{background:#F1F3F8;color:var(--navy);font-size:12.5px;font-weight:800;padding:10px 8px;
+  border-bottom:1px solid var(--line);white-space:nowrap;}
+td{border-bottom:1px solid #F0ECEE;padding:9px 8px;font-size:13.5px;vertical-align:middle;}
+td.c,th.c{text-align:center;}
+td.r,th.r{text-align:right;}
+tr.off{opacity:.38;}
+.nm{font-weight:700;}
+.nm small{display:block;font-weight:500;color:var(--mute);font-size:11.5px;margin-top:2px;}
+.stg{display:inline-block;font-size:11px;font-weight:800;padding:3px 8px;border-radius:999px;white-space:nowrap;}
+.s1{background:#EAF0FC;color:var(--blue);} .s2{background:#F1EFF2;color:var(--mute);} .s3{background:var(--red-l);color:var(--red);}
+.amt{font-weight:800;color:var(--navy);white-space:nowrap;}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;border:0;cursor:pointer;
+  font-family:inherit;font-size:14px;font-weight:800;padding:11px 20px;border-radius:10px;text-decoration:none;}
+.btn.p{background:var(--red);color:#fff;} .btn.g{background:#EFEBEC;color:var(--ink);}
+.btn.n{background:var(--navy);color:#fff;}
+.btn:hover{filter:brightness(1.07);}
+.btns{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px;}
+.sum{margin-top:16px;margin-left:auto;max-width:360px;}
+.sum .row{display:flex;justify-content:space-between;padding:8px 0;font-size:14px;border-bottom:1px solid #F0ECEE;}
+.sum .row.tot{border-bottom:0;border-top:2px solid var(--navy);margin-top:4px;padding-top:12px;
+  font-size:18px;font-weight:900;color:var(--navy);}
+.mini{font-size:12px;color:var(--mute);margin-top:9px;line-height:1.7;}
+.addbtn{margin-top:12px;background:#fff;border:1px dashed #C9C2C5;color:var(--mute);width:100%;
+  padding:10px;border-radius:10px;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;}
+.addbtn:hover{border-color:var(--red);color:var(--red);}
+.del{background:none;border:0;color:#C4BCC0;font-size:17px;cursor:pointer;line-height:1;padding:2px 5px;}
+.del:hover{color:var(--red);}
+.toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%);background:#20242E;color:#fff;
+  font-size:13.5px;font-weight:700;padding:12px 22px;border-radius:999px;opacity:0;pointer-events:none;
+  transition:opacity .2s;z-index:50;}
+.toast.on{opacity:1;}
+/* 보기 전용(견적서) */
+.doc{display:none;}
+body.view .edit{display:none;}
+body.view .doc{display:block;}
+.doc .head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;
+  padding-bottom:16px;border-bottom:2px solid var(--navy);}
+.doc .head img{height:30px;}
+.doc .tt{font-size:22px;font-weight:900;color:var(--navy);letter-spacing:-.6px;}
+.doc .meta{font-size:12.5px;color:var(--mute);text-align:right;line-height:1.85;}
+.doc .to{margin-top:16px;font-size:15px;font-weight:800;}
+.doc .to span{color:var(--mute);font-weight:600;font-size:13px;margin-left:6px;}
+.foot{margin-top:26px;padding-top:16px;border-top:1px solid var(--line);font-size:12px;color:var(--mute);line-height:1.85;}
+@media (max-width:820px){
+  .f{grid-template-columns:1fr 1fr;}
+  th.hide,td.hide{display:none;}
+  .sum{max-width:none;}
+}
+@media print{
+  body{background:#fff;} .bar,.btns,.addbtn,.toast{display:none!important;}
+  .card{border:0;padding:0;margin-top:10px;} .doc .head{border-color:#000;}
+}
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <div class="wrap">
+    <h1>중국 시장 마케팅 — 견적 작성</h1>
+    <span class="mode" id="mode">작성 모드 · 내부용</span>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- ===== 작성 모드 ===== -->
+  <div class="edit">
+    <div class="card">
+      <h2>견적 정보</h2>
+      <div class="f">
+        <div><label>수신 (병원명)</label><input id="to" placeholder="○○의원 귀중"></div>
+        <div><label>작성 담당자</label><input id="mgr" placeholder="손이나 주임"></div>
+        <div><label>견적일</label><input id="date" type="date"></div>
+        <div><label>유효기간</label><input id="until" type="date"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>서비스 항목 — 단가를 직접 입력하세요</h2>
+      <table>
+        <thead>
+          <tr>
+            <th class="c" style="width:42px">선택</th>
+            <th style="width:74px">단계</th>
+            <th>항목</th>
+            <th class="c" style="width:88px">수량</th>
+            <th class="c hide" style="width:74px">단위</th>
+            <th class="r" style="width:128px">단가 (원)</th>
+            <th class="r" style="width:118px">금액</th>
+            <th style="width:30px"></th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+      <button class="addbtn" id="add">+ 항목 직접 추가</button>
+
+      <div class="sum">
+        <div class="row"><span>공급가액</span><b id="s_net">0원</b></div>
+        <div class="row"><span>부가세 (10%)</span><b id="s_vat">0원</b></div>
+        <div class="row tot"><span>합계</span><b id="s_tot">0원</b></div>
+      </div>
+      <p class="mini">※ 단가는 병원별 도입 범위에 따라 조정해 입력합니다. 입력한 단가는 이 브라우저에 저장되어 다음 작성 때 그대로 불러옵니다.</p>
+    </div>
+
+    <div class="card">
+      <h2>비고</h2>
+      <textarea id="memo" placeholder="예) 바이두 SEO는 순위 유지 비용이 월 단위로 별도 발생합니다. 중국 법률·바이두 규칙에 따라 추가 비용이 생길 수 있습니다."></textarea>
+      <div class="btns">
+        <button class="btn n" id="btn_view">견적서 보기</button>
+        <button class="btn p" id="btn_link">공유 링크 복사</button>
+        <button class="btn g" id="btn_print">인쇄 · PDF 저장</button>
+        <button class="btn g" id="btn_reset">초기화</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 견적서(보기) ===== -->
+  <div class="doc">
+    <div class="card">
+      <div class="head">
+        <div>
+          <img src="/fk-logo-r.png" alt="FOLLOW KOREA">
+          <p class="tt" style="margin-top:10px">중국 시장 마케팅 견적서</p>
+        </div>
+        <div class="meta" id="d_meta"></div>
+      </div>
+      <p class="to" id="d_to"></p>
+
+      <table style="margin-top:18px">
+        <thead>
+          <tr><th class="c" style="width:42px">No</th><th style="width:74px">단계</th><th>항목</th>
+            <th class="c" style="width:92px">수량</th><th class="r" style="width:128px">단가</th><th class="r" style="width:120px">금액</th></tr>
+        </thead>
+        <tbody id="d_rows"></tbody>
+      </table>
+
+      <div class="sum">
+        <div class="row"><span>공급가액</span><b id="d_net">0원</b></div>
+        <div class="row"><span>부가세 (10%)</span><b id="d_vat">0원</b></div>
+        <div class="row tot"><span>합계</span><b id="d_tot">0원</b></div>
+      </div>
+
+      <p class="mini" id="d_memo" style="margin-top:18px;white-space:pre-line"></p>
+
+      <div class="foot">
+        주식회사 팔로우코리아 · 悦集江南(上海)商务咨询有限公司<br>
+        서울특별시 서초구 강남대로 373, 홍우빌딩 13층 116호 · 외국인환자 유치업 등록 A-2026-01-01-06622<br>
+        문의 contact@followkorea.co.kr
+      </div>
+
+      <div class="btns">
+        <button class="btn g" id="btn_back">작성으로 돌아가기</button>
+        <button class="btn n" id="btn_print2">인쇄 · PDF 저장</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// 기본 서비스 항목 — 단가는 비워 두고 작성자가 직접 입력한다(공개 페이지에 금액을 싣지 않기 위함)
+var BASE = [
+  { s:1, n:'중국어 공식 홈페이지 로컬라이제이션', d:'홈페이지 중국어 내용 감수',                       u:'회',    q:1 },
+  { s:1, n:'바이두 수록',                      d:'바이두에 해외 사이트주소 수록',                   u:'회',    q:1 },
+  { s:1, n:'바이두 키워드 SEO',                 d:'기본 검색 최적화',                              u:'키워드', q:1 },
+  { s:2, n:'위챗 공식계정 운영',                d:'콘텐츠 업데이트, 브랜드 정보 축적 및 상담 유도',     u:'개월',  q:1 },
+  { s:2, n:'GEO',                             d:'AI 검색 환경에서 브랜드 정보의 노출 가능성 최적화',  u:'3개월', q:1 },
+  { s:2, n:'도우인 콘텐츠 운영',                d:'숏폼 영상 콘텐츠 운영(월간 영상 패키지)',           u:'개월',  q:1 },
+  { s:3, n:'샤오홍슈 KOC/KOL',                  d:'인플루언서·일반 사용자 콘텐츠로 인지도 확산',        u:'건',    q:1 }
+];
+var LS = 'fk_china_quote_v1';
+var rows = [];
+
+var $ = function (id) { return document.getElementById(id); };
+var won = function (v) { return (Math.round(v) || 0).toLocaleString('ko-KR') + '원'; };
+var ymd = function (d) { return d.toISOString().slice(0, 10); };
+
+function toast(msg) {
+  var t = $('toast'); t.textContent = msg; t.classList.add('on');
+  setTimeout(function () { t.classList.remove('on'); }, 1900);
+}
+
+/* ---------- 상태 ---------- */
+function load() {
+  var saved = null;
+  try { saved = JSON.parse(localStorage.getItem(LS) || 'null'); } catch (e) {}
+  rows = BASE.map(function (b, i) {
+    var p = saved && saved.price && saved.price[i];
+    return { s:b.s, n:b.n, d:b.d, u:b.u, q:b.q, p: (typeof p === 'number' ? p : 0), on:false, base:true };
+  });
+  var t = new Date(), u = new Date(Date.now() + 14 * 864e5);
+  $('date').value = ymd(t); $('until').value = ymd(u);
+  if (saved && saved.mgr) $('mgr').value = saved.mgr;
+  if (saved && saved.memo) $('memo').value = saved.memo;
+}
+function savePrices() {
+  try {
+    localStorage.setItem(LS, JSON.stringify({
+      price: rows.filter(function (r) { return r.base; }).map(function (r) { return r.p; }),
+      mgr: $('mgr').value, memo: $('memo').value
+    }));
+  } catch (e) {}
+}
+
+/* ---------- 작성 표 ---------- */
+function render() {
+  var tb = $('rows'); tb.innerHTML = '';
+  rows.forEach(function (r, i) {
+    var tr = document.createElement('tr');
+    if (!r.on) tr.className = 'off';
+    tr.innerHTML =
+      '<td class="c"><input type="checkbox" data-k="on" data-i="' + i + '"' + (r.on ? ' checked' : '') + ' style="width:17px;height:17px"></td>' +
+      '<td><span class="stg s' + r.s + '">' + r.s + '단계</span></td>' +
+      '<td class="nm">' + (r.base ? esc(r.n) + '<small>' + esc(r.d) + '</small>'
+          : '<input data-k="n" data-i="' + i + '" value="' + esc(r.n) + '" placeholder="항목명">') + '</td>' +
+      '<td><input type="number" min="0" step="1" data-k="q" data-i="' + i + '" value="' + r.q + '"></td>' +
+      '<td class="c hide" style="color:var(--mute);font-size:12.5px">' +
+        (r.base ? esc(r.u) : '<input data-k="u" data-i="' + i + '" value="' + esc(r.u) + '" placeholder="단위">') + '</td>' +
+      '<td><input type="number" min="0" step="1000" data-k="p" data-i="' + i + '" value="' + (r.p || '') + '" placeholder="0"></td>' +
+      '<td class="r amt">' + won(r.q * r.p) + '</td>' +
+      '<td>' + (r.base ? '' : '<button class="del" data-del="' + i + '">×</button>') + '</td>';
+    tb.appendChild(tr);
+  });
+  total();
+}
+function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;'); }
+
+function total() {
+  var net = rows.reduce(function (a, r) { return a + (r.on ? r.q * r.p : 0); }, 0);
+  $('s_net').textContent = won(net);
+  $('s_vat').textContent = won(net * 0.1);
+  $('s_tot').textContent = won(net * 1.1);
+  return net;
+}
+
+document.addEventListener('input', function (e) {
+  var el = e.target, i = el.dataset.i, k = el.dataset.k;
+  if (i === undefined || !k) return;
+  var r = rows[+i];
+  if (k === 'on') r.on = el.checked;
+  else if (k === 'q' || k === 'p') r[k] = Math.max(0, +el.value || 0);
+  else r[k] = el.value;
+  if (k === 'p' || k === 'q') {
+    el.closest('tr').querySelector('.amt').textContent = won(r.q * r.p);
+    total(); if (k === 'p') savePrices();
+  } else if (k === 'on') { el.closest('tr').className = r.on ? '' : 'off'; total(); }
+});
+document.addEventListener('change', function (e) {
+  if (e.target.id === 'mgr' || e.target.id === 'memo') savePrices();
+});
+document.addEventListener('click', function (e) {
+  var d = e.target.dataset && e.target.dataset.del;
+  if (d !== undefined) { rows.splice(+d, 1); render(); }
+});
+$('add').onclick = function () {
+  rows.push({ s:2, n:'', d:'', u:'건', q:1, p:0, on:true, base:false });
+  render();
+};
+
+/* ---------- 견적서 보기 ---------- */
+function buildDoc() {
+  var sel = rows.filter(function (r) { return r.on && r.n; });
+  $('d_meta').innerHTML = '견적일 ' + esc($('date').value) + '<br>유효기간 ' + esc($('until').value) + ' 까지<br>담당 ' + esc($('mgr').value || '-');
+  $('d_to').innerHTML = esc($('to').value || '수신처 미입력') + '<span>귀중</span>';
+  var tb = $('d_rows'); tb.innerHTML = '';
+  sel.forEach(function (r, i) {
+    var tr = document.createElement('tr');
+    tr.innerHTML = '<td class="c">' + (i + 1) + '</td>' +
+      '<td><span class="stg s' + r.s + '">' + r.s + '단계</span></td>' +
+      '<td class="nm">' + esc(r.n) + (r.d ? '<small>' + esc(r.d) + '</small>' : '') + '</td>' +
+      '<td class="c">' + r.q + ' ' + esc(r.u) + '</td>' +
+      '<td class="r">' + won(r.p) + '</td>' +
+      '<td class="r amt">' + won(r.q * r.p) + '</td>';
+    tb.appendChild(tr);
+  });
+  var net = sel.reduce(function (a, r) { return a + r.q * r.p; }, 0);
+  $('d_net').textContent = won(net); $('d_vat').textContent = won(net * 0.1); $('d_tot').textContent = won(net * 1.1);
+  $('d_memo').textContent = $('memo').value ? '※ ' + $('memo').value : '';
+  return sel.length;
+}
+$('btn_view').onclick = function () {
+  if (!buildDoc()) return toast('선택된 항목이 없습니다');
+  document.body.classList.add('view'); $('mode').textContent = '견적서 미리보기'; scrollTo(0, 0);
+};
+$('btn_back').onclick = function () {
+  document.body.classList.remove('view'); $('mode').textContent = '작성 모드 · 내부용';
+  location.hash = ''; scrollTo(0, 0);
+};
+$('btn_print').onclick = $('btn_print2').onclick = function () {
+  if (!document.body.classList.contains('view')) { if (!buildDoc()) return toast('선택된 항목이 없습니다'); document.body.classList.add('view'); }
+  setTimeout(function () { print(); }, 120);
+};
+$('btn_reset').onclick = function () {
+  if (!confirm('입력 내용을 모두 지울까요? (저장된 단가도 삭제됩니다)')) return;
+  try { localStorage.removeItem(LS); } catch (e) {}
+  location.hash = ''; location.reload();
+};
+
+/* ---------- 공유 링크 ---------- */
+function enc(o) {
+  var b = new TextEncoder().encode(JSON.stringify(o)), s = '';
+  for (var i = 0; i < b.length; i++) s += String.fromCharCode(b[i]);
+  return btoa(s).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+}
+function dec(t) {
+  var s = atob(t.replace(/-/g, '+').replace(/_/g, '/'));
+  var b = new Uint8Array(s.length);
+  for (var i = 0; i < s.length; i++) b[i] = s.charCodeAt(i);
+  return JSON.parse(new TextDecoder().decode(b));
+}
+$('btn_link').onclick = function () {
+  var sel = rows.filter(function (r) { return r.on && r.n; });
+  if (!sel.length) return toast('선택된 항목이 없습니다');
+  var url = location.origin + location.pathname + '#q=' + enc({
+    t: $('to').value, m: $('mgr').value, d: $('date').value, u: $('until').value,
+    o: $('memo').value,
+    r: sel.map(function (r) { return [r.s, r.n, r.d, r.u, r.q, r.p]; })
+  });
+  (navigator.clipboard ? navigator.clipboard.writeText(url) : Promise.reject())
+    .then(function () { toast('링크를 복사했습니다'); })
+    .catch(function () { prompt('아래 링크를 복사하세요', url); });
+};
+
+/* ---------- 진입 ---------- */
+(function init() {
+  load();
+  var h = location.hash.match(/^#q=(.+)$/);
+  if (h) {
+    try {
+      var o = dec(h[1]);
+      rows = o.r.map(function (a) { return { s:a[0], n:a[1], d:a[2], u:a[3], q:a[4], p:a[5], on:true, base:false }; });
+      $('to').value = o.t || ''; $('mgr').value = o.m || '';
+      $('date').value = o.d || ''; $('until').value = o.u || ''; $('memo').value = o.o || '';
+      buildDoc();
+      document.body.classList.add('view');
+      $('mode').textContent = '견적서';
+      return;
+    } catch (e) { toast('링크를 읽지 못했습니다'); }
+  }
+  render();
+})();
+</script>
+</body>
+</html>
