@@ -127,7 +127,7 @@ const WH_TEXT: Record<string, CardText> = {
       '홍보비 1인당 250만 원(VAT 별도) · 시술 무료 제공',
       '11월 말~12월 초 방한 · 본인 계정에 영상 게시',
     ],
-    cta: '참여 신청 · 문의하기',
+    cta: '모집 상세 보기 · 신청',
     invite: '왕홍별 개별 신청 가능 · 담당 김초혜 과장 010-8037-2535',
     today: '오늘 하루 보지 않기', close: '닫기',
   },
@@ -139,7 +139,7 @@ const WH_TEXT: Record<string, CardText> = {
       'KRW 2.5M per creator (excl. VAT) · treatment provided by the clinic',
       'Visiting Korea late Nov–early Dec · posted on their own Xiaohongshu',
     ],
-    cta: 'Apply · Enquire',
+    cta: 'See Details · Apply',
     invite: 'Contact Kim Chohye +82 10-8037-2535 · first-come, first-served.',
     today: 'Don’t show again today', close: 'Close',
   },
@@ -151,7 +151,7 @@ const WH_TEXT: Record<string, CardText> = {
       '推广费每位 250 万韩元(不含增值税) · 项目由医院提供',
       '11月底~12月初访韩 · 发布于博主本人小红书账号',
     ],
-    cta: '申请参与 · 咨询',
+    cta: '查看详情 · 申请',
     invite: '咨询电话 010-8037-2535 · 先到先得，可能提前截止。',
     today: '今日不再显示', close: '关闭',
   },
@@ -282,6 +282,7 @@ const PromoPopups: React.FC<{ lang: LanguageCode }> = ({ lang }) => {
     <Card t={whT}
       grad="linear-gradient(135deg, #16224d 0%, #2c437e 55%, #5a82c2 100%)"
       accent="#E8701A"
+      href="/wanghong/"
       onClose={() => setWh(false)}
       onHideToday={hide(WH_HIDE_KEY, setWh)} />
   )});
