@@ -59,6 +59,15 @@ tr.off{opacity:.38;}
   font-size:13.5px;font-weight:700;padding:12px 22px;border-radius:999px;opacity:0;pointer-events:none;
   transition:opacity .2s;z-index:50;}
 .toast.on{opacity:1;}
+/* PIN 잠금 — 작성 모드 진입 시에만. 공유 링크(#q=)는 통과시킨다 */
+#gate{position:fixed;inset:0;background:var(--bg);z-index:60;display:flex;align-items:center;justify-content:center;padding:20px;}
+#gate .box{background:#fff;border:1px solid var(--line);border-radius:16px;padding:30px 28px;max-width:330px;width:100%;text-align:center;}
+#gate h2{font-size:16px;font-weight:800;color:var(--navy);}
+#gate p{font-size:12.5px;color:var(--mute);margin-top:7px;line-height:1.7;}
+#gate input{margin-top:18px;text-align:center;font-size:21px;letter-spacing:7px;font-weight:800;padding:12px;}
+#gate .err{color:var(--red);font-size:12.5px;margin-top:10px;min-height:17px;font-weight:700;}
+#gate button{width:100%;margin-top:4px;}
+body.unlocked #gate{display:none;}
 /* 보기 전용(견적서) */
 .doc{display:none;}
 body.view .edit{display:none;}
@@ -188,6 +197,16 @@ body.view .doc{display:block;}
 </div>
 
 <div class="toast" id="toast"></div>
+
+<div id="gate">
+  <div class="box">
+    <h2>내부용 견적 작성</h2>
+    <p>영업 담당자용 도구입니다.<br>PIN을 입력하세요.</p>
+    <input id="pin" type="password" inputmode="numeric" maxlength="6" placeholder="······" autocomplete="off">
+    <p class="err" id="pinerr"></p>
+    <button class="btn n" id="pinbtn">확인</button>
+  </div>
+</div>
 
 <script>
 // 기본 서비스 항목 — 단가는 비워 두고 작성자가 직접 입력한다(공개 페이지에 금액을 싣지 않기 위함)
@@ -353,6 +372,28 @@ $('btn_link').onclick = function () {
     .catch(function () { prompt('아래 링크를 복사하세요', url); });
 };
 
+/* ---------- PIN 잠금 ----------
+   이 파일은 공개 서빙되므로 PIN 평문을 넣지 않고 SHA-256 해시만 둔다.
+   그래도 6자리는 오프라인 전수조사가 쉬우므로 이것은 '외부인의 우연한 접근 차단'이지
+   보안 장치가 아니다. 다른 내부 도구와 PIN 을 공유하지 말 것.
+   공유 링크(#q=)로 들어온 병원 쪽은 PIN 없이 견적서만 본다. */
+var PIN_SALT = 'fk-china-quote-2026';
+var PIN_HASH = '0d54ba6a85a66136bbb84b687ab6d5f16d4b1fad763d79960cd335a7cf5d5e75';
+var UNLOCK = 'fk_china_quote_ok';
+function unlock() { document.body.classList.add('unlocked'); }
+async function sha256(s) {
+  var b = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s));
+  return [].map.call(new Uint8Array(b), function (x) { return x.toString(16).padStart(2, '0'); }).join('');
+}
+$('pinbtn').onclick = async function () {
+  var v = $('pin').value.trim();
+  if ((await sha256(PIN_SALT + v)) === PIN_HASH) {
+    try { sessionStorage.setItem(UNLOCK, '1'); } catch (e) {}
+    unlock();
+  } else { $('pinerr').textContent = 'PIN이 맞지 않습니다'; $('pin').value = ''; $('pin').focus(); }
+};
+$('pin').onkeydown = function (e) { if (e.key === 'Enter') $('pinbtn').click(); };
+
 /* ---------- 진입 ---------- */
 (function init() {
   load();
@@ -365,11 +406,14 @@ $('btn_link').onclick = function () {
       $('date').value = o.d || ''; $('until').value = o.u || ''; $('memo').value = o.o || '';
       buildDoc();
       document.body.classList.add('view');
+      unlock();                     // 공유받은 견적서는 PIN 없이 열람
       $('mode').textContent = '견적서';
       return;
     } catch (e) { toast('링크를 읽지 못했습니다'); }
   }
+  try { if (sessionStorage.getItem(UNLOCK) === '1') unlock(); } catch (e) {}
   render();
+  if (!document.body.classList.contains('unlocked')) $('pin').focus();
 })();
 </script>
 </body>
