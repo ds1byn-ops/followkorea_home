@@ -290,6 +290,7 @@ const PromoPopups: React.FC<{ lang: LanguageCode }> = ({ lang }) => {
     <Card t={yjT}
       grad="linear-gradient(135deg, #571523 0%, #A62838 55%, #C4505C 100%)"
       accent="#A62838"
+      href="/china/"
       onClose={() => setYj(false)}
       onHideToday={hide(YJ_HIDE_KEY, setYj)} />
   )});
