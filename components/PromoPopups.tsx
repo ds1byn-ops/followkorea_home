@@ -23,7 +23,8 @@ const STEM_SHOW_UNTIL = '2026-12-31';
 // 2026-10-30: 신규 제휴 병원 팝업을 내리고, 샤오홍슈 대형 왕홍 2인 참여 병원 모집으로 교체.
 // 신청 마감일(11/3)이 지나면 자동으로 사라진다.
 const WH_HIDE_KEY = 'wanghong_xhs_hide_until';
-const WH_SHOW_UNTIL = '2026-11-03';
+// 신청 마감은 11/3 이지만 선착순 모집이라 팝업 노출은 11/11 까지 유지 (2026-10-30 지시)
+const WH_SHOW_UNTIL = '2026-11-11';
 
 type CardText = { badge: string; title: string; sub: string; desc: string; items: string[]; cta: string; invite?: string; today: string; close: string };
 
