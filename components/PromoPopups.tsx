@@ -129,7 +129,7 @@ const WH_TEXT: Record<string, CardText> = {
       '11월 말~12월 초 방한 · 본인 계정에 영상 게시',
     ],
     cta: '모집 상세 보기 · 신청',
-    invite: '왕홍별 개별 신청 가능 · 담당 김초혜 과장 010-8037-2535',
+    invite: '마감 후에도 문의 주시면 잔여 일정을 안내해 드립니다',
     today: '오늘 하루 보지 않기', close: '닫기',
   },
   EN: {
@@ -141,7 +141,7 @@ const WH_TEXT: Record<string, CardText> = {
       'Visiting Korea late Nov–early Dec · posted on their own Xiaohongshu',
     ],
     cta: 'See Details · Apply',
-    invite: 'Contact Kim Chohye +82 10-8037-2535 · first-come, first-served.',
+    invite: 'Enquiries after the deadline — we will share remaining slots.',
     today: 'Don’t show again today', close: 'Close',
   },
   CN: {
@@ -153,7 +153,7 @@ const WH_TEXT: Record<string, CardText> = {
       '11月底~12月初访韩 · 发布于博主本人小红书账号',
     ],
     cta: '查看详情 · 申请',
-    invite: '咨询电话 010-8037-2535 · 先到先得，可能提前截止。',
+    invite: '截止后咨询，我们将告知剩余档期。',
     today: '今日不再显示', close: '关闭',
   },
 };
