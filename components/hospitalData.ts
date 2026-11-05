@@ -4486,6 +4486,26 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "thumb": "hthumb/mimodern.jpg"
   },
   {
+    "name": { "kr": "엠레드클리닉", "en": "AMRED Clinic", "zh": "AMRED 皮肤·提升诊所(清潭)" },
+    "dept": { "kr": "피부과", "en": "Dermatology", "zh": "皮肤科" },
+    "cat": "피부·성형",
+    "badge": "NEW",
+    "treats": {
+      "kr": ["튠 콩피에르·울쎄라피 프라임", "티타늄 리프팅·써마지 FLX", "스컬트라·콜라겐 부스터", "리쥬란·스킨부스터", "윤곽·볼륨·필러·바디"],
+      "en": ["Tune Confier·Ultherapy Prime", "Titanium Lifting·Thermage FLX", "Sculptra·Collagen", "Rejuran·Skin Boosters", "Contouring·Volume·Body"],
+      "zh": ["Tune Confier·超声炮Prime", "钛提升·热玛吉FLX", "舒颜萃·胶原蛋白", "丽珠兰·皮肤管理", "轮廓·填充·身体管理"]
+    },
+    "hours": "",
+    "loc": { "ko": "서울 강남구 삼성로 731 청진빌딩 B1F·2F·4F (청담)", "zh": "首尔江南区三成路731(清潭)", "en": "Samseong-ro, Gangnam-gu, Seoul (Cheongdam)" },
+    "overview": {
+      "kr": "엠레드클리닉(AMRED)은 서울 강남구 삼성로(청담)에 위치한 프리미엄 피부·리프팅 클리닉으로, 성형외과 전문의 등 10명의 의료진이 튠 콩피에르·울쎄라피 프라임·티타늄 리프팅·써마지 FLX 등 리프팅과 스컬트라·리쥬란·스킨부스터, 윤곽·볼륨 필러, 바디, 엠레드 줄기세포까지 개인 맞춤 프로그램을 운영합니다. VIP 프라이빗 케어룸과 다국어 응대를 갖췄습니다.",
+      "en": "AMRED is a premium dermatology & lifting clinic in Cheongdam (Samseong-ro, Gangnam, Seoul), with 10 doctors including plastic-surgery specialists. It focuses on lifting (Tune Confier, Ultherapy Prime, Titanium Lifting, Thermage FLX) plus Sculptra, Rejuran & skin boosters, contouring/volume fillers, body programs and AMRED stem-cell care, with private VIP care rooms and multilingual support.",
+      "zh": "AMRED是位于首尔江南三成路(清潭)的高端皮肤·提升诊所,由整形外科专科医生等10位医生组成,擅长Tune Confier·超声炮Prime·钛提升·热玛吉FLX等提升项目,并提供舒颜萃·丽珠兰·皮肤管理·轮廓填充·身体管理及AMRED干细胞等定制方案,设VIP私密护理空间与多语种协助。"
+    },
+    "doctors": [],
+    "thumb": "hthumb/amred.jpg"
+  },
+  {
     "name": { "kr": "제이린안과", "en": "JRYN Eye Clinic", "zh": "JRYN眼科" },
     "dept": { "kr": "안과(스마일라식·ICL·백내장)", "en": "Ophthalmology (SMILE·ICL·Cataract)", "zh": "眼科(全飞秒·ICL·白内障)" },
     "cat": "안과",
