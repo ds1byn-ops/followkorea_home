@@ -15,6 +15,18 @@
   status = 200
   force = true
 
+# 사이트맵·llms.txt 제거(2026-11-19 색인차단) — SPA 폴백이 200 HTML을 주지 않도록 명시적 404
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/index.html"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/llms.txt"
+  to = "/index.html"
+  status = 404
+  force = true
+
 # Single-page app: serve index.html for any unmatched path
 [[redirects]]
   from = "/*"
