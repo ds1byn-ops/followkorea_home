@@ -15,6 +15,7 @@ export interface HospDetail {
 }
 
 export const HOSPITAL_DATA: HospDetail[] = [
+  {"name":{"kr":"데이원의원","en":"DAYONE Clinic","zh":"DAYONE医院"},"dept":{"kr":"피부과·리프팅","en":"Dermatology · Lifting","zh":"皮肤科·提升"},"cat":"피부·성형","icon":"✨","badge":"NEW","treats":{"kr":["써마지·울쎄라 리프팅","실리프팅(민트·블루로즈)","필러·보톡스","스킨부스터·물광주사","색소·모공 레이저","줄기세포 피부관리"],"en":["Thermage · Ulthera Lifting","Thread Lifting","Filler · Botox","Skin Booster · Aqua Shine","Pigment · Pore Laser","Stem Cell Skincare"],"zh":["热玛吉·超声刀提升","埋线提升","玻尿酸·肉毒","水光·皮肤助推","色素·毛孔激光","干细胞皮肤管理"]},"hours":"예약제 (by appointment) · dayoneclinic.co.kr","loc":{"ko":"서울 서초 (강남대로)","zh":"首尔瑞草(江南大路)","en":"Gangnam-daero, Seocho, Seoul"},"overview":{"kr":"데이원의원은 서울 서초구 강남대로 437 대원빌딩 5층에 위치한 리프팅·피부 중심 의원입니다. 써마지·울쎄라·실리프팅 등 탄력·윤곽 치료와 필러·보톡스·스킨부스터·줄기세포 피부관리를 환자 상태에 맞춰 설계합니다. 보건복지부·한국보건산업진흥원 외국인환자 유치의료기관 평가인증(KAHF)을 취득했으며, 한/영/중/일 통역을 지원합니다.","en":"DAYONE Clinic, on the 5th floor of Daewon Building at 437 Gangnam-daero, Seocho-gu, Seoul, focuses on lifting and skin care. It tailors firming and contouring treatments such as Thermage, Ulthera and thread lifting, together with fillers, botox, skin boosters and stem-cell skincare, to each patient. The clinic holds Korea’s KAHF accreditation for international patient care and offers Korean, English, Chinese and Japanese interpretation.","zh":"DAYONE医院位于首尔瑞草区江南大路437大元大厦5层，以提升与皮肤管理为中心。根据每位患者的状态，规划热玛吉、超声刀、埋线提升等紧致轮廓治疗，以及玻尿酸、肉毒、水光和干细胞皮肤管理。医院取得韩国保健福祉部·韩国保健产业振兴院外国人患者接待医疗机构评估认证(KAHF)，提供韩/英/中/日翻译。"},"doctors":[],"thumb":"hthumb/dayone.jpg"},
   {
     "name": {
       "kr": "삼성서울병원",
