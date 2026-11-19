@@ -2,6 +2,18 @@
 // 실행: node tools/build_geo.cjs  → public/faq/*.html, public/llms.txt, public/sitemap.xml
 // 회사 정보(법인·등록번호)가 바뀌면 ORG만 고치고 다시 실행한 뒤 커밋한다. index.html의 JSON-LD도 같은 값을 쓴다.
 // 이 FAQ는 병원·파트너 대상(B2B) 안내다. 환자 모집 문구는 넣지 않는다(외국인환자 유치 국내광고 금지).
+
+// =====================================================================
+// ⛔ 2026-11-19: 이 사이트는 검색·AI 색인을 전면 차단한 상태다.
+//    (robots.txt 차단본 · X-Robots-Tag: noindex · 모든 HTML meta robots noindex)
+//    이 스크립트는 robots.txt·sitemap.xml·llms.txt를 다시 만들어 그 차단을 되돌린다.
+//    색인을 다시 켜려는 게 아니면 실행하지 말 것. 의도한 것이라면 ALLOW_GEO=1 로 실행한다.
+// =====================================================================
+if (process.env.ALLOW_GEO !== '1') {
+  console.error('중단: 이 사이트는 검색·AI 색인 차단 상태입니다(2026-11-19). 되돌리려면 ALLOW_GEO=1 로 실행하세요.');
+  process.exit(1);
+}
+
 const fs = require('fs');
 const path = require('path');
 
