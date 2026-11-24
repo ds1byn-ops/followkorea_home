@@ -285,7 +285,7 @@ h2{font-size:clamp(20px,3.6vw,27px);font-weight:900;letter-spacing:-.5px;}
     <img src="/fk-news-logo.png" alt="FOLLOW KOREA" style="height:30px;margin-bottom:14px;display:block;">
     <b style="color:#3d4a63;" id="t-l-title"></b><br>
     <span id="t-l-body"></span><br>
-    <a class="kakao-btn" href="https://pf.kakao.com/_xfZxjiX/chat" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="#191919" d="M12 3C6.48 3 2 6.58 2 10.99c0 2.82 1.85 5.29 4.64 6.7-.2.75-.75 2.74-.86 3.16-.13.53.19.52.4.38.17-.11 2.66-1.8 3.74-2.53.68.1 1.38.15 2.08.15 5.52 0 10-3.58 10-7.86S17.52 3 12 3z"/></svg><span id="t-l-kakao"></span></a><br><br>
+    <br><br>
     주식회사 팔로우코리아 (Follow Korea Co., Ltd.) · 대표자: 하장환 외 1인 · 사업자등록번호: 696-86-03627<br>
     외국인환자 유치업 등록: 제 A-2026-01-01-06622 호 (2026.01.21~2029.01.20) · 관광사업 등록: 종합여행업 제 2026-000022 호<br>
     통신판매업 신고 · 서울특별시 서초구 강남대로 373, 13층 116호 · contact@followkorea.co.kr
@@ -574,7 +574,6 @@ function applyLang(l){
   document.getElementById('t-restart').textContent=t.restart;
   document.getElementById('t-l-title').textContent=t.lTitle;
   document.getElementById('t-l-body').innerHTML=t.lBody;
-  document.getElementById('t-l-kakao').textContent=t.lKakao;
   var koTraits=I18N.ko.traits;
   document.getElementById('tsel').innerHTML=t.traits.map(function(x,i){
     return '<span class="topt'+(SEL_TRAITS.indexOf(koTraits[i])>=0?' on':'')+'" onclick="togT(this)" data-t="'+esc(koTraits[i])+'">'+esc(x)+'</span>';

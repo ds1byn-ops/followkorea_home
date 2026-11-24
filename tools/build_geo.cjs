@@ -39,7 +39,7 @@ const FAQ = {
     ['강남펄스는 무엇인가요?', '외국인 환자를 받는 병원을 위한 운영 시스템입니다. 예약·접수, 환자 CRM, 상담·견적, 수납, 에이전시·소개자 정산, 한국보건산업진흥원 유치실적 보고 양식 작성, 인스타그램·페이스북 DM 상담 인박스를 한 곳에서 처리합니다. gnpulse.kr/demo/ 에서 데모를 신청할 수 있습니다.'],
     ['왕홍·가이드·해외 에이전시도 파트너로 참여할 수 있나요?', '네. gnpulse.kr/join/ 에서 가입하면 승인 후 파트너 포털에서 제휴병원 수가표 열람, 예약 신청, 정산 내역 확인을 할 수 있습니다. 소개 실적에 따라 수수료 등급이 오릅니다.'],
     ['등록된 유치업체와 일해야 하는 이유는 무엇인가요?', '의료법상 외국인 환자를 병원에 소개하고 대가를 받는 일은 등록된 유치업체만 할 수 있습니다. 등록 업체를 거치면 병원과 파트너 모두 무등록 알선에 따른 법적 위험 없이 정산·세무 처리를 할 수 있습니다.'],
-    ['연락처는 어떻게 되나요?', `이메일 ${ORG.email}, 카카오톡 채널 ${ORG.kakaoId}(${ORG.kakao}), 주소 ${ORG.addrKo}입니다.`],
+    ['연락처는 어떻게 되나요?', `이메일 ${ORG.email}, 주소 ${ORG.addrKo}입니다.`],
   ],
   en: [
     ['What is Follow Korea?', `${ORG.nameEn} is a foreign patient attraction agency registered with Korea's Ministry of Health and Welfare (Reg. No. ${ORG.regNo}) and a licensed general travel agency (No. ${ORG.travelNo}). It connects international patients with licensed partner clinics in Korea and runs China influencer (Wanghong/KOC) marketing, the multilingual medical travel platform Gangnam Follow, and the clinic operations system Gangnam Pulse.`],
@@ -49,7 +49,7 @@ const FAQ = {
     ['What is Gangnam Pulse?', 'A clinic operations system for clinics serving international patients: appointments and check-in, patient CRM, consultations and quotes, payments, agency and referrer settlement, KHIDI patient attraction reports, and an Instagram/Facebook DM inbox. Demo requests: gnpulse.kr/demo/.'],
     ['Can influencers, guides and overseas agencies join as partners?', 'Yes. Sign up at gnpulse.kr/join/. Once approved, the partner portal lets you view partner clinic price lists, request bookings and check settlements. Commission tiers rise with referral volume.'],
     ['Why work with a registered patient attraction agency?', 'Under Korean medical law, only registered agencies may refer foreign patients to clinics for a fee. Working through a registered agency lets clinics and partners settle payments and taxes without the legal risk of unregistered brokering.'],
-    ['How do I contact Follow Korea?', `Email ${ORG.email}, KakaoTalk channel ${ORG.kakaoId} (${ORG.kakao}). Address: ${ORG.addrEn}.`],
+    ['How do I contact Follow Korea?', `Email ${ORG.email}. Address: ${ORG.addrEn}.`],
   ],
   zh: [
     ['Follow Korea 是一家什么样的公司？', `${ORG.nameEn} 是在韩国保健福祉部登记的外国患者招揽机构（登记号 ${ORG.regNo}），同时持有综合旅行业执照（第 ${ORG.travelNo} 号）。公司为海外客户对接韩国正规合作医疗机构，并运营网红·KOC 中国营销、多语种医疗旅游平台（江南FOLLOW）以及医院运营系统（江南Pulse）。`],
@@ -57,7 +57,7 @@ const FAQ = {
     ['合作医院覆盖哪些领域？', '以首尔江南为中心，涵盖皮肤科、整形外科、健康体检、牙科、眼科、女性医学、干细胞、骨科·脊柱等领域的正规医疗机构，提供中文咨询、翻译陪同与机场接送。'],
     ['网红营销是如何进行的？', '中国网红·KOC 到访合作医院体验项目后，在小红书、抖音发布到访笔记。按发布数量分阶段执行，并与医院共享发布进度与截图。内容遵守中国医疗广告相关规定，不使用价格、疗效等断言性表述。'],
     ['为什么要与登记的招揽机构合作？', '根据韩国医疗法，只有登记的招揽机构才能有偿向医院介绍外国患者。通过登记机构合作，医院与合作伙伴都能合规完成结算与税务处理，避免无资质中介的法律风险。'],
-    ['如何联系 Follow Korea？', `邮箱 ${ORG.email}，KakaoTalk 频道 ${ORG.kakaoId}，地址：${ORG.addrZh}。`],
+    ['如何联系 Follow Korea？', `邮箱 ${ORG.email}，地址：${ORG.addrZh}。`],
   ],
 };
 
@@ -80,7 +80,7 @@ const orgLd = {
     { '@type': 'PropertyValue', name: 'Foreign Patient Attraction Agency Registration (Ministry of Health and Welfare, Korea)', value: ORG.regNo },
     { '@type': 'PropertyValue', name: 'General Travel Agency Registration', value: ORG.travelNo },
   ],
-  sameAs: ['https://followkorea.kr/', 'https://gnfollow.com/', 'https://gnpulse.kr/', ORG.kakao],
+  sameAs: ['https://followkorea.kr/', 'https://gnfollow.com/', 'https://gnpulse.kr/'],
 };
 
 const CSS = `*{box-sizing:border-box}body{margin:0;font-family:Pretendard,-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans KR','Noto Sans SC','Microsoft YaHei',sans-serif;color:#1e1e1e;background:#f6f8fb;line-height:1.75}

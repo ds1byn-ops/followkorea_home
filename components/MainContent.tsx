@@ -1095,17 +1095,6 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
                     <span>{t.footerContact}</span>
                   </p>
                 </div>
-                <div className="flex flex-wrap items-center gap-3 mt-8 md:mt-10">
-                <a
-                  href="https://pf.kakao.com/_xfZxjiX/chat"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2.5 bg-[#FEE500] text-[#191919] px-6 md:px-7 py-3.5 md:py-4 rounded-full text-[13px] md:text-sm font-bold hover:bg-[#f5dc00] transition-all shadow-xl shadow-[#FEE500]/30 active:scale-95"
-                >
-                  <span className="iconify text-lg md:text-xl" data-icon="simple-icons:kakaotalk"></span>
-                  <span>{({KR:'카카오톡 채널 상담하기',EN:'Chat on KakaoTalk',CN:'KakaoTalk 咨询',JP:'カカオトークで相談',ID:'Chat via KakaoTalk',AR:'تواصل عبر كاكاوتوك',KH:'ជជែកតាម KakaoTalk',VI:'Tư vấn qua KakaoTalk',RU:'Чат в KakaoTalk'} as Record<string,string>)[lang] ?? 'Chat on KakaoTalk'}</span>
-                </a>
-                </div>
               </div>
             </div>
           </Reveal>
