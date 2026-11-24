@@ -740,7 +740,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
             <p className="text-gray-400 mt-5 text-base md:text-lg font-medium max-w-2xl mx-auto">{svc.sub}</p>
           </div>
         </Reveal>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 md:gap-6 xl:gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-5 md:gap-6 xl:gap-4">
           {svc.items.concat([GUIDE_I18N[lang] || GUIDE_I18N.EN]).map((it, i) => {
             const featured = i === 0;        // ERP: 2단 타이틀
             // 단어 단위 줄바꿈은 한국어만 — 일본어·중국어는 keep-all이 오히려 줄바꿈을 막아 글자가 넘침
