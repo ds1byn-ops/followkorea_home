@@ -681,27 +681,16 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
               루프 이음매가 보이지 않는다.
               poster 는 영상의 0초 프레임이라 로딩→재생 전환이 보이지 않는다. */}
           <div className="absolute inset-0 w-full h-full pointer-events-none">
-            <video
-              className="w-full h-full object-cover object-[35%_center] xl:object-center"
-              src="/hero-main.mp4"
-              poster="/hero-main.jpg"
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload="auto"
-              aria-hidden="true"
-            />
+            <iframe
+              className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 scale-125"
+              src="https://player.vimeo.com/video/1157091335?autoplay=1&loop=1&background=1&muted=1&autopause=0"
+              title="Follow Korea Hero Video"
+              frameBorder="0"
+              allow="autoplay; fullscreen"
+              allowFullScreen
+            ></iframe>
           </div>
-          {/* 몽타주라 장면마다 밝기가 달라진다(흰 현수막·흰 부스벽이 좌측에 오는 컷이 다수).
-              모든 컷에서 헤드라인이 읽히도록 좌측 스크림을 Tailwind 기본 3-stop 보다 진하게,
-              우측 45% 는 그대로 비도록 정지점을 직접 지정한다. */}
-          <div
-            className="absolute inset-0"
-            style={{ backgroundImage: 'linear-gradient(to right, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.66) 30%, rgba(0,0,0,0.3) 58%, rgba(0,0,0,0.05) 85%)' }}
-          ></div>
-          {/* 모바일은 세로로 길게 잘려 밝은 구간이 헤드라인과 겹치므로 전체 스크림을 한 겹 더 깐다 */}
-          <div className="absolute inset-0 bg-black/25 xl:bg-black/10"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/20 to-transparent"></div>
           
           <div className="relative z-10 h-full flex flex-col justify-center px-8 md:px-16 lg:px-24">
             <Reveal delay={0.1}>
@@ -891,29 +880,6 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
                 <span className="text-[10px] md:text-xs font-bold tracking-[0.3em] text-[#5a82c2] uppercase">{wh.tag}</span>
                 <h2 className={`mt-4 text-[30px] md:text-[46px] font-black tracking-tighter leading-[1.15] text-gray-900 whitespace-pre-line ${krBreak}`}>{wh.title}</h2>
                 <p className={`mt-6 text-base md:text-lg text-gray-500 font-medium leading-relaxed ${krBreak}`}>{wh.sub}</p>
-              </div>
-            </Reveal>
-            <Reveal delay={0.1}>
-              <div className="mx-auto w-full max-w-md lg:w-[440px]">
-                <div className="rounded-[1.6rem] bg-gray-900 p-2 shadow-2xl shadow-gray-300/60">
-                  <video
-                    src="/xhs-hospital-visit.mp4"
-                    className="w-full aspect-video object-cover rounded-[1.2rem] bg-black"
-                    autoPlay muted loop playsInline controls preload="metadata"
-                    controlsList="nodownload noremoteplayback" disablePictureInPicture
-                    onContextMenu={(e) => e.preventDefault()}
-                  />
-                </div>
-                <p className="mt-4 text-center text-[12.5px] text-gray-500 font-medium leading-relaxed px-2 whitespace-nowrap">{wh.videoCap}</p>
-                <div className="mt-5 grid grid-cols-2 gap-3">
-                  <img src="/proof-1.jpg" alt="wechat operations 1" loading="lazy" className="w-full h-36 object-cover object-top rounded-xl border border-gray-200" />
-                  <img src="/proof-2.jpg" alt="wechat operations 2" loading="lazy" className="w-full h-36 object-cover object-top rounded-xl border border-gray-200" />
-                </div>
-                <a href="https://gnpulse.kr/#proof" target="_blank" rel="noopener"
-                   className="mt-4 flex items-center justify-center gap-2 w-full border border-gray-300 hover:border-[#5a82c2] hover:text-[#5a82c2] text-gray-600 font-bold text-[13.5px] py-3 rounded-full transition-colors">
-                  {wh.proofCta}
-                  <span className="iconify" data-icon="solar:arrow-right-up-linear"></span>
-                </a>
               </div>
             </Reveal>
           </div>
@@ -1130,14 +1096,6 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
                   </p>
                 </div>
                 <div className="flex flex-wrap items-center gap-3 mt-8 md:mt-10">
-                <a
-                  href={({KR:'/brochure/followkorea-company-profile-ko.pdf',CN:'/brochure/followkorea-company-profile-cn.pdf',EN:'/brochure/followkorea-company-profile-en.pdf',JP:'/brochure/followkorea-company-profile-ja.pdf'} as Record<string,string>)[lang] ?? '/brochure/followkorea-company-profile-en.pdf'}
-                  download
-                  className="inline-flex items-center gap-2.5 bg-[#5a82c2] text-white px-6 md:px-7 py-3.5 md:py-4 rounded-full text-[13px] md:text-sm font-bold hover:bg-[#4a6da3] transition-all shadow-xl shadow-[#5a82c2]/20 active:scale-95"
-                >
-                  <span className="iconify text-lg md:text-xl" data-icon="solar:download-minimalistic-bold"></span>
-                  <span>{({KR:'회사 소개서 다운로드',EN:'Download Company Profile',CN:'下载公司介绍',JP:'会社案内をダウンロード',ID:'Unduh Profil Perusahaan',AR:'تحميل ملف الشركة',KH:'ទាញយកប្រវត្តិក្រុមហ៊ុន',VI:'Tải hồ sơ công ty',RU:'Скачать профиль компании'} as Record<string,string>)[lang] ?? 'Download Company Profile'}</span>
-                </a>
                 <a
                   href="https://pf.kakao.com/_xfZxjiX/chat"
                   target="_blank"

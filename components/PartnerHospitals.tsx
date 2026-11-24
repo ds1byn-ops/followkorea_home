@@ -382,25 +382,6 @@ const PartnerHospitals: React.FC<{ lang: LanguageCode }> = ({ lang }) => {
               </Reveal>
             ))}
           </div>
-          {/* 공식 등록·참가 기관 — 외부 공식 사이트로 이동하는 설명 카드 (2026-10-24) */}
-          <Reveal delay={0.1}>
-            <div className="mt-12 md:mt-16">
-              <h4 className={`text-center text-[13px] font-black text-gray-400 tracking-[0.22em] uppercase mb-6 ${krBreak}`}>{OFFICIAL_ORGS_TITLE[lang] || OFFICIAL_ORGS_TITLE.EN}</h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 max-w-3xl mx-auto">
-                {OFFICIAL_ORGS.map((o) => (
-                  <a key={o.id} href={o.url} target="_blank" rel="noopener noreferrer"
-                    className="group block rounded-2xl border border-gray-200 bg-white p-5 md:p-6 hover:border-[#5a82c2] hover:shadow-lg transition-all">
-                    <div className="flex items-center justify-between mb-2.5">
-                      <span className="text-[10.5px] font-black text-[#5a82c2] tracking-wider uppercase">{o.tag}</span>
-                      <span className="iconify text-lg text-gray-300 group-hover:text-[#5a82c2] transition-colors" data-icon="solar:arrow-right-up-linear"></span>
-                    </div>
-                    <div className={`font-black text-gray-900 text-[15px] md:text-base mb-2 leading-snug ${krBreak}`}>{o.name[lang] || o.name.EN}</div>
-                    <p className={`text-gray-500 text-[13px] leading-relaxed ${krBreak}`}>{o.desc[lang] || o.desc.EN}</p>
-                  </a>
-                ))}
-              </div>
-            </div>
-          </Reveal>
           {/* 의료관광 행사 캘린더 (2026-10-28) */}
           <Reveal delay={0.14}>
             <div className="mt-10 md:mt-12">
