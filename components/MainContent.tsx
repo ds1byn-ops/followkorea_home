@@ -97,19 +97,8 @@ const CountUp: React.FC<{ end: number; duration?: number; decimals?: number }> =
 };
 
 // 우리 서비스 — 3개 제품 허브 (강남펄스 ERP / 글로벌 플랫폼 / 왕홍 마케팅)
-const SVC_LINKS = ['https://gnpulse.kr/demo', 'https://followkorea.co.kr/b2c/', 'https://gnpulse.kr', 'https://gnpulse.kr/beauty/', 'https://gnpulse.kr/guide'];
+const SVC_LINKS = ['https://gnpulse.kr/demo', 'https://followkorea.co.kr/b2c/', 'https://gnpulse.kr', 'https://gnpulse.kr/guide'];
 const AGENCY_ERP: Record<string, string> = { KR: '에이전시 관리 ERP', EN: 'Agency Management ERP', CN: '代理商管理 ERP', JP: 'エージェンシー管理 ERP', ID: 'ERP Manajemen Agensi', AR: 'نظام إدارة الوكالات', KH: 'ERP គ្រប់គ្រងភ្នាក់ងារ', VI: 'ERP Quản lý Đại lý', RU: 'ERP управления агентствами' };
-const BEAUTY_I18N: Record<string, { t: string; d: string; c: string; tag?: string }> = {
-  KR: { t: '뷰티 중국진출 컨설팅', d: '화장품 브랜드의 중국 진출 — 왕홍 시딩·콰징 입점·인허가까지 원스톱 컨설팅.', c: '컨설팅 알아보기', tag: 'K-뷰티' },
-  EN: { t: 'K-Beauty China Consulting', d: 'One-stop consulting for cosmetic brands entering China — wanghong seeding, cross-border e-commerce, and licensing.', c: 'Learn More', tag: 'K-Beauty' },
-  CN: { t: 'K-Beauty中国市场咨询', d: '化妆品品牌进军中国——网红种草·跨境电商入驻·许可申请一站式咨询。', c: '了解咨询', tag: 'K-Beauty' },
-  JP: { t: 'K-ビューティー中国進出コンサル', d: '化粧品ブランドの中国進出 — ワンホン施策・越境EC・許認可までワンストップ。', c: '詳しく見る', tag: 'K-Beauty' },
-  ID: { t: 'Konsultasi K-Beauty ke Tiongkok', d: 'Konsultasi satu pintu untuk brand kosmetik masuk Tiongkok — wanghong, e-commerce lintas batas, perizinan.', c: 'Pelajari', tag: 'K-Beauty' },
-  AR: { t: 'استشارات دخول الصين للتجميل', d: 'استشارات شاملة لدخول علامات التجميل إلى الصين — تسويق المؤثرين والتجارة العابرة للحدود والتراخيص.', c: 'اعرف المزيد', tag: 'K-Beauty' },
-  KH: { t: 'ប្រឹក្សា K-Beauty ចូលទីផ្សារចិន', d: 'ប្រឹក្សាមួយកន្លែងសម្រាប់ម៉ាកគ្រឿងសម្អាងចូលទីផ្សារចិន។', c: 'ស្វែងយល់', tag: 'K-Beauty' },
-  VI: { t: 'Tư vấn K-Beauty vào Trung Quốc', d: 'Tư vấn trọn gói cho thương hiệu mỹ phẩm vào Trung Quốc — wanghong, TMĐT xuyên biên giới, giấy phép.', c: 'Tìm hiểu', tag: 'K-Beauty' },
-  RU: { t: 'K-Beauty: выход в Китай', d: 'Комплексный консалтинг для косметических брендов — ванхуны, трансграничная e-commerce, лицензии.', c: 'Подробнее', tag: 'K-Beauty' },
-};
 const GUIDE_I18N: Record<string, { t: string; d: string; c: string; tag?: string }> = {
   KR: { t: '통역 가이드 모집', d: '한국 거주 중화권 분들을 협력 가이드로 모십니다. 중국 고객 소개 시 수수료를 드립니다.', c: '가이드 지원하기', tag: '인재 모집' },
   EN: { t: 'Interpreter Guide Recruiting', d: 'Recruiting Chinese-speaking residents in Korea as partner guides. Earn commission for referring Chinese clients.', c: 'Apply as Guide', tag: 'Recruiting' },
@@ -122,47 +111,47 @@ const GUIDE_I18N: Record<string, { t: string; d: string; c: string; tag?: string
   RU: { t: 'Набор гидов-переводчиков', d: 'Набираем говорящих по-китайски в Корее как гидов-партнёров. Комиссия за привлечение китайских клиентов.', c: 'Стать гидом', tag: 'Набор' },
 };
 const SVC_I18N: Record<string, { title: string; sub: string; items: { t: string; d: string; c: string; tag?: string }[] }> = {
-  KR: { title: '병원 성장을 위한\n다섯 가지 솔루션', sub: '메디컬 마케팅부터 병원 운영, 글로벌 환자 유치까지 — 필요한 서비스를 바로 선택하세요.', items: [
+  KR: { title: '병원 성장을 위한\n네 가지 솔루션', sub: '메디컬 마케팅부터 병원 운영, 글로벌 환자 유치까지 — 필요한 서비스를 바로 선택하세요.', items: [
     { t: '강남펄스 ERP', d: '예약·접수·정산·환자 CRM을 하나로. 병원 운영 올인원 시스템을 무료로 체험해 보세요.', c: '무료 데모 신청', tag: '무료 체험' },
     { t: '글로벌 환자 유치 플랫폼', d: '협력 병원과 다국어 의료관광 플랫폼. 해외 환자와 병원을 연결합니다.', c: '플랫폼 둘러보기', tag: '10개 언어' },
     { t: '중국 왕홍 마케팅', d: '광고는 조회수를, 왕홍은 환자를 남깁니다. 왕홍 기반 중국 환자 유치 프로그램.', c: '프로그램 보기', tag: '중국 특화' },
   ] },
-  EN: { title: 'Five Solutions for\nYour Hospital’s Growth', sub: 'From medical marketing to hospital operations and global patient attraction — choose the service you need.', items: [
+  EN: { title: 'Four Solutions for\nYour Hospital’s Growth', sub: 'From medical marketing to hospital operations and global patient attraction — choose the service you need.', items: [
     { t: 'Gangnam Pulse ERP', d: 'Appointments, reception, settlement, and patient CRM in one. Try the all-in-one hospital system for free.', c: 'Free Demo', tag: 'Free Trial' },
     { t: 'Global Patient Platform', d: 'A multilingual medical tourism platform with partner hospitals, connecting global patients and clinics.', c: 'Explore Platform', tag: '10 Languages' },
     { t: 'China Wanghong Marketing', d: 'Ads leave views; wanghong leave patients. A wanghong-based China patient attraction program.', c: 'View Program', tag: 'China' },
   ] },
-  CN: { title: '助力医院成长的\n五大解决方案', sub: '从医疗营销到医院运营，再到全球患者引进——选择您需要的服务。', items: [
+  CN: { title: '助力医院成长的\n四大解决方案', sub: '从医疗营销到医院运营，再到全球患者引进——选择您需要的服务。', items: [
     { t: '江南Pulse ERP', d: '预约·接待·结算·患者CRM一体化。免费体验医院运营一站式系统。', c: '免费演示申请', tag: '免费体验' },
     { t: '全球患者引进平台', d: '与合作医院的多语言医疗旅游平台，连接海外患者与医院。', c: '浏览平台', tag: '10种语言' },
     { t: '中国网红营销', d: '广告留下浏览量，网红留下患者。基于网红的中国患者引进项目。', c: '查看项目', tag: '中国专属' },
   ] },
-  JP: { title: '病院の成長のための\n5つのソリューション', sub: 'メディカルマーケティングから病院運営、グローバル患者誘致まで — 必要なサービスをお選びください。', items: [
+  JP: { title: '病院の成長のための\n4つのソリューション', sub: 'メディカルマーケティングから病院運営、グローバル患者誘致まで — 必要なサービスをお選びください。', items: [
     { t: '江南パルス ERP', d: '予約・受付・精算・患者CRMを一つに。病院運営オールインワンを無料で体験。', c: '無料デモ申込', tag: '無料体験' },
     { t: 'グローバル患者誘致プラットフォーム', d: '提携病院との多言語医療ツーリズムプラットフォーム。海外患者と病院をつなぎます。', c: 'プラットフォームを見る', tag: '10言語対応' },
     { t: '中国ワンホンマーケティング', d: '広告は再生数を、ワンホンは患者を残します。ワンホンによる中国患者誘致プログラム。', c: 'プログラムを見る', tag: '中国特化' },
   ] },
-  ID: { title: 'Lima Solusi untuk\nPertumbuhan Rumah Sakit Anda', sub: 'Dari pemasaran medis hingga operasional rumah sakit dan penarikan pasien global — pilih layanan yang Anda butuhkan.', items: [
+  ID: { title: 'Empat Solusi untuk\nPertumbuhan Rumah Sakit Anda', sub: 'Dari pemasaran medis hingga operasional rumah sakit dan penarikan pasien global — pilih layanan yang Anda butuhkan.', items: [
     { t: 'Gangnam Pulse ERP', d: 'Janji temu, resepsi, penyelesaian, dan CRM pasien dalam satu. Coba sistem rumah sakit all-in-one gratis.', c: 'Demo Gratis', tag: 'Uji Coba Gratis' },
     { t: 'Platform Pasien Global', d: 'Platform wisata medis multibahasa dengan rumah sakit mitra, menghubungkan pasien global dan klinik.', c: 'Jelajahi Platform', tag: '10 Bahasa' },
     { t: 'Pemasaran Wanghong Tiongkok', d: 'Iklan meninggalkan tayangan; wanghong meninggalkan pasien. Program penarikan pasien Tiongkok berbasis wanghong.', c: 'Lihat Program', tag: 'Tiongkok' },
   ] },
-  AR: { title: 'خمسة حلول\nلنمو مستشفاك', sub: 'من التسويق الطبي إلى تشغيل المستشفى واستقطاب المرضى عالمياً — اختر الخدمة التي تحتاجها.', items: [
+  AR: { title: 'أربعة حلول\nلنمو مستشفاك', sub: 'من التسويق الطبي إلى تشغيل المستشفى واستقطاب المرضى عالمياً — اختر الخدمة التي تحتاجها.', items: [
     { t: 'Gangnam Pulse ERP', d: 'المواعيد والاستقبال والتسوية وإدارة المرضى في نظام واحد. جرّب نظام المستشفى الشامل مجاناً.', c: 'عرض تجريبي مجاني', tag: 'تجربة مجانية' },
     { t: 'منصة المرضى العالمية', d: 'منصة سياحة علاجية متعددة اللغات مع مستشفيات شريكة، تربط المرضى العالميين بالعيادات.', c: 'استكشف المنصة', tag: '10 لغات' },
     { t: 'تسويق وانغهونغ الصيني', d: 'الإعلانات تترك مشاهدات، ووانغهونغ يتركون مرضى. برنامج استقطاب المرضى الصينيين.', c: 'عرض البرنامج', tag: 'الصين' },
   ] },
-  KH: { title: 'ដំណោះស្រាយប្រាំយ៉ាង​សម្រាប់កំណើនមន្ទីរពេទ្យរបស់អ្នក', sub: 'ពីទីផ្សារវេជ្ជសាស្ត្រ ដល់ប្រតិបត្តិការ និងការទាក់ទងអ្នកជំងឺសកល — ជ្រើសរើសសេវាកម្មដេលអ្នកត្រូវការ។', items: [
+  KH: { title: 'ដំណោះស្រាយបួនយ៉ាង​សម្រាប់កំណើនមន្ទីរពេទ្យរបស់អ្នក', sub: 'ពីទីផ្សារវេជ្ជសាស្ត្រ ដល់ប្រតិបត្តិការ និងការទាក់ទងអ្នកជំងឺសកល — ជ្រើសរើសសេវាកម្មដេលអ្នកត្រូវការ។', items: [
     { t: 'Gangnam Pulse ERP', d: 'ការណាត់ជួប ការទទួល ការទូទាត់ និង CRM អ្នកជំងឺក្នុងមួយ។ សាកល្បងប្រព័ន្ធមន្ទីរពេទ្យដោយមិនគិតថ្លៃ។', c: 'សាកល្បងឥតគិតថ្លៃ', tag: 'ឥតគិតថ្លៃ' },
     { t: 'វេទិកាអ្នកជំងឺសកល', d: 'វេទិកាទេសចរណ៍វេជ្ជសាស្ត្រពហុភាសាជាមួយមន្ទីរពេទ្យដៃគូ។', c: 'រុករកវេទិកា', tag: '10 ភាសា' },
     { t: 'ទីផ្សារ Wanghong ចិន', d: 'ការផ្សាយពាណិជ្ជកម្មទុកចំនួនមើល ឯ Wanghong ទុកអ្នកជំងឺ។', c: 'មើលកម្មវិធី', tag: 'ចិន' },
   ] },
-  VI: { title: 'Năm giải pháp cho\nsự phát triển của bệnh viện', sub: 'Từ marketing y tế đến vận hành bệnh viện và thu hút bệnh nhân toàn cầu — chọn dịch vụ bạn cần.', items: [
+  VI: { title: 'Bốn giải pháp cho\nsự phát triển của bệnh viện', sub: 'Từ marketing y tế đến vận hành bệnh viện và thu hút bệnh nhân toàn cầu — chọn dịch vụ bạn cần.', items: [
     { t: 'Gangnam Pulse ERP', d: 'Đặt lịch, tiếp nhận, thanh toán và CRM bệnh nhân trong một. Trải nghiệm hệ thống bệnh viện all-in-one miễn phí.', c: 'Dùng thử miễn phí', tag: 'Miễn phí' },
     { t: 'Nền tảng bệnh nhân toàn cầu', d: 'Nền tảng du lịch y tế đa ngôn ngữ với các bệnh viện đối tác, kết nối bệnh nhân toàn cầu và phòng khám.', c: 'Khám phá nền tảng', tag: '10 ngôn ngữ' },
     { t: 'Marketing Wanghong Trung Quốc', d: 'Quảng cáo để lại lượt xem, wanghong để lại bệnh nhân. Chương trình thu hút bệnh nhân Trung Quốc dựa trên wanghong.', c: 'Xem chương trình', tag: 'Trung Quốc' },
   ] },
-  RU: { title: 'Пять решений для\nроста вашей клиники', sub: 'От медицинского маркетинга до управления клиникой и привлечения пациентов — выберите нужную услугу.', items: [
+  RU: { title: 'Четыре решения для\nроста вашей клиники', sub: 'От медицинского маркетинга до управления клиникой и привлечения пациентов — выберите нужную услугу.', items: [
     { t: 'Gangnam Pulse ERP', d: 'Запись, приём, расчёты и CRM пациентов в одном. Попробуйте систему для клиник бесплатно.', c: 'Бесплатное демо', tag: 'Бесплатно' },
     { t: 'Глобальная платформа пациентов', d: 'Многоязычная платформа медтуризма с партнёрскими клиниками, соединяющая пациентов и клиники.', c: 'Открыть платформу', tag: '10 языков' },
     { t: 'Китайский маркетинг ванхун', d: 'Реклама оставляет просмотры, ванхун — пациентов. Программа привлечения китайских пациентов через ванхун.', c: 'Смотреть программу', tag: 'Китай' },
@@ -752,7 +741,7 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
           </div>
         </Reveal>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 md:gap-6 xl:gap-4">
-          {svc.items.concat([BEAUTY_I18N[lang] || BEAUTY_I18N.EN, GUIDE_I18N[lang] || GUIDE_I18N.EN]).map((it, i) => {
+          {svc.items.concat([GUIDE_I18N[lang] || GUIDE_I18N.EN]).map((it, i) => {
             const featured = i === 0;        // ERP: 2단 타이틀
             // 단어 단위 줄바꿈은 한국어만 — 일본어·중국어는 keep-all이 오히려 줄바꿈을 막아 글자가 넘침
             const krBreak = lang === 'KR' ? 'break-keep' : '';
