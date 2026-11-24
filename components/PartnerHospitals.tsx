@@ -382,30 +382,6 @@ const PartnerHospitals: React.FC<{ lang: LanguageCode }> = ({ lang }) => {
               </Reveal>
             ))}
           </div>
-          {/* 의료관광 행사 캘린더 (2026-10-28) */}
-          <Reveal delay={0.14}>
-            <div className="mt-10 md:mt-12">
-              <h4 className={`text-center text-[13px] font-black text-gray-400 tracking-[0.22em] uppercase mb-6 ${krBreak}`}>{EVENTS_TITLE[lang] || EVENTS_TITLE.EN}</h4>
-              <div className="max-w-3xl mx-auto rounded-2xl border border-gray-200 bg-white overflow-hidden divide-y divide-gray-100">
-                {EVENTS.map((e) => {
-                  const st = e.status === 'upcoming' ? 'bg-[#5a82c2] text-white' : e.status === 'annual' ? 'bg-[#eef3fb] text-[#5a82c2]' : 'bg-gray-100 text-gray-400';
-                  const Row: any = e.url ? 'a' : 'div';
-                  return (
-                    <Row key={e.name} {...(e.url ? { href: e.url, target: '_blank', rel: 'noopener noreferrer' } : {})}
-                      className={`flex items-start gap-3 p-4 md:p-5 ${e.url ? 'group hover:bg-gray-50 transition-colors' : ''}`}>
-                      <span className={`shrink-0 mt-0.5 text-[11px] font-black px-2.5 py-1 rounded-full ${st}`}>{EVT_STATUS[e.status][lang] || EVT_STATUS[e.status].EN}</span>
-                      <div className="flex-1 min-w-0">
-                        <div className={`font-black text-gray-900 text-[14px] md:text-[15px] ${krBreak}`}>{e.name} <span className="text-gray-400 font-medium">· {e.desc[lang] || e.desc.EN}</span></div>
-                        <div className={`text-gray-500 text-[12.5px] mt-1 ${krBreak}`}>{e.meta[lang] || e.meta.EN}</div>
-                      </div>
-                      {e.url && <span className="iconify text-gray-300 group-hover:text-[#5a82c2] transition-colors mt-1 shrink-0" data-icon="solar:arrow-right-up-linear"></span>}
-                    </Row>
-                  );
-                })}
-              </div>
-              <p className={`text-center text-gray-400 text-[11px] mt-3 ${krBreak}`}>{lang === 'KR' ? '일정은 주최 측 공지에 따라 변동될 수 있습니다.' : 'Dates may change per organizers’ announcements.'}</p>
-            </div>
-          </Reveal>
         </div>
       )}
 
