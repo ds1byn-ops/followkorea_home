@@ -516,7 +516,7 @@ function applyLang(l){
   document.getElementById('t-h1').innerHTML=t.h1;
   document.getElementById('t-lead').innerHTML=t.lead;
   document.getElementById('t-cta').textContent=t.cta;
-  var N=String(HOSPITALS.filter(function(h){return !isLife(h);}).length); var fN=function(x){return String(x).replace(/{N}/g,N);}; // 협력 의료기관 수 = 병원 카드 수(제휴 서비스 제외)
+  var N='25'; var fN=function(x){return String(x).replace(/{N}/g,N);}; // 표기용 제휴 병원 수(마케팅 고정값) — 홈페이지(실수치)와 다르게 b2c는 25곳으로 노출
   document.getElementById('t-chipfloat').textContent=fN(t.chipfloat);
   var links=['#hospitals','#legal','https://gnpulse.kr/','https://gnfollow-cn.netlify.app/'];
   document.getElementById('stats').innerHTML=t.stats.map(function(sset,i){
