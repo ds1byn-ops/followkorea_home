@@ -15,97 +15,59 @@ export interface HospDetail {
 }
 
 export const HOSPITAL_DATA: HospDetail[] = [
-  {"name":{"kr":"데이원의원","en":"DAYONE Clinic","zh":"DAYONE医院"},"dept":{"kr":"피부과·리프팅","en":"Dermatology · Lifting","zh":"皮肤科·提升"},"cat":"피부·성형","icon":"✨","badge":"NEW","treats":{"kr":["써마지·울쎄라 리프팅","실리프팅(민트·블루로즈)","필러·보톡스","스킨부스터·물광주사","색소·모공 레이저","줄기세포 피부관리"],"en":["Thermage · Ulthera Lifting","Thread Lifting","Filler · Botox","Skin Booster · Aqua Shine","Pigment · Pore Laser","Stem Cell Skincare"],"zh":["热玛吉·超声刀提升","埋线提升","玻尿酸·肉毒","水光·皮肤助推","色素·毛孔激光","干细胞皮肤管理"]},"hours":"예약제 (by appointment) · dayoneclinic.co.kr","loc":{"ko":"서울 서초 (강남대로)","zh":"首尔瑞草(江南大路)","en":"Gangnam-daero, Seocho, Seoul"},"overview":{"kr":"데이원의원은 서울 서초구 강남대로 437 대원빌딩 5층에 위치한 리프팅·피부 중심 의원입니다. 써마지·울쎄라·실리프팅 등 탄력·윤곽 치료와 필러·보톡스·스킨부스터·줄기세포 피부관리를 환자 상태에 맞춰 설계합니다. 보건복지부·한국보건산업진흥원 외국인환자 유치의료기관 평가인증(KAHF)을 취득했으며, 한/영/중/일 통역을 지원합니다.","en":"DAYONE Clinic, on the 5th floor of Daewon Building at 437 Gangnam-daero, Seocho-gu, Seoul, focuses on lifting and skin care. It tailors firming and contouring treatments such as Thermage, Ulthera and thread lifting, together with fillers, botox, skin boosters and stem-cell skincare, to each patient. The clinic holds Korea’s KAHF accreditation for international patient care and offers Korean, English, Chinese and Japanese interpretation.","zh":"DAYONE医院位于首尔瑞草区江南大路437大元大厦5层，以提升与皮肤管理为中心。根据每位患者的状态，规划热玛吉、超声刀、埋线提升等紧致轮廓治疗，以及玻尿酸、肉毒、水光和干细胞皮肤管理。医院取得韩国保健福祉部·韩国保健产业振兴院外国人患者接待医疗机构评估认证(KAHF)，提供韩/英/中/日翻译。"},"doctors":[],"thumb":"hthumb/dayone.jpg"},
   {
     "name": {
-      "kr": "삼성서울병원",
-      "en": "Samsung Medical Center",
-      "zh": "三星首尔医院"
+      "kr": "데이원의원",
+      "en": "DAYONE Clinic",
+      "zh": "DAYONE医院"
     },
     "dept": {
-      "kr": "종합병원/국제진료센터",
-      "en": "General Hospital / International Healthcare Center",
-      "zh": "综合医院/国际诊疗中心"
+      "kr": "피부과·리프팅",
+      "en": "Dermatology · Lifting",
+      "zh": "皮肤科·提升"
     },
-    "cat": "검진",
+    "cat": "피부·성형",
+    "icon": "✨",
     "badge": "NEW",
     "treats": {
       "kr": [
-        "종합건강검진",
-        "암 진료(삼성암병원)",
-        "심장·뇌혈관",
-        "양성자치료",
-        "장기이식",
-        "국제진료센터 1:1 코디"
+        "써마지·울쎄라 리프팅",
+        "실리프팅(민트·블루로즈)",
+        "필러·보톡스",
+        "스킨부스터·물광주사",
+        "색소·모공 레이저",
+        "줄기세포 피부관리"
       ],
       "en": [
-        "Comprehensive Checkup",
-        "Cancer Care (SCCC)",
-        "Heart·Brain·Vascular",
-        "Proton Therapy",
-        "Organ Transplant",
-        "IHC 1:1 Coordination"
+        "Thermage · Ulthera Lifting",
+        "Thread Lifting",
+        "Filler · Botox",
+        "Skin Booster · Aqua Shine",
+        "Pigment · Pore Laser",
+        "Stem Cell Skincare"
       ],
       "zh": [
-        "综合体检",
-        "癌症诊疗(三星癌症医院)",
-        "心脑血管",
-        "质子治疗",
-        "器官移植",
-        "国际诊疗中心1:1协调"
+        "热玛吉·超声刀提升",
+        "埋线提升",
+        "玻尿酸·肉毒",
+        "水光·皮肤助推",
+        "色素·毛孔激光",
+        "干细胞皮肤管理"
       ]
     },
-    "hours": "Mon-Fri (International Healthcare Center, by appointment) · +82-2-3410-0200",
+    "hours": "예약제 (by appointment) · dayoneclinic.co.kr",
     "loc": {
-      "ko": "서울 강남 (일원)",
-      "zh": "首尔江南(逸院)",
-      "en": "Irwon, Gangnam, Seoul"
+      "ko": "서울 서초 (강남대로)",
+      "zh": "首尔瑞草(江南大路)",
+      "en": "Gangnam-daero, Seocho, Seoul"
     },
     "overview": {
-      "kr": "삼성서울병원은 1994년 개원한 서울 강남구 일원로 81의 대학병원급 종합병원으로, 삼성암병원·심장뇌혈관병원·양성자치료센터·건강의학센터를 갖추고 있습니다. 1995년부터 운영 중인 국제진료센터(IHC)는 120여 개국 환자를 진료해 왔으며, 외국인 전용 외래와 1:1 코디네이션, 통역, 화상 상담, 전문센터 연계 진료를 제공합니다.",
-      "en": "Samsung Medical Center, founded in 1994 at 81 Irwon-ro, Gangnam-gu, is a leading academic medical center with the Samsung Comprehensive Cancer Center, Heart Vascular Stroke Institute, Proton Therapy Center and Health Promotion Center. Its International Healthcare Center, operating since 1995, has served patients from over 120 countries with a dedicated outpatient clinic, 1:1 care coordination, interpreters, video consultations and referrals to specialty centers.",
-      "zh": "三星首尔医院成立于1994年，位于首尔江南区逸院路81，是大学医院级综合医院，设有三星癌症医院、心脏脑血管医院、质子治疗中心和健康医学中心。自1995年起运营的国际诊疗中心(IHC)已接诊来自120多个国家的患者，提供外国人专属门诊、1:1协调、翻译、视频咨询及专科中心转诊。"
+      "kr": "데이원의원은 서울 서초구 강남대로 437 대원빌딩 5층에 위치한 리프팅·피부 중심 의원입니다. 써마지·울쎄라·실리프팅 등 탄력·윤곽 치료와 필러·보톡스·스킨부스터·줄기세포 피부관리를 환자 상태에 맞춰 설계합니다. 보건복지부·한국보건산업진흥원 외국인환자 유치의료기관 평가인증(KAHF)을 취득했으며, 한/영/중/일 통역을 지원합니다.",
+      "en": "DAYONE Clinic, on the 5th floor of Daewon Building at 437 Gangnam-daero, Seocho-gu, Seoul, focuses on lifting and skin care. It tailors firming and contouring treatments such as Thermage, Ulthera and thread lifting, together with fillers, botox, skin boosters and stem-cell skincare, to each patient. The clinic holds Korea’s KAHF accreditation for international patient care and offers Korean, English, Chinese and Japanese interpretation.",
+      "zh": "DAYONE医院位于首尔瑞草区江南大路437大元大厦5层，以提升与皮肤管理为中心。根据每位患者的状态，规划热玛吉、超声刀、埋线提升等紧致轮廓治疗，以及玻尿酸、肉毒、水光和干细胞皮肤管理。医院取得韩国保健福祉部·韩国保健产业振兴院外国人患者接待医疗机构评估认证(KAHF)，提供韩/英/中/日翻译。"
     },
     "doctors": [],
-    "thumb": "hthumb/smc.jpg"
-  },
-  {
-    "name": {
-      "kr": "멜론성형외과",
-      "en": "MELON Plastic Surgery",
-      "zh": "MELON整形外科"
-    },
-    "dept": {
-      "kr": "성형외과/가슴성형 전문",
-      "en": "Plastic Surgery / Breast Specialist",
-      "zh": "整形外科/胸部整形专科"
-    },
-    "cat": "피부·성형",
-    "badge": "NEW",
-    "treats": {
-      "kr": ["가슴성형(모티바·멘토)", "가슴교정", "가슴 재수술", "유두교정", "여유증", "부유방", "유방재건"],
-      "en": ["Breast Augmentation (Motiva·Mentor)", "Breast Correction", "Revision Surgery", "Nipple Correction", "Gynecomastia", "Accessory Breast", "Breast Reconstruction"],
-      "zh": ["假体隆胸(魔滴·曼托)", "胸部矫正", "胸部修复手术", "乳头矫正", "男性乳房发育", "副乳", "乳房再造"]
-    },
-    "hours": "Mon-Thu 09:30-18:30 / Fri 09:30-20:00 / Sat 09:30-16:00 / Sun·Holiday Closed",
-    "loc": {
-      "ko": "서울 강남구 강남역(테헤란로)",
-      "zh": "首尔江南区·江南站(德黑兰路)",
-      "en": "Gangnam Stn., Seoul"
-    },
-    "overview": {
-      "kr": "멜론성형외과는 강남역 인근 서림빌딩 6층의 가슴성형 전문 의원입니다. 김주원 대표원장이 직접 진료하며 모티바·멘토 보형물 가슴성형과 처진가슴 교정·축소·재수술·유두교정·여유증·유방재건까지, 주치의의 1:1 세심한 상담으로 최적의 모양을 설계합니다.",
-      "en": "MELON Plastic Surgery, near Gangnam Station, is a breast surgery specialist clinic led by Dr. Kim Ju-won — covering Motiva and Mentor implant augmentation, ptosis correction, reduction, revision surgery, nipple correction, gynecomastia and breast reconstruction with meticulous one-on-one consultation.",
-      "zh": "MELON整形外科是位于江南站商圈的胸部整形专科医院，由金周源代表院长亲自主诊。专注于魔滴(Motiva)·曼托(Mentor)假体隆胸与下垂矫正·缩胸·修复手术·乳头矫正·男性乳房发育·乳房再造，以主治医生一对一细致面诊著称。"
-    },
-    "doctors": [
-      {
-        "name": "김주원",
-        "title": "대표원장",
-        "spec": ["가슴성형·가슴교정", "가슴 재수술", "유방재건"]
-      }
-    ],
-    "thumb": "hthumb/melon.jpg"
+    "thumb": "hthumb/dayone.jpg"
   },
   {
     "name": {
@@ -121,9 +83,36 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "cat": "피부·성형",
     "badge": "NEW",
     "treats": {
-      "kr": ["울쎄라", "써마지", "온다", "실리프팅", "수광·리쥬란", "필러", "보톡스", "줄기세포"],
-      "en": ["Ultherapy", "Thermage", "ONDA", "Thread Lifting", "Skin Booster", "Filler", "Botox", "Stem Cell"],
-      "zh": ["超声刀", "热玛吉", "ONDA", "线雕提升", "水光·丽珠兰", "玻尿酸", "肉毒", "干细胞"]
+      "kr": [
+        "울쎄라",
+        "써마지",
+        "온다",
+        "실리프팅",
+        "수광·리쥬란",
+        "필러",
+        "보톡스",
+        "줄기세포"
+      ],
+      "en": [
+        "Ultherapy",
+        "Thermage",
+        "ONDA",
+        "Thread Lifting",
+        "Skin Booster",
+        "Filler",
+        "Botox",
+        "Stem Cell"
+      ],
+      "zh": [
+        "超声刀",
+        "热玛吉",
+        "ONDA",
+        "线雕提升",
+        "水光·丽珠兰",
+        "玻尿酸",
+        "肉毒",
+        "干细胞"
+      ]
     },
     "hours": "By appointment / 예약제 (Tel 02-2039-2822)",
     "loc": {
@@ -140,81 +129,23 @@ export const HOSPITAL_DATA: HospDetail[] = [
       {
         "name": "류윤곤",
         "title": "대표원장",
-        "spec": ["대한미용성형레이저학회 정회원", "리프팅·레이저", "쁘띠·주사시술"]
+        "spec": [
+          "대한미용성형레이저학회 정회원",
+          "리프팅·레이저",
+          "쁘띠·주사시술"
+        ]
       },
       {
         "name": "오예진",
         "title": "부원장",
-        "spec": ["대한미용학회 정회원", "피부·수광", "스킨부스터"]
-      }
-    ],
-    "thumb": "hthumb/reberry.jpg"
-  },
-  {
-    "name": {
-      "kr": "더이다의원",
-      "en": "The ida Clinic",
-      "zh": "ida医疗美容诊所"
-    },
-    "dept": {
-      "kr": "피부/미용성형 (눈·코·귀·어깨·힙)",
-      "en": "Skin / Aesthetic (Eye·Nose·Ear·Shoulder·Hip)",
-      "zh": "皮肤/医美 (眼·鼻·耳·肩·臀)"
-    },
-    "cat": "피부·성형",
-    "treats": {
-      "kr": [
-        "눈",
-        "코",
-        "귀필러",
-        "어깨필러",
-        "힙·골반",
-        "리프팅",
-        "스킨부스터"
-      ],
-      "en": [
-        "Eye",
-        "Nose",
-        "Ear Filler",
-        "Shoulder Filler",
-        "Hip/Pelvis",
-        "Lifting",
-        "Skin Booster"
-      ],
-      "zh": [
-        "眼部",
-        "鼻部",
-        "耳部填充",
-        "肩部填充",
-        "臀部·骨盆",
-        "提升",
-        "皮肤管理"
-      ]
-    },
-    "hours": "Mon/Tue 10:00-20:00 / Wed 10:00-18:00 / Fri 10:00-19:00 / Sat 10:00-15:30",
-    "loc": {
-      "ko": "서울 중구 약수",
-      "zh": "首尔中区·药水",
-      "en": "Yaksu, Seoul"
-    },
-    "overview": {
-      "kr": "더이다의원(ESTD 2010)은 눈·코·귀·어깨·힙 전문 의원입니다. 허선녕 대표원장(가슴성형 2,000례+, 가슴 필러 1,000례+, 필러·리프팅 6,000례+)이 직접 진료하며, 6호선 버티고개역 도보 3분·건물 내 무료주차가 가능합니다.",
-      "en": "The ida Clinic (ESTD 2010) specializes in eye, nose, ear, shoulder and hip aesthetics with the head director performing all procedures. Located in Jung-gu, Seoul — 3 min walk from Beotigogae Stn. with free in-building parking.",
-      "zh": "ida医疗美容诊所（ESTD 2010）专注于眼、鼻、耳、肩、臀部的精细化医美项目，由代表院长亲自主诊。位于首尔中区，地铁6号线药水站附近步行3分钟，楼内免费停车，环境安静私密。"
-    },
-    "doctors": [
-      {
-        "name": "허선녕",
-        "title": "대표원장",
         "spec": [
-          "경희대학교 의과대학",
-          "눈·코·귀 성형",
-          "가슴·바디 필러",
-          "리프팅"
+          "대한미용학회 정회원",
+          "피부·수광",
+          "스킨부스터"
         ]
       }
     ],
-    "thumb": "hthumb/ida.jpg"
+    "thumb": "hthumb/reberry.jpg"
   },
   {
     "name": {
@@ -993,945 +924,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
   },
   {
     "name": {
-      "kr": "셀리닉의원",
-      "en": "Cellinique Clinic",
-      "zh": "Cellinique医院"
-    },
-    "dept": {
-      "kr": "줄기세포/리프팅",
-      "en": "Stem Cell / Lifting",
-      "zh": "干细胞/提升"
-    },
-    "cat": "줄기세포",
-    "badge": "줄기세포",
-    "treats": {
-      "kr": [
-        "줄기세포",
-        "리프팅",
-        "레이저"
-      ],
-      "en": [
-        "Stem Cell",
-        "Lifting",
-        "Laser"
-      ],
-      "zh": [
-        "干细胞",
-        "提升",
-        "激光"
-      ]
-    },
-    "hours": "Mon-Fri 10:00-19:00",
-    "loc": {
-      "ko": "서울 강남",
-      "zh": "首尔江南",
-      "en": "Gangnam, Seoul"
-    },
-    "overview": {
-      "kr": "셀리닉의원은 줄기세포 치료와 리프팅에 특화된 프리미엄 의원입니다.",
-      "en": "Cellinique specializes in premium stem cell therapy and lifting treatments.",
-      "zh": "Cellinique是专注于干细胞疗法和提升项目的高端医院，提供个性化抗衰老解决方案。"
-    },
-    "doctors": [
-      {
-        "name": "김건우",
-        "title": "대표원장",
-        "spec": [
-          "진단검사의학과 전문의",
-          "재생의학",
-          "리프팅"
-        ]
-      }
-    ],
-    "thumb": "hthumb/cellinique.jpg"
-  },
-  {
-    "name": {
-      "kr": "차움",
-      "en": "CHAUM Anti-aging Center",
-      "zh": "CHAUM抗衰老中心"
-    },
-    "dept": {
-      "kr": "종합검진/항노화/줄기세포/피부",
-      "en": "Health Checkup / Anti-aging / Stem Cell / Skin",
-      "zh": "综合体检/抗衰老/干细胞/皮肤"
-    },
-    "cat": "검진/항노화/줄기세포",
-    "badge": "프리미엄",
-    "treats": {
-      "kr": [
-        "VIP 종합검진",
-        "정밀 암검진",
-        "전신 MRI 검진",
-        "항노화·면역 검사",
-        "줄기세포 재생",
-        "리프팅·스킨부스터"
-      ],
-      "en": [
-        "VIP Comprehensive Checkup",
-        "Advanced Cancer Screening",
-        "Whole-body MRI",
-        "Anti-aging & Immunity Test",
-        "Stem Cell Regeneration",
-        "Lifting & Skin Booster"
-      ],
-      "zh": [
-        "VIP综合体检",
-        "精密癌症筛查",
-        "全身MRI体检",
-        "抗衰老·免疫检查",
-        "干细胞再生",
-        "提升·水光针"
-      ]
-    },
-    "hours": "Mon-Fri 08:30-17:30",
-    "loc": {
-      "ko": "서울 강남",
-      "zh": "首尔江南",
-      "en": "Gangnam, Seoul"
-    },
-    "overview": {
-      "kr": "차움은 개인 HIVE룸에서 진행하는 VIP 종합검진 센터입니다. 검진 전 담당의 1:1 상담으로 프로그램을 맞추고, 전담 간호사와 중국어·영어 통역이 전 과정을 동행하며 당일 결과 상담까지 제공합니다. 기본검진·정밀암검진·전신검진(MRI)·Noble VIP 4종에 소화기·심장·뇌·면역·항노화 추가검진을 선택할 수 있고, 줄기세포 재생과 리프팅·스킨부스터 등 피부 프로그램도 함께 운영합니다.",
-      "en": "CHAUM offers VIP checkups in private HIVE rooms with a 1:1 pre-consultation, a dedicated nurse and English/Chinese interpreter throughout, and same-day result consultation. Four main programs (Basic, Intensive Cancer, Whole Body, Noble) can be combined with digestive, heart, brain, immunity and anti-aging add-ons, alongside stem cell regeneration and skin programs.",
-      "zh": "CHAUM抗衰老中心提供VIP专属体检（个人HIVE诊室、专属护士与中文翻译全程陪同、当日结果面诊），设有综合体检、精密癌症筛查、全身MRI、抗衰老与免疫检查，并提供干细胞再生、提升及皮肤管理项目。"
-    },
-    "doctors": [
-      {
-        "name": "강문선",
-        "title": "교수",
-        "spec": [
-          "산부인과"
-        ]
-      },
-      {
-        "name": "구슬아",
-        "title": "교수",
-        "spec": [
-          "영상의학과"
-        ]
-      },
-      {
-        "name": "김가희",
-        "title": "교수",
-        "spec": [
-          "소화기내과"
-        ]
-      },
-      {
-        "name": "김동현",
-        "title": "교수",
-        "spec": [
-          "재활의학과"
-        ]
-      },
-      {
-        "name": "김영탁",
-        "title": "교수",
-        "spec": [
-          "면역증강클리닉"
-        ]
-      },
-      {
-        "name": "김인화",
-        "title": "교수",
-        "spec": [
-          "영상의학과"
-        ]
-      },
-      {
-        "name": "김종석",
-        "title": "교수",
-        "spec": [
-          "가정의학과"
-        ]
-      },
-      {
-        "name": "김종진",
-        "title": "교수",
-        "spec": [
-          "심장내과"
-        ]
-      },
-      {
-        "name": "김진우",
-        "title": "교수",
-        "spec": [
-          "내분비내과"
-        ]
-      },
-      {
-        "name": "김효주",
-        "title": "교수",
-        "spec": [
-          "영상의학과"
-        ]
-      },
-      {
-        "name": "박단비",
-        "title": "교수",
-        "spec": [
-          "가정의학과"
-        ]
-      },
-      {
-        "name": "박미영",
-        "title": "교수",
-        "spec": [
-          "심장내과"
-        ]
-      },
-      {
-        "name": "박원근",
-        "title": "교수",
-        "spec": [
-          "내분비내과"
-        ]
-      },
-      {
-        "name": "백승준",
-        "title": "교수",
-        "spec": [
-          "피부성형클리닉"
-        ]
-      },
-      {
-        "name": "서신영",
-        "title": "교수",
-        "spec": [
-          "정신건강의학과"
-        ]
-      },
-      {
-        "name": "서은경",
-        "title": "교수",
-        "spec": [
-          "가정의학과"
-        ]
-      },
-      {
-        "name": "양지헌",
-        "title": "교수",
-        "spec": [
-          "가정의학과"
-        ]
-      },
-      {
-        "name": "오수연",
-        "title": "교수",
-        "spec": [
-          "면역증강클리닉"
-        ]
-      },
-      {
-        "name": "오하영",
-        "title": "교수",
-        "spec": [
-          "소화기내과"
-        ]
-      },
-      {
-        "name": "오효주",
-        "title": "교수",
-        "spec": [
-          "가정의학과"
-        ]
-      },
-      {
-        "name": "윤수미",
-        "title": "교수",
-        "spec": [
-          "가정의학과"
-        ]
-      },
-      {
-        "name": "이경미",
-        "title": "교수",
-        "spec": [
-          "가정의학과"
-        ]
-      },
-      {
-        "name": "이상인",
-        "title": "교수",
-        "spec": [
-          "소화기내과"
-        ]
-      },
-      {
-        "name": "이상형",
-        "title": "교수",
-        "spec": [
-          "면역증강클리닉"
-        ]
-      },
-      {
-        "name": "이영수",
-        "title": "교수",
-        "spec": [
-          "노년내과"
-        ]
-      },
-      {
-        "name": "이윤경",
-        "title": "교수",
-        "spec": [
-          "가정의학과"
-        ]
-      },
-      {
-        "name": "임지현",
-        "title": "교수",
-        "spec": [
-          "영상의학과"
-        ]
-      },
-      {
-        "name": "장소용",
-        "title": "교수",
-        "spec": [
-          "영상의학과"
-        ]
-      },
-      {
-        "name": "진석인",
-        "title": "교수",
-        "spec": [
-          "피부과"
-        ]
-      },
-      {
-        "name": "차충근",
-        "title": "교수",
-        "spec": [
-          "소화기내과"
-        ]
-      },
-      {
-        "name": "최중언",
-        "title": "교수",
-        "spec": [
-          "신경외과"
-        ]
-      },
-      {
-        "name": "한광협",
-        "title": "교수",
-        "spec": [
-          "소화기내과"
-        ]
-      },
-      {
-        "name": "황세나",
-        "title": "교수",
-        "spec": [
-          "내분비내과"
-        ]
-      }
-    ],
-    "thumb": "hthumb/chaum.jpg"
-  },
-  {
-    "name": {
-      "kr": "원셀의원",
-      "en": "One Cell Clinic",
-      "zh": "One Cell医院"
-    },
-    "dept": {
-      "kr": "줄기세포/피부/성형",
-      "en": "Stem Cell / Skin / Plastic",
-      "zh": "干细胞/皮肤/整形"
-    },
-    "cat": "줄기세포",
-    "badge": "줄기세포",
-    "treats": {
-      "kr": [
-        "줄기세포",
-        "피부",
-        "성형",
-        "통증"
-      ],
-      "en": [
-        "Stem Cell",
-        "Skin",
-        "Plastic",
-        "Pain"
-      ],
-      "zh": [
-        "干细胞",
-        "皮肤",
-        "整形",
-        "疼痛"
-      ]
-    },
-    "hours": "Mon/Fri 10:00-20:00 / Tue-Thu 10:00-19:00 / Sat 10:00-16:00",
-    "loc": {
-      "ko": "서울 강남",
-      "zh": "首尔江南",
-      "en": "Gangnam, Seoul"
-    },
-    "overview": {
-      "kr": "원셀의원은 줄기세포 치료, 피부관리, 성형 수술을 종합 제공합니다.",
-      "en": "One Cell Clinic offers comprehensive stem cell therapy, skin care, and plastic surgery.",
-      "zh": "One Cell医院综合提供干细胞疗法、皮肤管理及整形手术，采用最新细胞再生技术。"
-    },
-    "doctors": [
-      {
-        "name": "서명원",
-        "title": "대표원장",
-        "spec": [
-          "가정의학과"
-        ]
-      },
-      {
-        "name": "이찬양",
-        "title": "대표원장",
-        "spec": [
-          "피부과"
-        ]
-      },
-      {
-        "name": "최재현",
-        "title": "원장",
-        "spec": [
-          "피부과"
-        ]
-      },
-      {
-        "name": "장재훈",
-        "title": "원장",
-        "spec": [
-          "피부과"
-        ]
-      },
-      {
-        "name": "이호준",
-        "title": "원장",
-        "spec": [
-          "피부과"
-        ]
-      },
-      {
-        "name": "김진영",
-        "title": "원장",
-        "spec": [
-          "성형외과"
-        ]
-      },
-      {
-        "name": "손은택",
-        "title": "원장",
-        "spec": [
-          "성형외과"
-        ]
-      },
-      {
-        "name": "양동준",
-        "title": "대표원장",
-        "spec": [
-          "성형외과"
-        ]
-      },
-      {
-        "name": "신요섭",
-        "title": "대표원장",
-        "spec": [
-          "신경외과"
-        ]
-      },
-      {
-        "name": "박소영",
-        "title": "원장",
-        "spec": [
-          "마취통증의학과"
-        ]
-      }
-    ],
-    "thumb": "hthumb/onecell.jpg"
-  },
-  {
-    "name": {
-      "kr": "글로비성형외과",
-      "en": "Glovi Plastic Surgery",
-      "zh": "Glovi整形外科"
-    },
-    "dept": {
-      "kr": "성형외과/줄기세포",
-      "en": "Plastic Surgery / Stem Cell",
-      "zh": "整形外科/干细胞"
-    },
-    "cat": "피부·성형",
-    "badge": "추천",
-    "treats": {
-      "kr": [
-        "줄기세포",
-        "눈",
-        "코",
-        "가슴"
-      ],
-      "en": [
-        "Stem Cell",
-        "Eye",
-        "Nose",
-        "Breast"
-      ],
-      "zh": [
-        "干细胞",
-        "眼部",
-        "鼻部",
-        "胸部"
-      ]
-    },
-    "hours": "Mon-Fri 10:00-19:00 / Fri 10:00-20:00 / Sat 10:00-17:00",
-    "loc": {
-      "ko": "서울 압구정",
-      "zh": "首尔狎鸥亭",
-      "en": "Apgujeong, Seoul"
-    },
-    "overview": {
-      "kr": "글로비성형외과는 압구정에 위치한 종합 성형외과로 줄기세포, 눈·코 수술, 가슴성형을 제공합니다.",
-      "en": "Glovi Plastic Surgery in Apgujeong offers stem cell therapy, eye/nose surgery, and breast augmentation.",
-      "zh": "Glovi整形外科位于狎鸥亭，提供干细胞疗法、眼鼻手术及隆胸手术，以精密内视镜技术著称。"
-    },
-    "doctors": [
-      {
-        "name": "노봉일",
-        "title": "원장",
-        "spec": [
-          "최소침습성형",
-          "코성형",
-          "항노화성형"
-        ]
-      },
-      {
-        "name": "박종철",
-        "title": "원장",
-        "spec": [
-          "눈성형",
-          "코성형",
-          "안면윤곽",
-          "지방성형"
-        ]
-      },
-      {
-        "name": "김재인",
-        "title": "원장",
-        "spec": [
-          "국제 미용성형"
-        ]
-      },
-      {
-        "name": "남상재",
-        "title": "협진원장",
-        "spec": [
-          "지방성형",
-          "유방성형"
-        ]
-      },
-      {
-        "name": "신미영",
-        "title": "원장",
-        "spec": [
-          "여성회음성형",
-          "미용레이저"
-        ]
-      },
-      {
-        "name": "오택훈",
-        "title": "원장",
-        "spec": [
-          "악안면 무통마취"
-        ]
-      }
-    ],
-    "thumb": "hthumb/glovi.jpg"
-  },
-  {
-    "name": {
-      "kr": "라미체의원",
-      "en": "Lamiche Clinic",
-      "zh": "Lamiche医院"
-    },
-    "dept": {
-      "kr": "다이어트/리프팅/피부",
-      "en": "Diet / Lifting / Skin",
-      "zh": "减肥/提升/皮肤"
-    },
-    "cat": "체형",
-    "badge": "인기",
-    "treats": {
-      "kr": [
-        "다이어트",
-        "리프팅",
-        "피부"
-      ],
-      "en": [
-        "Diet",
-        "Lifting",
-        "Skin"
-      ],
-      "zh": [
-        "减肥",
-        "提升",
-        "皮肤"
-      ]
-    },
-    "hours": "Mon 11:00-20:00 / Tue-Thu 10:00-19:00 / Fri 11:30-20:30 / Sat 09:00-18:00",
-    "loc": {
-      "ko": "서울 강남",
-      "zh": "首尔江南",
-      "en": "Gangnam, Seoul"
-    },
-    "overview": {
-      "kr": "라미체의원은 다이어트, 리프팅, 피부관리에 특화된 의원입니다.",
-      "en": "Lamiche Clinic specializes in body management, lifting, and skin care.",
-      "zh": "Lamiche医院专注于体型管理、提升及皮肤护理，提供全面的减肥和美容项目。"
-    },
-    "doctors": [
-      {
-        "name": "주종호",
-        "title": "대표원장",
-        "spec": [
-          "미용성형레이저",
-          "항노화",
-          "비만체형"
-        ]
-      },
-      {
-        "name": "이상영",
-        "title": "대표원장",
-        "spec": [
-          "미용성형레이저",
-          "비만건강"
-        ]
-      },
-      {
-        "name": "정다혜",
-        "title": "원장",
-        "spec": [
-          "가정의학",
-          "미용레이저"
-        ]
-      },
-      {
-        "name": "신현희",
-        "title": "원장",
-        "spec": [
-          "가정의학"
-        ]
-      },
-      {
-        "name": "한재현",
-        "title": "원장",
-        "spec": [
-          "피부과",
-          "레이저피부모발"
-        ]
-      },
-      {
-        "name": "지명은",
-        "title": "원장",
-        "spec": [
-          "피부과"
-        ]
-      },
-      {
-        "name": "이진현",
-        "title": "원장",
-        "spec": [
-          "일반의"
-        ]
-      },
-      {
-        "name": "김나영",
-        "title": "원장",
-        "spec": [
-          "일반의"
-        ]
-      },
-      {
-        "name": "박성준",
-        "title": "원장",
-        "spec": [
-          "일반의"
-        ]
-      },
-      {
-        "name": "오승호",
-        "title": "원장",
-        "spec": [
-          "일반의"
-        ]
-      },
-      {
-        "name": "서화니",
-        "title": "원장",
-        "spec": [
-          "가정의학"
-        ]
-      },
-      {
-        "name": "송하정",
-        "title": "원장",
-        "spec": [
-          "비뇨기과"
-        ]
-      },
-      {
-        "name": "한상택",
-        "title": "원장",
-        "spec": [
-          "미용성형레이저의학"
-        ]
-      },
-      {
-        "name": "박소현",
-        "title": "원장",
-        "spec": [
-          "일반의"
-        ]
-      }
-    ],
-    "thumb": "hthumb/lamiche.jpg"
-  },
-  {
-    "name": {
-      "kr": "뷰성형외과",
-      "en": "View Plastic Surgery",
-      "zh": "VIEW整形外科"
-    },
-    "dept": {
-      "kr": "성형외과",
-      "en": "Plastic Surgery",
-      "zh": "整形外科"
-    },
-    "cat": "피부·성형",
-    "badge": "VIP",
-    "treats": {
-      "kr": [
-        "눈",
-        "코",
-        "가슴",
-        "안면윤곽"
-      ],
-      "en": [
-        "Eye",
-        "Nose",
-        "Breast",
-        "Facial Contouring"
-      ],
-      "zh": [
-        "眼部",
-        "鼻部",
-        "胸部",
-        "面部轮廓"
-      ]
-    },
-    "hours": "Mon-Thu 10:00-19:00 / Fri 10:00-21:00 / Sat 10:00-17:00",
-    "loc": {
-      "ko": "서울 강남",
-      "zh": "首尔江南",
-      "en": "Gangnam, Seoul"
-    },
-    "overview": {
-      "kr": "뷰성형외과는 눈·코 수술, 가슴성형, 안면윤곽에 특화된 강남 유명 성형병원입니다.",
-      "en": "View Plastic Surgery is a renowned clinic in Gangnam specializing in eye/nose surgery, breast augmentation, and facial contouring.",
-      "zh": "VIEW整形外科是江南知名的综合整形医院，专长于眼鼻手术、隆胸及面部轮廓整形，提供中文翻译服务。"
-    },
-    "doctors": [
-      {
-        "name": "최순우",
-        "title": "원장",
-        "spec": [
-          "성형외과"
-        ]
-      },
-      {
-        "name": "윤창운",
-        "title": "원장",
-        "spec": [
-          "성형외과"
-        ]
-      },
-      {
-        "name": "김정민",
-        "title": "원장",
-        "spec": [
-          "성형외과"
-        ]
-      },
-      {
-        "name": "김도형",
-        "title": "원장",
-        "spec": [
-          "성형외과"
-        ]
-      },
-      {
-        "name": "정재현",
-        "title": "원장",
-        "spec": [
-          "성형외과"
-        ]
-      },
-      {
-        "name": "조진우",
-        "title": "원장",
-        "spec": [
-          "성형외과"
-        ]
-      },
-      {
-        "name": "손유성",
-        "title": "원장",
-        "spec": [
-          "성형외과"
-        ]
-      },
-      {
-        "name": "이동규",
-        "title": "원장",
-        "spec": [
-          "성형외과"
-        ]
-      },
-      {
-        "name": "김소영",
-        "title": "원장",
-        "spec": [
-          "성형외과"
-        ]
-      },
-      {
-        "name": "도수빈",
-        "title": "원장",
-        "spec": [
-          "성형외과"
-        ]
-      },
-      {
-        "name": "오원석",
-        "title": "원장",
-        "spec": [
-          "성형외과"
-        ]
-      },
-      {
-        "name": "박건욱",
-        "title": "원장",
-        "spec": [
-          "성형외과"
-        ]
-      },
-      {
-        "name": "박진우",
-        "title": "원장",
-        "spec": [
-          "성형외과"
-        ]
-      },
-      {
-        "name": "오정석",
-        "title": "원장",
-        "spec": [
-          "성형외과"
-        ]
-      },
-      {
-        "name": "오준석",
-        "title": "원장",
-        "spec": [
-          "성형외과"
-        ]
-      },
-      {
-        "name": "고은석",
-        "title": "원장",
-        "spec": [
-          "이비인후과"
-        ]
-      },
-      {
-        "name": "김민수",
-        "title": "원장",
-        "spec": [
-          "외과 (유방검진)"
-        ]
-      },
-      {
-        "name": "김영민",
-        "title": "원장",
-        "spec": [
-          "영상의학과"
-        ]
-      },
-      {
-        "name": "이승현",
-        "title": "원장",
-        "spec": [
-          "마취통증의학과"
-        ]
-      },
-      {
-        "name": "이지현",
-        "title": "원장",
-        "spec": [
-          "마취통증의학과"
-        ]
-      },
-      {
-        "name": "오혜미",
-        "title": "원장",
-        "spec": [
-          "마취통증의학과"
-        ]
-      },
-      {
-        "name": "성보현",
-        "title": "원장",
-        "spec": [
-          "마취통증의학과"
-        ]
-      },
-      {
-        "name": "최진화",
-        "title": "원장",
-        "spec": [
-          "마취통증의학과"
-        ]
-      },
-      {
-        "name": "송규영",
-        "title": "원장",
-        "spec": [
-          "마취통증의학과"
-        ]
-      },
-      {
-        "name": "김유나",
-        "title": "원장",
-        "spec": [
-          "마취통증의학과"
-        ]
-      },
-      {
-        "name": "안예나",
-        "title": "원장",
-        "spec": [
-          "마취통증의학과"
-        ]
-      },
-      {
-        "name": "김경림",
-        "title": "원장",
-        "spec": [
-          "마취통증의학과"
-        ]
-      }
-    ],
-    "thumb": "hthumb/view.jpg"
-  },
-  {
-    "name": {
       "kr": "바른길산부인과",
       "en": "Barunhifu Women's Clinic",
       "zh": "正路妇科医院"
@@ -1987,218 +979,70 @@ export const HOSPITAL_DATA: HospDetail[] = [
   },
   {
     "name": {
-      "kr": "강남다움의원",
-      "en": "Gangnam Daum Clinic",
-      "zh": "江南多样医院"
+      "kr": "닥터스피부과의원 신사본점",
+      "en": "Doctors Dermatology (Sinsa)",
+      "zh": "Doctors皮肤科 (新沙本店)"
     },
     "dept": {
-      "kr": "리프팅/다이어트",
-      "en": "Lifting / Diet",
-      "zh": "提升/减肥"
+      "kr": "피부과(리프팅)",
+      "en": "Dermatology (Lifting)",
+      "zh": "皮肤科(提升)"
     },
     "cat": "피부·성형",
-    "badge": "추천",
+    "badge": "NEW",
     "treats": {
       "kr": [
-        "리프팅",
-        "다이어트",
+        "울쎄라·써마지",
+        "소프웨이브·XERF",
         "스킨부스터",
-        "실리프팅"
+        "보톡스·필러",
+        "줄기세포"
       ],
       "en": [
-        "Lifting",
-        "Diet",
+        "Ulthera·Thermage",
+        "Sofwave·XERF",
         "Skin Booster",
-        "Thread Lifting"
+        "Botox·Filler",
+        "Stem Cell"
       ],
       "zh": [
-        "提升",
-        "减肥",
-        "皮肤补水",
-        "线雕提升"
+        "超声刀·热玛吉",
+        "索夫波·XERF",
+        "水光针",
+        "肉毒·玻尿酸",
+        "干细胞"
       ]
-    },
-    "hours": "Mon-Fri 10:00-20:00 / Sat 10:00-18:00",
-    "loc": {
-      "ko": "서울 강남",
-      "zh": "首尔江南",
-      "en": "Gangnam, Seoul"
-    },
-    "overview": {
-      "kr": "강남다움의원은 리프팅, 다이어트, 피부관리를 합리적인 가격으로 제공합니다.",
-      "en": "Gangnam Daum Clinic provides lifting, diet, and skin care services.",
-      "zh": "江南多样医院提供提升、减肥及皮肤护理等综合服务。"
-    },
-    "doctors": [
-      {
-        "name": "김석준",
-        "title": "대표원장",
-        "spec": [
-          "피부시술",
-          "레이저",
-          "리프팅",
-          "필러",
-          "체중관리"
-        ]
-      },
-      {
-        "name": "이재영",
-        "title": "원장",
-        "spec": [
-          "피부시술",
-          "레이저",
-          "리프팅",
-          "필러"
-        ]
-      }
-    ],
-    "thumb": "hthumb/gangnamdaum.jpg"
-  },
-  {
-    "name": {
-      "kr": "신소애여성의원",
-      "en": "Sinsoe Women's Clinic",
-      "zh": "新素爱女性医院"
-    },
-    "dept": {
-      "kr": "여성의학",
-      "en": "Women's Health",
-      "zh": "女性医学"
-    },
-    "cat": "여성의학",
-    "badge": "여성의학",
-    "treats": {
-      "kr": [
-        "소음순",
-        "난소줄기세포",
-        "자궁근종"
-      ],
-      "en": [
-        "Labiaplasty",
-        "Ovarian Stem Cell",
-        "Uterine Fibroid"
-      ],
-      "zh": [
-        "阴唇整形",
-        "卵巢干细胞",
-        "子宫肌瘤"
-      ]
-    },
-    "hours": "Mon/Fri 10:00-20:00 / Tue-Thu 10:00-19:00 / Sat 10:00-16:00",
-    "loc": {
-      "ko": "서울 강남",
-      "zh": "首尔江南",
-      "en": "Gangnam, Seoul"
-    },
-    "overview": {
-      "kr": "신소애여성의원은 소음순 교정, 난소 줄기세포, 자궁근종 치료 전문 병원입니다.",
-      "en": "Sinsoe Women's Clinic specializes in female aesthetic procedures and stem cell treatments.",
-      "zh": "新素爱女性医院专注于女性妇科整形和干细胞治疗。"
-    },
-    "doctors": [
-      { "name": "박정원", "title": "대표원장", "spec": ["산부인과 전문의", "국제미용성형외과(ICCS)", "줄기세포·항노화"] },
-      { "name": "홍혜리", "title": "원장", "spec": ["산부인과 전문의", "여성건강/성의학"] },
-      { "name": "김정민", "title": "원장", "spec": ["산부인과 전문의"] },
-      { "name": "임이랑", "title": "원장", "spec": ["산부인과 전문의"] },
-      { "name": "김수경", "title": "원장", "spec": ["피부과"] }
-    ],
-    "thumb": "hthumb/sinsoa.jpg"
-  },
-  {
-    "name": {
-      "kr": "강남K뷰티성형외과의원",
-      "en": "Gangnam K-Beauty Plastic Surgery",
-      "zh": "江南K-Beauty整形外科"
-    },
-    "dept": {
-      "kr": "성형외과/피부과",
-      "en": "Plastic Surgery / Dermatology",
-      "zh": "整形外科/皮肤科"
-    },
-    "cat": "피부·성형",
-    "badge": "제주",
-    "treats": {
-      "kr": ["가슴성형", "눈성형", "코성형", "윤곽성형", "안티에이징", "쁘띠"],
-      "en": ["Breast", "Eye", "Nose", "Facial Contouring", "Anti-aging", "Petit"],
-      "zh": ["胸部整形", "眼部整形", "鼻部整形", "轮廓整形", "抗衰老", "微整形"]
-    },
-    "hours": "Mon-Fri 10:00-19:00 / Sat 10:00-17:00",
-    "loc": {
-      "ko": "제주 제주시 (노형동)",
-      "zh": "济州市",
-      "en": "Jeju-si, Jeju"
-    },
-    "overview": {
-      "kr": "강남K뷰티성형외과의원은 제주 소재 성형외과 전문의 병원으로 가슴·눈·코·윤곽성형과 안티에이징 리프팅·피부 시술을 하며, Dr.Yoo Cog 눈밑지방재배치 등 독자 특허기술을 보유하고 있습니다.",
-      "en": "Gangnam K-Beauty Plastic Surgery in Jeju offers breast, eye, nose and facial contouring surgery plus anti-aging lifting and skin care, with proprietary patented techniques.",
-      "zh": "江南K-Beauty整形外科(济州)由整形外科专科医生主诊，专注于胸部·眼部·鼻部·轮廓整形与抗衰提升、皮肤管理，提供中文服务。"
-    },
-    "doctors": [
-      { "name": "유중석", "title": "대표원장", "spec": ["성형외과 전문의", "가슴·눈·코·윤곽성형"] },
-      { "name": "심호섭", "title": "대표원장", "spec": ["성형외과"] },
-      { "name": "탁병모", "title": "원장", "spec": ["성형외과·피부"] },
-      { "name": "권성주", "title": "원장", "spec": ["성형외과·피부"] }
-    ],
-    "thumb": "hthumb/gkbeauty.jpg"
-  },
-  {
-    "name": { "kr": "연세아이미스템의원", "en": "Yonsei IMIStem Clinic", "zh": "延世IMISTEM干细胞诊所" },
-    "dept": { "kr": "줄기세포/재생의학", "en": "Stem Cell / Regenerative Medicine", "zh": "干细胞/再生医学" },
-    "cat": "줄기세포",
-    "badge": "NEW",
-    "treats": {
-      "kr": ["IMI 3종 복합주사", "줄기세포 항노화", "NK세포 면역", "혈장교환술", "발기부전"],
-      "en": ["IMI Triple Injection", "Stem Cell Anti-aging", "NK Cell Immune", "Plasma Exchange", "ED"],
-      "zh": ["IMI三合一复合注射", "干细胞抗衰", "NK细胞免疫", "血浆置换", "勃起功能障碍"]
-    },
-    "hours": "Mon-Fri 09:30-18:30 / Sat 예약제",
-    "loc": { "ko": "서울 강남 (강남역)", "zh": "首尔江南(江南站)", "en": "Gangnam Station, Seoul" },
-    "overview": {
-      "kr": "연세아이미스템의원은 보건복지부 지정 첨단재생의료 실시기관으로, 강남역에 위치해 줄기세포(IMI 3종 복합주사·항노화·얼굴·탈모)·면역세포(NK/PRF/SPM)·혈장교환술·발기부전 치료를 전문으로 합니다.",
-      "en": "Yonsei IMIStem Clinic, a Ministry-designated advanced regenerative medicine institution near Gangnam Station, specializes in stem cell and immune cell therapy, plasma exchange and ED treatment.",
-      "zh": "延世IMISTEM诊所是保健福祉部指定的尖端再生医疗实施机构，位于江南站，专注于干细胞、免疫细胞治疗、血浆置换及勃起功能障碍治疗。"
-    },
-    "doctors": [ { "name": "정인선", "title": "대표원장", "spec": ["줄기세포·재생의학", "혈장교환술", "면역세포치료"] } ],
-    "thumb": "hthumb/imistem.jpg"
-  },
-  {
-    "name": { "kr": "세레스의원", "en": "Ceres Clinic", "zh": "Ceres医院" },
-    "dept": { "kr": "피부과/다이어트/검진", "en": "Dermatology / Diet / Checkup", "zh": "皮肤科/减肥/体检" },
-    "cat": "피부·성형",
-    "badge": "NEW",
-    "treats": {
-      "kr": ["피부 정밀케어", "의학 다이어트", "잡티·윤곽", "정밀 검진", "리프팅"],
-      "en": ["Skin Care", "Medical Diet", "Pigment·Contour", "Health Screening", "Lifting"],
-      "zh": ["皮肤精密护理", "医学减肥", "色斑·轮廓", "精密体检", "提升"]
-    },
-    "hours": "평일 진료 / 토요일 휴진",
-    "loc": { "ko": "서울 강남 (논현)", "zh": "首尔江南(论岘)", "en": "Nonhyeon, Gangnam, Seoul" },
-    "overview": {
-      "kr": "세레스의원은 강남 논현에 위치한 피부과로, 의학 다이어트(식단·운동 없는 의학 감량)·피부 정밀케어·검진센터 3개 센터를 운영하며 잡티·윤곽·리프팅과 정밀 검진을 제공합니다.",
-      "en": "Ceres Clinic in Nonhyeon, Gangnam operates three centers — dermatology, medical diet and health screening — offering precise skin care, contouring, lifting and comprehensive checkups.",
-      "zh": "Ceres医院位于江南论岘，由皮肤科·医学减肥·精密体检三大中心组成，提供皮肤精密护理、轮廓管理、提升及综合健康检查。"
-    },
-    "doctors": [],
-    "thumb": "hthumb/ceres.jpg"
-  },
-  {
-    "name": { "kr": "닥터스피부과의원 신사본점", "en": "Doctors Dermatology (Sinsa)", "zh": "Doctors皮肤科 (新沙本店)" },
-    "dept": { "kr": "피부과(리프팅)", "en": "Dermatology (Lifting)", "zh": "皮肤科(提升)" },
-    "cat": "피부·성형",
-    "badge": "NEW",
-    "treats": {
-      "kr": ["울쎄라·써마지","소프웨이브·XERF","스킨부스터","보톡스·필러","줄기세포"],
-      "en": ["Ulthera·Thermage","Sofwave·XERF","Skin Booster","Botox·Filler","Stem Cell"],
-      "zh": ["超声刀·热玛吉","索夫波·XERF","水光针","肉毒·玻尿酸","干细胞"]
     },
     "hours": "평일 09:30-15:30 / 일요일 진료 / 공휴일 휴진",
-    "loc": { "ko": "서울 강남 (신사)", "zh": "首尔江南(新沙)", "en": "Sinsa, Gangnam, Seoul" },
+    "loc": {
+      "ko": "서울 강남 (신사)",
+      "zh": "首尔江南(新沙)",
+      "en": "Sinsa, Gangnam, Seoul"
+    },
     "overview": {
       "kr": "닥터스피부과 신사본점은 \"리프팅은 닥터스\"로 알려진 리프팅 특화 피부과로, 성현철 대표원장을 중심으로 울쎄라·써마지·소프웨이브·XERF·덴시티·ONDA·티타늄 리프팅과 스킨부스터·보톡스·필러·줄기세포를 진료합니다.",
       "en": "Doctors Dermatology Sinsa, known for lifting, led by Dr. Sung Hyun-chul, offers Ulthera, Thermage, Sofwave, XERF, Density, ONDA and titanium lifting plus skin boosters, botox, filler and stem cell therapy.",
       "zh": "Doctors皮肤科(新沙本店)是以提升闻名的皮肤科, 由成炫哲代表院长主诊, 提供超声刀·热玛吉·索夫波·XERF·Density·ONDA·钛提升等提升及水光针·肉毒·玻尿酸·干细胞, 中文接待。"
     },
-    "doctors": [ { "name": "성현철", "title": "대표원장", "spec": ["피부과 전문의", "리프팅", "명품 울쎄라·스컬트라"] }, { "name": "오영주", "title": "원장", "spec": ["피부과", "디자인 리프팅"] } ],
+    "doctors": [
+      {
+        "name": "성현철",
+        "title": "대표원장",
+        "spec": [
+          "피부과 전문의",
+          "리프팅",
+          "명품 울쎄라·스컬트라"
+        ]
+      },
+      {
+        "name": "오영주",
+        "title": "원장",
+        "spec": [
+          "피부과",
+          "디자인 리프팅"
+        ]
+      }
+    ],
     "thumb": "hthumb/doctors.jpg"
   },
   {
@@ -2256,152 +1100,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
       }
     ],
     "thumb": "hthumb/heerskin.jpg"
-  },
-  {
-    "name": {
-      "kr": "히어산부인과",
-      "en": "Heer Women's Clinic",
-      "zh": "Heer妇科"
-    },
-    "dept": {
-      "kr": "여성의학",
-      "en": "Women's Health",
-      "zh": "女性医学"
-    },
-    "cat": "여성의학",
-    "badge": "여성의학",
-    "treats": {
-      "kr": [
-        "여성성형",
-        "질타이트닝"
-      ],
-      "en": [
-        "Female Rejuvenation",
-        "Vaginal Tightening"
-      ],
-      "zh": [
-        "女性整形",
-        "阴道紧缩"
-      ]
-    },
-    "hours": "Mon/Tue/Thu/Fri 10:00-19:00 / Sat 09:30-15:00",
-    "loc": {
-      "ko": "서울 강남",
-      "zh": "首尔江南",
-      "en": "Gangnam, Seoul"
-    },
-    "overview": {
-      "kr": "히어산부인과는 여성성형과 질 타이트닝 전문 산부인과입니다.",
-      "en": "Heer Women's Clinic specializes in female rejuvenation and vaginal tightening.",
-      "zh": "Heer妇科专注于女性整形和阴道紧缩治疗。"
-    },
-    "doctors": [
-      {
-        "name": "송윤경",
-        "title": "대표원장",
-        "spec": [
-          "산부인과"
-        ]
-      }
-    ],
-    "thumb": "hthumb/heerwomen.jpg"
-  },
-  {
-    "name": {
-      "kr": "셀로라의원 (with 지유)",
-      "en": "Cellora Clinic",
-      "zh": "Cellora医院"
-    },
-    "dept": {
-      "kr": "줄기세포",
-      "en": "Stem Cell",
-      "zh": "干细胞"
-    },
-    "cat": "줄기세포",
-    "badge": "줄기세포",
-    "treats": {
-      "kr": [
-        "줄기세포",
-        "세포노화검사"
-      ],
-      "en": [
-        "Stem Cell",
-        "Cell Aging Test"
-      ],
-      "zh": [
-        "干细胞",
-        "细胞老化检测"
-      ]
-    },
-    "hours": "Mon-Fri 10:30-21:00 / Sat-Sun 10:30-19:00",
-    "loc": {
-      "ko": "서울 강남",
-      "zh": "首尔江南",
-      "en": "Gangnam, Seoul"
-    },
-    "overview": {
-      "kr": "셀로라의원은 줄기세포 치료와 세포노화검사 전문 의원입니다.",
-      "en": "Cellora Clinic specializes in stem cell therapy and cell aging testing.",
-      "zh": "Cellora医院专注于干细胞疗法和细胞老化检测。"
-    },
-    "doctors": [
-      {
-        "name": "박기범",
-        "title": "대표원장",
-        "spec": [
-          "(전문분야 미표기)"
-        ]
-      },
-      {
-        "name": "나윤채",
-        "title": "원장",
-        "spec": [
-          "줄기세포 치료"
-        ]
-      }
-    ],
-    "thumb": "hthumb/cellora.jpg"
-  },
-  {
-    "name": {
-      "kr": "리프톤의원",
-      "en": "Lifton Skin Clinic",
-      "zh": "Lifton皮肤医院"
-    },
-    "dept": {
-      "kr": "리프팅/필러",
-      "en": "Lifting / Filler",
-      "zh": "提升/填充"
-    },
-    "cat": "피부·성형",
-    "badge": "리프팅전문",
-    "treats": {
-      "kr": [
-        "리프팅",
-        "필러"
-      ],
-      "en": [
-        "Lifting",
-        "Filler"
-      ],
-      "zh": [
-        "提升",
-        "填充"
-      ]
-    },
-    "hours": "Mon-Fri 10:00-20:00 / Sat 10:00-16:00",
-    "loc": {
-      "ko": "서울 강남",
-      "zh": "首尔江南",
-      "en": "Gangnam, Seoul"
-    },
-    "overview": {
-      "kr": "리프톤의원은 리프팅과 필러 전문 피부과로 저녁 8시까지 진료합니다.",
-      "en": "Lifton Skin Clinic specializes in lifting and filler with extended evening hours.",
-      "zh": "Lifton皮肤医院专注于提升和填充治疗，延长至晚上8点营业。"
-    },
-    "doctors": [],
-    "thumb": "hthumb/lifton.jpg"
   },
   {
     "name": {
@@ -2475,84 +1173,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
   },
   {
     "name": {
-      "kr": "루비성형외과(신사점)",
-      "en": "Ruby Plastic Surgery (Sinsa)",
-      "zh": "Ruby整形外科（新沙店）"
-    },
-    "dept": {
-      "kr": "성형외과",
-      "en": "Plastic Surgery",
-      "zh": "整形外科"
-    },
-    "cat": "피부·성형",
-    "badge": "VIP",
-    "treats": {
-      "kr": [
-        "눈",
-        "코",
-        "가슴",
-        "리프팅",
-        "지방흡입"
-      ],
-      "en": [
-        "Eye",
-        "Nose",
-        "Breast",
-        "Lifting",
-        "Liposuction"
-      ],
-      "zh": [
-        "眼部",
-        "鼻部",
-        "胸部",
-        "提升",
-        "吸脂"
-      ]
-    },
-    "hours": "Mon-Wed/Fri 10:00-19:00 / Thu 10:00-20:30 / Sat 10:00-16:00",
-    "loc": {
-      "ko": "서울 신사",
-      "zh": "首尔新沙",
-      "en": "Sinsa, Gangnam"
-    },
-    "overview": {
-      "kr": "루비성형외과(신사점)는 눈·코 수술, 가슴성형, 리프팅 전문 병원입니다.",
-      "en": "Ruby Plastic Surgery (Sinsa) specializes in eye/nose surgery, breast augmentation, and lifting.",
-      "zh": "Ruby整形外科（新沙店）专注于眼鼻整形、隆胸及提升手术，由金明哲代表院长领衔。"
-    },
-    "doctors": [
-      {
-        "name": "김재원",
-        "title": "대표원장",
-        "spec": [
-          "피부과 전문의",
-          "피부레이저",
-          "미용외과"
-        ]
-      },
-      {
-        "name": "허정",
-        "title": "대표원장",
-        "spec": [
-          "피부과",
-          "미용성형레이저",
-          "필러"
-        ]
-      },
-      {
-        "name": "이동민",
-        "title": "원장",
-        "spec": [
-          "피부과",
-          "미용성형레이저",
-          "필러"
-        ]
-      }
-    ],
-    "thumb": "hthumb/ruby.jpg"
-  },
-  {
-    "name": {
       "kr": "벤자민의원",
       "en": "Benjamin Clinic",
       "zh": "Benjamin医院"
@@ -2616,263 +1236,9 @@ export const HOSPITAL_DATA: HospDetail[] = [
   },
   {
     "name": {
-      "kr": "고운몸의원",
-      "en": "Gowoonmom Body Clinic",
-      "zh": "美身医院"
-    },
-    "dept": {
-      "kr": "바디필러",
-      "en": "Body Filler",
-      "zh": "身体填充"
-    },
-    "cat": "체형",
-    "badge": "바디전문",
-    "treats": {
-      "kr": [
-        "골반필러",
-        "힙필러",
-        "가슴필러"
-      ],
-      "en": [
-        "Pelvis Filler",
-        "Hip Filler",
-        "Breast Filler"
-      ],
-      "zh": [
-        "骨盆填充",
-        "臀部填充",
-        "胸部填充"
-      ]
-    },
-    "hours": "Mon-Wed 10:00-19:00 / Thu-Fri 10:00-21:00 / Sat 10:00-15:00",
-    "loc": {
-      "ko": "서울 강남",
-      "zh": "首尔江南",
-      "en": "Gangnam, Seoul"
-    },
-    "overview": {
-      "kr": "고운몸의원은 골반·힙·가슴 필러 전문 바디 성형 의원입니다.",
-      "en": "Gowoonmom Body Clinic specializes in body shaping via pelvis, hip, and breast filler.",
-      "zh": "美身医院专注于骨盆、臀部及胸部填充等身体塑形项目。"
-    },
-    "doctors": [
-      {
-        "name": "김희경",
-        "title": "대표원장",
-        "spec": [
-          "바디필러",
-          "페이스필러",
-          "쁘띠"
-        ]
-      }
-    ],
-    "thumb": "hthumb/gowoonmom.jpg"
-  },
-  {
-    "name": {
-      "kr": "티알 트리니티라파엘로 청담의원",
-      "en": "TR Trinity Raffaello Clinic",
-      "zh": "TR Trinity Raffaello清潭医院"
-    },
-    "dept": {
-      "kr": "항노화/줄기세포",
-      "en": "Anti-aging / Stem Cell",
-      "zh": "抗衰老/干细胞"
-    },
-    "cat": "항노화",
-    "badge": "항노화",
-    "treats": {
-      "kr": [
-        "항노화",
-        "튼살",
-        "흉터",
-        "줄기세포"
-      ],
-      "en": [
-        "Anti-aging",
-        "Stretch Marks",
-        "Scar",
-        "Stem Cell"
-      ],
-      "zh": [
-        "抗衰老",
-        "妊娠纹",
-        "疤痕",
-        "干细胞"
-      ]
-    },
-    "hours": "Mon-Fri 10:00-19:00 / Sat 10:00-17:00",
-    "loc": {
-      "ko": "서울 강남",
-      "zh": "首尔江南",
-      "en": "Gangnam, Seoul"
-    },
-    "overview": {
-      "kr": "티알 청담의원은 비수술 항노화, 줄기세포, 흉터 치료 전문 의원입니다.",
-      "en": "TR Trinity Raffaello Clinic specializes in non-surgical anti-aging and stem cell therapy.",
-      "zh": "TR Trinity Raffaello清潭医院专注于非手术抗衰老疗程，包括干细胞疗法及疤痕治疗。"
-    },
-    "doctors": [
-      {
-        "name": "김유인",
-        "title": "대표원장",
-        "spec": [
-          "광성형 (주름",
-          "흉터",
-          "지방감소)"
-        ]
-      },
-      {
-        "name": "김동일",
-        "title": "담당책임의사",
-        "spec": [
-          "페이스리프팅",
-          "지방흡입술"
-        ]
-      },
-      {
-        "name": "박언휘",
-        "title": "담당책임의사",
-        "spec": [
-          "항노화",
-          "면역·활력수액치료"
-        ]
-      }
-    ],
-    "thumb": "hthumb/tr.jpg"
-  },
-  {
-    "name": {
-      "kr": "GV 성형외과",
-      "en": "GV Plastic Surgery",
-      "zh": "GV整形外科"
-    },
-    "dept": {
-      "kr": "줄기세포/바디리프팅",
-      "en": "Stem Cell / Body Lifting",
-      "zh": "干细胞/身体提升"
-    },
-    "cat": "줄기세포",
-    "badge": "줄기세포",
-    "treats": {
-      "kr": [
-        "줄기세포",
-        "바디리프팅"
-      ],
-      "en": [
-        "Stem Cell",
-        "Body Lifting"
-      ],
-      "zh": [
-        "干细胞",
-        "身体提升"
-      ]
-    },
-    "hours": "Mon-Fri 10:00-19:00 / Sat 10:00-16:00",
-    "loc": {
-      "ko": "서울 강남",
-      "zh": "首尔江南",
-      "en": "Gangnam, Seoul"
-    },
-    "overview": {
-      "kr": "GV성형외과는 줄기세포 치료와 바디리프팅 전문 성형외과입니다.",
-      "en": "GV Plastic Surgery offers stem cell therapy and body lifting.",
-      "zh": "GV整形外科提供干细胞疗法和全身提升项目。"
-    },
-    "doctors": [
-      {
-        "name": "문주혁",
-        "title": "대표원장",
-        "spec": [
-          "리프팅",
-          "성형"
-        ]
-      },
-      {
-        "name": "정동학",
-        "title": "대표원장",
-        "spec": [
-          "이비인후과 전문의",
-          "코성형"
-        ]
-      }
-    ],
-    "thumb": "hthumb/gv.jpg"
-  },
-  {
-    "name": {
-      "kr": "페이스라인성형외과의원",
-      "en": "Faceline Plastic Surgery",
-      "zh": "Faceline整形外科"
-    },
-    "dept": {
-      "kr": "성형외과",
-      "en": "Plastic Surgery",
-      "zh": "整形外科"
-    },
-    "cat": "피부·성형",
-    "badge": "윤곽전문",
-    "treats": {
-      "kr": [
-        "양악",
-        "윤곽",
-        "눈",
-        "코"
-      ],
-      "en": [
-        "Jaw",
-        "Contouring",
-        "Eye",
-        "Nose"
-      ],
-      "zh": [
-        "正颌",
-        "轮廓",
-        "眼部",
-        "鼻部"
-      ]
-    },
-    "hours": "Mon-Fri 09:30-19:00 / Fri 09:30-21:00 / Sat 09:30-17:00",
-    "loc": {
-      "ko": "서울 강남",
-      "zh": "首尔江南",
-      "en": "Gangnam, Seoul"
-    },
-    "overview": {
-      "kr": "페이스라인성형외과는 양악수술, 안면윤곽, 눈·코 성형 전문 병원입니다.",
-      "en": "Faceline Plastic Surgery specializes in jaw surgery, facial contouring, and eye/nose surgery.",
-      "zh": "Faceline整形外科专注于正颌手术、面部轮廓及眼鼻整形。"
-    },
-    "doctors": [
-      {
-        "name": "이태희",
-        "title": "대표원장",
-        "spec": [
-          "성형외과"
-        ]
-      },
-      {
-        "name": "이진수",
-        "title": "원장",
-        "spec": [
-          "성형외과"
-        ]
-      },
-      {
-        "name": "이신정",
-        "title": "원장",
-        "spec": [
-          "성형외과"
-        ]
-      }
-    ],
-    "thumb": "hthumb/faceline.jpg"
-  },
-  {
-    "name": {
-      "kr": "강남서울안과의원",
-      "en": "Gangnam Seoul Eye Clinic",
-      "zh": "江南首尔眼科"
+      "kr": "강남아이원스안과의원",
+      "en": "EYEONCE Eye Clinic Gangnam",
+      "zh": "江南EYEONCE眼科"
     },
     "dept": {
       "kr": "안과",
@@ -2880,56 +1246,29 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "眼科"
     },
     "cat": "안과",
-    "badge": "안과전문",
-    "treats": {
-      "kr": [
-        "라식",
-        "라섹",
-        "백내장"
-      ],
-      "en": [
-        "LASIK",
-        "LASEK",
-        "Cataract"
-      ],
-      "zh": [
-        "准分子激光",
-        "LASEK",
-        "白内障"
-      ]
-    },
-    "hours": "Mon/Tue 09:30-18:30 / Fri 09:30-19:00 / Sat 09:00-16:00",
-    "loc": {
-      "ko": "서울 강남",
-      "zh": "首尔江南",
-      "en": "Gangnam, Seoul"
-    },
-    "overview": {
-      "kr": "강남서울안과는 라식, 라섹, 백내장 전문 안과입니다.",
-      "en": "Gangnam Seoul Eye Clinic specializes in LASIK, LASEK, and cataract surgery.",
-      "zh": "江南首尔眼科专门提供准分子激光视力矫正及白内障手术。"
-    },
-    "doctors": [
-      {
-        "name": "김용명",
-        "title": "대표원장",
-        "spec": [
-          "시력교정(라식·라섹·렌즈삽입)",
-          "백내장"
-        ]
-      }
-    ],
-    "thumb": "hthumb/kseye.jpg"
-  },
-  {
-    "name": { "kr": "강남아이원스안과의원", "en": "EYEONCE Eye Clinic Gangnam", "zh": "江南EYEONCE眼科" },
-    "dept": { "kr": "안과", "en": "Ophthalmology", "zh": "眼科" },
-    "cat": "안과",
     "badge": "NEW",
     "treats": {
-      "kr": ["스마일프로·스마일라식","원데이라식·투데이라섹","ICL 렌즈삽입술","노안·백내장","안구건조증 IPL"],
-      "en": ["SMILE Pro & SMILE LASIK","One-Day LASIK·LASEK","ICL Implantation","Presbyopia·Cataract","Dry-Eye IPL"],
-      "zh": ["SMILE Pro·全飞秒","One-Day半飞秒·LASEK","ICL晶体植入","老花·白内障","干眼症IPL"]
+      "kr": [
+        "스마일프로·스마일라식",
+        "원데이라식·투데이라섹",
+        "ICL 렌즈삽입술",
+        "노안·백내장",
+        "안구건조증 IPL"
+      ],
+      "en": [
+        "SMILE Pro & SMILE LASIK",
+        "One-Day LASIK·LASEK",
+        "ICL Implantation",
+        "Presbyopia·Cataract",
+        "Dry-Eye IPL"
+      ],
+      "zh": [
+        "SMILE Pro·全飞秒",
+        "One-Day半飞秒·LASEK",
+        "ICL晶体植入",
+        "老花·白内障",
+        "干眼症IPL"
+      ]
     },
     "hours": "평일 09:00~18:00 · 금 ~20:00(야간 예약) · 토 ~16:00 · 수/일/공휴일 휴진",
     "loc": {
@@ -2943,180 +1282,110 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "江南EYEONCE眼科位于新论岘站教保大厦旁(思平大路368，5~6层)，专注视力矫正与老花·白内障——SMILE Pro微创全飞秒、SMILE全飞秒、One-Day全激光LASIK、Two-Day LASEK、ICL晶体植入及干眼症IPL治疗。所有手术前进行精密眼科检查(检查费另计)，院内常驻翻译，外国患者就诊无忧。(周三·周日休诊，周五夜间需预约)"
     },
     "doctors": [
-      { "name": "백동원", "title": "대표원장", "spec": ["안과"] }
+      {
+        "name": "백동원",
+        "title": "대표원장",
+        "spec": [
+          "안과"
+        ]
+      }
     ],
     "thumb": "hthumb/eyeonce.jpg"
   },
   {
     "name": {
-      "kr": "JD피부성형(장덕)",
-      "en": "JD Skin & Plastic Clinic",
-      "zh": "JD皮肤整形（张德）"
+      "kr": "VC성형외과의원",
+      "en": "VC Plastic Surgery",
+      "zh": "VC整形外科"
     },
     "dept": {
-      "kr": "피부/줄기세포/한방",
-      "en": "Skin / Stem Cell / Korean Medicine",
-      "zh": "皮肤/干细胞/韩医"
+      "kr": "성형외과/피부/줄기세포",
+      "en": "Plastic Surgery / Skin / Stem Cell",
+      "zh": "整形外科/皮肤/干细胞"
     },
-    "cat": "줄기세포/한방",
-    "badge": "줄기세포",
-    "treats": {
-      "kr": [
-        "줄기세포",
-        "한방",
-        "슈링크",
-        "쥬브젠"
-      ],
-      "en": [
-        "Stem Cell",
-        "Korean Medicine",
-        "Shrink",
-        "Juvelook"
-      ],
-      "zh": [
-        "干细胞",
-        "韩医",
-        "Shrink",
-        "Juvelook"
-      ]
-    },
-    "hours": "Mon-Fri 09:00-19:00 / Sat 09:00-17:00",
-    "loc": {
-      "ko": "서울 강남",
-      "zh": "首尔江南",
-      "en": "Gangnam, Seoul"
-    },
-    "overview": {
-      "kr": "JD피부성형(장덕)은 줄기세포, 슈링크, 쥬브젠 전문 피부성형 의원이며 한방 진료도 함께 제공합니다.",
-      "en": "JD Skin & Plastic Clinic offers stem cell therapy, Shrink, and Juvelook skin regeneration, alongside a Korean Medicine (Hanbang) department.",
-      "zh": "JD皮肤整形（张德）提供干细胞疗法、Shrink及Juvelook等皮肤再生项目，同时设有韩医（韩方）诊疗科室。"
-    },
-    "doctors": [],
-    "thumb": "hthumb/jdskin.jpg"
-  },
-  {
-    "name": { "kr": "나나성형외과", "en": "NANA Plastic Surgery", "zh": "NANA整形外科" },
-    "dept": { "kr": "성형외과/피부", "en": "Plastic Surgery / Skin", "zh": "整形外科/皮肤" },
-    "cat": "피부·성형",
-    "badge": "성형전문",
-    "treats": {
-      "kr": ["눈성형", "코성형", "가슴성형", "안면윤곽·리프팅"],
-      "en": ["Eye Surgery", "Nose Surgery", "Breast Surgery", "Contouring & Lifting"],
-      "zh": ["眼部整形", "鼻部整形", "胸部整形", "轮廓·提升"]
-    },
-    "hours": "Mon-Sat 09:30-19:00 / Sun Closed",
-    "loc": { "ko": "서울 압구정", "zh": "首尔狎鸥亭", "en": "Apgujeong, Seoul" },
-    "overview": {
-      "kr": "나나성형외과는 압구정로데오역 앞 청담동에 위치한 성형외과로 눈·코·가슴 성형과 안면윤곽·리프팅을 진료합니다.",
-      "en": "NANA Plastic Surgery, in Cheongdam-dong near Apgujeong Rodeo Station, offers eye, nose and breast surgery as well as facial contouring and lifting.",
-      "zh": "NANA整形外科位于清潭洞狎鸥亭罗德奥站前，提供眼部、鼻部、胸部整形及轮廓·提升项目。"
-    },
-    "doctors": [],
-    "thumb": "hthumb/nana.jpg"
-  },
-  {
-    "name": { "kr": "디에이성형외과의원", "en": "DA Plastic Surgery", "zh": "DA整形外科" },
-    "dept": { "kr": "성형외과/피부", "en": "Plastic Surgery / Skin", "zh": "整形外科/皮肤" },
-    "cat": "피부·성형",
-    "badge": "성형전문",
-    "treats": {
-      "kr": ["눈성형", "코성형", "안면윤곽", "가슴성형", "리프팅"],
-      "en": ["Eye Surgery", "Nose Surgery", "Facial Contouring", "Breast Surgery", "Lifting"],
-      "zh": ["眼部整形", "鼻部整形", "轮廓整形", "胸部整形", "提升"]
-    },
-    "hours": "Mon-Thu 10:00-19:00 / Fri 10:00-20:00 / Sat 10:00-18:00",
-    "loc": { "ko": "서울 강남", "zh": "首尔江南", "en": "Gangnam, Seoul" },
-    "overview": {
-      "kr": "디에이성형외과의원은 테헤란로 단독 건물에 위치한 성형외과로 눈·코·안면윤곽·가슴 성형과 리프팅, 피부 진료를 함께 제공합니다.",
-      "en": "DA Plastic Surgery, in its own building on Teheran-ro, provides eye, nose, facial contouring and breast surgery along with lifting and skin treatments.",
-      "zh": "DA整形外科位于德黑兰路独栋大楼，提供眼部、鼻部、轮廓、胸部整形以及提升与皮肤诊疗服务。"
-    },
-    "doctors": [],
-    "thumb": "hthumb/daprs.jpg"
-  },
-  {
-    "name": { "kr": "VC성형외과의원", "en": "VC Plastic Surgery", "zh": "VC整形外科" },
-    "dept": { "kr": "성형외과/피부/줄기세포", "en": "Plastic Surgery / Skin / Stem Cell", "zh": "整形外科/皮肤/干细胞" },
     "cat": "피부·성형/줄기세포",
     "badge": "프리미엄",
     "treats": {
-      "kr": ["이중턱 재배치", "눈밑 재배치", "하안검·중안면거상", "지방흡입", "줄기세포"],
-      "en": ["Double Chin Contouring", "Under-eye Repositioning", "Lower Blepharoplasty & Midface Lift", "Liposuction", "Stem Cell"],
-      "zh": ["双下巴重塑", "眼下重塑", "下眼睑·中面部提升", "吸脂", "干细胞"]
+      "kr": [
+        "이중턱 재배치",
+        "눈밑 재배치",
+        "하안검·중안면거상",
+        "지방흡입",
+        "줄기세포"
+      ],
+      "en": [
+        "Double Chin Contouring",
+        "Under-eye Repositioning",
+        "Lower Blepharoplasty & Midface Lift",
+        "Liposuction",
+        "Stem Cell"
+      ],
+      "zh": [
+        "双下巴重塑",
+        "眼下重塑",
+        "下眼睑·中面部提升",
+        "吸脂",
+        "干细胞"
+      ]
     },
     "hours": "Mon/Thu 10:00-19:00 / Tue/Fri 10:00-20:00 / Sat 10:00-16:30 / Wed Closed",
-    "loc": { "ko": "서울 압구정", "zh": "首尔狎鸥亭", "en": "Apgujeong, Seoul" },
+    "loc": {
+      "ko": "서울 압구정",
+      "zh": "首尔狎鸥亭",
+      "en": "Apgujeong, Seoul"
+    },
     "overview": {
       "kr": "VC성형외과의원은 압구정에 위치한 프라이빗 성형외과로, 성형외과 전문의가 상담부터 수술까지 직접 담당하며 피부·에스테틱 관리를 한 공간에서 함께 제공합니다.",
       "en": "VC Plastic Surgery in Apgujeong is a private clinic where a board-certified plastic surgeon handles consultation through surgery, with skin and esthetic care available in the same space.",
       "zh": "VC整形外科位于狎鸥亭，是一对一私密诊疗的整形外科，由整形外科专科医生亲自负责咨询与手术，并在同一空间内提供皮肤及美容管理服务。"
     },
     "doctors": [
-      { "name": "최민석", "title": "대표원장", "spec": ["성형외과 전문의"] }
+      {
+        "name": "최민석",
+        "title": "대표원장",
+        "spec": [
+          "성형외과 전문의"
+        ]
+      }
     ],
     "thumb": "hthumb/vcps.jpg"
   },
   {
-    "name": { "kr": "블랑쉬치과의원", "en": "Blanche Dental Clinic", "zh": "布朗雪牙科" },
-    "dept": { "kr": "치과", "en": "Dental", "zh": "牙科" },
-    "cat": "치과",
-    "badge": "치과전문",
-    "treats": {
-      "kr": ["임플란트", "치아교정", "라미네이트"],
-      "en": ["Implant", "Orthodontics", "Laminate"],
-      "zh": ["种植牙", "牙齿矫正", "贴面"]
+    "name": {
+      "kr": "KMI한국의학연구소 강남센터",
+      "en": "KMI Korea Medical Institute (Gangnam)",
+      "zh": "KMI韩国医学研究所 江南中心"
     },
-    "hours": "Mon/Thu/Fri 10:30-19:00 / Tue/Wed 10:30-21:00 / Sat 10:00-14:00 / Sun 10:00-16:00",
-    "loc": { "ko": "서울 강남", "zh": "首尔江南", "en": "Gangnam, Seoul" },
-    "overview": {
-      "kr": "블랑쉬치과의원은 강남대로에 위치한 치과로 임플란트·치아교정·라미네이트를 진료합니다. 화·수 야간진료(~21시)와 주말 진료를 운영합니다.",
-      "en": "Blanche Dental Clinic on Gangnam-daero provides implant, orthodontic and laminate treatments, with evening hours on Tue/Wed and weekend opening.",
-      "zh": "布朗雪牙科位于江南大路，提供种植牙、牙齿矫正及贴面等诊疗项目。周二·周三设有夜间门诊，周末亦可就诊。"
+    "dept": {
+      "kr": "건강검진",
+      "en": "Health Checkup",
+      "zh": "健康体检"
     },
-    "doctors": [
-      { "name": "김태형", "title": "대표원장", "spec": ["치과"] },
-      { "name": "박경리", "title": "원장", "spec": ["치과"] },
-      { "name": "한건희", "title": "원장", "spec": ["치과"] },
-      { "name": "백주희", "title": "원장", "spec": ["치과"] },
-      { "name": "김하영", "title": "원장", "spec": ["치과"] },
-      { "name": "김민주", "title": "원장", "spec": ["치과"] }
-    ],
-    "thumb": "hthumb/blanche.jpg"
-  },
-  {
-    "name": { "kr": "세라치과의원", "en": "CERA Dental Clinic", "zh": "CERA牙科" },
-    "dept": { "kr": "치과", "en": "Dental", "zh": "牙科" },
-    "cat": "치과",
-    "badge": "치과전문",
-    "treats": {
-      "kr": ["임플란트", "치아교정", "라미네이트", "세라멜"],
-      "en": ["Implant", "Orthodontics", "Laminate"],
-      "zh": ["种植牙", "牙齿矫正", "贴面"]
-    },
-    "hours": "Mon-Fri 10:00-19:00 / Sat·Sun Closed",
-    "loc": { "ko": "서울 강남", "zh": "首尔江南", "en": "Gangnam, Seoul" },
-    "overview": {
-      "kr": "세라치과의원은 봉은사로에 위치한 치과로 임플란트·치아교정·라미네이트를 진료합니다.",
-      "en": "CERA Dental Clinic on Bongeunsa-ro provides implant, orthodontic and laminate treatments.",
-      "zh": "CERA牙科位于奉恩寺路，提供种植牙、牙齿矫正及贴面等诊疗项目。"
-    },
-    "doctors": [
-      { "name": "우상엽", "title": "대표원장", "spec": ["치과"] }
-    ],
-    "thumb": "hthumb/cera.jpg"
-  },
-  {
-    "name": { "kr": "KMI한국의학연구소 강남센터", "en": "KMI Korea Medical Institute (Gangnam)", "zh": "KMI韩国医学研究所 江南中心" },
-    "dept": { "kr": "건강검진", "en": "Health Checkup", "zh": "健康体检" },
     "cat": "검진",
     "badge": "검진전문",
     "treats": {
-      "kr": ["종합검진", "외국인 검진", "정밀검진"],
-      "en": ["Comprehensive Checkup", "Checkup for Foreigners", "Advanced Screening"],
-      "zh": ["综合体检", "外籍人士体检", "精密体检"]
+      "kr": [
+        "종합검진",
+        "외국인 검진",
+        "정밀검진"
+      ],
+      "en": [
+        "Comprehensive Checkup",
+        "Checkup for Foreigners",
+        "Advanced Screening"
+      ],
+      "zh": [
+        "综合体检",
+        "外籍人士体检",
+        "精密体检"
+      ]
     },
     "hours": "Mon/Tue/Thu/Fri 07:00-16:00 / Wed/Sat 07:00-12:30",
-    "loc": { "ko": "서울 강남", "zh": "首尔江南", "en": "Gangnam, Seoul" },
+    "loc": {
+      "ko": "서울 강남",
+      "zh": "首尔江南",
+      "en": "Gangnam, Seoul"
+    },
     "overview": {
       "kr": "KMI한국의학연구소 강남센터는 선릉역 인근 건강검진 전문기관으로, 외국인 전용 검진 프로그램을 운영하며 영어·중국어·일본어·몽골어 응대가 가능합니다.",
       "en": "KMI Korea Medical Institute Gangnam Center, near Seolleung Station, runs dedicated health checkup programs for international visitors with English, Chinese, Japanese and Mongolian support.",
@@ -3126,105 +1395,185 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "thumb": "hthumb/kmi.jpg"
   },
   {
-    "name": { "kr": "분당차병원", "en": "CHA Bundang Medical Center", "zh": "盆唐CHA医院" },
-    "dept": { "kr": "종합검진/국제진료", "en": "Health Checkup / International Clinic", "zh": "综合体检/国际诊疗" },
-    "thumb": "hthumb/chabundang.jpg",
-    "cat": "검진/여성의학",
-    "badge": "검진전문",
-    "treats": {
-      "kr": ["STANDARD 기본검진", "EXECUTIVE 검진", "PREMIUM 심장·뇌", "VIP 숙박형 검진", "INTENSIVE 특화검진"],
-      "en": ["Standard Checkup", "Executive Checkup", "Premium Heart/Brain", "VIP Overnight Checkup", "Intensive Screening"],
-      "zh": ["基础体检", "行政人员体检", "心脏·脑部精密体检", "VIP住宿型体检", "特化精密体检"]
+    "name": {
+      "kr": "강남스마트신경과의원",
+      "en": "Gangnam Smart Neurology",
+      "zh": "江南SMART神经内科"
     },
-    "hours": "Mon-Fri 08:00-17:00 / Sat 08:00-12:00",
-    "loc": { "ko": "경기 성남 분당", "zh": "京畿道城南市盆唐", "en": "Bundang, Seongnam" },
-    "overview": {
-      "kr": "분당차병원 건강증진센터는 국제진료 전담팀을 두고 성별·연령·병력에 맞춘 1:1 맞춤 검진을 제공합니다. PET-CT·MRI 등 최신 장비와 VIP존·레이디존을 갖췄고, 당일 검진부터 1박 2일 숙박형까지 선택할 수 있습니다.",
-      "en": "The Health Promotion Center of CHA Bundang Medical Center runs a dedicated international clinic offering 1:1 customized checkups by sex, age and history, with PET-CT and MRI, VIP and Lady zones, and options from same-day to overnight programs.",
-      "zh": "盆唐CHA医院健康增进中心设有国际诊疗部，按性别·年龄提供1:1定制体检，配备PET-CT、MRI等尖端设备，并设VIP专区与女性专区，可选当日或住宿型（1晚2日）体检。"
+    "dept": {
+      "kr": "신경과",
+      "en": "Neurology",
+      "zh": "神经内科"
     },
-    "doctors": []
-  },
-  {
-    "name": { "kr": "하나로의료재단 강남센터", "en": "Hanaro Medical Foundation (Gangnam)", "zh": "哈娜路医疗财团 江南中心" },
-    "dept": { "kr": "건강검진", "en": "Health Checkup", "zh": "健康体检" },
-    "cat": "검진",
-    "badge": "검진전문",
-    "treats": {
-      "kr": ["종합건강검진", "정밀검진", "해외검진(이민·유학·취업)"],
-      "en": ["Comprehensive Checkup", "Advanced Screening", "Overseas (Immigration/Study/Work) Checkup"],
-      "zh": ["综合健康体检", "精密体检", "海外体检（移民·留学·就业）"]
-    },
-    "hours": "By appointment / 예약제 (Tel 02-590-1111)",
-    "loc": { "ko": "서울 강남", "zh": "首尔江南", "en": "Gangnam, Seoul" },
-    "overview": {
-      "kr": "하나로의료재단 강남센터(하나로리더스의원)는 역삼아이타워에 위치한 건강검진 전문기관으로 종합건강검진과 이민·유학·해외취업 검진을 제공합니다.",
-      "en": "Hanaro Medical Foundation Gangnam Center (Hanaro Leaders Clinic), in Yeoksam I-Tower, provides comprehensive health checkups including immigration, study-abroad and overseas employment screenings.",
-      "zh": "哈娜路医疗财团江南中心（Hanaro Leaders Clinic）位于驿三I-Tower，提供综合健康体检及移民·留学·海外就业体检服务。"
-    },
-    "doctors": [],
-    "thumb": "hthumb/hanaro.jpg"
-  },
-  {
-    "name": { "kr": "강남스마트신경과의원", "en": "Gangnam Smart Neurology", "zh": "江南SMART神经内科" },
-    "dept": { "kr": "신경과", "en": "Neurology", "zh": "神经内科" },
     "cat": "신경과",
     "badge": "신경과전문",
     "treats": {
-      "kr": ["어지럼증", "저림·떨림", "자율신경", "수면"],
-      "en": ["Dizziness", "Numbness & Tremor", "Autonomic Nerve", "Sleep"],
-      "zh": ["神经内科", "内科", "自主神经门诊", "睡眠门诊"]
+      "kr": [
+        "어지럼증",
+        "저림·떨림",
+        "자율신경",
+        "수면"
+      ],
+      "en": [
+        "Dizziness",
+        "Numbness & Tremor",
+        "Autonomic Nerve",
+        "Sleep"
+      ],
+      "zh": [
+        "神经内科",
+        "内科",
+        "自主神经门诊",
+        "睡眠门诊"
+      ]
     },
     "hours": "Mon-Fri 10:00-20:00 / Sat 10:00-15:00 / Sun Closed",
-    "loc": { "ko": "서울 강남", "zh": "首尔江南", "en": "Gangnam, Seoul" },
+    "loc": {
+      "ko": "서울 강남",
+      "zh": "首尔江南",
+      "en": "Gangnam, Seoul"
+    },
     "overview": {
       "kr": "강남스마트신경과의원은 강남대로에 위치한 신경과로 어지럼증·저림·떨림·자율신경·수면 클리닉을 운영합니다.",
       "en": "Gangnam Smart Neurology on Gangnam-daero runs clinics for dizziness, numbness and tremor, autonomic nerve conditions and sleep.",
       "zh": "江南SMART神经内科位于江南大路，设有神经内科及内科专科医生门诊。"
     },
     "doctors": [
-      { "name": "권하님", "title": "대표원장", "spec": ["신경과 전문의"] },
-      { "name": "손형곤", "title": "대표원장", "spec": ["내과 전문의"] },
-      { "name": "서진영", "title": "대표원장", "spec": ["신경과 전문의"] }
+      {
+        "name": "권하님",
+        "title": "대표원장",
+        "spec": [
+          "신경과 전문의"
+        ]
+      },
+      {
+        "name": "손형곤",
+        "title": "대표원장",
+        "spec": [
+          "내과 전문의"
+        ]
+      },
+      {
+        "name": "서진영",
+        "title": "대표원장",
+        "spec": [
+          "신경과 전문의"
+        ]
+      }
     ],
     "thumb": "hthumb/gnsmart.jpg"
   },
   {
-    "name": { "kr": "지우의원", "en": "JIWOO Clinic", "zh": "挚友医院" },
-    "dept": { "kr": "피부과", "en": "Dermatology", "zh": "皮肤科" },
+    "name": {
+      "kr": "지우의원",
+      "en": "JIWOO Clinic",
+      "zh": "挚友医院"
+    },
+    "dept": {
+      "kr": "피부과",
+      "en": "Dermatology",
+      "zh": "皮肤科"
+    },
     "cat": "피부·성형",
     "badge": "NEW",
     "treats": {
-      "kr": ["리쥬란", "울쎄라 PRIME", "써마지 FLX", "포텐자", "피코레이저"],
-      "en": ["Rejuran", "Ultherapy PRIME", "Thermage FLX", "Potenza", "Pico Laser"],
-      "zh": ["Rejuran", "Ultherapy PRIME", "热玛吉FLX", "Potenza", "皮秒激光"]
+      "kr": [
+        "리쥬란",
+        "울쎄라 PRIME",
+        "써마지 FLX",
+        "포텐자",
+        "피코레이저"
+      ],
+      "en": [
+        "Rejuran",
+        "Ultherapy PRIME",
+        "Thermage FLX",
+        "Potenza",
+        "Pico Laser"
+      ],
+      "zh": [
+        "Rejuran",
+        "Ultherapy PRIME",
+        "热玛吉FLX",
+        "Potenza",
+        "皮秒激光"
+      ]
     },
     "hours": "Mon-Thu 10:00-19:00 / Fri 10:00-20:00 / Sat 09:30-16:30 (Lunch 13:30-14:30)",
-    "loc": { "ko": "서울 강남", "zh": "首尔江南", "en": "Gangnam, Seoul" },
+    "loc": {
+      "ko": "서울 강남",
+      "zh": "首尔江南",
+      "en": "Gangnam, Seoul"
+    },
     "overview": {
       "kr": "지우의원(JIWOO Clinic)은 강남역 인근에 위치한 피부과로 리쥬란, 울쎄라 PRIME, 써마지 FLX, 포텐자, 피코레이저 등 피부 시술을 전문으로 합니다.",
       "en": "JIWOO Clinic, near Gangnam Station, specializes in dermatology treatments including Rejuran, Ultherapy PRIME, Thermage FLX, Potenza, and pico laser.",
       "zh": "挚友医院（JIWOO Clinic）位于江南站附近，专注于Rejuran、Ultherapy、热玛吉FLX、Potenza及皮秒激光等皮肤管理项目。"
     },
     "doctors": [
-      { "name": "김회원", "title": "대표원장", "spec": ["피부과"] },
-      { "name": "김우형", "title": "원장", "spec": ["피부과"] },
-      { "name": "조임철", "title": "원장", "spec": ["피부과"] }
+      {
+        "name": "김회원",
+        "title": "대표원장",
+        "spec": [
+          "피부과"
+        ]
+      },
+      {
+        "name": "김우형",
+        "title": "원장",
+        "spec": [
+          "피부과"
+        ]
+      },
+      {
+        "name": "조임철",
+        "title": "원장",
+        "spec": [
+          "피부과"
+        ]
+      }
     ],
     "thumb": "hthumb/jiwoo.jpg"
   },
   {
-    "name": { "kr": "온오프피부과의원", "en": "ONOFF Dermatology Clinic", "zh": "ONOFF皮肤科" },
-    "dept": { "kr": "피부과", "en": "Dermatology", "zh": "皮肤科" },
+    "name": {
+      "kr": "온오프피부과의원",
+      "en": "ONOFF Dermatology Clinic",
+      "zh": "ONOFF皮肤科"
+    },
+    "dept": {
+      "kr": "피부과",
+      "en": "Dermatology",
+      "zh": "皮肤科"
+    },
     "cat": "피부·성형",
     "badge": "NEW",
     "treats": {
-      "kr": ["울쎄라", "써마지", "소프웨이브", "리프팅"],
-      "en": ["Ulthera", "Thermage", "Sofwave", "Lifting"],
-      "zh": ["超声刀", "热玛吉", "索夫波", "提升"]
+      "kr": [
+        "울쎄라",
+        "써마지",
+        "소프웨이브",
+        "리프팅"
+      ],
+      "en": [
+        "Ulthera",
+        "Thermage",
+        "Sofwave",
+        "Lifting"
+      ],
+      "zh": [
+        "超声刀",
+        "热玛吉",
+        "索夫波",
+        "提升"
+      ]
     },
     "hours": "예약제 (진료시간 문의)",
-    "loc": { "ko": "서울 강남", "zh": "首尔江南", "en": "Gangnam, Seoul" },
+    "loc": {
+      "ko": "서울 강남",
+      "zh": "首尔江南",
+      "en": "Gangnam, Seoul"
+    },
     "overview": {
       "kr": "온오프피부과의원은 울쎄라, 써마지, 소프웨이브 등 리프팅 시술을 대표로 하는 피부과입니다.",
       "en": "ONOFF Dermatology Clinic specializes in lifting treatments such as Ulthera, Thermage and Sofwave.",
@@ -3232,84 +1581,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
     },
     "doctors": [],
     "thumb": "hthumb/onoff.jpg"
-  },
-  {
-    "name": { "kr": "셀온피부과의원", "en": "Cellon Clinic", "zh": "CELLON皮肤科" },
-    "dept": { "kr": "피부과", "en": "Dermatology", "zh": "皮肤科" },
-    "cat": "피부·성형",
-    "badge": "NEW",
-    "treats": {
-      "kr": ["색소치료", "리프팅", "보톡스", "필러"],
-      "en": ["Pigmentation Treatment", "Lifting", "Botox", "Filler"],
-      "zh": ["色素治疗", "提升", "肉毒素", "填充"]
-    },
-    "hours": "Mon-Fri 10:00-19:00 / Sat 10:00-16:00 / Sun·Holiday Closed",
-    "loc": { "ko": "서울 강남", "zh": "首尔江南", "en": "Gangnam, Seoul" },
-    "overview": {
-      "kr": "셀온피부과의원(청담)은 피부과 전문의 원장이 직접 진료하며 색소치료, 리프팅, 보톡스, 필러를 전문으로 합니다.",
-      "en": "Cellon Clinic in Cheongdam is led by a board-certified dermatologist, specializing in pigmentation treatment, lifting, Botox, and filler.",
-      "zh": "CELLON皮肤科（清潭）由皮肤科专科院长亲自诊疗，专注于色素治疗、提升、肉毒素及填充项目。"
-    },
-    "doctors": [
-      { "name": "강승훈", "title": "대표원장", "spec": ["피부과 전문의"] }
-    ],
-    "thumb": "hthumb/cellon.jpg"
-  },
-  {
-    "name": { "kr": "아우레아의원", "en": "Aurea Clinic", "zh": "AUREA皮肤科" },
-    "dept": { "kr": "피부과", "en": "Dermatology", "zh": "皮肤科" },
-    "cat": "피부·성형",
-    "badge": "NEW",
-    "treats": {
-      "kr": ["리프팅", "스킨부스터", "보톡스", "필러"],
-      "en": ["Lifting", "Skin Booster", "Botox", "Filler"],
-      "zh": ["提升", "皮肤焕活针", "肉毒素", "填充"]
-    },
-    "hours": "Mon-Fri 10:30-19:30 / Sat·Sun·Holiday 11:00-18:00 (Open all year)",
-    "loc": { "ko": "서울 명동", "zh": "首尔明洞", "en": "Myeongdong, Seoul" },
-    "overview": {
-      "kr": "아우레아의원(명동)은 명동 중심가에 위치해 연중무휴로 운영되며 리프팅(울쎄라·써마지·온다), 스킨부스터, 보톡스, 필러를 전문으로 합니다.",
-      "en": "Aurea Clinic in Myeongdong is open year-round, specializing in lifting (Ultherapy, Thermage, ONDA), skin boosters, Botox, and fillers.",
-      "zh": "AUREA皮肤科（明洞）位于首尔明洞中心，全年无休，专注于提升（超声刀·热玛吉·ONDA）、皮肤焕活、肉毒素与填充项目。"
-    },
-    "doctors": [
-      { "name": "강대영", "title": "대표원장", "spec": ["피부클리닉"] }
-    ],
-    "thumb": "hthumb/aurea.jpg"
-  },
-  {
-    "name": {
-      "kr": "타토아의원",
-      "en": "TATOA Clinic (Sinsa)",
-      "zh": "TATOA皮肤科(新沙)"
-    },
-    "dept": {
-      "kr": "피부과 (문신·반영구 제거 특화)",
-      "en": "Dermatology (Tattoo & PMU Removal)",
-      "zh": "皮肤科 (纹身·半永久去除特化)"
-    },
-    "cat": "피부·성형",
-    "badge": "NEW",
-    "treats": {
-      "kr": ["문신·반영구 제거", "레이저토닝", "제모", "보톡스·필러", "실리프팅"],
-      "en": ["Tattoo & PMU Removal", "Laser Toning", "Hair Removal", "Botox & Filler", "Thread Lift"],
-      "zh": ["纹身·半永久去除", "激光净肤", "脱毛", "肉毒·玻尿酸", "线雕提升"]
-    },
-    "hours": "Mon-Fri 10:00-20:00 / Sat 10:00-15:00 (Sun/Holiday Closed)",
-    "loc": {
-      "ko": "서울 강남구 신사역",
-      "zh": "首尔江南区·新沙站",
-      "en": "Sinsa Stn., Seoul"
-    },
-    "overview": {
-      "kr": "타토아의원은 신사역 인근 ICT타워 2층의 피부과로, 문신·반영구 제거와 레이저 피부관리에 특화되어 있습니다. 젠틀맥스프로·울쎄라·써마지·슈링크 등 장비를 보유하며 원주점·명동센터를 함께 운영합니다.",
-      "en": "TATOA Clinic, on the 2nd floor of ICT Tower near Sinsa Station, specializes in tattoo & permanent-makeup removal and laser skin care, equipped with GentleMax Pro, Ulthera, Thermage and Shurink, with branches in Wonju and Myeongdong.",
-      "zh": "TATOA皮肤科位于新沙站旁ICT大厦2层，专注纹身·半永久去除与激光皮肤管理，拥有GentleMax Pro、Ulthera、Thermage、Shurink等设备，并在原州和明洞设有分支。"
-    },
-    "doctors": [
-      { "name": "최동준", "title": "대표원장", "spec": ["문신·반영구 제거", "레이저 피부관리"] }
-    ],
-    "thumb": "hthumb/tatoa.jpg"
   },
   {
     "name": {
@@ -3325,9 +1596,24 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "cat": "피부·성형",
     "badge": "NEW",
     "treats": {
-      "kr": ["울쎄라·소프웨이브·써마지", "스킨부스터·콜라겐부스터", "보톡스·필러", "바디·웰니스 수액"],
-      "en": ["Ulthera·Sofwave·Thermage", "Skin & Collagen Boosters", "Botox & Filler", "Body Care & Wellness IV"],
-      "zh": ["Ulthera·Sofwave·Thermage提升", "皮肤·胶原蛋白助推", "肉毒·玻尿酸", "身体管理·营养输液"]
+      "kr": [
+        "울쎄라·소프웨이브·써마지",
+        "스킨부스터·콜라겐부스터",
+        "보톡스·필러",
+        "바디·웰니스 수액"
+      ],
+      "en": [
+        "Ulthera·Sofwave·Thermage",
+        "Skin & Collagen Boosters",
+        "Botox & Filler",
+        "Body Care & Wellness IV"
+      ],
+      "zh": [
+        "Ulthera·Sofwave·Thermage提升",
+        "皮肤·胶原蛋白助推",
+        "肉毒·玻尿酸",
+        "身体管理·营养输液"
+      ]
     },
     "hours": "Mon/Tue/Fri 10:00-19:00 / Thu 10:00-21:00 / Sat 10:00-17:00 (Wed·Sun Closed)",
     "loc": {
@@ -3341,7 +1627,13 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "PO:VE皮肤科于2026年9月在江南彦州路开业，以\"Pain Off, Private On\"为理念，注重疼痛管理与不与他人照面的私密动线，由院长亲自问诊并进行Ulthera、Sofwave、Thermage等提升项目，设有VIP专属空间。"
     },
     "doctors": [
-      { "name": "하재선", "title": "대표원장", "spec": ["가정의학과 전문의"] }
+      {
+        "name": "하재선",
+        "title": "대표원장",
+        "spec": [
+          "가정의학과 전문의"
+        ]
+      }
     ],
     "thumb": "hthumb/pove.jpg"
   },
@@ -3359,9 +1651,24 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "cat": "피부·성형",
     "badge": "NEW",
     "treats": {
-      "kr": ["쌍꺼풀·눈매교정·트임", "상·하안검·눈썹거상", "코성형·재수술", "리쥬란·보톡스·실리프팅"],
-      "en": ["Double Eyelid & Eye Shape", "Blepharoplasty & Brow Lift", "Rhinoplasty & Revision", "Rejuran·Botox·Thread Lifting"],
-      "zh": ["双眼皮·眼型矫正·开眼角", "上/下眼睑·提眉", "鼻整形·修复手术", "丽珠兰·肉毒·线雕提升"]
+      "kr": [
+        "쌍꺼풀·눈매교정·트임",
+        "상·하안검·눈썹거상",
+        "코성형·재수술",
+        "리쥬란·보톡스·실리프팅"
+      ],
+      "en": [
+        "Double Eyelid & Eye Shape",
+        "Blepharoplasty & Brow Lift",
+        "Rhinoplasty & Revision",
+        "Rejuran·Botox·Thread Lifting"
+      ],
+      "zh": [
+        "双眼皮·眼型矫正·开眼角",
+        "上/下眼睑·提眉",
+        "鼻整形·修复手术",
+        "丽珠兰·肉毒·线雕提升"
+      ]
     },
     "hours": "Mon-Sat / Sun·Holiday Closed",
     "loc": {
@@ -3375,19 +1682,52 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "CHAI整形外科位于江南站旁，专注眼部·鼻部整形。以\"实力的差异成就结果的差异\"为理念，由代表院长崔承浩亲自面诊与主刀，提供双眼皮·眼型矫正·上下眼睑手术、鼻整形与修复手术，以及丽珠兰·肉毒等皮肤项目。"
     },
     "doctors": [
-      { "name": "최승호", "title": "대표원장", "spec": ["눈성형", "코성형·재수술"] }
+      {
+        "name": "최승호",
+        "title": "대표원장",
+        "spec": [
+          "눈성형",
+          "코성형·재수술"
+        ]
+      }
     ],
     "thumb": "hthumb/chai.jpg"
   },
   {
-    "name": { "kr": "강남JS병원", "en": "Gangnam JS Hospital", "zh": "江南JS医院" },
-    "dept": { "kr": "정형외과·신경외과", "en": "Orthopedics · Neurosurgery", "zh": "骨科·神经外科" },
+    "name": {
+      "kr": "강남JS병원",
+      "en": "Gangnam JS Hospital",
+      "zh": "江南JS医院"
+    },
+    "dept": {
+      "kr": "정형외과·신경외과",
+      "en": "Orthopedics · Neurosurgery",
+      "zh": "骨科·神经外科"
+    },
     "cat": "정형·척추/줄기세포",
     "badge": "NEW",
     "treats": {
-      "kr": ["줄기세포 연골재생", "척추내시경", "전방십자인대 재건", "BMAC 주사", "인공관절"],
-      "en": ["Stem Cell Cartilage Regeneration", "Endoscopic Spine Surgery", "ACL Reconstruction", "BMAC Injection", "Joint Surgery"],
-      "zh": ["干细胞软骨再生", "脊柱内镜", "前交叉韧带重建", "BMAC注射", "关节手术"]
+      "kr": [
+        "줄기세포 연골재생",
+        "척추내시경",
+        "전방십자인대 재건",
+        "BMAC 주사",
+        "인공관절"
+      ],
+      "en": [
+        "Stem Cell Cartilage Regeneration",
+        "Endoscopic Spine Surgery",
+        "ACL Reconstruction",
+        "BMAC Injection",
+        "Joint Surgery"
+      ],
+      "zh": [
+        "干细胞软骨再生",
+        "脊柱内镜",
+        "前交叉韧带重建",
+        "BMAC注射",
+        "关节手术"
+      ]
     },
     "hours": "Mon-Fri 09:00-18:00 / Sat 09:00-13:00",
     "loc": {
@@ -3401,20 +1741,58 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "江南JS医院（Gangnam JS Hospital）位于首尔江南道谷路，是脊柱·关节专科医院，专注于干细胞软骨再生（Cartistem）、脊柱内镜手术、运动损伤及关节治疗，设有国际患者专属诊疗服务。"
     },
     "doctors": [
-      { "name": "송준섭", "title": "대표원장", "spec": ["정형외과 전문의"] },
-      { "name": "김나민", "title": "병원장", "spec": ["정형외과"] }
+      {
+        "name": "송준섭",
+        "title": "대표원장",
+        "spec": [
+          "정형외과 전문의"
+        ]
+      },
+      {
+        "name": "김나민",
+        "title": "병원장",
+        "spec": [
+          "정형외과"
+        ]
+      }
     ],
     "thumb": "hthumb/gnjs.jpg"
-  },
+  },
   {
-    "name": { "kr": "연세안마취통증의학과", "en": "Yonsei An Pain Clinic", "zh": "延世安疼痛医学科" },
-    "dept": { "kr": "마취통증의학과(비수술 통증치료)", "en": "Anesthesiology & Pain Medicine", "zh": "麻醉疼痛医学科(非手术治疗)" },
+    "name": {
+      "kr": "연세안마취통증의학과",
+      "en": "Yonsei An Pain Clinic",
+      "zh": "延世安疼痛医学科"
+    },
+    "dept": {
+      "kr": "마취통증의학과(비수술 통증치료)",
+      "en": "Anesthesiology & Pain Medicine",
+      "zh": "麻醉疼痛医学科(非手术治疗)"
+    },
     "cat": "정형·척추",
     "badge": "NEW",
     "treats": {
-      "kr": ["신경차단·하이드로디섹션", "도수치료", "체외충격파", "척추 감압치료", "PDRN·프롤로 주사"],
-      "en": ["Nerve Block & Hydrodissection", "Manual Therapy", "ESWT (Shockwave)", "Spinal Decompression", "PDRN & Prolotherapy"],
-      "zh": ["神经阻滞·神经水分离", "徒手治疗", "体外冲击波", "脊柱减压治疗", "PDRN·增生疗法注射"]
+      "kr": [
+        "신경차단·하이드로디섹션",
+        "도수치료",
+        "체외충격파",
+        "척추 감압치료",
+        "PDRN·프롤로 주사"
+      ],
+      "en": [
+        "Nerve Block & Hydrodissection",
+        "Manual Therapy",
+        "ESWT (Shockwave)",
+        "Spinal Decompression",
+        "PDRN & Prolotherapy"
+      ],
+      "zh": [
+        "神经阻滞·神经水分离",
+        "徒手治疗",
+        "体外冲击波",
+        "脊柱减压治疗",
+        "PDRN·增生疗法注射"
+      ]
     },
     "hours": "Mon/Wed/Fri 09:00-20:00 · Tue/Thu 09:00-18:00 · Sat 09:00-14:00",
     "loc": {
@@ -3428,79 +1806,107 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "延世安疼痛医学科（Yonsei An Pain Clinic）位于富川驿谷站1号出口旁驿谷儒林大厦3层，是疼痛专科医院。疼痛医学科·神经外科·骨科医生联合诊疗，经精密初诊评估（X光·脑电波·脉搏检查）后提供神经阻滞·徒手治疗·体外冲击波·脊柱减压等非手术个性化治疗。常驻英文医疗翻译，支持机场接机及国际保险理赔材料。"
     },
     "doctors": [
-      { "name": "조남룡", "title": "대표원장", "spec": ["신경외과"] },
-      { "name": "김지웅", "title": "원장", "spec": ["통증의학"] },
-      { "name": "이지은", "title": "원장", "spec": ["마취통증의학과"] },
-      { "name": "송신미", "title": "원장", "spec": ["마취통증의학과"] },
-      { "name": "김계숙", "title": "원장", "spec": ["통증의학"] },
-      { "name": "이상은", "title": "원장", "spec": ["통증의학"] },
-      { "name": "최영서", "title": "원장", "spec": ["통증의학"] },
-      { "name": "박해리", "title": "원장", "spec": ["통증의학"] },
-      { "name": "최낙철", "title": "원장", "spec": ["통증의학"] }
+      {
+        "name": "조남룡",
+        "title": "대표원장",
+        "spec": [
+          "신경외과"
+        ]
+      },
+      {
+        "name": "김지웅",
+        "title": "원장",
+        "spec": [
+          "통증의학"
+        ]
+      },
+      {
+        "name": "이지은",
+        "title": "원장",
+        "spec": [
+          "마취통증의학과"
+        ]
+      },
+      {
+        "name": "송신미",
+        "title": "원장",
+        "spec": [
+          "마취통증의학과"
+        ]
+      },
+      {
+        "name": "김계숙",
+        "title": "원장",
+        "spec": [
+          "통증의학"
+        ]
+      },
+      {
+        "name": "이상은",
+        "title": "원장",
+        "spec": [
+          "통증의학"
+        ]
+      },
+      {
+        "name": "최영서",
+        "title": "원장",
+        "spec": [
+          "통증의학"
+        ]
+      },
+      {
+        "name": "박해리",
+        "title": "원장",
+        "spec": [
+          "통증의학"
+        ]
+      },
+      {
+        "name": "최낙철",
+        "title": "원장",
+        "spec": [
+          "통증의학"
+        ]
+      }
     ],
     "thumb": "hthumb/yonseian.jpg"
   },
   {
-    "name": { "kr": "멜로우피부과의원 청담점", "en": "Mellow Dermatology Clinic Cheongdam", "zh": "Mellow皮肤科(清潭店)" },
-    "dept": { "kr": "피부과", "en": "Dermatology", "zh": "皮肤科" },
+    "name": {
+      "kr": "아도의원",
+      "en": "ADO Clinic",
+      "zh": "ADO皮肤科"
+    },
+    "dept": {
+      "kr": "피부과(안티에이징·리프팅)",
+      "en": "Dermatology (Anti-aging & Lifting)",
+      "zh": "皮肤科(抗衰·提升)"
+    },
     "cat": "피부·성형",
     "badge": "NEW",
     "treats": {
-      "kr": ["써마지·울쎄라피 프라임", "온다·소프라노 티타늄", "스킨부스터·리쥬란", "보톡스·필러", "피코토닝·색소"],
-      "en": ["Thermage & Ultherapy Prime", "ONDA & Soprano Titanium", "Skin Boosters & Rejuran", "Botox & Filler", "Pico Toning & Pigment"],
-      "zh": ["热玛吉·超声炮Prime", "ONDA·Soprano", "皮肤管理·丽珠兰", "肉毒素·玻尿酸", "皮秒净肤·色素"]
-    },
-    "hours": "Mon 10:00-20:00 · Tue-Thu 10:00-19:00 · Fri 10:00-21:00 · Sat 10:00-16:00",
-    "loc": {
-      "ko": "서울 강남구 도산대로 429, 2층",
-      "zh": "首尔江南·清潭",
-      "en": "Cheongdam, Seoul"
-    },
-    "overview": {
-      "kr": "멜로우피부과의원 청담점(Mellow Dermatology Clinic)은 도산대로 429에 위치한 피부과 전문 의원입니다. 대표원장 박복원을 중심으로 써마지·울쎄라피 프라임·온다 등 리프팅과 멜로우부스터·리투오·레이어드 프로그램 등 맞춤 스킨부스터, 4개 브랜드 보톡스와 필러, 피코토닝 색소치료·제모까지 폭넓은 피부 프로그램을 운영합니다. 금요일 야간(21시)·토요일 진료로 방문이 편리합니다.",
-      "en": "Mellow Dermatology Clinic Cheongdam, at 429 Dosan-daero, is a dermatology specialty clinic led by Dr. Park Bok-won. It offers lifting (Thermage, Ultherapy Prime, ONDA), customized skin boosters (Mellow Booster, Re2O, layered programs), four brands of botulinum toxin, fillers, pico toning for pigmentation, and hair removal. Open late on Fridays (9pm) and on Saturdays.",
-      "zh": "Mellow皮肤科清潭店位于岛山大路429号，是皮肤科专科医院，由代表院长朴福源主诊。提供热玛吉·超声炮Prime·ONDA等提升项目、Mellow定制水光·Re2O·分层水光等皮肤管理，四大品牌肉毒素与玻尿酸填充、皮秒净肤色素治疗及脱毛等全方位皮肤项目。周五夜间(21点)·周六也可就诊。"
-    },
-    "doctors": [
-      { "name": "박복원", "title": "대표원장", "spec": ["피부과"] }
-    ],
-    "thumb": "hthumb/mellow.jpg"
-  },
-  {
-    "name": { "kr": "더플러스성형외과", "en": "THE PLUS Plastic Surgery", "zh": "THE PLUS整形外科" },
-    "dept": { "kr": "성형외과(코 재건 특화)", "en": "Plastic Surgery (Nasal Reconstruction)", "zh": "整形外科(鼻部再造)" },
-    "cat": "피부·성형",
-    "badge": "NEW",
-    "treats": {
-      "kr": ["코 재건술", "코 재수술", "코성형", "안면윤곽", "눈성형"],
-      "en": ["Nasal Reconstruction", "Revision Rhinoplasty", "Rhinoplasty", "Facial Contouring", "Eye Surgery"],
-      "zh": ["鼻部再造手术", "鼻修复手术", "鼻整形", "面部轮廓", "眼部整形"]
-    },
-    "hours": "",
-    "loc": {
-      "ko": "서울 강남구 가로수길 9, 3-4층 (신사동)",
-      "zh": "首尔新沙·林荫路",
-      "en": "Garosu-gil, Sinsa, Seoul"
-    },
-    "overview": {
-      "kr": "더플러스성형외과(THE PLUS Plastic Surgery)는 신사 가로수길에 위치한 성형외과로, 코 재건술·코 재수술 등 난도 높은 코 수술에 특화되어 있습니다. 정재용 원장을 비롯한 성형외과 의료진이 직접 상담·집도하며, 안면윤곽·눈·가슴 성형도 함께 진료합니다. 영어·중국어·일본어·러시아어·태국어 사이트를 운영할 만큼 해외환자 진료 경험이 풍부합니다.",
-      "en": "THE PLUS Plastic Surgery, on Garosu-gil in Sinsa, specializes in advanced nose surgery — nasal reconstruction and revision rhinoplasty — alongside facial contouring, eye and breast surgery. Led by Dr. Jung Jae-yong, the clinic has extensive experience with international patients, running dedicated English, Chinese, Japanese, Russian and Thai websites.",
-      "zh": "THE PLUS整形外科位于新沙洞林荫路，专注高难度鼻部手术——鼻部再造与鼻修复手术，同时开展面部轮廓·眼部·胸部整形。由郑在容院长等专科医生亲自面诊与主刀，运营英·中·日·俄·泰多语官网，国际患者诊疗经验丰富。"
-    },
-    "doctors": [
-      { "name": "정재용", "title": "원장", "spec": ["코성형·코재건"] }
-    ],
-    "thumb": "hthumb/theplus.jpg"
-  },
-  {
-    "name": { "kr": "아도의원", "en": "ADO Clinic", "zh": "ADO皮肤科" },
-    "dept": { "kr": "피부과(안티에이징·리프팅)", "en": "Dermatology (Anti-aging & Lifting)", "zh": "皮肤科(抗衰·提升)" },
-    "cat": "피부·성형",
-    "badge": "NEW",
-    "treats": {
-      "kr": ["울쎄라피 프라임·써마지 FLX", "스컬트라·리쥬란", "필러·보톡스", "줄기세포 프로그램", "온다·포텐자"],
-      "en": ["Ultherapy Prime & Thermage FLX", "Sculptra & Rejuran", "Filler & Botox", "Stem Cell Programs", "ONDA & Potenza"],
-      "zh": ["超声炮Prime·凤凰电波FLX", "童颜针·丽珠兰", "玻尿酸·肉毒素", "干细胞项目", "ONDA·黄金微针"]
+      "kr": [
+        "울쎄라피 프라임·써마지 FLX",
+        "스컬트라·리쥬란",
+        "필러·보톡스",
+        "줄기세포 프로그램",
+        "온다·포텐자"
+      ],
+      "en": [
+        "Ultherapy Prime & Thermage FLX",
+        "Sculptra & Rejuran",
+        "Filler & Botox",
+        "Stem Cell Programs",
+        "ONDA & Potenza"
+      ],
+      "zh": [
+        "超声炮Prime·凤凰电波FLX",
+        "童颜针·丽珠兰",
+        "玻尿酸·肉毒素",
+        "干细胞项目",
+        "ONDA·黄金微针"
+      ]
     },
     "hours": "Mon-Fri 10:30-21:00 · Sat/Holidays 10:30-19:00",
     "loc": {
@@ -3514,183 +1920,55 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "ADO皮肤科(아도의원)位于新论岘站4号出口旁RDL大厦3-4层，由代表院长朴承源主诊。涵盖超声炮Prime·凤凰电波FLX·ONDA提升、SCULPTRA童颜针·丽珠兰再生、玻尿酸·肉毒素及干细胞项目等全方位抗衰内容，设副院长/代表院长双轨诊疗与院长签名项目。官网中韩双语运营，中国顾客接待经验丰富，平日营业至晚9点。"
     },
     "doctors": [
-      { "name": "박승원", "title": "대표원장", "spec": ["피부과"] }
+      {
+        "name": "박승원",
+        "title": "대표원장",
+        "spec": [
+          "피부과"
+        ]
+      }
     ],
     "thumb": "hthumb/ado.jpg"
   },
   {
-    "name": { "kr": "디렉터의원", "en": "Director Clinic", "zh": "黛瑞丝皮肤科" },
-    "dept": { "kr": "피부과", "en": "Dermatology", "zh": "皮肤科" },
-    "cat": "피부·성형",
-    "badge": "NEW",
-    "treats": {
-      "kr": ["리프팅(울쎄라·써마지·온다·인모드)", "스킨부스터(리쥬란·쥬베룩·엑소좀)", "보톡스·필러", "모공·흉터·여드름", "색소·홍조 레이저", "바디·체형관리"],
-      "en": ["Lifting (Ulthera·Thermage·Onda·InMode)", "Skinbooster (Rejuran·Juvelook·Exosome)", "Botox·Filler", "Pores·Scars·Acne", "Pigment·Redness Laser", "Body·Shaping"],
-      "zh": ["提升(超声刀·热玛吉·Onda·inmode)", "胶原蛋白水光(丽珠兰·Juvelook·外泌体)", "肉毒·玻尿酸", "毛孔·疤痕·痘痘", "色素·泛红激光", "身体·体型管理"]
+    "name": {
+      "kr": "더봄 퍼스널컬러 메이크업 명동",
+      "en": "The Bom Personal Color & Makeup",
+      "zh": "The Bom个人色彩·妆容(明洞)"
     },
-    "hours": "Mon-Sat (by appointment)",
-    "loc": {
-      "ko": "서울 강남구 (강남점)",
-      "zh": "首尔江南·江南总院",
-      "en": "Gangnam, Seoul"
+    "dept": {
+      "kr": "퍼스널컬러·메이크업",
+      "en": "Personal Color & Makeup",
+      "zh": "个人色彩·妆容"
     },
-    "overview": {
-      "kr": "디렉터의원(DIRECTOR)은 강남점을 중심으로 운영되는 피부과 네트워크로, 피부과 전문의 이지민 대표원장을 비롯한 원장진이 1:1 맞춤 진료를 제공합니다. 울쎄라·써마지·온다·인모드 리프팅, 리쥬란·쥬베룩·엑소좀 스킨부스터, 보톡스·필러, 모공·흉터·여드름, 색소·홍조 레이저, 바디·체형관리까지 폭넓게 다루며 '과하지 않은 균형(BALANCE, DIRECTED)'을 지향합니다.",
-      "en": "Director Clinic (DIRECTOR), centered on its Gangnam flagship, is a dermatology network where board-certified dermatologist Dr. Lee Ji-min and fellow doctors provide 1:1 personalized care — lifting (Ulthera, Thermage, Onda, InMode), skin boosters (Rejuran, Juvelook, exosome), botox and filler, pores/scars/acne, pigment and redness lasers, and body/shape management — under its 'BALANCE, DIRECTED' philosophy of natural, individually designed results.",
-      "zh": "黛瑞丝皮肤科(DIRECTOR)以江南总院为中心运营，由皮肤科专科医生李智敏代表院长及多位院长提供一对一定制诊疗。涵盖超声刀·热玛吉·Onda·inmode提升，丽珠兰·Juvelook·外泌体胶原蛋白水光，肉毒·玻尿酸，毛孔·疤痕·痘痘，色素·泛红激光及身体·体型管理，秉持'BALANCE, DIRECTED'的自然平衡理念。"
-    },
-    "doctors": [
-      { "name": "이지민", "title": "대표원장", "spec": ["피부과 전문의", "흉터·여드름·재건", "국제흉터학회(AREC) 회장"] },
-      { "name": "김동섭", "title": "원장", "spec": ["서울대 의대", "울쎄라·래디어스·쥬베룩"] },
-      { "name": "이서원", "title": "원장", "spec": ["인하대 의대", "윤곽·필러·안티에이징"] },
-      { "name": "강승희", "title": "원장", "spec": ["고려대·전북대 의전원", "스컬트라·고난도 필러"] },
-      { "name": "김명은", "title": "원장", "spec": ["연세대·이화 의전원", "바디·체형·항노화"] },
-      { "name": "김하경", "title": "원장", "spec": ["울산대 의대", "특수부위 필러·색소레이저"] }
-    ],
-    "thumb": "hthumb/director.jpg"
-  },
-  {
-    "name": { "kr": "골든발란스의원", "en": "Golden Balance (NEOK Aesthetic)", "zh": "Golden Balance 养生馆(念 NEOK)" },
-    "dept": { "kr": "양생·에스테틱 스파", "en": "Korean Wellness & Aesthetic Spa", "zh": "养生·美容SPA" },
     "cat": "기타 서비스",
     "badge": "NEW",
     "treats": {
-      "kr": ["헤드·바디 리추얼", "수기·온열·골드 테라피", "페이스 리추얼(윤곽·미백·재생)", "전신 미백", "멤버십"],
-      "en": ["Head·Body Ritual", "Manual·Hot-stone·Gold Therapy", "Face Ritual", "Full-body Brightening", "Membership"],
-      "zh": ["头·身体护理", "手法·热石·黄金疗法", "面部护理(轮廓·美白·再生)", "全身美白", "会员制"]
+      "kr": [
+        "퍼스널컬러 진단",
+        "메이크업",
+        "퍼스널컬러+메이크업",
+        "영·중·일 통역"
+      ],
+      "en": [
+        "Personal Color Analysis",
+        "Makeup",
+        "Color + Makeup",
+        "EN/CN/JP Interpreter"
+      ],
+      "zh": [
+        "个人色彩诊断",
+        "妆容",
+        "个人色彩+妆容",
+        "英·中·日翻译"
+      ]
     },
     "hours": "",
-    "loc": { "ko": "서울 (주소 확인 필요)", "zh": "首尔", "en": "Seoul" },
-    "overview": {
-      "kr": "골든발란스의원(브랜드 넋·NEOK AESTHETIC)은 한국식 양생에서 영감을 받은 프리미엄 에스테틱·스파로, 헤드·바디 리추얼, 수기·온열·골드 테라피, 얼굴 윤곽·미백·재생 페이스 리추얼과 전신 미백, 멤버십을 운영합니다. 모든 항목 부가세 10% 별도.",
-      "en": "Golden Balance (brand NEOK AESTHETIC) is a premium aesthetic spa inspired by Korean 'yangsaeng' wellness, offering head/body rituals, manual/hot-stone/gold therapies, facial contouring, brightening and regeneration rituals and full-body brightening, with a membership program. 10% VAT added.",
-      "zh": "Golden Balance(品牌 念·NEOK AESTHETIC)是以韩国式养生为灵感的高端美容·SPA，提供头部·身体护理、手法/热石/黄金疗法、面部轮廓·美白·再生护理及全身美白，并设有会员制。所有项目另加10%增值税。"
-    },
-    "doctors": [],
-    "thumb": "hthumb/goldenbalance.jpg"
-  },
-  {
-    "name": { "kr": "플랜에스의원", "en": "PLAN;S Clinic", "zh": "PLAN;S 诊所" },
-    "dept": { "kr": "다이어트·바디컨투어링", "en": "Diet & Body Contouring", "zh": "减肥·身体塑形" },
-    "cat": "다이어트",
-    "badge": "NEW",
-    "treats": {
-      "kr": ["다이어트약 프로그램", "뱃주사·HIGH뱃주사(지방분해)", "온다·티타늄 리프팅", "엠스컬프네오·트리플바디", "보톡스·스킨부스터"],
-      "en": ["Diet Medication Program", "Lipolysis Injection", "Onda·Titanium Lifting", "Emsculpt Neo·Triple Body", "Botox·Skinbooster"],
-      "zh": ["减肥药程序", "溶脂针·High溶脂针", "Onda·钛金提拉", "Emsculpt Neo·Triple Body", "肉毒·水光"]
-    },
-    "hours": "",
-    "loc": { "ko": "서울 (주소 확인 필요)", "zh": "首尔", "en": "Seoul" },
-    "overview": {
-      "kr": "플랜에스의원(PLAN;S CLINIC)은 다이어트약 프로그램·뱃주사/HIGH뱃주사(지방분해)·온다/티타늄 리프팅·엠스컬프네오·트리플바디·보톡스·스킨부스터 중심의 바디컨투어링 클리닉으로, FACE-2-BODY 온다 스페셜패키지와 온다×HIGH뱃주사 패키지를 운영합니다. 모든 처방·시술 VAT 별도.",
-      "en": "PLAN;S Clinic ('Standard of beauty') focuses on body contouring — diet-medication programs, lipolysis and HIGH lipolysis injections, Onda and Titanium lifting, Emsculpt Neo, Triple Body, botox and skin boosters — with FACE-2-BODY Onda and Onda x HIGH lipolysis packages. VAT added.",
-      "zh": "PLAN;S Clinic(Standard of beauty)是以减肥·身体塑形为中心的诊所，提供减肥药程序、溶脂针/High溶脂针、Onda/钛金提拉、Emsculpt Neo、Triple Body、肉毒及水光，并有Onda FACE-2-BODY及Onda×High溶脂针套餐。所有项目另加增值税。"
-    },
-    "doctors": [],
-    "thumb": "hthumb/plans.jpg"
-  },
-  {
-    "name": { "kr": "미병원", "en": "Mee Hospital", "zh": "美医院(Mee Hospital)" },
-    "dept": { "kr": "줄기세포·세포치료", "en": "Stem Cell & Cell Therapy", "zh": "干细胞·细胞治疗" },
-    "cat": "줄기세포",
-    "badge": "NEW",
-    "treats": {
-      "kr": ["중간엽줄기세포(동종·자가 MSC)", "NK세포 면역치료", "PRP·PRF", "정맥·관절·척수강 투여", "미토콘드리아 활성화 세포"],
-      "en": ["Mesenchymal Stem Cells (MSC)", "NK Cell Immunotherapy", "PRP·PRF", "IV / Joint / Intrathecal", "Mitochondria-Activated Cells"],
-      "zh": ["间充质干细胞(异体·自体MSC)", "NK细胞免疫治疗", "PRP·PRF", "静脉·关节·鞘内给药", "线粒体活化细胞"]
-    },
-    "hours": "",
-    "loc": { "ko": "서울 (주소 확인 필요)", "zh": "首尔", "en": "Seoul" },
-    "overview": {
-      "kr": "미병원(Mee Hospital)은 줄기세포·세포치료 중심 의료기관으로, 미토콘드리아 활성화 동종·자가 중간엽줄기세포(MSC)와 NK세포 면역치료, 자가 PRP/PRF를 제공합니다. '세포제제 기본비용 + 투여경로별 추가비용' 구조이며 정맥·관절강·척수강·경동맥·피부 등 다양한 투여가 가능합니다.",
-      "en": "Mee Hospital focuses on stem-cell and cell therapy — mitochondria-activated allogeneic/autologous mesenchymal stem cells (MSC), NK-cell immunotherapy and autologous PRP/PRF. Pricing combines a cell-product base fee with a route-of-administration surcharge (IV, intra-articular, intrathecal, intra-carotid, skin/scalp).",
-      "zh": "美医院(Mee Hospital)是以干细胞·细胞治疗为中心的医疗机构，提供线粒体活化的异体/自体间充质干细胞(MSC)、NK细胞免疫治疗及自体PRP/PRF。采用'细胞制剂基础费用+给药途径附加费用'的收费方式，支持静脉·关节腔·鞘内·颈动脉·皮肤等多种给药。"
-    },
-    "doctors": [],
-    "thumb": "hthumb/mee.jpg"
-  },
-  {
-    "name": { "kr": "마블성형외과의원", "en": "Marble Plastic Surgery", "zh": "Marble整形外科" },
-    "dept": { "kr": "성형외과(가슴·코·눈)", "en": "Plastic Surgery (Breast·Nose·Eyes)", "zh": "整形外科(胸·鼻·眼)" },
-    "cat": "피부·성형",
-    "badge": "NEW",
-    "treats": {
-      "kr": ["가슴성형(모티바·바운스)", "코성형·코재수술", "쌍꺼풀·눈매교정", "눈 재수술", "안면거상·동안성형"],
-      "en": ["Breast Augmentation (Motiva·Bounce)", "Rhinoplasty & Revision", "Double Eyelid & Eye Shape", "Revision Eye Surgery", "Facial Lifting"],
-      "zh": ["胸部整形(Motiva·Bounce)", "鼻整形·鼻修复", "双眼皮·眼型矫正", "眼部修复手术", "面部提升·抗衰"]
-    },
-    "hours": "Mon-Fri 10:00-19:00 · Sat 10:00-16:00",
     "loc": {
-      "ko": "서울 서초구 강남대로 435 주류성빌딩 3층 (강남역·신논현역 도보5분)",
-      "zh": "首尔瑞草·江南站",
-      "en": "Gangnam Station, Seoul"
+      "ko": "서울 중구 퇴계로18길 7 (명동)",
+      "zh": "首尔明洞",
+      "en": "Myeongdong, Seoul"
     },
-    "overview": {
-      "kr": "마블성형외과의원(Marble Plastic Surgery)은 강남역·신논현역 인근 서초구 강남대로 435 주류성빌딩 3층에 위치한 성형외과로, 가슴성형(모티바·바운스 등 보형물)·코성형·눈성형을 중심으로 안면거상·윤곽·바디성형까지 폭넓게 진료합니다. 성형외과 전문의 서일범 대표원장과 김준형 원장, 마취통증의학과 박소영 원장이 함께하며, 마블TV 등 콘텐츠로 시술 정보를 공개하고 안전 사후케어 시스템을 운영합니다. 평일 19시, 토요일 16시까지 진료합니다.",
-      "en": "Marble Plastic Surgery, on the 3rd floor of Juryuseong Building at 435 Gangnam-daero in Seocho (5 min from Gangnam and Sinnonhyeon stations), focuses on breast augmentation (Motiva, Bounce and other implants), rhinoplasty and eye surgery, while also offering facial lifting, contouring and body procedures. Led by plastic surgeon Dr. Seo Il-beom with Dr. Kim Jun-hyeong and anesthesiologist Dr. Park So-young, the clinic shares treatment information openly and runs a dedicated post-op safety care system. Open weekdays until 7pm and Saturdays until 4pm.",
-      "zh": "Marble整形外科位于瑞草区江南大道435酒类城大厦3层(江南站·新论岘站步行5分钟)，以胸部整形(Motiva·Bounce等假体)·鼻整形·眼部整形为主，并涵盖面部提升·轮廓·身体整形。由整形外科专科医生徐一凡代表院长、金俊亨院长及麻醉疼痛医学科朴昭映院长坐诊，通过Marble TV等内容公开手术信息，运营安全术后护理系统。平日营业至19点，周六至16点。"
-    },
-    "doctors": [
-      { "name": "서일범", "title": "대표원장", "spec": ["성형외과 전문의", "가슴성형", "코·눈성형"] },
-      { "name": "김준형", "title": "원장", "spec": ["성형외과 전문의"] },
-      { "name": "박소영", "title": "원장", "spec": ["마취통증의학과 전문의"] }
-    ],
-    "thumb": "hthumb/marble.jpg"
-  },
-  {
-    "name": { "kr": "다이트한의원 강남점", "en": "DAEAT Korean Medicine Clinic", "zh": "DAEAT韩方减肥医院" },
-    "dept": { "kr": "한방 다이어트", "en": "Korean Medicine Diet", "zh": "韩方减肥" },
-    "cat": "다이어트",
-    "badge": "NEW",
-    "treats": {
-      "kr": ["한방 다이어트", "당질조절 다이어트", "한약 처방", "1:1 밀착 코칭", "요요방지 관리"],
-      "en": ["Korean Medicine Diet", "Low-carb Program", "Herbal Prescription", "1:1 Coaching", "Anti-yoyo Care"],
-      "zh": ["韩方减肥", "控糖减肥", "中药调理", "1:1贴身指导", "防反弹管理"]
-    },
-    "hours": "",
-    "loc": { "ko": "서울 강남구 선릉로 803 메타타워 4~5층", "zh": "首尔江南·宣陵路", "en": "Gangnam, Seoul" },
-    "overview": {
-      "kr": "다이트한의원 강남점은 서울 강남구 선릉로 803 메타타워에 위치한 한방 다이어트 전문 한의원으로, 방민우 대표원장이 당질조절 다이어트와 개인별 한약 처방, 1:1 밀착 코칭, 요요방지 관리까지 체계적으로 진행합니다. 무리한 절식이 아닌 체질·생활습관 기반의 한방 관리로 건강한 감량을 돕습니다.",
-      "en": "DAEAT Korean Medicine Clinic (Gangnam), at Meta Tower, 803 Seolleung-ro in Gangnam, is a Korean-medicine weight-loss clinic. Led by Dr. Bang Min-woo, it combines low-carb dieting, personalized herbal prescriptions, one-on-one coaching and anti-rebound care to help clients lose weight healthily.",
-      "zh": "DAEAT韩方减肥医院(江南店)位于首尔江南区宣陵路803 Meta Tower，是韩方减肥专科韩医院。方旻宇代表院长通过控糖减肥、个人化中药处方、1:1贴身指导及防反弹管理，帮助顾客健康减重，而非极端节食。"
-    },
-    "doctors": [
-      { "name": "방민우", "title": "대표원장", "spec": ["한의사", "한방 다이어트"] }
-    ],
-    "thumb": "hthumb/daeatdiet.jpg"
-  },
-  {
-    "name": { "kr": "365mc 강남본점", "en": "365mc Liposuction (Gangnam)", "zh": "365mc吸脂减肥(江南本院)" },
-    "dept": { "kr": "비만·지방흡입", "en": "Obesity & Liposuction", "zh": "肥胖·吸脂" },
-    "cat": "다이어트",
-    "badge": "NEW",
-    "treats": {
-      "kr": ["지방흡입", "람스(LAMS)", "무한람스", "AI 지방흡입", "대용량 지방흡입", "지방분해주사"],
-      "en": ["Liposuction", "LAMS", "Unlimited LAMS", "AI Liposuction", "High-volume Liposuction", "Fat-dissolving Injection"],
-      "zh": ["吸脂手术", "LAMS", "无限LAMS", "AI吸脂", "大容量吸脂", "溶脂针"]
-    },
-    "hours": "",
-    "loc": { "ko": "서울 강남 (강남역 인근)", "zh": "首尔江南", "en": "Gangnam, Seoul" },
-    "overview": {
-      "kr": "365mc는 지방흡입·람스(LAMS)에 특화된 비만 클리닉 네트워크로, 강남본점을 비롯해 전국에 병원·의원을 운영합니다. 무한람스, AI 기반 지방흡입, 대용량 지방흡입, 지방분해주사 등 비만·체형 관리에 집중하며 다수의 지방흡입 수술 경험을 보유하고 있습니다.",
-      "en": "365mc is an obesity-clinic network specializing in liposuction and LAMS (fat-reduction surgery), operating its Gangnam main branch and clinics nationwide. It focuses on weight and body management — unlimited LAMS, AI-assisted and high-volume liposuction, and fat-dissolving injections.",
-      "zh": "365mc是专注吸脂与LAMS(减脂手术)的肥胖专科网络，在江南本院及全国运营医院与医院。提供无限LAMS、AI吸脂、大容量吸脂、溶脂针等肥胖·体型管理项目，拥有丰富的吸脂手术经验。"
-    },
-    "doctors": [],
-    "thumb": "hthumb/365mc.jpg"
-  },
-  {
-    "name": { "kr": "더봄 퍼스널컬러 메이크업 명동", "en": "The Bom Personal Color & Makeup", "zh": "The Bom个人色彩·妆容(明洞)" },
-    "dept": { "kr": "퍼스널컬러·메이크업", "en": "Personal Color & Makeup", "zh": "个人色彩·妆容" },
-    "cat": "기타 서비스",
-    "badge": "NEW",
-    "treats": {
-      "kr": ["퍼스널컬러 진단", "메이크업", "퍼스널컬러+메이크업", "영·중·일 통역"],
-      "en": ["Personal Color Analysis", "Makeup", "Color + Makeup", "EN/CN/JP Interpreter"],
-      "zh": ["个人色彩诊断", "妆容", "个人色彩+妆容", "英·中·日翻译"]
-    },
-    "hours": "",
-    "loc": { "ko": "서울 중구 퇴계로18길 7 (명동)", "zh": "首尔明洞", "en": "Myeongdong, Seoul" },
     "overview": {
       "kr": "더봄 퍼스널컬러 메이크업 명동은 서울 명동(중구 퇴계로18길)에 위치한 퍼스널컬러·메이크업 스튜디오로, 1:1~그룹 퍼스널컬러 진단과 메이크업을 제공합니다. 영어·중국어·일본어 통역이 가능해 외국인 방문객도 편하게 이용할 수 있습니다.",
       "en": "The Bom Personal Color & Makeup, in Myeongdong, Seoul, offers 1:1 and group personal-color analysis and makeup, with English, Chinese and Japanese interpretation for international visitors.",
@@ -3700,17 +1978,47 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "thumb": "hthumb/thebom.jpg"
   },
   {
-    "name": { "kr": "보그헤어 홍대점", "en": "VOG HAIR Hongdae", "zh": "VOG HAIR 弘大" },
-    "dept": { "kr": "헤어살롱(외국인·무슬림 프렌들리)", "en": "Hair Salon (Foreigner·Muslim-friendly)", "zh": "发廊(外国人·穆斯林友好)" },
+    "name": {
+      "kr": "보그헤어 홍대점",
+      "en": "VOG HAIR Hongdae",
+      "zh": "VOG HAIR 弘大"
+    },
+    "dept": {
+      "kr": "헤어살롱(외국인·무슬림 프렌들리)",
+      "en": "Hair Salon (Foreigner·Muslim-friendly)",
+      "zh": "发廊(外国人·穆斯林友好)"
+    },
     "cat": "기타 서비스",
     "badge": "NEW",
     "treats": {
-      "kr": ["커트·펌·컬러", "헤어 클리닉", "헤드스파", "외국인 헤어 메이크오버", "프라이빗룸"],
-      "en": ["Cut·Perm·Color", "Hair Clinic", "Head Spa", "Foreigner Makeover", "Private Room"],
-      "zh": ["剪发·烫发·染发", "头发护理", "头皮SPA", "外国人造型改造", "私人包间"]
+      "kr": [
+        "커트·펌·컬러",
+        "헤어 클리닉",
+        "헤드스파",
+        "외국인 헤어 메이크오버",
+        "프라이빗룸"
+      ],
+      "en": [
+        "Cut·Perm·Color",
+        "Hair Clinic",
+        "Head Spa",
+        "Foreigner Makeover",
+        "Private Room"
+      ],
+      "zh": [
+        "剪发·烫发·染发",
+        "头发护理",
+        "头皮SPA",
+        "外国人造型改造",
+        "私人包间"
+      ]
     },
     "hours": "",
-    "loc": { "ko": "서울 마포구 양화로18안길 7 (홍대·동교동)", "zh": "首尔弘大", "en": "Hongdae, Seoul" },
+    "loc": {
+      "ko": "서울 마포구 양화로18안길 7 (홍대·동교동)",
+      "zh": "首尔弘大",
+      "en": "Hongdae, Seoul"
+    },
     "overview": {
       "kr": "보그헤어(VOG HAIR) 홍대는 서울 홍대(마포구 동교동)의 헤어살롱으로, 홍대점·홍대거리점·홍대라운지점 3개 지점을 운영합니다. 외국인 영어 응대·무슬림 프렌들리·프라이빗룸·헤드스파를 갖추고 커트·펌·컬러·클리닉과 외국인 메이크오버를 전문으로 합니다. 비건 제품을 보유합니다.",
       "en": "VOG HAIR Hongdae is a foreigner- and Muslim-friendly hair salon in Hongdae (Mapo), Seoul, with three branches, private rooms and head spa — cuts, perms, color, hair clinic and makeovers for international guests, with vegan products.",
@@ -3720,46 +2028,46 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "thumb": "hthumb/vog.jpg"
   },
   {
-    "name": { "kr": "월드케이팝센터", "en": "World K-POP Center", "zh": "世界K-POP中心" },
-    "dept": { "kr": "K-POP 체험·공연", "en": "K-POP Experience", "zh": "K-POP体验·演出" },
-    "cat": "기타 서비스",
-    "badge": "NEW",
-    "treats": {
-      "kr": ["K-POP 체험 프로그램","댄스·보컬 클래스","오디션·교육","공연·콘서트 관람","스타 메이크업·의상 체험"],
-      "en": ["K-POP Experience","Dance·Vocal Class","Audition·Training","Concert Viewing","Star Styling"],
-      "zh": ["K-POP体验项目","舞蹈·声乐课程","选拔·培训","演出·演唱会观赏","明星妆造体验"]
+    "name": {
+      "kr": "스튜디오 숲 서울",
+      "en": "Studio Soop Seoul",
+      "zh": "Studio Soop 首尔"
     },
-    "hours": "",
-    "loc": { "ko": "서울 중구 (K-POP 체험센터)", "zh": "首尔中区", "en": "Jung-gu, Seoul" },
-    "overview": { "kr": "월드케이팝센터(World K-POP Center)는 K-POP 교육·오디션·체험·공연을 아우르는 플랫폼으로 서울 중구에 위치합니다. 외국인 방문객을 위한 K-POP 체험 프로그램(댄스·보컬 클래스·스타 메이크업·공연 관람)을 운영합니다.", "en": "World K-POP Center in Jung-gu, Seoul spans K-POP education, auditions, experiences and performances, running K-POP experience programs for international visitors.", "zh": "世界K-POP中心位于首尔中区，集K-POP教育·选拔·体验·演出于一体，面向外国访客提供K-POP体验项目。" },
-    "doctors": [],
-    "thumb": "hthumb/wkpop.jpg"
-  },
-  {
-    "name": { "kr": "오다리집 명동", "en": "Odarijip Myeongdong", "zh": "Odarijip 明洞" },
-    "dept": { "kr": "한류 맛집(간장게장·갈비)", "en": "Korean Restaurant", "zh": "韩流餐厅(酱蟹·烤排骨)" },
-    "cat": "기타 서비스",
-    "badge": "NEW",
-    "treats": {
-      "kr": ["간장게장","소양념갈비","한정식","명동 맛집","단체 예약"],
-      "en": ["Soy Marinated Crab","Marinated Beef Ribs","Korean Set Meal","Myeongdong Eatery","Group Booking"],
-      "zh": ["酱油蟹","牛肉腌排骨","韩定食","明洞美食","团体预约"]
+    "dept": {
+      "kr": "반영구 메이크업 · 사진 스튜디오",
+      "en": "Permanent Makeup · Photo Studio",
+      "zh": "半永久定妆·摄影工作室"
     },
-    "hours": "",
-    "loc": { "ko": "서울 중구 명동8나길 28 (명동)", "zh": "首尔明洞", "en": "Myeongdong, Seoul" },
-    "overview": { "kr": "오다리집은 서울 명동의 한류식당으로, 연평도 알꽃게 간장게장과 짚불·숯불 소양념갈비가 대표 메뉴입니다. 서울시 공인 한류식당으로 명동 본점·사보이호텔점을 운영하며 외국인 관광객에게 인기입니다.", "en": "Odarijip is a Seoul-certified Hallyu restaurant in Myeongdong, famous for soy-marinated crab and twice-grilled beef ribs, popular with international tourists.", "zh": "Odarijip是首尔明洞的韩流餐厅，招牌为酱油蟹与两次烤制的牛肉腌排骨，是首尔公认的韩流餐厅，深受外国游客欢迎。" },
-    "doctors": [],
-    "thumb": "hthumb/odarijip.jpg"
-  },
-  {
-    "name": { "kr": "스튜디오 숲 서울", "en": "Studio Soop Seoul", "zh": "Studio Soop 首尔" },
-    "dept": { "kr": "반영구 메이크업 · 사진 스튜디오", "en": "Permanent Makeup · Photo Studio", "zh": "半永久定妆·摄影工作室" },
     "cat": "기타 서비스",
     "badge": "NEW",
     "treats": {
-      "kr": ["반영구 눈썹(눈썹문신)","애교살·아이라인 반영구","BB 립블러쉬","프로필 촬영","화보 촬영","커플·우정 스냅","뷰티 스냅"],
-      "en": ["Eyebrow Tattoo (PMU Brows)","Undereye & Eyeliner PMU","BB Lip Blush","Profile Shoots","Editorial Shoots","Couple & Friend Snaps","Beauty Snaps"],
-      "zh": ["半永久纹眉","卧蚕·美瞳线半永久","BB唇定妆","形象照拍摄","写真拍摄","情侣·闺蜜快照","美妆快照"]
+      "kr": [
+        "반영구 눈썹(눈썹문신)",
+        "애교살·아이라인 반영구",
+        "BB 립블러쉬",
+        "프로필 촬영",
+        "화보 촬영",
+        "커플·우정 스냅",
+        "뷰티 스냅"
+      ],
+      "en": [
+        "Eyebrow Tattoo (PMU Brows)",
+        "Undereye & Eyeliner PMU",
+        "BB Lip Blush",
+        "Profile Shoots",
+        "Editorial Shoots",
+        "Couple & Friend Snaps",
+        "Beauty Snaps"
+      ],
+      "zh": [
+        "半永久纹眉",
+        "卧蚕·美瞳线半永久",
+        "BB唇定妆",
+        "形象照拍摄",
+        "写真拍摄",
+        "情侣·闺蜜快照",
+        "美妆快照"
+      ]
     },
     "hours": "",
     "loc": {
@@ -3776,38 +2084,40 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "thumb": "hthumb/studiosoop.jpg"
   },
   {
-    "name": { "kr": "순수 청담본점", "en": "SOONSOO Cheongdam", "zh": "SOONSOO清潭总店" },
-    "dept": { "kr": "토탈 뷰티살롱", "en": "Total Beauty Salon", "zh": "综合美容沙龙" },
+    "name": {
+      "kr": "준오헤어 코엑스도심공항점",
+      "en": "JUNO Hair COEX CALT",
+      "zh": "JUNO Hair COEX都心机场店"
+    },
+    "dept": {
+      "kr": "헤어살롱",
+      "en": "Hair Salon",
+      "zh": "美发沙龙"
+    },
     "cat": "기타 서비스",
     "badge": "NEW",
     "treats": {
-      "kr": ["헤어 스타일링","메이크업","웨딩 헤어·메이크업","연예인 스타일링"],
-      "en": ["Hair Styling","Makeup","Wedding Hair & Makeup","Celebrity Styling"],
-      "zh": ["发型设计","化妆造型","婚礼妆发","明星造型"]
-    },
-    "hours": "",
-    "loc": {
-      "ko": "서울 강남구 도산대로61길 4, 순수빌딩 (청담동)",
-      "zh": "首尔清潭",
-      "en": "Cheongdam, Seoul"
-    },
-    "overview": {
-      "kr": "순수(SOONSOO) 청담본점은 청담동의 대표 토탈 뷰티살롱으로, 헤어·메이크업·웨딩·연예인 스타일링을 전문으로 합니다. 촬영·행사·시술 전후 스타일링까지 프리미엄 뷰티 서비스를 제공합니다.",
-      "en": "SOONSOO Cheongdam is a leading total beauty salon in Cheongdam-dong, specializing in hair, makeup, wedding and celebrity styling — premium beauty services for shoots, events, and before or after your treatments.",
-      "zh": "SOONSOO清潭总店是清潭洞代表性的综合美容沙龙，专注美发·化妆·婚礼与明星造型，为拍摄·活动·术前术后提供高端美容服务。"
-    },
-    "doctors": [],
-    "thumb": "hthumb/soonsoo.jpg"
-  },
-  {
-    "name": { "kr": "준오헤어 코엑스도심공항점", "en": "JUNO Hair COEX CALT", "zh": "JUNO Hair COEX都心机场店" },
-    "dept": { "kr": "헤어살롱", "en": "Hair Salon", "zh": "美发沙龙" },
-    "cat": "기타 서비스",
-    "badge": "NEW",
-    "treats": {
-      "kr": ["컷·스타일링","염색","펌","헤어 클리닉","두피 스파"],
-      "en": ["Cut & Styling","Color","Perm","Hair Clinic","Scalp Spa"],
-      "zh": ["剪发造型","染发","烫发","头发护理","头皮SPA"]
+      "kr": [
+        "컷·스타일링",
+        "염색",
+        "펌",
+        "헤어 클리닉",
+        "두피 스파"
+      ],
+      "en": [
+        "Cut & Styling",
+        "Color",
+        "Perm",
+        "Hair Clinic",
+        "Scalp Spa"
+      ],
+      "zh": [
+        "剪发造型",
+        "染发",
+        "烫发",
+        "头发护理",
+        "头皮SPA"
+      ]
     },
     "hours": "",
     "loc": {
@@ -3824,14 +2134,37 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "thumb": "hthumb/junocoex.jpg"
   },
   {
-    "name": { "kr": "에코자뎅 코엑스 삼성점", "en": "ECO JARDIN COEX Samseong", "zh": "ECO JARDIN COEX三成店" },
-    "dept": { "kr": "헤어살롱", "en": "Hair Salon", "zh": "美发沙龙" },
+    "name": {
+      "kr": "에코자뎅 코엑스 삼성점",
+      "en": "ECO JARDIN COEX Samseong",
+      "zh": "ECO JARDIN COEX三成店"
+    },
+    "dept": {
+      "kr": "헤어살롱",
+      "en": "Hair Salon",
+      "zh": "美发沙龙"
+    },
     "cat": "기타 서비스",
     "badge": "NEW",
     "treats": {
-      "kr": ["컷·스타일링","염색","펌","트리트먼트"],
-      "en": ["Cut & Styling","Color","Perm","Treatment"],
-      "zh": ["剪发造型","染发","烫发","护理"]
+      "kr": [
+        "컷·스타일링",
+        "염색",
+        "펌",
+        "트리트먼트"
+      ],
+      "en": [
+        "Cut & Styling",
+        "Color",
+        "Perm",
+        "Treatment"
+      ],
+      "zh": [
+        "剪发造型",
+        "染发",
+        "烫发",
+        "护理"
+      ]
     },
     "hours": "",
     "loc": {
@@ -3848,38 +2181,40 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "thumb": "hthumb/ecojardin.jpg"
   },
   {
-    "name": { "kr": "카마스튜디오", "en": "KAMA Studio", "zh": "KAMA摄影工作室" },
-    "dept": { "kr": "사진 스튜디오", "en": "Photo Studio", "zh": "摄影工作室" },
+    "name": {
+      "kr": "모아뜨 성수점",
+      "en": "MOATTE Seongsu",
+      "zh": "MOATTE 圣水店"
+    },
+    "dept": {
+      "kr": "헤어&메이크업 스튜디오",
+      "en": "Hair & Makeup Studio",
+      "zh": "美发&化妆工作室"
+    },
     "cat": "기타 서비스",
     "badge": "NEW",
     "treats": {
-      "kr": ["웨딩 촬영","프로필 촬영","화보 촬영","가족 촬영"],
-      "en": ["Wedding Shoots","Profile Shoots","Editorial Shoots","Family Shoots"],
-      "zh": ["婚纱摄影","形象照拍摄","写真拍摄","家庭摄影"]
-    },
-    "hours": "",
-    "loc": {
-      "ko": "서울 강남구 선릉로 822, 6층 (청담동)",
-      "zh": "首尔清潭",
-      "en": "Cheongdam, Seoul"
-    },
-    "overview": {
-      "kr": "카마스튜디오(KAMA Studio)는 청담동의 사진 스튜디오로, \"빛의 예술\"을 모토로 웨딩·프로필·화보 촬영을 전문으로 합니다. 연예인·아이돌 화보 촬영 경험이 풍부합니다.",
-      "en": "KAMA Studio, in Cheongdam-dong, specializes in wedding, profile and editorial photography under the motto “the art of light”, with extensive experience shooting celebrities and idols.",
-      "zh": "KAMA摄影工作室位于清潭洞，以“光之艺术”为理念，专注婚纱·形象照·写真拍摄，拥有丰富的艺人·偶像写真拍摄经验。"
-    },
-    "doctors": [],
-    "thumb": "hthumb/kama.jpg"
-  },
-  {
-    "name": { "kr": "모아뜨 성수점", "en": "MOATTE Seongsu", "zh": "MOATTE 圣水店" },
-    "dept": { "kr": "헤어&메이크업 스튜디오", "en": "Hair & Makeup Studio", "zh": "美发&化妆工作室" },
-    "cat": "기타 서비스",
-    "badge": "NEW",
-    "treats": {
-      "kr": ["데일리·아이돌·혼주 메이크업","드라이·업스타일","헤어+메이크업 세트","커트·펌·염색","1:1 맞춤 스타일링"],
-      "en": ["Daily·Idol·Family Makeup","Blow-dry & Updo","Hair + Makeup Set","Cut·Perm·Color","1:1 Personal Styling"],
-      "zh": ["日常·爱豆·主婚人妆","吹风·盘发造型","妆发套餐","剪发·烫发·染发","1:1定制造型"]
+      "kr": [
+        "데일리·아이돌·혼주 메이크업",
+        "드라이·업스타일",
+        "헤어+메이크업 세트",
+        "커트·펌·염색",
+        "1:1 맞춤 스타일링"
+      ],
+      "en": [
+        "Daily·Idol·Family Makeup",
+        "Blow-dry & Updo",
+        "Hair + Makeup Set",
+        "Cut·Perm·Color",
+        "1:1 Personal Styling"
+      ],
+      "zh": [
+        "日常·爱豆·主婚人妆",
+        "吹风·盘发造型",
+        "妆发套餐",
+        "剪发·烫发·染发",
+        "1:1定制造型"
+      ]
     },
     "hours": "10:00~18:00 (월요일 휴무)",
     "loc": {
@@ -3954,173 +2289,6 @@ export const HOSPITAL_DATA: HospDetail[] = [
       }
     ],
     "thumb": "hthumb/hairon.jpg"
-  },
-  {
-    "name": {
-      "kr": "오크우드봄의원",
-      "en": "Oakwood Bom Clinic",
-      "zh": "Oakwood Bom医院"
-    },
-    "dept": {
-      "kr": "산부인과·성형외과·피부·검진 협진",
-      "en": "OB/GYN · Plastic · Skin · Checkup",
-      "zh": "妇科·整形·皮肤·体检联合诊疗"
-    },
-    "cat": "여성의학/피부·성형/검진",
-    "icon": "🌸",
-    "badge": "NEW",
-    "treats": {
-      "kr": [
-        "자궁보존 치료(하이푸)",
-        "여성성형·요실금",
-        "하지정맥류",
-        "눈·코성형",
-        "필러·보톡스·리프팅",
-        "건강검진"
-      ],
-      "en": [
-        "Uterus-Preserving Treatment (HIFU)",
-        "Feminine Surgery · Incontinence",
-        "Varicose Veins",
-        "Eye · Nose Surgery",
-        "Filler · Botox · Lifting",
-        "Health Checkup"
-      ],
-      "zh": [
-        "子宫保留治疗(海扶刀)",
-        "女性私密整形·尿失禁",
-        "下肢静脉曲张",
-        "眼鼻整形",
-        "玻尿酸·肉毒·提升",
-        "健康体检"
-      ]
-    },
-    "hours": "Mon·Wed·Thu 10:00-19:00 / Tue·Fri 10:00-20:00 / Sat 10:00-16:00 / Sun Closed",
-    "loc": {
-      "ko": "서울 강남구 삼성역(오크우드프리미어)",
-      "zh": "首尔江南区·三成站(Oakwood Premier)",
-      "en": "Samseong Stn., Seoul"
-    },
-    "overview": {
-      "kr": "오크우드봄의원은 삼성역 오크우드프리미어 호텔 B1(테헤란로87길 46)에 위치한 협진형 의원으로, 산부인과 전문의 김인현 대표원장(前 강남차병원 산부인과 부장)을 중심으로 흉부외과·외과·내과·성형외과 전문의가 함께 진료합니다. 자궁보존 하이푸·여성성형·하지정맥류·건강검진부터 눈코성형·필러·리프팅까지 한 곳에서 검진·외래·수술이 가능합니다.",
-      "en": "Oakwood Bom Clinic, on B1 of Oakwood Premier Hotel by Samseong Station (46 Teheran-ro 87-gil), is a multi-specialty clinic led by Dr. Kim In-hyun, OB/GYN specialist and former head of OB/GYN at Gangnam CHA Hospital, together with thoracic, general, internal medicine and plastic surgery specialists — from uterus-preserving HIFU, feminine surgery, varicose veins and health checkups to eye/nose surgery, fillers and lifting, all in one place.",
-      "zh": "Oakwood Bom医院位于三成站Oakwood Premier酒店B1(德黑兰路87街46), 是多科室联合诊疗医院。以妇科专科医生·医学博士金仁贤代表院长(原江南CHA医院妇科部长)为核心, 胸外科·外科·内科·整形外科专科医生共同诊疗, 子宫保留海扶刀·女性私密整形·下肢静脉曲张·健康体检到眼鼻整形·玻尿酸·提升, 体检·门诊·手术一站式完成。"
-    },
-    "doctors": [
-      {
-        "name": "김인현",
-        "title": "대표원장",
-        "spec": [
-          "산부인과 전문의",
-          "의학박사"
-        ]
-      },
-      {
-        "name": "조창욱",
-        "title": "원장",
-        "spec": [
-          "심장혈관흉부외과 전문의",
-          "하지정맥센터장"
-        ]
-      },
-      {
-        "name": "김재영",
-        "title": "원장",
-        "spec": [
-          "내과 전문의",
-          "건강검진센터장"
-        ]
-      },
-      {
-        "name": "이종희",
-        "title": "원장",
-        "spec": [
-          "성형외과 전문의",
-          "의학박사"
-        ]
-      },
-      {
-        "name": "김동일",
-        "title": "원장",
-        "spec": [
-          "뷰티성형센터",
-          "안면거상"
-        ]
-      }
-    ],
-    "thumb": "hthumb/owbom.jpg"
-  },
-  {
-    "name": {
-      "kr": "이에스청담성형외과",
-      "en": "ES Cheongdam Plastic Surgery",
-      "zh": "ES清潭整形外科"
-    },
-    "dept": {
-      "kr": "성형외과/피부과",
-      "en": "Plastic Surgery / Dermatology",
-      "zh": "整形外科/皮肤科"
-    },
-    "cat": "피부·성형",
-    "icon": "💎",
-    "badge": "NEW",
-    "treats": {
-      "kr": [
-        "눈성형·눈재수술",
-        "코성형·코재수술",
-        "이마거상·리프팅",
-        "가슴성형",
-        "지방흡입·지방이식",
-        "보톡스·필러"
-      ],
-      "en": [
-        "Eye Surgery · Revision",
-        "Rhinoplasty · Revision",
-        "Forehead Lift · Lifting",
-        "Breast Surgery",
-        "Liposuction · Fat Graft",
-        "Botox · Filler"
-      ],
-      "zh": [
-        "眼部整形·眼修复",
-        "鼻整形·鼻修复",
-        "额头提升·提升",
-        "胸部整形",
-        "吸脂·脂肪填充",
-        "肉毒·玻尿酸"
-      ]
-    },
-    "hours": "Mon-Fri 10:00-19:00 / Sat 10:00-16:00 / Sun·Holiday Closed",
-    "loc": {
-      "ko": "서울 강남구 청담동(압구정로데오역)",
-      "zh": "首尔江南区·清潭洞(狎鸥亭罗德奥站)",
-      "en": "Cheongdam, Seoul"
-    },
-    "overview": {
-      "kr": "이에스청담성형외과&피부과의원은 압구정로데오역 4번 출구 인근(도산대로 435, 삼이빌딩 6층)의 성형외과·피부과 의원입니다. 순천향대학교병원 성형외과 외래교수인 이준호 대표원장과 류형래 원장(성형외과 전문의)이 자연유착 쌍꺼풀·고난도 눈재수술, 코재수술, 이마거상·리프팅, 가슴·체형성형을 직접 집도하며 피부센터에서 리프팅 레이저·스킨부스터·보톡스·필러를 함께 제공합니다.",
-      "en": "ES Cheongdam Plastic Surgery & Dermatology, near Exit 4 of Apgujeong Rodeo Station (6F Sami Bldg., 435 Dosan-daero), is led by Dr. Lee Jun-ho (visiting professor of plastic surgery, Soonchunhyang University Hospital) and Dr. Ryu Hyung-rae, both board-certified plastic surgeons, who personally perform natural-adhesion double eyelid and complex eye revision, rhinoplasty revision, forehead lift and lifting, breast and body contouring; the skin center offers lifting lasers, skin boosters, Botox and fillers.",
-      "zh": "ES清潭整形外科&皮肤科位于狎鸥亭罗德奥站4号出口附近(岛山大路435, 三二大厦6层)。顺天乡大学医院整形外科外聘教授李俊浩代表院长与柳亨来院长(整形外科专科医生)亲自主刀自然粘连双眼皮·高难度眼修复、鼻修复、额头提升·提升、胸部·体型整形, 皮肤中心同时提供提升激光·皮肤焕活·肉毒·玻尿酸项目。"
-    },
-    "doctors": [
-      {
-        "name": "이준호",
-        "title": "대표원장",
-        "spec": [
-          "성형외과 전문의",
-          "눈·코 재수술",
-          "리프팅"
-        ]
-      },
-      {
-        "name": "류형래",
-        "title": "원장",
-        "spec": [
-          "성형외과 전문의",
-          "눈·코·가슴"
-        ]
-      }
-    ],
-    "thumb": "hthumb/escheongdam.jpg"
   },
   {
     "name": {
@@ -4250,234 +2418,46 @@ export const HOSPITAL_DATA: HospDetail[] = [
   },
   {
     "name": {
-      "kr": "TU치과의원(티유치과)",
-      "en": "TU Dental Clinic",
-      "zh": "TU牙科(TU Dental)"
+      "kr": "미모던피부과의원",
+      "en": "Mimodern Dermatology",
+      "zh": "美摩登皮肤科"
     },
     "dept": {
-      "kr": "심미치과/라미네이트·임플란트·교정",
-      "en": "Aesthetic Dentistry / Veneer · Implant · Ortho",
-      "zh": "美学牙科/贴面·种植·矫正"
+      "kr": "피부과",
+      "en": "Dermatology",
+      "zh": "皮肤科"
     },
-    "cat": "치과",
-    "icon": "🦷",
-    "badge": "NEW",
-    "treats": {
-      "kr": [
-        "제로네이트(무삭제 라미네이트)",
-        "라미네이트",
-        "임플란트",
-        "치아교정(투명교정)",
-        "치아미백",
-        "보존·보철"
-      ],
-      "en": [
-        "ZERONATE (No-prep Veneer)",
-        "Veneers",
-        "Implants",
-        "Orthodontics (Clear Aligner)",
-        "Whitening",
-        "Restorative · Prosthetic"
-      ],
-      "zh": [
-        "ZERONATE(无磨牙贴面)",
-        "牙齿贴面",
-        "种植牙",
-        "牙齿矫正(隐形)",
-        "牙齿美白",
-        "保存·修复"
-      ]
-    },
-    "hours": "Mon-Fri 10:00-20:00 / Sat 10:00-17:00 / Sun Closed",
-    "loc": {
-      "ko": "서울 서초구 강남역(서초W타워)",
-      "zh": "首尔瑞草区·江南站(瑞草W大厦)",
-      "en": "Gangnam Stn., Seoul"
-    },
-    "overview": {
-      "kr": "TU치과의원(티유치과)은 강남역 인근 서초W타워 12·13층(서초대로77길 54)의 심미치과로, 치아를 깎지 않는 무삭제 라미네이트 \"제로네이트(ZERONATE)\"로 알려져 있습니다. 서재원 대표원장을 비롯한 통합치의학과 의료진이 라미네이트·임플란트·투명교정·미백·보존보철을 분야별 공동 진료하며, 마취과 전문의 상주와 야간진료(평일 20시)로 해외 환자 일정에 맞추기 좋습니다.",
-      "en": "TU Dental Clinic, on the 12th and 13th floors of Seocho W Tower near Gangnam Station (54 Seocho-daero 77-gil), is an aesthetic dental clinic known for ZERONATE no-prep veneers. Led by Dr. Seo Jae-won, its team of integrated dentistry specialists jointly covers veneers, implants, clear aligners, whitening and restorative care, with an on-site anesthesiologist and evening hours (weekdays to 8 pm) that suit international patients.",
-      "zh": "TU牙科位于江南站附近瑞草W大厦12·13层(瑞草大路77街54), 是以不磨牙贴面\"ZERONATE\"闻名的美学牙科。以徐载元代表院长为首的综合牙科医疗团队分科联合诊疗贴面·种植牙·隐形矫正·美白·保存修复, 麻醉科专科医生常驻, 平日夜间诊疗至20点, 便于海外患者安排行程。"
-    },
-    "doctors": [
-      {
-        "name": "서재원",
-        "title": "대표원장",
-        "spec": [
-          "심미치과",
-          "라미네이트"
-        ]
-      },
-      {
-        "name": "신채훈",
-        "title": "원장",
-        "spec": [
-          "통합치의학과"
-        ]
-      },
-      {
-        "name": "김준희",
-        "title": "원장",
-        "spec": [
-          "통합치의학과"
-        ]
-      },
-      {
-        "name": "김준식",
-        "title": "원장",
-        "spec": [
-          "통합치의학과"
-        ]
-      }
-    ],
-    "thumb": "hthumb/tu.jpg"
-  },
-  {
-    "name": {
-      "kr": "바이미성형외과의원",
-      "en": "ByMe Plastic Surgery",
-      "zh": "BYME整形外科(江南百美)"
-    },
-    "dept": {
-      "kr": "성형외과/쁘띠·리프팅",
-      "en": "Plastic Surgery / Aesthetic · Lifting",
-      "zh": "整形外科/轻医美·提升"
-    },
-    "cat": "피부·성형",
-    "icon": "🎀",
-    "badge": "NEW",
-    "treats": {
-      "kr": [
-        "비절개 코성형(코프팅)",
-        "프리미엄 필러",
-        "시그니처 리프팅",
-        "눈성형",
-        "초음파 지방흡입·윤곽교정",
-        "스킨부스터"
-      ],
-      "en": [
-        "Non-incision Rhinoplasty",
-        "Premium Filler",
-        "Signature Lifting",
-        "Eye Surgery",
-        "Ultrasonic Lipo · Contouring",
-        "Skin Booster"
-      ],
-      "zh": [
-        "非切开鼻整形(Nofting)",
-        "高端玻尿酸",
-        "招牌提升",
-        "眼部整形",
-        "超声吸脂·轮廓矫正",
-        "皮肤焕活针"
-      ]
-    },
-    "hours": "Mon-Fri 11:00-20:00 / Sat 10:00-16:00 / Sun·Holiday Closed",
-    "loc": {
-      "ko": "서울 서초구 신사역(휴먼타워)",
-      "zh": "首尔瑞草区·新沙站(Human Tower)",
-      "en": "Sinsa Stn., Seoul"
-    },
-    "overview": {
-      "kr": "바이미성형외과의원은 신사역 4번 출구 도보 2분(강남대로 605, 휴먼타워 12층)의 성형외과입니다. 성형외과 전문의 18년 경력의 최한무 대표원장(건국대병원 성형외과 겸직교수)이 비절개 코성형 \"코프팅\", 입술·윤곽 프리미엄 필러, 시그니처 리프팅, 눈성형, 초음파 지방흡입·심부볼 제거 등 비수술 윤곽교정을 직접 시술하며 중국어 상담(위챗)을 지원합니다.",
-      "en": "ByMe Plastic Surgery, a two-minute walk from Exit 4 of Sinsa Station (12F Human Tower, 605 Gangnam-daero), is led by Dr. Choi Han-moo, a board-certified plastic surgeon with 18 years of experience and adjunct professor at Konkuk University Hospital. He personally performs non-incision rhinoplasty (\"Nofting\"), premium lip and contour fillers, signature lifting, eye surgery, ultrasonic liposuction and buccal fat removal; Chinese consultation via WeChat is available.",
-      "zh": "BYME整形外科(江南百美)位于新沙站4号出口步行2分钟(江南大路605, Human Tower 12层)。拥有18年整形外科专科经验的崔汉茂代表院长(建国大学医院整形外科兼职教授)亲自操作非切开鼻整形\"Nofting\"、唇部·轮廓高端玻尿酸、招牌提升、眼部整形、超声吸脂·颊脂垫去除等非手术轮廓矫正, 提供微信中文咨询。"
-    },
-    "doctors": [
-      {
-        "name": "최한무",
-        "title": "대표원장",
-        "spec": [
-          "성형외과 전문의",
-          "비절개 코성형",
-          "필러·리프팅"
-        ]
-      }
-    ],
-    "thumb": "hthumb/byme.jpg"
-  },
-  {
-    "name": { "kr": "셀이즈랩의원", "en": "Cellis LAB Clinic", "zh": "Cellis LAB诊所" },
-    "dept": { "kr": "줄기세포·역노화(세포치료)", "en": "Stem Cell · Anti-aging", "zh": "干细胞·抗衰老(细胞治疗)" },
-    "cat": "줄기세포",
-    "badge": "NEW",
-    "treats": {
-      "kr": ["줄기세포 치료", "NK세포 면역", "역노화 수액(NAD+)", "지방이식·흡입", "피부재생·통증"],
-      "en": ["Stem Cell Therapy", "NK Cell Immunity", "Anti-aging IV (NAD+)", "Fat Graft & Lipo", "Skin Regen & Pain"],
-      "zh": ["干细胞治疗", "NK细胞免疫", "抗衰输液(NAD+)", "脂肪移植·吸脂", "皮肤再生·疼痛"]
-    },
-    "hours": "화·수·금 10:00-19:00 · 목 10:00-21:00 · 토 10:00-17:00 (일·월 휴진)",
-    "loc": {
-      "ko": "서울 서초구 효령로 244 (셀이즈랩의원 1~7층)",
-      "zh": "首尔瑞草区孝令路244(1-7层)",
-      "en": "244 Hyoryeong-ro, Seocho-gu, Seoul"
-    },
-    "overview": {
-      "kr": "셀이즈랩의원(Cellis LAB)은 서울 서초구 효령로 244에 위치한 줄기세포·역노화(리버스에이징) 전문 의원입니다. 대표원장 박태혁을 중심으로 원내 줄기세포 연구소를 두고 지방유래 줄기세포·MCT 자가혈·NMN+제대줄기세포·NK세포 면역치료와 지방이식·흡입, 피부재생·통증치료를 제공합니다. 기능의학 검사로 근본 원인을 분석해 개인별 맞춤 세포치료를 설계합니다.",
-      "en": "Cellis LAB Clinic, on Hyoryeong-ro 244 in Seocho, Seoul, is a stem-cell and anti-aging (reverse-aging) clinic led by Dr. Park Tae-hyeok with an in-house stem-cell laboratory. It offers adipose-derived stem cells, MCT autologous blood, NMN + umbilical-cord stem cells and NK-cell immunotherapy, plus fat grafting/liposuction, skin regeneration and pain care.",
-      "zh": "Cellis LAB诊所位于首尔瑞草区孝令路244，是干细胞·抗衰老(逆龄)专科诊所。由院长朴泰赫领衔，设有院内干细胞研究所，提供脂肪来源干细胞·MCT自体血·NMN+脐带干细胞·NK细胞免疫治疗，以及脂肪移植·吸脂、皮肤再生与疼痛治疗。"
-    },
-    "doctors": [
-      { "name": "박태혁", "title": "대표원장", "spec": ["줄기세포·역노화", "면역(NK세포) 치료"] }
-    ],
-    "thumb": "hthumb/cellis.jpg"
-  },
-  {
-    "name": { "kr": "815의원", "en": "815 Clinic", "zh": "815医院" },
-    "dept": { "kr": "피부과(엉덩이·골반 콜라겐·바디 컨투어링)", "en": "Clinic (Hip·Pelvic Collagen·Body Contouring)", "zh": "皮肤科(臀部·骨盆胶原·身体塑形)" },
-    "cat": "피부·성형/체형",
-    "badge": "NEW",
-    "treats": {
-      "kr": ["엉덩이·골반 콜라겐", "바디 콜라겐·쏙주사", "실리프팅(페이스/바디)", "메타셀 줄기세포", "레이저·리프팅"],
-      "en": ["Hip·Pelvic Collagen", "Body Collagen·Lipolysis", "Thread Lift", "Stem Cell", "Laser·Lifting"],
-      "zh": ["臀部·骨盆胶原", "身体胶原·溶脂针", "线雕(面部/身体)", "MetaCell干细胞", "激光·提升"]
-    },
-    "hours": "화·수·목 10:30~19:30 · 금 10:30~20:30 · 토 10:00~17:00 (일·월 휴진)",
-    "loc": {
-      "ko": "서울 강남구 논현로 822 (신사동, 로뎀빌딩 4~6F)",
-      "zh": "首尔江南区论岘路822(新沙洞)",
-      "en": "Sinsa-dong, Gangnam-gu, Seoul"
-    },
-    "overview": {
-      "kr": "815의원(815클리닉)은 서울 강남구 신사동(압구정역·신사역 사이)에 위치한 비수술·쁘띠 중심 의원으로, 엉덩이·골반 콜라겐 주사를 시그니처로 힙딥·무골반 체형을 절개 없이 교정합니다. 바디 콜라겐·쏙주사·페이스/바디 리프팅·메타셀 줄기세포를 함께 운영하며 한국어·영어·일본어·중국어 진료가 가능합니다.",
-      "en": "815 Clinic in Sinsa-dong, Gangnam, Seoul specializes in non-surgical petit procedures, with signature hip & pelvic collagen injections that correct hip dips and a narrow pelvis without incision. It also offers body collagen, lipolysis injections, face/body lifting and MetaCell stem-cell therapy, with care in Korean, English, Japanese and Chinese.",
-      "zh": "815医院(815诊所)位于首尔江南区新沙洞(狎鸥亭站·新沙站之间)，以非手术微整为主，招牌项目为臀部·骨盆胶原注射，无需切开即可矫正臀凹与窄骨盆体型。同时提供身体胶原·溶脂针·面部/身体提升及MetaCell干细胞，可用韩·英·日·中文诊疗。"
-    },
-    "doctors": [],
-    "thumb": "hthumb/815.jpg"
-  },
-  {
-    "name": { "kr": "강남그랜드안과", "en": "Gangnam Grand Eye Clinic", "zh": "江南格兰德眼科" },
-    "dept": { "kr": "안과(시력교정·노안백내장·안질환)", "en": "Ophthalmology (Vision Correction·Cataract)", "zh": "眼科(视力矫正·老视白内障·眼疾)" },
-    "cat": "안과",
-    "badge": "NEW",
-    "treats": {
-      "kr": ["스마일라식·라식·라섹", "퍼스널아이즈·컨투라비전", "ICL 안내렌즈삽입", "노안·백내장(24렌즈)", "녹내장·안질환"],
-      "en": ["SMILE·LASIK·LASEK", "Personal Eyes·Contoura", "ICL Implant", "Presbyopia·Cataract", "Glaucoma"],
-      "zh": ["SMILE·LASIK·LASEK", "个性化视力矫正", "ICL晶体植入", "老视·白内障(24种晶体)", "青光眼·眼疾"]
-    },
-    "hours": "",
-    "loc": { "ko": "서울 서초구 강남대로 363 강남타워 4·5층 (강남역 5번출구)", "zh": "首尔瑞草区江南大路363(江南站5号出口)", "en": "Gangnam-daero, Seocho-gu, Seoul" },
-    "overview": {
-      "kr": "강남그랜드안과는 강남역 5번출구에 위치한 안과로, 스마일라식·라식·라섹과 퍼스널아이즈·컨투라비전 등 맞춤 시력교정, ICL 안내렌즈삽입술, 24종 프리미엄 렌즈를 활용한 노안·백내장 수술(2만안 이상), 녹내장·안질환까지 전 영역을 진료합니다. 17명의 통역 인력을 갖추고 있습니다.",
-      "en": "Gangnam Grand Eye Clinic (Gangnam Stn. Exit 5) offers SMILE/LASIK/LASEK and personalized vision correction, ICL implantation, presbyopia & cataract surgery with 24 premium lenses (20,000+ cases), and glaucoma/eye-disease care, with 17 interpreters.",
-      "zh": "江南格兰德眼科位于江南站5号出口,提供SMILE·LASIK·LASEK及个性化视力矫正、ICL晶体植入、采用24种高级晶体的老视·白内障手术(超2万眼)及青光眼·眼疾诊疗,配备17名翻译。"
-    },
-    "doctors": [],
-    "thumb": "hthumb/grandeye.jpg"
-  },
-  {
-    "name": { "kr": "미모던피부과의원", "en": "Mimodern Dermatology", "zh": "美摩登皮肤科" },
-    "dept": { "kr": "피부과", "en": "Dermatology", "zh": "皮肤科" },
     "cat": "피부·성형",
     "badge": "NEW",
     "treats": {
-      "kr": ["피부 레이저·색소", "리프팅·탄력", "쁘띠·보톡스·필러", "여드름·흉터", "스킨케어"],
-      "en": ["Laser·Pigment", "Lifting", "Botox·Filler", "Acne·Scar", "Skincare"],
-      "zh": ["皮肤激光·色素", "提升·紧致", "微整·肉毒·填充", "痘痘·疤痕", "皮肤管理"]
+      "kr": [
+        "피부 레이저·색소",
+        "리프팅·탄력",
+        "쁘띠·보톡스·필러",
+        "여드름·흉터",
+        "스킨케어"
+      ],
+      "en": [
+        "Laser·Pigment",
+        "Lifting",
+        "Botox·Filler",
+        "Acne·Scar",
+        "Skincare"
+      ],
+      "zh": [
+        "皮肤激光·色素",
+        "提升·紧致",
+        "微整·肉毒·填充",
+        "痘痘·疤痕",
+        "皮肤管理"
+      ]
     },
     "hours": "",
-    "loc": { "ko": "서울 강남구 광평로 280 2층 205호 (수서동, 로즈데일빌딩)", "zh": "首尔江南区光坪路280(水西洞)", "en": "Suseo-dong, Gangnam-gu, Seoul" },
+    "loc": {
+      "ko": "서울 강남구 광평로 280 2층 205호 (수서동, 로즈데일빌딩)",
+      "zh": "首尔江南区光坪路280(水西洞)",
+      "en": "Suseo-dong, Gangnam-gu, Seoul"
+    },
     "overview": {
       "kr": "미모던피부과의원은 서울 강남구 수서동(로즈데일빌딩 2층)에 위치한 피부과로, 성바오로·서울성모·인천성모병원 경력의 대표원장이 피부 레이저·색소·리프팅·쁘띠(보톡스·필러)·여드름·흉터 등 맞춤 피부 진료를 제공합니다.",
       "en": "Mimodern Dermatology in Suseo-dong, Gangnam, Seoul, led by a director experienced at St. Paul's/Seoul St. Mary's/Incheon St. Mary's hospitals, provides laser, pigment, lifting, injectables, acne and scar care.",
@@ -4487,34 +2467,40 @@ export const HOSPITAL_DATA: HospDetail[] = [
     "thumb": "hthumb/mimodern.jpg"
   },
   {
-    "name": { "kr": "엠레드클리닉", "en": "AMRED Clinic", "zh": "AMRED 皮肤·提升诊所(清潭)" },
-    "dept": { "kr": "피부과", "en": "Dermatology", "zh": "皮肤科" },
-    "cat": "피부·성형",
-    "badge": "NEW",
-    "treats": {
-      "kr": ["튠 콩피에르·울쎄라피 프라임", "티타늄 리프팅·써마지 FLX", "스컬트라·콜라겐 부스터", "리쥬란·스킨부스터", "윤곽·볼륨·필러·바디"],
-      "en": ["Tune Confier·Ultherapy Prime", "Titanium Lifting·Thermage FLX", "Sculptra·Collagen", "Rejuran·Skin Boosters", "Contouring·Volume·Body"],
-      "zh": ["Tune Confier·超声炮Prime", "钛提升·热玛吉FLX", "舒颜萃·胶原蛋白", "丽珠兰·皮肤管理", "轮廓·填充·身体管理"]
+    "name": {
+      "kr": "제이린안과",
+      "en": "JRYN Eye Clinic",
+      "zh": "JRYN眼科"
     },
-    "hours": "",
-    "loc": { "ko": "서울 강남구 삼성로 731 청진빌딩 B1F·2F·4F (청담)", "zh": "首尔江南区三成路731(清潭)", "en": "Samseong-ro, Gangnam-gu, Seoul (Cheongdam)" },
-    "overview": {
-      "kr": "엠레드클리닉(AMRED)은 서울 강남구 삼성로(청담)에 위치한 프리미엄 피부·리프팅 클리닉으로, 성형외과 전문의 등 10명의 의료진이 튠 콩피에르·울쎄라피 프라임·티타늄 리프팅·써마지 FLX 등 리프팅과 스컬트라·리쥬란·스킨부스터, 윤곽·볼륨 필러, 바디, 엠레드 줄기세포까지 개인 맞춤 프로그램을 운영합니다. VIP 프라이빗 케어룸과 다국어 응대를 갖췄습니다.",
-      "en": "AMRED is a premium dermatology & lifting clinic in Cheongdam (Samseong-ro, Gangnam, Seoul), with 10 doctors including plastic-surgery specialists. It focuses on lifting (Tune Confier, Ultherapy Prime, Titanium Lifting, Thermage FLX) plus Sculptra, Rejuran & skin boosters, contouring/volume fillers, body programs and AMRED stem-cell care, with private VIP care rooms and multilingual support.",
-      "zh": "AMRED是位于首尔江南三成路(清潭)的高端皮肤·提升诊所,由整形外科专科医生等10位医生组成,擅长Tune Confier·超声炮Prime·钛提升·热玛吉FLX等提升项目,并提供舒颜萃·丽珠兰·皮肤管理·轮廓填充·身体管理及AMRED干细胞等定制方案,设VIP私密护理空间与多语种协助。"
+    "dept": {
+      "kr": "안과(스마일라식·ICL·백내장)",
+      "en": "Ophthalmology (SMILE·ICL·Cataract)",
+      "zh": "眼科(全飞秒·ICL·白内障)"
     },
-    "doctors": [],
-    "thumb": "hthumb/amred.jpg"
-  },
-  {
-    "name": { "kr": "제이린안과", "en": "JRYN Eye Clinic", "zh": "JRYN眼科" },
-    "dept": { "kr": "안과(스마일라식·ICL·백내장)", "en": "Ophthalmology (SMILE·ICL·Cataract)", "zh": "眼科(全飞秒·ICL·白内障)" },
     "cat": "안과",
     "badge": "NEW",
     "treats": {
-      "kr": ["스마일라식", "ICL 렌즈삽입술", "노안·백내장", "라식·라섹", "드림렌즈"],
-      "en": ["SMILE LASIK", "ICL Implantation", "Presbyopia·Cataract", "LASIK·LASEK", "Ortho-K"],
-      "zh": ["SMILE全飞秒", "ICL晶体植入", "老视·白内障", "LASIK·LASEK", "角膜塑形镜"]
+      "kr": [
+        "스마일라식",
+        "ICL 렌즈삽입술",
+        "노안·백내장",
+        "라식·라섹",
+        "드림렌즈"
+      ],
+      "en": [
+        "SMILE LASIK",
+        "ICL Implantation",
+        "Presbyopia·Cataract",
+        "LASIK·LASEK",
+        "Ortho-K"
+      ],
+      "zh": [
+        "SMILE全飞秒",
+        "ICL晶体植入",
+        "老视·白内障",
+        "LASIK·LASEK",
+        "角膜塑形镜"
+      ]
     },
     "hours": "월~금 09:00-18:00 · 토 09:00-13:00 (일·공휴일 휴진)",
     "loc": {
@@ -4528,19 +2514,53 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "JRYN眼科位于釜山西面，由院长韩相烨主诊，专注于SMILE全飞秒·ICL·LASIK/LASEK视力矫正及老视·白内障手术。拥有蔡司SMILE三大认证、ICL全球培训师资质，老视白内障手术经验超15,000例。"
     },
     "doctors": [
-      { "name": "한상엽", "title": "대표원장", "spec": ["안과 전문의", "스마일라식·ICL", "노안·백내장"] }
+      {
+        "name": "한상엽",
+        "title": "대표원장",
+        "spec": [
+          "안과 전문의",
+          "스마일라식·ICL",
+          "노안·백내장"
+        ]
+      }
     ],
     "thumb": "hthumb/jryn.jpg"
   },
   {
-    "name": { "kr": "김병준레다스흉부외과", "en": "KIM BYOUNG JOON LEDAS", "zh": "金炳俊LEDAS胸外科" },
-    "dept": { "kr": "흉부외과(하지정맥류 중점)", "en": "Thoracic Surgery (Varicose Vein Clinic)", "zh": "胸外科(下肢静脉曲张专科)" },
+    "name": {
+      "kr": "김병준레다스흉부외과",
+      "en": "KIM BYOUNG JOON LEDAS",
+      "zh": "金炳俊LEDAS胸外科"
+    },
+    "dept": {
+      "kr": "흉부외과(하지정맥류 중점)",
+      "en": "Thoracic Surgery (Varicose Vein Clinic)",
+      "zh": "胸外科(下肢静脉曲张专科)"
+    },
     "cat": "하지정맥류",
     "badge": "NEW",
     "treats": {
-      "kr": ["하지정맥류", "최소침습 비절개", "혈관초음파 진단", "재발·재수술 클리닉", "의료용 압박스타킹"],
-      "en": ["Varicose Veins", "Minimally Invasive", "Vascular Ultrasound", "Recurrence Reoperation", "Compression Stockings"],
-      "zh": ["下肢静脉曲张", "微创非切开", "血管超声诊断", "复发·再手术", "医用压力袜"]
+      "kr": [
+        "하지정맥류",
+        "최소침습 비절개",
+        "혈관초음파 진단",
+        "재발·재수술 클리닉",
+        "의료용 압박스타킹"
+      ],
+      "en": [
+        "Varicose Veins",
+        "Minimally Invasive",
+        "Vascular Ultrasound",
+        "Recurrence Reoperation",
+        "Compression Stockings"
+      ],
+      "zh": [
+        "下肢静脉曲张",
+        "微创非切开",
+        "血管超声诊断",
+        "复发·再手术",
+        "医用压力袜"
+      ]
     },
     "hours": "월~금 09:00-18:00 (점심 12:30-13:30 · 일요일 휴진)",
     "loc": {
@@ -4554,58 +2574,16 @@ export const HOSPITAL_DATA: HospDetail[] = [
       "zh": "金炳俊LEDAS胸外科位于釜山西面，专注下肢静脉曲张治疗。院长金炳俊拥有22年、29,000例以上经验，提供微创非切开治疗、复发再手术诊疗及长期随访，并建立JCI标准感染管理体系。"
     },
     "doctors": [
-      { "name": "김병준", "title": "대표원장", "spec": ["흉부외과 전문의", "하지정맥류 29,000례+", "최소침습 비절개"] }
+      {
+        "name": "김병준",
+        "title": "대표원장",
+        "spec": [
+          "흉부외과 전문의",
+          "하지정맥류 29,000례+",
+          "최소침습 비절개"
+        ]
+      }
     ],
     "thumb": "hthumb/ledas.jpg"
-  },
-  {
-    "name": { "kr": "리베리의원 명동점", "en": "RE:BERRY Clinic Myeongdong", "zh": "丽贝瑞皮肤科(明洞店)" },
-    "dept": { "kr": "피부과", "en": "Dermatology", "zh": "皮肤科" },
-    "cat": "피부·성형",
-    "badge": "NEW",
-    "treats": {
-      "kr": ["리프팅·탄력", "쁘띠·필러·보톡스", "레이저·색소", "모공·흉터", "스킨부스터"],
-      "en": ["Lifting", "Filler·Botox", "Laser·Pigment", "Pore·Scar", "Skin Booster"],
-      "zh": ["提升·紧致", "填充·肉毒", "激光·色素", "毛孔·疤痕", "皮肤焕活"]
-    },
-    "hours": "",
-    "loc": {
-      "ko": "서울 중구 명동10길 58, 2·3층 (명동)",
-      "zh": "首尔中区明洞10街58",
-      "en": "Myeongdong, Jung-gu, Seoul"
-    },
-    "overview": {
-      "kr": "리베리의원(RE:BERRY) 명동점은 서울 명동(중구 명동10길 58)에 위치한 피부과로, 정확한 진단을 바탕으로 리프팅·탄력, 쁘띠·필러·보톡스, 레이저·색소, 모공·흉터, 스킨부스터 등을 피부 상태에 맞게 조합해 설계합니다. 강남·마포·동탄·영종도·청주 등 전국 지점과 동일한 기준의 1:1 맞춤 진료를 제공합니다.",
-      "en": "RE:BERRY Clinic Myeongdong, in Myeongdong, Seoul, is a dermatology clinic that designs combined treatments — lifting, injectables, laser and pigment care, pore and scar treatment, and skin boosters — based on precise diagnosis, with the same standardized 1:1 care as its branches nationwide.",
-      "zh": "丽贝瑞皮肤科(明洞店)位于首尔明洞，是以精准诊断为基础的皮肤科，根据肌肤状态组合设计提升·紧致、填充·肉毒、激光·色素、毛孔·疤痕及皮肤焕活等项目。与江南·麻浦·东滩等全国分院采用统一标准的1:1定制诊疗。"
-    },
-    "doctors": [],
-    "thumb": "hthumb/reberry_md.jpg"
-  },
-  {
-    "name": { "kr": "허쉬성형외과", "en": "HER:SHE Plastic Surgery", "zh": "HER:SHE整形外科" },
-    "dept": { "kr": "성형외과(안티에이징)", "en": "Plastic Surgery (Anti-aging)", "zh": "整形外科(抗衰)" },
-    "cat": "피부·성형",
-    "badge": "NEW",
-    "treats": {
-      "kr": ["안면거상(맥스리프팅)", "중년 눈성형", "에피티콘 실리프팅", "지방이식·줄기세포", "어깨·힙 필러·힙업"],
-      "en": ["Face Lift", "Mid-age Eye Surgery", "Epiticon Thread Lift", "Fat Graft·Stem Cell", "Shoulder·Hip Filler"],
-      "zh": ["面部提升(除皱拉皮)", "中年眼整形", "Epiticon线雕", "脂肪移植·干细胞", "肩部·臀部填充"]
-    },
-    "hours": "월~금 10:00-19:00 · 토 10:00-16:00",
-    "loc": {
-      "ko": "서울 강남구 삼성로 730, 2~4층 (청담동)",
-      "zh": "首尔清潭洞 三成路730",
-      "en": "Cheongdam, Gangnam, Seoul"
-    },
-    "overview": {
-      "kr": "허쉬성형외과(HER:SHE)는 1992년 개원한 서울 청담동의 안티에이징 성형외과로, 성형외과 전문의로만 구성된 의료진이 실명제로 진료합니다. 안면거상(맥스리프팅·딥플레인)·중년 눈성형·에피티콘 실리프팅·지방이식·줄기세포, 어깨/가슴/힙 필러와 힙업리프팅까지 'Beauty Aging'을 전문으로 하며, 누적 4만여 건의 상담·수술과 50개국 이상 외국인 환자 진료 경험을 보유하고 보건복지부 첨단재생의료실시기관으로 지정되었습니다.",
-      "en": "HER:SHE Plastic Surgery, founded in 1992 in Cheongdam, Seoul, is an anti-aging plastic surgery clinic staffed entirely by board-certified plastic surgeons under a named-doctor system, specializing in face lifts, mid-age eye surgery, Epiticon thread lifting, fat grafting, stem cells and shoulder/hip fillers — with 40,000+ procedures, patients from 50+ countries, and advanced regenerative medicine designation.",
-      "zh": "HER:SHE整形外科成立于1992年，位于首尔清潭洞，是以抗衰(Beauty Aging)为专长的整形外科，由整形外科专科医生组成并实行医生实名制。专注面部提升、中年眼整形、Epiticon线雕、脂肪移植·干细胞及肩部/臀部填充，累计约4万例手术、接诊50多个国家患者，并获指定为尖端再生医疗实施机构。"
-    },
-    "doctors": [
-      { "name": "정영춘", "title": "대표원장", "spec": ["성형외과 전문의", "안면거상·안티에이징", "중년 눈성형"] }
-    ],
-    "thumb": "hthumb/hershe.jpg"
   }
 ];
