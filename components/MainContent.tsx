@@ -707,13 +707,6 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
                     <span className="iconify text-lg md:text-xl group-hover:translate-x-1 transition-transform" data-icon="solar:alt-arrow-right-linear"></span>
                   </a>
                 )}
-                <button
-                  onClick={(e) => { e.stopPropagation(); onOpenConsult(); }}
-                  className={HERO_B2C[lang] ? 'bg-white/10 backdrop-blur-md border border-white/40 text-white px-7 md:px-9 py-4 md:py-5 rounded-full font-bold hover:bg-white/20 transition-all flex items-center gap-3 group active:scale-95 text-sm md:text-base' : 'bg-[#5a82c2] text-white px-8 md:px-10 py-4 md:py-5 rounded-full font-bold hover:bg-[#4a6da3] transition-all flex items-center gap-3 group shadow-2xl shadow-[#5a82c2]/20 active:scale-95 text-sm md:text-base'}
-                >
-                  <span>{HERO_B2C[lang] ? HERO_B2C[lang].hosp : t.consultBtn}</span>
-                  <span className="iconify text-lg md:text-xl group-hover:translate-x-1 transition-transform" data-icon="solar:alt-arrow-right-linear"></span>
-                </button>
                 {!HERO_B2C[lang] && (
                   <a href={b2cUrl(lang)} onClick={(e) => e.stopPropagation()}
                     className="bg-white text-[#1F3864] px-7 md:px-9 py-4 md:py-5 rounded-full font-bold hover:bg-[#eef3fa] transition-all flex items-center gap-3 group shadow-2xl shadow-black/20 active:scale-95 text-sm md:text-base">
@@ -961,74 +954,6 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
               </div>
             </div>
           </Reveal>
-        </div>
-      </section>
-
-      {/* Social Media Highlights */}
-      <section className="py-20 md:py-40 bg-gray-900 overflow-hidden relative">
-        <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none bg-[radial-gradient(#5a82c2_1px,transparent_1px)] [background-size:40px_40px]"></div>
-        <div className="px-6 md:px-12 lg:px-24 max-w-[1440px] mx-auto relative z-10">
-          <Reveal>
-            <div className="text-center mb-16 md:mb-24">
-              <span className="text-[#5a82c2] font-black text-sm tracking-[0.4em] uppercase mb-4 block">Social Highlights</span>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-black text-white leading-[1.8] tracking-tight whitespace-pre-line">
-                {t.socialTitle}
-              </h2>
-            </div>
-          </Reveal>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            {[1, 2, 3, 4].map((i) => (
-              <Reveal key={i} delay={i * 0.1}>
-                <div className="group relative aspect-[9/16] rounded-[2rem] md:rounded-[2.5rem] overflow-hidden bg-black/40 border border-white/5 hover:border-[#5a82c2]/30 transition-all duration-700 hover:-translate-y-4 hover:shadow-2xl hover:shadow-[#5a82c2]/20 shadow-xl">
-                  <div className="absolute inset-0 w-full h-full pointer-events-none scale-105 group-hover:scale-110 transition-transform duration-700 opacity-60 group-hover:opacity-100">
-                    <iframe
-                      src={`https://player.vimeo.com/video/${['1160923982', '1162067195', '1162067112', '1160924028'][i-1]}?autoplay=1&loop=1&background=1&muted=1&autopause=0`}
-                      className="w-[100%] h-[100%] absolute top-0 left-0"
-                      frameBorder="0" allow="autoplay; fullscreen" allowFullScreen style={{ objectFit: 'cover' }}
-                    ></iframe>
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/30 pointer-events-none"></div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 06. News Section */}
-      <section className="py-20 md:py-32 px-6 md:px-12 lg:px-24 bg-gray-50 border-t border-gray-100">
-        <div className="max-w-[1440px] mx-auto">
-          <Reveal>
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16 gap-6">
-              <div>
-                <span className="text-[#5a82c2] font-black text-sm tracking-[0.3em] uppercase mb-4 block">Latest News</span>
-                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 tracking-tight leading-[1.3]">{t.newsTitle}</h2>
-              </div>
-              <button onClick={onOpenNews} className="text-gray-400 font-bold hover:text-[#5a82c2] transition-colors flex items-center gap-2 group text-sm md:text-[15px]">
-                {t.newsMore}
-                <span className="iconify group-hover:translate-x-1 transition-transform" data-icon="solar:alt-arrow-right-linear"></span>
-              </button>
-            </div>
-          </Reveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {t.newsItems.map((news, idx) => (
-              <Reveal key={idx} delay={idx * 0.1}>
-                <a href={news.url} target="_blank" rel="noopener noreferrer" className="group cursor-pointer block">
-                  <div className="relative aspect-[4/3] rounded-[2rem] overflow-hidden mb-6 shadow-sm border border-gray-100">
-                    <img src={news.img} alt={news.title} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
-                    <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-full shadow-sm">
-                      <span className="text-[11px] font-black text-[#5a82c2] uppercase tracking-wider">{news.category}</span>
-                    </div>
-                  </div>
-                  <div className="px-2">
-                    <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-3 leading-tight group-hover:text-[#5a82c2] transition-colors line-clamp-2">{news.title}</h4>
-                    <p className="text-sm text-gray-400 font-medium">{news.date}</p>
-                  </div>
-                </a>
-              </Reveal>
-            ))}
-          </div>
         </div>
       </section>
 

@@ -122,35 +122,7 @@ const BusinessSection: React.FC<BusinessSectionProps> = ({ lang }) => {
           </div>
         </Reveal>
 
-        {/* Featured — Project 01 */}
-        <Reveal delay={0.1}>
-          {/* 설명을 영상 오른쪽이 아니라 제목(영상 위 오버레이) 아래로 내려 세로로 읽히게 함 (2026-08-20) */}
-          <div className="flex flex-col gap-5 md:gap-6 mb-6 md:mb-8">
-            <div className="relative rounded-[2rem] md:rounded-[3rem] overflow-hidden min-h-[300px] md:min-h-[420px] shadow-2xl group">
-              <div className="absolute inset-0 w-full h-full pointer-events-none">
-                <iframe
-                  className="absolute top-1/2 left-1/2 w-[177.77vh] h-[100vh] min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 scale-125"
-                  src="https://player.vimeo.com/video/1160923982?autoplay=1&loop=1&background=1&muted=1&autopause=0"
-                  title="Wanghong Content"
-                  frameBorder="0"
-                  allow="autoplay; fullscreen"
-                  allowFullScreen
-                ></iframe>
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-              <div className="absolute bottom-0 left-0 p-8 md:p-10">
-                <span className="inline-block text-[11px] font-black text-white bg-[#5a82c2] px-4 py-1.5 rounded-full uppercase tracking-widest mb-3">Project 01 · {t.featured.tag}</span>
-                <h3 className="text-2xl md:text-3xl font-black text-white tracking-tight whitespace-pre-line drop-shadow-lg">{t.featured.name}</h3>
-              </div>
-            </div>
-
-            <div className="max-w-3xl">
-              <p className="text-gray-500 text-[15px] md:text-lg leading-relaxed font-medium">{t.featured.desc}</p>
-            </div>
-          </div>
-        </Reveal>
-
-        {/* Project 02 – 05 grid */}
+        {/* Project grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {t.items.map((item: any, idx: number) => {
             const href = LINKS[item.no];

@@ -144,7 +144,6 @@ write('public/sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
   <url><loc>${url('en')}</loc><lastmod>${TODAY}</lastmod><priority>0.8</priority>${faqAlt}</url>
   <url><loc>${url('zh')}</loc><lastmod>${TODAY}</lastmod><priority>0.8</priority>${faqAlt}</url>
   <url><loc>${BASE}/b2c/</loc><lastmod>${TODAY}</lastmod><priority>0.9</priority></url>
-  <url><loc>${BASE}/tricare/</loc><lastmod>${TODAY}</lastmod><priority>0.8</priority></url>
 </urlset>
 `);
 
@@ -163,7 +162,6 @@ write('public/llms.txt', `# Follow Korea (팔로우코리아)
 - [江南FOLLOW — Chinese patient platform](https://gnfollow.com/)
 - [Gangnam Pulse demo — clinic operations system](https://gnpulse.kr/demo/)
 - [Partner sign-up (influencers, guides, agencies)](https://gnpulse.kr/join/)
-- [TRICARE patients (US military in Korea)](${BASE}/tricare/)
 
 ## Notes
 - Clinic commission terms and patient prices are agreed individually and are not published.

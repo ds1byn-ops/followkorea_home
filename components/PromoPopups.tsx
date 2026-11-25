@@ -271,14 +271,6 @@ const PromoPopups: React.FC<{ lang: LanguageCode }> = ({ lang }) => {
       onClose={() => setKimes(false)}
       onHideToday={hide(KIMES_HIDE_KEY, setKimes)} />
   )});
-  if (stem) cards.push({ key: 'stem', el: (
-    <Card t={stemT}
-      grad="linear-gradient(135deg, #0b3a36 0%, #13685f 55%, #2ea396 100%)"
-      accent="#13685f"
-      href="/stem"
-      onClose={() => setStem(false)}
-      onHideToday={hide(STEM_HIDE_KEY, setStem)} />
-  )});
   if (wh) cards.push({ key: 'wh', el: (
     <Card t={whT}
       grad="linear-gradient(135deg, #16224d 0%, #2c437e 55%, #5a82c2 100%)"
