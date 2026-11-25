@@ -364,26 +364,6 @@ const PartnerHospitals: React.FC<{ lang: LanguageCode }> = ({ lang }) => {
         </Reveal>
       )}
 
-      {/* 제휴 서비스 — 병원이 아닌 라이프스타일 제휴처(헤어·뷰티·스튜디오) 별도 그룹 */}
-      {SERVICES.length > 0 && (
-        <div className="mt-20 md:mt-28 pt-14 md:pt-20 border-t border-gray-100">
-          <Reveal>
-            <div className="text-center mb-10 md:mb-12">
-              <span className="text-[#5a82c2] font-black text-sm tracking-[0.3em] uppercase mb-4 block">{t.svcEyebrow}</span>
-              <h3 className={`text-2xl md:text-4xl font-black text-gray-900 tracking-tight leading-[1.2] ${krBreak}`}>{t.svcTitle}</h3>
-              <p className={`text-gray-400 mt-4 text-base md:text-lg font-medium max-w-2xl mx-auto ${krBreak}`}>{t.svcSub}</p>
-            </div>
-          </Reveal>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
-            {SERVICES.map((h, i) => (
-              <Reveal key={h.name.kr} delay={(i % 4) * 0.08}>
-                <HospCard h={h} dl={dl} krBreak={krBreak} onOpen={() => setSelected(h)} />
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      )}
-
       {/* 병원 상세 모달 — 홈페이지 내에서 표시, 외부 이동 없음 */}
       {selected && (
         <div className="fixed inset-0 z-[100] flex items-end md:items-center justify-center" onClick={() => setSelected(null)}>
