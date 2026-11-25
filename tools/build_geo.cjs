@@ -107,7 +107,7 @@ ${alternates}
 <meta property="og:image" content="${BASE}/og-image.png">
 <link rel="icon" href="/favicon.ico">
 <style>${CSS}</style>
-${ld.map((o) => '<script type="application/ld+json">' + JSON.stringify(o) + '</script>').join('\n')}
+${ld.map((o) => '').join('')}
 </head>
 <body>
 <header><a class="brand" href="/">FOLLOW KOREA</a><a class="cta" href="/">${esc(ui.cta)}</a></header>
