@@ -166,7 +166,6 @@ h2{font-size:clamp(20px,3.6vw,27px);font-weight:900;letter-spacing:-.5px;}
   <div class="wrap">
    <div class="hero2">
    <div class="hleft">
-    <span class="badge"><span class="dot"></span> <span id="t-badge"></span></span>
     <h1 id="t-h1"></h1>
     <p class="lead" id="t-lead"></p>
     <a class="cta" href="#quote" id="t-cta"></a>
@@ -287,7 +286,6 @@ h2{font-size:clamp(20px,3.6vw,27px);font-weight:900;letter-spacing:-.5px;}
     <span id="t-l-body"></span><br>
     <br><br>
     주식회사 팔로우코리아 (Follow Korea Co., Ltd.) · 대표자: 하장환 외 1인 · 사업자등록번호: 696-86-03627<br>
-    외국인환자 유치업 등록: 제 A-2026-01-01-06622 호 (2026.01.21~2029.01.20) · 관광사업 등록: 종합여행업 제 2026-000022 호<br>
     통신판매업 신고 · 서울특별시 서초구 강남대로 373, 13층 116호 · contact@followkorea.co.kr
   </div>
 </div>
@@ -307,7 +305,6 @@ var LANG=(['ko','zh','en','ja'].indexOf(_ql)>=0)?_ql:((function(){try{return ses
 var LANG_META=[['zh','中文','cn'],['ko','한국어','kr'],['en','English','us'],['ja','日本語','jp']];
 var I18N={
  zh:{nav:['公司介绍','服务','合作医院','定制报价'],navcta:'获取定制报价',adnote:'本页面包含医疗广告<br>FollowKorea为广告媒介',
-  badge:'韩国保健福祉部 外国人患者招揽业注册 · 第 A-2026-01-01-06622 号',
   h1:'最懂韩国医院的<br><b>海外患者招揽专业企业</b><br>为您提供值得信赖的医院信息',
   lead:'FollowKorea 是韩国保健福祉部注册的<b>海外患者招揽专业企业</b>。<br>结合网红体验测评，透明介绍直接合作医院的信息，并为您匹配符合条件的医院。',
   cta:'获取适合我的医院报价 →',chipfloat:'与{N}家合作医疗机构携手同行',
@@ -351,7 +348,6 @@ var I18N={
    {g:'其他',ks:[['营养输液','수액'],['植发','모발'],['干细胞','줄기세포']]}]
  },
  ko:{nav:['회사 소개','서비스','협력 병원','맞춤 견적'],navcta:'맞춤 견적 받기',adnote:'본 페이지는 의료광고를 포함합니다<br>(주)팔로우코리아는 광고 매체입니다',
-  badge:'보건복지부 외국인환자 유치업 등록 · 제 A-2026-01-01-06622 호',
   h1:'병원을 가장 잘 아는<br><b>해외 환자 유치 전문기업</b>이<br>믿을 수 있는 병원 정보를 전합니다',
   lead:'팔로우코리아는 보건복지부 등록 <b>해외 환자 유치 전문기업</b>입니다.<br>왕홍 체험 리뷰와 함께 직접 협력하는 병원의 정보를 투명하게 소개하고, 조건에 맞는 병원을 찾아드립니다.',
   cta:'내게 맞는 병원 견적 받기 →',chipfloat:'협력 의료기관 {N}곳과 함께합니다',
@@ -395,7 +391,6 @@ var I18N={
    {g:'기타',ks:[['수액·영양주사','수액'],['모발이식','모발'],['줄기세포','줄기세포']]}]
  },
  en:{nav:['About','Services','Partner Clinics','Get a Quote'],navcta:'Get My Quote',adnote:'This page contains medical ads<br>Follow Korea is an ad medium',
-  badge:'Registered Foreign Patient Attraction Agency (MOHW Korea) · No. A-2026-01-01-06622',
   h1:'The <b>patient attraction specialist</b><br>that knows Korean clinics best —<br>trusted information for you',
   lead:'Follow Korea is a government-registered <b>international patient attraction specialist</b>.<br>Combining influencer reviews, we transparently introduce partner clinics and match you with the right one.',
   cta:'Get my personalized quote →',chipfloat:'Working with {N} partner clinics',
@@ -439,7 +434,6 @@ var I18N={
    {g:'Others',ks:[['IV therapy','수액'],['Hair transplant','모발'],['Stem cell','줄기세포']]}]
  },
  ja:{nav:['会社紹介','サービス','提携病院','見積もり'],navcta:'見積もりを受け取る',adnote:'当ページには医療広告が含まれます<br>Follow Koreaは広告媒体です',
-  badge:'韓国保健福祉部 外国人患者誘致業 登録 · 第 A-2026-01-01-06622 号',
   h1:'病院を最もよく知る<br><b>海外患者誘致の専門企業</b>が<br>信頼できる病院情報をお届けします',
   lead:'Follow Koreaは韓国保健福祉部登録の<b>海外患者誘致専門企業</b>です。<br>ワンホン体験レビューとともに提携病院の情報を透明に紹介し、条件に合う病院をご案内します。',
   cta:'私に合う病院の見積もりを受け取る →',chipfloat:'提携医療機関{N}院とともに',
@@ -519,7 +513,6 @@ function applyLang(l){
   document.getElementById('nav').innerHTML=t.nav.map(function(x,i){return '<a href="'+anchors[i]+'">'+esc(x)+'</a>';}).join('');
   document.getElementById('navcta').textContent=t.navcta;
   document.getElementById('adnote').innerHTML=t.adnote;
-  document.getElementById('t-badge').textContent=t.badge;
   document.getElementById('t-h1').innerHTML=t.h1;
   document.getElementById('t-lead').innerHTML=t.lead;
   document.getElementById('t-cta').textContent=t.cta;

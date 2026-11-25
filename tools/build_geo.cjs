@@ -23,7 +23,6 @@ const TODAY = new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10);
 
 const ORG = {
   nameEn: 'Follow Korea Co., Ltd.', nameKo: '주식회사 팔로우코리아',
-  regNo: 'A-2026-01-01-06622', regPeriod: '2026.01.21–2029.01.20', travelNo: '2026-000022',
   addrKo: '서울특별시 서초구 강남대로 373, 13층 116호',
   addrEn: '13F-116, 373 Gangnam-daero, Seocho-gu, Seoul, Republic of Korea',
   addrZh: '韩国首尔特别市瑞草区江南大路373号13层116室',
@@ -32,7 +31,7 @@ const ORG = {
 
 const FAQ = {
   ko: [
-    ['팔로우코리아는 어떤 회사인가요?', `${ORG.nameKo}는 보건복지부에 등록된 외국인환자 유치업체(제${ORG.regNo}호)이자 종합여행업(제${ORG.travelNo}호) 등록 업체입니다. 해외 환자와 국내 제휴 의료기관을 연결하고, 왕홍·KOC 기반 중국 마케팅, 다국어 의료관광 플랫폼(강남팔로우), 병원 운영 시스템(강남펄스)을 함께 운영합니다.`],
+    ['팔로우코리아는 어떤 회사인가요?', `${ORG.nameKo}는 보건복지부에 등록된 외국인환자 유치업체이자 종합여행업 등록 업체입니다. 해외 환자와 국내 제휴 의료기관을 연결하고, 왕홍·KOC 기반 중국 마케팅, 다국어 의료관광 플랫폼(강남팔로우), 병원 운영 시스템(강남펄스)을 함께 운영합니다.`],
     ['병원은 어떻게 제휴할 수 있나요?', `홈페이지 상담 신청이나 ${ORG.email}로 문의하시면 담당자가 진료 분야와 유치 희망 국가를 확인한 뒤 유치 계약을 진행합니다. 계약 후 병원 소개와 수가표를 등록하면 다국어 플랫폼(followkorea.kr, 중국어 gnfollow.com) 노출과 파트너(왕홍·가이드·해외 에이전시) 네트워크 연결이 시작됩니다. 수수료 조건은 진료 분야별로 개별 협의합니다.`],
     ['어느 나라 환자를 유치하나요?', '중국·대만·홍콩 등 중화권을 중심으로 일본, 베트남·태국·인도네시아 등 동남아, 몽골, 러시아, 중동, 미주 환자를 유치합니다. 플랫폼은 10개 언어로 운영되며 통역·동행·공항 픽업까지 지원합니다.'],
     ['왕홍 마케팅은 어떻게 진행되나요?', '중국 왕홍·KOC가 병원을 방문해 시술을 받고 샤오홍슈·더우인에 방문 후기를 올리는 방식입니다. 게시물 수에 따라 단계별 프로그램으로 운영하며, 게시 진척과 캡처를 병원과 공유합니다. 중국 의료광고 규정에 맞춰 가격·효과를 단정하는 표현은 쓰지 않습니다.'],
@@ -42,7 +41,7 @@ const FAQ = {
     ['연락처는 어떻게 되나요?', `이메일 ${ORG.email}, 주소 ${ORG.addrKo}입니다.`],
   ],
   en: [
-    ['What is Follow Korea?', `${ORG.nameEn} is a foreign patient attraction agency registered with Korea's Ministry of Health and Welfare (Reg. No. ${ORG.regNo}) and a licensed general travel agency (No. ${ORG.travelNo}). It connects international patients with licensed partner clinics in Korea and runs China influencer (Wanghong/KOC) marketing, the multilingual medical travel platform Gangnam Follow, and the clinic operations system Gangnam Pulse.`],
+    ['What is Follow Korea?', `${ORG.nameEn} is a foreign patient attraction agency registered with Korea's Ministry of Health and Welfare and a licensed general travel agency. It connects international patients with licensed partner clinics in Korea and runs China influencer (Wanghong/KOC) marketing, the multilingual medical travel platform Gangnam Follow, and the clinic operations system Gangnam Pulse.`],
     ['How can a Korean clinic partner with Follow Korea?', `Send an inquiry through the website or to ${ORG.email}. We confirm your specialties and target countries, then sign an attraction agreement. After your clinic profile and price list are registered, you are listed on our multilingual platforms (followkorea.kr and the Chinese site gnfollow.com) and connected to our partner network of influencers, guides and overseas agencies. Commission terms are agreed per specialty.`],
     ['Which countries do patients come from?', 'Mainly Greater China (mainland China, Taiwan, Hong Kong), plus Japan, Southeast Asia (Vietnam, Thailand, Indonesia), Mongolia, Russia, the Middle East and the Americas. The platform runs in 10 languages, with interpretation, escort and airport pickup.'],
     ['How does Wanghong (Chinese influencer) marketing work?', 'Chinese influencers and KOCs visit the clinic, receive a treatment and post visit reviews on Xiaohongshu (RED) and Douyin. Programs are tiered by number of posts, and posting progress and screenshots are shared with the clinic. Posts follow Chinese medical advertising rules and avoid price or outcome claims.'],
@@ -52,7 +51,7 @@ const FAQ = {
     ['How do I contact Follow Korea?', `Email ${ORG.email}. Address: ${ORG.addrEn}.`],
   ],
   zh: [
-    ['Follow Korea 是一家什么样的公司？', `${ORG.nameEn} 是在韩国保健福祉部登记的外国患者招揽机构（登记号 ${ORG.regNo}），同时持有综合旅行业执照（第 ${ORG.travelNo} 号）。公司为海外客户对接韩国正规合作医疗机构，并运营网红·KOC 中国营销、多语种医疗旅游平台（江南FOLLOW）以及医院运营系统（江南Pulse）。`],
+    ['Follow Korea 是一家什么样的公司？', `${ORG.nameEn} 是在韩国保健福祉部登记的外国患者招揽机构，同时持有综合旅行业执照。公司为海外客户对接韩国正规合作医疗机构，并运营网红·KOC 中国营销、多语种医疗旅游平台（江南FOLLOW）以及医院运营系统（江南Pulse）。`],
     ['旅行社或机构如何与 Follow Korea 合作？', '可在 gnpulse.kr/join/ 注册成为合作伙伴，审核通过后即可在合作伙伴后台查看合作医院价目表、提交预约申请、查询结算明细。佣金等级随介绍业绩提升。'],
     ['合作医院覆盖哪些领域？', '以首尔江南为中心，涵盖皮肤科、整形外科、健康体检、牙科、眼科、女性医学、干细胞、骨科·脊柱等领域的正规医疗机构，提供中文咨询、翻译陪同与机场接送。'],
     ['网红营销是如何进行的？', '中国网红·KOC 到访合作医院体验项目后，在小红书、抖音发布到访笔记。按发布数量分阶段执行，并与医院共享发布进度与截图。内容遵守中国医疗广告相关规定，不使用价格、疗效等断言性表述。'],
@@ -77,8 +76,6 @@ const orgLd = {
   logo: BASE + '/fk-logo-r.png',
   address: { '@type': 'PostalAddress', streetAddress: '373 Gangnam-daero, 13F-116', addressLocality: 'Seocho-gu', addressRegion: 'Seoul', addressCountry: 'KR' },
   identifier: [
-    { '@type': 'PropertyValue', name: 'Foreign Patient Attraction Agency Registration (Ministry of Health and Welfare, Korea)', value: ORG.regNo },
-    { '@type': 'PropertyValue', name: 'General Travel Agency Registration', value: ORG.travelNo },
   ],
   sameAs: ['https://followkorea.kr/', 'https://gnfollow.com/', 'https://gnpulse.kr/'],
 };
@@ -121,7 +118,7 @@ ${ld.map((o) => '<script type="application/ld+json">' + JSON.stringify(o) + '</s
 ${qa.map(([q, a]) => `<section class="qa"><h2>${esc(q)}</h2><p>${esc(a)}</p></section>`).join('\n')}
 </main>
 <footer>
-${esc(ORG.nameKo)} (${esc(ORG.nameEn)}) · 외국인환자 유치업 등록 제${ORG.regNo}호 (${ORG.regPeriod}) · 종합여행업 제${ORG.travelNo}호<br>
+${esc(ORG.nameKo)} (${esc(ORG.nameEn)})<br>
 ${esc(ORG.addrKo)} · <a href="mailto:${ORG.email}">${ORG.email}</a><br>
 Updated ${TODAY}
 </footer>
@@ -153,7 +150,7 @@ write('public/sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
 
 write('public/llms.txt', `# Follow Korea (팔로우코리아)
 
-> ${ORG.nameEn} (${ORG.nameKo}) is a foreign patient attraction agency registered with Korea's Ministry of Health and Welfare (Reg. No. ${ORG.regNo}, valid ${ORG.regPeriod}) and a licensed general travel agency (No. ${ORG.travelNo}). It connects international patients with licensed partner clinics in Seoul (mainly Gangnam), runs Chinese influencer (Wanghong/KOC) marketing for clinics, operates the multilingual medical travel platforms Gangnam Follow (followkorea.kr) and 江南FOLLOW (gnfollow.com), and provides the clinic operations system Gangnam Pulse.
+> ${ORG.nameEn} (${ORG.nameKo}) is a foreign patient attraction agency registered with Korea's Ministry of Health and Welfare and a licensed general travel agency. It connects international patients with licensed partner clinics in Seoul (mainly Gangnam), runs Chinese influencer (Wanghong/KOC) marketing for clinics, operates the multilingual medical travel platforms Gangnam Follow (followkorea.kr) and 江南FOLLOW (gnfollow.com), and provides the clinic operations system Gangnam Pulse.
 
 - Address: ${ORG.addrEn}
 - Contact: ${ORG.email} · KakaoTalk ${ORG.kakaoId}

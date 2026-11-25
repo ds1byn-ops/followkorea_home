@@ -1072,12 +1072,6 @@ const MainContent: React.FC<MainContentProps> = ({ onOpenConsult, onOpenNews, on
                     <span>{t.footerBiz}</span>
                   </p>
                   <p className="flex items-start gap-2">
-                    <span>{({KR:'외국인환자 유치업 등록',EN:'Foreign Patient Attraction License',CN:'外国患者招引业登记',JP:'外国人患者誘致業登録',ID:'Izin Penarik Pasien Asing',AR:'ترخيص استقطاب المرضى الأجانب',KH:'អាជ្ញាបណ្ណទាក់ទាញអ្នកជំងឺបរទេស',VI:'Giấy phép thu hút bệnh nhân nước ngoài',RU:'Лицензия на привлечение иностранных пациентов'} as Record<string,string>)[lang]}: 제 A-2026-01-01-06622 호 (2026.01.21~2029.01.20)</span>
-                  </p>
-                  <p className="flex items-start gap-2">
-                    <span>{({KR:'관광사업 등록',EN:'Tourism Business Reg.',CN:'旅游业登记',JP:'観光事業登録',ID:'Reg. Bisnis Pariwisata',AR:'تسجيل أعمال السياحة',KH:'ការចុះបញ្ជីអាជីវកម្មទេសចរណ៍',VI:'ĐK kinh doanh du lịch',RU:'Рег. турбизнеса'} as Record<string,string>)[lang]}: 종합여행업 제 2026-000022 호</span>
-                  </p>
-                  <p className="flex items-start gap-2">
                     <span>{({KR:'중국 현지법인',EN:'China Subsidiary',CN:'中国当地法人',JP:'中国現地法人',ID:'Anak Perusahaan Tiongkok',AR:'الشركة الفرعية في الصين',KH:'ក្រុមហ៊ុនបុត្រសម្ព័ន្ធនៅចិន',VI:'Công ty con tại Trung Quốc',RU:'Дочерняя компания в Китае'} as Record<string,string>)[lang]}: 悦集江南（上海）商务咨询有限公司</span>
                   </p>
                   <p className="flex items-start gap-2">
